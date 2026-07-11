@@ -7,10 +7,10 @@ Replace the current compact mobile header navigation with a stable six-item bott
 ## Scope
 
 - Apply the bottom navigation only below the existing `sm` breakpoint (640px).
-- Retain the header brand and account entry point on mobile; hide only the current header navigation links there.
+- Retain the header brand on mobile and hide the current header navigation links and duplicate header account entry point there.
 - Preserve the desktop and tablet header navigation, its labels, and its layout at 640px and above.
-- Add a real `progress` route and a `ProgressPage` that hosts the existing `ProgressDashboard`.
-- Keep the account entry point as the existing login/profile flow; it is not a seventh bottom-navigation item.
+- Keep the account entry point as the existing login/profile flow; it is the sixth bottom-navigation item.
+- Do not add a `progress` route or change the existing progress summary on the Home page.
 
 ## Navigation Model
 
@@ -21,9 +21,9 @@ The mobile bar has six equal-width buttons in this order:
 3. ฝึกจำ — `flashcard`
 4. ฝึก — `quiz`
 5. สนทนา — `speak`
-6. สรุป — `progress`
+6. บัญชี — `auth` while signed out, `profile` while signed in
 
-Each button continues to call the existing `onNavigate` callback. Hash routing is extended only for `#progress`; no existing routes or their behavior change. The current Home page remains the start page and may retain its small progress summary, while the full Progress dashboard moves to the new dedicated destination.
+Each button continues to call the existing `onNavigate` callback. The account item reads the same auth state as the existing `UserMenu`: it navigates to `auth` while signed out and `profile` while signed in. It is active on either account destination. No existing routes or their behavior change, and the current Home page retains its progress summary.
 
 ## Visual and Responsive Design
 
@@ -44,7 +44,7 @@ Each button continues to call the existing `onNavigate` callback. Hash routing i
 
 ## Validation
 
-- Add tests for all six mobile navigation destinations, active-state semantics, and the `wordDetail` to Vocabulary mapping.
-- Add hash-routing coverage for `#progress`.
+- Add tests for all six mobile navigation destinations, active-state semantics, the signed-out/signed-in account destination, and the `wordDetail` to Vocabulary mapping.
+- Preserve the current hash-routing coverage without adding a new route.
 - Verify the desktop navigation remains available and the mobile bar is hidden at `sm` and above through responsive class assertions.
 - Run the focused tests, all navigation-related tests, TypeScript/Vite build, and responsive browser checks at a narrow mobile viewport and a tablet/desktop viewport.
