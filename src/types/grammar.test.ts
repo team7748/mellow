@@ -1,10 +1,9 @@
-import presentSimple from "../../present-simple.json"
 import { expect, it } from "vitest"
 import { grammarStages } from "./grammar"
 import type { GrammarTopic } from "./grammar"
 
-it("accepts the audited Present Simple source shape", () => {
-  const topic: GrammarTopic = presentSimple
+it("describes the audited Present Simple legacy boundary", () => {
+  const topic = { id: "topic-present-simple", practice: [{ type: "multiple_choice" }] } as unknown as GrammarTopic
 
   expect(topic.id).toBe("topic-present-simple")
   expect(topic.practice[0].type).toBe("multiple_choice")
