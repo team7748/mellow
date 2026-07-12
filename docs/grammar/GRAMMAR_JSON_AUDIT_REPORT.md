@@ -45,16 +45,16 @@ answer-option issue was found that would make a source file unreadable today.
 | Impact | A validator, registry, lesson renderer, progress model, and future API written to the target contract would reject all current files or require scattered special cases. |
 | Recommended fix | Decide whether to formally adopt a legacy adapter or migrate content to the target schema in an approved content-migration step. Preserve the current `id` as the stable published identifier; do not edit automatically. |
 
-### M-02 — Practice question type values do not match the allowed target enum
+### M-02 — Practice question type values did not match the allowed target enum — resolved in Prompt 3
 
 | Field | Detail |
 | --- | --- |
 | Files | All 12 grammar JSON files |
 | JSON path | `$.practice[*].type` |
 | ID | 216 existing `*-practice-*` IDs |
-| Problem | Observed values are `multiple-choice` (72), `fill-blank` (60), `error-correction` (37), `reorder` (24), `tense-choice` (21), and `future-form-choice` (2). None uses the requested values such as `multiple_choice`, `fill_blank`, `correct_sentence`, or `sentence_builder`. |
-| Impact | A strict target validator and question renderer cannot reliably dispatch every question. |
-| Recommended fix | Approve a mapping table or migrate the field names/types in one controlled pass; do not infer a mapping inside components. |
+| Problem | Before Prompt 3, observed values were `multiple-choice` (72), `fill-blank` (60), `error-correction` (37), `reorder` (24), `tense-choice` (21), and `future-form-choice` (2). |
+| Resolution | Prompt 3 applied the approved data-only mapping: `multiple-choice`, `tense-choice`, and `future-form-choice` → `multiple_choice`; `fill-blank` → `fill_blank`; `error-correction` → `correct_sentence`; `reorder` → `sentence_builder`. Existing question IDs, prompts, answers, and options were unchanged. |
+| Verification | All 216 `$.practice[*].type` values now belong to the requested enum. |
 
 ### M-03 — Required stable reference model is absent
 
@@ -80,16 +80,16 @@ answer-option issue was found that would make a source file unreadable today.
 
 ## Minor issues
 
-### N-01 — Present Simple omits the required prerequisites field
+### N-01 — Present Simple omitted the required prerequisites field — resolved in Prompt 3
 
 | Field | Detail |
 | --- | --- |
 | File | `present-simple.json` |
 | JSON path | `$.prerequisites` |
 | ID | `topic-present-simple` |
-| Problem | The field is absent; the other eleven files provide an array. |
-| Impact | A strict required-field validator needs a special case. |
-| Recommended fix | In an approved migration, represent no prerequisites consistently as `[]`. |
+| Problem | Before Prompt 3, the field was absent while the other eleven files provided an array. |
+| Resolution | Prompt 3 added `"prerequisites": []`; this represents no prerequisite without adding teaching content or changing stable IDs. |
+| Verification | All 12 root topics now expose a prerequisites array. |
 
 ### N-02 — Three topics are below the requested time-marker count
 
@@ -102,16 +102,7 @@ answer-option issue was found that would make a source file unreadable today.
 | Impact | They fail the target completeness specification, though they remain readable content. |
 | Recommended fix | Have a content owner decide whether to add one marker per topic or revise the target range. |
 
-### N-03 — Four practice questions repeat an accepted answer
-
-| Field | Detail |
-| --- | --- |
-| Files / paths / IDs | `past-continuous.json` `$.practice[10].acceptedAnswers` `past-continuous-practice-11`; `past-perfect.json` `$.practice[9].acceptedAnswers` `past-perfect-practice-10`; `present-continuous.json` `$.practice[9].acceptedAnswers` `present-continuous-practice-10`; `present-simple.json` `$.practice[9].acceptedAnswers` `present-simple-practice-10` |
-| Problem | The expected answer is repeated in `acceptedAnswers` (`While`, `By`, `Are`, and `Do` respectively). |
-| Impact | No learner-visible correctness change is expected, but redundant values complicate normalization and validation. |
-| Recommended fix | Remove only the duplicate entries after approval. |
-
-### N-04 — Content counts differ from the requested target specification
+### N-03 — Content counts differ from the requested target specification
 
 | Field | Detail |
 | --- | --- |
@@ -145,6 +136,9 @@ answer-option issue was found that would make a source file unreadable today.
   topic ID. Present Simple intentionally has no prerequisite value, but lacks the
   field required by the target contract.
 - All 72 observed `multiple-choice` questions contain their `answer` in `options`.
+- The apparent four duplicate `acceptedAnswers` pairs in the original audit are
+  intentional case variants (for example `Do` and `do`), not duplicates. They were
+  retained; the original case-insensitive detector produced a false positive.
 - No CEFR field was found in the grammar source files.
 
 ## Audit conclusion
@@ -152,4 +146,6 @@ answer-option issue was found that would make a source file unreadable today.
 The content files are structurally readable and consistently named, but they are a
 legacy schema rather than the target schema requested for Grammar Mode. Do not begin
 the registry/UI phases with a strict target validator until the schema/adapter
-decision is approved. No JSON file was modified by this audit.
+decision is approved. Prompt 3 resolved the question-type enum and Present Simple
+prerequisites issues only; the remaining major/minor findings still require an
+approved schema or content decision.

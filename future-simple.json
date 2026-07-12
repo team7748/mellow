@@ -1,0 +1,706 @@
+{
+  "id": "topic-future-simple",
+  "categoryId": "future",
+  "name": "Future Simple",
+  "nameThai": "อนาคตกาลแบบธรรมดา",
+  "slug": "future-simple",
+  "stage": "beginner",
+  "difficulty": 2,
+  "displayOrder": 9,
+  "estimatedMinutes": 20,
+  "prerequisites": [
+    "topic-present-simple"
+  ],
+  "summary": {
+    "en": "Use the Future Simple with will for instant decisions, predictions, promises, and offers. However, English does not use will for every future situation.",
+    "th": "ใช้ Future Simple ด้วย will สำหรับการตัดสินใจทันที การคาดการณ์ คำสัญญา และการเสนอความช่วยเหลือ แต่ภาษาอังกฤษไม่ได้ใช้ will กับทุกสถานการณ์ในอนาคต"
+  },
+  "learningObjectives": [
+    "ใช้ will เพื่อแสดงการตัดสินใจที่เกิดขึ้นทันทีขณะพูดได้",
+    "ใช้ will เพื่อคาดการณ์อนาคตโดยอาศัยความคิดเห็นหรือความเชื่อได้",
+    "ใช้ will เพื่อให้คำสัญญาและเสนอความช่วยเหลือได้",
+    "สร้างประโยคบอกเล่าด้วย Subject + will + Verb 1 ได้",
+    "สร้างประโยคปฏิเสธด้วย will not หรือ won't ได้",
+    "สร้างคำถามด้วย Will + subject + Verb 1 ได้",
+    "หลีกเลี่ยงการเติม s, ing หรือ to หลัง will ได้",
+    "เข้าใจว่าอนาคตไม่ได้ใช้ will เสมอไป",
+    "แยกการใช้ will, be going to และ Present Continuous สำหรับอนาคตได้"
+  ],
+  "uses": [
+    {
+      "id": "future-simple-use-1",
+      "title": "การตัดสินใจทันที",
+      "descriptionThai": "ใช้ will เมื่อผู้พูดตัดสินใจในขณะที่กำลังพูด โดยไม่ได้วางแผนไว้ล่วงหน้า",
+      "example": "The phone is ringing. I will answer it.",
+      "translation": "โทรศัพท์กำลังดัง ฉันจะรับเอง"
+    },
+    {
+      "id": "future-simple-use-2",
+      "title": "การคาดการณ์",
+      "descriptionThai": "ใช้ will กับการคาดการณ์ที่มาจากความคิดเห็น ความเชื่อ หรือสิ่งที่ผู้พูดคิดว่าจะเกิดขึ้น",
+      "example": "I think it will rain tomorrow.",
+      "translation": "ฉันคิดว่าพรุ่งนี้ฝนจะตก"
+    },
+    {
+      "id": "future-simple-use-3",
+      "title": "คำสัญญา",
+      "descriptionThai": "ใช้ will เพื่อให้คำสัญญาหรือยืนยันว่าจะทำบางสิ่งในอนาคต",
+      "example": "I will call you tonight.",
+      "translation": "ฉันจะโทรหาคุณคืนนี้"
+    },
+    {
+      "id": "future-simple-use-4",
+      "title": "การเสนอความช่วยเหลือ",
+      "descriptionThai": "ใช้ will เมื่อเสนอว่าจะช่วยหรือทำบางสิ่งให้ผู้อื่น",
+      "example": "I will carry that bag for you.",
+      "translation": "ฉันจะถือกระเป๋าใบนั้นให้คุณ"
+    },
+    {
+      "id": "future-simple-use-5",
+      "title": "การขอร้องหรือถามความเต็มใจ",
+      "descriptionThai": "ใช้ Will you...? เพื่อขอร้องหรือถามว่าอีกฝ่ายเต็มใจทำบางสิ่งหรือไม่",
+      "example": "Will you help me?",
+      "translation": "คุณจะช่วยฉันไหม"
+    }
+  ],
+  "structures": [
+    {
+      "id": "future-simple-structure-affirmative",
+      "type": "affirmative",
+      "subjectGroup": "all",
+      "formula": "Subject + will + Verb 1 + ...",
+      "example": "She will call you later.",
+      "translation": "เธอจะโทรหาคุณภายหลัง",
+      "noteThai": "ทุกประธานใช้ will และตามด้วย Verb 1"
+    },
+    {
+      "id": "future-simple-structure-contraction",
+      "type": "contraction",
+      "subjectGroup": "all",
+      "formula": "Subject + 'll + Verb 1 + ...",
+      "example": "I'll help you.",
+      "translation": "ฉันจะช่วยคุณ",
+      "noteThai": "Will สามารถย่อเป็น 'll ได้ เช่น I will → I'll และ she will → she'll"
+    },
+    {
+      "id": "future-simple-structure-negative",
+      "type": "negative",
+      "subjectGroup": "all",
+      "formula": "Subject + will not (won't) + Verb 1 + ...",
+      "example": "They won't be late.",
+      "translation": "พวกเขาจะไม่มาสาย",
+      "noteThai": "Will not ย่อเป็น won't และตามด้วย Verb 1"
+    },
+    {
+      "id": "future-simple-structure-question",
+      "type": "question",
+      "subjectGroup": "all",
+      "formula": "Will + subject + Verb 1 + ...?",
+      "example": "Will you come tomorrow?",
+      "translation": "พรุ่งนี้คุณจะมาไหม",
+      "noteThai": "หลังประธานต้องใช้ Verb 1 โดยไม่เติม to"
+    },
+    {
+      "id": "future-simple-structure-wh-question",
+      "type": "wh-question",
+      "subjectGroup": "all",
+      "formula": "Wh-word + will + subject + Verb 1 + ...?",
+      "example": "When will she arrive?",
+      "translation": "เธอจะมาถึงเมื่อไร",
+      "noteThai": "วางคำถาม Wh- ไว้หน้า will"
+    },
+    {
+      "id": "future-simple-structure-short-answer",
+      "type": "short-answer",
+      "subjectGroup": "all",
+      "formula": "Yes, subject + will. | No, subject + won't.",
+      "example": "Will he join us? Yes, he will.",
+      "translation": "เขาจะมาร่วมกับเราไหม ใช่ เขาจะมา",
+      "noteThai": "คำตอบสั้นใช้ will หรือ won't กับทุกประธาน"
+    }
+  ],
+  "verbRules": [
+    {
+      "id": "future-simple-rule-base-verb",
+      "title": "หลัง will ใช้ Verb 1",
+      "ruleThai": "หลัง will และ won't ต้องใช้กริยารูปพื้นฐานเสมอ",
+      "examples": [
+        "will go",
+        "will work",
+        "won't come"
+      ]
+    },
+    {
+      "id": "future-simple-rule-no-s",
+      "title": "ไม่เติม s หรือ es หลัง will",
+      "ruleThai": "แม้ประธานจะเป็น he, she หรือ it กริยาหลัง will ก็ยังเป็น Verb 1",
+      "examples": [
+        "She will go.",
+        "He will work.",
+        "It will rain."
+      ]
+    },
+    {
+      "id": "future-simple-rule-no-to",
+      "title": "ไม่เติม to หลัง will",
+      "ruleThai": "ใช้ will + Verb 1 โดยตรง ไม่ใช้ will to + Verb 1",
+      "examples": [
+        "I will help.",
+        "Will you come?",
+        "They won't stay."
+      ]
+    },
+    {
+      "id": "future-simple-rule-no-ing",
+      "title": "ไม่ใช้ Verb-ing หลัง will โดยตรง",
+      "ruleThai": "ถ้าต้องการใช้ Future Simple ให้ใช้ will + Verb 1 ไม่ใช่ will + Verb-ing",
+      "examples": [
+        "I will go.",
+        "She will study.",
+        "We will wait."
+      ]
+    }
+  ],
+  "futureFormsOverview": {
+    "title": "อนาคตไม่ได้ใช้ will เสมอไป",
+    "descriptionThai": "ภาษาอังกฤษเลือกรูปอนาคตตามความหมาย ไม่ได้ใช้ will กับทุกเหตุการณ์ในอนาคต",
+    "forms": [
+      {
+        "form": "will + Verb 1",
+        "useThai": "การตัดสินใจทันที คำสัญญา การเสนอความช่วยเหลือ และการคาดการณ์จากความคิดเห็น",
+        "example": "I'll answer the phone."
+      },
+      {
+        "form": "be going to + Verb 1",
+        "useThai": "แผนที่ตัดสินใจไว้ก่อนแล้ว หรือการคาดการณ์จากหลักฐานที่เห็นได้",
+        "example": "I'm going to apply for that job."
+      },
+      {
+        "form": "Present Continuous",
+        "useThai": "แผนหรือนัดหมายที่จัดเตรียมรายละเอียดไว้แล้ว",
+        "example": "I'm meeting the manager at 2 p.m."
+      },
+      {
+        "form": "Present Simple",
+        "useThai": "ตารางเวลาและกำหนดการที่แน่นอน",
+        "example": "The train leaves at 7:00."
+      }
+    ],
+    "keyReminderThai": "ก่อนใช้ will ให้ถามว่าเป็นการตัดสินใจตอนพูด คำสัญญา ข้อเสนอ หรือความคิดเห็นเกี่ยวกับอนาคตหรือไม่ หากเป็นแผนที่วางไว้แล้วหรือนัดหมาย อาจต้องใช้รูปอื่น"
+  },
+  "timeMarkers": [
+    {
+      "text": "tomorrow",
+      "meaningThai": "พรุ่งนี้",
+      "example": "I will call you tomorrow."
+    },
+    {
+      "text": "tonight",
+      "meaningThai": "คืนนี้",
+      "example": "She will help us tonight."
+    },
+    {
+      "text": "next week",
+      "meaningThai": "สัปดาห์หน้า",
+      "example": "I think prices will rise next week."
+    },
+    {
+      "text": "soon",
+      "meaningThai": "เร็ว ๆ นี้",
+      "example": "The bus will arrive soon."
+    },
+    {
+      "text": "later",
+      "meaningThai": "ภายหลัง",
+      "example": "I'll explain it later."
+    },
+    {
+      "text": "in the future",
+      "meaningThai": "ในอนาคต",
+      "example": "People will use more AI in the future."
+    },
+    {
+      "text": "one day",
+      "meaningThai": "สักวันหนึ่ง",
+      "example": "One day, I will start my own business."
+    },
+    {
+      "text": "I think",
+      "meaningThai": "ฉันคิดว่า",
+      "example": "I think he will pass the exam."
+    },
+    {
+      "text": "probably",
+      "meaningThai": "น่าจะ",
+      "example": "They will probably arrive late."
+    },
+    {
+      "text": "maybe",
+      "meaningThai": "อาจจะ",
+      "example": "Maybe she will join us."
+    }
+  ],
+  "examples": [
+    {
+      "id": "future-simple-example-01",
+      "sentence": "The phone is ringing. I will answer it.",
+      "translation": "โทรศัพท์กำลังดัง ฉันจะรับเอง",
+      "focus": "instant decision",
+      "usage": "instant-decision"
+    },
+    {
+      "id": "future-simple-example-02",
+      "sentence": "I'm thirsty. I'll get some water.",
+      "translation": "ฉันกระหายน้ำ ฉันจะไปเอาน้ำ",
+      "focus": "decision made now",
+      "usage": "instant-decision"
+    },
+    {
+      "id": "future-simple-example-03",
+      "sentence": "I think it will rain tomorrow.",
+      "translation": "ฉันคิดว่าพรุ่งนี้ฝนจะตก",
+      "focus": "prediction based on opinion",
+      "usage": "prediction"
+    },
+    {
+      "id": "future-simple-example-04",
+      "sentence": "People will use more AI in the future.",
+      "translation": "ผู้คนจะใช้ AI มากขึ้นในอนาคต",
+      "focus": "general prediction",
+      "usage": "prediction"
+    },
+    {
+      "id": "future-simple-example-05",
+      "sentence": "I will never forget your help.",
+      "translation": "ฉันจะไม่มีวันลืมความช่วยเหลือของคุณ",
+      "focus": "promise",
+      "usage": "promise"
+    },
+    {
+      "id": "future-simple-example-06",
+      "sentence": "Don't worry. I will call you tonight.",
+      "translation": "ไม่ต้องกังวล ฉันจะโทรหาคุณคืนนี้",
+      "focus": "promise",
+      "usage": "promise"
+    },
+    {
+      "id": "future-simple-example-07",
+      "sentence": "I will carry those boxes for you.",
+      "translation": "ฉันจะช่วยถือกล่องเหล่านั้นให้คุณ",
+      "focus": "offer",
+      "usage": "offer"
+    },
+    {
+      "id": "future-simple-example-08",
+      "sentence": "Will you help me with this report?",
+      "translation": "คุณจะช่วยฉันทำรายงานนี้ไหม",
+      "focus": "request",
+      "usage": "request"
+    },
+    {
+      "id": "future-simple-example-09",
+      "sentence": "She won't be late.",
+      "translation": "เธอจะไม่มาสาย",
+      "focus": "negative form",
+      "usage": "negative"
+    },
+    {
+      "id": "future-simple-example-10",
+      "sentence": "When will they arrive?",
+      "translation": "พวกเขาจะมาถึงเมื่อไร",
+      "focus": "Wh-question",
+      "usage": "question"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "future-simple-mistake-01",
+      "incorrect": "I will going.",
+      "correct": "I will go.",
+      "explanationThai": "หลัง will ต้องใช้ Verb 1 คือ go ไม่ใช้ going"
+    },
+    {
+      "id": "future-simple-mistake-02",
+      "incorrect": "She will goes.",
+      "correct": "She will go.",
+      "explanationThai": "หลัง will ไม่เติม s หรือ es แม้ประธานจะเป็น She"
+    },
+    {
+      "id": "future-simple-mistake-03",
+      "incorrect": "Will you to come?",
+      "correct": "Will you come?",
+      "explanationThai": "หลังประธานในคำถามที่ใช้ will ต้องตามด้วย Verb 1 โดยไม่เติม to"
+    },
+    {
+      "id": "future-simple-mistake-04",
+      "incorrect": "I will to help you.",
+      "correct": "I will help you.",
+      "explanationThai": "หลัง will ใช้ Verb 1 โดยตรง ไม่ใช้ to"
+    },
+    {
+      "id": "future-simple-mistake-05",
+      "incorrect": "I will visit Chiang Mai next week. I booked the hotel yesterday.",
+      "correct": "I am going to visit Chiang Mai next week. I booked the hotel yesterday.",
+      "explanationThai": "เมื่อเป็นแผนที่ตัดสินใจและเตรียมไว้ก่อนแล้ว be going to เหมาะกว่า will"
+    },
+    {
+      "id": "future-simple-mistake-06",
+      "incorrect": "I will meet the dentist at 10 a.m. tomorrow. The appointment is confirmed.",
+      "correct": "I am meeting the dentist at 10 a.m. tomorrow. The appointment is confirmed.",
+      "explanationThai": "เมื่อนัดหมายและกำหนดเวลาไว้ชัดเจน Present Continuous มักเป็นธรรมชาติกว่า will"
+    },
+    {
+      "id": "future-simple-mistake-07",
+      "incorrect": "He won't comes tomorrow.",
+      "correct": "He won't come tomorrow.",
+      "explanationThai": "หลัง won't ต้องใช้ Verb 1 คือ come"
+    },
+    {
+      "id": "future-simple-mistake-08",
+      "incorrect": "Do you will join us?",
+      "correct": "Will you join us?",
+      "explanationThai": "คำถาม Future Simple ใช้ Will นำหน้า ไม่ใช้ Do ร่วมกับ will"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "future-simple-comparison-going-to",
+      "title": "will vs be going to",
+      "will": {
+        "useThai": "การตัดสินใจทันที คำสัญญา ข้อเสนอ และการคาดการณ์จากความคิดเห็น",
+        "formula": "Subject + will + Verb 1",
+        "example": "The doorbell is ringing. I'll open the door.",
+        "translation": "กริ่งประตูกำลังดัง ฉันจะไปเปิดเอง"
+      },
+      "otherForm": {
+        "name": "be going to",
+        "useThai": "แผนที่ตัดสินใจไว้ก่อนแล้ว หรือการคาดการณ์จากหลักฐานที่เห็นได้",
+        "formula": "Subject + am/is/are + going to + Verb 1",
+        "example": "I'm going to apply for that job tonight.",
+        "translation": "คืนนี้ฉันตั้งใจจะสมัครงานนั้น"
+      },
+      "keyDifferenceThai": "Will มักเป็นการตัดสินใจในขณะที่พูด ส่วน be going to มักเป็นแผนที่ตัดสินใจไว้ล่วงหน้า"
+    },
+    {
+      "id": "future-simple-comparison-present-continuous",
+      "title": "Future Simple vs Present Continuous for future arrangements",
+      "futureSimple": {
+        "useThai": "การตอบสนองทันที คำสัญญา ข้อเสนอ หรือความคิดเห็นเกี่ยวกับอนาคต",
+        "formula": "Subject + will + Verb 1",
+        "example": "I'll call the manager now.",
+        "translation": "ฉันจะโทรหาผู้จัดการตอนนี้"
+      },
+      "otherTense": {
+        "name": "Present Continuous for future arrangements",
+        "useThai": "นัดหมายหรือแผนอนาคตที่จัดเตรียมรายละเอียดไว้แล้ว เช่น เวลา สถานที่ หรือบุคคล",
+        "formula": "Subject + am/is/are + Verb-ing",
+        "example": "I'm meeting the manager at 2 p.m. tomorrow.",
+        "translation": "พรุ่งนี้ตอนบ่ายสองฉันมีนัดพบผู้จัดการ"
+      },
+      "keyDifferenceThai": "Future Simple เน้นการตัดสินใจหรือเจตนาในขณะพูด ส่วน Present Continuous เน้นนัดหมายที่จัดเตรียมไว้แล้ว"
+    }
+  ],
+  "practice": [
+    {
+      "id": "future-simple-practice-01",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "I ___ help you with those bags.",
+      "options": [
+        "will",
+        "am",
+        "do",
+        "did"
+      ],
+      "answer": "will",
+      "explanationThai": "เป็นการเสนอความช่วยเหลือ จึงใช้ will"
+    },
+    {
+      "id": "future-simple-practice-02",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "She will ___ tomorrow.",
+      "options": [
+        "comes",
+        "come",
+        "coming",
+        "to come"
+      ],
+      "answer": "come",
+      "explanationThai": "หลัง will ใช้ Verb 1"
+    },
+    {
+      "id": "future-simple-practice-03",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "They ___ be late.",
+      "options": [
+        "won't",
+        "don't",
+        "aren't",
+        "didn't"
+      ],
+      "answer": "won't",
+      "explanationThai": "ประโยคปฏิเสธ Future Simple ใช้ won't + Verb 1"
+    },
+    {
+      "id": "future-simple-practice-04",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "___ you help me?",
+      "options": [
+        "Do",
+        "Are",
+        "Will",
+        "Did"
+      ],
+      "answer": "Will",
+      "explanationThai": "คำถาม Future Simple ใช้ Will นำหน้าประธาน"
+    },
+    {
+      "id": "future-simple-practice-05",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่เหมาะสม",
+      "question": "The phone is ringing. I ___ it.",
+      "options": [
+        "will answer",
+        "am going to answered",
+        "answer yesterday",
+        "will answering"
+      ],
+      "answer": "will answer",
+      "explanationThai": "เป็นการตัดสินใจทันทีในขณะพูด จึงใช้ will answer"
+    },
+    {
+      "id": "future-simple-practice-06",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่เหมาะสม",
+      "question": "I bought the ingredients yesterday. I ___ dinner tonight.",
+      "options": [
+        "will cook suddenly",
+        "am going to cook",
+        "cooked",
+        "will cooking"
+      ],
+      "answer": "am going to cook",
+      "explanationThai": "มีการเตรียมของไว้แล้ว แสดงว่าเป็นแผนที่ตัดสินใจล่วงหน้า จึงใช้ be going to"
+    },
+    {
+      "id": "future-simple-practice-07",
+      "type": "fill_blank",
+      "instructionThai": "เติม will หรือ won't",
+      "question": "Don't worry. I ___ tell anyone.",
+      "answer": "won't",
+      "acceptedAnswers": [
+        "won't",
+        "will not"
+      ],
+      "explanationThai": "เป็นคำสัญญาว่าจะไม่บอกใคร จึงใช้ won't"
+    },
+    {
+      "id": "future-simple-practice-08",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "She will ___ (call) you later.",
+      "answer": "call",
+      "acceptedAnswers": [
+        "call"
+      ],
+      "explanationThai": "หลัง will ใช้ Verb 1"
+    },
+    {
+      "id": "future-simple-practice-09",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "Will they ___ (join) us?",
+      "answer": "join",
+      "acceptedAnswers": [
+        "join"
+      ],
+      "explanationThai": "หลังประธานในคำถาม Future Simple ใช้ Verb 1"
+    },
+    {
+      "id": "future-simple-practice-10",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำให้ประโยคสมบูรณ์",
+      "question": "I think it ___ rain tomorrow.",
+      "answer": "will",
+      "acceptedAnswers": [
+        "will"
+      ],
+      "explanationThai": "I think มักใช้กับการคาดการณ์ด้วย will"
+    },
+    {
+      "id": "future-simple-practice-11",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำให้เป็นประโยคปฏิเสธ",
+      "question": "He ___ come tonight.",
+      "answer": "won't",
+      "acceptedAnswers": [
+        "won't",
+        "will not"
+      ],
+      "explanationThai": "ใช้ won't + Verb 1 เพื่อสร้างประโยคปฏิเสธ"
+    },
+    {
+      "id": "future-simple-practice-12",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคที่ถูกต้อง",
+      "question": [
+        "will",
+        "I",
+        "help",
+        "you"
+      ],
+      "answer": "I will help you.",
+      "acceptedAnswers": [
+        "I will help you",
+        "I will help you."
+      ],
+      "explanationThai": "โครงสร้างคือ Subject + will + Verb 1"
+    },
+    {
+      "id": "future-simple-practice-13",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคคำถาม",
+      "question": [
+        "when",
+        "will",
+        "she",
+        "arrive"
+      ],
+      "answer": "When will she arrive?",
+      "acceptedAnswers": [
+        "When will she arrive",
+        "When will she arrive?"
+      ],
+      "explanationThai": "โครงสร้างคือ Wh-word + will + subject + Verb 1"
+    },
+    {
+      "id": "future-simple-practice-14",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "I will going.",
+      "answer": "I will go.",
+      "acceptedAnswers": [
+        "I will go",
+        "I will go."
+      ],
+      "explanationThai": "หลัง will ใช้ go ไม่ใช้ going"
+    },
+    {
+      "id": "future-simple-practice-15",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "She will goes.",
+      "answer": "She will go.",
+      "acceptedAnswers": [
+        "She will go",
+        "She will go."
+      ],
+      "explanationThai": "หลัง will ไม่เติม s"
+    },
+    {
+      "id": "future-simple-practice-16",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "Will you to come?",
+      "answer": "Will you come?",
+      "acceptedAnswers": [
+        "Will you come",
+        "Will you come?"
+      ],
+      "explanationThai": "หลังประธานใช้ Verb 1 โดยไม่เติม to"
+    },
+    {
+      "id": "future-simple-practice-17",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกรูปอนาคตที่เหมาะสม",
+      "question": "I have already decided and saved enough money. I ___ a new laptop next month.",
+      "options": [
+        "will buy",
+        "am going to buy",
+        "bought",
+        "will buying"
+      ],
+      "answer": "am going to buy",
+      "explanationThai": "เป็นแผนที่ตัดสินใจไว้ก่อนแล้ว จึงใช้ be going to"
+    },
+    {
+      "id": "future-simple-practice-18",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกรูปอนาคตที่เหมาะสม",
+      "question": "The meeting is confirmed for 10 a.m. tomorrow. We ___ the client then.",
+      "options": [
+        "will meeting",
+        "are meeting",
+        "will to meet",
+        "met"
+      ],
+      "answer": "are meeting",
+      "explanationThai": "เป็นนัดหมายที่กำหนดเวลาไว้แล้ว จึงใช้ Present Continuous"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "future-simple-flashcard-01",
+      "front": "Future Simple ใช้เมื่อใด?",
+      "back": "ใช้กับการตัดสินใจทันที การคาดการณ์จากความคิดเห็น คำสัญญา และการเสนอความช่วยเหลือ",
+      "example": "I'll help you."
+    },
+    {
+      "id": "future-simple-flashcard-02",
+      "front": "โครงสร้างบอกเล่าคืออะไร?",
+      "back": "Subject + will + Verb 1",
+      "example": "She will call."
+    },
+    {
+      "id": "future-simple-flashcard-03",
+      "front": "ประโยคปฏิเสธสร้างอย่างไร?",
+      "back": "Subject + will not หรือ won't + Verb 1",
+      "example": "They won't be late."
+    },
+    {
+      "id": "future-simple-flashcard-04",
+      "front": "ประโยคคำถามสร้างอย่างไร?",
+      "back": "Will + subject + Verb 1?",
+      "example": "Will you come?"
+    },
+    {
+      "id": "future-simple-flashcard-05",
+      "front": "หลัง will ใช้กริยารูปใด?",
+      "back": "ใช้ Verb 1 โดยไม่เติม s, ing หรือ to",
+      "example": "He will go."
+    },
+    {
+      "id": "future-simple-flashcard-06",
+      "front": "Will ใช้กับการตัดสินใจแบบใด?",
+      "back": "ใช้กับการตัดสินใจที่เกิดขึ้นในขณะที่พูด",
+      "example": "The phone is ringing. I'll answer it."
+    },
+    {
+      "id": "future-simple-flashcard-07",
+      "front": "Will ใช้ให้คำสัญญาหรือเสนอความช่วยเหลืออย่างไร?",
+      "back": "ใช้ will + Verb 1 เพื่อบอกว่าจะทำบางสิ่งให้",
+      "example": "I will help you."
+    },
+    {
+      "id": "future-simple-flashcard-08",
+      "front": "อนาคตต้องใช้ will เสมอหรือไม่?",
+      "back": "ไม่เสมอไป ต้องเลือก will, be going to, Present Continuous หรือ Present Simple ตามความหมาย",
+      "example": "I'm meeting Jane tomorrow."
+    },
+    {
+      "id": "future-simple-flashcard-09",
+      "front": "Will ต่างจาก be going to อย่างไร?",
+      "back": "Will มักใช้กับการตัดสินใจตอนพูด ส่วน be going to ใช้กับแผนที่ตัดสินใจไว้แล้วหรือหลักฐานที่เห็นได้",
+      "example": "I'll answer it. / I'm going to apply for the job."
+    },
+    {
+      "id": "future-simple-flashcard-10",
+      "front": "Will ต่างจาก Present Continuous สำหรับอนาคตอย่างไร?",
+      "back": "Will เน้นการตัดสินใจหรือคำสัญญา ส่วน Present Continuous เน้นนัดหมายที่จัดไว้แล้ว",
+      "example": "I'll call him. / I'm meeting him at 2 p.m."
+    }
+  ]
+}

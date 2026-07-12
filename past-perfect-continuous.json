@@ -1,0 +1,758 @@
+{
+  "id": "topic-past-perfect-continuous",
+  "categoryId": "past",
+  "name": "Past Perfect Continuous",
+  "nameThai": "อดีตกาลสมบูรณ์แบบต่อเนื่อง",
+  "slug": "past-perfect-continuous",
+  "stage": "intermediate",
+  "difficulty": 5,
+  "displayOrder": 8,
+  "estimatedMinutes": 25,
+  "prerequisites": [
+    "topic-past-perfect",
+    "topic-past-continuous"
+  ],
+  "summary": {
+    "en": "Use the Past Perfect Continuous for actions that continued for a period before another past action or past time, especially when duration or a past result is important.",
+    "th": "ใช้ Past Perfect Continuous เพื่อพูดถึงการกระทำที่ดำเนินต่อเนื่องเป็นระยะเวลาก่อนอีกเหตุการณ์หรือช่วงเวลาหนึ่งในอดีต โดยเน้นระยะเวลาหรือสาเหตุของสภาพในอดีต"
+  },
+  "learningObjectives": [
+    "ใช้ Past Perfect Continuous เพื่ออธิบายการกระทำที่ดำเนินต่อเนื่องก่อนอีกเหตุการณ์หนึ่งในอดีตได้",
+    "สร้างประโยคด้วย Subject + had been + Verb-ing ได้ถูกต้อง",
+    "ใช้ for และ since เพื่อบอกระยะเวลาและจุดเริ่มต้นได้",
+    "ใช้ before และ when เพื่อเชื่อมลำดับเหตุการณ์ในอดีตได้",
+    "อธิบายสาเหตุของสภาพหรือผลที่เห็นในอดีตได้",
+    "สร้างประโยคบอกเล่า ปฏิเสธ และคำถามใน Past Perfect Continuous ได้",
+    "หลีกเลี่ยงการใช้ stative verbs ในรูป Continuous ได้",
+    "แยก Past Perfect Continuous ออกจาก Past Perfect และ Present Perfect Continuous ได้"
+  ],
+  "uses": [
+    {
+      "id": "past-perfect-continuous-use-1",
+      "title": "การกระทำที่ดำเนินต่อเนื่องก่อนอีกเหตุการณ์ในอดีต",
+      "descriptionThai": "ใช้กับกิจกรรมที่เริ่มก่อนและดำเนินต่อเนื่องอยู่ระยะหนึ่ง ก่อนที่อีกเหตุการณ์หนึ่งในอดีตจะเกิดขึ้น",
+      "example": "I had been studying for two hours before she called.",
+      "translation": "ฉันเรียนต่อเนื่องมาเป็นเวลาสองชั่วโมงก่อนที่เธอจะโทรมา"
+    },
+    {
+      "id": "past-perfect-continuous-use-2",
+      "title": "การเน้นระยะเวลา",
+      "descriptionThai": "ใช้เมื่อต้องการเน้นว่ากิจกรรมดำเนินมานานเท่าไรก่อนจุดหนึ่งในอดีต",
+      "example": "They had been waiting since 8:00 when the bus arrived.",
+      "translation": "พวกเขารอมาตั้งแต่แปดโมงตอนที่รถโดยสารมาถึง"
+    },
+    {
+      "id": "past-perfect-continuous-use-3",
+      "title": "สาเหตุของสภาพในอดีต",
+      "descriptionThai": "ใช้บอกกิจกรรมก่อนหน้าที่เป็นสาเหตุของสภาพ ความรู้สึก หรือผลที่เห็นได้ในอดีต",
+      "example": "She was tired because she had been working all day.",
+      "translation": "เธอเหนื่อยเพราะทำงานต่อเนื่องมาทั้งวัน"
+    },
+    {
+      "id": "past-perfect-continuous-use-4",
+      "title": "กิจกรรมที่เพิ่งหยุดก่อนเหตุการณ์ในอดีต",
+      "descriptionThai": "กิจกรรมอาจหยุดลงไม่นานก่อนเหตุการณ์หรือสภาพในอดีต แต่ผลของกิจกรรมนั้นยังเห็นได้",
+      "example": "The ground was wet because it had been raining.",
+      "translation": "พื้นเปียกเพราะก่อนหน้านั้นฝนตกต่อเนื่องมา"
+    }
+  ],
+  "structures": [
+    {
+      "id": "past-perfect-continuous-structure-affirmative",
+      "type": "affirmative",
+      "subjectGroup": "all",
+      "formula": "Subject + had been + Verb-ing + ...",
+      "example": "They had been working for three hours.",
+      "translation": "พวกเขาทำงานต่อเนื่องมาเป็นเวลาสามชั่วโมง",
+      "noteThai": "ทุกประธานใช้ had been เหมือนกัน"
+    },
+    {
+      "id": "past-perfect-continuous-structure-negative",
+      "type": "negative",
+      "subjectGroup": "all",
+      "formula": "Subject + had not (hadn't) been + Verb-ing + ...",
+      "example": "I hadn't been sleeping well.",
+      "translation": "ก่อนหน้านั้นฉันนอนไม่ค่อยดี",
+      "noteThai": "หลัง hadn't been ต้องใช้ Verb-ing"
+    },
+    {
+      "id": "past-perfect-continuous-structure-question",
+      "type": "question",
+      "subjectGroup": "all",
+      "formula": "Had + subject + been + Verb-ing + ...?",
+      "example": "Had she been waiting long?",
+      "translation": "ก่อนหน้านั้นเธอรอมานานไหม",
+      "noteThai": "ย้าย had ไปไว้หน้าประธาน"
+    },
+    {
+      "id": "past-perfect-continuous-structure-wh-question",
+      "type": "wh-question",
+      "subjectGroup": "all",
+      "formula": "Wh-word + had + subject + been + Verb-ing + ...?",
+      "example": "How long had you been working there?",
+      "translation": "ก่อนหน้านั้นคุณทำงานที่นั่นมานานเท่าไร",
+      "noteThai": "How long ใช้ถามระยะเวลาที่กิจกรรมดำเนินมาก่อนจุดหนึ่งในอดีต"
+    },
+    {
+      "id": "past-perfect-continuous-structure-short-answer",
+      "type": "short-answer",
+      "subjectGroup": "all",
+      "formula": "Yes, subject + had. | No, subject + hadn't.",
+      "example": "Had they been waiting? Yes, they had.",
+      "translation": "พวกเขารออยู่ก่อนหน้านั้นไหม ใช่",
+      "noteThai": "คำตอบสั้นไม่ต้องพูด been และ Verb-ing ซ้ำ"
+    },
+    {
+      "id": "past-perfect-continuous-structure-sequence",
+      "type": "sequence",
+      "subjectGroup": "all",
+      "formula": "Earlier continuing action: Past Perfect Continuous | Later action: Past Simple",
+      "example": "She had been studying before the exam started.",
+      "translation": "เธอเรียนต่อเนื่องมาก่อนที่การสอบจะเริ่ม",
+      "noteThai": "กิจกรรมที่ดำเนินมาก่อนใช้ Past Perfect Continuous ส่วนเหตุการณ์ที่เกิดทีหลังใช้ Past Simple"
+    }
+  ],
+  "verbIngRules": [
+    {
+      "id": "past-perfect-continuous-rule-ing",
+      "title": "กริยาทั่วไปเติม ing",
+      "ruleThai": "กริยาทั่วไปเติม ing ได้เลย",
+      "examples": [
+        "work → working",
+        "read → reading",
+        "wait → waiting"
+      ]
+    },
+    {
+      "id": "past-perfect-continuous-rule-drop-e",
+      "title": "กริยาลงท้ายด้วย e ตัด e แล้วเติม ing",
+      "ruleThai": "ถ้ากริยาลงท้ายด้วย e ที่ไม่ออกเสียง ให้ตัด e ก่อนเติม ing",
+      "examples": [
+        "write → writing",
+        "make → making",
+        "drive → driving"
+      ]
+    },
+    {
+      "id": "past-perfect-continuous-rule-double-consonant",
+      "title": "เพิ่มพยัญชนะตัวท้ายก่อนเติม ing",
+      "ruleThai": "กริยาพยางค์เดียวแบบพยัญชนะ-สระ-พยัญชนะ มักเพิ่มพยัญชนะตัวท้ายก่อนเติม ing",
+      "examples": [
+        "run → running",
+        "sit → sitting",
+        "swim → swimming"
+      ]
+    },
+    {
+      "id": "past-perfect-continuous-rule-ie-ying",
+      "title": "กริยาลงท้ายด้วย ie เปลี่ยนเป็น y แล้วเติม ing",
+      "ruleThai": "เปลี่ยน ie เป็น y ก่อนเติม ing",
+      "examples": [
+        "lie → lying",
+        "die → dying",
+        "tie → tying"
+      ]
+    }
+  ],
+  "connectors": [
+    {
+      "id": "past-perfect-continuous-connector-for",
+      "word": "for",
+      "meaningThai": "เป็นเวลา",
+      "usageThai": "ใช้กับระยะเวลาที่กิจกรรมดำเนินมา",
+      "example": "He had been exercising for an hour."
+    },
+    {
+      "id": "past-perfect-continuous-connector-since",
+      "word": "since",
+      "meaningThai": "ตั้งแต่",
+      "usageThai": "ใช้กับจุดเริ่มต้นของกิจกรรม",
+      "example": "She had been working since 7:00."
+    },
+    {
+      "id": "past-perfect-continuous-connector-before",
+      "word": "before",
+      "meaningThai": "ก่อนที่",
+      "usageThai": "ใช้เชื่อมกิจกรรมที่ดำเนินมาก่อนกับเหตุการณ์ที่เกิดทีหลัง",
+      "example": "I had been waiting before he arrived."
+    },
+    {
+      "id": "past-perfect-continuous-connector-when",
+      "word": "when",
+      "meaningThai": "ตอนที่",
+      "usageThai": "ใช้ระบุเหตุการณ์หรือจุดในอดีตที่กิจกรรมก่อนหน้าดำเนินมาถึง",
+      "example": "They had been talking for an hour when the manager entered."
+    }
+  ],
+  "forAndSince": {
+    "descriptionThai": "ใช้ for กับระยะเวลา และใช้ since กับจุดเริ่มต้นของกิจกรรมก่อนเหตุการณ์ในอดีต",
+    "for": {
+      "meaningThai": "เป็นเวลา",
+      "examples": [
+        "for two hours",
+        "for three days",
+        "for several months",
+        "for a long time"
+      ],
+      "sentence": "We had been driving for four hours before we stopped."
+    },
+    "since": {
+      "meaningThai": "ตั้งแต่",
+      "examples": [
+        "since Monday",
+        "since 8:00",
+        "since the previous week",
+        "since he moved there"
+      ],
+      "sentence": "She had been living there since 2022 when she changed jobs."
+    },
+    "keyDifferenceThai": "for บอกระยะเวลาว่านานเท่าไร ส่วน since บอกจุดเริ่มต้นว่าเริ่มตั้งแต่เมื่อไร"
+  },
+  "stativeVerbs": {
+    "descriptionThai": "กริยาที่บอกความคิด ความรู้สึก ความเป็นเจ้าของ หรือสภาวะ มักไม่ใช้ใน Past Perfect Continuous จึงมักใช้ Past Perfect แทน",
+    "commonVerbs": [
+      {
+        "group": "ความรู้และความเข้าใจ",
+        "verbs": [
+          "know",
+          "understand",
+          "believe",
+          "remember",
+          "mean"
+        ],
+        "correctExample": "He had known her for years before they worked together.",
+        "incorrectExample": "He had been knowing her for years."
+      },
+      {
+        "group": "ความชอบและความต้องการ",
+        "verbs": [
+          "like",
+          "love",
+          "hate",
+          "prefer",
+          "want",
+          "need"
+        ],
+        "correctExample": "She had wanted that job for a long time.",
+        "incorrectExample": "She had been wanting that job for a long time."
+      },
+      {
+        "group": "ความเป็นเจ้าของ",
+        "verbs": [
+          "own",
+          "belong",
+          "possess",
+          "have"
+        ],
+        "correctExample": "They had owned the house for ten years.",
+        "incorrectExample": "They had been owning the house for ten years."
+      }
+    ],
+    "importantNote": "กริยาบางคำใช้ใน Continuous ได้เมื่อความหมายเปลี่ยน เช่น He had been having problems with his car. โดย have หมายถึงกำลังประสบปัญหา ไม่ได้หมายถึงเป็นเจ้าของ"
+  },
+  "timeMarkers": [
+    {
+      "text": "for",
+      "meaningThai": "เป็นเวลา",
+      "example": "I had been studying for two hours."
+    },
+    {
+      "text": "since",
+      "meaningThai": "ตั้งแต่",
+      "example": "She had been waiting since 8:00."
+    },
+    {
+      "text": "before",
+      "meaningThai": "ก่อนที่",
+      "example": "We had been working before the manager arrived."
+    },
+    {
+      "text": "when",
+      "meaningThai": "ตอนที่",
+      "example": "They had been talking for an hour when I joined them."
+    },
+    {
+      "text": "all day",
+      "meaningThai": "ตลอดทั้งวัน",
+      "example": "He had been working all day."
+    },
+    {
+      "text": "all morning",
+      "meaningThai": "ตลอดช่วงเช้า",
+      "example": "She had been cleaning all morning."
+    },
+    {
+      "text": "for a long time",
+      "meaningThai": "เป็นเวลานาน",
+      "example": "They had been waiting for a long time."
+    },
+    {
+      "text": "how long",
+      "meaningThai": "นานเท่าไร",
+      "example": "How long had you been living there?"
+    }
+  ],
+  "examples": [
+    {
+      "id": "past-perfect-continuous-example-01",
+      "sentence": "I had been studying for two hours before she called.",
+      "translation": "ฉันเรียนต่อเนื่องมาเป็นเวลาสองชั่วโมงก่อนที่เธอจะโทรมา",
+      "focus": "duration before another past action",
+      "usage": "continuing-before-past"
+    },
+    {
+      "id": "past-perfect-continuous-example-02",
+      "sentence": "She had been working since 7:00 when the power went out.",
+      "translation": "เธอทำงานมาตั้งแต่เจ็ดโมงตอนที่ไฟดับ",
+      "focus": "since + past interruption",
+      "usage": "continuing-before-past"
+    },
+    {
+      "id": "past-perfect-continuous-example-03",
+      "sentence": "They had been waiting for the bus for forty minutes before it arrived.",
+      "translation": "พวกเขารอรถโดยสารมาเป็นเวลาสี่สิบนาทีก่อนที่รถจะมาถึง",
+      "focus": "for + duration",
+      "usage": "duration"
+    },
+    {
+      "id": "past-perfect-continuous-example-04",
+      "sentence": "How long had you been living there before you moved?",
+      "translation": "คุณอาศัยอยู่ที่นั่นมานานเท่าไรก่อนที่จะย้ายออก",
+      "focus": "how long",
+      "usage": "duration-question"
+    },
+    {
+      "id": "past-perfect-continuous-example-05",
+      "sentence": "She was tired because she had been working all day.",
+      "translation": "เธอเหนื่อยเพราะทำงานต่อเนื่องมาทั้งวัน",
+      "focus": "past cause",
+      "usage": "past-result"
+    },
+    {
+      "id": "past-perfect-continuous-example-06",
+      "sentence": "The ground was wet because it had been raining.",
+      "translation": "พื้นเปียกเพราะก่อนหน้านั้นฝนตกต่อเนื่องมา",
+      "focus": "visible past result",
+      "usage": "past-result"
+    },
+    {
+      "id": "past-perfect-continuous-example-07",
+      "sentence": "He had been running, so he was out of breath.",
+      "translation": "เขาวิ่งต่อเนื่องมาก่อน ดังนั้นเขาจึงหอบ",
+      "focus": "recent activity causing past state",
+      "usage": "past-result"
+    },
+    {
+      "id": "past-perfect-continuous-example-08",
+      "sentence": "We hadn't been sleeping well before the trip.",
+      "translation": "ก่อนการเดินทางพวกเรานอนไม่ค่อยดี",
+      "focus": "negative form",
+      "usage": "negative"
+    },
+    {
+      "id": "past-perfect-continuous-example-09",
+      "sentence": "Had they been arguing before you arrived?",
+      "translation": "ก่อนที่คุณจะมาถึง พวกเขาทะเลาะกันต่อเนื่องอยู่หรือไม่",
+      "focus": "question",
+      "usage": "question"
+    },
+    {
+      "id": "past-perfect-continuous-example-10",
+      "sentence": "He had known her for years before they became coworkers.",
+      "translation": "เขารู้จักเธอมาหลายปีก่อนที่ทั้งคู่จะกลายเป็นเพื่อนร่วมงาน",
+      "focus": "stative verb uses Past Perfect",
+      "usage": "stative-verb"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "past-perfect-continuous-mistake-01",
+      "incorrect": "I had been work all day.",
+      "correct": "I had been working all day.",
+      "explanationThai": "หลัง had been ต้องใช้กริยาเติม ing"
+    },
+    {
+      "id": "past-perfect-continuous-mistake-02",
+      "incorrect": "She has been waiting before he arrived.",
+      "correct": "She had been waiting before he arrived.",
+      "explanationThai": "กิจกรรมและเหตุการณ์อ้างอิงอยู่ในอดีต จึงใช้ had been ไม่ใช่ has been"
+    },
+    {
+      "id": "past-perfect-continuous-mistake-03",
+      "incorrect": "They had waiting for two hours.",
+      "correct": "They had been waiting for two hours.",
+      "explanationThai": "Past Perfect Continuous ต้องมี been ระหว่าง had กับ Verb-ing"
+    },
+    {
+      "id": "past-perfect-continuous-mistake-04",
+      "incorrect": "He had been knowing her for years.",
+      "correct": "He had known her for years.",
+      "explanationThai": "Know เป็น stative verb จึงใช้ Past Perfect ไม่ใช้ Past Perfect Continuous"
+    },
+    {
+      "id": "past-perfect-continuous-mistake-05",
+      "incorrect": "I had been finished three reports before lunch.",
+      "correct": "I had finished three reports before lunch.",
+      "explanationThai": "เมื่อเน้นผลลัพธ์หรือจำนวนงานที่เสร็จแล้ว ใช้ Past Perfect"
+    },
+    {
+      "id": "past-perfect-continuous-mistake-06",
+      "incorrect": "She had worked for three hours when I arrived.",
+      "correct": "She had been working for three hours when I arrived.",
+      "explanationThai": "เมื่อเน้นระยะเวลาของกิจกรรมที่ดำเนินต่อเนื่อง ควรใช้ Past Perfect Continuous"
+    },
+    {
+      "id": "past-perfect-continuous-mistake-07",
+      "incorrect": "Had you been work there long?",
+      "correct": "Had you been working there long?",
+      "explanationThai": "หลัง been ต้องใช้ working"
+    },
+    {
+      "id": "past-perfect-continuous-mistake-08",
+      "incorrect": "They had been waiting since two hours.",
+      "correct": "They had been waiting for two hours.",
+      "explanationThai": "Two hours เป็นระยะเวลา จึงใช้ for ไม่ใช่ since"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "past-perfect-continuous-comparison-past-perfect",
+      "title": "Past Perfect Continuous vs Past Perfect",
+      "pastPerfectContinuous": {
+        "useThai": "เน้นกิจกรรม กระบวนการ หรือระยะเวลาที่ดำเนินต่อเนื่องก่อนอีกเหตุการณ์ในอดีต",
+        "formula": "Subject + had been + Verb-ing",
+        "example": "I had been writing reports for three hours.",
+        "translation": "ฉันเขียนรายงานต่อเนื่องมาเป็นเวลาสามชั่วโมง"
+      },
+      "otherTense": {
+        "name": "Past Perfect",
+        "useThai": "เน้นผลลัพธ์ จำนวน หรือสิ่งที่เสร็จแล้วก่อนอีกเหตุการณ์ในอดีต",
+        "formula": "Subject + had + Past Participle",
+        "example": "I had written three reports before lunch.",
+        "translation": "ฉันเขียนรายงานเสร็จแล้วสามฉบับก่อนอาหารกลางวัน"
+      },
+      "keyDifferenceThai": "Past Perfect Continuous เน้นว่ากิจกรรมดำเนินมานานหรือทำต่อเนื่อง ส่วน Past Perfect เน้นผลลัพธ์หรือจำนวนที่ทำเสร็จ"
+    },
+    {
+      "id": "past-perfect-continuous-comparison-present-perfect-continuous",
+      "title": "Past Perfect Continuous vs Present Perfect Continuous",
+      "pastPerfectContinuous": {
+        "useThai": "กิจกรรมดำเนินต่อเนื่องก่อนจุดหนึ่งในอดีต",
+        "formula": "Subject + had been + Verb-ing",
+        "example": "She had been working for two hours when I arrived.",
+        "translation": "เธอทำงานต่อเนื่องมาสองชั่วโมงตอนที่ฉันมาถึง"
+      },
+      "otherTense": {
+        "name": "Present Perfect Continuous",
+        "useThai": "กิจกรรมเริ่มในอดีตและดำเนินมาถึงปัจจุบัน หรือเพิ่งหยุดและยังเห็นผลตอนนี้",
+        "formula": "Subject + have/has been + Verb-ing",
+        "example": "She has been working for two hours.",
+        "translation": "เธอทำงานต่อเนื่องมาเป็นเวลาสองชั่วโมงแล้ว"
+      },
+      "keyDifferenceThai": "Past Perfect Continuous เชื่อมกิจกรรมกับจุดหนึ่งในอดีต ส่วน Present Perfect Continuous เชื่อมกิจกรรมกับปัจจุบัน"
+    }
+  ],
+  "practice": [
+    {
+      "id": "past-perfect-continuous-practice-01",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "I ___ been studying for two hours before she called.",
+      "options": [
+        "have",
+        "had",
+        "has",
+        "was"
+      ],
+      "answer": "had",
+      "explanationThai": "Past Perfect Continuous ใช้ had been กับทุกประธาน"
+    },
+    {
+      "id": "past-perfect-continuous-practice-02",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "She had been ___ all day.",
+      "options": [
+        "work",
+        "worked",
+        "working",
+        "works"
+      ],
+      "answer": "working",
+      "explanationThai": "หลัง had been ต้องใช้ Verb-ing"
+    },
+    {
+      "id": "past-perfect-continuous-practice-03",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "They ___ been waiting for two hours.",
+      "options": [
+        "had",
+        "have",
+        "were",
+        "did"
+      ],
+      "answer": "had",
+      "explanationThai": "โครงสร้างคือ had been + Verb-ing"
+    },
+    {
+      "id": "past-perfect-continuous-practice-04",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำที่เหมาะสม",
+      "question": "He had been exercising ___ an hour.",
+      "options": [
+        "for",
+        "since",
+        "from",
+        "at"
+      ],
+      "answer": "for",
+      "explanationThai": "An hour เป็นระยะเวลา จึงใช้ for"
+    },
+    {
+      "id": "past-perfect-continuous-practice-05",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำที่เหมาะสม",
+      "question": "She had been working ___ 7:00.",
+      "options": [
+        "for",
+        "since",
+        "during",
+        "ago"
+      ],
+      "answer": "since",
+      "explanationThai": "7:00 เป็นจุดเริ่มต้น จึงใช้ since"
+    },
+    {
+      "id": "past-perfect-continuous-practice-06",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกประโยคที่ถูกต้อง",
+      "question": "Which sentence is correct?",
+      "options": [
+        "He had been knowing her for years.",
+        "He had known her for years.",
+        "He had been know her for years.",
+        "He has known her before they met."
+      ],
+      "answer": "He had known her for years.",
+      "explanationThai": "Know เป็น stative verb จึงใช้ Past Perfect"
+    },
+    {
+      "id": "past-perfect-continuous-practice-07",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำให้โครงสร้างสมบูรณ์",
+      "question": "We had ___ driving for four hours.",
+      "answer": "been",
+      "acceptedAnswers": [
+        "been"
+      ],
+      "explanationThai": "โครงสร้างคือ had been + Verb-ing"
+    },
+    {
+      "id": "past-perfect-continuous-practice-08",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "She had been ___ (write) emails all morning.",
+      "answer": "writing",
+      "acceptedAnswers": [
+        "writing"
+      ],
+      "explanationThai": "Write ตัด e แล้วเติม ing เป็น writing"
+    },
+    {
+      "id": "past-perfect-continuous-practice-09",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "He had been ___ (run), so he was tired.",
+      "answer": "running",
+      "acceptedAnswers": [
+        "running"
+      ],
+      "explanationThai": "Run เพิ่ม n แล้วเติม ing เป็น running"
+    },
+    {
+      "id": "past-perfect-continuous-practice-10",
+      "type": "fill_blank",
+      "instructionThai": "เติม for หรือ since",
+      "question": "They had been waiting ___ two hours.",
+      "answer": "for",
+      "acceptedAnswers": [
+        "for"
+      ],
+      "explanationThai": "Two hours เป็นระยะเวลา จึงใช้ for"
+    },
+    {
+      "id": "past-perfect-continuous-practice-11",
+      "type": "fill_blank",
+      "instructionThai": "เติม for หรือ since",
+      "question": "I had been working there ___ Monday.",
+      "answer": "since",
+      "acceptedAnswers": [
+        "since"
+      ],
+      "explanationThai": "Monday เป็นจุดเริ่มต้น จึงใช้ since"
+    },
+    {
+      "id": "past-perfect-continuous-practice-12",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคที่ถูกต้อง",
+      "question": [
+        "had",
+        "been",
+        "she",
+        "working",
+        "all day"
+      ],
+      "answer": "She had been working all day.",
+      "acceptedAnswers": [
+        "She had been working all day",
+        "She had been working all day."
+      ],
+      "explanationThai": "โครงสร้างคือ Subject + had been + Verb-ing"
+    },
+    {
+      "id": "past-perfect-continuous-practice-13",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคคำถาม",
+      "question": [
+        "how long",
+        "had",
+        "you",
+        "been",
+        "waiting"
+      ],
+      "answer": "How long had you been waiting?",
+      "acceptedAnswers": [
+        "How long had you been waiting",
+        "How long had you been waiting?"
+      ],
+      "explanationThai": "โครงสร้างคือ How long + had + subject + been + Verb-ing"
+    },
+    {
+      "id": "past-perfect-continuous-practice-14",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "I had been work all day.",
+      "answer": "I had been working all day.",
+      "acceptedAnswers": [
+        "I had been working all day",
+        "I had been working all day."
+      ],
+      "explanationThai": "หลัง had been ต้องใช้ working"
+    },
+    {
+      "id": "past-perfect-continuous-practice-15",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "She has been waiting before he arrived.",
+      "answer": "She had been waiting before he arrived.",
+      "acceptedAnswers": [
+        "She had been waiting before he arrived",
+        "She had been waiting before he arrived."
+      ],
+      "explanationThai": "เหตุการณ์อ้างอิงอยู่ในอดีต จึงใช้ had been waiting"
+    },
+    {
+      "id": "past-perfect-continuous-practice-16",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "They had waiting for two hours.",
+      "answer": "They had been waiting for two hours.",
+      "acceptedAnswers": [
+        "They had been waiting for two hours",
+        "They had been waiting for two hours."
+      ],
+      "explanationThai": "ต้องเติม been ระหว่าง had กับ waiting"
+    },
+    {
+      "id": "past-perfect-continuous-practice-17",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "By noon, I ___ three reports.",
+      "options": [
+        "had finished",
+        "had been finishing",
+        "have finished",
+        "was finishing"
+      ],
+      "answer": "had finished",
+      "explanationThai": "ประโยคเน้นผลลัพธ์ว่ารายงานเสร็จแล้วสามฉบับ จึงใช้ Past Perfect"
+    },
+    {
+      "id": "past-perfect-continuous-practice-18",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่เหมาะสม",
+      "question": "She was exhausted because she ___ all morning.",
+      "options": [
+        "had been working",
+        "had worked three reports",
+        "has been working",
+        "was work"
+      ],
+      "answer": "had been working",
+      "explanationThai": "กิจกรรมดำเนินต่อเนื่องก่อนและเป็นสาเหตุของความเหนื่อยในอดีต จึงใช้ Past Perfect Continuous"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "past-perfect-continuous-flashcard-01",
+      "front": "Past Perfect Continuous ใช้เมื่อใด?",
+      "back": "ใช้กับกิจกรรมที่ดำเนินต่อเนื่องก่อนอีกเหตุการณ์ในอดีต การเน้นระยะเวลา และสาเหตุของสภาพในอดีต",
+      "example": "I had been studying before she called."
+    },
+    {
+      "id": "past-perfect-continuous-flashcard-02",
+      "front": "โครงสร้างบอกเล่าคืออะไร?",
+      "back": "Subject + had been + Verb-ing",
+      "example": "They had been waiting."
+    },
+    {
+      "id": "past-perfect-continuous-flashcard-03",
+      "front": "ทุกประธานใช้รูปใด?",
+      "back": "ทุกประธานใช้ had been",
+      "example": "I had been working. / She had been working."
+    },
+    {
+      "id": "past-perfect-continuous-flashcard-04",
+      "front": "ประโยคปฏิเสธสร้างอย่างไร?",
+      "back": "Subject + hadn't been + Verb-ing",
+      "example": "We hadn't been sleeping well."
+    },
+    {
+      "id": "past-perfect-continuous-flashcard-05",
+      "front": "ประโยคคำถามสร้างอย่างไร?",
+      "back": "Had + subject + been + Verb-ing?",
+      "example": "Had you been waiting?"
+    },
+    {
+      "id": "past-perfect-continuous-flashcard-06",
+      "front": "For และ since ต่างกันอย่างไร?",
+      "back": "For ใช้กับระยะเวลา ส่วน since ใช้กับจุดเริ่มต้น",
+      "example": "for two hours / since 8:00"
+    },
+    {
+      "id": "past-perfect-continuous-flashcard-07",
+      "front": "ทำไมไม่พูด I had been work?",
+      "back": "เพราะหลัง had been ต้องใช้ Verb-ing",
+      "example": "I had been working."
+    },
+    {
+      "id": "past-perfect-continuous-flashcard-08",
+      "front": "Know ใช้ใน Past Perfect Continuous ได้หรือไม่?",
+      "back": "โดยทั่วไปไม่ได้ เพราะ know เป็น stative verb จึงใช้ Past Perfect",
+      "example": "He had known her for years."
+    },
+    {
+      "id": "past-perfect-continuous-flashcard-09",
+      "front": "Past Perfect Continuous ต่างจาก Past Perfect อย่างไร?",
+      "back": "Past Perfect Continuous เน้นกิจกรรมและระยะเวลา ส่วน Past Perfect เน้นผลลัพธ์หรือจำนวนที่เสร็จแล้ว",
+      "example": "I had been writing for hours. / I had written three reports."
+    },
+    {
+      "id": "past-perfect-continuous-flashcard-10",
+      "front": "Past Perfect Continuous ต่างจาก Present Perfect Continuous อย่างไร?",
+      "back": "Past Perfect Continuous เชื่อมกิจกรรมกับจุดหนึ่งในอดีต ส่วน Present Perfect Continuous เชื่อมกิจกรรมกับปัจจุบัน",
+      "example": "She had been working when I arrived. / She has been working for two hours."
+    }
+  ]
+}

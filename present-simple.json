@@ -1,0 +1,733 @@
+{
+  "id": "topic-present-simple",
+  "categoryId": "present",
+  "name": "Present Simple",
+  "nameThai": "ปัจจุบันกาลแบบธรรมดา",
+  "slug": "present-simple",
+  "stage": "beginner",
+  "difficulty": 1,
+  "displayOrder": 1,
+  "estimatedMinutes": 20,
+  "prerequisites": [],
+  "summary": {
+    "en": "Use the Present Simple to talk about routines, repeated actions, facts, and fixed schedules.",
+    "th": "ใช้ Present Simple เพื่อพูดถึงกิจวัตร สิ่งที่เกิดขึ้นเป็นประจำ ข้อเท็จจริง และตารางเวลาที่กำหนดไว้"
+  },
+  "learningObjectives": [
+    "แยกการใช้ Present Simple สำหรับกิจวัตร สิ่งที่เกิดเป็นประจำ ข้อเท็จจริง และตารางเวลาได้",
+    "สร้างประโยคบอกเล่าด้วย I/You/We/They + Verb 1 และ He/She/It + Verb-s/es ได้",
+    "สร้างประโยคปฏิเสธและคำถามด้วย do, does, don't และ doesn't ได้",
+    "เติม s, es และ ies รวมถึงใช้ have → has, do → does และ go → goes ได้ถูกต้อง",
+    "วาง adverbs of frequency เช่น usually, often, sometimes, always และ never ได้ถูกตำแหน่ง",
+    "แยก Present Simple ออกจาก Present Continuous และ Past Simple ได้"
+  ],
+  "uses": [
+    {
+      "id": "present-simple-use-1",
+      "title": "กิจวัตรและนิสัย",
+      "descriptionThai": "ใช้พูดถึงสิ่งที่ทำเป็นกิจวัตรหรือนิสัย",
+      "example": "I exercise after work.",
+      "translation": "ฉันออกกำลังกายหลังเลิกงาน"
+    },
+    {
+      "id": "present-simple-use-2",
+      "title": "สิ่งที่เกิดเป็นประจำ",
+      "descriptionThai": "ใช้พูดถึงเหตุการณ์ที่เกิดซ้ำตามช่วงเวลา",
+      "example": "We meet once a week.",
+      "translation": "พวกเราเจอกันสัปดาห์ละครั้ง"
+    },
+    {
+      "id": "present-simple-use-3",
+      "title": "ข้อเท็จจริงและความจริงทั่วไป",
+      "descriptionThai": "ใช้พูดถึงข้อเท็จจริงหรือสิ่งที่เป็นจริงโดยทั่วไป",
+      "example": "Water boils at 100 degrees Celsius.",
+      "translation": "น้ำเดือดที่อุณหภูมิ 100 องศาเซลเซียส"
+    },
+    {
+      "id": "present-simple-use-4",
+      "title": "ตารางเวลา",
+      "descriptionThai": "ใช้พูดถึงตารางเดินรถ ตารางเรียน ตารางงาน หรือกำหนดการที่แน่นอน",
+      "example": "The train leaves at 7:30.",
+      "translation": "รถไฟออกเวลา 7:30 น."
+    }
+  ],
+  "structures": [
+    {
+      "id": "present-simple-structure-affirmative-plural",
+      "type": "affirmative",
+      "subjectGroup": "I/You/We/They",
+      "formula": "Subject + Verb 1 + ...",
+      "example": "They work every day.",
+      "translation": "พวกเขาทำงานทุกวัน",
+      "noteThai": "ใช้กริยารูปพื้นฐาน ไม่เติม s หรือ es"
+    },
+    {
+      "id": "present-simple-structure-affirmative-singular",
+      "type": "affirmative",
+      "subjectGroup": "He/She/It",
+      "formula": "Subject + Verb-s/es + ...",
+      "example": "She works every day.",
+      "translation": "เธอทำงานทุกวัน",
+      "noteThai": "เติม s, es หรือเปลี่ยน y เป็น ies ตามกฎ"
+    },
+    {
+      "id": "present-simple-structure-negative-plural",
+      "type": "negative",
+      "subjectGroup": "I/You/We/They",
+      "formula": "Subject + do not (don't) + Verb 1 + ...",
+      "example": "I don't drink coffee.",
+      "translation": "ฉันไม่ดื่มกาแฟ",
+      "noteThai": "หลัง don't ใช้ Verb 1 เสมอ"
+    },
+    {
+      "id": "present-simple-structure-negative-singular",
+      "type": "negative",
+      "subjectGroup": "He/She/It",
+      "formula": "Subject + does not (doesn't) + Verb 1 + ...",
+      "example": "He doesn't drink coffee.",
+      "translation": "เขาไม่ดื่มกาแฟ",
+      "noteThai": "เมื่อมี doesn't แล้ว กริยาหลักกลับเป็น Verb 1 ไม่เติม s"
+    },
+    {
+      "id": "present-simple-structure-question-plural",
+      "type": "question",
+      "subjectGroup": "I/you/we/they",
+      "formula": "Do + subject + Verb 1 + ...?",
+      "example": "Do you work on Mondays?",
+      "translation": "คุณทำงานวันจันทร์ไหม",
+      "noteThai": "ใช้ Do นำหน้าประธาน และใช้ Verb 1"
+    },
+    {
+      "id": "present-simple-structure-question-singular",
+      "type": "question",
+      "subjectGroup": "he/she/it",
+      "formula": "Does + subject + Verb 1 + ...?",
+      "example": "Does she work here?",
+      "translation": "เธอทำงานที่นี่ไหม",
+      "noteThai": "เมื่อมี Does แล้ว กริยาหลักไม่เติม s"
+    },
+    {
+      "id": "present-simple-structure-short-answer",
+      "type": "short-answer",
+      "subjectGroup": "all",
+      "formula": "Yes, subject + do/does. | No, subject + don't/doesn't.",
+      "example": "Does he live here? Yes, he does.",
+      "translation": "เขาอาศัยอยู่ที่นี่ไหม ใช่ เขาอยู่ที่นี่",
+      "noteThai": "คำตอบสั้นต้องเลือก do หรือ does ให้ตรงกับประธาน"
+    }
+  ],
+  "verbRules": [
+    {
+      "id": "present-simple-rule-s",
+      "title": "กริยาทั่วไปเติม s",
+      "ruleThai": "เมื่อประธานเป็น he, she หรือ it กริยาทั่วไปเติม s",
+      "examples": [
+        "work → works",
+        "read → reads",
+        "play → plays"
+      ]
+    },
+    {
+      "id": "present-simple-rule-es",
+      "title": "กริยาลงท้ายด้วย s, sh, ch, x, z หรือ o เติม es",
+      "ruleThai": "เติม es เมื่อกริยาลงท้ายด้วย s, sh, ch, x, z หรือ o",
+      "examples": [
+        "watch → watches",
+        "wash → washes",
+        "fix → fixes",
+        "go → goes",
+        "do → does"
+      ]
+    },
+    {
+      "id": "present-simple-rule-ies",
+      "title": "พยัญชนะ + y เปลี่ยน y เป็น ies",
+      "ruleThai": "ถ้าหน้า y เป็นพยัญชนะ ให้ตัด y แล้วเติม ies",
+      "examples": [
+        "study → studies",
+        "try → tries",
+        "carry → carries"
+      ]
+    },
+    {
+      "id": "present-simple-rule-vowel-y",
+      "title": "สระ + y เติม s",
+      "ruleThai": "ถ้าหน้า y เป็นสระ ให้เติม s ได้เลย",
+      "examples": [
+        "play → plays",
+        "enjoy → enjoys",
+        "buy → buys"
+      ]
+    },
+    {
+      "id": "present-simple-rule-irregular",
+      "title": "รูปที่ควรจำ",
+      "ruleThai": "กริยาบางคำมีรูปเฉพาะเมื่อใช้กับ he, she หรือ it",
+      "examples": [
+        "have → has",
+        "do → does",
+        "go → goes"
+      ]
+    }
+  ],
+  "adverbsOfFrequency": {
+    "descriptionThai": "คำบอกความถี่มักวางหน้ากริยาหลัก แต่หลัง verb to be",
+    "beforeMainVerb": {
+      "formula": "Subject + adverb of frequency + main verb",
+      "examples": [
+        "I usually exercise in the morning.",
+        "She never drinks coffee."
+      ]
+    },
+    "afterVerbToBe": {
+      "formula": "Subject + am/is/are + adverb of frequency",
+      "examples": [
+        "He is always busy on Mondays.",
+        "They are often late."
+      ]
+    },
+    "sometimesNote": "Sometimes สามารถวางต้นประโยคหรือก่อนกริยาหลักได้ เช่น Sometimes I walk to work. / I sometimes walk to work.",
+    "scale": [
+      {
+        "word": "always",
+        "meaningThai": "เสมอ",
+        "approximateFrequency": "100%"
+      },
+      {
+        "word": "usually",
+        "meaningThai": "โดยปกติ",
+        "approximateFrequency": "ประมาณ 80–90%"
+      },
+      {
+        "word": "often",
+        "meaningThai": "บ่อย",
+        "approximateFrequency": "ประมาณ 60–70%"
+      },
+      {
+        "word": "sometimes",
+        "meaningThai": "บางครั้ง",
+        "approximateFrequency": "ประมาณ 30–50%"
+      },
+      {
+        "word": "never",
+        "meaningThai": "ไม่เคย",
+        "approximateFrequency": "0%"
+      }
+    ]
+  },
+  "timeMarkers": [
+    {
+      "text": "every day",
+      "meaningThai": "ทุกวัน",
+      "example": "I study English every day."
+    },
+    {
+      "text": "usually",
+      "meaningThai": "โดยปกติ",
+      "example": "She usually gets up at six."
+    },
+    {
+      "text": "often",
+      "meaningThai": "บ่อย",
+      "example": "We often eat together."
+    },
+    {
+      "text": "sometimes",
+      "meaningThai": "บางครั้ง",
+      "example": "They sometimes walk to work."
+    },
+    {
+      "text": "always",
+      "meaningThai": "เสมอ",
+      "example": "He always checks his email."
+    },
+    {
+      "text": "never",
+      "meaningThai": "ไม่เคย",
+      "example": "I never skip breakfast."
+    },
+    {
+      "text": "on Mondays",
+      "meaningThai": "ทุกวันจันทร์",
+      "example": "The shop closes early on Mondays."
+    },
+    {
+      "text": "once a week",
+      "meaningThai": "สัปดาห์ละครั้ง",
+      "example": "We have a meeting once a week."
+    },
+    {
+      "text": "after work",
+      "meaningThai": "หลังเลิกงาน",
+      "example": "She goes to the gym after work."
+    },
+    {
+      "text": "in the morning",
+      "meaningThai": "ในตอนเช้า",
+      "example": "I drink water in the morning."
+    }
+  ],
+  "examples": [
+    {
+      "id": "present-simple-example-01",
+      "sentence": "I study English every day.",
+      "translation": "ฉันเรียนภาษาอังกฤษทุกวัน",
+      "focus": "I + Verb 1",
+      "usage": "routine"
+    },
+    {
+      "id": "present-simple-example-02",
+      "sentence": "You usually arrive early.",
+      "translation": "โดยปกติคุณมาถึงเร็ว",
+      "focus": "adverb before main verb",
+      "usage": "habit"
+    },
+    {
+      "id": "present-simple-example-03",
+      "sentence": "We often exercise after work.",
+      "translation": "พวกเรามักออกกำลังกายหลังเลิกงาน",
+      "focus": "We + Verb 1",
+      "usage": "repeated-action"
+    },
+    {
+      "id": "present-simple-example-04",
+      "sentence": "They have a meeting once a week.",
+      "translation": "พวกเขามีประชุมสัปดาห์ละครั้ง",
+      "focus": "They + have",
+      "usage": "repeated-action"
+    },
+    {
+      "id": "present-simple-example-05",
+      "sentence": "She goes to work in the morning.",
+      "translation": "เธอไปทำงานในตอนเช้า",
+      "focus": "go → goes",
+      "usage": "routine"
+    },
+    {
+      "id": "present-simple-example-06",
+      "sentence": "He has breakfast at seven.",
+      "translation": "เขากินอาหารเช้าตอนเจ็ดโมง",
+      "focus": "have → has",
+      "usage": "routine"
+    },
+    {
+      "id": "present-simple-example-07",
+      "sentence": "My brother watches TV on Mondays.",
+      "translation": "พี่ชายหรือน้องชายของฉันดูทีวีทุกวันจันทร์",
+      "focus": "watch → watches",
+      "usage": "habit"
+    },
+    {
+      "id": "present-simple-example-08",
+      "sentence": "Water freezes at zero degrees Celsius.",
+      "translation": "น้ำแข็งตัวที่อุณหภูมิศูนย์องศาเซลเซียส",
+      "focus": "general fact",
+      "usage": "fact"
+    },
+    {
+      "id": "present-simple-example-09",
+      "sentence": "The bus leaves at 8:00.",
+      "translation": "รถโดยสารออกเวลาแปดโมง",
+      "focus": "fixed schedule",
+      "usage": "schedule"
+    },
+    {
+      "id": "present-simple-example-10",
+      "sentence": "Does she work here? No, she doesn't.",
+      "translation": "เธอทำงานที่นี่ไหม ไม่ เธอไม่ได้ทำงานที่นี่",
+      "focus": "Does + subject + Verb 1",
+      "usage": "question-and-short-answer"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "present-simple-mistake-01",
+      "incorrect": "She go to work.",
+      "correct": "She goes to work.",
+      "explanationThai": "ประธาน She เป็นเอกพจน์บุรุษที่สาม จึงต้องใช้ goes"
+    },
+    {
+      "id": "present-simple-mistake-02",
+      "incorrect": "He don't like coffee.",
+      "correct": "He doesn't like coffee.",
+      "explanationThai": "ประธาน He ต้องใช้ doesn't และกริยาหลักใช้รูปเดิมคือ like"
+    },
+    {
+      "id": "present-simple-mistake-03",
+      "incorrect": "I am work every day.",
+      "correct": "I work every day.",
+      "explanationThai": "Present Simple ที่ใช้กริยาหลัก work ไม่ต้องใส่ am หน้า work"
+    },
+    {
+      "id": "present-simple-mistake-04",
+      "incorrect": "Does she works here?",
+      "correct": "Does she work here?",
+      "explanationThai": "เมื่อใช้ Does แล้ว กริยาหลักต้องกลับเป็น Verb 1 คือ work"
+    },
+    {
+      "id": "present-simple-mistake-05",
+      "incorrect": "I go usually to work at eight.",
+      "correct": "I usually go to work at eight.",
+      "explanationThai": "Usually มักวางหน้ากริยาหลัก go"
+    },
+    {
+      "id": "present-simple-mistake-06",
+      "incorrect": "She drinks never coffee.",
+      "correct": "She never drinks coffee.",
+      "explanationThai": "Never มักวางหน้ากริยาหลัก drinks"
+    },
+    {
+      "id": "present-simple-mistake-07",
+      "incorrect": "He doesn't goes to the gym.",
+      "correct": "He doesn't go to the gym.",
+      "explanationThai": "หลัง doesn't ต้องใช้ Verb 1 คือ go"
+    },
+    {
+      "id": "present-simple-mistake-08",
+      "incorrect": "My sister studys English.",
+      "correct": "My sister studies English.",
+      "explanationThai": "study ลงท้ายด้วยพยัญชนะ + y จึงเปลี่ยน y เป็น ies"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "present-simple-comparison-continuous",
+      "title": "Present Simple vs Present Continuous",
+      "presentSimple": {
+        "useThai": "กิจวัตร สิ่งที่เกิดเป็นประจำ ข้อเท็จจริง หรือตารางเวลา",
+        "formula": "Subject + Verb 1 / Verb-s/es",
+        "example": "She works at a café every day.",
+        "translation": "เธอทำงานที่คาเฟ่ทุกวัน"
+      },
+      "otherTense": {
+        "name": "Present Continuous",
+        "useThai": "สิ่งที่กำลังเกิดขึ้นขณะพูดหรือสถานการณ์ชั่วคราว",
+        "formula": "Subject + am/is/are + Verb-ing",
+        "example": "She is working at the café now.",
+        "translation": "ตอนนี้เธอกำลังทำงานที่คาเฟ่"
+      },
+      "keyDifferenceThai": "every day ชี้ถึงกิจวัตรจึงใช้ Present Simple ส่วน now ชี้ถึงสิ่งที่กำลังเกิดขึ้นจึงใช้ Present Continuous"
+    },
+    {
+      "id": "present-simple-comparison-past",
+      "title": "Present Simple vs Past Simple",
+      "presentSimple": {
+        "useThai": "กิจวัตรหรือข้อเท็จจริงที่เป็นจริงในปัจจุบัน",
+        "formula": "Subject + Verb 1 / Verb-s/es",
+        "example": "I walk to work every day.",
+        "translation": "ฉันเดินไปทำงานทุกวัน"
+      },
+      "otherTense": {
+        "name": "Past Simple",
+        "useThai": "เหตุการณ์ที่เกิดและจบแล้วในอดีต",
+        "formula": "Subject + Verb 2",
+        "example": "I walked to work yesterday.",
+        "translation": "เมื่อวานฉันเดินไปทำงาน"
+      },
+      "keyDifferenceThai": "every day แสดงกิจวัตรปัจจุบัน ส่วน yesterday แสดงเหตุการณ์ที่จบแล้วในอดีต"
+    }
+  ],
+  "practice": [
+    {
+      "id": "present-simple-practice-01",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "She ___ to work every day.",
+      "options": [
+        "go",
+        "goes",
+        "going",
+        "went"
+      ],
+      "answer": "goes",
+      "explanationThai": "She ใช้กริยารูปเอกพจน์บุรุษที่สาม: go → goes"
+    },
+    {
+      "id": "present-simple-practice-02",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "They ___ English in the morning.",
+      "options": [
+        "study",
+        "studies",
+        "studying",
+        "studied"
+      ],
+      "answer": "study",
+      "explanationThai": "They ใช้ Verb 1 โดยไม่เติม s"
+    },
+    {
+      "id": "present-simple-practice-03",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "He ___ coffee.",
+      "options": [
+        "don't like",
+        "doesn't likes",
+        "doesn't like",
+        "not like"
+      ],
+      "answer": "doesn't like",
+      "explanationThai": "He ใช้ doesn't และตามด้วย Verb 1"
+    },
+    {
+      "id": "present-simple-practice-04",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "___ she work here?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answer": "Does",
+      "explanationThai": "คำถามที่ประธานเป็น she ใช้ Does"
+    },
+    {
+      "id": "present-simple-practice-05",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "My father ___ breakfast at seven.",
+      "options": [
+        "have",
+        "has",
+        "haves",
+        "having"
+      ],
+      "answer": "has",
+      "explanationThai": "My father เท่ากับ he จึงใช้ have → has"
+    },
+    {
+      "id": "present-simple-practice-06",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกประโยคที่ถูกต้อง",
+      "question": "Which sentence is correct?",
+      "options": [
+        "I go usually to the gym.",
+        "I usually go to the gym.",
+        "Usually I am go to the gym.",
+        "I usually goes to the gym."
+      ],
+      "answer": "I usually go to the gym.",
+      "explanationThai": "Usually วางหน้ากริยาหลัก go และ I ใช้ Verb 1"
+    },
+    {
+      "id": "present-simple-practice-07",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำกริยาให้ถูกต้อง",
+      "question": "We ___ (meet) once a week.",
+      "answer": "meet",
+      "acceptedAnswers": [
+        "meet"
+      ],
+      "explanationThai": "We ใช้ Verb 1"
+    },
+    {
+      "id": "present-simple-practice-08",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำกริยาให้ถูกต้อง",
+      "question": "Tom ___ (watch) TV after work.",
+      "answer": "watches",
+      "acceptedAnswers": [
+        "watches"
+      ],
+      "explanationThai": "watch ลงท้ายด้วย ch จึงเติม es"
+    },
+    {
+      "id": "present-simple-practice-09",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำกริยาให้ถูกต้อง",
+      "question": "Anna ___ (study) English every day.",
+      "answer": "studies",
+      "acceptedAnswers": [
+        "studies"
+      ],
+      "explanationThai": "study ลงท้ายด้วยพยัญชนะ + y จึงเปลี่ยน y เป็น ies"
+    },
+    {
+      "id": "present-simple-practice-10",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำช่วยให้ถูกต้อง",
+      "question": "___ you exercise in the morning?",
+      "answer": "Do",
+      "acceptedAnswers": [
+        "Do",
+        "do"
+      ],
+      "explanationThai": "ประธาน you ใช้ Do"
+    },
+    {
+      "id": "present-simple-practice-11",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำให้เป็นประโยคปฏิเสธ",
+      "question": "She ___ eat meat.",
+      "answer": "doesn't",
+      "acceptedAnswers": [
+        "doesn't",
+        "does not"
+      ],
+      "explanationThai": "She ใช้ doesn't และตามด้วย Verb 1 eat"
+    },
+    {
+      "id": "present-simple-practice-12",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคที่ถูกต้อง",
+      "question": [
+        "always",
+        "he",
+        "checks",
+        "his email"
+      ],
+      "answer": "He always checks his email.",
+      "acceptedAnswers": [
+        "He always checks his email",
+        "He always checks his email."
+      ],
+      "explanationThai": "Always วางหน้ากริยาหลัก checks"
+    },
+    {
+      "id": "present-simple-practice-13",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคคำถาม",
+      "question": [
+        "does",
+        "where",
+        "she",
+        "work"
+      ],
+      "answer": "Where does she work?",
+      "acceptedAnswers": [
+        "Where does she work",
+        "Where does she work?"
+      ],
+      "explanationThai": "โครงสร้าง Wh-question คือ Wh-word + does + subject + Verb 1"
+    },
+    {
+      "id": "present-simple-practice-14",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "She go to work.",
+      "answer": "She goes to work.",
+      "acceptedAnswers": [
+        "She goes to work",
+        "She goes to work."
+      ],
+      "explanationThai": "She ต้องใช้ goes"
+    },
+    {
+      "id": "present-simple-practice-15",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "He don't like coffee.",
+      "answer": "He doesn't like coffee.",
+      "acceptedAnswers": [
+        "He doesn't like coffee",
+        "He doesn't like coffee.",
+        "He does not like coffee",
+        "He does not like coffee."
+      ],
+      "explanationThai": "He ใช้ doesn't และตามด้วย like"
+    },
+    {
+      "id": "present-simple-practice-16",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "I am work every day.",
+      "answer": "I work every day.",
+      "acceptedAnswers": [
+        "I work every day",
+        "I work every day."
+      ],
+      "explanationThai": "ไม่ใช้ am หน้ากริยาหลัก work ใน Present Simple"
+    },
+    {
+      "id": "present-simple-practice-17",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "Does she works here?",
+      "answer": "Does she work here?",
+      "acceptedAnswers": [
+        "Does she work here",
+        "Does she work here?"
+      ],
+      "explanationThai": "หลัง Does ใช้ Verb 1 คือ work"
+    },
+    {
+      "id": "present-simple-practice-18",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "Look! Jane ___ now, but she usually ___ at 7:00.",
+      "options": [
+        "runs / exercises",
+        "is running / exercises",
+        "runs / is exercising",
+        "ran / exercised"
+      ],
+      "answer": "is running / exercises",
+      "explanationThai": "now ใช้ Present Continuous ส่วน usually ใช้ Present Simple"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "present-simple-flashcard-01",
+      "front": "Present Simple ใช้เมื่อใด?",
+      "back": "ใช้กับกิจวัตร สิ่งที่เกิดเป็นประจำ ข้อเท็จจริง และตารางเวลาที่กำหนดไว้",
+      "example": "The class starts at nine."
+    },
+    {
+      "id": "present-simple-flashcard-02",
+      "front": "I/You/We/They ใช้กริยารูปใด?",
+      "back": "ใช้ Verb 1",
+      "example": "They work every day."
+    },
+    {
+      "id": "present-simple-flashcard-03",
+      "front": "He/She/It ใช้กริยารูปใด?",
+      "back": "ใช้ Verb-s/es",
+      "example": "She works every day."
+    },
+    {
+      "id": "present-simple-flashcard-04",
+      "front": "ประโยคปฏิเสธของ I/You/We/They สร้างอย่างไร?",
+      "back": "Subject + don't + Verb 1",
+      "example": "We don't work on Sundays."
+    },
+    {
+      "id": "present-simple-flashcard-05",
+      "front": "ประโยคปฏิเสธของ He/She/It สร้างอย่างไร?",
+      "back": "Subject + doesn't + Verb 1",
+      "example": "He doesn't drink coffee."
+    },
+    {
+      "id": "present-simple-flashcard-06",
+      "front": "คำถามของ He/She/It ใช้ Do หรือ Does?",
+      "back": "ใช้ Does และตามด้วย Verb 1",
+      "example": "Does she work here?"
+    },
+    {
+      "id": "present-simple-flashcard-07",
+      "front": "study เมื่อประธานเป็น she เปลี่ยนเป็นอะไร?",
+      "back": "studies เพราะพยัญชนะ + y เปลี่ยน y เป็น ies",
+      "example": "She studies English."
+    },
+    {
+      "id": "present-simple-flashcard-08",
+      "front": "have, do และ go เมื่อประธานเป็น he เปลี่ยนเป็นอะไร?",
+      "back": "has, does และ goes",
+      "example": "He has breakfast, does his homework, and goes to school."
+    },
+    {
+      "id": "present-simple-flashcard-09",
+      "front": "Usually และ never วางตรงไหน?",
+      "back": "มักวางหน้ากริยาหลัก แต่หลัง verb to be",
+      "example": "I usually walk. / She is never late."
+    },
+    {
+      "id": "present-simple-flashcard-10",
+      "front": "Present Simple ต่างจาก Present Continuous อย่างไร?",
+      "back": "Present Simple ใช้กับกิจวัตรหรือข้อเท็จจริง ส่วน Present Continuous ใช้กับสิ่งที่กำลังเกิดขึ้น",
+      "example": "I work every day. / I am working now."
+    }
+  ]
+}

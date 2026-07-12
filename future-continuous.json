@@ -1,0 +1,745 @@
+{
+  "id": "topic-future-continuous",
+  "categoryId": "future",
+  "name": "Future Continuous",
+  "nameThai": "อนาคตกาลแบบกำลังกระทำ",
+  "slug": "future-continuous",
+  "stage": "elementary",
+  "difficulty": 3,
+  "displayOrder": 10,
+  "estimatedMinutes": 20,
+  "prerequisites": [
+    "topic-future-simple",
+    "topic-present-continuous"
+  ],
+  "summary": {
+    "en": "Use the Future Continuous for actions that will be in progress at a specific future time, expected future activities, and polite questions about someone's plans.",
+    "th": "ใช้ Future Continuous เพื่อพูดถึงเหตุการณ์ที่จะกำลังดำเนินอยู่ ณ เวลาหนึ่งในอนาคต เหตุการณ์ที่คาดว่าจะเกิดขึ้นตามปกติ และการถามแผนของผู้อื่นอย่างสุภาพ"
+  },
+  "learningObjectives": [
+    "ใช้ Future Continuous เพื่อพูดถึงเหตุการณ์ที่จะกำลังเกิดขึ้น ณ เวลาหนึ่งในอนาคตได้",
+    "ใช้ tense นี้กับกิจกรรมที่คาดว่าจะเกิดขึ้นตามปกติหรือเป็นส่วนหนึ่งของตารางชีวิตได้",
+    "ถามแผนของผู้อื่นอย่างสุภาพด้วย Will + subject + be + Verb-ing ได้",
+    "สร้างประโยคบอกเล่าด้วย Subject + will be + Verb-ing ได้",
+    "สร้างประโยคปฏิเสธด้วย Subject + won't be + Verb-ing ได้",
+    "สร้างคำถามและคำถามแบบ Wh- ใน Future Continuous ได้",
+    "หลีกเลี่ยงการใช้ stative verbs ที่ไม่เหมาะกับ Continuous ได้",
+    "แยก Future Continuous ออกจาก Future Simple และ Present Continuous ได้"
+  ],
+  "uses": [
+    {
+      "id": "future-continuous-use-1",
+      "title": "เหตุการณ์ที่จะกำลังเกิดขึ้นในเวลาหนึ่งในอนาคต",
+      "descriptionThai": "ใช้พูดถึงกิจกรรมที่คาดว่าจะกำลังดำเนินอยู่ ณ เวลาใดเวลาหนึ่งในอนาคต",
+      "example": "At 8 p.m. tomorrow, I will be studying.",
+      "translation": "พรุ่งนี้ตอนสองทุ่ม ฉันจะกำลังเรียนอยู่"
+    },
+    {
+      "id": "future-continuous-use-2",
+      "title": "เหตุการณ์ที่คาดว่าจะเกิดขึ้นตามปกติ",
+      "descriptionThai": "ใช้กับกิจกรรมที่คาดว่าจะเกิดขึ้นตามธรรมชาติ ตามตาราง หรือเป็นส่วนหนึ่งของกิจวัตรในอนาคต",
+      "example": "She will be working at the office tomorrow.",
+      "translation": "พรุ่งนี้เธอน่าจะกำลังทำงานอยู่ที่สำนักงานตามปกติ"
+    },
+    {
+      "id": "future-continuous-use-3",
+      "title": "การถามแผนอย่างสุภาพ",
+      "descriptionThai": "ใช้ถามแผนหรือกำหนดการของผู้อื่นอย่างสุภาพ โดยไม่ฟังเหมือนการขอร้องหรือกดดัน",
+      "example": "Will you be using the meeting room this afternoon?",
+      "translation": "บ่ายนี้คุณจะใช้ห้องประชุมอยู่ไหม"
+    },
+    {
+      "id": "future-continuous-use-4",
+      "title": "เหตุการณ์อนาคตที่เป็นฉากพื้นหลัง",
+      "descriptionThai": "ใช้บรรยายกิจกรรมที่จะกำลังดำเนินอยู่ ขณะที่อีกเหตุการณ์หนึ่งเกิดขึ้นในอนาคต",
+      "example": "I will be waiting when you arrive.",
+      "translation": "ฉันจะกำลังรออยู่ตอนที่คุณมาถึง"
+    }
+  ],
+  "structures": [
+    {
+      "id": "future-continuous-structure-affirmative",
+      "type": "affirmative",
+      "subjectGroup": "all",
+      "formula": "Subject + will be + Verb-ing + ...",
+      "example": "She will be working at 8 p.m.",
+      "translation": "ตอนสองทุ่มเธอจะกำลังทำงานอยู่",
+      "noteThai": "ทุกประธานใช้ will be และตามด้วย Verb-ing"
+    },
+    {
+      "id": "future-continuous-structure-contraction",
+      "type": "contraction",
+      "subjectGroup": "all",
+      "formula": "Subject + 'll be + Verb-ing + ...",
+      "example": "I'll be waiting for you.",
+      "translation": "ฉันจะกำลังรอคุณอยู่",
+      "noteThai": "Will ย่อเป็น 'll ได้ เช่น I will be → I'll be"
+    },
+    {
+      "id": "future-continuous-structure-negative",
+      "type": "negative",
+      "subjectGroup": "all",
+      "formula": "Subject + will not (won't) be + Verb-ing + ...",
+      "example": "They won't be staying long.",
+      "translation": "พวกเขาจะไม่ได้พักอยู่นาน",
+      "noteThai": "ใช้ won't be ตามด้วย Verb-ing"
+    },
+    {
+      "id": "future-continuous-structure-question",
+      "type": "question",
+      "subjectGroup": "all",
+      "formula": "Will + subject + be + Verb-ing + ...?",
+      "example": "Will you be working tomorrow?",
+      "translation": "พรุ่งนี้คุณจะกำลังทำงานอยู่ไหม",
+      "noteThai": "หลังประธานต้องมี be แล้วตามด้วย Verb-ing"
+    },
+    {
+      "id": "future-continuous-structure-wh-question",
+      "type": "wh-question",
+      "subjectGroup": "all",
+      "formula": "Wh-word + will + subject + be + Verb-ing + ...?",
+      "example": "What will you be doing at 9 p.m.?",
+      "translation": "ตอนสามทุ่มคุณจะกำลังทำอะไรอยู่",
+      "noteThai": "วางคำถาม Wh- ไว้หน้า will"
+    },
+    {
+      "id": "future-continuous-structure-short-answer",
+      "type": "short-answer",
+      "subjectGroup": "all",
+      "formula": "Yes, subject + will. | No, subject + won't.",
+      "example": "Will she be joining us? Yes, she will.",
+      "translation": "เธอจะมาร่วมกับเราไหม ใช่ เธอจะมา",
+      "noteThai": "คำตอบสั้นใช้ will หรือ won't โดยไม่ต้องพูด be และ Verb-ing ซ้ำ"
+    }
+  ],
+  "verbIngRules": [
+    {
+      "id": "future-continuous-rule-ing",
+      "title": "กริยาทั่วไปเติม ing",
+      "ruleThai": "กริยาทั่วไปเติม ing ได้เลย",
+      "examples": [
+        "work → working",
+        "read → reading",
+        "play → playing"
+      ]
+    },
+    {
+      "id": "future-continuous-rule-drop-e",
+      "title": "กริยาลงท้ายด้วย e ตัด e แล้วเติม ing",
+      "ruleThai": "ถ้ากริยาลงท้ายด้วย e ที่ไม่ออกเสียง ให้ตัด e ก่อนเติม ing",
+      "examples": [
+        "make → making",
+        "write → writing",
+        "come → coming"
+      ]
+    },
+    {
+      "id": "future-continuous-rule-double-consonant",
+      "title": "เพิ่มพยัญชนะตัวท้ายก่อนเติม ing",
+      "ruleThai": "กริยาพยางค์เดียวแบบพยัญชนะ-สระ-พยัญชนะ มักเพิ่มพยัญชนะตัวท้ายก่อนเติม ing",
+      "examples": [
+        "run → running",
+        "sit → sitting",
+        "swim → swimming"
+      ]
+    },
+    {
+      "id": "future-continuous-rule-ie-ying",
+      "title": "กริยาลงท้ายด้วย ie เปลี่ยนเป็น y แล้วเติม ing",
+      "ruleThai": "เปลี่ยน ie เป็น y ก่อนเติม ing",
+      "examples": [
+        "lie → lying",
+        "die → dying",
+        "tie → tying"
+      ]
+    }
+  ],
+  "politeQuestions": {
+    "title": "การถามแผนอย่างสุภาพ",
+    "descriptionThai": "Future Continuous มักใช้ถามว่าบุคคลอื่นมีแผนจะทำอะไรอยู่แล้วหรือไม่ ทำให้คำถามฟังสุภาพและไม่กดดันเท่า Future Simple",
+    "examples": [
+      {
+        "futureContinuous": "Will you be using the car tonight?",
+        "meaningThai": "คืนนี้คุณมีแผนจะใช้รถอยู่ไหม",
+        "toneThai": "ถามข้อมูลเกี่ยวกับแผนอย่างสุภาพ"
+      },
+      {
+        "futureSimple": "Will you use the car tonight?",
+        "meaningThai": "คืนนี้คุณจะใช้รถไหม",
+        "toneThai": "อาจฟังเหมือนถามการตัดสินใจหรือความเต็มใจโดยตรง"
+      },
+      {
+        "futureContinuous": "Will you be joining us for lunch?",
+        "meaningThai": "คุณมีแผนจะมาร่วมรับประทานอาหารกลางวันกับเราไหม",
+        "toneThai": "ถามกำหนดการหรือแผนที่คาดไว้อย่างสุภาพ"
+      }
+    ]
+  },
+  "stativeVerbs": {
+    "descriptionThai": "กริยาที่บอกความคิด ความรู้สึก ความเป็นเจ้าของ หรือสภาวะ มักไม่ใช้ใน Future Continuous จึงมักใช้ Future Simple หรือโครงสร้างอื่นแทน",
+    "commonVerbs": [
+      {
+        "group": "ความรู้และความเข้าใจ",
+        "verbs": [
+          "know",
+          "understand",
+          "believe",
+          "remember",
+          "mean"
+        ],
+        "correctExample": "I will know the result tomorrow.",
+        "incorrectExample": "I will be knowing the result tomorrow."
+      },
+      {
+        "group": "ความชอบและความต้องการ",
+        "verbs": [
+          "like",
+          "love",
+          "hate",
+          "prefer",
+          "want",
+          "need"
+        ],
+        "correctExample": "She will want more information.",
+        "incorrectExample": "She will be wanting more information."
+      },
+      {
+        "group": "ความเป็นเจ้าของ",
+        "verbs": [
+          "own",
+          "belong",
+          "possess",
+          "have"
+        ],
+        "correctExample": "They will own the house next year.",
+        "incorrectExample": "They will be owning the house next year."
+      }
+    ],
+    "importantNote": "กริยาบางคำใช้ใน Continuous ได้เมื่อความหมายเปลี่ยน เช่น I will be having lunch at noon. ในที่นี้ have หมายถึงกำลังกินอาหาร ไม่ได้หมายถึงเป็นเจ้าของ"
+  },
+  "futureTimeReference": {
+    "descriptionThai": "Future Continuous มักมีจุดเวลาในอนาคตเพื่อแสดงว่ากิจกรรมจะกำลังดำเนินอยู่ ณ เวลานั้น",
+    "commonPatterns": [
+      {
+        "pattern": "At + future time, subject + will be + Verb-ing",
+        "example": "At 10 tomorrow, I will be meeting a client."
+      },
+      {
+        "pattern": "This time + future expression, subject + will be + Verb-ing",
+        "example": "This time next week, we will be traveling."
+      },
+      {
+        "pattern": "Subject + will be + Verb-ing + when + Present Simple",
+        "example": "I will be waiting when you arrive."
+      }
+    ],
+    "importantNote": "ในอนุประโยคเวลาที่ขึ้นต้นด้วย when มักใช้ Present Simple ไม่ใช้ will เช่น when you arrive ไม่ใช่ when you will arrive"
+  },
+  "timeMarkers": [
+    {
+      "text": "at 8 p.m. tomorrow",
+      "meaningThai": "พรุ่งนี้ตอนสองทุ่ม",
+      "example": "I will be working at 8 p.m. tomorrow."
+    },
+    {
+      "text": "this time tomorrow",
+      "meaningThai": "เวลานี้ของวันพรุ่งนี้",
+      "example": "This time tomorrow, we will be flying to Japan."
+    },
+    {
+      "text": "this time next week",
+      "meaningThai": "เวลานี้ของสัปดาห์หน้า",
+      "example": "This time next week, she will be starting her new job."
+    },
+    {
+      "text": "all day tomorrow",
+      "meaningThai": "ตลอดทั้งวันพรุ่งนี้",
+      "example": "They will be studying all day tomorrow."
+    },
+    {
+      "text": "when you arrive",
+      "meaningThai": "ตอนที่คุณมาถึง",
+      "example": "I will be waiting when you arrive."
+    },
+    {
+      "text": "later tonight",
+      "meaningThai": "ช่วงค่ำคืนนี้",
+      "example": "He will be driving later tonight."
+    },
+    {
+      "text": "next month",
+      "meaningThai": "เดือนหน้า",
+      "example": "I will be working in Bangkok next month."
+    },
+    {
+      "text": "at that time",
+      "meaningThai": "ในเวลานั้น",
+      "example": "She will be taking an exam at that time."
+    }
+  ],
+  "examples": [
+    {
+      "id": "future-continuous-example-01",
+      "sentence": "At 8 p.m. tomorrow, I will be studying.",
+      "translation": "พรุ่งนี้ตอนสองทุ่ม ฉันจะกำลังเรียนอยู่",
+      "focus": "specific future time",
+      "usage": "future-in-progress"
+    },
+    {
+      "id": "future-continuous-example-02",
+      "sentence": "This time tomorrow, we will be flying to Japan.",
+      "translation": "เวลานี้ของวันพรุ่งนี้ พวกเราจะกำลังบินไปญี่ปุ่น",
+      "focus": "this time tomorrow",
+      "usage": "future-in-progress"
+    },
+    {
+      "id": "future-continuous-example-03",
+      "sentence": "She will be working at the office tomorrow.",
+      "translation": "พรุ่งนี้เธอน่าจะกำลังทำงานอยู่ที่สำนักงานตามปกติ",
+      "focus": "expected normal activity",
+      "usage": "expected-activity"
+    },
+    {
+      "id": "future-continuous-example-04",
+      "sentence": "They will be staying at the same hotel as usual.",
+      "translation": "พวกเขาน่าจะพักอยู่ที่โรงแรมเดิมตามปกติ",
+      "focus": "expected arrangement",
+      "usage": "expected-activity"
+    },
+    {
+      "id": "future-continuous-example-05",
+      "sentence": "Will you be using the meeting room this afternoon?",
+      "translation": "บ่ายนี้คุณจะใช้ห้องประชุมอยู่ไหม",
+      "focus": "polite question about plans",
+      "usage": "polite-question"
+    },
+    {
+      "id": "future-continuous-example-06",
+      "sentence": "Will you be joining us for dinner?",
+      "translation": "คุณจะมาร่วมรับประทานอาหารเย็นกับเราไหม",
+      "focus": "polite plan question",
+      "usage": "polite-question"
+    },
+    {
+      "id": "future-continuous-example-07",
+      "sentence": "I will be waiting when you arrive.",
+      "translation": "ฉันจะกำลังรออยู่ตอนที่คุณมาถึง",
+      "focus": "future background action",
+      "usage": "future-background"
+    },
+    {
+      "id": "future-continuous-example-08",
+      "sentence": "He won't be working tomorrow morning.",
+      "translation": "พรุ่งนี้เช้าเขาจะไม่ได้กำลังทำงานอยู่",
+      "focus": "negative form",
+      "usage": "negative"
+    },
+    {
+      "id": "future-continuous-example-09",
+      "sentence": "What will you be doing at 10 tonight?",
+      "translation": "คืนนี้ตอนสี่ทุ่มคุณจะกำลังทำอะไรอยู่",
+      "focus": "Wh-question",
+      "usage": "question"
+    },
+    {
+      "id": "future-continuous-example-10",
+      "sentence": "I will know the answer tomorrow.",
+      "translation": "พรุ่งนี้ฉันจะรู้คำตอบ",
+      "focus": "stative verb uses Future Simple",
+      "usage": "stative-verb"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "future-continuous-mistake-01",
+      "incorrect": "I will be work tomorrow.",
+      "correct": "I will be working tomorrow.",
+      "explanationThai": "หลัง will be ต้องใช้ Verb-ing คือ working"
+    },
+    {
+      "id": "future-continuous-mistake-02",
+      "incorrect": "She will working at 8 p.m.",
+      "correct": "She will be working at 8 p.m.",
+      "explanationThai": "Future Continuous ต้องมี be ระหว่าง will กับ Verb-ing"
+    },
+    {
+      "id": "future-continuous-mistake-03",
+      "incorrect": "Will you be come?",
+      "correct": "Will you be coming?",
+      "explanationThai": "หลัง be ต้องใช้ Verb-ing คือ coming"
+    },
+    {
+      "id": "future-continuous-mistake-04",
+      "incorrect": "I will be knowing the answer tomorrow.",
+      "correct": "I will know the answer tomorrow.",
+      "explanationThai": "Know เป็น stative verb จึงมักใช้ Future Simple ไม่ใช้ Future Continuous"
+    },
+    {
+      "id": "future-continuous-mistake-05",
+      "incorrect": "I will be help you with those bags.",
+      "correct": "I will help you with those bags.",
+      "explanationThai": "การเสนอความช่วยเหลือทันทีใช้ Future Simple คือ will help ไม่ใช้ Future Continuous"
+    },
+    {
+      "id": "future-continuous-mistake-06",
+      "incorrect": "At 8 p.m. tomorrow, I will study.",
+      "correct": "At 8 p.m. tomorrow, I will be studying.",
+      "explanationThai": "เมื่อเน้นว่ากิจกรรมจะกำลังดำเนินอยู่ ณ เวลาหนึ่งในอนาคต Future Continuous เหมาะกว่า"
+    },
+    {
+      "id": "future-continuous-mistake-07",
+      "incorrect": "Will you be to use the car tonight?",
+      "correct": "Will you be using the car tonight?",
+      "explanationThai": "หลัง be ใช้ Verb-ing โดยไม่เติม to"
+    },
+    {
+      "id": "future-continuous-mistake-08",
+      "incorrect": "I will be waiting when you will arrive.",
+      "correct": "I will be waiting when you arrive.",
+      "explanationThai": "ในอนุประโยคเวลาที่ขึ้นต้นด้วย when ใช้ Present Simple ไม่ใช้ will"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "future-continuous-comparison-future-simple",
+      "title": "Future Continuous vs Future Simple",
+      "futureContinuous": {
+        "useThai": "เน้นกิจกรรมที่จะกำลังดำเนินอยู่ ณ เวลาหนึ่ง หรือถามแผนอย่างสุภาพ",
+        "formula": "Subject + will be + Verb-ing",
+        "example": "At 8 p.m., I will be working.",
+        "translation": "ตอนสองทุ่มฉันจะกำลังทำงานอยู่"
+      },
+      "otherTense": {
+        "name": "Future Simple",
+        "useThai": "ใช้กับการตัดสินใจทันที คำสัญญา ข้อเสนอ และการคาดการณ์",
+        "formula": "Subject + will + Verb 1",
+        "example": "I will help you with the work.",
+        "translation": "ฉันจะช่วยคุณทำงาน"
+      },
+      "keyDifferenceThai": "Future Continuous เน้นกิจกรรมที่กำลังดำเนินอยู่ในอนาคต ส่วน Future Simple เน้นการตัดสินใจ คำสัญญา ข้อเสนอ หรือการคาดการณ์"
+    },
+    {
+      "id": "future-continuous-comparison-present-continuous",
+      "title": "Future Continuous vs Present Continuous",
+      "futureContinuous": {
+        "useThai": "กิจกรรมที่คาดว่าจะกำลังเกิดขึ้น ณ เวลาหนึ่ง หรือกิจกรรมที่เกิดตามปกติในอนาคต",
+        "formula": "Subject + will be + Verb-ing",
+        "example": "I will be working at 2 p.m. tomorrow.",
+        "translation": "พรุ่งนี้ตอนบ่ายสองฉันจะกำลังทำงานอยู่"
+      },
+      "otherTense": {
+        "name": "Present Continuous for future arrangements",
+        "useThai": "แผนหรือนัดหมายในอนาคตที่จัดเตรียมรายละเอียดไว้แล้ว",
+        "formula": "Subject + am/is/are + Verb-ing",
+        "example": "I am meeting the manager at 2 p.m. tomorrow.",
+        "translation": "พรุ่งนี้ตอนบ่ายสองฉันมีนัดพบผู้จัดการ"
+      },
+      "keyDifferenceThai": "Future Continuous เน้นสิ่งที่จะกำลังเกิดขึ้น ณ เวลานั้น ส่วน Present Continuous เน้นนัดหมายหรือแผนที่จัดไว้แล้ว"
+    }
+  ],
+  "practice": [
+    {
+      "id": "future-continuous-practice-01",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "At 8 p.m. tomorrow, I ___ studying.",
+      "options": [
+        "will be",
+        "will",
+        "am",
+        "was"
+      ],
+      "answer": "will be",
+      "explanationThai": "Future Continuous ใช้ will be + Verb-ing"
+    },
+    {
+      "id": "future-continuous-practice-02",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "She will be ___ at the office.",
+      "options": [
+        "work",
+        "worked",
+        "working",
+        "works"
+      ],
+      "answer": "working",
+      "explanationThai": "หลัง will be ต้องใช้ Verb-ing"
+    },
+    {
+      "id": "future-continuous-practice-03",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "They ___ be staying long.",
+      "options": [
+        "won't",
+        "don't",
+        "aren't",
+        "didn't"
+      ],
+      "answer": "won't",
+      "explanationThai": "ประโยคปฏิเสธใช้ won't be + Verb-ing"
+    },
+    {
+      "id": "future-continuous-practice-04",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "Will you be ___ the car tonight?",
+      "options": [
+        "use",
+        "used",
+        "using",
+        "to use"
+      ],
+      "answer": "using",
+      "explanationThai": "หลัง be ต้องใช้ Verb-ing"
+    },
+    {
+      "id": "future-continuous-practice-05",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกประโยคที่เหมาะสม",
+      "question": "Which sentence politely asks about someone's plan?",
+      "options": [
+        "Will you be using the meeting room?",
+        "Do you use the meeting room yesterday?",
+        "Will you to use the meeting room?",
+        "Are you use the meeting room?"
+      ],
+      "answer": "Will you be using the meeting room?",
+      "explanationThai": "Future Continuous ใช้ถามแผนหรือกำหนดการอย่างสุภาพได้"
+    },
+    {
+      "id": "future-continuous-practice-06",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกประโยคที่ถูกต้อง",
+      "question": "Which sentence uses a stative verb correctly?",
+      "options": [
+        "I will be knowing the result tomorrow.",
+        "I will know the result tomorrow.",
+        "I will be know the result tomorrow.",
+        "I knowing the result tomorrow."
+      ],
+      "answer": "I will know the result tomorrow.",
+      "explanationThai": "Know เป็น stative verb จึงใช้ Future Simple"
+    },
+    {
+      "id": "future-continuous-practice-07",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำให้โครงสร้างสมบูรณ์",
+      "question": "We will ___ traveling this time tomorrow.",
+      "answer": "be",
+      "acceptedAnswers": [
+        "be"
+      ],
+      "explanationThai": "โครงสร้างคือ will be + Verb-ing"
+    },
+    {
+      "id": "future-continuous-practice-08",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "She will be ___ (write) a report at 10.",
+      "answer": "writing",
+      "acceptedAnswers": [
+        "writing"
+      ],
+      "explanationThai": "Write ตัด e แล้วเติม ing เป็น writing"
+    },
+    {
+      "id": "future-continuous-practice-09",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "They will be ___ (run) in the park tomorrow morning.",
+      "answer": "running",
+      "acceptedAnswers": [
+        "running"
+      ],
+      "explanationThai": "Run เพิ่ม n แล้วเติม ing เป็น running"
+    },
+    {
+      "id": "future-continuous-practice-10",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำให้เป็นประโยคปฏิเสธ",
+      "question": "He ___ be working tomorrow.",
+      "answer": "won't",
+      "acceptedAnswers": [
+        "won't",
+        "will not"
+      ],
+      "explanationThai": "ใช้ won't be + Verb-ing"
+    },
+    {
+      "id": "future-continuous-practice-11",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "I will be waiting when you ___ (arrive).",
+      "answer": "arrive",
+      "acceptedAnswers": [
+        "arrive"
+      ],
+      "explanationThai": "ในอนุประโยคเวลาที่ขึ้นต้นด้วย when ใช้ Present Simple"
+    },
+    {
+      "id": "future-continuous-practice-12",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคที่ถูกต้อง",
+      "question": [
+        "will",
+        "be",
+        "she",
+        "working",
+        "tomorrow"
+      ],
+      "answer": "She will be working tomorrow.",
+      "acceptedAnswers": [
+        "She will be working tomorrow",
+        "She will be working tomorrow."
+      ],
+      "explanationThai": "โครงสร้างคือ Subject + will be + Verb-ing"
+    },
+    {
+      "id": "future-continuous-practice-13",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคคำถาม",
+      "question": [
+        "what",
+        "will",
+        "you",
+        "be",
+        "doing",
+        "at 9 p.m."
+      ],
+      "answer": "What will you be doing at 9 p.m.?",
+      "acceptedAnswers": [
+        "What will you be doing at 9 p.m",
+        "What will you be doing at 9 p.m."
+      ],
+      "explanationThai": "โครงสร้างคือ Wh-word + will + subject + be + Verb-ing"
+    },
+    {
+      "id": "future-continuous-practice-14",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "I will be work tomorrow.",
+      "answer": "I will be working tomorrow.",
+      "acceptedAnswers": [
+        "I will be working tomorrow",
+        "I will be working tomorrow."
+      ],
+      "explanationThai": "หลัง will be ใช้ working"
+    },
+    {
+      "id": "future-continuous-practice-15",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "She will working at 8 p.m.",
+      "answer": "She will be working at 8 p.m.",
+      "acceptedAnswers": [
+        "She will be working at 8 p.m",
+        "She will be working at 8 p.m."
+      ],
+      "explanationThai": "ต้องเติม be ระหว่าง will กับ working"
+    },
+    {
+      "id": "future-continuous-practice-16",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "Will you be come?",
+      "answer": "Will you be coming?",
+      "acceptedAnswers": [
+        "Will you be coming",
+        "Will you be coming?"
+      ],
+      "explanationThai": "หลัง be ต้องใช้ coming"
+    },
+    {
+      "id": "future-continuous-practice-17",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "The phone is ringing. I ___ it.",
+      "options": [
+        "will answer",
+        "will be answering at 8 p.m.",
+        "am answering yesterday",
+        "will be answer"
+      ],
+      "answer": "will answer",
+      "explanationThai": "เป็นการตัดสินใจทันที จึงใช้ Future Simple"
+    },
+    {
+      "id": "future-continuous-practice-18",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "The appointment is confirmed. I ___ the dentist at 10 tomorrow.",
+      "options": [
+        "am seeing",
+        "will be know",
+        "will seeing",
+        "saw"
+      ],
+      "answer": "am seeing",
+      "explanationThai": "เป็นนัดหมายที่จัดเตรียมไว้แล้ว จึงใช้ Present Continuous สำหรับอนาคต"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "future-continuous-flashcard-01",
+      "front": "Future Continuous ใช้เมื่อใด?",
+      "back": "ใช้กับเหตุการณ์ที่จะกำลังเกิด ณ เวลาในอนาคต กิจกรรมที่คาดว่าจะเกิดตามปกติ และการถามแผนอย่างสุภาพ",
+      "example": "I will be working at 8 p.m."
+    },
+    {
+      "id": "future-continuous-flashcard-02",
+      "front": "โครงสร้างบอกเล่าคืออะไร?",
+      "back": "Subject + will be + Verb-ing",
+      "example": "She will be studying."
+    },
+    {
+      "id": "future-continuous-flashcard-03",
+      "front": "ประโยคปฏิเสธสร้างอย่างไร?",
+      "back": "Subject + won't be + Verb-ing",
+      "example": "They won't be staying."
+    },
+    {
+      "id": "future-continuous-flashcard-04",
+      "front": "ประโยคคำถามสร้างอย่างไร?",
+      "back": "Will + subject + be + Verb-ing?",
+      "example": "Will you be working?"
+    },
+    {
+      "id": "future-continuous-flashcard-05",
+      "front": "Future Continuous ใช้ถามแผนอย่างสุภาพได้อย่างไร?",
+      "back": "ใช้ Will you be + Verb-ing...? เพื่อถามว่าบุคคลนั้นมีแผนทำสิ่งนั้นอยู่แล้วหรือไม่",
+      "example": "Will you be using the car tonight?"
+    },
+    {
+      "id": "future-continuous-flashcard-06",
+      "front": "ทำไมไม่พูด I will be work?",
+      "back": "เพราะหลัง will be ต้องใช้ Verb-ing",
+      "example": "I will be working."
+    },
+    {
+      "id": "future-continuous-flashcard-07",
+      "front": "Know ใช้ใน Future Continuous ได้หรือไม่?",
+      "back": "โดยทั่วไปไม่ได้ เพราะ know เป็น stative verb จึงใช้ Future Simple",
+      "example": "I will know the answer tomorrow."
+    },
+    {
+      "id": "future-continuous-flashcard-08",
+      "front": "ในประโยค when you arrive ใช้ will หรือไม่?",
+      "back": "ไม่ใช้ will ในอนุประโยคเวลาที่ขึ้นต้นด้วย when ใช้ Present Simple",
+      "example": "I will be waiting when you arrive."
+    },
+    {
+      "id": "future-continuous-flashcard-09",
+      "front": "Future Continuous ต่างจาก Future Simple อย่างไร?",
+      "back": "Future Continuous เน้นกิจกรรมที่จะกำลังดำเนิน ส่วน Future Simple เน้นการตัดสินใจ คำสัญญา ข้อเสนอ หรือการคาดการณ์",
+      "example": "I will be working at 8. / I will help you."
+    },
+    {
+      "id": "future-continuous-flashcard-10",
+      "front": "Future Continuous ต่างจาก Present Continuous อย่างไร?",
+      "back": "Future Continuous เน้นสิ่งที่จะกำลังเกิด ณ เวลาหนึ่ง ส่วน Present Continuous เน้นนัดหมายที่จัดไว้แล้ว",
+      "example": "I will be working at 2. / I am meeting Jane at 2."
+    }
+  ]
+}

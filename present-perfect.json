@@ -1,0 +1,825 @@
+{
+  "id": "topic-present-perfect",
+  "categoryId": "present",
+  "name": "Present Perfect",
+  "nameThai": "ปัจจุบันสมบูรณ์",
+  "slug": "present-perfect",
+  "stage": "elementary",
+  "difficulty": 3,
+  "displayOrder": 3,
+  "estimatedMinutes": 25,
+  "prerequisites": [
+    "topic-present-simple",
+    "topic-past-simple"
+  ],
+  "summary": {
+    "en": "Use the Present Perfect for experiences, past actions connected to the present, recent events, and unfinished time periods.",
+    "th": "ใช้ Present Perfect เพื่อพูดถึงประสบการณ์ เหตุการณ์ในอดีตที่ยังมีผลถึงปัจจุบัน เหตุการณ์ที่เพิ่งเกิดขึ้น และเหตุการณ์ในช่วงเวลาที่ยังไม่จบ"
+  },
+  "learningObjectives": [
+    "ใช้ Present Perfect เพื่อพูดถึงประสบการณ์โดยไม่ระบุเวลาในอดีตที่ชัดเจนได้",
+    "อธิบายเหตุการณ์ในอดีตที่มีผลหรือความเกี่ยวข้องกับปัจจุบันได้",
+    "พูดถึงเหตุการณ์ที่เพิ่งเกิดขึ้นด้วย just, already และ yet ได้",
+    "ใช้ Present Perfect กับช่วงเวลาที่ยังไม่จบ เช่น today, this week และ so far ได้",
+    "สร้างประโยคด้วย Subject + have/has + Past Participle ได้ถูกต้อง",
+    "เลือกใช้ have และ has ให้ตรงกับประธานได้",
+    "ใช้กริยาช่องที่ 3 ทั้งรูปปกติและ irregular past participles ได้",
+    "แยกการใช้ for และ since ได้",
+    "แยก Present Perfect ออกจาก Past Simple และ Present Perfect Continuous ได้"
+  ],
+  "uses": [
+    {
+      "id": "present-perfect-use-1",
+      "title": "ประสบการณ์",
+      "descriptionThai": "ใช้พูดถึงสิ่งที่เคยหรือไม่เคยทำในชีวิต โดยไม่ระบุเวลาที่จบไปแล้วอย่างชัดเจน",
+      "example": "I have visited Japan twice.",
+      "translation": "ฉันเคยไปญี่ปุ่นสองครั้ง"
+    },
+    {
+      "id": "present-perfect-use-2",
+      "title": "เหตุการณ์ในอดีตที่มีผลถึงปัจจุบัน",
+      "descriptionThai": "ใช้เมื่อเหตุการณ์เกิดขึ้นในอดีต แต่ผลของเหตุการณ์ยังสำคัญหรือมองเห็นได้ในปัจจุบัน",
+      "example": "She has lost her key.",
+      "translation": "เธอทำกุญแจหาย และตอนนี้ยังไม่มีกุญแจ"
+    },
+    {
+      "id": "present-perfect-use-3",
+      "title": "เหตุการณ์ที่เพิ่งเกิดขึ้น",
+      "descriptionThai": "ใช้กับเหตุการณ์ที่เกิดขึ้นไม่นาน โดยมักใช้ just, already หรือ yet",
+      "example": "We have just finished dinner.",
+      "translation": "พวกเราเพิ่งกินอาหารเย็นเสร็จ"
+    },
+    {
+      "id": "present-perfect-use-4",
+      "title": "ช่วงเวลาที่ยังไม่จบ",
+      "descriptionThai": "ใช้พูดถึงเหตุการณ์ในช่วงเวลาที่ยังดำเนินอยู่ เช่น วันนี้ สัปดาห์นี้ หรือปีนี้",
+      "example": "I have had three meetings today.",
+      "translation": "วันนี้ฉันประชุมมาแล้วสามครั้ง"
+    },
+    {
+      "id": "present-perfect-use-5",
+      "title": "เหตุการณ์ที่เริ่มในอดีตและยังคงเป็นจริง",
+      "descriptionThai": "ใช้กับกริยาที่บอกสภาวะหรือสถานการณ์ที่เริ่มในอดีตและยังต่อเนื่องถึงปัจจุบัน โดยมักใช้ for หรือ since",
+      "example": "He has lived here for five years.",
+      "translation": "เขาอาศัยอยู่ที่นี่มาเป็นเวลาห้าปีแล้ว"
+    }
+  ],
+  "structures": [
+    {
+      "id": "present-perfect-structure-affirmative-have",
+      "type": "affirmative",
+      "subjectGroup": "I/You/We/They",
+      "formula": "Subject + have + Past Participle + ...",
+      "example": "They have finished the project.",
+      "translation": "พวกเขาทำโครงการเสร็จแล้ว",
+      "noteThai": "I, You, We และ They ใช้ have"
+    },
+    {
+      "id": "present-perfect-structure-affirmative-has",
+      "type": "affirmative",
+      "subjectGroup": "He/She/It",
+      "formula": "Subject + has + Past Participle + ...",
+      "example": "She has finished the project.",
+      "translation": "เธอทำโครงการเสร็จแล้ว",
+      "noteThai": "He, She และ It ใช้ has"
+    },
+    {
+      "id": "present-perfect-structure-negative-have",
+      "type": "negative",
+      "subjectGroup": "I/You/We/They",
+      "formula": "Subject + have not (haven't) + Past Participle + ...",
+      "example": "I haven't seen that movie.",
+      "translation": "ฉันยังไม่เคยดูภาพยนตร์เรื่องนั้น",
+      "noteThai": "หลัง haven't ต้องใช้กริยาช่องที่ 3"
+    },
+    {
+      "id": "present-perfect-structure-negative-has",
+      "type": "negative",
+      "subjectGroup": "He/She/It",
+      "formula": "Subject + has not (hasn't) + Past Participle + ...",
+      "example": "He hasn't called me yet.",
+      "translation": "เขายังไม่ได้โทรหาฉัน",
+      "noteThai": "หลัง hasn't ต้องใช้กริยาช่องที่ 3"
+    },
+    {
+      "id": "present-perfect-structure-question-have",
+      "type": "question",
+      "subjectGroup": "I/you/we/they",
+      "formula": "Have + subject + Past Participle + ...?",
+      "example": "Have you ever tried sushi?",
+      "translation": "คุณเคยลองกินซูชิไหม",
+      "noteThai": "ใช้ Have นำหน้าประธาน I, you, we และ they"
+    },
+    {
+      "id": "present-perfect-structure-question-has",
+      "type": "question",
+      "subjectGroup": "he/she/it",
+      "formula": "Has + subject + Past Participle + ...?",
+      "example": "Has she arrived yet?",
+      "translation": "เธอมาถึงแล้วหรือยัง",
+      "noteThai": "ใช้ Has นำหน้าประธาน he, she และ it"
+    },
+    {
+      "id": "present-perfect-structure-short-answer",
+      "type": "short-answer",
+      "subjectGroup": "all",
+      "formula": "Yes, subject + have/has. | No, subject + haven't/hasn't.",
+      "example": "Have they eaten? Yes, they have.",
+      "translation": "พวกเขากินแล้วหรือยัง กินแล้ว",
+      "noteThai": "เลือก have หรือ has ให้ตรงกับประธาน"
+    }
+  ],
+  "pastParticipleRules": [
+    {
+      "id": "present-perfect-rule-regular-ed",
+      "title": "กริยาปกติเติม ed",
+      "ruleThai": "กริยาปกติส่วนมากสร้าง Past Participle ด้วยการเติม ed",
+      "examples": [
+        "work → worked",
+        "finish → finished",
+        "visit → visited"
+      ]
+    },
+    {
+      "id": "present-perfect-rule-final-e",
+      "title": "กริยาลงท้ายด้วย e เติม d",
+      "ruleThai": "ถ้ากริยาลงท้ายด้วย e ให้เติม d",
+      "examples": [
+        "live → lived",
+        "use → used",
+        "arrive → arrived"
+      ]
+    },
+    {
+      "id": "present-perfect-rule-consonant-y",
+      "title": "พยัญชนะ + y เปลี่ยน y เป็น i แล้วเติม ed",
+      "ruleThai": "ถ้าหน้า y เป็นพยัญชนะ ให้เปลี่ยน y เป็น i แล้วเติม ed",
+      "examples": [
+        "study → studied",
+        "carry → carried",
+        "try → tried"
+      ]
+    },
+    {
+      "id": "present-perfect-rule-double-consonant",
+      "title": "เพิ่มพยัญชนะตัวท้ายก่อนเติม ed",
+      "ruleThai": "กริยาพยางค์เดียวบางคำที่ลงท้ายแบบพยัญชนะ-สระ-พยัญชนะ ให้เพิ่มพยัญชนะตัวท้ายก่อนเติม ed",
+      "examples": [
+        "stop → stopped",
+        "plan → planned",
+        "drop → dropped"
+      ]
+    },
+    {
+      "id": "present-perfect-rule-irregular",
+      "title": "กริยาไม่ปกติต้องจำรูป Past Participle",
+      "ruleThai": "กริยา irregular ไม่ได้สร้างรูปช่องที่ 3 ด้วยการเติม ed จึงต้องจำเป็นคำ",
+      "examples": [
+        "go → gone",
+        "see → seen",
+        "do → done",
+        "write → written",
+        "eat → eaten"
+      ]
+    }
+  ],
+  "irregularPastParticiples": [
+    {
+      "base": "be",
+      "pastSimple": "was/were",
+      "pastParticiple": "been",
+      "example": "I have been busy today."
+    },
+    {
+      "base": "go",
+      "pastSimple": "went",
+      "pastParticiple": "gone",
+      "example": "She has gone home."
+    },
+    {
+      "base": "see",
+      "pastSimple": "saw",
+      "pastParticiple": "seen",
+      "example": "We have seen this movie."
+    },
+    {
+      "base": "do",
+      "pastSimple": "did",
+      "pastParticiple": "done",
+      "example": "He has done his homework."
+    },
+    {
+      "base": "eat",
+      "pastSimple": "ate",
+      "pastParticiple": "eaten",
+      "example": "They have already eaten."
+    },
+    {
+      "base": "write",
+      "pastSimple": "wrote",
+      "pastParticiple": "written",
+      "example": "I have written the email."
+    },
+    {
+      "base": "take",
+      "pastSimple": "took",
+      "pastParticiple": "taken",
+      "example": "She has taken the bus."
+    },
+    {
+      "base": "speak",
+      "pastSimple": "spoke",
+      "pastParticiple": "spoken",
+      "example": "Have you spoken to the manager?"
+    },
+    {
+      "base": "break",
+      "pastSimple": "broke",
+      "pastParticiple": "broken",
+      "example": "He has broken his phone."
+    },
+    {
+      "base": "know",
+      "pastSimple": "knew",
+      "pastParticiple": "known",
+      "example": "I have known her for years."
+    }
+  ],
+  "keywordUsage": [
+    {
+      "id": "present-perfect-keyword-ever",
+      "word": "ever",
+      "meaningThai": "เคย",
+      "positionThai": "มักวางระหว่าง have/has กับ Past Participle ในคำถาม",
+      "example": "Have you ever visited Korea?"
+    },
+    {
+      "id": "present-perfect-keyword-never",
+      "word": "never",
+      "meaningThai": "ไม่เคย",
+      "positionThai": "วางระหว่าง have/has กับ Past Participle และไม่ใช้ not ซ้ำ",
+      "example": "I have never flown on a plane."
+    },
+    {
+      "id": "present-perfect-keyword-already",
+      "word": "already",
+      "meaningThai": "แล้ว / เรียบร้อยแล้ว",
+      "positionThai": "มักวางระหว่าง have/has กับ Past Participle ในประโยคบอกเล่า",
+      "example": "She has already finished."
+    },
+    {
+      "id": "present-perfect-keyword-yet",
+      "word": "yet",
+      "meaningThai": "ยัง / แล้วหรือยัง",
+      "positionThai": "มักวางท้ายประโยคคำถามหรือประโยคปฏิเสธ",
+      "example": "Have they arrived yet?"
+    },
+    {
+      "id": "present-perfect-keyword-just",
+      "word": "just",
+      "meaningThai": "เพิ่ง",
+      "positionThai": "มักวางระหว่าง have/has กับ Past Participle",
+      "example": "He has just called me."
+    }
+  ],
+  "forAndSince": {
+    "descriptionThai": "ใช้ for เพื่อบอกระยะเวลา และใช้ since เพื่อบอกจุดเริ่มต้น",
+    "for": {
+      "meaningThai": "เป็นเวลา",
+      "useThai": "ใช้กับช่วงหรือระยะเวลา",
+      "examples": [
+        "for two hours",
+        "for three days",
+        "for a long time",
+        "for five years"
+      ],
+      "sentence": "We have lived here for five years."
+    },
+    "since": {
+      "meaningThai": "ตั้งแต่",
+      "useThai": "ใช้กับจุดเริ่มต้นที่ระบุได้",
+      "examples": [
+        "since Monday",
+        "since 2024",
+        "since this morning",
+        "since I started university"
+      ],
+      "sentence": "We have lived here since 2021."
+    },
+    "keyDifferenceThai": "for ตอบคำถามว่าเป็นเวลานานเท่าไร ส่วน since ตอบคำถามว่าเริ่มตั้งแต่เมื่อไร"
+  },
+  "timeMarkers": [
+    {
+      "text": "ever",
+      "meaningThai": "เคย",
+      "example": "Have you ever worked abroad?"
+    },
+    {
+      "text": "never",
+      "meaningThai": "ไม่เคย",
+      "example": "I have never met him."
+    },
+    {
+      "text": "already",
+      "meaningThai": "แล้ว",
+      "example": "She has already left."
+    },
+    {
+      "text": "yet",
+      "meaningThai": "ยัง / แล้วหรือยัง",
+      "example": "I haven't finished yet."
+    },
+    {
+      "text": "just",
+      "meaningThai": "เพิ่ง",
+      "example": "They have just arrived."
+    },
+    {
+      "text": "for",
+      "meaningThai": "เป็นเวลา",
+      "example": "He has worked here for two years."
+    },
+    {
+      "text": "since",
+      "meaningThai": "ตั้งแต่",
+      "example": "He has worked here since 2024."
+    },
+    {
+      "text": "so far",
+      "meaningThai": "จนถึงตอนนี้",
+      "example": "We have completed three lessons so far."
+    },
+    {
+      "text": "today",
+      "meaningThai": "วันนี้",
+      "example": "I have answered ten emails today."
+    },
+    {
+      "text": "this week",
+      "meaningThai": "สัปดาห์นี้",
+      "example": "She has gone to the gym twice this week."
+    }
+  ],
+  "examples": [
+    {
+      "id": "present-perfect-example-01",
+      "sentence": "I have visited Chiang Mai three times.",
+      "translation": "ฉันเคยไปเชียงใหม่สามครั้ง",
+      "focus": "experience",
+      "usage": "experience"
+    },
+    {
+      "id": "present-perfect-example-02",
+      "sentence": "Have you ever tried Korean food?",
+      "translation": "คุณเคยลองอาหารเกาหลีไหม",
+      "focus": "ever in a question",
+      "usage": "experience"
+    },
+    {
+      "id": "present-perfect-example-03",
+      "sentence": "She has never flown on a plane.",
+      "translation": "เธอไม่เคยนั่งเครื่องบิน",
+      "focus": "never",
+      "usage": "experience"
+    },
+    {
+      "id": "present-perfect-example-04",
+      "sentence": "He has lost his wallet.",
+      "translation": "เขาทำกระเป๋าสตางค์หาย และตอนนี้ยังหาไม่เจอ",
+      "focus": "past result connected to now",
+      "usage": "present-result"
+    },
+    {
+      "id": "present-perfect-example-05",
+      "sentence": "We have just finished the meeting.",
+      "translation": "พวกเราเพิ่งประชุมเสร็จ",
+      "focus": "just",
+      "usage": "recent-event"
+    },
+    {
+      "id": "present-perfect-example-06",
+      "sentence": "They have already eaten lunch.",
+      "translation": "พวกเขากินอาหารกลางวันแล้ว",
+      "focus": "already",
+      "usage": "recent-event"
+    },
+    {
+      "id": "present-perfect-example-07",
+      "sentence": "Has the bus arrived yet?",
+      "translation": "รถโดยสารมาถึงแล้วหรือยัง",
+      "focus": "yet in a question",
+      "usage": "recent-event"
+    },
+    {
+      "id": "present-perfect-example-08",
+      "sentence": "I haven't finished my work yet.",
+      "translation": "ฉันยังทำงานไม่เสร็จ",
+      "focus": "yet in a negative sentence",
+      "usage": "unfinished-action"
+    },
+    {
+      "id": "present-perfect-example-09",
+      "sentence": "She has worked here for four years.",
+      "translation": "เธอทำงานที่นี่มาเป็นเวลาสี่ปีแล้ว",
+      "focus": "for + duration",
+      "usage": "continuing-situation"
+    },
+    {
+      "id": "present-perfect-example-10",
+      "sentence": "We have known each other since high school.",
+      "translation": "พวกเรารู้จักกันมาตั้งแต่มัธยม",
+      "focus": "since + starting point",
+      "usage": "continuing-situation"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "present-perfect-mistake-01",
+      "incorrect": "I have went there.",
+      "correct": "I have gone there.",
+      "explanationThai": "หลัง have ต้องใช้ Past Participle หรือกริยาช่องที่ 3 โดย go → went → gone"
+    },
+    {
+      "id": "present-perfect-mistake-02",
+      "incorrect": "She has see the movie.",
+      "correct": "She has seen the movie.",
+      "explanationThai": "หลัง has ต้องใช้กริยาช่องที่ 3 โดย see → saw → seen"
+    },
+    {
+      "id": "present-perfect-mistake-03",
+      "incorrect": "I have finished yesterday.",
+      "correct": "I finished yesterday.",
+      "explanationThai": "Yesterday เป็นเวลาที่จบไปแล้วและระบุชัดเจน จึงใช้ Past Simple ไม่ใช้ Present Perfect"
+    },
+    {
+      "id": "present-perfect-mistake-04",
+      "incorrect": "He have worked here.",
+      "correct": "He has worked here.",
+      "explanationThai": "ประธาน He ต้องใช้ has"
+    },
+    {
+      "id": "present-perfect-mistake-05",
+      "incorrect": "I have lived here since three years.",
+      "correct": "I have lived here for three years.",
+      "explanationThai": "Three years เป็นระยะเวลา จึงใช้ for"
+    },
+    {
+      "id": "present-perfect-mistake-06",
+      "incorrect": "She has worked here for 2022.",
+      "correct": "She has worked here since 2022.",
+      "explanationThai": "2022 เป็นจุดเริ่มต้น จึงใช้ since"
+    },
+    {
+      "id": "present-perfect-mistake-07",
+      "incorrect": "Have you ever went to Japan?",
+      "correct": "Have you ever been to Japan?",
+      "explanationThai": "หลัง have ต้องใช้กริยาช่องที่ 3 และเมื่อพูดถึงประสบการณ์ไปสถานที่หนึ่งมักใช้ have been to"
+    },
+    {
+      "id": "present-perfect-mistake-08",
+      "incorrect": "I haven't never seen it.",
+      "correct": "I have never seen it.",
+      "explanationThai": "Never มีความหมายปฏิเสธอยู่แล้ว จึงไม่ใช้ haven't ซ้ำ"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "present-perfect-comparison-past-simple",
+      "title": "Present Perfect vs Past Simple",
+      "presentPerfect": {
+        "useThai": "ประสบการณ์โดยไม่ระบุเวลาที่จบแล้ว เหตุการณ์ที่ยังมีผลถึงปัจจุบัน หรือช่วงเวลาที่ยังไม่จบ",
+        "formula": "Subject + have/has + Past Participle",
+        "example": "I have visited Japan twice.",
+        "translation": "ฉันเคยไปญี่ปุ่นสองครั้ง"
+      },
+      "otherTense": {
+        "name": "Past Simple",
+        "useThai": "เหตุการณ์ที่เกิดและจบแล้วในอดีต โดยมักระบุเวลาที่จบไปแล้วอย่างชัดเจน",
+        "formula": "Subject + Verb 2",
+        "example": "I visited Japan in 2024.",
+        "translation": "ฉันไปญี่ปุ่นในปี 2024"
+      },
+      "keyDifferenceThai": "Present Perfect ไม่ใช้กับเวลาที่จบแล้ว เช่น yesterday, last year หรือ in 2024 ส่วน Past Simple ใช้ได้"
+    },
+    {
+      "id": "present-perfect-comparison-present-perfect-continuous",
+      "title": "Present Perfect vs Present Perfect Continuous",
+      "presentPerfect": {
+        "useThai": "เน้นผลลัพธ์ จำนวนครั้ง ความสำเร็จ หรือสถานการณ์ที่ยังเป็นจริง",
+        "formula": "Subject + have/has + Past Participle",
+        "example": "I have written three emails.",
+        "translation": "ฉันเขียนอีเมลเสร็จแล้วสามฉบับ"
+      },
+      "otherTense": {
+        "name": "Present Perfect Continuous",
+        "useThai": "เน้นระยะเวลา กระบวนการ หรือกิจกรรมที่ดำเนินต่อเนื่องและอาจยังไม่เสร็จ",
+        "formula": "Subject + have/has + been + Verb-ing",
+        "example": "I have been writing emails for two hours.",
+        "translation": "ฉันเขียนอีเมลต่อเนื่องมาเป็นเวลาสองชั่วโมงแล้ว"
+      },
+      "keyDifferenceThai": "Present Perfect เน้นผลหรือจำนวนที่ทำเสร็จ ส่วน Present Perfect Continuous เน้นกิจกรรมและระยะเวลาที่ทำต่อเนื่อง"
+    }
+  ],
+  "practice": [
+    {
+      "id": "present-perfect-practice-01",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "I ___ visited this museum before.",
+      "options": [
+        "have",
+        "has",
+        "am",
+        "did"
+      ],
+      "answer": "have",
+      "explanationThai": "ประธาน I ใช้ have"
+    },
+    {
+      "id": "present-perfect-practice-02",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "She ___ finished her homework.",
+      "options": [
+        "have",
+        "has",
+        "is",
+        "does"
+      ],
+      "answer": "has",
+      "explanationThai": "ประธาน She ใช้ has"
+    },
+    {
+      "id": "present-perfect-practice-03",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกกริยาช่องที่ 3 ที่ถูกต้อง",
+      "question": "They have ___ to the new restaurant.",
+      "options": [
+        "go",
+        "went",
+        "gone",
+        "going"
+      ],
+      "answer": "gone",
+      "explanationThai": "หลัง have ใช้ Past Participle โดย go → gone"
+    },
+    {
+      "id": "present-perfect-practice-04",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกกริยาช่องที่ 3 ที่ถูกต้อง",
+      "question": "He has ___ the movie.",
+      "options": [
+        "see",
+        "saw",
+        "seen",
+        "seeing"
+      ],
+      "answer": "seen",
+      "explanationThai": "Past Participle ของ see คือ seen"
+    },
+    {
+      "id": "present-perfect-practice-05",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำที่เหมาะสม",
+      "question": "Have you ___ tried Thai tea?",
+      "options": [
+        "ever",
+        "yet",
+        "for",
+        "since"
+      ],
+      "answer": "ever",
+      "explanationThai": "Ever ใช้ถามประสบการณ์ว่าเคยทำหรือไม่"
+    },
+    {
+      "id": "present-perfect-practice-06",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำที่เหมาะสม",
+      "question": "I haven't received the email ___.",
+      "options": [
+        "already",
+        "ever",
+        "yet",
+        "just"
+      ],
+      "answer": "yet",
+      "explanationThai": "Yet มักวางท้ายประโยคปฏิเสธเพื่อหมายถึงยัง"
+    },
+    {
+      "id": "present-perfect-practice-07",
+      "type": "fill_blank",
+      "instructionThai": "เติม have หรือ has",
+      "question": "My brother ___ already eaten.",
+      "answer": "has",
+      "acceptedAnswers": [
+        "has"
+      ],
+      "explanationThai": "My brother เท่ากับ he จึงใช้ has"
+    },
+    {
+      "id": "present-perfect-practice-08",
+      "type": "fill_blank",
+      "instructionThai": "เติมกริยาช่องที่ 3",
+      "question": "We have ___ (write) the report.",
+      "answer": "written",
+      "acceptedAnswers": [
+        "written"
+      ],
+      "explanationThai": "Past Participle ของ write คือ written"
+    },
+    {
+      "id": "present-perfect-practice-09",
+      "type": "fill_blank",
+      "instructionThai": "เติมกริยาช่องที่ 3",
+      "question": "She has ___ (do) all the exercises.",
+      "answer": "done",
+      "acceptedAnswers": [
+        "done"
+      ],
+      "explanationThai": "Past Participle ของ do คือ done"
+    },
+    {
+      "id": "present-perfect-practice-10",
+      "type": "fill_blank",
+      "instructionThai": "เติม for หรือ since",
+      "question": "I have lived here ___ five years.",
+      "answer": "for",
+      "acceptedAnswers": [
+        "for"
+      ],
+      "explanationThai": "Five years เป็นระยะเวลา จึงใช้ for"
+    },
+    {
+      "id": "present-perfect-practice-11",
+      "type": "fill_blank",
+      "instructionThai": "เติม for หรือ since",
+      "question": "He has worked here ___ 2023.",
+      "answer": "since",
+      "acceptedAnswers": [
+        "since"
+      ],
+      "explanationThai": "2023 เป็นจุดเริ่มต้น จึงใช้ since"
+    },
+    {
+      "id": "present-perfect-practice-12",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคที่ถูกต้อง",
+      "question": [
+        "has",
+        "just",
+        "she",
+        "arrived"
+      ],
+      "answer": "She has just arrived.",
+      "acceptedAnswers": [
+        "She has just arrived",
+        "She has just arrived."
+      ],
+      "explanationThai": "Just วางระหว่าง has กับ Past Participle"
+    },
+    {
+      "id": "present-perfect-practice-13",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคคำถาม",
+      "question": [
+        "ever",
+        "have",
+        "you",
+        "seen",
+        "snow"
+      ],
+      "answer": "Have you ever seen snow?",
+      "acceptedAnswers": [
+        "Have you ever seen snow",
+        "Have you ever seen snow?"
+      ],
+      "explanationThai": "โครงสร้างคือ Have + subject + ever + Past Participle"
+    },
+    {
+      "id": "present-perfect-practice-14",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "I have went there.",
+      "answer": "I have gone there.",
+      "acceptedAnswers": [
+        "I have gone there",
+        "I have gone there."
+      ],
+      "explanationThai": "หลัง have ต้องใช้ gone ไม่ใช่ went"
+    },
+    {
+      "id": "present-perfect-practice-15",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "She has see the movie.",
+      "answer": "She has seen the movie.",
+      "acceptedAnswers": [
+        "She has seen the movie",
+        "She has seen the movie."
+      ],
+      "explanationThai": "หลัง has ต้องใช้ seen"
+    },
+    {
+      "id": "present-perfect-practice-16",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "He have worked here.",
+      "answer": "He has worked here.",
+      "acceptedAnswers": [
+        "He has worked here",
+        "He has worked here."
+      ],
+      "explanationThai": "He ใช้ has"
+    },
+    {
+      "id": "present-perfect-practice-17",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "I ___ that movie last night.",
+      "options": [
+        "have seen",
+        "saw",
+        "have saw",
+        "see"
+      ],
+      "answer": "saw",
+      "explanationThai": "Last night เป็นเวลาที่จบไปแล้ว จึงใช้ Past Simple"
+    },
+    {
+      "id": "present-perfect-practice-18",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่เหมาะสมกับความหมาย",
+      "question": "She ___ three reports today, and she is still working.",
+      "options": [
+        "has completed",
+        "completed yesterday",
+        "has been complete",
+        "completes"
+      ],
+      "answer": "has completed",
+      "explanationThai": "Today เป็นช่วงเวลาที่ยังไม่จบ และประโยคเน้นผลลัพธ์ว่าทำเสร็จแล้วสามฉบับ"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "present-perfect-flashcard-01",
+      "front": "Present Perfect ใช้เมื่อใด?",
+      "back": "ใช้กับประสบการณ์ เหตุการณ์ในอดีตที่มีผลถึงปัจจุบัน เหตุการณ์ที่เพิ่งเกิด และช่วงเวลาที่ยังไม่จบ",
+      "example": "I have visited Japan twice."
+    },
+    {
+      "id": "present-perfect-flashcard-02",
+      "front": "โครงสร้างบอกเล่าของ Present Perfect คืออะไร?",
+      "back": "Subject + have/has + Past Participle",
+      "example": "She has finished her work."
+    },
+    {
+      "id": "present-perfect-flashcard-03",
+      "front": "I/You/We/They ใช้ have หรือ has?",
+      "back": "ใช้ have",
+      "example": "They have arrived."
+    },
+    {
+      "id": "present-perfect-flashcard-04",
+      "front": "He/She/It ใช้ have หรือ has?",
+      "back": "ใช้ has",
+      "example": "He has arrived."
+    },
+    {
+      "id": "present-perfect-flashcard-05",
+      "front": "Past Participle ของ go, see และ do คืออะไร?",
+      "back": "gone, seen และ done",
+      "example": "She has gone home. / I have seen it. / He has done it."
+    },
+    {
+      "id": "present-perfect-flashcard-06",
+      "front": "Ever และ never ใช้อย่างไร?",
+      "back": "Ever มักใช้ถามประสบการณ์ ส่วน never ใช้บอกว่าไม่เคย และไม่ใช้ not ซ้ำ",
+      "example": "Have you ever tried it? / I have never tried it."
+    },
+    {
+      "id": "present-perfect-flashcard-07",
+      "front": "Already, yet และ just วางตรงไหน?",
+      "back": "Already และ just มักวางระหว่าง have/has กับ V3 ส่วน yet มักวางท้ายคำถามหรือประโยคปฏิเสธ",
+      "example": "I have just arrived. / Have you finished yet?"
+    },
+    {
+      "id": "present-perfect-flashcard-08",
+      "front": "For และ since ต่างกันอย่างไร?",
+      "back": "For ใช้กับระยะเวลา ส่วน since ใช้กับจุดเริ่มต้น",
+      "example": "for two years / since 2024"
+    },
+    {
+      "id": "present-perfect-flashcard-09",
+      "front": "ทำไมไม่ใช้ Present Perfect กับ yesterday?",
+      "back": "เพราะ yesterday เป็นเวลาที่จบไปแล้ว จึงต้องใช้ Past Simple",
+      "example": "I finished yesterday."
+    },
+    {
+      "id": "present-perfect-flashcard-10",
+      "front": "Present Perfect ต่างจาก Present Perfect Continuous อย่างไร?",
+      "back": "Present Perfect เน้นผลลัพธ์หรือจำนวน ส่วน Present Perfect Continuous เน้นกิจกรรมและระยะเวลา",
+      "example": "I have read three chapters. / I have been reading for two hours."
+    }
+  ]
+}

@@ -1,0 +1,765 @@
+{
+  "id": "topic-future-perfect-continuous",
+  "categoryId": "future",
+  "name": "Future Perfect Continuous",
+  "nameThai": "อนาคตกาลสมบูรณ์แบบต่อเนื่อง",
+  "slug": "future-perfect-continuous",
+  "stage": "intermediate",
+  "difficulty": 5,
+  "displayOrder": 12,
+  "estimatedMinutes": 25,
+  "prerequisites": [
+    "topic-future-perfect",
+    "topic-future-continuous"
+  ],
+  "summary": {
+    "en": "Use the Future Perfect Continuous for actions that will have continued for a period of time up to a specific future point.",
+    "th": "ใช้ Future Perfect Continuous เพื่อพูดถึงการกระทำที่จะดำเนินต่อเนื่องมาเป็นระยะเวลาหนึ่งจนถึงจุดใดจุดหนึ่งในอนาคต"
+  },
+  "learningObjectives": [
+    "ใช้ Future Perfect Continuous เพื่ออธิบายกิจกรรมที่จะดำเนินต่อเนื่องถึงเวลาหนึ่งในอนาคตได้",
+    "สร้างประโยคด้วย Subject + will have been + Verb-ing ได้ถูกต้อง",
+    "ใช้ for เพื่อเน้นระยะเวลาของกิจกรรมได้",
+    "ใช้ by และ by the time เพื่อระบุจุดอ้างอิงในอนาคตได้",
+    "สร้างประโยคบอกเล่า ปฏิเสธ และคำถามใน Future Perfect Continuous ได้",
+    "แยกการเน้นระยะเวลาออกจากการเน้นผลลัพธ์ได้",
+    "หลีกเลี่ยงการใช้ stative verbs ที่ไม่เหมาะกับ Continuous ได้",
+    "เลือกใช้ tense นี้เฉพาะในบริบทที่เป็นธรรมชาติและไม่ซับซ้อนเกินความจำเป็นได้",
+    "แยก Future Perfect Continuous ออกจาก Future Perfect และ Present Perfect Continuous ได้"
+  ],
+  "uses": [
+    {
+      "id": "future-perfect-continuous-use-1",
+      "title": "การกระทำที่จะดำเนินต่อเนื่องถึงเวลาหนึ่งในอนาคต",
+      "descriptionThai": "ใช้เมื่อกิจกรรมเริ่มก่อนจุดเวลาในอนาคตและจะดำเนินต่อเนื่องมาจนถึงจุดนั้น",
+      "example": "By 6 p.m., I will have been working for eight hours.",
+      "translation": "ภายในหกโมงเย็น ฉันจะทำงานต่อเนื่องมาเป็นเวลาแปดชั่วโมง"
+    },
+    {
+      "id": "future-perfect-continuous-use-2",
+      "title": "การเน้นระยะเวลา",
+      "descriptionThai": "ใช้เมื่อต้องการเน้นว่ากิจกรรมจะดำเนินมานานเท่าไร ณ จุดหนึ่งในอนาคต",
+      "example": "Next month, she will have been studying English for a year.",
+      "translation": "เดือนหน้า เธอจะเรียนภาษาอังกฤษต่อเนื่องมาครบหนึ่งปี"
+    },
+    {
+      "id": "future-perfect-continuous-use-3",
+      "title": "การอธิบายสาเหตุของสภาพในอนาคต",
+      "descriptionThai": "ใช้บอกว่ากิจกรรมที่ดำเนินต่อเนื่องจะเป็นสาเหตุของสภาพหรือความรู้สึก ณ เวลาหนึ่งในอนาคต",
+      "example": "He will be tired because he will have been driving all night.",
+      "translation": "เขาจะเหนื่อยเพราะจะขับรถต่อเนื่องมาตลอดทั้งคืน"
+    },
+    {
+      "id": "future-perfect-continuous-use-4",
+      "title": "บริบทที่เป็นธรรมชาติ",
+      "descriptionThai": "มักใช้เมื่อมีทั้งระยะเวลาและจุดอ้างอิงในอนาคตชัดเจน หากไม่เน้นความต่อเนื่องหรือระยะเวลา tense อื่นอาจเป็นธรรมชาติกว่า",
+      "example": "By noon, we will have been waiting for three hours.",
+      "translation": "ภายในเที่ยง พวกเราจะรอต่อเนื่องมาเป็นเวลาสามชั่วโมง"
+    }
+  ],
+  "structures": [
+    {
+      "id": "future-perfect-continuous-structure-affirmative",
+      "type": "affirmative",
+      "subjectGroup": "all",
+      "formula": "Subject + will have been + Verb-ing + ...",
+      "example": "They will have been working for five hours.",
+      "translation": "พวกเขาจะทำงานต่อเนื่องมาเป็นเวลาห้าชั่วโมง",
+      "noteThai": "ทุกประธานใช้ will have been และตามด้วย Verb-ing"
+    },
+    {
+      "id": "future-perfect-continuous-structure-contraction",
+      "type": "contraction",
+      "subjectGroup": "all",
+      "formula": "Subject + 'll have been + Verb-ing + ...",
+      "example": "I'll have been studying for two hours by then.",
+      "translation": "ถึงตอนนั้นฉันจะเรียนต่อเนื่องมาเป็นเวลาสองชั่วโมง",
+      "noteThai": "Will ย่อเป็น 'll ได้ เช่น I will have been → I'll have been"
+    },
+    {
+      "id": "future-perfect-continuous-structure-negative",
+      "type": "negative",
+      "subjectGroup": "all",
+      "formula": "Subject + will not (won't) have been + Verb-ing + ...",
+      "example": "She won't have been working there for long.",
+      "translation": "เธอจะยังทำงานที่นั่นมาได้ไม่นาน",
+      "noteThai": "ใช้ won't have been ตามด้วย Verb-ing"
+    },
+    {
+      "id": "future-perfect-continuous-structure-question",
+      "type": "question",
+      "subjectGroup": "all",
+      "formula": "Will + subject + have been + Verb-ing + ...?",
+      "example": "Will you have been waiting long by then?",
+      "translation": "ถึงตอนนั้นคุณจะรอมานานหรือยัง",
+      "noteThai": "หลังประธานต้องมี have been แล้วตามด้วย Verb-ing"
+    },
+    {
+      "id": "future-perfect-continuous-structure-wh-question",
+      "type": "wh-question",
+      "subjectGroup": "all",
+      "formula": "Wh-word + will + subject + have been + Verb-ing + ...?",
+      "example": "How long will she have been working there by June?",
+      "translation": "ภายในเดือนมิถุนายน เธอจะทำงานที่นั่นมานานเท่าไร",
+      "noteThai": "How long เหมาะกับการถามระยะเวลาที่กิจกรรมจะดำเนินมาถึงจุดหนึ่งในอนาคต"
+    },
+    {
+      "id": "future-perfect-continuous-structure-short-answer",
+      "type": "short-answer",
+      "subjectGroup": "all",
+      "formula": "Yes, subject + will. | No, subject + won't.",
+      "example": "Will they have been traveling all day? Yes, they will.",
+      "translation": "พวกเขาจะเดินทางต่อเนื่องมาทั้งวันไหม ใช่",
+      "noteThai": "คำตอบสั้นไม่ต้องพูด have been และ Verb-ing ซ้ำ"
+    }
+  ],
+  "verbIngRules": [
+    {
+      "id": "future-perfect-continuous-rule-ing",
+      "title": "กริยาทั่วไปเติม ing",
+      "ruleThai": "กริยาทั่วไปเติม ing ได้เลย",
+      "examples": [
+        "work → working",
+        "read → reading",
+        "wait → waiting"
+      ]
+    },
+    {
+      "id": "future-perfect-continuous-rule-drop-e",
+      "title": "กริยาลงท้ายด้วย e ตัด e แล้วเติม ing",
+      "ruleThai": "ถ้ากริยาลงท้ายด้วย e ที่ไม่ออกเสียง ให้ตัด e ก่อนเติม ing",
+      "examples": [
+        "write → writing",
+        "make → making",
+        "drive → driving"
+      ]
+    },
+    {
+      "id": "future-perfect-continuous-rule-double-consonant",
+      "title": "เพิ่มพยัญชนะตัวท้ายก่อนเติม ing",
+      "ruleThai": "กริยาพยางค์เดียวแบบพยัญชนะ-สระ-พยัญชนะ มักเพิ่มพยัญชนะตัวท้ายก่อนเติม ing",
+      "examples": [
+        "run → running",
+        "sit → sitting",
+        "swim → swimming"
+      ]
+    },
+    {
+      "id": "future-perfect-continuous-rule-ie-ying",
+      "title": "กริยาลงท้ายด้วย ie เปลี่ยนเป็น y แล้วเติม ing",
+      "ruleThai": "เปลี่ยน ie เป็น y ก่อนเติม ing",
+      "examples": [
+        "lie → lying",
+        "die → dying",
+        "tie → tying"
+      ]
+    }
+  ],
+  "durationAndDeadline": {
+    "descriptionThai": "Future Perfect Continuous มักมีทั้งระยะเวลาและจุดอ้างอิงในอนาคต",
+    "for": {
+      "meaningThai": "เป็นเวลา",
+      "useThai": "ใช้บอกว่ากิจกรรมจะดำเนินมานานเท่าไร",
+      "examples": [
+        "for two hours",
+        "for five years",
+        "for a long time",
+        "for six months"
+      ],
+      "sentence": "By noon, I will have been working for four hours."
+    },
+    "by": {
+      "meaningThai": "ภายใน / เมื่อถึง",
+      "useThai": "ใช้ระบุจุดเวลาในอนาคตที่ใช้วัดระยะเวลาของกิจกรรม",
+      "examples": [
+        "by noon",
+        "by next year",
+        "by Friday",
+        "by then"
+      ],
+      "sentence": "By next year, she will have been living here for ten years."
+    },
+    "byTheTime": {
+      "meaningThai": "เมื่อถึงเวลาที่",
+      "useThai": "ใช้เชื่อมกับเหตุการณ์ในอนาคตที่เป็นจุดอ้างอิง",
+      "sentence": "By the time you arrive, I will have been waiting for two hours.",
+      "importantNote": "หลัง by the time ที่กล่าวถึงอนาคต ใช้ Present Simple เช่น you arrive ไม่ใช้ you will arrive"
+    }
+  },
+  "naturalUsageGuide": {
+    "title": "ใช้ให้เป็นธรรมชาติและไม่ฝืน",
+    "descriptionThai": "Future Perfect Continuous เป็น tense ที่เฉพาะเจาะจง ควรใช้เมื่อผู้พูดต้องการเน้นความต่อเนื่องและระยะเวลาจริง ๆ",
+    "useWhen": [
+      "มีจุดอ้างอิงในอนาคตชัดเจน",
+      "มีระยะเวลาที่ต้องการเน้น",
+      "กิจกรรมเป็นสิ่งที่ดำเนินต่อเนื่องได้ตามธรรมชาติ",
+      "ต้องการอธิบายสาเหตุของสภาพในอนาคต"
+    ],
+    "avoidWhen": [
+      {
+        "situationThai": "เพียงต้องการบอกว่าจะทำอะไรในอนาคต",
+        "lessNatural": "I will have been calling you tomorrow.",
+        "moreNatural": "I will call you tomorrow."
+      },
+      {
+        "situationThai": "ต้องการเน้นผลลัพธ์หรือจำนวนที่เสร็จ",
+        "lessNatural": "By Friday, I will have been finishing three reports.",
+        "moreNatural": "By Friday, I will have finished three reports."
+      },
+      {
+        "situationThai": "เป็นแผนหรือนัดหมายที่จัดไว้แล้ว",
+        "lessNatural": "I will have been meeting the manager at 2 p.m.",
+        "moreNatural": "I am meeting the manager at 2 p.m."
+      }
+    ]
+  },
+  "stativeVerbs": {
+    "descriptionThai": "กริยาที่บอกความคิด ความรู้สึก ความเป็นเจ้าของ หรือสภาวะ มักไม่ใช้ใน Future Perfect Continuous",
+    "commonVerbs": [
+      {
+        "group": "ความรู้และความเข้าใจ",
+        "verbs": [
+          "know",
+          "understand",
+          "believe",
+          "remember",
+          "mean"
+        ],
+        "correctExample": "By next year, I will have known her for ten years.",
+        "incorrectExample": "By next year, I will have been knowing her for ten years."
+      },
+      {
+        "group": "ความชอบและความต้องการ",
+        "verbs": [
+          "like",
+          "love",
+          "hate",
+          "prefer",
+          "want",
+          "need"
+        ],
+        "correctExample": "By then, she will have wanted the job for months.",
+        "incorrectExample": "By then, she will have been wanting the job for months."
+      },
+      {
+        "group": "ความเป็นเจ้าของ",
+        "verbs": [
+          "own",
+          "belong",
+          "possess",
+          "have"
+        ],
+        "correctExample": "By 2030, they will have owned the house for twenty years.",
+        "incorrectExample": "By 2030, they will have been owning the house for twenty years."
+      }
+    ],
+    "importantNote": "กริยาบางคำใช้ใน Continuous ได้เมื่อความหมายเปลี่ยน เช่น By noon, I will have been having meetings for four hours. ในที่นี้ have หมายถึงเข้าร่วมประชุม ไม่ได้หมายถึงเป็นเจ้าของ"
+  },
+  "timeMarkers": [
+    {
+      "text": "for",
+      "meaningThai": "เป็นเวลา",
+      "example": "I will have been working for eight hours."
+    },
+    {
+      "text": "by",
+      "meaningThai": "ภายใน / เมื่อถึง",
+      "example": "By 6 p.m., I will have been working for eight hours."
+    },
+    {
+      "text": "by the time",
+      "meaningThai": "เมื่อถึงเวลาที่",
+      "example": "By the time you arrive, I will have been waiting for two hours."
+    },
+    {
+      "text": "by then",
+      "meaningThai": "ถึงตอนนั้น",
+      "example": "By then, she will have been studying for a year."
+    },
+    {
+      "text": "by next year",
+      "meaningThai": "ภายในปีหน้า",
+      "example": "By next year, we will have been living here for five years."
+    },
+    {
+      "text": "for two hours",
+      "meaningThai": "เป็นเวลาสองชั่วโมง",
+      "example": "He will have been driving for two hours by noon."
+    },
+    {
+      "text": "for five years",
+      "meaningThai": "เป็นเวลาห้าปี",
+      "example": "She will have been working here for five years by June."
+    },
+    {
+      "text": "how long",
+      "meaningThai": "นานเท่าไร",
+      "example": "How long will you have been studying by then?"
+    }
+  ],
+  "examples": [
+    {
+      "id": "future-perfect-continuous-example-01",
+      "sentence": "By 6 p.m., I will have been working for eight hours.",
+      "translation": "ภายในหกโมงเย็น ฉันจะทำงานต่อเนื่องมาเป็นเวลาแปดชั่วโมง",
+      "focus": "duration up to a future point",
+      "usage": "future-duration"
+    },
+    {
+      "id": "future-perfect-continuous-example-02",
+      "sentence": "Next month, she will have been studying English for a year.",
+      "translation": "เดือนหน้า เธอจะเรียนภาษาอังกฤษต่อเนื่องมาครบหนึ่งปี",
+      "focus": "future duration milestone",
+      "usage": "future-duration"
+    },
+    {
+      "id": "future-perfect-continuous-example-03",
+      "sentence": "By the time you arrive, we will have been waiting for two hours.",
+      "translation": "เมื่อคุณมาถึง พวกเราจะรอต่อเนื่องมาเป็นเวลาสองชั่วโมง",
+      "focus": "by the time + Present Simple",
+      "usage": "future-reference-point"
+    },
+    {
+      "id": "future-perfect-continuous-example-04",
+      "sentence": "By next year, they will have been living here for ten years.",
+      "translation": "ภายในปีหน้า พวกเขาจะอาศัยอยู่ที่นี่ต่อเนื่องมาครบสิบปี",
+      "focus": "long-term duration",
+      "usage": "future-duration"
+    },
+    {
+      "id": "future-perfect-continuous-example-05",
+      "sentence": "He will be tired because he will have been driving all night.",
+      "translation": "เขาจะเหนื่อยเพราะจะขับรถต่อเนื่องมาตลอดทั้งคืน",
+      "focus": "cause of a future state",
+      "usage": "future-result"
+    },
+    {
+      "id": "future-perfect-continuous-example-06",
+      "sentence": "By noon, she will have been teaching for four hours.",
+      "translation": "ภายในเที่ยง เธอจะสอนต่อเนื่องมาเป็นเวลาสี่ชั่วโมง",
+      "focus": "continuous activity",
+      "usage": "future-duration"
+    },
+    {
+      "id": "future-perfect-continuous-example-07",
+      "sentence": "They won't have been working there for long by December.",
+      "translation": "ภายในเดือนธันวาคม พวกเขาจะยังทำงานที่นั่นมาได้ไม่นาน",
+      "focus": "negative form",
+      "usage": "negative"
+    },
+    {
+      "id": "future-perfect-continuous-example-08",
+      "sentence": "Will you have been waiting long by the time the train arrives?",
+      "translation": "เมื่อรถไฟมาถึง คุณจะรอมานานหรือยัง",
+      "focus": "question",
+      "usage": "question"
+    },
+    {
+      "id": "future-perfect-continuous-example-09",
+      "sentence": "How long will she have been working here by June?",
+      "translation": "ภายในเดือนมิถุนายน เธอจะทำงานที่นี่มานานเท่าไร",
+      "focus": "how long",
+      "usage": "duration-question"
+    },
+    {
+      "id": "future-perfect-continuous-example-10",
+      "sentence": "By next year, I will have known him for five years.",
+      "translation": "ภายในปีหน้า ฉันจะรู้จักเขามาเป็นเวลาห้าปี",
+      "focus": "stative verb uses Future Perfect",
+      "usage": "stative-verb"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "future-perfect-continuous-mistake-01",
+      "incorrect": "I will have been work here.",
+      "correct": "I will have been working here.",
+      "explanationThai": "หลัง will have been ต้องใช้ Verb-ing คือ working"
+    },
+    {
+      "id": "future-perfect-continuous-mistake-02",
+      "incorrect": "She will has been studying.",
+      "correct": "She will have been studying.",
+      "explanationThai": "หลัง will ใช้ have กับทุกประธาน ไม่ใช้ has"
+    },
+    {
+      "id": "future-perfect-continuous-mistake-03",
+      "incorrect": "They will have studying for two hours.",
+      "correct": "They will have been studying for two hours.",
+      "explanationThai": "Future Perfect Continuous ต้องมี been ระหว่าง have กับ Verb-ing"
+    },
+    {
+      "id": "future-perfect-continuous-mistake-04",
+      "incorrect": "By Friday, I will have been finishing three reports.",
+      "correct": "By Friday, I will have finished three reports.",
+      "explanationThai": "เมื่อเน้นผลลัพธ์หรือจำนวนงานที่เสร็จ ควรใช้ Future Perfect"
+    },
+    {
+      "id": "future-perfect-continuous-mistake-05",
+      "incorrect": "I will have been calling you tomorrow.",
+      "correct": "I will call you tomorrow.",
+      "explanationThai": "เมื่อเพียงบอกว่าจะโทรในอนาคต Future Simple เป็นธรรมชาติกว่า"
+    },
+    {
+      "id": "future-perfect-continuous-mistake-06",
+      "incorrect": "By next year, I will have been knowing her for ten years.",
+      "correct": "By next year, I will have known her for ten years.",
+      "explanationThai": "Know เป็น stative verb จึงใช้ Future Perfect ไม่ใช้ Future Perfect Continuous"
+    },
+    {
+      "id": "future-perfect-continuous-mistake-07",
+      "incorrect": "By the time you will arrive, I will have been waiting for two hours.",
+      "correct": "By the time you arrive, I will have been waiting for two hours.",
+      "explanationThai": "หลัง by the time ที่กล่าวถึงอนาคต ใช้ Present Simple ไม่ใช้ will"
+    },
+    {
+      "id": "future-perfect-continuous-mistake-08",
+      "incorrect": "Will she have been study for a year?",
+      "correct": "Will she have been studying for a year?",
+      "explanationThai": "หลัง have been ต้องใช้ Verb-ing"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "future-perfect-continuous-comparison-future-perfect",
+      "title": "Future Perfect Continuous vs Future Perfect",
+      "futurePerfectContinuous": {
+        "useThai": "เน้นกิจกรรม ความต่อเนื่อง และระยะเวลาจนถึงจุดหนึ่งในอนาคต",
+        "formula": "Subject + will have been + Verb-ing",
+        "example": "By noon, I will have been writing for three hours.",
+        "translation": "ภายในเที่ยง ฉันจะเขียนต่อเนื่องมาเป็นเวลาสามชั่วโมง"
+      },
+      "otherTense": {
+        "name": "Future Perfect",
+        "useThai": "เน้นผลลัพธ์ จำนวน หรือสิ่งที่จะเสร็จสมบูรณ์ก่อนจุดหนึ่งในอนาคต",
+        "formula": "Subject + will have + Past Participle",
+        "example": "By noon, I will have written three reports.",
+        "translation": "ภายในเที่ยง ฉันจะเขียนรายงานเสร็จสามฉบับ"
+      },
+      "keyDifferenceThai": "Future Perfect Continuous เน้นว่ากิจกรรมดำเนินมานานเท่าไร ส่วน Future Perfect เน้นว่าทำสำเร็จหรือเสร็จไปเท่าไร"
+    },
+    {
+      "id": "future-perfect-continuous-comparison-present-perfect-continuous",
+      "title": "Future Perfect Continuous vs Present Perfect Continuous",
+      "futurePerfectContinuous": {
+        "useThai": "กิจกรรมจะดำเนินต่อเนื่องมาถึงจุดหนึ่งในอนาคต",
+        "formula": "Subject + will have been + Verb-ing",
+        "example": "By next month, she will have been working here for a year.",
+        "translation": "ภายในเดือนหน้า เธอจะทำงานที่นี่มาครบหนึ่งปี"
+      },
+      "otherTense": {
+        "name": "Present Perfect Continuous",
+        "useThai": "กิจกรรมเริ่มในอดีตและดำเนินมาถึงปัจจุบัน หรือเพิ่งหยุดและยังเห็นผลตอนนี้",
+        "formula": "Subject + have/has been + Verb-ing",
+        "example": "She has been working here for eleven months.",
+        "translation": "เธอทำงานที่นี่มาเป็นเวลาสิบเอ็ดเดือนแล้ว"
+      },
+      "keyDifferenceThai": "Future Perfect Continuous มองระยะเวลาจากจุดหนึ่งในอนาคต ส่วน Present Perfect Continuous มองระยะเวลาจากปัจจุบัน"
+    }
+  ],
+  "practice": [
+    {
+      "id": "future-perfect-continuous-practice-01",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "By 6 p.m., I ___ working for eight hours.",
+      "options": [
+        "will have been",
+        "will be",
+        "have been",
+        "will have"
+      ],
+      "answer": "will have been",
+      "explanationThai": "Future Perfect Continuous ใช้ will have been + Verb-ing"
+    },
+    {
+      "id": "future-perfect-continuous-practice-02",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "She will have been ___ for a year.",
+      "options": [
+        "study",
+        "studied",
+        "studying",
+        "studies"
+      ],
+      "answer": "studying",
+      "explanationThai": "หลัง will have been ต้องใช้ Verb-ing"
+    },
+    {
+      "id": "future-perfect-continuous-practice-03",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "They will ___ been waiting for two hours.",
+      "options": [
+        "have",
+        "has",
+        "be",
+        "had"
+      ],
+      "answer": "have",
+      "explanationThai": "โครงสร้างคือ will have been + Verb-ing"
+    },
+    {
+      "id": "future-perfect-continuous-practice-04",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำที่เหมาะสม",
+      "question": "By noon, he will have been driving ___ four hours.",
+      "options": [
+        "for",
+        "since",
+        "ago",
+        "during"
+      ],
+      "answer": "for",
+      "explanationThai": "Four hours เป็นระยะเวลา จึงใช้ for"
+    },
+    {
+      "id": "future-perfect-continuous-practice-05",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "By the time you ___, I will have been waiting for an hour.",
+      "options": [
+        "arrive",
+        "will arrive",
+        "arrived",
+        "are arrive"
+      ],
+      "answer": "arrive",
+      "explanationThai": "หลัง by the time ที่กล่าวถึงอนาคต ใช้ Present Simple"
+    },
+    {
+      "id": "future-perfect-continuous-practice-06",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกประโยคที่เป็นธรรมชาติที่สุด",
+      "question": "You only want to say that you will call someone tomorrow.",
+      "options": [
+        "I will call you tomorrow.",
+        "I will have been calling you tomorrow.",
+        "I will have calling you tomorrow.",
+        "I have been call you tomorrow."
+      ],
+      "answer": "I will call you tomorrow.",
+      "explanationThai": "เมื่อไม่ได้เน้นระยะเวลาหรือความต่อเนื่อง Future Simple เป็นธรรมชาติกว่า"
+    },
+    {
+      "id": "future-perfect-continuous-practice-07",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำให้โครงสร้างสมบูรณ์",
+      "question": "We will have ___ working for three hours by noon.",
+      "answer": "been",
+      "acceptedAnswers": [
+        "been"
+      ],
+      "explanationThai": "โครงสร้างคือ will have been + Verb-ing"
+    },
+    {
+      "id": "future-perfect-continuous-practice-08",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "She will have been ___ (write) for two hours.",
+      "answer": "writing",
+      "acceptedAnswers": [
+        "writing"
+      ],
+      "explanationThai": "Write ตัด e แล้วเติม ing เป็น writing"
+    },
+    {
+      "id": "future-perfect-continuous-practice-09",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "He will have been ___ (run) for an hour.",
+      "answer": "running",
+      "acceptedAnswers": [
+        "running"
+      ],
+      "explanationThai": "Run เพิ่ม n แล้วเติม ing เป็น running"
+    },
+    {
+      "id": "future-perfect-continuous-practice-10",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำบอกระยะเวลา",
+      "question": "By next year, they will have been living here ___ ten years.",
+      "answer": "for",
+      "acceptedAnswers": [
+        "for"
+      ],
+      "explanationThai": "Ten years เป็นระยะเวลา จึงใช้ for"
+    },
+    {
+      "id": "future-perfect-continuous-practice-11",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "By the time the class ___ (start), we will have been waiting for thirty minutes.",
+      "answer": "starts",
+      "acceptedAnswers": [
+        "starts"
+      ],
+      "explanationThai": "หลัง by the time ในอนุประโยคเวลาอนาคต ใช้ Present Simple"
+    },
+    {
+      "id": "future-perfect-continuous-practice-12",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคที่ถูกต้อง",
+      "question": [
+        "will",
+        "have",
+        "been",
+        "she",
+        "working",
+        "for five years"
+      ],
+      "answer": "She will have been working for five years.",
+      "acceptedAnswers": [
+        "She will have been working for five years",
+        "She will have been working for five years."
+      ],
+      "explanationThai": "โครงสร้างคือ Subject + will have been + Verb-ing + duration"
+    },
+    {
+      "id": "future-perfect-continuous-practice-13",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคคำถาม",
+      "question": [
+        "how long",
+        "will",
+        "you",
+        "have been",
+        "studying",
+        "by then"
+      ],
+      "answer": "How long will you have been studying by then?",
+      "acceptedAnswers": [
+        "How long will you have been studying by then",
+        "How long will you have been studying by then?"
+      ],
+      "explanationThai": "โครงสร้างคือ How long + will + subject + have been + Verb-ing"
+    },
+    {
+      "id": "future-perfect-continuous-practice-14",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "I will have been work here.",
+      "answer": "I will have been working here.",
+      "acceptedAnswers": [
+        "I will have been working here",
+        "I will have been working here."
+      ],
+      "explanationThai": "หลัง will have been ต้องใช้ working"
+    },
+    {
+      "id": "future-perfect-continuous-practice-15",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "She will has been studying.",
+      "answer": "She will have been studying.",
+      "acceptedAnswers": [
+        "She will have been studying",
+        "She will have been studying."
+      ],
+      "explanationThai": "หลัง will ใช้ have ไม่ใช้ has"
+    },
+    {
+      "id": "future-perfect-continuous-practice-16",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "They will have studying for two hours.",
+      "answer": "They will have been studying for two hours.",
+      "acceptedAnswers": [
+        "They will have been studying for two hours",
+        "They will have been studying for two hours."
+      ],
+      "explanationThai": "ต้องเติม been ระหว่าง have กับ studying"
+    },
+    {
+      "id": "future-perfect-continuous-practice-17",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "By Friday, I ___ three reports.",
+      "options": [
+        "will have finished",
+        "will have been finishing",
+        "will be finish",
+        "have finished tomorrow"
+      ],
+      "answer": "will have finished",
+      "explanationThai": "ประโยคเน้นผลลัพธ์และจำนวนงานที่เสร็จ จึงใช้ Future Perfect"
+    },
+    {
+      "id": "future-perfect-continuous-practice-18",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่เหมาะสม",
+      "question": "By next month, she ___ English for one year.",
+      "options": [
+        "will have been studying",
+        "will study yesterday",
+        "has been study",
+        "will have studied three lessons"
+      ],
+      "answer": "will have been studying",
+      "explanationThai": "ประโยคเน้นระยะเวลาของกิจกรรมที่ดำเนินต่อเนื่องถึงอนาคต จึงใช้ Future Perfect Continuous"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "future-perfect-continuous-flashcard-01",
+      "front": "Future Perfect Continuous ใช้เมื่อใด?",
+      "back": "ใช้กับกิจกรรมที่จะดำเนินต่อเนื่องมาเป็นระยะเวลาหนึ่งจนถึงจุดหนึ่งในอนาคต",
+      "example": "By 6 p.m., I will have been working for eight hours."
+    },
+    {
+      "id": "future-perfect-continuous-flashcard-02",
+      "front": "โครงสร้างบอกเล่าคืออะไร?",
+      "back": "Subject + will have been + Verb-ing",
+      "example": "She will have been studying."
+    },
+    {
+      "id": "future-perfect-continuous-flashcard-03",
+      "front": "ประโยคปฏิเสธสร้างอย่างไร?",
+      "back": "Subject + won't have been + Verb-ing",
+      "example": "They won't have been waiting long."
+    },
+    {
+      "id": "future-perfect-continuous-flashcard-04",
+      "front": "ประโยคคำถามสร้างอย่างไร?",
+      "back": "Will + subject + have been + Verb-ing?",
+      "example": "Will you have been working?"
+    },
+    {
+      "id": "future-perfect-continuous-flashcard-05",
+      "front": "For ใช้ทำอะไร?",
+      "back": "ใช้บอกระยะเวลาที่กิจกรรมจะดำเนินมาถึงจุดหนึ่งในอนาคต",
+      "example": "for two hours"
+    },
+    {
+      "id": "future-perfect-continuous-flashcard-06",
+      "front": "By และ by the time ใช้ทำอะไร?",
+      "back": "ใช้ระบุจุดเวลาในอนาคตที่ใช้วัดระยะเวลาของกิจกรรม",
+      "example": "By the time you arrive, I will have been waiting for two hours."
+    },
+    {
+      "id": "future-perfect-continuous-flashcard-07",
+      "front": "ทำไมไม่พูด I will have been work?",
+      "back": "เพราะหลัง will have been ต้องใช้ Verb-ing",
+      "example": "I will have been working."
+    },
+    {
+      "id": "future-perfect-continuous-flashcard-08",
+      "front": "เมื่อใดควรใช้ Future Simple แทน?",
+      "back": "เมื่อเพียงบอกว่าจะทำอะไร โดยไม่ได้เน้นระยะเวลาหรือความต่อเนื่อง",
+      "example": "I will call you tomorrow."
+    },
+    {
+      "id": "future-perfect-continuous-flashcard-09",
+      "front": "Future Perfect Continuous ต่างจาก Future Perfect อย่างไร?",
+      "back": "Future Perfect Continuous เน้นกิจกรรมและระยะเวลา ส่วน Future Perfect เน้นผลลัพธ์หรือจำนวนที่เสร็จ",
+      "example": "I will have been writing for three hours. / I will have written three reports."
+    },
+    {
+      "id": "future-perfect-continuous-flashcard-10",
+      "front": "Future Perfect Continuous ต่างจาก Present Perfect Continuous อย่างไร?",
+      "back": "Future Perfect Continuous วัดระยะเวลาจากจุดหนึ่งในอนาคต ส่วน Present Perfect Continuous วัดจากปัจจุบัน",
+      "example": "She will have been working for a year. / She has been working for eleven months."
+    }
+  ]
+}

@@ -1,0 +1,743 @@
+{
+  "id": "topic-present-continuous",
+  "categoryId": "present",
+  "name": "Present Continuous",
+  "nameThai": "ปัจจุบันกาลแบบกำลังกระทำ",
+  "slug": "present-continuous",
+  "stage": "beginner",
+  "difficulty": 1,
+  "displayOrder": 2,
+  "estimatedMinutes": 20,
+  "prerequisites": [
+    "topic-present-simple"
+  ],
+  "summary": {
+    "en": "Use the Present Continuous for actions happening now, temporary situations, ongoing changes, and arranged plans in the near future.",
+    "th": "ใช้ Present Continuous เพื่อพูดถึงเหตุการณ์ที่กำลังเกิดขึ้นตอนนี้ สถานการณ์ชั่วคราว การเปลี่ยนแปลงที่กำลังดำเนินอยู่ และแผนที่นัดหมายไว้ในอนาคตอันใกล้"
+  },
+  "learningObjectives": [
+    "ใช้ Present Continuous เพื่อพูดถึงเหตุการณ์ที่กำลังเกิดขึ้นตอนนี้ได้",
+    "อธิบายสถานการณ์ชั่วคราวและการเปลี่ยนแปลงที่กำลังเกิดขึ้นได้",
+    "พูดถึงแผนหรือนัดหมายในอนาคตอันใกล้ได้",
+    "สร้างประโยคบอกเล่า ปฏิเสธ และคำถามด้วย am, is และ are ได้ถูกต้อง",
+    "เติม -ing ตามกฎของคำกริยาได้ถูกต้อง",
+    "หลีกเลี่ยงการใช้กริยาบอกสภาวะ เช่น know, like และ understand ในรูป Continuous ได้"
+  ],
+  "uses": [
+    {
+      "id": "present-continuous-use-1",
+      "title": "เหตุการณ์ที่กำลังเกิดขึ้นตอนนี้",
+      "descriptionThai": "ใช้พูดถึงสิ่งที่กำลังเกิดขึ้นในขณะที่พูด",
+      "example": "I am studying right now.",
+      "translation": "ตอนนี้ฉันกำลังเรียนอยู่"
+    },
+    {
+      "id": "present-continuous-use-2",
+      "title": "สถานการณ์ชั่วคราว",
+      "descriptionThai": "ใช้พูดถึงสถานการณ์ที่เกิดขึ้นเพียงช่วงหนึ่งและไม่ได้เป็นสิ่งถาวร",
+      "example": "She is staying with her aunt this week.",
+      "translation": "สัปดาห์นี้เธอกำลังพักอยู่กับป้าของเธอ"
+    },
+    {
+      "id": "present-continuous-use-3",
+      "title": "การเปลี่ยนแปลงที่กำลังเกิดขึ้น",
+      "descriptionThai": "ใช้พูดถึงสิ่งที่กำลังเปลี่ยนแปลงหรือพัฒนาอย่างต่อเนื่อง",
+      "example": "The weather is getting hotter.",
+      "translation": "อากาศกำลังร้อนขึ้น"
+    },
+    {
+      "id": "present-continuous-use-4",
+      "title": "แผนในอนาคตอันใกล้",
+      "descriptionThai": "ใช้พูดถึงแผนหรือนัดหมายที่จัดเตรียมไว้แล้ว โดยมักระบุเวลาอย่างชัดเจน",
+      "example": "We are meeting the manager tonight.",
+      "translation": "คืนนี้พวกเราจะพบผู้จัดการ"
+    }
+  ],
+  "structures": [
+    {
+      "id": "present-continuous-structure-affirmative-i",
+      "type": "affirmative",
+      "subjectGroup": "I",
+      "formula": "I + am + Verb-ing + ...",
+      "example": "I am working now.",
+      "translation": "ตอนนี้ฉันกำลังทำงาน",
+      "noteThai": "ประธาน I ใช้ am"
+    },
+    {
+      "id": "present-continuous-structure-affirmative-singular",
+      "type": "affirmative",
+      "subjectGroup": "He/She/It",
+      "formula": "Subject + is + Verb-ing + ...",
+      "example": "She is reading at the moment.",
+      "translation": "ขณะนี้เธอกำลังอ่านหนังสือ",
+      "noteThai": "ประธานเอกพจน์บุรุษที่สามใช้ is"
+    },
+    {
+      "id": "present-continuous-structure-affirmative-plural",
+      "type": "affirmative",
+      "subjectGroup": "You/We/They",
+      "formula": "Subject + are + Verb-ing + ...",
+      "example": "They are playing football.",
+      "translation": "พวกเขากำลังเล่นฟุตบอล",
+      "noteThai": "ประธาน You, We และ They ใช้ are"
+    },
+    {
+      "id": "present-continuous-structure-negative",
+      "type": "negative",
+      "subjectGroup": "all",
+      "formula": "Subject + am/is/are + not + Verb-ing + ...",
+      "example": "He is not sleeping.",
+      "translation": "เขาไม่ได้กำลังนอนหลับ",
+      "noteThai": "เติม not หลัง am, is หรือ are"
+    },
+    {
+      "id": "present-continuous-structure-question",
+      "type": "question",
+      "subjectGroup": "all",
+      "formula": "Am/Is/Are + subject + Verb-ing + ...?",
+      "example": "Are you listening to me?",
+      "translation": "คุณกำลังฟังฉันอยู่ไหม",
+      "noteThai": "ย้าย am, is หรือ are ไปไว้หน้าประธาน"
+    },
+    {
+      "id": "present-continuous-structure-wh-question",
+      "type": "wh-question",
+      "subjectGroup": "all",
+      "formula": "Wh-word + am/is/are + subject + Verb-ing + ...?",
+      "example": "What are they doing?",
+      "translation": "พวกเขากำลังทำอะไร",
+      "noteThai": "วางคำถาม Wh- ไว้หน้า am, is หรือ are"
+    },
+    {
+      "id": "present-continuous-structure-short-answer",
+      "type": "short-answer",
+      "subjectGroup": "all",
+      "formula": "Yes, subject + am/is/are. | No, subject + am not/isn't/aren't.",
+      "example": "Is she working? Yes, she is.",
+      "translation": "เธอกำลังทำงานอยู่ไหม ใช่ เธอกำลังทำงานอยู่",
+      "noteThai": "คำตอบสั้นต้องใช้ verb to be ให้ตรงกับประธาน"
+    }
+  ],
+  "verbRules": [
+    {
+      "id": "present-continuous-rule-ing",
+      "title": "กริยาทั่วไปเติม ing",
+      "ruleThai": "กริยาทั่วไปสามารถเติม ing ได้เลย",
+      "examples": [
+        "work → working",
+        "read → reading",
+        "play → playing"
+      ]
+    },
+    {
+      "id": "present-continuous-rule-drop-e",
+      "title": "กริยาลงท้ายด้วย e ตัด e แล้วเติม ing",
+      "ruleThai": "ถ้ากริยาลงท้ายด้วย e ที่ไม่ออกเสียง ให้ตัด e ก่อนเติม ing",
+      "examples": [
+        "make → making",
+        "write → writing",
+        "come → coming"
+      ]
+    },
+    {
+      "id": "present-continuous-rule-keep-double-e",
+      "title": "กริยาลงท้ายด้วย ee ไม่ตัด e",
+      "ruleThai": "กริยาที่ลงท้ายด้วย ee ให้เติม ing ได้เลย",
+      "examples": [
+        "see → seeing",
+        "agree → agreeing",
+        "free → freeing"
+      ]
+    },
+    {
+      "id": "present-continuous-rule-double-consonant",
+      "title": "สระเสียงสั้นตามด้วยพยัญชนะตัวเดียว ให้เพิ่มพยัญชนะอีกหนึ่งตัว",
+      "ruleThai": "กริยาพยางค์เดียวที่ลงท้ายด้วยพยัญชนะ-สระ-พยัญชนะ มักเพิ่มพยัญชนะตัวท้ายก่อนเติม ing",
+      "examples": [
+        "run → running",
+        "sit → sitting",
+        "swim → swimming"
+      ]
+    },
+    {
+      "id": "present-continuous-rule-ie-ying",
+      "title": "กริยาลงท้ายด้วย ie เปลี่ยนเป็น y แล้วเติม ing",
+      "ruleThai": "เปลี่ยน ie เป็น y ก่อนเติม ing",
+      "examples": [
+        "lie → lying",
+        "die → dying",
+        "tie → tying"
+      ]
+    },
+    {
+      "id": "present-continuous-rule-y",
+      "title": "กริยาลงท้ายด้วย y เติม ing ได้เลย",
+      "ruleThai": "ไม่ต้องเปลี่ยน y เมื่อเติม ing",
+      "examples": [
+        "study → studying",
+        "play → playing",
+        "carry → carrying"
+      ]
+    }
+  ],
+  "stativeVerbs": {
+    "descriptionThai": "กริยาบอกสภาวะ ความคิด ความรู้สึก ความเป็นเจ้าของ หรือการรับรู้ มักไม่ใช้ในรูป Continuous เมื่อพูดถึงความหมายปกติ",
+    "commonVerbs": [
+      {
+        "group": "ความรู้และความเข้าใจ",
+        "verbs": [
+          "know",
+          "understand",
+          "believe",
+          "remember",
+          "mean"
+        ],
+        "example": "I know the answer.",
+        "incorrectExample": "I am knowing the answer."
+      },
+      {
+        "group": "ความชอบและความรู้สึก",
+        "verbs": [
+          "like",
+          "love",
+          "hate",
+          "prefer",
+          "want",
+          "need"
+        ],
+        "example": "She likes this song.",
+        "incorrectExample": "She is liking this song."
+      },
+      {
+        "group": "ความเป็นเจ้าของ",
+        "verbs": [
+          "have",
+          "own",
+          "belong",
+          "possess"
+        ],
+        "example": "They own a small shop.",
+        "incorrectExample": "They are owning a small shop."
+      },
+      {
+        "group": "การรับรู้",
+        "verbs": [
+          "see",
+          "hear",
+          "smell",
+          "taste",
+          "seem"
+        ],
+        "example": "I see your point.",
+        "incorrectExample": "I am seeing your point."
+      }
+    ],
+    "importantNote": "กริยาบางคำใช้ใน Continuous ได้เมื่อความหมายเปลี่ยน เช่น I am having lunch. โดย have หมายถึงกำลังกิน ไม่ได้หมายถึงเป็นเจ้าของ"
+  },
+  "timeMarkers": [
+    {
+      "text": "now",
+      "meaningThai": "ตอนนี้",
+      "example": "He is sleeping now."
+    },
+    {
+      "text": "right now",
+      "meaningThai": "ตอนนี้เลย",
+      "example": "I am doing my homework right now."
+    },
+    {
+      "text": "at the moment",
+      "meaningThai": "ในขณะนี้",
+      "example": "They are talking at the moment."
+    },
+    {
+      "text": "currently",
+      "meaningThai": "ในปัจจุบัน / ขณะนี้",
+      "example": "She is currently looking for a job."
+    },
+    {
+      "text": "today",
+      "meaningThai": "วันนี้",
+      "example": "I am working from home today."
+    },
+    {
+      "text": "this week",
+      "meaningThai": "สัปดาห์นี้",
+      "example": "We are studying a new topic this week."
+    },
+    {
+      "text": "these days",
+      "meaningThai": "ช่วงนี้",
+      "example": "More people are using AI these days."
+    },
+    {
+      "text": "tonight",
+      "meaningThai": "คืนนี้",
+      "example": "We are having dinner together tonight."
+    }
+  ],
+  "examples": [
+    {
+      "id": "present-continuous-example-01",
+      "sentence": "I am studying English right now.",
+      "translation": "ตอนนี้ฉันกำลังเรียนภาษาอังกฤษ",
+      "focus": "I + am + Verb-ing",
+      "usage": "happening-now"
+    },
+    {
+      "id": "present-continuous-example-02",
+      "sentence": "She is talking on the phone at the moment.",
+      "translation": "ขณะนี้เธอกำลังคุยโทรศัพท์",
+      "focus": "She + is + Verb-ing",
+      "usage": "happening-now"
+    },
+    {
+      "id": "present-continuous-example-03",
+      "sentence": "They are playing football now.",
+      "translation": "ตอนนี้พวกเขากำลังเล่นฟุตบอล",
+      "focus": "They + are + Verb-ing",
+      "usage": "happening-now"
+    },
+    {
+      "id": "present-continuous-example-04",
+      "sentence": "He is staying with his friend this week.",
+      "translation": "สัปดาห์นี้เขากำลังพักอยู่กับเพื่อน",
+      "focus": "temporary situation",
+      "usage": "temporary"
+    },
+    {
+      "id": "present-continuous-example-05",
+      "sentence": "I am working from home today.",
+      "translation": "วันนี้ฉันกำลังทำงานจากบ้าน",
+      "focus": "temporary situation",
+      "usage": "temporary"
+    },
+    {
+      "id": "present-continuous-example-06",
+      "sentence": "The weather is getting warmer.",
+      "translation": "อากาศกำลังอุ่นขึ้น",
+      "focus": "ongoing change",
+      "usage": "change"
+    },
+    {
+      "id": "present-continuous-example-07",
+      "sentence": "More people are learning online these days.",
+      "translation": "ช่วงนี้ผู้คนจำนวนมากขึ้นกำลังเรียนออนไลน์",
+      "focus": "ongoing trend",
+      "usage": "change"
+    },
+    {
+      "id": "present-continuous-example-08",
+      "sentence": "We are meeting the client tonight.",
+      "translation": "คืนนี้พวกเราจะพบลูกค้า",
+      "focus": "arranged future plan",
+      "usage": "future-arrangement"
+    },
+    {
+      "id": "present-continuous-example-09",
+      "sentence": "Are you listening to me?",
+      "translation": "คุณกำลังฟังฉันอยู่ไหม",
+      "focus": "question with are",
+      "usage": "question"
+    },
+    {
+      "id": "present-continuous-example-10",
+      "sentence": "I understand the question.",
+      "translation": "ฉันเข้าใจคำถาม",
+      "focus": "stative verb",
+      "usage": "stative-verb"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "present-continuous-mistake-01",
+      "incorrect": "I working now.",
+      "correct": "I am working now.",
+      "explanationThai": "Present Continuous ต้องมี verb to be โดยประธาน I ใช้ am"
+    },
+    {
+      "id": "present-continuous-mistake-02",
+      "incorrect": "She is work now.",
+      "correct": "She is working now.",
+      "explanationThai": "หลัง is ต้องใช้กริยาเติม ing"
+    },
+    {
+      "id": "present-continuous-mistake-03",
+      "incorrect": "They are play football.",
+      "correct": "They are playing football.",
+      "explanationThai": "หลัง are ต้องใช้ Verb-ing"
+    },
+    {
+      "id": "present-continuous-mistake-04",
+      "incorrect": "I am knowing the answer.",
+      "correct": "I know the answer.",
+      "explanationThai": "Know เป็น stative verb จึงมักใช้ Present Simple ไม่ใช้ Continuous"
+    },
+    {
+      "id": "present-continuous-mistake-05",
+      "incorrect": "He studying at the moment.",
+      "correct": "He is studying at the moment.",
+      "explanationThai": "ห้ามลืม verb to be โดยประธาน He ใช้ is"
+    },
+    {
+      "id": "present-continuous-mistake-06",
+      "incorrect": "We is waiting for the bus.",
+      "correct": "We are waiting for the bus.",
+      "explanationThai": "ประธาน We ต้องใช้ are ไม่ใช่ is"
+    },
+    {
+      "id": "present-continuous-mistake-07",
+      "incorrect": "Are you listen to me?",
+      "correct": "Are you listening to me?",
+      "explanationThai": "หลัง are ต้องใช้ listening ไม่ใช่ listen"
+    },
+    {
+      "id": "present-continuous-mistake-08",
+      "incorrect": "She is writeing an email.",
+      "correct": "She is writing an email.",
+      "explanationThai": "Write ลงท้ายด้วย e จึงต้องตัด e ก่อนเติม ing"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "present-continuous-comparison-simple",
+      "title": "Present Continuous vs Present Simple",
+      "presentContinuous": {
+        "useThai": "สิ่งที่กำลังเกิดขึ้นตอนนี้ สถานการณ์ชั่วคราว หรือการเปลี่ยนแปลงที่กำลังดำเนินอยู่",
+        "formula": "Subject + am/is/are + Verb-ing",
+        "example": "She is working at home today.",
+        "translation": "วันนี้เธอกำลังทำงานที่บ้าน"
+      },
+      "otherTense": {
+        "name": "Present Simple",
+        "useThai": "กิจวัตร สิ่งที่เกิดเป็นประจำ ข้อเท็จจริง หรือตารางเวลา",
+        "formula": "Subject + Verb 1 / Verb-s/es",
+        "example": "She works at the office every day.",
+        "translation": "เธอทำงานที่สำนักงานทุกวัน"
+      },
+      "keyDifferenceThai": "Today ในตัวอย่างแรกแสดงสถานการณ์ชั่วคราว ส่วน every day แสดงกิจวัตรที่เกิดเป็นประจำ"
+    },
+    {
+      "id": "present-continuous-comparison-going-to",
+      "title": "Present Continuous vs be going to",
+      "presentContinuous": {
+        "useThai": "แผนหรือนัดหมายที่จัดเตรียมไว้แล้ว มักมีเวลา สถานที่ หรือบุคคลที่เกี่ยวข้องชัดเจน",
+        "formula": "Subject + am/is/are + Verb-ing",
+        "example": "I am meeting Jane at 7:00 tonight.",
+        "translation": "คืนนี้เวลาหนึ่งทุ่มฉันจะพบเจน"
+      },
+      "otherTense": {
+        "name": "be going to",
+        "useThai": "ความตั้งใจหรือแผนที่ตัดสินใจไว้แล้ว และใช้คาดการณ์จากหลักฐานที่เห็นได้",
+        "formula": "Subject + am/is/are + going to + Verb 1",
+        "example": "I am going to apply for a new job.",
+        "translation": "ฉันตั้งใจว่าจะสมัครงานใหม่"
+      },
+      "keyDifferenceThai": "Present Continuous เน้นการนัดหมายหรือรายละเอียดที่จัดไว้แล้ว ส่วน be going to เน้นความตั้งใจ แผนทั่วไป หรือการคาดการณ์จากหลักฐาน"
+    }
+  ],
+  "practice": [
+    {
+      "id": "present-continuous-practice-01",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "I ___ working right now.",
+      "options": [
+        "am",
+        "is",
+        "are",
+        "be"
+      ],
+      "answer": "am",
+      "explanationThai": "ประธาน I ใช้ am"
+    },
+    {
+      "id": "present-continuous-practice-02",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "She is ___ an email.",
+      "options": [
+        "write",
+        "writes",
+        "writing",
+        "wrote"
+      ],
+      "answer": "writing",
+      "explanationThai": "หลัง is ต้องใช้ Verb-ing และ write ตัด e ก่อนเติม ing"
+    },
+    {
+      "id": "present-continuous-practice-03",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "They ___ playing football at the moment.",
+      "options": [
+        "am",
+        "is",
+        "are",
+        "do"
+      ],
+      "answer": "are",
+      "explanationThai": "ประธาน They ใช้ are"
+    },
+    {
+      "id": "present-continuous-practice-04",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกประโยคที่ถูกต้อง",
+      "question": "Which sentence is correct?",
+      "options": [
+        "I am knowing the answer.",
+        "I know the answer.",
+        "I knowing the answer.",
+        "I am know the answer."
+      ],
+      "answer": "I know the answer.",
+      "explanationThai": "Know เป็น stative verb จึงใช้ Present Simple ในความหมายปกติ"
+    },
+    {
+      "id": "present-continuous-practice-05",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "Look! The baby ___.",
+      "options": [
+        "cry",
+        "cries",
+        "is crying",
+        "crying"
+      ],
+      "answer": "is crying",
+      "explanationThai": "Look! บอกว่าสิ่งนั้นกำลังเกิดขึ้นตอนนี้ จึงใช้ is crying"
+    },
+    {
+      "id": "present-continuous-practice-06",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "We ___ the client tonight.",
+      "options": [
+        "meet",
+        "meets",
+        "are meeting",
+        "meeting"
+      ],
+      "answer": "are meeting",
+      "explanationThai": "เป็นแผนหรือนัดหมายในอนาคตอันใกล้ จึงใช้ are meeting"
+    },
+    {
+      "id": "present-continuous-practice-07",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "He is ___ (run) in the park.",
+      "answer": "running",
+      "acceptedAnswers": [
+        "running"
+      ],
+      "explanationThai": "Run เป็นกริยาพยางค์เดียวแบบพยัญชนะ-สระ-พยัญชนะ จึงเพิ่ม n ก่อนเติม ing"
+    },
+    {
+      "id": "present-continuous-practice-08",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "She is ___ (make) dinner.",
+      "answer": "making",
+      "acceptedAnswers": [
+        "making"
+      ],
+      "explanationThai": "Make ตัด e ก่อนเติม ing"
+    },
+    {
+      "id": "present-continuous-practice-09",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "The dog is ___ (lie) on the floor.",
+      "answer": "lying",
+      "acceptedAnswers": [
+        "lying"
+      ],
+      "explanationThai": "Lie เปลี่ยน ie เป็น y แล้วเติม ing"
+    },
+    {
+      "id": "present-continuous-practice-10",
+      "type": "fill_blank",
+      "instructionThai": "เติม verb to be ให้ถูกต้อง",
+      "question": "___ they waiting for us?",
+      "answer": "Are",
+      "acceptedAnswers": [
+        "Are",
+        "are"
+      ],
+      "explanationThai": "ประธาน they ใช้ are"
+    },
+    {
+      "id": "present-continuous-practice-11",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำให้เป็นประโยคปฏิเสธ",
+      "question": "I ___ not sleeping.",
+      "answer": "am",
+      "acceptedAnswers": [
+        "am"
+      ],
+      "explanationThai": "ประธาน I ใช้ am และเติม not หลัง am"
+    },
+    {
+      "id": "present-continuous-practice-12",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคที่ถูกต้อง",
+      "question": [
+        "currently",
+        "she",
+        "is",
+        "looking for",
+        "a job"
+      ],
+      "answer": "She is currently looking for a job.",
+      "acceptedAnswers": [
+        "She is currently looking for a job",
+        "She is currently looking for a job."
+      ],
+      "explanationThai": "โครงสร้างคือ Subject + is + adverb + Verb-ing"
+    },
+    {
+      "id": "present-continuous-practice-13",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคคำถาม",
+      "question": [
+        "what",
+        "are",
+        "you",
+        "doing",
+        "now"
+      ],
+      "answer": "What are you doing now?",
+      "acceptedAnswers": [
+        "What are you doing now",
+        "What are you doing now?"
+      ],
+      "explanationThai": "โครงสร้างคือ Wh-word + are + subject + Verb-ing"
+    },
+    {
+      "id": "present-continuous-practice-14",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "I working now.",
+      "answer": "I am working now.",
+      "acceptedAnswers": [
+        "I am working now",
+        "I am working now."
+      ],
+      "explanationThai": "ต้องเติม am หลังประธาน I"
+    },
+    {
+      "id": "present-continuous-practice-15",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "She is work now.",
+      "answer": "She is working now.",
+      "acceptedAnswers": [
+        "She is working now",
+        "She is working now."
+      ],
+      "explanationThai": "หลัง is ต้องใช้ working"
+    },
+    {
+      "id": "present-continuous-practice-16",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "They are play football.",
+      "answer": "They are playing football.",
+      "acceptedAnswers": [
+        "They are playing football",
+        "They are playing football."
+      ],
+      "explanationThai": "หลัง are ต้องใช้ playing"
+    },
+    {
+      "id": "present-continuous-practice-17",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "Tom usually ___ to work, but today he ___.",
+      "options": [
+        "drives / is walking",
+        "is driving / walks",
+        "drives / walks",
+        "is driving / is walking"
+      ],
+      "answer": "drives / is walking",
+      "explanationThai": "Usually ใช้ Present Simple ส่วน today ในบริบทชั่วคราวใช้ Present Continuous"
+    },
+    {
+      "id": "present-continuous-practice-18",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่เหมาะสมกับความหมาย",
+      "question": "We have already booked a table. We ___ at the restaurant at 7:00 tonight.",
+      "options": [
+        "eat",
+        "are eating",
+        "eats",
+        "ate"
+      ],
+      "answer": "are eating",
+      "explanationThai": "มีการจองและระบุเวลาไว้แล้ว จึงใช้ Present Continuous สำหรับแผนที่จัดเตรียมไว้"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "present-continuous-flashcard-01",
+      "front": "Present Continuous ใช้เมื่อใด?",
+      "back": "ใช้กับเหตุการณ์ที่กำลังเกิดขึ้น สถานการณ์ชั่วคราว การเปลี่ยนแปลง และแผนที่จัดไว้ในอนาคตอันใกล้",
+      "example": "I am working now."
+    },
+    {
+      "id": "present-continuous-flashcard-02",
+      "front": "โครงสร้างบอกเล่าของ Present Continuous คืออะไร?",
+      "back": "Subject + am/is/are + Verb-ing",
+      "example": "They are studying."
+    },
+    {
+      "id": "present-continuous-flashcard-03",
+      "front": "I ใช้ am, is หรือ are?",
+      "back": "I ใช้ am",
+      "example": "I am listening."
+    },
+    {
+      "id": "present-continuous-flashcard-04",
+      "front": "He/She/It ใช้ am, is หรือ are?",
+      "back": "He, She และ It ใช้ is",
+      "example": "She is reading."
+    },
+    {
+      "id": "present-continuous-flashcard-05",
+      "front": "You/We/They ใช้ am, is หรือ are?",
+      "back": "You, We และ They ใช้ are",
+      "example": "We are waiting."
+    },
+    {
+      "id": "present-continuous-flashcard-06",
+      "front": "Make เติม ing อย่างไร?",
+      "back": "ตัด e แล้วเติม ing เป็น making",
+      "example": "He is making lunch."
+    },
+    {
+      "id": "present-continuous-flashcard-07",
+      "front": "Run เติม ing อย่างไร?",
+      "back": "เพิ่ม n อีกหนึ่งตัวแล้วเติม ing เป็น running",
+      "example": "She is running."
+    },
+    {
+      "id": "present-continuous-flashcard-08",
+      "front": "Lie เติม ing อย่างไร?",
+      "back": "เปลี่ยน ie เป็น y แล้วเติม ing เป็น lying",
+      "example": "The cat is lying on the sofa."
+    },
+    {
+      "id": "present-continuous-flashcard-09",
+      "front": "ทำไมไม่ควรพูด I am knowing the answer?",
+      "back": "Know เป็น stative verb จึงใช้ Present Simple ว่า I know the answer.",
+      "example": "I know the answer."
+    },
+    {
+      "id": "present-continuous-flashcard-10",
+      "front": "Present Continuous ต่างจาก be going to อย่างไร?",
+      "back": "Present Continuous เน้นนัดหมายที่จัดไว้แล้ว ส่วน be going to เน้นความตั้งใจ แผนทั่วไป หรือการคาดการณ์",
+      "example": "I am meeting Jane tonight. / I am going to find a new job."
+    }
+  ]
+}

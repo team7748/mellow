@@ -1,0 +1,756 @@
+{
+  "id": "topic-past-simple",
+  "categoryId": "past",
+  "name": "Past Simple",
+  "nameThai": "อดีตกาลแบบธรรมดา",
+  "slug": "past-simple",
+  "stage": "beginner",
+  "difficulty": 2,
+  "displayOrder": 5,
+  "estimatedMinutes": 20,
+  "prerequisites": [
+    "topic-present-simple"
+  ],
+  "summary": {
+    "en": "Use the Past Simple for completed past actions, sequences of past events, and past habits or states.",
+    "th": "ใช้ Past Simple เพื่อพูดถึงเหตุการณ์ที่จบแล้วในอดีต เหตุการณ์ที่เกิดเรียงลำดับ และนิสัยหรือสภาพในอดีต"
+  },
+  "learningObjectives": [
+    "ใช้ Past Simple เพื่อพูดถึงเหตุการณ์ที่เกิดและจบแล้วในอดีตได้",
+    "เล่าเหตุการณ์หลายเหตุการณ์ที่เกิดเรียงลำดับกันได้",
+    "อธิบายนิสัยหรือสภาพในอดีตได้",
+    "สร้างประโยคบอกเล่าด้วย Subject + Verb 2 ได้",
+    "สร้างประโยคปฏิเสธและคำถามด้วย did, didn't และ Verb 1 ได้",
+    "เลือกใช้ was และ were ให้ตรงกับประธานได้",
+    "สร้างรูปอดีตของ regular verbs ด้วยการเติม -ed ได้",
+    "ใช้ irregular verbs ที่พบบ่อยได้ถูกต้อง",
+    "แยก Past Simple ออกจาก Present Perfect และ Past Continuous ได้"
+  ],
+  "uses": [
+    {
+      "id": "past-simple-use-1",
+      "title": "เหตุการณ์ที่จบแล้วในอดีต",
+      "descriptionThai": "ใช้พูดถึงเหตุการณ์ที่เกิดขึ้นและจบลงแล้ว โดยมักมีเวลาที่จบไปแล้วชัดเจน",
+      "example": "I visited my grandmother yesterday.",
+      "translation": "เมื่อวานฉันไปเยี่ยมคุณย่า"
+    },
+    {
+      "id": "past-simple-use-2",
+      "title": "เหตุการณ์ที่เกิดเรียงลำดับ",
+      "descriptionThai": "ใช้เล่าเหตุการณ์หลายเหตุการณ์ที่เกิดขึ้นตามลำดับในอดีต",
+      "example": "I woke up, took a shower, and left the house.",
+      "translation": "ฉันตื่น อาบน้ำ และออกจากบ้าน"
+    },
+    {
+      "id": "past-simple-use-3",
+      "title": "นิสัยในอดีต",
+      "descriptionThai": "ใช้พูดถึงสิ่งที่เคยทำเป็นประจำในอดีตแต่ไม่ได้บอกว่ายังทำอยู่ในปัจจุบัน",
+      "example": "When I was young, I played football every day.",
+      "translation": "ตอนฉันยังเด็ก ฉันเล่นฟุตบอลทุกวัน"
+    },
+    {
+      "id": "past-simple-use-4",
+      "title": "สภาพหรือความรู้สึกในอดีต",
+      "descriptionThai": "ใช้ was หรือ were เพื่อบอกสภาพ ความรู้สึก สถานที่ หรือข้อมูลในอดีต",
+      "example": "They were tired after work.",
+      "translation": "พวกเขาเหนื่อยหลังเลิกงาน"
+    }
+  ],
+  "structures": [
+    {
+      "id": "past-simple-structure-affirmative-main-verb",
+      "type": "affirmative",
+      "subjectGroup": "all",
+      "formula": "Subject + Verb 2 + ...",
+      "example": "She worked yesterday.",
+      "translation": "เมื่อวานเธอทำงาน",
+      "noteThai": "ประโยคบอกเล่าที่ใช้กริยาทั่วไปใช้ Verb 2 กับทุกประธาน"
+    },
+    {
+      "id": "past-simple-structure-negative-main-verb",
+      "type": "negative",
+      "subjectGroup": "all",
+      "formula": "Subject + did not (didn't) + Verb 1 + ...",
+      "example": "She didn't work yesterday.",
+      "translation": "เมื่อวานเธอไม่ได้ทำงาน",
+      "noteThai": "เมื่อมี didn't แล้ว กริยาหลักต้องกลับเป็น Verb 1"
+    },
+    {
+      "id": "past-simple-structure-question-main-verb",
+      "type": "question",
+      "subjectGroup": "all",
+      "formula": "Did + subject + Verb 1 + ...?",
+      "example": "Did she work yesterday?",
+      "translation": "เมื่อวานเธอทำงานไหม",
+      "noteThai": "เมื่อมี Did แล้ว กริยาหลักต้องใช้ Verb 1"
+    },
+    {
+      "id": "past-simple-structure-short-answer-main-verb",
+      "type": "short-answer",
+      "subjectGroup": "all",
+      "formula": "Yes, subject + did. | No, subject + didn't.",
+      "example": "Did they arrive? Yes, they did.",
+      "translation": "พวกเขามาถึงไหม ใช่ พวกเขามาถึง",
+      "noteThai": "คำตอบสั้นใช้ did หรือ didn't กับทุกประธาน"
+    },
+    {
+      "id": "past-simple-structure-affirmative-be",
+      "type": "affirmative-be",
+      "subjectGroup": "I/He/She/It | You/We/They",
+      "formula": "Subject + was/were + ...",
+      "example": "I was busy. They were busy.",
+      "translation": "ฉันยุ่ง พวกเขายุ่ง",
+      "noteThai": "I, he, she, it ใช้ was ส่วน you, we, they ใช้ were"
+    },
+    {
+      "id": "past-simple-structure-negative-be",
+      "type": "negative-be",
+      "subjectGroup": "all",
+      "formula": "Subject + was not (wasn't) / were not (weren't) + ...",
+      "example": "He wasn't at home. We weren't late.",
+      "translation": "เขาไม่ได้อยู่บ้าน พวกเราไม่ได้มาสาย",
+      "noteThai": "ประโยคที่ใช้ was/were ไม่ใช้ didn't"
+    },
+    {
+      "id": "past-simple-structure-question-be",
+      "type": "question-be",
+      "subjectGroup": "all",
+      "formula": "Was/Were + subject + ...?",
+      "example": "Were they tired?",
+      "translation": "พวกเขาเหนื่อยไหม",
+      "noteThai": "ย้าย was หรือ were ไปไว้หน้าประธาน"
+    }
+  ],
+  "regularVerbRules": [
+    {
+      "id": "past-simple-rule-ed",
+      "title": "กริยาทั่วไปเติม ed",
+      "ruleThai": "กริยาปกติส่วนมากเติม ed เพื่อสร้างรูปอดีต",
+      "examples": [
+        "work → worked",
+        "clean → cleaned",
+        "visit → visited"
+      ]
+    },
+    {
+      "id": "past-simple-rule-final-e",
+      "title": "กริยาลงท้ายด้วย e เติม d",
+      "ruleThai": "ถ้ากริยาลงท้ายด้วย e ให้เติม d",
+      "examples": [
+        "live → lived",
+        "love → loved",
+        "arrive → arrived"
+      ]
+    },
+    {
+      "id": "past-simple-rule-consonant-y",
+      "title": "พยัญชนะ + y เปลี่ยน y เป็น i แล้วเติม ed",
+      "ruleThai": "ถ้าหน้า y เป็นพยัญชนะ ให้เปลี่ยน y เป็น i แล้วเติม ed",
+      "examples": [
+        "study → studied",
+        "carry → carried",
+        "try → tried"
+      ]
+    },
+    {
+      "id": "past-simple-rule-vowel-y",
+      "title": "สระ + y เติม ed",
+      "ruleThai": "ถ้าหน้า y เป็นสระ ให้เติม ed โดยไม่เปลี่ยน y",
+      "examples": [
+        "play → played",
+        "enjoy → enjoyed",
+        "stay → stayed"
+      ]
+    },
+    {
+      "id": "past-simple-rule-double-consonant",
+      "title": "เพิ่มพยัญชนะตัวท้ายก่อนเติม ed",
+      "ruleThai": "กริยาพยางค์เดียวบางคำที่ลงท้ายแบบพยัญชนะ-สระ-พยัญชนะ ให้เพิ่มพยัญชนะตัวท้ายก่อนเติม ed",
+      "examples": [
+        "stop → stopped",
+        "plan → planned",
+        "drop → dropped"
+      ]
+    }
+  ],
+  "irregularVerbs": [
+    {
+      "base": "go",
+      "past": "went",
+      "example": "I went there yesterday."
+    },
+    {
+      "base": "see",
+      "past": "saw",
+      "example": "She saw him last night."
+    },
+    {
+      "base": "come",
+      "past": "came",
+      "example": "They came early."
+    },
+    {
+      "base": "have",
+      "past": "had",
+      "example": "We had lunch together."
+    },
+    {
+      "base": "do",
+      "past": "did",
+      "example": "He did his homework."
+    },
+    {
+      "base": "make",
+      "past": "made",
+      "example": "I made dinner."
+    },
+    {
+      "base": "take",
+      "past": "took",
+      "example": "She took the bus."
+    },
+    {
+      "base": "buy",
+      "past": "bought",
+      "example": "They bought a new phone."
+    },
+    {
+      "base": "eat",
+      "past": "ate",
+      "example": "We ate at a restaurant."
+    },
+    {
+      "base": "write",
+      "past": "wrote",
+      "example": "He wrote an email."
+    }
+  ],
+  "wasWere": {
+    "descriptionThai": "Was และ were เป็นรูปอดีตของ am, is และ are",
+    "was": {
+      "subjects": [
+        "I",
+        "He",
+        "She",
+        "It"
+      ],
+      "example": "She was tired yesterday."
+    },
+    "were": {
+      "subjects": [
+        "You",
+        "We",
+        "They"
+      ],
+      "example": "They were tired yesterday."
+    },
+    "negativeExamples": [
+      "I wasn't busy.",
+      "They weren't at home."
+    ],
+    "questionExamples": [
+      "Was he at work?",
+      "Were you tired?"
+    ],
+    "importantNote": "ประโยคที่ใช้ was หรือ were ไม่ใช้ did หรือ didn't เช่น Was she tired? ไม่ใช่ Did she was tired?"
+  },
+  "timeMarkers": [
+    {
+      "text": "yesterday",
+      "meaningThai": "เมื่อวาน",
+      "example": "I called her yesterday."
+    },
+    {
+      "text": "last night",
+      "meaningThai": "เมื่อคืน",
+      "example": "We watched a movie last night."
+    },
+    {
+      "text": "last week",
+      "meaningThai": "สัปดาห์ที่แล้ว",
+      "example": "She started a new job last week."
+    },
+    {
+      "text": "ago",
+      "meaningThai": "ที่แล้ว",
+      "example": "They arrived ten minutes ago."
+    },
+    {
+      "text": "in 2025",
+      "meaningThai": "ในปี 2025",
+      "example": "I graduated in 2025."
+    },
+    {
+      "text": "this morning",
+      "meaningThai": "เมื่อเช้านี้",
+      "example": "He called me this morning."
+    },
+    {
+      "text": "when I was young",
+      "meaningThai": "ตอนฉันยังเด็ก",
+      "example": "When I was young, I rode my bike every day."
+    }
+  ],
+  "examples": [
+    {
+      "id": "past-simple-example-01",
+      "sentence": "I visited my grandmother yesterday.",
+      "translation": "เมื่อวานฉันไปเยี่ยมคุณย่า",
+      "focus": "regular verb",
+      "usage": "completed-action"
+    },
+    {
+      "id": "past-simple-example-02",
+      "sentence": "She went to the market last night.",
+      "translation": "เมื่อคืนเธอไปตลาด",
+      "focus": "go → went",
+      "usage": "completed-action"
+    },
+    {
+      "id": "past-simple-example-03",
+      "sentence": "We graduated in 2025.",
+      "translation": "พวกเราจบการศึกษาในปี 2025",
+      "focus": "finished time",
+      "usage": "completed-action"
+    },
+    {
+      "id": "past-simple-example-04",
+      "sentence": "He woke up, ate breakfast, and left the house.",
+      "translation": "เขาตื่น กินอาหารเช้า และออกจากบ้าน",
+      "focus": "sequence of events",
+      "usage": "event-sequence"
+    },
+    {
+      "id": "past-simple-example-05",
+      "sentence": "When I was young, I played football every day.",
+      "translation": "ตอนฉันยังเด็ก ฉันเล่นฟุตบอลทุกวัน",
+      "focus": "past habit",
+      "usage": "past-habit"
+    },
+    {
+      "id": "past-simple-example-06",
+      "sentence": "They were tired after the trip.",
+      "translation": "พวกเขาเหนื่อยหลังจากการเดินทาง",
+      "focus": "were",
+      "usage": "past-state"
+    },
+    {
+      "id": "past-simple-example-07",
+      "sentence": "I wasn't at home this morning.",
+      "translation": "เมื่อเช้านี้ฉันไม่ได้อยู่บ้าน",
+      "focus": "wasn't",
+      "usage": "negative-be"
+    },
+    {
+      "id": "past-simple-example-08",
+      "sentence": "She didn't call me last week.",
+      "translation": "สัปดาห์ที่แล้วเธอไม่ได้โทรหาฉัน",
+      "focus": "didn't + Verb 1",
+      "usage": "negative-main-verb"
+    },
+    {
+      "id": "past-simple-example-09",
+      "sentence": "Did you see him yesterday?",
+      "translation": "เมื่อวานคุณเห็นเขาไหม",
+      "focus": "Did + subject + Verb 1",
+      "usage": "question"
+    },
+    {
+      "id": "past-simple-example-10",
+      "sentence": "Were they at the meeting?",
+      "translation": "พวกเขาอยู่ในการประชุมไหม",
+      "focus": "Were + subject",
+      "usage": "question-be"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "past-simple-mistake-01",
+      "incorrect": "I go there yesterday.",
+      "correct": "I went there yesterday.",
+      "explanationThai": "Yesterday เป็นเวลาที่จบไปแล้ว จึงใช้ Past Simple และ go เปลี่ยนเป็น went"
+    },
+    {
+      "id": "past-simple-mistake-02",
+      "incorrect": "She didn't went.",
+      "correct": "She didn't go.",
+      "explanationThai": "หลัง didn't ต้องใช้ Verb 1 คือ go ไม่ใช่ went"
+    },
+    {
+      "id": "past-simple-mistake-03",
+      "incorrect": "Did you saw him?",
+      "correct": "Did you see him?",
+      "explanationThai": "หลัง Did ต้องใช้ Verb 1 คือ see ไม่ใช่ saw"
+    },
+    {
+      "id": "past-simple-mistake-04",
+      "incorrect": "They was tired.",
+      "correct": "They were tired.",
+      "explanationThai": "ประธาน They ต้องใช้ were"
+    },
+    {
+      "id": "past-simple-mistake-05",
+      "incorrect": "Did she worked yesterday?",
+      "correct": "Did she work yesterday?",
+      "explanationThai": "เมื่อมี Did แล้ว กริยาหลักต้องใช้ Verb 1 ไม่ใช้ Verb 2"
+    },
+    {
+      "id": "past-simple-mistake-06",
+      "incorrect": "He didn't studied last night.",
+      "correct": "He didn't study last night.",
+      "explanationThai": "หลัง didn't ใช้ Verb 1 คือ study"
+    },
+    {
+      "id": "past-simple-mistake-07",
+      "incorrect": "We were went home early.",
+      "correct": "We went home early.",
+      "explanationThai": "ประโยค Past Simple ที่ใช้กริยาหลัก go ไม่ใช้ were หน้า went"
+    },
+    {
+      "id": "past-simple-mistake-08",
+      "incorrect": "Was you at home?",
+      "correct": "Were you at home?",
+      "explanationThai": "ประธาน You ต้องใช้ were"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "past-simple-comparison-present-perfect",
+      "title": "Past Simple vs Present Perfect",
+      "pastSimple": {
+        "useThai": "เหตุการณ์ที่เกิดและจบแล้วในอดีต โดยมักมีเวลาที่จบไปแล้วอย่างชัดเจน",
+        "formula": "Subject + Verb 2",
+        "example": "I visited Japan in 2025.",
+        "translation": "ฉันไปญี่ปุ่นในปี 2025"
+      },
+      "otherTense": {
+        "name": "Present Perfect",
+        "useThai": "ประสบการณ์หรือเหตุการณ์ในอดีตที่เชื่อมโยงกับปัจจุบัน โดยไม่ระบุเวลาที่จบแล้วชัดเจน",
+        "formula": "Subject + have/has + Past Participle",
+        "example": "I have visited Japan twice.",
+        "translation": "ฉันเคยไปญี่ปุ่นสองครั้ง"
+      },
+      "keyDifferenceThai": "Past Simple ใช้กับเวลาที่จบแล้ว เช่น yesterday, last week และ in 2025 ส่วน Present Perfect ไม่ใช้กับเวลาที่จบแล้วแบบนี้"
+    },
+    {
+      "id": "past-simple-comparison-past-continuous",
+      "title": "Past Simple vs Past Continuous",
+      "pastSimple": {
+        "useThai": "เหตุการณ์ที่เกิดขึ้นและจบลง หรือเหตุการณ์สั้นที่เข้ามาแทรก",
+        "formula": "Subject + Verb 2",
+        "example": "The phone rang.",
+        "translation": "โทรศัพท์ดังขึ้น"
+      },
+      "otherTense": {
+        "name": "Past Continuous",
+        "useThai": "เหตุการณ์ที่กำลังดำเนินอยู่ ณ ช่วงเวลาหนึ่งในอดีต",
+        "formula": "Subject + was/were + Verb-ing",
+        "example": "I was taking a shower when the phone rang.",
+        "translation": "ฉันกำลังอาบน้ำอยู่ตอนที่โทรศัพท์ดัง"
+      },
+      "keyDifferenceThai": "Past Continuous ใช้เป็นเหตุการณ์พื้นหลังที่กำลังดำเนินอยู่ ส่วน Past Simple ใช้กับเหตุการณ์สั้นที่เกิดขึ้นหรือเข้ามาแทรก"
+    }
+  ],
+  "practice": [
+    {
+      "id": "past-simple-practice-01",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "I ___ there yesterday.",
+      "options": [
+        "go",
+        "went",
+        "gone",
+        "going"
+      ],
+      "answer": "went",
+      "explanationThai": "Yesterday ใช้ Past Simple และ go เปลี่ยนเป็น went"
+    },
+    {
+      "id": "past-simple-practice-02",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "She ___ a movie last night.",
+      "options": [
+        "watch",
+        "watched",
+        "watches",
+        "watching"
+      ],
+      "answer": "watched",
+      "explanationThai": "Watch เป็น regular verb จึงเติม ed เป็น watched"
+    },
+    {
+      "id": "past-simple-practice-03",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "They ___ tired after work.",
+      "options": [
+        "was",
+        "were",
+        "did",
+        "are"
+      ],
+      "answer": "were",
+      "explanationThai": "ประธาน They ใช้ were"
+    },
+    {
+      "id": "past-simple-practice-04",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "She didn't ___ to school.",
+      "options": [
+        "went",
+        "go",
+        "goes",
+        "gone"
+      ],
+      "answer": "go",
+      "explanationThai": "หลัง didn't ใช้ Verb 1"
+    },
+    {
+      "id": "past-simple-practice-05",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "Did you ___ him yesterday?",
+      "options": [
+        "saw",
+        "seen",
+        "see",
+        "seeing"
+      ],
+      "answer": "see",
+      "explanationThai": "หลัง Did ใช้ Verb 1"
+    },
+    {
+      "id": "past-simple-practice-06",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกประโยคที่ถูกต้อง",
+      "question": "Which sentence is correct?",
+      "options": [
+        "Did she worked yesterday?",
+        "Did she work yesterday?",
+        "She did worked yesterday.",
+        "She didn't worked yesterday."
+      ],
+      "answer": "Did she work yesterday?",
+      "explanationThai": "เมื่อมี Did หรือ didn't กริยาหลักใช้ Verb 1"
+    },
+    {
+      "id": "past-simple-practice-07",
+      "type": "fill_blank",
+      "instructionThai": "เติมกริยารูปอดีตให้ถูกต้อง",
+      "question": "We ___ (visit) our teacher last week.",
+      "answer": "visited",
+      "acceptedAnswers": [
+        "visited"
+      ],
+      "explanationThai": "Visit เป็น regular verb จึงเติม ed"
+    },
+    {
+      "id": "past-simple-practice-08",
+      "type": "fill_blank",
+      "instructionThai": "เติมกริยารูปอดีตให้ถูกต้อง",
+      "question": "He ___ (study) English last night.",
+      "answer": "studied",
+      "acceptedAnswers": [
+        "studied"
+      ],
+      "explanationThai": "Study ลงท้ายด้วยพยัญชนะ + y จึงเปลี่ยน y เป็น i แล้วเติม ed"
+    },
+    {
+      "id": "past-simple-practice-09",
+      "type": "fill_blank",
+      "instructionThai": "เติมกริยารูปอดีตให้ถูกต้อง",
+      "question": "The car ___ (stop) near the house.",
+      "answer": "stopped",
+      "acceptedAnswers": [
+        "stopped"
+      ],
+      "explanationThai": "Stop เพิ่ม p อีกหนึ่งตัวก่อนเติม ed"
+    },
+    {
+      "id": "past-simple-practice-10",
+      "type": "fill_blank",
+      "instructionThai": "เติม was หรือ were",
+      "question": "I ___ at home this morning.",
+      "answer": "was",
+      "acceptedAnswers": [
+        "was"
+      ],
+      "explanationThai": "ประธาน I ใช้ was"
+    },
+    {
+      "id": "past-simple-practice-11",
+      "type": "fill_blank",
+      "instructionThai": "เติม was หรือ were",
+      "question": "You ___ very quiet yesterday.",
+      "answer": "were",
+      "acceptedAnswers": [
+        "were"
+      ],
+      "explanationThai": "ประธาน You ใช้ were"
+    },
+    {
+      "id": "past-simple-practice-12",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคที่ถูกต้อง",
+      "question": [
+        "last night",
+        "watched",
+        "we",
+        "a movie"
+      ],
+      "answer": "We watched a movie last night.",
+      "acceptedAnswers": [
+        "We watched a movie last night",
+        "We watched a movie last night."
+      ],
+      "explanationThai": "เรียงเป็น Subject + Verb 2 + object + time marker"
+    },
+    {
+      "id": "past-simple-practice-13",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคคำถาม",
+      "question": [
+        "did",
+        "where",
+        "you",
+        "go",
+        "yesterday"
+      ],
+      "answer": "Where did you go yesterday?",
+      "acceptedAnswers": [
+        "Where did you go yesterday",
+        "Where did you go yesterday?"
+      ],
+      "explanationThai": "โครงสร้างคือ Wh-word + did + subject + Verb 1"
+    },
+    {
+      "id": "past-simple-practice-14",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "I go there yesterday.",
+      "answer": "I went there yesterday.",
+      "acceptedAnswers": [
+        "I went there yesterday",
+        "I went there yesterday."
+      ],
+      "explanationThai": "Go ต้องเปลี่ยนเป็น went"
+    },
+    {
+      "id": "past-simple-practice-15",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "She didn't went.",
+      "answer": "She didn't go.",
+      "acceptedAnswers": [
+        "She didn't go",
+        "She didn't go."
+      ],
+      "explanationThai": "หลัง didn't ใช้ go"
+    },
+    {
+      "id": "past-simple-practice-16",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "They was tired.",
+      "answer": "They were tired.",
+      "acceptedAnswers": [
+        "They were tired",
+        "They were tired."
+      ],
+      "explanationThai": "They ใช้ were"
+    },
+    {
+      "id": "past-simple-practice-17",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "I ___ that movie last week.",
+      "options": [
+        "have seen",
+        "saw",
+        "have saw",
+        "see"
+      ],
+      "answer": "saw",
+      "explanationThai": "Last week เป็นเวลาที่จบไปแล้ว จึงใช้ Past Simple"
+    },
+    {
+      "id": "past-simple-practice-18",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่เหมาะสม",
+      "question": "I ___ dinner when the phone ___.",
+      "options": [
+        "cooked / was ringing",
+        "was cooking / rang",
+        "have cooked / rang",
+        "cook / rings"
+      ],
+      "answer": "was cooking / rang",
+      "explanationThai": "กิจกรรมที่กำลังดำเนินอยู่ใช้ Past Continuous ส่วนเหตุการณ์สั้นที่เข้ามาแทรกใช้ Past Simple"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "past-simple-flashcard-01",
+      "front": "Past Simple ใช้เมื่อใด?",
+      "back": "ใช้กับเหตุการณ์ที่จบแล้วในอดีต เหตุการณ์เรียงลำดับ นิสัยในอดีต และสภาพในอดีต",
+      "example": "I visited her yesterday."
+    },
+    {
+      "id": "past-simple-flashcard-02",
+      "front": "โครงสร้างบอกเล่าที่ใช้กริยาทั่วไปคืออะไร?",
+      "back": "Subject + Verb 2",
+      "example": "She worked yesterday."
+    },
+    {
+      "id": "past-simple-flashcard-03",
+      "front": "ประโยคปฏิเสธสร้างอย่างไร?",
+      "back": "Subject + didn't + Verb 1",
+      "example": "They didn't go."
+    },
+    {
+      "id": "past-simple-flashcard-04",
+      "front": "ประโยคคำถามสร้างอย่างไร?",
+      "back": "Did + subject + Verb 1?",
+      "example": "Did you see him?"
+    },
+    {
+      "id": "past-simple-flashcard-05",
+      "front": "I/He/She/It ใช้ was หรือ were?",
+      "back": "ใช้ was",
+      "example": "She was tired."
+    },
+    {
+      "id": "past-simple-flashcard-06",
+      "front": "You/We/They ใช้ was หรือ were?",
+      "back": "ใช้ were",
+      "example": "They were tired."
+    },
+    {
+      "id": "past-simple-flashcard-07",
+      "front": "Study และ stop เปลี่ยนเป็นอดีตอย่างไร?",
+      "back": "study → studied และ stop → stopped",
+      "example": "He studied. / The car stopped."
+    },
+    {
+      "id": "past-simple-flashcard-08",
+      "front": "รูปอดีตของ go, see และ eat คืออะไร?",
+      "back": "went, saw และ ate",
+      "example": "I went out, saw Jane, and ate lunch."
+    },
+    {
+      "id": "past-simple-flashcard-09",
+      "front": "ทำไมไม่พูด Did you saw him?",
+      "back": "เพราะหลัง Did ต้องใช้ Verb 1 จึงต้องพูด Did you see him?",
+      "example": "Did you see him?"
+    },
+    {
+      "id": "past-simple-flashcard-10",
+      "front": "Past Simple ต่างจาก Present Perfect อย่างไร?",
+      "back": "Past Simple ใช้กับเวลาที่จบแล้ว ส่วน Present Perfect เชื่อมอดีตกับปัจจุบันและไม่ระบุเวลาที่จบแล้วชัดเจน",
+      "example": "I visited Japan in 2025. / I have visited Japan twice."
+    }
+  ]
+}

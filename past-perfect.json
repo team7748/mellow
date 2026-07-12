@@ -1,0 +1,766 @@
+{
+  "id": "topic-past-perfect",
+  "categoryId": "past",
+  "name": "Past Perfect",
+  "nameThai": "อดีตกาลสมบูรณ์",
+  "slug": "past-perfect",
+  "stage": "intermediate",
+  "difficulty": 4,
+  "displayOrder": 7,
+  "estimatedMinutes": 25,
+  "prerequisites": [
+    "topic-past-simple",
+    "topic-present-perfect"
+  ],
+  "summary": {
+    "en": "Use the Past Perfect to show that one past action happened before another past action or before a specific past time.",
+    "th": "ใช้ Past Perfect เพื่อแสดงว่าเหตุการณ์หนึ่งเกิดขึ้นและเสร็จสิ้นก่อนอีกเหตุการณ์หนึ่งหรือก่อนช่วงเวลาหนึ่งในอดีต"
+  },
+  "learningObjectives": [
+    "ระบุเหตุการณ์ที่เกิดก่อนและหลังในอดีตได้",
+    "สร้างประโยคด้วย Subject + had + Past Participle ได้ถูกต้อง",
+    "ใช้ Past Perfect ร่วมกับ Past Simple เพื่อแสดงลำดับเหตุการณ์ได้",
+    "ใช้ before, after, by the time และ already ได้เหมาะสม",
+    "ใช้กริยาช่องที่ 3 ทั้งแบบ regular และ irregular ได้ถูกต้อง",
+    "สร้างประโยคบอกเล่า ปฏิเสธ และคำถามใน Past Perfect ได้",
+    "หลีกเลี่ยงการใช้ Past Perfect โดยไม่จำเป็นได้",
+    "แยก Past Perfect ออกจาก Past Simple และ Present Perfect ได้"
+  ],
+  "uses": [
+    {
+      "id": "past-perfect-use-1",
+      "title": "เหตุการณ์ที่เกิดก่อนอีกเหตุการณ์หนึ่งในอดีต",
+      "descriptionThai": "ใช้ Past Perfect กับเหตุการณ์ที่เกิดก่อน และใช้ Past Simple กับเหตุการณ์ที่เกิดทีหลัง",
+      "example": "I had eaten before she arrived.",
+      "translation": "ฉันกินเสร็จแล้วก่อนที่เธอจะมาถึง"
+    },
+    {
+      "id": "past-perfect-use-2",
+      "title": "เหตุการณ์ที่เสร็จก่อนเวลาหนึ่งในอดีต",
+      "descriptionThai": "ใช้เมื่อกิจกรรมเสร็จสิ้นก่อนเวลาหรือจุดหนึ่งในอดีต",
+      "example": "By 8 p.m., they had finished the work.",
+      "translation": "ก่อนสองทุ่ม พวกเขาทำงานเสร็จแล้ว"
+    },
+    {
+      "id": "past-perfect-use-3",
+      "title": "อธิบายสาเหตุของสถานการณ์ในอดีต",
+      "descriptionThai": "ใช้บอกเหตุการณ์ก่อนหน้าที่เป็นสาเหตุของผลหรือสถานการณ์ในอดีต",
+      "example": "She was tired because she had not slept well.",
+      "translation": "เธอเหนื่อยเพราะก่อนหน้านั้นเธอนอนไม่ดี"
+    },
+    {
+      "id": "past-perfect-use-4",
+      "title": "แสดงลำดับเหตุการณ์ให้ชัดเจน",
+      "descriptionThai": "ใช้ช่วยให้ผู้ฟังเข้าใจว่าเหตุการณ์ใดเกิดก่อน แม้จะเล่าเหตุการณ์หลังขึ้นมาก่อน",
+      "example": "When I arrived, the meeting had already started.",
+      "translation": "ตอนที่ฉันมาถึง การประชุมเริ่มไปแล้ว"
+    }
+  ],
+  "structures": [
+    {
+      "id": "past-perfect-structure-affirmative",
+      "type": "affirmative",
+      "subjectGroup": "all",
+      "formula": "Subject + had + Past Participle + ...",
+      "example": "She had left before I arrived.",
+      "translation": "เธอออกไปแล้วก่อนที่ฉันจะมาถึง",
+      "noteThai": "ทุกประธานใช้ had เหมือนกัน"
+    },
+    {
+      "id": "past-perfect-structure-negative",
+      "type": "negative",
+      "subjectGroup": "all",
+      "formula": "Subject + had not (hadn't) + Past Participle + ...",
+      "example": "They hadn't finished the work.",
+      "translation": "พวกเขายังทำงานไม่เสร็จ",
+      "noteThai": "หลัง hadn't ต้องใช้กริยาช่องที่ 3"
+    },
+    {
+      "id": "past-perfect-structure-question",
+      "type": "question",
+      "subjectGroup": "all",
+      "formula": "Had + subject + Past Participle + ...?",
+      "example": "Had you eaten before you left?",
+      "translation": "คุณกินแล้วหรือยังก่อนออกไป",
+      "noteThai": "ย้าย had ไปไว้หน้าประธาน"
+    },
+    {
+      "id": "past-perfect-structure-wh-question",
+      "type": "wh-question",
+      "subjectGroup": "all",
+      "formula": "Wh-word + had + subject + Past Participle + ...?",
+      "example": "Why had she left early?",
+      "translation": "ทำไมเธอถึงออกไปก่อนเวลา",
+      "noteThai": "วางคำถาม Wh- ไว้หน้า had"
+    },
+    {
+      "id": "past-perfect-structure-short-answer",
+      "type": "short-answer",
+      "subjectGroup": "all",
+      "formula": "Yes, subject + had. | No, subject + hadn't.",
+      "example": "Had they arrived? Yes, they had.",
+      "translation": "พวกเขามาถึงแล้วหรือยัง ใช่",
+      "noteThai": "คำตอบสั้นใช้ had หรือ hadn't กับทุกประธาน"
+    },
+    {
+      "id": "past-perfect-structure-sequence",
+      "type": "sequence",
+      "subjectGroup": "all",
+      "formula": "Earlier action: Past Perfect | Later action: Past Simple",
+      "example": "The train had left before we reached the station.",
+      "translation": "รถไฟออกไปแล้วก่อนที่พวกเราจะถึงสถานี",
+      "noteThai": "เหตุการณ์ก่อนใช้ Past Perfect เหตุการณ์หลังใช้ Past Simple"
+    }
+  ],
+  "pastParticipleRules": [
+    {
+      "id": "past-perfect-rule-regular-ed",
+      "title": "กริยาปกติใช้รูปเติม ed",
+      "ruleThai": "กริยาปกติส่วนใหญ่สร้าง Past Participle ด้วยการเติม ed",
+      "examples": [
+        "finish → finished",
+        "work → worked",
+        "clean → cleaned"
+      ]
+    },
+    {
+      "id": "past-perfect-rule-final-e",
+      "title": "กริยาลงท้ายด้วย e เติม d",
+      "ruleThai": "ถ้ากริยาลงท้ายด้วย e ให้เติม d",
+      "examples": [
+        "arrive → arrived",
+        "live → lived",
+        "close → closed"
+      ]
+    },
+    {
+      "id": "past-perfect-rule-consonant-y",
+      "title": "พยัญชนะ + y เปลี่ยน y เป็น i แล้วเติม ed",
+      "ruleThai": "ถ้าหน้า y เป็นพยัญชนะ ให้เปลี่ยน y เป็น i แล้วเติม ed",
+      "examples": [
+        "study → studied",
+        "carry → carried",
+        "try → tried"
+      ]
+    },
+    {
+      "id": "past-perfect-rule-irregular",
+      "title": "กริยา irregular ต้องใช้ช่องที่ 3",
+      "ruleThai": "กริยา irregular มีรูป Past Participle เฉพาะที่ต้องจำ",
+      "examples": [
+        "go → gone",
+        "see → seen",
+        "write → written",
+        "eat → eaten",
+        "take → taken"
+      ]
+    }
+  ],
+  "irregularPastParticiples": [
+    {
+      "base": "go",
+      "pastSimple": "went",
+      "pastParticiple": "gone",
+      "example": "He had gone home before I called."
+    },
+    {
+      "base": "see",
+      "pastSimple": "saw",
+      "pastParticiple": "seen",
+      "example": "I had seen the movie before."
+    },
+    {
+      "base": "eat",
+      "pastSimple": "ate",
+      "pastParticiple": "eaten",
+      "example": "They had eaten before the meeting."
+    },
+    {
+      "base": "write",
+      "pastSimple": "wrote",
+      "pastParticiple": "written",
+      "example": "She had written the report."
+    },
+    {
+      "base": "take",
+      "pastSimple": "took",
+      "pastParticiple": "taken",
+      "example": "He had taken the wrong bus."
+    },
+    {
+      "base": "do",
+      "pastSimple": "did",
+      "pastParticiple": "done",
+      "example": "We had done everything."
+    },
+    {
+      "base": "leave",
+      "pastSimple": "left",
+      "pastParticiple": "left",
+      "example": "The train had left."
+    },
+    {
+      "base": "break",
+      "pastSimple": "broke",
+      "pastParticiple": "broken",
+      "example": "She had broken her phone."
+    },
+    {
+      "base": "forget",
+      "pastSimple": "forgot",
+      "pastParticiple": "forgotten",
+      "example": "I had forgotten the password."
+    },
+    {
+      "base": "begin",
+      "pastSimple": "began",
+      "pastParticiple": "begun",
+      "example": "The class had begun."
+    }
+  ],
+  "sequenceMarkers": [
+    {
+      "id": "past-perfect-marker-before",
+      "word": "before",
+      "meaningThai": "ก่อนที่",
+      "usageThai": "ใช้เชื่อมเหตุการณ์ที่เกิดก่อนกับเหตุการณ์ที่เกิดทีหลัง",
+      "example": "I had finished before she arrived."
+    },
+    {
+      "id": "past-perfect-marker-after",
+      "word": "after",
+      "meaningThai": "หลังจากที่",
+      "usageThai": "ใช้บอกว่าเหตุการณ์หนึ่งเกิดหลังจากอีกเหตุการณ์เสร็จแล้ว",
+      "example": "After I had finished, I went home."
+    },
+    {
+      "id": "past-perfect-marker-by-the-time",
+      "word": "by the time",
+      "meaningThai": "เมื่อถึงเวลาที่ / ก่อนที่",
+      "usageThai": "ใช้บอกว่าเหตุการณ์แรกเสร็จสิ้นก่อนอีกเหตุการณ์หรือก่อนเวลาหนึ่ง",
+      "example": "By the time we arrived, the shop had closed."
+    },
+    {
+      "id": "past-perfect-marker-already",
+      "word": "already",
+      "meaningThai": "แล้ว / เรียบร้อยแล้ว",
+      "usageThai": "มักวางระหว่าง had กับ Past Participle เพื่อเน้นว่าเหตุการณ์เกิดขึ้นก่อนแล้ว",
+      "example": "The movie had already started."
+    }
+  ],
+  "sequenceGuide": {
+    "descriptionThai": "เมื่อต้องเลือก tense ให้หาก่อนว่าเหตุการณ์ใดเกิดก่อนและเหตุการณ์ใดเกิดทีหลัง",
+    "steps": [
+      "ระบุเหตุการณ์สองเหตุการณ์ในอดีต",
+      "เหตุการณ์ที่เกิดก่อนใช้ Past Perfect",
+      "เหตุการณ์ที่เกิดทีหลังใช้ Past Simple",
+      "ถ้าลำดับชัดเจนอยู่แล้วจาก before หรือ after บางครั้งใช้ Past Simple ทั้งสองเหตุการณ์ได้ โดยความหมายยังชัดเจน"
+    ],
+    "example": {
+      "earlierAction": "The train had left.",
+      "laterAction": "We arrived at the station.",
+      "combined": "The train had left before we arrived at the station."
+    }
+  },
+  "timeMarkers": [
+    {
+      "text": "before",
+      "meaningThai": "ก่อนที่",
+      "example": "She had left before I arrived."
+    },
+    {
+      "text": "after",
+      "meaningThai": "หลังจากที่",
+      "example": "After he had eaten, he went to bed."
+    },
+    {
+      "text": "by the time",
+      "meaningThai": "เมื่อถึงเวลาที่",
+      "example": "By the time we arrived, the meeting had ended."
+    },
+    {
+      "text": "already",
+      "meaningThai": "แล้ว / เรียบร้อยแล้ว",
+      "example": "They had already started."
+    },
+    {
+      "text": "by 8 p.m.",
+      "meaningThai": "ก่อนหรือภายในสองทุ่ม",
+      "example": "By 8 p.m., I had finished the report."
+    },
+    {
+      "text": "when",
+      "meaningThai": "ตอนที่",
+      "example": "When I arrived, she had gone home."
+    },
+    {
+      "text": "until then",
+      "meaningThai": "จนถึงตอนนั้น",
+      "example": "I had never seen snow until then."
+    }
+  ],
+  "examples": [
+    {
+      "id": "past-perfect-example-01",
+      "sentence": "I had eaten before she arrived.",
+      "translation": "ฉันกินเสร็จแล้วก่อนที่เธอจะมาถึง",
+      "focus": "earlier and later past actions",
+      "usage": "sequence"
+    },
+    {
+      "id": "past-perfect-example-02",
+      "sentence": "The train had left before we reached the station.",
+      "translation": "รถไฟออกไปแล้วก่อนที่พวกเราจะถึงสถานี",
+      "focus": "had left + reached",
+      "usage": "sequence"
+    },
+    {
+      "id": "past-perfect-example-03",
+      "sentence": "After she had finished the report, she sent it to her manager.",
+      "translation": "หลังจากเธอทำรายงานเสร็จ เธอก็ส่งให้ผู้จัดการ",
+      "focus": "after + Past Perfect",
+      "usage": "sequence"
+    },
+    {
+      "id": "past-perfect-example-04",
+      "sentence": "By the time I arrived, the meeting had already started.",
+      "translation": "เมื่อฉันมาถึง การประชุมเริ่มไปแล้ว",
+      "focus": "by the time + already",
+      "usage": "completed-before-past-point"
+    },
+    {
+      "id": "past-perfect-example-05",
+      "sentence": "She was tired because she had not slept well.",
+      "translation": "เธอเหนื่อยเพราะก่อนหน้านั้นเธอนอนไม่ดี",
+      "focus": "past cause",
+      "usage": "past-cause"
+    },
+    {
+      "id": "past-perfect-example-06",
+      "sentence": "He had never flown before he moved abroad.",
+      "translation": "เขาไม่เคยนั่งเครื่องบินมาก่อนก่อนที่จะย้ายไปต่างประเทศ",
+      "focus": "never before a past event",
+      "usage": "past-experience"
+    },
+    {
+      "id": "past-perfect-example-07",
+      "sentence": "They had completed the project by Friday.",
+      "translation": "พวกเขาทำโครงการเสร็จภายในวันศุกร์",
+      "focus": "completed before a past deadline",
+      "usage": "past-deadline"
+    },
+    {
+      "id": "past-perfect-example-08",
+      "sentence": "Had you met him before the interview?",
+      "translation": "คุณเคยพบเขาก่อนการสัมภาษณ์ไหม",
+      "focus": "question",
+      "usage": "question"
+    },
+    {
+      "id": "past-perfect-example-09",
+      "sentence": "We hadn't prepared enough, so the presentation was difficult.",
+      "translation": "พวกเราเตรียมตัวไม่เพียงพอ ดังนั้นการนำเสนอจึงยาก",
+      "focus": "negative past cause",
+      "usage": "past-cause"
+    },
+    {
+      "id": "past-perfect-example-10",
+      "sentence": "When I opened the door, someone had taken my bag.",
+      "translation": "ตอนที่ฉันเปิดประตู มีคนเอากระเป๋าของฉันไปแล้ว",
+      "focus": "earlier unknown action",
+      "usage": "sequence"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "past-perfect-mistake-01",
+      "incorrect": "I had went home.",
+      "correct": "I had gone home.",
+      "explanationThai": "หลัง had ต้องใช้ Past Participle โดย go → went → gone"
+    },
+    {
+      "id": "past-perfect-mistake-02",
+      "incorrect": "She has left before I arrived.",
+      "correct": "She had left before I arrived.",
+      "explanationThai": "ทั้งสองเหตุการณ์อยู่ในอดีต และการออกไปเกิดก่อน จึงใช้ had left"
+    },
+    {
+      "id": "past-perfect-mistake-03",
+      "incorrect": "He had finish the work.",
+      "correct": "He had finished the work.",
+      "explanationThai": "หลัง had ต้องใช้กริยาช่องที่ 3 คือ finished"
+    },
+    {
+      "id": "past-perfect-mistake-04",
+      "incorrect": "I had gone to the gym yesterday.",
+      "correct": "I went to the gym yesterday.",
+      "explanationThai": "มีเพียงเหตุการณ์เดียวในอดีตและระบุเวลาชัดเจน จึงใช้ Past Simple ไม่จำเป็นต้องใช้ Past Perfect"
+    },
+    {
+      "id": "past-perfect-mistake-05",
+      "incorrect": "When I had arrived, the train left.",
+      "correct": "When I arrived, the train had left.",
+      "explanationThai": "รถไฟออกก่อน และฉันมาถึงทีหลัง จึงต้องใช้ had left กับเหตุการณ์รถไฟออก"
+    },
+    {
+      "id": "past-perfect-mistake-06",
+      "incorrect": "After she left, she had locked the door.",
+      "correct": "After she had locked the door, she left.",
+      "explanationThai": "การล็อกประตูเกิดก่อนการออกไป จึงใช้ had locked กับเหตุการณ์แรก"
+    },
+    {
+      "id": "past-perfect-mistake-07",
+      "incorrect": "Did he had finished the work?",
+      "correct": "Had he finished the work?",
+      "explanationThai": "คำถาม Past Perfect ใช้ Had นำหน้า ไม่ใช้ Did"
+    },
+    {
+      "id": "past-perfect-mistake-08",
+      "incorrect": "They hadn't saw the message.",
+      "correct": "They hadn't seen the message.",
+      "explanationThai": "หลัง hadn't ต้องใช้กริยาช่องที่ 3 คือ seen"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "past-perfect-comparison-past-simple",
+      "title": "Past Perfect vs Past Simple",
+      "pastPerfect": {
+        "useThai": "เหตุการณ์ที่เกิดก่อนอีกเหตุการณ์หนึ่งหรือก่อนจุดหนึ่งในอดีต",
+        "formula": "Subject + had + Past Participle",
+        "example": "The train had left before we arrived.",
+        "translation": "รถไฟออกไปแล้วก่อนที่พวกเราจะมาถึง"
+      },
+      "otherTense": {
+        "name": "Past Simple",
+        "useThai": "เหตุการณ์ที่เกิดและจบแล้วในอดีต หรือเหตุการณ์ที่เกิดทีหลัง",
+        "formula": "Subject + Verb 2",
+        "example": "We arrived at the station at 9:00.",
+        "translation": "พวกเรามาถึงสถานีตอนเก้าโมง"
+      },
+      "keyDifferenceThai": "Past Perfect ชี้ว่าเหตุการณ์เกิดก่อน ส่วน Past Simple ใช้กับเหตุการณ์ที่เกิดทีหลังหรือเหตุการณ์เดี่ยวที่จบแล้ว"
+    },
+    {
+      "id": "past-perfect-comparison-present-perfect",
+      "title": "Past Perfect vs Present Perfect",
+      "pastPerfect": {
+        "useThai": "เชื่อมเหตุการณ์หนึ่งกับอีกจุดหนึ่งในอดีต",
+        "formula": "Subject + had + Past Participle",
+        "example": "She had finished before the meeting started.",
+        "translation": "เธอทำเสร็จก่อนที่การประชุมจะเริ่ม"
+      },
+      "otherTense": {
+        "name": "Present Perfect",
+        "useThai": "เชื่อมเหตุการณ์ในอดีตกับปัจจุบัน",
+        "formula": "Subject + have/has + Past Participle",
+        "example": "She has finished the report.",
+        "translation": "เธอทำรายงานเสร็จแล้ว"
+      },
+      "keyDifferenceThai": "Past Perfect มองย้อนจากจุดหนึ่งในอดีต ส่วน Present Perfect เชื่อมผลหรือประสบการณ์กับปัจจุบัน"
+    }
+  ],
+  "practice": [
+    {
+      "id": "past-perfect-practice-01",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "I ___ eaten before she arrived.",
+      "options": [
+        "have",
+        "had",
+        "has",
+        "was"
+      ],
+      "answer": "had",
+      "explanationThai": "Past Perfect ใช้ had กับทุกประธาน"
+    },
+    {
+      "id": "past-perfect-practice-02",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกกริยาช่องที่ 3 ที่ถูกต้อง",
+      "question": "He had ___ home before I called.",
+      "options": [
+        "go",
+        "went",
+        "gone",
+        "going"
+      ],
+      "answer": "gone",
+      "explanationThai": "หลัง had ต้องใช้ Past Participle คือ gone"
+    },
+    {
+      "id": "past-perfect-practice-03",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "By the time we arrived, the movie ___.",
+      "options": [
+        "started",
+        "had started",
+        "has started",
+        "starts"
+      ],
+      "answer": "had started",
+      "explanationThai": "ภาพยนตร์เริ่มก่อนที่พวกเราจะมาถึง จึงใช้ Past Perfect"
+    },
+    {
+      "id": "past-perfect-practice-04",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำที่เหมาะสม",
+      "question": "She had ___ finished when I called.",
+      "options": [
+        "already",
+        "yet",
+        "tomorrow",
+        "now"
+      ],
+      "answer": "already",
+      "explanationThai": "Already มักวางระหว่าง had กับ Past Participle"
+    },
+    {
+      "id": "past-perfect-practice-05",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกประโยคที่ถูกต้อง",
+      "question": "Which sentence is correct?",
+      "options": [
+        "I had went home.",
+        "I had gone home.",
+        "I had go home.",
+        "I did had gone home."
+      ],
+      "answer": "I had gone home.",
+      "explanationThai": "โครงสร้างคือ had + Past Participle"
+    },
+    {
+      "id": "past-perfect-practice-06",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "Yesterday, I ___ to the gym after work.",
+      "options": [
+        "had gone",
+        "went",
+        "have gone",
+        "had been going"
+      ],
+      "answer": "went",
+      "explanationThai": "เป็นเหตุการณ์เดียวที่จบแล้วในอดีต จึงใช้ Past Simple"
+    },
+    {
+      "id": "past-perfect-practice-07",
+      "type": "fill_blank",
+      "instructionThai": "เติมกริยาช่องที่ 3",
+      "question": "She had ___ (finish) the report before lunch.",
+      "answer": "finished",
+      "acceptedAnswers": [
+        "finished"
+      ],
+      "explanationThai": "Past Participle ของ finish คือ finished"
+    },
+    {
+      "id": "past-perfect-practice-08",
+      "type": "fill_blank",
+      "instructionThai": "เติมกริยาช่องที่ 3",
+      "question": "They had ___ (see) the movie before.",
+      "answer": "seen",
+      "acceptedAnswers": [
+        "seen"
+      ],
+      "explanationThai": "Past Participle ของ see คือ seen"
+    },
+    {
+      "id": "past-perfect-practice-09",
+      "type": "fill_blank",
+      "instructionThai": "เติมกริยาช่องที่ 3",
+      "question": "I had ___ (write) the email before the meeting.",
+      "answer": "written",
+      "acceptedAnswers": [
+        "written"
+      ],
+      "explanationThai": "Past Participle ของ write คือ written"
+    },
+    {
+      "id": "past-perfect-practice-10",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำเชื่อมที่เหมาะสม",
+      "question": "___ the time we arrived, the shop had closed.",
+      "answer": "By",
+      "acceptedAnswers": [
+        "By",
+        "by"
+      ],
+      "explanationThai": "รูปแบบที่ถูกต้องคือ by the time"
+    },
+    {
+      "id": "past-perfect-practice-11",
+      "type": "fill_blank",
+      "instructionThai": "เติม had หรือ hadn't",
+      "question": "We ___ prepared enough, so the presentation was difficult.",
+      "answer": "hadn't",
+      "acceptedAnswers": [
+        "hadn't",
+        "had not"
+      ],
+      "explanationThai": "ประโยคต้องการความหมายปฏิเสธว่าเตรียมตัวไม่เพียงพอ"
+    },
+    {
+      "id": "past-perfect-practice-12",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคที่ถูกต้อง",
+      "question": [
+        "had",
+        "already",
+        "the train",
+        "left"
+      ],
+      "answer": "The train had already left.",
+      "acceptedAnswers": [
+        "The train had already left",
+        "The train had already left."
+      ],
+      "explanationThai": "Already วางระหว่าง had กับ Past Participle"
+    },
+    {
+      "id": "past-perfect-practice-13",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคคำถาม",
+      "question": [
+        "had",
+        "you",
+        "finished",
+        "before",
+        "the deadline"
+      ],
+      "answer": "Had you finished before the deadline?",
+      "acceptedAnswers": [
+        "Had you finished before the deadline",
+        "Had you finished before the deadline?"
+      ],
+      "explanationThai": "คำถาม Past Perfect ใช้ Had + subject + Past Participle"
+    },
+    {
+      "id": "past-perfect-practice-14",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "I had went home.",
+      "answer": "I had gone home.",
+      "acceptedAnswers": [
+        "I had gone home",
+        "I had gone home."
+      ],
+      "explanationThai": "หลัง had ใช้ gone ไม่ใช่ went"
+    },
+    {
+      "id": "past-perfect-practice-15",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "She has left before I arrived.",
+      "answer": "She had left before I arrived.",
+      "acceptedAnswers": [
+        "She had left before I arrived",
+        "She had left before I arrived."
+      ],
+      "explanationThai": "เหตุการณ์ออกไปเกิดก่อนอีกเหตุการณ์ในอดีต จึงใช้ had left"
+    },
+    {
+      "id": "past-perfect-practice-16",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "He had finish the work.",
+      "answer": "He had finished the work.",
+      "acceptedAnswers": [
+        "He had finished the work",
+        "He had finished the work."
+      ],
+      "explanationThai": "หลัง had ใช้ finished"
+    },
+    {
+      "id": "past-perfect-practice-17",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "When I reached the station, the train ___.",
+      "options": [
+        "left",
+        "had left",
+        "has left",
+        "leaves"
+      ],
+      "answer": "had left",
+      "explanationThai": "รถไฟออกก่อนที่ฉันจะถึงสถานี จึงใช้ Past Perfect"
+    },
+    {
+      "id": "past-perfect-practice-18",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่เหมาะสม",
+      "question": "She ___ the door before she ___.",
+      "options": [
+        "had locked / left",
+        "locked / had left",
+        "has locked / left",
+        "was locking / had left"
+      ],
+      "answer": "had locked / left",
+      "explanationThai": "การล็อกประตูเกิดก่อน จึงใช้ Past Perfect ส่วนการออกไปเกิดทีหลัง ใช้ Past Simple"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "past-perfect-flashcard-01",
+      "front": "Past Perfect ใช้เมื่อใด?",
+      "back": "ใช้กับเหตุการณ์ที่เกิดก่อนอีกเหตุการณ์หนึ่งหรือก่อนเวลาหนึ่งในอดีต",
+      "example": "The train had left before we arrived."
+    },
+    {
+      "id": "past-perfect-flashcard-02",
+      "front": "โครงสร้างบอกเล่าคืออะไร?",
+      "back": "Subject + had + Past Participle",
+      "example": "She had finished."
+    },
+    {
+      "id": "past-perfect-flashcard-03",
+      "front": "ทุกประธานใช้ have, has หรือ had?",
+      "back": "ทุกประธานใช้ had",
+      "example": "I had left. / They had left."
+    },
+    {
+      "id": "past-perfect-flashcard-04",
+      "front": "ประโยคปฏิเสธสร้างอย่างไร?",
+      "back": "Subject + hadn't + Past Participle",
+      "example": "We hadn't prepared."
+    },
+    {
+      "id": "past-perfect-flashcard-05",
+      "front": "ประโยคคำถามสร้างอย่างไร?",
+      "back": "Had + subject + Past Participle?",
+      "example": "Had you eaten?"
+    },
+    {
+      "id": "past-perfect-flashcard-06",
+      "front": "เหตุการณ์ก่อนและหลังใช้ tense อย่างไร?",
+      "back": "เหตุการณ์ก่อนใช้ Past Perfect ส่วนเหตุการณ์หลังใช้ Past Simple",
+      "example": "She had left before I arrived."
+    },
+    {
+      "id": "past-perfect-flashcard-07",
+      "front": "Before, after และ by the time ใช้เพื่ออะไร?",
+      "back": "ใช้ช่วยแสดงลำดับว่าเหตุการณ์ใดเกิดก่อนหรือหลัง",
+      "example": "By the time I arrived, the meeting had started."
+    },
+    {
+      "id": "past-perfect-flashcard-08",
+      "front": "ทำไมไม่พูด I had went?",
+      "back": "เพราะหลัง had ต้องใช้ Past Participle จึงใช้ gone",
+      "example": "I had gone home."
+    },
+    {
+      "id": "past-perfect-flashcard-09",
+      "front": "เมื่อใดไม่จำเป็นต้องใช้ Past Perfect?",
+      "back": "เมื่อมีเพียงเหตุการณ์เดียวในอดีต หรือไม่จำเป็นต้องเปรียบเทียบกับอีกเหตุการณ์หนึ่ง",
+      "example": "I went to the gym yesterday."
+    },
+    {
+      "id": "past-perfect-flashcard-10",
+      "front": "Past Perfect ต่างจาก Present Perfect อย่างไร?",
+      "back": "Past Perfect เชื่อมกับจุดหนึ่งในอดีต ส่วน Present Perfect เชื่อมอดีตกับปัจจุบัน",
+      "example": "She had finished before noon. / She has finished now."
+    }
+  ]
+}

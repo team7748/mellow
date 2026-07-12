@@ -1,0 +1,762 @@
+{
+  "id": "topic-present-perfect-continuous",
+  "categoryId": "present",
+  "name": "Present Perfect Continuous",
+  "nameThai": "ปัจจุบันสมบูรณ์แบบต่อเนื่อง",
+  "slug": "present-perfect-continuous",
+  "stage": "intermediate",
+  "difficulty": 4,
+  "displayOrder": 4,
+  "estimatedMinutes": 25,
+  "prerequisites": [
+    "topic-present-perfect",
+    "topic-present-continuous"
+  ],
+  "summary": {
+    "en": "Use the Present Perfect Continuous for actions that started in the past and continue now, recently stopped actions with visible results, and activities where duration is important.",
+    "th": "ใช้ Present Perfect Continuous เพื่อพูดถึงการกระทำที่เริ่มในอดีตและยังดำเนินอยู่ การกระทำที่เพิ่งหยุดแต่ยังเห็นผลในปัจจุบัน และกิจกรรมที่ต้องการเน้นระยะเวลา"
+  },
+  "learningObjectives": [
+    "ใช้ Present Perfect Continuous เพื่ออธิบายการกระทำที่เริ่มในอดีตและยังดำเนินอยู่ได้",
+    "ใช้ tense นี้กับการกระทำที่เพิ่งหยุดแต่ยังเห็นผลในปัจจุบันได้",
+    "สร้างประโยคด้วย Subject + have/has been + Verb-ing ได้ถูกต้อง",
+    "เลือกใช้ have been และ has been ให้ตรงกับประธานได้",
+    "ใช้ for และ since เพื่อบอกระยะเวลาและจุดเริ่มต้นได้",
+    "สร้างคำถามด้วย How long ได้",
+    "หลีกเลี่ยงการใช้ stative verbs เช่น know, believe และ own ในรูป Continuous ได้",
+    "แยก Present Perfect Continuous ออกจาก Present Perfect และ Past Continuous ได้"
+  ],
+  "uses": [
+    {
+      "id": "present-perfect-continuous-use-1",
+      "title": "การกระทำที่เริ่มในอดีตและยังดำเนินอยู่",
+      "descriptionThai": "ใช้เมื่อกิจกรรมเริ่มในอดีตและยังคงดำเนินต่อเนื่องถึงปัจจุบัน",
+      "example": "I have been studying for two hours.",
+      "translation": "ฉันเรียนต่อเนื่องมาเป็นเวลาสองชั่วโมงแล้ว"
+    },
+    {
+      "id": "present-perfect-continuous-use-2",
+      "title": "การกระทำที่เพิ่งหยุดแต่ยังเห็นผล",
+      "descriptionThai": "ใช้เมื่อกิจกรรมเพิ่งหยุดลง และยังเห็นหลักฐานหรือผลของกิจกรรมนั้นในปัจจุบัน",
+      "example": "She is tired because she has been running.",
+      "translation": "เธอเหนื่อยเพราะเพิ่งวิ่งมา"
+    },
+    {
+      "id": "present-perfect-continuous-use-3",
+      "title": "การเน้นระยะเวลา",
+      "descriptionThai": "ใช้เมื่อต้องการเน้นว่ากิจกรรมดำเนินมานานเท่าไร โดยมักใช้ for, since หรือ how long",
+      "example": "They have been waiting since 8:00.",
+      "translation": "พวกเขารอมาตั้งแต่แปดโมง"
+    },
+    {
+      "id": "present-perfect-continuous-use-4",
+      "title": "กิจกรรมที่เกิดซ้ำต่อเนื่องในช่วงที่ผ่านมา",
+      "descriptionThai": "ใช้กับกิจกรรมที่เกิดซ้ำหลายครั้งในช่วงเวลาหนึ่งและยังเกี่ยวข้องกับปัจจุบัน",
+      "example": "He has been calling me all morning.",
+      "translation": "เขาโทรหาฉันมาตลอดช่วงเช้า"
+    }
+  ],
+  "structures": [
+    {
+      "id": "present-perfect-continuous-structure-affirmative-have",
+      "type": "affirmative",
+      "subjectGroup": "I/You/We/They",
+      "formula": "Subject + have been + Verb-ing + ...",
+      "example": "We have been working all day.",
+      "translation": "พวกเราทำงานต่อเนื่องมาทั้งวัน",
+      "noteThai": "I, You, We และ They ใช้ have been"
+    },
+    {
+      "id": "present-perfect-continuous-structure-affirmative-has",
+      "type": "affirmative",
+      "subjectGroup": "He/She/It",
+      "formula": "Subject + has been + Verb-ing + ...",
+      "example": "She has been working all day.",
+      "translation": "เธอทำงานต่อเนื่องมาทั้งวัน",
+      "noteThai": "He, She และ It ใช้ has been"
+    },
+    {
+      "id": "present-perfect-continuous-structure-negative-have",
+      "type": "negative",
+      "subjectGroup": "I/You/We/They",
+      "formula": "Subject + have not (haven't) been + Verb-ing + ...",
+      "example": "I haven't been sleeping well.",
+      "translation": "ช่วงนี้ฉันนอนไม่ค่อยดี",
+      "noteThai": "ใช้ haven't been ตามด้วย Verb-ing"
+    },
+    {
+      "id": "present-perfect-continuous-structure-negative-has",
+      "type": "negative",
+      "subjectGroup": "He/She/It",
+      "formula": "Subject + has not (hasn't) been + Verb-ing + ...",
+      "example": "He hasn't been feeling well.",
+      "translation": "ช่วงนี้เขารู้สึกไม่ค่อยดี",
+      "noteThai": "ใช้ hasn't been ตามด้วย Verb-ing"
+    },
+    {
+      "id": "present-perfect-continuous-structure-question-have",
+      "type": "question",
+      "subjectGroup": "I/you/we/they",
+      "formula": "Have + subject + been + Verb-ing + ...?",
+      "example": "Have you been waiting long?",
+      "translation": "คุณรอมานานไหม",
+      "noteThai": "ใช้ Have นำหน้าประธาน I, you, we และ they"
+    },
+    {
+      "id": "present-perfect-continuous-structure-question-has",
+      "type": "question",
+      "subjectGroup": "he/she/it",
+      "formula": "Has + subject + been + Verb-ing + ...?",
+      "example": "Has she been studying?",
+      "translation": "เธอเรียนต่อเนื่องอยู่หรือไม่",
+      "noteThai": "ใช้ Has นำหน้าประธาน he, she และ it"
+    },
+    {
+      "id": "present-perfect-continuous-structure-how-long",
+      "type": "wh-question",
+      "subjectGroup": "all",
+      "formula": "How long + have/has + subject + been + Verb-ing + ...?",
+      "example": "How long have you been working here?",
+      "translation": "คุณทำงานที่นี่มานานเท่าไรแล้ว",
+      "noteThai": "ใช้ How long เพื่อถามระยะเวลาที่กิจกรรมดำเนินมา"
+    },
+    {
+      "id": "present-perfect-continuous-structure-short-answer",
+      "type": "short-answer",
+      "subjectGroup": "all",
+      "formula": "Yes, subject + have/has. | No, subject + haven't/hasn't.",
+      "example": "Has he been exercising? Yes, he has.",
+      "translation": "เขาออกกำลังกายต่อเนื่องอยู่ไหม ใช่",
+      "noteThai": "คำตอบสั้นไม่จำเป็นต้องพูด been และ Verb-ing ซ้ำ"
+    }
+  ],
+  "verbIngRules": [
+    {
+      "id": "present-perfect-continuous-rule-ing",
+      "title": "กริยาทั่วไปเติม ing",
+      "ruleThai": "กริยาทั่วไปเติม ing ได้เลย",
+      "examples": [
+        "work → working",
+        "read → reading",
+        "wait → waiting"
+      ]
+    },
+    {
+      "id": "present-perfect-continuous-rule-drop-e",
+      "title": "กริยาลงท้ายด้วย e ตัด e แล้วเติม ing",
+      "ruleThai": "ถ้ากริยาลงท้ายด้วย e ที่ไม่ออกเสียง ให้ตัด e ก่อนเติม ing",
+      "examples": [
+        "make → making",
+        "write → writing",
+        "drive → driving"
+      ]
+    },
+    {
+      "id": "present-perfect-continuous-rule-double-consonant",
+      "title": "เพิ่มพยัญชนะตัวท้ายก่อนเติม ing",
+      "ruleThai": "กริยาพยางค์เดียวแบบพยัญชนะ-สระ-พยัญชนะ มักเพิ่มพยัญชนะตัวท้ายก่อนเติม ing",
+      "examples": [
+        "run → running",
+        "sit → sitting",
+        "swim → swimming"
+      ]
+    },
+    {
+      "id": "present-perfect-continuous-rule-ie-ying",
+      "title": "กริยาลงท้ายด้วย ie เปลี่ยนเป็น y แล้วเติม ing",
+      "ruleThai": "เปลี่ยน ie เป็น y ก่อนเติม ing",
+      "examples": [
+        "lie → lying",
+        "die → dying",
+        "tie → tying"
+      ]
+    }
+  ],
+  "forAndSince": {
+    "descriptionThai": "ใช้ for เพื่อบอกระยะเวลา และใช้ since เพื่อบอกจุดเริ่มต้นของกิจกรรม",
+    "for": {
+      "meaningThai": "เป็นเวลา",
+      "useThai": "ใช้กับระยะเวลาว่ากิจกรรมดำเนินมานานเท่าไร",
+      "examples": [
+        "for ten minutes",
+        "for three hours",
+        "for two weeks",
+        "for a long time"
+      ],
+      "sentence": "I have been exercising for six months."
+    },
+    "since": {
+      "meaningThai": "ตั้งแต่",
+      "useThai": "ใช้กับจุดเริ่มต้นของกิจกรรม",
+      "examples": [
+        "since Monday",
+        "since 8:00",
+        "since last month",
+        "since I graduated"
+      ],
+      "sentence": "I have been exercising since January."
+    },
+    "keyDifferenceThai": "for ใช้กับระยะเวลา ส่วน since ใช้กับจุดเริ่มต้น"
+  },
+  "howLong": {
+    "descriptionThai": "How long ใช้ถามว่ากิจกรรมหรือสถานการณ์ดำเนินมานานเท่าไร",
+    "formula": "How long + have/has + subject + been + Verb-ing + ...?",
+    "examples": [
+      {
+        "question": "How long have you been learning English?",
+        "answer": "I have been learning English for six months."
+      },
+      {
+        "question": "How long has she been waiting?",
+        "answer": "She has been waiting since 9:00."
+      }
+    ]
+  },
+  "stativeVerbs": {
+    "descriptionThai": "กริยาที่บอกความคิด ความรู้สึก ความเป็นเจ้าของ หรือสภาวะ มักไม่ใช้ในรูป Continuous จึงมักใช้ Present Perfect แทน",
+    "commonVerbs": [
+      {
+        "group": "ความรู้และความเข้าใจ",
+        "verbs": [
+          "know",
+          "understand",
+          "believe",
+          "remember",
+          "mean"
+        ],
+        "correctExample": "I have known her for five years.",
+        "incorrectExample": "I have been knowing her for five years."
+      },
+      {
+        "group": "ความชอบและความต้องการ",
+        "verbs": [
+          "like",
+          "love",
+          "hate",
+          "prefer",
+          "want",
+          "need"
+        ],
+        "correctExample": "She has liked this band since high school.",
+        "incorrectExample": "She has been liking this band since high school."
+      },
+      {
+        "group": "ความเป็นเจ้าของ",
+        "verbs": [
+          "own",
+          "belong",
+          "possess",
+          "have"
+        ],
+        "correctExample": "They have owned this house for ten years.",
+        "incorrectExample": "They have been owning this house for ten years."
+      }
+    ],
+    "importantNote": "กริยาบางคำใช้ใน Continuous ได้เมื่อความหมายเปลี่ยน เช่น I have been having problems with my phone. ในที่นี้ have หมายถึงกำลังประสบปัญหา ไม่ได้หมายถึงเป็นเจ้าของ"
+  },
+  "timeMarkers": [
+    {
+      "text": "for",
+      "meaningThai": "เป็นเวลา",
+      "example": "I have been studying for two hours."
+    },
+    {
+      "text": "since",
+      "meaningThai": "ตั้งแต่",
+      "example": "She has been working since Monday."
+    },
+    {
+      "text": "how long",
+      "meaningThai": "นานเท่าไร",
+      "example": "How long have you been waiting?"
+    },
+    {
+      "text": "all day",
+      "meaningThai": "ตลอดทั้งวัน",
+      "example": "They have been working all day."
+    },
+    {
+      "text": "all morning",
+      "meaningThai": "ตลอดช่วงเช้า",
+      "example": "He has been calling all morning."
+    },
+    {
+      "text": "lately",
+      "meaningThai": "ช่วงหลังมานี้",
+      "example": "I have been feeling tired lately."
+    },
+    {
+      "text": "recently",
+      "meaningThai": "เมื่อไม่นานมานี้",
+      "example": "She has been exercising regularly recently."
+    },
+    {
+      "text": "these days",
+      "meaningThai": "ช่วงนี้",
+      "example": "We have been using AI more these days."
+    }
+  ],
+  "examples": [
+    {
+      "id": "present-perfect-continuous-example-01",
+      "sentence": "I have been studying English for two hours.",
+      "translation": "ฉันเรียนภาษาอังกฤษต่อเนื่องมาเป็นเวลาสองชั่วโมงแล้ว",
+      "focus": "have been + Verb-ing",
+      "usage": "continuing-action"
+    },
+    {
+      "id": "present-perfect-continuous-example-02",
+      "sentence": "She has been working here since Monday.",
+      "translation": "เธอทำงานที่นี่มาตั้งแต่วันจันทร์",
+      "focus": "has been + since",
+      "usage": "continuing-action"
+    },
+    {
+      "id": "present-perfect-continuous-example-03",
+      "sentence": "They have been waiting for the bus for thirty minutes.",
+      "translation": "พวกเขารอรถโดยสารมาเป็นเวลาสามสิบนาทีแล้ว",
+      "focus": "duration",
+      "usage": "continuing-action"
+    },
+    {
+      "id": "present-perfect-continuous-example-04",
+      "sentence": "How long have you been learning English?",
+      "translation": "คุณเรียนภาษาอังกฤษมานานเท่าไรแล้ว",
+      "focus": "how long",
+      "usage": "duration-question"
+    },
+    {
+      "id": "present-perfect-continuous-example-05",
+      "sentence": "He is tired because he has been exercising.",
+      "translation": "เขาเหนื่อยเพราะเพิ่งออกกำลังกายมา",
+      "focus": "recently stopped action with result",
+      "usage": "present-result"
+    },
+    {
+      "id": "present-perfect-continuous-example-06",
+      "sentence": "The ground is wet because it has been raining.",
+      "translation": "พื้นเปียกเพราะฝนเพิ่งตกมา",
+      "focus": "visible result",
+      "usage": "present-result"
+    },
+    {
+      "id": "present-perfect-continuous-example-07",
+      "sentence": "She has been writing emails all morning.",
+      "translation": "เธอเขียนอีเมลมาตลอดช่วงเช้า",
+      "focus": "all morning",
+      "usage": "repeated-continuous-activity"
+    },
+    {
+      "id": "present-perfect-continuous-example-08",
+      "sentence": "We have been using this app a lot lately.",
+      "translation": "ช่วงหลังมานี้พวกเราใช้แอปนี้บ่อยมาก",
+      "focus": "lately",
+      "usage": "recent-repeated-activity"
+    },
+    {
+      "id": "present-perfect-continuous-example-09",
+      "sentence": "I haven't been sleeping well recently.",
+      "translation": "ช่วงนี้ฉันนอนไม่ค่อยดี",
+      "focus": "negative form",
+      "usage": "recent-continuing-situation"
+    },
+    {
+      "id": "present-perfect-continuous-example-10",
+      "sentence": "I have known her for five years.",
+      "translation": "ฉันรู้จักเธอมาเป็นเวลาห้าปีแล้ว",
+      "focus": "stative verb uses Present Perfect",
+      "usage": "stative-verb"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "present-perfect-continuous-mistake-01",
+      "incorrect": "I have working here.",
+      "correct": "I have been working here.",
+      "explanationThai": "Present Perfect Continuous ต้องมี been ระหว่าง have กับ Verb-ing"
+    },
+    {
+      "id": "present-perfect-continuous-mistake-02",
+      "incorrect": "She has been work all day.",
+      "correct": "She has been working all day.",
+      "explanationThai": "หลัง has been ต้องใช้กริยาเติม ing"
+    },
+    {
+      "id": "present-perfect-continuous-mistake-03",
+      "incorrect": "I am working here since Monday.",
+      "correct": "I have been working here since Monday.",
+      "explanationThai": "กิจกรรมเริ่มตั้งแต่วันจันทร์และยังดำเนินอยู่ จึงใช้ have been working ไม่ใช้ Present Continuous"
+    },
+    {
+      "id": "present-perfect-continuous-mistake-04",
+      "incorrect": "He has been knowing her.",
+      "correct": "He has known her.",
+      "explanationThai": "Know เป็น stative verb จึงมักใช้ Present Perfect ไม่ใช้ Present Perfect Continuous"
+    },
+    {
+      "id": "present-perfect-continuous-mistake-05",
+      "incorrect": "She have been studying for two hours.",
+      "correct": "She has been studying for two hours.",
+      "explanationThai": "ประธาน She ต้องใช้ has been"
+    },
+    {
+      "id": "present-perfect-continuous-mistake-06",
+      "incorrect": "They have been waited since 8:00.",
+      "correct": "They have been waiting since 8:00.",
+      "explanationThai": "หลัง have been ต้องใช้ Verb-ing ไม่ใช่กริยาช่องที่ 2 หรือ 3"
+    },
+    {
+      "id": "present-perfect-continuous-mistake-07",
+      "incorrect": "I have been working here since three years.",
+      "correct": "I have been working here for three years.",
+      "explanationThai": "Three years เป็นระยะเวลา จึงใช้ for"
+    },
+    {
+      "id": "present-perfect-continuous-mistake-08",
+      "incorrect": "I have been finishing three reports.",
+      "correct": "I have finished three reports.",
+      "explanationThai": "เมื่อเน้นผลลัพธ์หรือจำนวนงานที่ทำเสร็จ ควรใช้ Present Perfect"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "present-perfect-continuous-comparison-present-perfect",
+      "title": "Present Perfect Continuous vs Present Perfect",
+      "presentPerfectContinuous": {
+        "useThai": "เน้นกิจกรรม กระบวนการ ความต่อเนื่อง หรือระยะเวลา และกิจกรรมอาจยังไม่เสร็จ",
+        "formula": "Subject + have/has been + Verb-ing",
+        "example": "I have been writing emails for two hours.",
+        "translation": "ฉันเขียนอีเมลต่อเนื่องมาเป็นเวลาสองชั่วโมงแล้ว"
+      },
+      "otherTense": {
+        "name": "Present Perfect",
+        "useThai": "เน้นผลลัพธ์ จำนวนครั้ง หรือสิ่งที่ทำเสร็จแล้ว",
+        "formula": "Subject + have/has + Past Participle",
+        "example": "I have written five emails.",
+        "translation": "ฉันเขียนอีเมลเสร็จแล้วห้าฉบับ"
+      },
+      "keyDifferenceThai": "Present Perfect Continuous เน้นว่าทำมานานหรือทำต่อเนื่อง ส่วน Present Perfect เน้นว่าทำสำเร็จหรือได้ผลลัพธ์เท่าไร"
+    },
+    {
+      "id": "present-perfect-continuous-comparison-past-continuous",
+      "title": "Present Perfect Continuous vs Past Continuous",
+      "presentPerfectContinuous": {
+        "useThai": "กิจกรรมเริ่มในอดีตและต่อเนื่องถึงปัจจุบัน หรือเพิ่งหยุดและยังเห็นผลตอนนี้",
+        "formula": "Subject + have/has been + Verb-ing",
+        "example": "I have been working since 8:00.",
+        "translation": "ฉันทำงานมาตั้งแต่แปดโมงและยังทำอยู่หรือเพิ่งหยุด"
+      },
+      "otherTense": {
+        "name": "Past Continuous",
+        "useThai": "กิจกรรมที่กำลังเกิดขึ้น ณ ช่วงเวลาหนึ่งในอดีต และไม่ได้บอกว่าต่อเนื่องถึงปัจจุบัน",
+        "formula": "Subject + was/were + Verb-ing",
+        "example": "I was working at 8:00 yesterday.",
+        "translation": "เมื่อวานตอนแปดโมงฉันกำลังทำงานอยู่"
+      },
+      "keyDifferenceThai": "Present Perfect Continuous เชื่อมอดีตกับปัจจุบัน ส่วน Past Continuous กล่าวถึงช่วงเวลาหนึ่งในอดีตเท่านั้น"
+    }
+  ],
+  "practice": [
+    {
+      "id": "present-perfect-continuous-practice-01",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "I ___ been studying for two hours.",
+      "options": [
+        "have",
+        "has",
+        "am",
+        "was"
+      ],
+      "answer": "have",
+      "explanationThai": "ประธาน I ใช้ have been"
+    },
+    {
+      "id": "present-perfect-continuous-practice-02",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "She ___ been working all day.",
+      "options": [
+        "have",
+        "has",
+        "is",
+        "does"
+      ],
+      "answer": "has",
+      "explanationThai": "ประธาน She ใช้ has been"
+    },
+    {
+      "id": "present-perfect-continuous-practice-03",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "They have been ___ for the bus.",
+      "options": [
+        "wait",
+        "waited",
+        "waiting",
+        "waits"
+      ],
+      "answer": "waiting",
+      "explanationThai": "หลัง have been ต้องใช้ Verb-ing"
+    },
+    {
+      "id": "present-perfect-continuous-practice-04",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำที่เหมาะสม",
+      "question": "He has been exercising ___ three months.",
+      "options": [
+        "for",
+        "since",
+        "from",
+        "during"
+      ],
+      "answer": "for",
+      "explanationThai": "Three months เป็นระยะเวลา จึงใช้ for"
+    },
+    {
+      "id": "present-perfect-continuous-practice-05",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำที่เหมาะสม",
+      "question": "We have been living here ___ 2022.",
+      "options": [
+        "for",
+        "since",
+        "during",
+        "at"
+      ],
+      "answer": "since",
+      "explanationThai": "2022 เป็นจุดเริ่มต้น จึงใช้ since"
+    },
+    {
+      "id": "present-perfect-continuous-practice-06",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกประโยคที่ถูกต้อง",
+      "question": "Which sentence is correct?",
+      "options": [
+        "I have been knowing him for years.",
+        "I have known him for years.",
+        "I am knowing him for years.",
+        "I have know him for years."
+      ],
+      "answer": "I have known him for years.",
+      "explanationThai": "Know เป็น stative verb จึงใช้ Present Perfect"
+    },
+    {
+      "id": "present-perfect-continuous-practice-07",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำให้โครงสร้างสมบูรณ์",
+      "question": "She has ___ studying since 7:00.",
+      "answer": "been",
+      "acceptedAnswers": [
+        "been"
+      ],
+      "explanationThai": "โครงสร้างคือ has been + Verb-ing"
+    },
+    {
+      "id": "present-perfect-continuous-practice-08",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "I have been ___ (write) emails all morning.",
+      "answer": "writing",
+      "acceptedAnswers": [
+        "writing"
+      ],
+      "explanationThai": "Write ตัด e แล้วเติม ing เป็น writing"
+    },
+    {
+      "id": "present-perfect-continuous-practice-09",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "He has been ___ (run) for an hour.",
+      "answer": "running",
+      "acceptedAnswers": [
+        "running"
+      ],
+      "explanationThai": "Run เพิ่ม n แล้วเติม ing เป็น running"
+    },
+    {
+      "id": "present-perfect-continuous-practice-10",
+      "type": "fill_blank",
+      "instructionThai": "เติม for หรือ since",
+      "question": "They have been waiting ___ Monday.",
+      "answer": "since",
+      "acceptedAnswers": [
+        "since"
+      ],
+      "explanationThai": "Monday เป็นจุดเริ่มต้น จึงใช้ since"
+    },
+    {
+      "id": "present-perfect-continuous-practice-11",
+      "type": "fill_blank",
+      "instructionThai": "เติม for หรือ since",
+      "question": "We have been practicing ___ two weeks.",
+      "answer": "for",
+      "acceptedAnswers": [
+        "for"
+      ],
+      "explanationThai": "Two weeks เป็นระยะเวลา จึงใช้ for"
+    },
+    {
+      "id": "present-perfect-continuous-practice-12",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคที่ถูกต้อง",
+      "question": [
+        "has",
+        "she",
+        "been",
+        "working",
+        "all day"
+      ],
+      "answer": "She has been working all day.",
+      "acceptedAnswers": [
+        "She has been working all day",
+        "She has been working all day."
+      ],
+      "explanationThai": "โครงสร้างคือ Subject + has been + Verb-ing"
+    },
+    {
+      "id": "present-perfect-continuous-practice-13",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคคำถาม",
+      "question": [
+        "how long",
+        "have",
+        "you",
+        "been",
+        "waiting"
+      ],
+      "answer": "How long have you been waiting?",
+      "acceptedAnswers": [
+        "How long have you been waiting",
+        "How long have you been waiting?"
+      ],
+      "explanationThai": "โครงสร้างคือ How long + have + subject + been + Verb-ing"
+    },
+    {
+      "id": "present-perfect-continuous-practice-14",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "I have working here.",
+      "answer": "I have been working here.",
+      "acceptedAnswers": [
+        "I have been working here",
+        "I have been working here."
+      ],
+      "explanationThai": "ต้องเติม been ระหว่าง have กับ working"
+    },
+    {
+      "id": "present-perfect-continuous-practice-15",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "She has been work all day.",
+      "answer": "She has been working all day.",
+      "acceptedAnswers": [
+        "She has been working all day",
+        "She has been working all day."
+      ],
+      "explanationThai": "หลัง has been ต้องใช้ working"
+    },
+    {
+      "id": "present-perfect-continuous-practice-16",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "I am working here since Monday.",
+      "answer": "I have been working here since Monday.",
+      "acceptedAnswers": [
+        "I have been working here since Monday",
+        "I have been working here since Monday."
+      ],
+      "explanationThai": "กิจกรรมเริ่มในอดีตและยังดำเนินอยู่ จึงใช้ Present Perfect Continuous"
+    },
+    {
+      "id": "present-perfect-continuous-practice-17",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "I ___ three reports today.",
+      "options": [
+        "have finished",
+        "have been finishing",
+        "was finishing",
+        "am finishing since morning"
+      ],
+      "answer": "have finished",
+      "explanationThai": "ประโยคเน้นผลลัพธ์ว่ารายงานเสร็จแล้วสามฉบับ จึงใช้ Present Perfect"
+    },
+    {
+      "id": "present-perfect-continuous-practice-18",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "At 8:00 last night, I ___ for my exam.",
+      "options": [
+        "have been studying",
+        "was studying",
+        "have studied",
+        "am studying"
+      ],
+      "answer": "was studying",
+      "explanationThai": "เป็นกิจกรรมที่กำลังเกิดขึ้น ณ เวลาหนึ่งในอดีต จึงใช้ Past Continuous"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "present-perfect-continuous-flashcard-01",
+      "front": "Present Perfect Continuous ใช้เมื่อใด?",
+      "back": "ใช้กับกิจกรรมที่เริ่มในอดีตและยังดำเนินอยู่ กิจกรรมที่เพิ่งหยุดแต่ยังเห็นผล และการเน้นระยะเวลา",
+      "example": "I have been studying for two hours."
+    },
+    {
+      "id": "present-perfect-continuous-flashcard-02",
+      "front": "โครงสร้างบอกเล่าคืออะไร?",
+      "back": "Subject + have/has been + Verb-ing",
+      "example": "She has been working."
+    },
+    {
+      "id": "present-perfect-continuous-flashcard-03",
+      "front": "I/You/We/They ใช้รูปใด?",
+      "back": "ใช้ have been",
+      "example": "They have been waiting."
+    },
+    {
+      "id": "present-perfect-continuous-flashcard-04",
+      "front": "He/She/It ใช้รูปใด?",
+      "back": "ใช้ has been",
+      "example": "He has been exercising."
+    },
+    {
+      "id": "present-perfect-continuous-flashcard-05",
+      "front": "For และ since ต่างกันอย่างไร?",
+      "back": "For ใช้กับระยะเวลา ส่วน since ใช้กับจุดเริ่มต้น",
+      "example": "for two hours / since 8:00"
+    },
+    {
+      "id": "present-perfect-continuous-flashcard-06",
+      "front": "ถามระยะเวลาด้วย How long อย่างไร?",
+      "back": "How long + have/has + subject + been + Verb-ing?",
+      "example": "How long have you been working here?"
+    },
+    {
+      "id": "present-perfect-continuous-flashcard-07",
+      "front": "ทำไมไม่พูด I have working?",
+      "back": "เพราะต้องมี been ระหว่าง have/has กับ Verb-ing",
+      "example": "I have been working."
+    },
+    {
+      "id": "present-perfect-continuous-flashcard-08",
+      "front": "Know ใช้ใน Present Perfect Continuous ได้หรือไม่?",
+      "back": "โดยทั่วไปไม่ได้ เพราะ know เป็น stative verb จึงใช้ Present Perfect",
+      "example": "I have known her for years."
+    },
+    {
+      "id": "present-perfect-continuous-flashcard-09",
+      "front": "Present Perfect Continuous ต่างจาก Present Perfect อย่างไร?",
+      "back": "Present Perfect Continuous เน้นกิจกรรมและระยะเวลา ส่วน Present Perfect เน้นผลลัพธ์หรือจำนวน",
+      "example": "I have been reading for two hours. / I have read three chapters."
+    },
+    {
+      "id": "present-perfect-continuous-flashcard-10",
+      "front": "Present Perfect Continuous ต่างจาก Past Continuous อย่างไร?",
+      "back": "Present Perfect Continuous เชื่อมอดีตกับปัจจุบัน ส่วน Past Continuous กล่าวถึงกิจกรรมที่กำลังเกิด ณ เวลาในอดีต",
+      "example": "I have been working since 8:00. / I was working at 8:00 yesterday."
+    }
+  ]
+}

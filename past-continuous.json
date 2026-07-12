@@ -1,0 +1,697 @@
+{
+  "id": "topic-past-continuous",
+  "categoryId": "past",
+  "name": "Past Continuous",
+  "nameThai": "อดีตกาลแบบกำลังกระทำ",
+  "slug": "past-continuous",
+  "stage": "elementary",
+  "difficulty": 3,
+  "displayOrder": 6,
+  "estimatedMinutes": 20,
+  "prerequisites": [
+    "topic-past-simple",
+    "topic-present-continuous"
+  ],
+  "summary": {
+    "en": "Use the Past Continuous for actions in progress at a specific time in the past, interrupted actions, and two actions happening at the same time.",
+    "th": "ใช้ Past Continuous เพื่อพูดถึงเหตุการณ์ที่กำลังดำเนินอยู่ ณ ช่วงเวลาหนึ่งในอดีต เหตุการณ์ที่ถูกอีกเหตุการณ์แทรก และเหตุการณ์สองอย่างที่กำลังเกิดพร้อมกัน"
+  },
+  "learningObjectives": [
+    "ใช้ Past Continuous เพื่อพูดถึงเหตุการณ์ที่กำลังเกิดขึ้น ณ ช่วงเวลาหนึ่งในอดีตได้",
+    "อธิบายเหตุการณ์ที่กำลังดำเนินอยู่แล้วมีอีกเหตุการณ์หนึ่งเข้ามาแทรกได้",
+    "อธิบายเหตุการณ์สองอย่างที่กำลังเกิดขึ้นพร้อมกันในอดีตได้",
+    "สร้างประโยคด้วย Subject + was/were + Verb-ing ได้ถูกต้อง",
+    "เลือกใช้ was และ were ให้ตรงกับประธานได้",
+    "สร้างประโยคปฏิเสธและคำถามใน Past Continuous ได้",
+    "ใช้ when และ while ได้เหมาะสมกับบริบท",
+    "แยก Past Continuous ออกจาก Past Simple และ Present Continuous ได้"
+  ],
+  "uses": [
+    {
+      "id": "past-continuous-use-1",
+      "title": "เหตุการณ์ที่กำลังเกิดขึ้นในช่วงเวลาหนึ่งในอดีต",
+      "descriptionThai": "ใช้พูดถึงกิจกรรมที่กำลังดำเนินอยู่ ณ เวลาใดเวลาหนึ่งในอดีต",
+      "example": "I was studying at 8 p.m.",
+      "translation": "ตอนสองทุ่มฉันกำลังเรียนอยู่"
+    },
+    {
+      "id": "past-continuous-use-2",
+      "title": "เหตุการณ์หนึ่งกำลังเกิด แล้วอีกเหตุการณ์แทรก",
+      "descriptionThai": "ใช้ Past Continuous กับเหตุการณ์ที่กำลังดำเนินอยู่ และใช้ Past Simple กับเหตุการณ์สั้นที่เข้ามาแทรก",
+      "example": "I was cooking when the phone rang.",
+      "translation": "ฉันกำลังทำอาหารอยู่ตอนที่โทรศัพท์ดัง"
+    },
+    {
+      "id": "past-continuous-use-3",
+      "title": "เหตุการณ์สองอย่างกำลังเกิดพร้อมกัน",
+      "descriptionThai": "ใช้ Past Continuous กับกิจกรรมสองอย่างที่กำลังเกิดขึ้นพร้อมกันในอดีต โดยมักเชื่อมด้วย while",
+      "example": "She was reading while I was working.",
+      "translation": "เธอกำลังอ่านหนังสือในขณะที่ฉันกำลังทำงาน"
+    },
+    {
+      "id": "past-continuous-use-4",
+      "title": "การบรรยายฉากหรือบรรยากาศในอดีต",
+      "descriptionThai": "ใช้บรรยายเหตุการณ์พื้นหลังหลายอย่างที่กำลังเกิดขึ้นในเรื่องเล่า",
+      "example": "People were talking, and music was playing.",
+      "translation": "ผู้คนกำลังพูดคุย และดนตรีกำลังบรรเลง"
+    }
+  ],
+  "structures": [
+    {
+      "id": "past-continuous-structure-affirmative-was",
+      "type": "affirmative",
+      "subjectGroup": "I/He/She/It",
+      "formula": "Subject + was + Verb-ing + ...",
+      "example": "She was working at 8 p.m.",
+      "translation": "ตอนสองทุ่มเธอกำลังทำงานอยู่",
+      "noteThai": "I, He, She และ It ใช้ was"
+    },
+    {
+      "id": "past-continuous-structure-affirmative-were",
+      "type": "affirmative",
+      "subjectGroup": "You/We/They",
+      "formula": "Subject + were + Verb-ing + ...",
+      "example": "They were sleeping.",
+      "translation": "พวกเขากำลังนอนหลับอยู่",
+      "noteThai": "You, We และ They ใช้ were"
+    },
+    {
+      "id": "past-continuous-structure-negative-was",
+      "type": "negative",
+      "subjectGroup": "I/He/She/It",
+      "formula": "Subject + was not (wasn't) + Verb-ing + ...",
+      "example": "He wasn't listening.",
+      "translation": "เขาไม่ได้กำลังฟังอยู่",
+      "noteThai": "เติม not หลัง was"
+    },
+    {
+      "id": "past-continuous-structure-negative-were",
+      "type": "negative",
+      "subjectGroup": "You/We/They",
+      "formula": "Subject + were not (weren't) + Verb-ing + ...",
+      "example": "We weren't waiting outside.",
+      "translation": "พวกเราไม่ได้กำลังรออยู่ข้างนอก",
+      "noteThai": "เติม not หลัง were"
+    },
+    {
+      "id": "past-continuous-structure-question-was",
+      "type": "question",
+      "subjectGroup": "I/he/she/it",
+      "formula": "Was + subject + Verb-ing + ...?",
+      "example": "Was she studying?",
+      "translation": "เธอกำลังเรียนอยู่ไหม",
+      "noteThai": "ย้าย was ไปไว้หน้าประธาน"
+    },
+    {
+      "id": "past-continuous-structure-question-were",
+      "type": "question",
+      "subjectGroup": "you/we/they",
+      "formula": "Were + subject + Verb-ing + ...?",
+      "example": "Were they sleeping?",
+      "translation": "พวกเขากำลังนอนหลับอยู่ไหม",
+      "noteThai": "ย้าย were ไปไว้หน้าประธาน"
+    },
+    {
+      "id": "past-continuous-structure-wh-question",
+      "type": "wh-question",
+      "subjectGroup": "all",
+      "formula": "Wh-word + was/were + subject + Verb-ing + ...?",
+      "example": "What were you doing at 9 p.m.?",
+      "translation": "ตอนสามทุ่มคุณกำลังทำอะไรอยู่",
+      "noteThai": "วางคำถาม Wh- ไว้หน้า was หรือ were"
+    },
+    {
+      "id": "past-continuous-structure-short-answer",
+      "type": "short-answer",
+      "subjectGroup": "all",
+      "formula": "Yes, subject + was/were. | No, subject + wasn't/weren't.",
+      "example": "Were they working? Yes, they were.",
+      "translation": "พวกเขากำลังทำงานอยู่ไหม ใช่",
+      "noteThai": "เลือก was หรือ were ให้ตรงกับประธาน"
+    }
+  ],
+  "verbIngRules": [
+    {
+      "id": "past-continuous-rule-ing",
+      "title": "กริยาทั่วไปเติม ing",
+      "ruleThai": "กริยาทั่วไปเติม ing ได้เลย",
+      "examples": [
+        "work → working",
+        "read → reading",
+        "play → playing"
+      ]
+    },
+    {
+      "id": "past-continuous-rule-drop-e",
+      "title": "กริยาลงท้ายด้วย e ตัด e แล้วเติม ing",
+      "ruleThai": "ถ้ากริยาลงท้ายด้วย e ที่ไม่ออกเสียง ให้ตัด e ก่อนเติม ing",
+      "examples": [
+        "make → making",
+        "write → writing",
+        "drive → driving"
+      ]
+    },
+    {
+      "id": "past-continuous-rule-double-consonant",
+      "title": "เพิ่มพยัญชนะตัวท้ายก่อนเติม ing",
+      "ruleThai": "กริยาพยางค์เดียวแบบพยัญชนะ-สระ-พยัญชนะ มักเพิ่มพยัญชนะตัวท้ายก่อนเติม ing",
+      "examples": [
+        "run → running",
+        "sit → sitting",
+        "swim → swimming"
+      ]
+    },
+    {
+      "id": "past-continuous-rule-ie-ying",
+      "title": "กริยาลงท้ายด้วย ie เปลี่ยนเป็น y แล้วเติม ing",
+      "ruleThai": "เปลี่ยน ie เป็น y ก่อนเติม ing",
+      "examples": [
+        "lie → lying",
+        "die → dying",
+        "tie → tying"
+      ]
+    }
+  ],
+  "whenAndWhile": {
+    "descriptionThai": "When และ while ใช้เชื่อมเหตุการณ์ในอดีต แต่จุดเน้นต่างกัน",
+    "when": {
+      "meaningThai": "ตอนที่ / เมื่อ",
+      "useThai": "มักใช้กับเหตุการณ์สั้นหรือเหตุการณ์ที่เข้ามาแทรก ซึ่งใช้ Past Simple",
+      "commonPattern": "Past Continuous + when + Past Simple",
+      "examples": [
+        "I was sleeping when the phone rang.",
+        "When she arrived, we were eating dinner."
+      ]
+    },
+    "while": {
+      "meaningThai": "ในขณะที่",
+      "useThai": "มักใช้กับเหตุการณ์ที่กำลังดำเนินอยู่ หรือเหตุการณ์สองอย่างที่เกิดพร้อมกัน",
+      "commonPattern": "Past Continuous + while + Past Continuous",
+      "examples": [
+        "I was cooking while she was setting the table.",
+        "While they were playing, it started to rain."
+      ]
+    },
+    "importantNote": "When ไม่ได้บังคับว่าต้องใช้ Past Simple เสมอ และ while ไม่ได้บังคับว่าต้องใช้ Past Continuous เสมอ แต่สำหรับผู้เริ่มต้นควรจำรูปแบบหลักว่า when มักนำเหตุการณ์สั้น และ while มักนำเหตุการณ์ที่กำลังดำเนินอยู่"
+  },
+  "timeMarkers": [
+    {
+      "text": "at 8 p.m.",
+      "meaningThai": "ตอนสองทุ่ม",
+      "example": "I was studying at 8 p.m."
+    },
+    {
+      "text": "at that moment",
+      "meaningThai": "ในขณะนั้น",
+      "example": "She was driving at that moment."
+    },
+    {
+      "text": "when",
+      "meaningThai": "ตอนที่ / เมื่อ",
+      "example": "I was sleeping when he called."
+    },
+    {
+      "text": "while",
+      "meaningThai": "ในขณะที่",
+      "example": "She was reading while I was cooking."
+    },
+    {
+      "text": "all evening",
+      "meaningThai": "ตลอดช่วงเย็น",
+      "example": "They were talking all evening."
+    },
+    {
+      "text": "this time yesterday",
+      "meaningThai": "เวลานี้ของเมื่อวาน",
+      "example": "This time yesterday, we were traveling."
+    },
+    {
+      "text": "from 7 to 9 last night",
+      "meaningThai": "ตั้งแต่หนึ่งทุ่มถึงสามทุ่มเมื่อคืน",
+      "example": "I was working from 7 to 9 last night."
+    }
+  ],
+  "examples": [
+    {
+      "id": "past-continuous-example-01",
+      "sentence": "I was studying at 8 p.m.",
+      "translation": "ตอนสองทุ่มฉันกำลังเรียนอยู่",
+      "focus": "was + Verb-ing",
+      "usage": "specific-past-time"
+    },
+    {
+      "id": "past-continuous-example-02",
+      "sentence": "They were sleeping at that moment.",
+      "translation": "ในขณะนั้นพวกเขากำลังนอนหลับอยู่",
+      "focus": "were + Verb-ing",
+      "usage": "specific-past-time"
+    },
+    {
+      "id": "past-continuous-example-03",
+      "sentence": "She was cooking when I called.",
+      "translation": "เธอกำลังทำอาหารอยู่ตอนที่ฉันโทรหา",
+      "focus": "ongoing action + interruption",
+      "usage": "interrupted-action"
+    },
+    {
+      "id": "past-continuous-example-04",
+      "sentence": "I was walking home when it started to rain.",
+      "translation": "ฉันกำลังเดินกลับบ้านตอนที่ฝนเริ่มตก",
+      "focus": "Past Continuous + when + Past Simple",
+      "usage": "interrupted-action"
+    },
+    {
+      "id": "past-continuous-example-05",
+      "sentence": "While I was studying, my brother was playing games.",
+      "translation": "ขณะที่ฉันกำลังเรียน พี่ชายหรือน้องชายของฉันกำลังเล่นเกม",
+      "focus": "two simultaneous actions",
+      "usage": "simultaneous-actions"
+    },
+    {
+      "id": "past-continuous-example-06",
+      "sentence": "She was reading while he was watching TV.",
+      "translation": "เธอกำลังอ่านหนังสือในขณะที่เขากำลังดูโทรทัศน์",
+      "focus": "while + two continuous actions",
+      "usage": "simultaneous-actions"
+    },
+    {
+      "id": "past-continuous-example-07",
+      "sentence": "We weren't waiting outside.",
+      "translation": "พวกเราไม่ได้กำลังรออยู่ข้างนอก",
+      "focus": "negative with weren't",
+      "usage": "negative"
+    },
+    {
+      "id": "past-continuous-example-08",
+      "sentence": "Was he working last night?",
+      "translation": "เมื่อคืนเขากำลังทำงานอยู่ไหม",
+      "focus": "question with was",
+      "usage": "question"
+    },
+    {
+      "id": "past-continuous-example-09",
+      "sentence": "What were you doing this time yesterday?",
+      "translation": "เวลานี้ของเมื่อวานคุณกำลังทำอะไรอยู่",
+      "focus": "Wh-question",
+      "usage": "question"
+    },
+    {
+      "id": "past-continuous-example-10",
+      "sentence": "People were talking, and music was playing.",
+      "translation": "ผู้คนกำลังพูดคุย และดนตรีกำลังบรรเลง",
+      "focus": "background description",
+      "usage": "background"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "past-continuous-mistake-01",
+      "incorrect": "I was work at 8 p.m.",
+      "correct": "I was working at 8 p.m.",
+      "explanationThai": "หลัง was ต้องใช้ Verb-ing คือ working"
+    },
+    {
+      "id": "past-continuous-mistake-02",
+      "incorrect": "They was sleeping.",
+      "correct": "They were sleeping.",
+      "explanationThai": "ประธาน They ต้องใช้ were"
+    },
+    {
+      "id": "past-continuous-mistake-03",
+      "incorrect": "She was cooked when I called.",
+      "correct": "She was cooking when I called.",
+      "explanationThai": "Past Continuous ใช้ was + Verb-ing ไม่ใช่ was + Verb 2"
+    },
+    {
+      "id": "past-continuous-mistake-04",
+      "incorrect": "I am studying when he arrived.",
+      "correct": "I was studying when he arrived.",
+      "explanationThai": "ทั้งสองเหตุการณ์อยู่ในอดีต จึงใช้ was studying ไม่ใช่ am studying"
+    },
+    {
+      "id": "past-continuous-mistake-05",
+      "incorrect": "I was sleeping while the phone rang.",
+      "correct": "I was sleeping when the phone rang.",
+      "explanationThai": "เหตุการณ์โทรศัพท์ดังเป็นเหตุการณ์สั้นที่เข้ามาแทรก จึงเหมาะกับ when มากกว่า while"
+    },
+    {
+      "id": "past-continuous-mistake-06",
+      "incorrect": "When I was cooking, she was setting the table all the time.",
+      "correct": "While I was cooking, she was setting the table.",
+      "explanationThai": "เมื่อเน้นว่าสองกิจกรรมกำลังเกิดพร้อมกัน มักใช้ while เชื่อม Past Continuous ทั้งสองเหตุการณ์"
+    },
+    {
+      "id": "past-continuous-mistake-07",
+      "incorrect": "Did you were sleeping?",
+      "correct": "Were you sleeping?",
+      "explanationThai": "คำถาม Past Continuous ใช้ Was/Were นำหน้า ไม่ใช้ Did"
+    },
+    {
+      "id": "past-continuous-mistake-08",
+      "incorrect": "We were play football.",
+      "correct": "We were playing football.",
+      "explanationThai": "หลัง were ต้องใช้ Verb-ing"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "past-continuous-comparison-past-simple",
+      "title": "Past Continuous vs Past Simple",
+      "pastContinuous": {
+        "useThai": "เหตุการณ์ที่กำลังดำเนินอยู่ ณ ช่วงเวลาหนึ่งในอดีต หรือเป็นเหตุการณ์พื้นหลัง",
+        "formula": "Subject + was/were + Verb-ing",
+        "example": "I was taking a shower when the phone rang.",
+        "translation": "ฉันกำลังอาบน้ำอยู่ตอนที่โทรศัพท์ดัง"
+      },
+      "otherTense": {
+        "name": "Past Simple",
+        "useThai": "เหตุการณ์ที่เกิดขึ้นและจบลง หรือเหตุการณ์สั้นที่เข้ามาแทรก",
+        "formula": "Subject + Verb 2",
+        "example": "The phone rang.",
+        "translation": "โทรศัพท์ดังขึ้น"
+      },
+      "keyDifferenceThai": "Past Continuous เน้นกิจกรรมที่กำลังดำเนินอยู่ ส่วน Past Simple เน้นเหตุการณ์ที่เกิดขึ้นและจบลงหรือเข้ามาแทรก"
+    },
+    {
+      "id": "past-continuous-comparison-present-continuous",
+      "title": "Past Continuous vs Present Continuous",
+      "pastContinuous": {
+        "useThai": "เหตุการณ์ที่กำลังเกิดขึ้น ณ เวลาใดเวลาหนึ่งในอดีต",
+        "formula": "Subject + was/were + Verb-ing",
+        "example": "I was studying at 8 p.m. yesterday.",
+        "translation": "เมื่อวานตอนสองทุ่มฉันกำลังเรียนอยู่"
+      },
+      "otherTense": {
+        "name": "Present Continuous",
+        "useThai": "เหตุการณ์ที่กำลังเกิดขึ้นในปัจจุบัน",
+        "formula": "Subject + am/is/are + Verb-ing",
+        "example": "I am studying now.",
+        "translation": "ตอนนี้ฉันกำลังเรียนอยู่"
+      },
+      "keyDifferenceThai": "Past Continuous ใช้ was/were และกล่าวถึงเวลาในอดีต ส่วน Present Continuous ใช้ am/is/are และกล่าวถึงปัจจุบัน"
+    }
+  ],
+  "practice": [
+    {
+      "id": "past-continuous-practice-01",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "I ___ studying at 8 p.m.",
+      "options": [
+        "am",
+        "was",
+        "were",
+        "did"
+      ],
+      "answer": "was",
+      "explanationThai": "ประธาน I ใน Past Continuous ใช้ was"
+    },
+    {
+      "id": "past-continuous-practice-02",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "They ___ sleeping when I arrived.",
+      "options": [
+        "was",
+        "were",
+        "are",
+        "did"
+      ],
+      "answer": "were",
+      "explanationThai": "ประธาน They ใช้ were"
+    },
+    {
+      "id": "past-continuous-practice-03",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "She was ___ dinner.",
+      "options": [
+        "cook",
+        "cooked",
+        "cooking",
+        "cooks"
+      ],
+      "answer": "cooking",
+      "explanationThai": "หลัง was ต้องใช้ Verb-ing"
+    },
+    {
+      "id": "past-continuous-practice-04",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำเชื่อมที่เหมาะสม",
+      "question": "I was sleeping ___ the phone rang.",
+      "options": [
+        "when",
+        "while",
+        "for",
+        "since"
+      ],
+      "answer": "when",
+      "explanationThai": "Phone rang เป็นเหตุการณ์สั้นที่เข้ามาแทรก จึงใช้ when"
+    },
+    {
+      "id": "past-continuous-practice-05",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำเชื่อมที่เหมาะสม",
+      "question": "She was reading ___ I was studying.",
+      "options": [
+        "when",
+        "while",
+        "ago",
+        "yesterday"
+      ],
+      "answer": "while",
+      "explanationThai": "ทั้งสองกิจกรรมกำลังเกิดพร้อมกัน จึงใช้ while"
+    },
+    {
+      "id": "past-continuous-practice-06",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกประโยคที่ถูกต้อง",
+      "question": "Which sentence is correct?",
+      "options": [
+        "Did you were sleeping?",
+        "Were you sleeping?",
+        "Was you sleeping?",
+        "Were you sleep?"
+      ],
+      "answer": "Were you sleeping?",
+      "explanationThai": "คำถามกับประธาน you ใช้ Were + subject + Verb-ing"
+    },
+    {
+      "id": "past-continuous-practice-07",
+      "type": "fill_blank",
+      "instructionThai": "เติม was หรือ were",
+      "question": "He ___ working last night.",
+      "answer": "was",
+      "acceptedAnswers": [
+        "was"
+      ],
+      "explanationThai": "ประธาน He ใช้ was"
+    },
+    {
+      "id": "past-continuous-practice-08",
+      "type": "fill_blank",
+      "instructionThai": "เติม was หรือ were",
+      "question": "We ___ waiting outside.",
+      "answer": "were",
+      "acceptedAnswers": [
+        "were"
+      ],
+      "explanationThai": "ประธาน We ใช้ were"
+    },
+    {
+      "id": "past-continuous-practice-09",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "She was ___ (write) an email.",
+      "answer": "writing",
+      "acceptedAnswers": [
+        "writing"
+      ],
+      "explanationThai": "Write ตัด e แล้วเติม ing เป็น writing"
+    },
+    {
+      "id": "past-continuous-practice-10",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "They were ___ (run) in the park.",
+      "answer": "running",
+      "acceptedAnswers": [
+        "running"
+      ],
+      "explanationThai": "Run เพิ่ม n แล้วเติม ing เป็น running"
+    },
+    {
+      "id": "past-continuous-practice-11",
+      "type": "fill_blank",
+      "instructionThai": "เติม when หรือ while",
+      "question": "___ I was cooking, my sister was washing the dishes.",
+      "answer": "While",
+      "acceptedAnswers": [
+        "While",
+        "while"
+      ],
+      "explanationThai": "ทั้งสองเหตุการณ์กำลังดำเนินพร้อมกัน จึงใช้ while"
+    },
+    {
+      "id": "past-continuous-practice-12",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคที่ถูกต้อง",
+      "question": [
+        "was",
+        "she",
+        "studying",
+        "at 9 p.m."
+      ],
+      "answer": "She was studying at 9 p.m.",
+      "acceptedAnswers": [
+        "She was studying at 9 p.m",
+        "She was studying at 9 p.m."
+      ],
+      "explanationThai": "โครงสร้างคือ Subject + was + Verb-ing + time"
+    },
+    {
+      "id": "past-continuous-practice-13",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคคำถาม",
+      "question": [
+        "what",
+        "were",
+        "you",
+        "doing",
+        "last night"
+      ],
+      "answer": "What were you doing last night?",
+      "acceptedAnswers": [
+        "What were you doing last night",
+        "What were you doing last night?"
+      ],
+      "explanationThai": "โครงสร้างคือ Wh-word + were + subject + Verb-ing"
+    },
+    {
+      "id": "past-continuous-practice-14",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "I was work at 8 p.m.",
+      "answer": "I was working at 8 p.m.",
+      "acceptedAnswers": [
+        "I was working at 8 p.m",
+        "I was working at 8 p.m."
+      ],
+      "explanationThai": "หลัง was ต้องใช้ working"
+    },
+    {
+      "id": "past-continuous-practice-15",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "They was sleeping.",
+      "answer": "They were sleeping.",
+      "acceptedAnswers": [
+        "They were sleeping",
+        "They were sleeping."
+      ],
+      "explanationThai": "They ใช้ were"
+    },
+    {
+      "id": "past-continuous-practice-16",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "She was cooked when I called.",
+      "answer": "She was cooking when I called.",
+      "acceptedAnswers": [
+        "She was cooking when I called",
+        "She was cooking when I called."
+      ],
+      "explanationThai": "หลัง was ต้องใช้ cooking"
+    },
+    {
+      "id": "past-continuous-practice-17",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "I ___ when he arrived.",
+      "options": [
+        "studied",
+        "was studying",
+        "am studying",
+        "have studied"
+      ],
+      "answer": "was studying",
+      "explanationThai": "กิจกรรมกำลังดำเนินอยู่ในอดีตตอนที่อีกเหตุการณ์เข้ามา จึงใช้ Past Continuous"
+    },
+    {
+      "id": "past-continuous-practice-18",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่เหมาะสม",
+      "question": "While I ___ dinner, my brother ___ TV.",
+      "options": [
+        "cooked / watched",
+        "was cooking / was watching",
+        "am cooking / is watching",
+        "have cooked / watched"
+      ],
+      "answer": "was cooking / was watching",
+      "explanationThai": "เหตุการณ์ทั้งสองกำลังเกิดพร้อมกันในอดีต จึงใช้ Past Continuous ทั้งคู่"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "past-continuous-flashcard-01",
+      "front": "Past Continuous ใช้เมื่อใด?",
+      "back": "ใช้กับเหตุการณ์ที่กำลังเกิด ณ เวลาในอดีต เหตุการณ์ที่ถูกแทรก และเหตุการณ์สองอย่างที่เกิดพร้อมกัน",
+      "example": "I was studying at 8 p.m."
+    },
+    {
+      "id": "past-continuous-flashcard-02",
+      "front": "โครงสร้างบอกเล่าคืออะไร?",
+      "back": "Subject + was/were + Verb-ing",
+      "example": "They were sleeping."
+    },
+    {
+      "id": "past-continuous-flashcard-03",
+      "front": "I/He/She/It ใช้ was หรือ were?",
+      "back": "ใช้ was",
+      "example": "She was working."
+    },
+    {
+      "id": "past-continuous-flashcard-04",
+      "front": "You/We/They ใช้ was หรือ were?",
+      "back": "ใช้ were",
+      "example": "We were waiting."
+    },
+    {
+      "id": "past-continuous-flashcard-05",
+      "front": "เหตุการณ์ที่กำลังเกิดแล้วมีอีกเหตุการณ์แทรก ใช้ tense อย่างไร?",
+      "back": "เหตุการณ์ที่กำลังดำเนินใช้ Past Continuous ส่วนเหตุการณ์ที่แทรกใช้ Past Simple",
+      "example": "I was sleeping when the phone rang."
+    },
+    {
+      "id": "past-continuous-flashcard-06",
+      "front": "When มักใช้กับเหตุการณ์แบบใด?",
+      "back": "มักใช้กับเหตุการณ์สั้นหรือเหตุการณ์ที่เข้ามาแทรก",
+      "example": "I was walking when it started to rain."
+    },
+    {
+      "id": "past-continuous-flashcard-07",
+      "front": "While มักใช้กับเหตุการณ์แบบใด?",
+      "back": "มักใช้กับกิจกรรมที่กำลังดำเนินอยู่ หรือสองกิจกรรมที่เกิดพร้อมกัน",
+      "example": "She was reading while I was cooking."
+    },
+    {
+      "id": "past-continuous-flashcard-08",
+      "front": "ทำไมไม่พูด I was work?",
+      "back": "เพราะหลัง was/were ต้องใช้ Verb-ing",
+      "example": "I was working."
+    },
+    {
+      "id": "past-continuous-flashcard-09",
+      "front": "Past Continuous ต่างจาก Past Simple อย่างไร?",
+      "back": "Past Continuous เน้นเหตุการณ์ที่กำลังดำเนิน ส่วน Past Simple เน้นเหตุการณ์ที่เกิดขึ้นและจบลง",
+      "example": "I was cooking when he called."
+    },
+    {
+      "id": "past-continuous-flashcard-10",
+      "front": "Past Continuous ต่างจาก Present Continuous อย่างไร?",
+      "back": "Past Continuous ใช้ was/were และกล่าวถึงอดีต ส่วน Present Continuous ใช้ am/is/are และกล่าวถึงปัจจุบัน",
+      "example": "I was studying then. / I am studying now."
+    }
+  ]
+}

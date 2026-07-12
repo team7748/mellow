@@ -1,0 +1,773 @@
+{
+  "id": "topic-future-perfect",
+  "categoryId": "future",
+  "name": "Future Perfect",
+  "nameThai": "อนาคตกาลสมบูรณ์",
+  "slug": "future-perfect",
+  "stage": "intermediate",
+  "difficulty": 4,
+  "displayOrder": 11,
+  "estimatedMinutes": 25,
+  "prerequisites": [
+    "topic-future-simple",
+    "topic-present-perfect"
+  ],
+  "summary": {
+    "en": "Use the Future Perfect for actions that will be completed before a specific future time or before another future event.",
+    "th": "ใช้ Future Perfect เพื่อพูดถึงเหตุการณ์ที่จะเสร็จสมบูรณ์ก่อนเวลาหนึ่งหรือก่อนอีกเหตุการณ์หนึ่งในอนาคต"
+  },
+  "learningObjectives": [
+    "ใช้ Future Perfect เพื่ออธิบายเหตุการณ์ที่จะเสร็จก่อนเวลาหนึ่งในอนาคตได้",
+    "สร้างประโยคด้วย Subject + will have + Past Participle ได้ถูกต้อง",
+    "ใช้ by, by the time และ before เพื่อกำหนดเส้นตายในอนาคตได้",
+    "เน้นผลลัพธ์หรือจำนวนงานที่จะเสร็จสมบูรณ์ได้",
+    "สร้างประโยคบอกเล่า ปฏิเสธ และคำถามใน Future Perfect ได้",
+    "ใช้กริยาช่องที่ 3 ทั้ง regular และ irregular ได้ถูกต้อง",
+    "ระบุเวลาเป้าหมายให้ชัดเจนเมื่อต้องการสื่อความหมาย Future Perfect",
+    "แยก Future Perfect ออกจาก Future Simple และ Future Perfect Continuous ได้"
+  ],
+  "uses": [
+    {
+      "id": "future-perfect-use-1",
+      "title": "เหตุการณ์ที่จะเสร็จก่อนเวลาหนึ่งในอนาคต",
+      "descriptionThai": "ใช้เมื่อคาดว่ากิจกรรมจะเสร็จสมบูรณ์ก่อนกำหนดเวลาหรือจุดหนึ่งในอนาคต",
+      "example": "I will have finished the report by 5 p.m.",
+      "translation": "ฉันจะทำรายงานเสร็จก่อนห้าโมงเย็น"
+    },
+    {
+      "id": "future-perfect-use-2",
+      "title": "เหตุการณ์ที่จะเสร็จก่อนอีกเหตุการณ์ในอนาคต",
+      "descriptionThai": "ใช้กับเหตุการณ์ที่คาดว่าจะเสร็จก่อนอีกเหตุการณ์หนึ่งจะเกิดขึ้น",
+      "example": "She will have left before you arrive.",
+      "translation": "เธอจะออกไปแล้วก่อนที่คุณจะมาถึง"
+    },
+    {
+      "id": "future-perfect-use-3",
+      "title": "การเน้นผลลัพธ์ที่เสร็จสมบูรณ์",
+      "descriptionThai": "ใช้เมื่อต้องการเน้นผลลัพธ์ จำนวน หรือความสำเร็จที่จะเสร็จภายในเวลาหนึ่ง",
+      "example": "By Friday, we will have completed five lessons.",
+      "translation": "ภายในวันศุกร์ พวกเราจะเรียนจบห้าบท"
+    },
+    {
+      "id": "future-perfect-use-4",
+      "title": "การคาดการณ์ความสำเร็จในอนาคต",
+      "descriptionThai": "ใช้คาดการณ์ว่าสิ่งหนึ่งจะเสร็จหรือบรรลุผลก่อนจุดเวลาในอนาคต",
+      "example": "By next year, he will have saved enough money.",
+      "translation": "ภายในปีหน้า เขาจะเก็บเงินได้เพียงพอแล้ว"
+    }
+  ],
+  "structures": [
+    {
+      "id": "future-perfect-structure-affirmative",
+      "type": "affirmative",
+      "subjectGroup": "all",
+      "formula": "Subject + will have + Past Participle + ...",
+      "example": "They will have finished by noon.",
+      "translation": "พวกเขาจะทำเสร็จก่อนเที่ยง",
+      "noteThai": "ทุกประธานใช้ will have และตามด้วยกริยาช่องที่ 3"
+    },
+    {
+      "id": "future-perfect-structure-contraction",
+      "type": "contraction",
+      "subjectGroup": "all",
+      "formula": "Subject + 'll have + Past Participle + ...",
+      "example": "I'll have completed it by tomorrow.",
+      "translation": "ฉันจะทำมันเสร็จภายในพรุ่งนี้",
+      "noteThai": "Will ย่อเป็น 'll ได้ เช่น I will have → I'll have"
+    },
+    {
+      "id": "future-perfect-structure-negative",
+      "type": "negative",
+      "subjectGroup": "all",
+      "formula": "Subject + will not (won't) have + Past Participle + ...",
+      "example": "She won't have arrived by 8 p.m.",
+      "translation": "เธอคงยังมาไม่ถึงภายในสองทุ่ม",
+      "noteThai": "ใช้ won't have ตามด้วยกริยาช่องที่ 3"
+    },
+    {
+      "id": "future-perfect-structure-question",
+      "type": "question",
+      "subjectGroup": "all",
+      "formula": "Will + subject + have + Past Participle + ...?",
+      "example": "Will you have finished by Friday?",
+      "translation": "คุณจะทำเสร็จภายในวันศุกร์ไหม",
+      "noteThai": "หลังประธานต้องมี have แล้วตามด้วย Past Participle"
+    },
+    {
+      "id": "future-perfect-structure-wh-question",
+      "type": "wh-question",
+      "subjectGroup": "all",
+      "formula": "Wh-word + will + subject + have + Past Participle + ...?",
+      "example": "How much will they have completed by then?",
+      "translation": "ถึงตอนนั้นพวกเขาจะทำเสร็จไปมากเท่าไร",
+      "noteThai": "วางคำถาม Wh- ไว้หน้า will"
+    },
+    {
+      "id": "future-perfect-structure-short-answer",
+      "type": "short-answer",
+      "subjectGroup": "all",
+      "formula": "Yes, subject + will. | No, subject + won't.",
+      "example": "Will he have arrived? Yes, he will.",
+      "translation": "เขาจะมาถึงแล้วไหม ใช่",
+      "noteThai": "คำตอบสั้นไม่ต้องพูด have และ Past Participle ซ้ำ"
+    }
+  ],
+  "pastParticipleRules": [
+    {
+      "id": "future-perfect-rule-regular-ed",
+      "title": "กริยาปกติเติม ed",
+      "ruleThai": "กริยาปกติส่วนใหญ่สร้าง Past Participle ด้วยการเติม ed",
+      "examples": [
+        "finish → finished",
+        "complete → completed",
+        "work → worked"
+      ]
+    },
+    {
+      "id": "future-perfect-rule-final-e",
+      "title": "กริยาลงท้ายด้วย e เติม d",
+      "ruleThai": "ถ้ากริยาลงท้ายด้วย e ให้เติม d",
+      "examples": [
+        "arrive → arrived",
+        "close → closed",
+        "live → lived"
+      ]
+    },
+    {
+      "id": "future-perfect-rule-consonant-y",
+      "title": "พยัญชนะ + y เปลี่ยน y เป็น i แล้วเติม ed",
+      "ruleThai": "ถ้าหน้า y เป็นพยัญชนะ ให้เปลี่ยน y เป็น i แล้วเติม ed",
+      "examples": [
+        "study → studied",
+        "carry → carried",
+        "try → tried"
+      ]
+    },
+    {
+      "id": "future-perfect-rule-irregular",
+      "title": "กริยา irregular ใช้รูปช่องที่ 3",
+      "ruleThai": "กริยา irregular ต้องจำรูป Past Participle",
+      "examples": [
+        "go → gone",
+        "write → written",
+        "do → done",
+        "see → seen",
+        "take → taken"
+      ]
+    }
+  ],
+  "irregularPastParticiples": [
+    {
+      "base": "go",
+      "pastSimple": "went",
+      "pastParticiple": "gone",
+      "example": "They will have gone home by midnight."
+    },
+    {
+      "base": "write",
+      "pastSimple": "wrote",
+      "pastParticiple": "written",
+      "example": "She will have written the report by Friday."
+    },
+    {
+      "base": "do",
+      "pastSimple": "did",
+      "pastParticiple": "done",
+      "example": "We will have done everything by noon."
+    },
+    {
+      "base": "see",
+      "pastSimple": "saw",
+      "pastParticiple": "seen",
+      "example": "You will have seen all the lessons by then."
+    },
+    {
+      "base": "take",
+      "pastSimple": "took",
+      "pastParticiple": "taken",
+      "example": "He will have taken the exam by next week."
+    },
+    {
+      "base": "eat",
+      "pastSimple": "ate",
+      "pastParticiple": "eaten",
+      "example": "They will have eaten before we arrive."
+    },
+    {
+      "base": "leave",
+      "pastSimple": "left",
+      "pastParticiple": "left",
+      "example": "She will have left by 6 p.m."
+    },
+    {
+      "base": "begin",
+      "pastSimple": "began",
+      "pastParticiple": "begun",
+      "example": "The class will have begun before we get there."
+    },
+    {
+      "base": "break",
+      "pastSimple": "broke",
+      "pastParticiple": "broken",
+      "example": "The machine will have broken down by then."
+    },
+    {
+      "base": "save",
+      "pastSimple": "saved",
+      "pastParticiple": "saved",
+      "example": "I will have saved enough money by next year."
+    }
+  ],
+  "deadlineMarkers": [
+    {
+      "id": "future-perfect-marker-by",
+      "word": "by",
+      "meaningThai": "ภายใน / ก่อนถึง",
+      "usageThai": "ใช้ระบุเวลาสุดท้ายที่กิจกรรมต้องเสร็จ",
+      "example": "I will have finished by 5 p.m."
+    },
+    {
+      "id": "future-perfect-marker-by-the-time",
+      "word": "by the time",
+      "meaningThai": "เมื่อถึงเวลาที่",
+      "usageThai": "ใช้เชื่อมเหตุการณ์ที่ต้องเสร็จก่อนอีกเหตุการณ์หนึ่งในอนาคต",
+      "example": "By the time you arrive, I will have finished."
+    },
+    {
+      "id": "future-perfect-marker-before",
+      "word": "before",
+      "meaningThai": "ก่อนที่",
+      "usageThai": "ใช้แสดงว่าเหตุการณ์ Future Perfect จะเสร็จก่อนอีกเหตุการณ์หนึ่ง",
+      "example": "She will have left before the meeting starts."
+    }
+  ],
+  "futureTimeClauses": {
+    "title": "อนุประโยคเวลาในอนาคต",
+    "descriptionThai": "หลัง by the time และ before ที่กล่าวถึงอนาคต มักใช้ Present Simple ไม่ใช้ will",
+    "correctExamples": [
+      "By the time you arrive, I will have finished.",
+      "She will have left before the meeting starts."
+    ],
+    "incorrectExamples": [
+      "By the time you will arrive, I will have finished.",
+      "She will have left before the meeting will start."
+    ],
+    "keyReminderThai": "ใช้ Future Perfect ในประโยคหลัก และใช้ Present Simple ในอนุประโยคเวลาที่ขึ้นต้นด้วย by the time หรือ before"
+  },
+  "targetTimeGuide": {
+    "title": "เวลาเป้าหมายต้องชัดเจน",
+    "descriptionThai": "Future Perfect มักต้องมีเวลาเป้าหมายหรือเหตุการณ์อ้างอิง เพื่อให้รู้ว่าสิ่งนั้นจะเสร็จก่อนเมื่อไร",
+    "clearExamples": [
+      "I will have finished the report by 5 p.m.",
+      "They will have completed the project before the client arrives."
+    ],
+    "unclearExample": "I will have finished the report.",
+    "noteThai": "ประโยคที่ไม่มีเวลาเป้าหมายอาจถูกต้องตามไวยากรณ์ แต่ผู้ฟังอาจไม่รู้ว่าผู้พูดหมายถึงเสร็จก่อนเวลาใด"
+  },
+  "timeMarkers": [
+    {
+      "text": "by",
+      "meaningThai": "ภายใน / ก่อนถึง",
+      "example": "I will have finished by 5 p.m."
+    },
+    {
+      "text": "by the time",
+      "meaningThai": "เมื่อถึงเวลาที่",
+      "example": "By the time you arrive, we will have left."
+    },
+    {
+      "text": "before",
+      "meaningThai": "ก่อนที่",
+      "example": "She will have finished before the meeting starts."
+    },
+    {
+      "text": "by tomorrow",
+      "meaningThai": "ภายในพรุ่งนี้",
+      "example": "He will have sent the email by tomorrow."
+    },
+    {
+      "text": "by next week",
+      "meaningThai": "ภายในสัปดาห์หน้า",
+      "example": "They will have completed the course by next week."
+    },
+    {
+      "text": "by the end of the month",
+      "meaningThai": "ภายในสิ้นเดือน",
+      "example": "I will have saved enough money by the end of the month."
+    },
+    {
+      "text": "by then",
+      "meaningThai": "ภายในตอนนั้น",
+      "example": "We will have finished by then."
+    },
+    {
+      "text": "within two years",
+      "meaningThai": "ภายในสองปี",
+      "example": "The company will have opened three branches within two years."
+    }
+  ],
+  "examples": [
+    {
+      "id": "future-perfect-example-01",
+      "sentence": "I will have finished the report by 5 p.m.",
+      "translation": "ฉันจะทำรายงานเสร็จก่อนห้าโมงเย็น",
+      "focus": "completed before a future deadline",
+      "usage": "future-deadline"
+    },
+    {
+      "id": "future-perfect-example-02",
+      "sentence": "She will have completed the course by next week.",
+      "translation": "เธอจะเรียนหลักสูตรจบภายในสัปดาห์หน้า",
+      "focus": "will have + Past Participle",
+      "usage": "future-deadline"
+    },
+    {
+      "id": "future-perfect-example-03",
+      "sentence": "By the time you arrive, we will have eaten.",
+      "translation": "เมื่อคุณมาถึง พวกเราจะกินเสร็จแล้ว",
+      "focus": "by the time + Present Simple",
+      "usage": "completed-before-future-event"
+    },
+    {
+      "id": "future-perfect-example-04",
+      "sentence": "They will have gone home before midnight.",
+      "translation": "พวกเขาจะกลับบ้านไปแล้วก่อนเที่ยงคืน",
+      "focus": "go → gone",
+      "usage": "completed-before-future-time"
+    },
+    {
+      "id": "future-perfect-example-05",
+      "sentence": "By Friday, I will have written three articles.",
+      "translation": "ภายในวันศุกร์ ฉันจะเขียนบทความเสร็จสามบทความ",
+      "focus": "completed result and quantity",
+      "usage": "completed-result"
+    },
+    {
+      "id": "future-perfect-example-06",
+      "sentence": "By next year, he will have saved enough money.",
+      "translation": "ภายในปีหน้า เขาจะเก็บเงินได้เพียงพอแล้ว",
+      "focus": "future achievement",
+      "usage": "future-achievement"
+    },
+    {
+      "id": "future-perfect-example-07",
+      "sentence": "She won't have arrived by 8 p.m.",
+      "translation": "เธอคงยังมาไม่ถึงภายในสองทุ่ม",
+      "focus": "negative form",
+      "usage": "negative"
+    },
+    {
+      "id": "future-perfect-example-08",
+      "sentence": "Will you have finished the project by Monday?",
+      "translation": "คุณจะทำโครงการเสร็จภายในวันจันทร์ไหม",
+      "focus": "question",
+      "usage": "question"
+    },
+    {
+      "id": "future-perfect-example-09",
+      "sentence": "How many lessons will they have completed by then?",
+      "translation": "ถึงตอนนั้นพวกเขาจะเรียนจบไปกี่บท",
+      "focus": "Wh-question and completed quantity",
+      "usage": "question"
+    },
+    {
+      "id": "future-perfect-example-10",
+      "sentence": "The train will have left before we reach the station.",
+      "translation": "รถไฟจะออกไปแล้วก่อนที่พวกเราจะถึงสถานี",
+      "focus": "before + Present Simple",
+      "usage": "completed-before-future-event"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "id": "future-perfect-mistake-01",
+      "incorrect": "I will have finish.",
+      "correct": "I will have finished.",
+      "explanationThai": "หลัง will have ต้องใช้ Past Participle หรือกริยาช่องที่ 3 คือ finished"
+    },
+    {
+      "id": "future-perfect-mistake-02",
+      "incorrect": "She will has completed it.",
+      "correct": "She will have completed it.",
+      "explanationThai": "หลัง will ใช้ have กับทุกประธาน ไม่ใช้ has"
+    },
+    {
+      "id": "future-perfect-mistake-03",
+      "incorrect": "They will have went home.",
+      "correct": "They will have gone home.",
+      "explanationThai": "หลัง will have ต้องใช้กริยาช่องที่ 3 โดย go → went → gone"
+    },
+    {
+      "id": "future-perfect-mistake-04",
+      "incorrect": "I will have finished the report.",
+      "correct": "I will have finished the report by 5 p.m.",
+      "explanationThai": "Future Perfect ควรมีเวลาเป้าหมายหรือเหตุการณ์อ้างอิงที่ชัดเจน เพื่อบอกว่าจะเสร็จก่อนเมื่อไร"
+    },
+    {
+      "id": "future-perfect-mistake-05",
+      "incorrect": "I will finish the report by 5 p.m. to emphasize that it will already be complete.",
+      "correct": "I will have finished the report by 5 p.m.",
+      "explanationThai": "เมื่อเน้นผลลัพธ์ว่าจะเสร็จสมบูรณ์ก่อนเวลาหนึ่ง ใช้ Future Perfect ชัดเจนกว่า Future Simple"
+    },
+    {
+      "id": "future-perfect-mistake-06",
+      "incorrect": "By the time you will arrive, I will have finished.",
+      "correct": "By the time you arrive, I will have finished.",
+      "explanationThai": "หลัง by the time ที่กล่าวถึงอนาคต ใช้ Present Simple ไม่ใช้ will"
+    },
+    {
+      "id": "future-perfect-mistake-07",
+      "incorrect": "She won't have finish by Friday.",
+      "correct": "She won't have finished by Friday.",
+      "explanationThai": "หลัง won't have ต้องใช้กริยาช่องที่ 3"
+    },
+    {
+      "id": "future-perfect-mistake-08",
+      "incorrect": "Will they have went before noon?",
+      "correct": "Will they have gone before noon?",
+      "explanationThai": "คำถาม Future Perfect ต้องใช้ have + Past Participle คือ gone"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "future-perfect-comparison-future-simple",
+      "title": "Future Perfect vs Future Simple",
+      "futurePerfect": {
+        "useThai": "เน้นว่าเหตุการณ์จะเสร็จสมบูรณ์ก่อนเวลาเป้าหมายหรือก่อนอีกเหตุการณ์หนึ่งในอนาคต",
+        "formula": "Subject + will have + Past Participle",
+        "example": "I will have finished the report by 5 p.m.",
+        "translation": "ฉันจะทำรายงานเสร็จก่อนห้าโมงเย็น"
+      },
+      "otherTense": {
+        "name": "Future Simple",
+        "useThai": "ใช้กับการตัดสินใจ คำสัญญา การคาดการณ์ หรือกล่าวทั่วไปว่าจะทำบางสิ่ง",
+        "formula": "Subject + will + Verb 1",
+        "example": "I will finish the report tomorrow.",
+        "translation": "พรุ่งนี้ฉันจะทำรายงานให้เสร็จ"
+      },
+      "keyDifferenceThai": "Future Perfect เน้นว่าผลลัพธ์จะเสร็จก่อนเส้นตาย ส่วน Future Simple เพียงบอกว่าจะเกิดหรือจะทำในอนาคต"
+    },
+    {
+      "id": "future-perfect-comparison-future-perfect-continuous",
+      "title": "Future Perfect vs Future Perfect Continuous",
+      "futurePerfect": {
+        "useThai": "เน้นผลลัพธ์ จำนวน หรือสิ่งที่จะเสร็จสมบูรณ์",
+        "formula": "Subject + will have + Past Participle",
+        "example": "By noon, I will have written three reports.",
+        "translation": "ภายในเที่ยง ฉันจะเขียนรายงานเสร็จสามฉบับ"
+      },
+      "otherTense": {
+        "name": "Future Perfect Continuous",
+        "useThai": "เน้นระยะเวลาหรือความต่อเนื่องของกิจกรรมจนถึงจุดหนึ่งในอนาคต",
+        "formula": "Subject + will have been + Verb-ing",
+        "example": "By noon, I will have been writing for three hours.",
+        "translation": "ภายในเที่ยง ฉันจะเขียนต่อเนื่องมาเป็นเวลาสามชั่วโมง"
+      },
+      "keyDifferenceThai": "Future Perfect เน้นผลลัพธ์หรือจำนวนที่เสร็จ ส่วน Future Perfect Continuous เน้นกิจกรรมและระยะเวลา"
+    }
+  ],
+  "practice": [
+    {
+      "id": "future-perfect-practice-01",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "I ___ finished the report by 5 p.m.",
+      "options": [
+        "will have",
+        "will",
+        "have",
+        "will be"
+      ],
+      "answer": "will have",
+      "explanationThai": "Future Perfect ใช้ will have + Past Participle"
+    },
+    {
+      "id": "future-perfect-practice-02",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกกริยาช่องที่ 3 ที่ถูกต้อง",
+      "question": "She will have ___ the course by Friday.",
+      "options": [
+        "complete",
+        "completed",
+        "completing",
+        "completes"
+      ],
+      "answer": "completed",
+      "explanationThai": "หลัง will have ต้องใช้ Past Participle"
+    },
+    {
+      "id": "future-perfect-practice-03",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกกริยาช่องที่ 3 ที่ถูกต้อง",
+      "question": "They will have ___ home before midnight.",
+      "options": [
+        "go",
+        "went",
+        "gone",
+        "going"
+      ],
+      "answer": "gone",
+      "explanationThai": "Past Participle ของ go คือ gone"
+    },
+    {
+      "id": "future-perfect-practice-04",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำที่เหมาะสม",
+      "question": "I will have finished the work ___ Friday.",
+      "options": [
+        "by",
+        "since",
+        "ago",
+        "during"
+      ],
+      "answer": "by",
+      "explanationThai": "By ใช้ระบุเส้นตายหรือเวลาสุดท้ายที่งานจะเสร็จ"
+    },
+    {
+      "id": "future-perfect-practice-05",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่ถูกต้อง",
+      "question": "By the time you ___, we will have left.",
+      "options": [
+        "arrive",
+        "will arrive",
+        "arrived",
+        "are arriving yesterday"
+      ],
+      "answer": "arrive",
+      "explanationThai": "หลัง by the time ที่กล่าวถึงอนาคต ใช้ Present Simple"
+    },
+    {
+      "id": "future-perfect-practice-06",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกประโยคที่เหมาะสมเมื่อเน้นผลลัพธ์",
+      "question": "Which sentence emphasizes that three reports will be complete by noon?",
+      "options": [
+        "I will have written three reports by noon.",
+        "I will be writing three reports by noon.",
+        "I write three reports yesterday.",
+        "I will have been write three reports."
+      ],
+      "answer": "I will have written three reports by noon.",
+      "explanationThai": "Future Perfect เน้นจำนวนงานที่เสร็จสมบูรณ์ก่อนเวลาเป้าหมาย"
+    },
+    {
+      "id": "future-perfect-practice-07",
+      "type": "fill_blank",
+      "instructionThai": "เติมคำให้โครงสร้างสมบูรณ์",
+      "question": "We will ___ completed the project by Monday.",
+      "answer": "have",
+      "acceptedAnswers": [
+        "have"
+      ],
+      "explanationThai": "โครงสร้างคือ will have + Past Participle"
+    },
+    {
+      "id": "future-perfect-practice-08",
+      "type": "fill_blank",
+      "instructionThai": "เติมกริยาช่องที่ 3",
+      "question": "She will have ___ (write) the email by then.",
+      "answer": "written",
+      "acceptedAnswers": [
+        "written"
+      ],
+      "explanationThai": "Past Participle ของ write คือ written"
+    },
+    {
+      "id": "future-perfect-practice-09",
+      "type": "fill_blank",
+      "instructionThai": "เติมกริยาช่องที่ 3",
+      "question": "They will have ___ (do) everything before lunch.",
+      "answer": "done",
+      "acceptedAnswers": [
+        "done"
+      ],
+      "explanationThai": "Past Participle ของ do คือ done"
+    },
+    {
+      "id": "future-perfect-practice-10",
+      "type": "fill_blank",
+      "instructionThai": "เติม by หรือ before",
+      "question": "He will have saved enough money ___ next year.",
+      "answer": "by",
+      "acceptedAnswers": [
+        "by"
+      ],
+      "explanationThai": "Next year เป็นเวลาเป้าหมาย จึงใช้ by"
+    },
+    {
+      "id": "future-perfect-practice-11",
+      "type": "fill_blank",
+      "instructionThai": "เติมรูปกริยาให้ถูกต้อง",
+      "question": "She will have left before the meeting ___ (start).",
+      "answer": "starts",
+      "acceptedAnswers": [
+        "starts"
+      ],
+      "explanationThai": "หลัง before ในอนุประโยคเวลาอนาคต ใช้ Present Simple"
+    },
+    {
+      "id": "future-perfect-practice-12",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคที่ถูกต้อง",
+      "question": [
+        "will",
+        "have",
+        "they",
+        "finished",
+        "by noon"
+      ],
+      "answer": "They will have finished by noon.",
+      "acceptedAnswers": [
+        "They will have finished by noon",
+        "They will have finished by noon."
+      ],
+      "explanationThai": "โครงสร้างคือ Subject + will have + Past Participle + deadline"
+    },
+    {
+      "id": "future-perfect-practice-13",
+      "type": "sentence_builder",
+      "instructionThai": "เรียงคำให้เป็นประโยคคำถาม",
+      "question": [
+        "will",
+        "you",
+        "have",
+        "completed",
+        "it",
+        "by Friday"
+      ],
+      "answer": "Will you have completed it by Friday?",
+      "acceptedAnswers": [
+        "Will you have completed it by Friday",
+        "Will you have completed it by Friday?"
+      ],
+      "explanationThai": "คำถามใช้ Will + subject + have + Past Participle"
+    },
+    {
+      "id": "future-perfect-practice-14",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "I will have finish.",
+      "answer": "I will have finished.",
+      "acceptedAnswers": [
+        "I will have finished",
+        "I will have finished."
+      ],
+      "explanationThai": "หลัง will have ใช้ finished"
+    },
+    {
+      "id": "future-perfect-practice-15",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "She will has completed it.",
+      "answer": "She will have completed it.",
+      "acceptedAnswers": [
+        "She will have completed it",
+        "She will have completed it."
+      ],
+      "explanationThai": "หลัง will ใช้ have ไม่ใช้ has"
+    },
+    {
+      "id": "future-perfect-practice-16",
+      "type": "correct_sentence",
+      "instructionThai": "แก้ประโยคให้ถูกต้อง",
+      "question": "They will have went home.",
+      "answer": "They will have gone home.",
+      "acceptedAnswers": [
+        "They will have gone home",
+        "They will have gone home."
+      ],
+      "explanationThai": "หลัง will have ใช้ gone"
+    },
+    {
+      "id": "future-perfect-practice-17",
+      "type": "multiple_choice",
+      "instructionThai": "เลือก tense ที่เหมาะสม",
+      "question": "Don't worry. I ___ you with the report.",
+      "options": [
+        "will help",
+        "will have helped by an unclear time",
+        "will have helping",
+        "have helped tomorrow"
+      ],
+      "answer": "will help",
+      "explanationThai": "เป็นการเสนอความช่วยเหลือ จึงใช้ Future Simple"
+    },
+    {
+      "id": "future-perfect-practice-18",
+      "type": "multiple_choice",
+      "instructionThai": "เลือกคำตอบที่เหมาะสม",
+      "question": "By 6 p.m., she ___ for eight hours.",
+      "options": [
+        "will have been working",
+        "will have completed eight tasks",
+        "will working",
+        "has worked yesterday"
+      ],
+      "answer": "will have been working",
+      "explanationThai": "ประโยคเน้นระยะเวลาที่กิจกรรมดำเนินต่อเนื่อง จึงใช้ Future Perfect Continuous"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "future-perfect-flashcard-01",
+      "front": "Future Perfect ใช้เมื่อใด?",
+      "back": "ใช้กับเหตุการณ์ที่จะเสร็จก่อนเวลาเป้าหมายหรือก่อนอีกเหตุการณ์หนึ่งในอนาคต",
+      "example": "I will have finished by 5 p.m."
+    },
+    {
+      "id": "future-perfect-flashcard-02",
+      "front": "โครงสร้างบอกเล่าคืออะไร?",
+      "back": "Subject + will have + Past Participle",
+      "example": "She will have completed it."
+    },
+    {
+      "id": "future-perfect-flashcard-03",
+      "front": "ทุกประธานใช้ will have หรือ will has?",
+      "back": "ทุกประธานใช้ will have",
+      "example": "He will have finished."
+    },
+    {
+      "id": "future-perfect-flashcard-04",
+      "front": "ประโยคปฏิเสธสร้างอย่างไร?",
+      "back": "Subject + won't have + Past Participle",
+      "example": "They won't have arrived."
+    },
+    {
+      "id": "future-perfect-flashcard-05",
+      "front": "ประโยคคำถามสร้างอย่างไร?",
+      "back": "Will + subject + have + Past Participle?",
+      "example": "Will you have finished?"
+    },
+    {
+      "id": "future-perfect-flashcard-06",
+      "front": "By, by the time และ before ใช้เพื่ออะไร?",
+      "back": "ใช้ระบุเวลาเป้าหมายหรือเหตุการณ์ที่สิ่งหนึ่งต้องเสร็จก่อน",
+      "example": "By the time you arrive, I will have finished."
+    },
+    {
+      "id": "future-perfect-flashcard-07",
+      "front": "หลัง by the time ใช้ will หรือไม่?",
+      "back": "ในอนุประโยคเวลาใช้ Present Simple ไม่ใช้ will",
+      "example": "By the time you arrive, we will have left."
+    },
+    {
+      "id": "future-perfect-flashcard-08",
+      "front": "ทำไมไม่พูด They will have went?",
+      "back": "เพราะหลัง will have ต้องใช้ Past Participle คือ gone",
+      "example": "They will have gone home."
+    },
+    {
+      "id": "future-perfect-flashcard-09",
+      "front": "Future Perfect ต่างจาก Future Simple อย่างไร?",
+      "back": "Future Perfect เน้นผลลัพธ์ที่จะเสร็จก่อนเส้นตาย ส่วน Future Simple เพียงบอกว่าจะเกิดหรือจะทำ",
+      "example": "I will have finished by 5. / I will finish tomorrow."
+    },
+    {
+      "id": "future-perfect-flashcard-10",
+      "front": "Future Perfect ต่างจาก Future Perfect Continuous อย่างไร?",
+      "back": "Future Perfect เน้นผลลัพธ์หรือจำนวน ส่วน Future Perfect Continuous เน้นกิจกรรมและระยะเวลา",
+      "example": "I will have written three reports. / I will have been writing for three hours."
+    }
+  ]
+}
