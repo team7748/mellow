@@ -33,6 +33,7 @@ export function SpeakModePage() {
   const [categories, setCategories] = useState<ConversationCategory[]>([])
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(null)
   const [showGrammar, setShowGrammar] = useState(() => window.location.hash.includes("view=grammar"))
+  const [grammarFilter, setGrammarFilter] = useState("all")
   const [viewMode, setViewMode] = useState<"conversation" | "practice">("conversation")
   const [progress, setProgress] = useState<SpeakModeProgress>(getSpeakModeProgress())
 
@@ -156,7 +157,7 @@ export function SpeakModePage() {
 
   // 1. View: Category Selection
   if (!selectedCategoryId) {
-    if (showGrammar) return <Container className="py-8 sm:py-10 space-y-6"><button onClick={closeGrammar} className="inline-flex items-center text-sm font-medium text-slate-500 focus:outline-none focus:ring-2 focus:ring-leaf"><ArrowLeft className="mr-1 h-4 w-4" />กลับ</button><h1 className="text-3xl font-extrabold text-ink">Grammar</h1><div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{getGrammarTopics().map(t => <article key={t.id} className="surface-card p-5"><h2 className="font-bold text-ink">{t.name}</h2><p className="text-slate-600">{t.nameThai}</p></article>)}</div></Container>
+    if (showGrammar) { const topics=getGrammarTopics().filter(t=>grammarFilter==="all"||t.categoryId===grammarFilter||t.stage===grammarFilter); return <Container className="py-8 sm:py-10 space-y-6"><button onClick={closeGrammar} className="inline-flex items-center text-sm font-medium text-slate-500 focus:outline-none focus:ring-2 focus:ring-leaf"><ArrowLeft className="mr-1 h-4 w-4" />กลับไป Speak Mode</button><header><h1 className="text-3xl font-extrabold text-ink">Grammar</h1><p className="mt-2 text-slate-600">12 Tenses · เรียนตามลำดับที่เหมาะกับคุณ</p></header><div className="flex gap-2 overflow-x-auto pb-1">{["all","present","past","future","beginner","elementary","intermediate"].map(f=><button key={f} onClick={()=>setGrammarFilter(f)} className={`whitespace-nowrap rounded-full px-3 py-2 text-sm font-semibold ${grammarFilter===f?"bg-leaf text-white":"bg-slate-100 text-slate-700"}`}>{f}</button>)}</div>{(["present","past","future"] as const).map(group=>{const items=topics.filter(t=>t.categoryId===group);return items.length?<section key={group} className="space-y-2"><h2 className="text-xl font-bold capitalize text-ink">{group}</h2><div className="space-y-2">{items.map(t=><article key={t.id} className="surface-card flex flex-col gap-2 p-4 sm:flex-row sm:items-center"><div className="flex-1"><h3 className="font-bold text-ink">{t.name}</h3><p className="text-sm text-slate-600">{t.nameThai} · {t.estimatedMinutes} นาที · {t.stage} · ระดับ {t.difficulty}</p>{t.prerequisites.length>0&&<p className="text-xs text-slate-500">แนะนำก่อนเรียน: {t.prerequisites.join(", ")}</p>}</div><button className="rounded-lg bg-leaf px-3 py-2 text-sm font-semibold text-white">Start</button></article>)}</div></section>:null})}</Container> }
     return (
       <Container className="py-8 sm:py-10 space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-6">
