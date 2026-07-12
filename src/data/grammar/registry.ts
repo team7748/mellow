@@ -1,9 +1,21 @@
 import type { GrammarTopic, GrammarTopicSummary } from "../../types/grammar"
+
 type Entry = GrammarTopicSummary & { loader: () => Promise<{ default: GrammarTopic }> }
-const entries: Entry[] = [
-  ["present-simple","present","Present Simple",1],["present-continuous","present","Present Continuous",2],["present-perfect","present","Present Perfect",3],["present-perfect-continuous","present","Present Perfect Continuous",4],["past-simple","past","Past Simple",5],["past-continuous","past","Past Continuous",6],["past-perfect","past","Past Perfect",7],["past-perfect-continuous","past","Past Perfect Continuous",8],["future-simple","future","Future Simple",9],["future-continuous","future","Future Continuous",10],["future-perfect","future","Future Perfect",11],["future-perfect-continuous","future","Future Perfect Continuous",12],
-].map(([slug, categoryId, name, displayOrder]) => ({ id: `topic-${slug}`, slug: slug as string, categoryId: categoryId as GrammarTopic["categoryId"], name: name as string, nameThai: "", stage: "beginner", difficulty: 1, displayOrder: displayOrder as number, estimatedMinutes: 0, prerequisites: [], loader: () => import(`../../../${slug}.json`) as Promise<{ default: GrammarTopic }> }))
-export const grammarTopicRegistry = entries
-export const getGrammarTopics = () => entries.map(({ loader, ...summary }) => summary).sort((a,b) => a.displayOrder-b.displayOrder)
-export const getGrammarTopicSummary = (id:string) => getGrammarTopics().find(t=>t.id===id)
-export const getGrammarTopicsByCategory = (categoryId: GrammarTopic["categoryId"]) => getGrammarTopics().filter(t=>t.categoryId===categoryId)
+const source = [
+  ["present-simple","present","Present Simple","ปัจจุบันกาลแบบธรรมดา","beginner",1,1,20,[]],
+  ["present-continuous","present","Present Continuous","ปัจจุบันกาลแบบกำลังกระทำ","beginner",1,2,20,["topic-present-simple"]],
+  ["present-perfect","present","Present Perfect","ปัจจุบันสมบูรณ์","elementary",3,3,25,["topic-present-simple","topic-past-simple"]],
+  ["present-perfect-continuous","present","Present Perfect Continuous","ปัจจุบันสมบูรณ์แบบต่อเนื่อง","intermediate",4,4,25,["topic-present-perfect","topic-present-continuous"]],
+  ["past-simple","past","Past Simple","อดีตกาลแบบธรรมดา","beginner",2,5,20,["topic-present-simple"]],
+  ["past-continuous","past","Past Continuous","อดีตกาลแบบกำลังกระทำ","elementary",3,6,20,["topic-past-simple","topic-present-continuous"]],
+  ["past-perfect","past","Past Perfect","อดีตกาลสมบูรณ์","intermediate",4,7,25,["topic-past-simple","topic-present-perfect"]],
+  ["past-perfect-continuous","past","Past Perfect Continuous","อดีตกาลสมบูรณ์แบบต่อเนื่อง","intermediate",5,8,25,["topic-past-perfect","topic-past-continuous"]],
+  ["future-simple","future","Future Simple","อนาคตกาลแบบธรรมดา","beginner",2,9,20,["topic-present-simple"]],
+  ["future-continuous","future","Future Continuous","อนาคตกาลแบบกำลังกระทำ","elementary",3,10,20,["topic-future-simple","topic-present-continuous"]],
+  ["future-perfect","future","Future Perfect","อนาคตกาลสมบูรณ์","intermediate",4,11,25,["topic-future-simple","topic-present-perfect"]],
+  ["future-perfect-continuous","future","Future Perfect Continuous","อนาคตกาลสมบูรณ์แบบต่อเนื่อง","intermediate",5,12,25,["topic-future-perfect","topic-future-continuous"]],
+] as const
+export const grammarTopicRegistry: Entry[] = source.map(([slug,categoryId,name,nameThai,stage,difficulty,displayOrder,estimatedMinutes,prerequisites]) => ({ id:`topic-${slug}`,slug,categoryId,name,nameThai,stage,difficulty,displayOrder,estimatedMinutes,prerequisites:[...prerequisites],loader:()=>import(`../../../${slug}.json`) as Promise<{default:GrammarTopic}> }))
+export const getGrammarTopics=()=>grammarTopicRegistry.map(({loader,...summary})=>summary).sort((a,b)=>a.displayOrder-b.displayOrder)
+export const getGrammarTopicSummary=(id:string)=>getGrammarTopics().find(t=>t.id===id)
+export const getGrammarTopicsByCategory=(categoryId:GrammarTopic["categoryId"])=>getGrammarTopics().filter(t=>t.categoryId===categoryId)
