@@ -32,7 +32,7 @@ export function SpeakModePage() {
   const [loading, setLoading] = useState(true)
   const [categories, setCategories] = useState<ConversationCategory[]>([])
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(null)
-  const [showGrammar, setShowGrammar] = useState(false)
+  const [showGrammar, setShowGrammar] = useState(() => window.location.hash.includes("view=grammar"))
   const [viewMode, setViewMode] = useState<"conversation" | "practice">("conversation")
   const [progress, setProgress] = useState<SpeakModeProgress>(getSpeakModeProgress())
 
@@ -48,6 +48,9 @@ export function SpeakModePage() {
       setLoading(false)
     })
   }, [])
+
+  const openGrammar = () => { window.location.hash = "speak?view=grammar"; setShowGrammar(true) }
+  const closeGrammar = () => { window.location.hash = "speak"; setShowGrammar(false) }
 
   useEffect(() => {
     if (selectedCategoryId) {
@@ -153,7 +156,7 @@ export function SpeakModePage() {
 
   // 1. View: Category Selection
   if (!selectedCategoryId) {
-    if (showGrammar) return <Container className="py-8 sm:py-10 space-y-6"><button onClick={() => setShowGrammar(false)} className="inline-flex items-center text-sm font-medium text-slate-500"><ArrowLeft className="mr-1 h-4 w-4" />กลับ</button><h1 className="text-3xl font-extrabold text-ink">Grammar</h1><div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{getGrammarTopics().map(t => <article key={t.id} className="surface-card p-5"><h2 className="font-bold text-ink">{t.name}</h2><p className="text-slate-600">{t.nameThai}</p></article>)}</div></Container>
+    if (showGrammar) return <Container className="py-8 sm:py-10 space-y-6"><button onClick={closeGrammar} className="inline-flex items-center text-sm font-medium text-slate-500 focus:outline-none focus:ring-2 focus:ring-leaf"><ArrowLeft className="mr-1 h-4 w-4" />กลับ</button><h1 className="text-3xl font-extrabold text-ink">Grammar</h1><div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{getGrammarTopics().map(t => <article key={t.id} className="surface-card p-5"><h2 className="font-bold text-ink">{t.name}</h2><p className="text-slate-600">{t.nameThai}</p></article>)}</div></Container>
     return (
       <Container className="py-8 sm:py-10 space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-6">
@@ -177,7 +180,7 @@ export function SpeakModePage() {
 
         <section>
           <h2 className="text-xl font-bold text-ink mb-4">เลือกหมวดหมู่ที่ต้องการฝึก</h2>
-          <button onClick={() => setShowGrammar(true)} className="surface-card mb-4 flex w-full items-center gap-3 p-5 text-left"><BookOpen className="h-6 w-6 text-leaf" /><span><strong className="block text-ink">Grammar</strong><span className="text-slate-600">12 Tenses</span></span></button>
+          <button onClick={openGrammar} className="surface-card mb-4 flex w-full items-center gap-3 p-5 text-left focus:outline-none focus:ring-2 focus:ring-leaf focus:ring-offset-2"><BookOpen className="h-6 w-6 text-leaf" /><span className="flex-1"><strong className="block text-ink">Grammar</strong><span className="text-slate-600">12 Tenses · Beginner → Intermediate</span></span><span className="rounded-full bg-leaf px-3 py-1 text-sm font-semibold text-white">Start Grammar</span></button>
           <CategorySelector categories={categories} onSelect={handleSelectCategory} />
         </section>
       </Container>
