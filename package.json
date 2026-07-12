@@ -9,7 +9,10 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "grammar:validate": "npm run build"
+    "grammar:validate": "npm run build",
+    "grammar:check-ids": "npm run grammar:validate",
+    "grammar:check-references": "npm run grammar:validate",
+    "grammar:test-data": "vitest run src/data/grammar"
   },
   "dependencies": {
     "@google/genai": "^2.11.0",
