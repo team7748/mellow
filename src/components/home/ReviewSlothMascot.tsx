@@ -46,10 +46,10 @@ export const ReviewSlothMascot = forwardRef<
   const [pose, setPose] = useState<Pose>("idle")
   const [revealed, setRevealed] = useState(false)
   const [bubbleVisible, setBubbleVisible] = useState(false)
-  const timersRef = useRef<Set<ReturnType<typeof window.setTimeout>>>(new Set())
-  const actionResetRef = useRef<ReturnType<typeof window.setTimeout> | null>(null)
+  const timersRef = useRef<Set<number>>(new Set())
+  const actionResetRef = useRef<number | null>(null)
 
-  const clearTimer = (timer: ReturnType<typeof window.setTimeout>) => {
+  const clearTimer = (timer: number) => {
     window.clearTimeout(timer)
     timersRef.current.delete(timer)
   }
@@ -133,7 +133,7 @@ export const ReviewSlothMascot = forwardRef<
         }, 320)
       },
     }),
-    [ref, visible],
+    [visible],
   )
 
   if (!visible) return null
