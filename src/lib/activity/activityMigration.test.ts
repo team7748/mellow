@@ -59,4 +59,31 @@ describe("004_learning_activity_events migration", () => {
     expect(sql).toContain("tablename = 'learning_activity_events'")
     expect(sql).toContain("drop policy if exists")
   })
+
+  it("rejects legacy null rows before promoting required columns to NOT NULL", () => {
+    expect(sql).toContain("raise exception")
+    expect(sql).toContain("learning_activity_events contains null required fields")
+    expect(sql).toMatch(
+      /alter table public\.learning_activity_events[\s\S]+alter column user_id set not null/,
+    )
+    expect(sql).toMatch(
+      /alter table public\.learning_activity_events[\s\S]+alter column kind set not null/,
+    )
+    expect(sql).toMatch(
+      /alter table public\.learning_activity_events[\s\S]+alter column mode set not null/,
+    )
+    expect(sql).toMatch(
+      /alter table public\.learning_activity_events[\s\S]+alter column entity_id set not null/,
+    )
+    expect(sql).toMatch(
+      /alter table public\.learning_activity_events[\s\S]+alter column occurred_at set not null/,
+    )
+    expect(sql).toMatch(
+      /alter table public\.learning_activity_events[\s\S]+alter column local_date set not null/,
+    )
+    expect(sql).toMatch(
+      /alter table public\.learning_activity_events[\s\S]+alter column timezone_offset_minutes set not null/,
+    )
+    expect(sql).not.toMatch(/update\s+public\.learning_activity_events\s+set\s+user_id\s*=/)
+  })
 })

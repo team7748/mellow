@@ -35,6 +35,39 @@ ALTER TABLE public.learning_activity_events
 
 DO $$
 BEGIN
+  IF EXISTS (
+    SELECT 1
+    FROM public.learning_activity_events
+    WHERE id IS NULL
+      OR user_id IS NULL
+      OR kind IS NULL
+      OR mode IS NULL
+      OR entity_id IS NULL
+      OR occurred_at IS NULL
+      OR local_date IS NULL
+      OR timezone_offset_minutes IS NULL
+      OR metadata IS NULL
+      OR created_at IS NULL
+  ) THEN
+    RAISE EXCEPTION
+      'learning_activity_events contains null required fields; backfill existing rows before applying migration';
+  END IF;
+END;
+$$;
+
+ALTER TABLE public.learning_activity_events
+  ALTER COLUMN user_id SET NOT NULL,
+  ALTER COLUMN kind SET NOT NULL,
+  ALTER COLUMN mode SET NOT NULL,
+  ALTER COLUMN entity_id SET NOT NULL,
+  ALTER COLUMN occurred_at SET NOT NULL,
+  ALTER COLUMN local_date SET NOT NULL,
+  ALTER COLUMN timezone_offset_minutes SET NOT NULL,
+  ALTER COLUMN metadata SET NOT NULL,
+  ALTER COLUMN created_at SET NOT NULL;
+
+DO $$
+BEGIN
   IF NOT EXISTS (
     SELECT 1
     FROM pg_constraint
