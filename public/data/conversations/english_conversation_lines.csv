@@ -1,0 +1,551 @@
+﻿category_id,category_title,category_thai,conversation_id,conversation_no,conversation_title,line_no,speaker,english,thai
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_01_waking-up,1,Waking Up,1,A,Good morning. Are you awake?,อรุณสวัสดิ์ ตื่นหรือยัง
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_01_waking-up,1,Waking Up,2,B,"Yes, I just woke up.",ตื่นแล้ว เพิ่งตื่นเมื่อกี้
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_01_waking-up,1,Waking Up,3,A,What time is it now?,ตอนนี้กี่โมงแล้ว
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_01_waking-up,1,Waking Up,4,B,It is six thirty.,หกโมงครึ่งแล้ว
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_01_waking-up,1,Waking Up,5,A,We should get up soon.,เราควรลุกจากเตียงได้แล้ว
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_01_waking-up,1,Waking Up,6,B,"I know, but I am still sleepy.",รู้แล้ว แต่ฉันยังง่วงอยู่
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_01_waking-up,1,Waking Up,7,A,Do you want five more minutes?,อยากนอนต่ออีกห้านาทีไหม
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_01_waking-up,1,Waking Up,8,B,"Yes, please. Wake me up again.",เอาสิ ปลุกฉันอีกทีนะ
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_01_waking-up,1,Waking Up,9,A,"Okay, but don’t be late.",โอเค แต่อย่าสายนะ
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_01_waking-up,1,Waking Up,10,B,I won’t. I’ll get ready quickly.,ไม่สายหรอก เดี๋ยวฉันจะรีบเตรียมตัว
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_02_getting-ready,2,Getting Ready,1,A,Are you ready for work?,พร้อมไปทำงานหรือยัง
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_02_getting-ready,2,Getting Ready,2,B,Not yet. I need to take a shower.,ยังเลย ฉันต้องอาบน้ำก่อน
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_02_getting-ready,2,Getting Ready,3,A,Did you brush your teeth?,แปรงฟันหรือยัง
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_02_getting-ready,2,Getting Ready,4,B,"Yes, I already did.",แปรงแล้วเรียบร้อย
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_02_getting-ready,2,Getting Ready,5,A,What are you going to wear today?,วันนี้จะใส่อะไร
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_02_getting-ready,2,Getting Ready,6,B,I’ll wear a white shirt and black pants.,ฉันจะใส่เสื้อเชิ้ตสีขาวกับกางเกงสีดำ
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_02_getting-ready,2,Getting Ready,7,A,That looks neat and professional.,ดูเรียบร้อยและเป็นมืออาชีพดี
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_02_getting-ready,2,Getting Ready,8,B,Thanks. I have a meeting today.,ขอบคุณ วันนี้ฉันมีประชุม
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_02_getting-ready,2,Getting Ready,9,A,Don’t forget your bag.,อย่าลืมกระเป๋านะ
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_02_getting-ready,2,Getting Ready,10,B,Thanks for reminding me.,ขอบคุณที่เตือนนะ
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_03_breakfast,3,Breakfast,1,A,What do you want for breakfast?,อยากกินอะไรเป็นอาหารเช้า
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_03_breakfast,3,Breakfast,2,B,I want eggs and toast.,ฉันอยากกินไข่กับขนมปังปิ้ง
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_03_breakfast,3,Breakfast,3,A,Do you want coffee too?,เอากาแฟด้วยไหม
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_03_breakfast,3,Breakfast,4,B,"Yes, but not too sweet.",เอา แต่ไม่หวานมากนะ
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_03_breakfast,3,Breakfast,5,A,Do you have enough time to eat?,มีเวลากินพอไหม
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_03_breakfast,3,Breakfast,6,B,"Yes, I have about twenty minutes.",มี ประมาณยี่สิบนาที
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_03_breakfast,3,Breakfast,7,A,That should be enough.,น่าจะพอแล้ว
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_03_breakfast,3,Breakfast,8,B,I don’t want to skip breakfast.,ฉันไม่อยากข้ามมื้อเช้า
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_03_breakfast,3,Breakfast,9,A,Good. Breakfast gives you energy.,ดีเลย อาหารเช้าช่วยให้มีพลังงาน
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_03_breakfast,3,Breakfast,10,B,Exactly. I feel better when I eat.,ใช่เลย ฉันรู้สึกดีขึ้นเวลาฉันกิน
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_04_leaving-home,4,Leaving Home,1,A,Are you leaving now?,จะออกจากบ้านตอนนี้เลยไหม
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_04_leaving-home,4,Leaving Home,2,B,"Yes, I need to catch the bus.",ใช่ ฉันต้องไปขึ้นรถบัส
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_04_leaving-home,4,Leaving Home,3,A,Did you take your keys?,เอากุญแจไปหรือยัง
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_04_leaving-home,4,Leaving Home,4,B,"Yes, they are in my pocket.",เอาแล้ว อยู่ในกระเป๋ากางเกง
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_04_leaving-home,4,Leaving Home,5,A,How long is your commute?,เดินทางนานแค่ไหน
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_04_leaving-home,4,Leaving Home,6,B,About forty minutes.,ประมาณสี่สิบนาที
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_04_leaving-home,4,Leaving Home,7,A,Be careful on the road.,ระวังบนถนนด้วยนะ
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_04_leaving-home,4,Leaving Home,8,B,I will. Thanks.,ได้เลย ขอบคุณนะ
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_04_leaving-home,4,Leaving Home,9,A,Have a great day.,ขอให้วันนี้เป็นวันที่ดีนะ
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_04_leaving-home,4,Leaving Home,10,B,You too. See you later.,เธอก็เหมือนกัน แล้วเจอกัน
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_05_morning-plan,5,Morning Plan,1,A,What is your plan for this morning?,เช้านี้มีแผนอะไรบ้าง
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_05_morning-plan,5,Morning Plan,2,B,I need to reply to emails first.,ฉันต้องตอบอีเมลก่อน
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_05_morning-plan,5,Morning Plan,3,A,Do you have a meeting?,มีประชุมไหม
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_05_morning-plan,5,Morning Plan,4,B,"Yes, at nine o’clock.",มี ตอนเก้าโมง
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_05_morning-plan,5,Morning Plan,5,A,Do you need to prepare anything?,ต้องเตรียมอะไรไหม
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_05_morning-plan,5,Morning Plan,6,B,I need to review my notes.,ฉันต้องทบทวนโน้ตของฉัน
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_05_morning-plan,5,Morning Plan,7,A,That sounds important.,ฟังดูสำคัญนะ
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_05_morning-plan,5,Morning Plan,8,B,"Yes, I want to be ready.",ใช่ ฉันอยากพร้อม
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_05_morning-plan,5,Morning Plan,9,A,You can do it.,คุณทำได้แน่นอน
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,morning-routine_05_morning-plan,5,Morning Plan,10,B,Thanks. I’ll do my best.,ขอบคุณ ฉันจะทำให้ดีที่สุด
+customer-service,Customer Service,บริการลูกค้า,customer-service_01_greeting-a-customer,1,Greeting a Customer,1,A,Good afternoon. How can I help you today?,สวัสดีตอนบ่าย วันนี้ให้ช่วยอะไรได้บ้างครับ/คะ
+customer-service,Customer Service,บริการลูกค้า,customer-service_01_greeting-a-customer,1,Greeting a Customer,2,B,"Hi, I’m looking for my order.",สวัสดี ฉันกำลังตามหาคำสั่งซื้อของฉัน
+customer-service,Customer Service,บริการลูกค้า,customer-service_01_greeting-a-customer,1,Greeting a Customer,3,A,Sure. May I have your order number?,ได้เลย ขอเลขคำสั่งซื้อได้ไหมครับ/คะ
+customer-service,Customer Service,บริการลูกค้า,customer-service_01_greeting-a-customer,1,Greeting a Customer,4,B,"Yes, it is 2458.",ได้ หมายเลขคือ 2458
+customer-service,Customer Service,บริการลูกค้า,customer-service_01_greeting-a-customer,1,Greeting a Customer,5,A,Thank you. Please wait a moment.,ขอบคุณ กรุณารอสักครู่
+customer-service,Customer Service,บริการลูกค้า,customer-service_01_greeting-a-customer,1,Greeting a Customer,6,B,No problem.,ได้เลย
+customer-service,Customer Service,บริการลูกค้า,customer-service_01_greeting-a-customer,1,Greeting a Customer,7,A,Your order is out for delivery today.,คำสั่งซื้อของคุณกำลังจัดส่งวันนี้
+customer-service,Customer Service,บริการลูกค้า,customer-service_01_greeting-a-customer,1,Greeting a Customer,8,B,Great. What time will it arrive?,ดีมาก จะมาถึงกี่โมง
+customer-service,Customer Service,บริการลูกค้า,customer-service_01_greeting-a-customer,1,Greeting a Customer,9,A,It should arrive before six p.m.,น่าจะมาถึงก่อนหกโมงเย็น
+customer-service,Customer Service,บริการลูกค้า,customer-service_01_greeting-a-customer,1,Greeting a Customer,10,B,Thank you for your help.,ขอบคุณที่ช่วยนะ
+customer-service,Customer Service,บริการลูกค้า,customer-service_02_handling-a-complaint,2,Handling a Complaint,1,A,What seems to be the problem?,ปัญหาคืออะไรครับ/คะ
+customer-service,Customer Service,บริการลูกค้า,customer-service_02_handling-a-complaint,2,Handling a Complaint,2,B,The item I received is damaged.,สินค้าที่ฉันได้รับเสียหาย
+customer-service,Customer Service,บริการลูกค้า,customer-service_02_handling-a-complaint,2,Handling a Complaint,3,A,I’m sorry to hear that.,เสียใจด้วยนะครับ/คะ
+customer-service,Customer Service,บริการลูกค้า,customer-service_02_handling-a-complaint,2,Handling a Complaint,4,B,Can I get a replacement?,ฉันขอเปลี่ยนสินค้าได้ไหม
+customer-service,Customer Service,บริการลูกค้า,customer-service_02_handling-a-complaint,2,Handling a Complaint,5,A,"Yes, we can replace it for you.",ได้ครับ/ค่ะ เราเปลี่ยนให้คุณได้
+customer-service,Customer Service,บริการลูกค้า,customer-service_02_handling-a-complaint,2,Handling a Complaint,6,B,Do I need to send the old one back?,ฉันต้องส่งของเก่ากลับไหม
+customer-service,Customer Service,บริการลูกค้า,customer-service_02_handling-a-complaint,2,Handling a Complaint,7,A,"Yes, please send it back with the receipt.",ใช่ กรุณาส่งกลับพร้อมใบเสร็จ
+customer-service,Customer Service,บริการลูกค้า,customer-service_02_handling-a-complaint,2,Handling a Complaint,8,B,"Okay, I can do that.",โอเค ฉันทำได้
+customer-service,Customer Service,บริการลูกค้า,customer-service_02_handling-a-complaint,2,Handling a Complaint,9,A,We apologize for the inconvenience.,ขออภัยในความไม่สะดวก
+customer-service,Customer Service,บริการลูกค้า,customer-service_02_handling-a-complaint,2,Handling a Complaint,10,B,Thank you for solving this.,ขอบคุณที่ช่วยแก้ปัญหานี้
+customer-service,Customer Service,บริการลูกค้า,customer-service_03_refund-request,3,Refund Request,1,A,How may I assist you?,ให้ช่วยอย่างไรดีครับ/คะ
+customer-service,Customer Service,บริการลูกค้า,customer-service_03_refund-request,3,Refund Request,2,B,I would like to ask for a refund.,ฉันอยากขอคืนเงิน
+customer-service,Customer Service,บริการลูกค้า,customer-service_03_refund-request,3,Refund Request,3,A,May I ask why?,ขอทราบเหตุผลได้ไหม
+customer-service,Customer Service,บริการลูกค้า,customer-service_03_refund-request,3,Refund Request,4,B,The product does not work.,สินค้าใช้งานไม่ได้
+customer-service,Customer Service,บริการลูกค้า,customer-service_03_refund-request,3,Refund Request,5,A,I understand. Do you have the receipt?,เข้าใจครับ/ค่ะ คุณมีใบเสร็จไหม
+customer-service,Customer Service,บริการลูกค้า,customer-service_03_refund-request,3,Refund Request,6,B,"Yes, here it is.",มี นี่ครับ/ค่ะ
+customer-service,Customer Service,บริการลูกค้า,customer-service_03_refund-request,3,Refund Request,7,A,Thank you. We can process the refund today.,ขอบคุณ เราดำเนินการคืนเงินให้วันนี้ได้
+customer-service,Customer Service,บริการลูกค้า,customer-service_03_refund-request,3,Refund Request,8,B,How long will it take?,ใช้เวลานานแค่ไหน
+customer-service,Customer Service,บริการลูกค้า,customer-service_03_refund-request,3,Refund Request,9,A,It usually takes three to five business days.,ปกติใช้เวลาสามถึงห้าวันทำการ
+customer-service,Customer Service,บริการลูกค้า,customer-service_03_refund-request,3,Refund Request,10,B,That’s fine. Thank you.,ได้เลย ขอบคุณ
+customer-service,Customer Service,บริการลูกค้า,customer-service_04_product-information,4,Product Information,1,A,Are you looking for anything specific?,กำลังมองหาอะไรเป็นพิเศษไหมครับ/คะ
+customer-service,Customer Service,บริการลูกค้า,customer-service_04_product-information,4,Product Information,2,B,"Yes, I need a phone charger.",ใช่ ฉันต้องการที่ชาร์จโทรศัพท์
+customer-service,Customer Service,บริการลูกค้า,customer-service_04_product-information,4,Product Information,3,A,What type of phone do you use?,คุณใช้โทรศัพท์รุ่นไหน
+customer-service,Customer Service,บริการลูกค้า,customer-service_04_product-information,4,Product Information,4,B,I use an Android phone.,ฉันใช้โทรศัพท์แอนดรอยด์
+customer-service,Customer Service,บริการลูกค้า,customer-service_04_product-information,4,Product Information,5,A,This charger should work with your phone.,ที่ชาร์จนี้น่าจะใช้กับโทรศัพท์คุณได้
+customer-service,Customer Service,บริการลูกค้า,customer-service_04_product-information,4,Product Information,6,B,Is it fast charging?,เป็นแบบชาร์จเร็วไหม
+customer-service,Customer Service,บริการลูกค้า,customer-service_04_product-information,4,Product Information,7,A,"Yes, it supports fast charging.",ใช่ รองรับชาร์จเร็ว
+customer-service,Customer Service,บริการลูกค้า,customer-service_04_product-information,4,Product Information,8,B,How much is it?,ราคาเท่าไหร่
+customer-service,Customer Service,บริการลูกค้า,customer-service_04_product-information,4,Product Information,9,A,It is 350 baht.,ราคา 350 บาท
+customer-service,Customer Service,บริการลูกค้า,customer-service_04_product-information,4,Product Information,10,B,"Okay, I’ll take it.",โอเค เอาอันนี้
+customer-service,Customer Service,บริการลูกค้า,customer-service_05_closing-service,5,Closing Service,1,A,Is there anything else I can help you with?,มีอะไรให้ช่วยเพิ่มเติมไหมครับ/คะ
+customer-service,Customer Service,บริการลูกค้า,customer-service_05_closing-service,5,Closing Service,2,B,"No, that’s all for now.",ไม่มีแล้ว ตอนนี้พอแล้ว
+customer-service,Customer Service,บริการลูกค้า,customer-service_05_closing-service,5,Closing Service,3,A,Thank you for visiting us.,ขอบคุณที่มาใช้บริการ
+customer-service,Customer Service,บริการลูกค้า,customer-service_05_closing-service,5,Closing Service,4,B,Thank you for your support.,ขอบคุณสำหรับการช่วยเหลือ
+customer-service,Customer Service,บริการลูกค้า,customer-service_05_closing-service,5,Closing Service,5,A,We hope you enjoy the product.,หวังว่าคุณจะชอบสินค้านะครับ/คะ
+customer-service,Customer Service,บริการลูกค้า,customer-service_05_closing-service,5,Closing Service,6,B,I think I will.,ฉันคิดว่าน่าจะชอบ
+customer-service,Customer Service,บริการลูกค้า,customer-service_05_closing-service,5,Closing Service,7,A,Have a nice day.,ขอให้เป็นวันที่ดี
+customer-service,Customer Service,บริการลูกค้า,customer-service_05_closing-service,5,Closing Service,8,B,You too.,คุณก็เช่นกัน
+customer-service,Customer Service,บริการลูกค้า,customer-service_05_closing-service,5,Closing Service,9,A,Please come again.,โอกาสหน้าเชิญใหม่นะครับ/คะ
+customer-service,Customer Service,บริการลูกค้า,customer-service_05_closing-service,5,Closing Service,10,B,Sure. Goodbye.,แน่นอน ลาก่อน
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_01_self-introduction,1,Self Introduction,1,A,Please tell me about yourself.,กรุณาแนะนำตัวให้ฟังหน่อย
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_01_self-introduction,1,Self Introduction,2,B,My name is Team. I recently graduated in business administration.,ผมชื่อทีม เพิ่งจบด้านบริหารธุรกิจ
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_01_self-introduction,1,Self Introduction,3,A,What kind of work are you interested in?,คุณสนใจงานแบบไหน
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_01_self-introduction,1,Self Introduction,4,B,I am interested in marketing and content creation.,ผมสนใจงานการตลาดและการสร้างคอนเทนต์
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_01_self-introduction,1,Self Introduction,5,A,Why are you interested in this field?,ทำไมถึงสนใจสายงานนี้
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_01_self-introduction,1,Self Introduction,6,B,I enjoy understanding customers and creating useful content.,ผมชอบเข้าใจลูกค้าและสร้างคอนเทนต์ที่มีประโยชน์
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_01_self-introduction,1,Self Introduction,7,A,Do you have any related experience?,มีประสบการณ์ที่เกี่ยวข้องไหม
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_01_self-introduction,1,Self Introduction,8,B,I have created short videos and used AI tools to improve my work.,ผมเคยทำวิดีโอสั้นและใช้เครื่องมือ AI ช่วยพัฒนางาน
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_01_self-introduction,1,Self Introduction,9,A,That sounds interesting.,ฟังดูน่าสนใจ
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_01_self-introduction,1,Self Introduction,10,B,Thank you. I am ready to learn and grow.,ขอบคุณครับ ผมพร้อมเรียนรู้และเติบโต
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_02_strengths,2,Strengths,1,A,What are your strengths?,จุดแข็งของคุณคืออะไร
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_02_strengths,2,Strengths,2,B,I learn quickly and adapt well.,ผมเรียนรู้เร็วและปรับตัวได้ดี
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_02_strengths,2,Strengths,3,A,Can you give me an example?,ยกตัวอย่างได้ไหม
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_02_strengths,2,Strengths,4,B,"When I learn a new tool, I practice until I can use it well.",เวลาผมเรียนเครื่องมือใหม่ ผมฝึกจนใช้งานได้ดี
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_02_strengths,2,Strengths,5,A,How do you work with a team?,คุณทำงานเป็นทีมอย่างไร
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_02_strengths,2,Strengths,6,B,I listen to others and communicate clearly.,ผมรับฟังคนอื่นและสื่อสารให้ชัดเจน
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_02_strengths,2,Strengths,7,A,What do you do when there is a problem?,เวลามีปัญหาคุณทำอย่างไร
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_02_strengths,2,Strengths,8,B,I stay calm and look for a practical solution.,ผมตั้งสติและหาทางแก้ที่ใช้ได้จริง
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_02_strengths,2,Strengths,9,A,That is a good attitude.,นั่นเป็นทัศนคติที่ดี
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_02_strengths,2,Strengths,10,B,Thank you. I always try to improve.,ขอบคุณครับ ผมพยายามพัฒนาตัวเองเสมอ
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_03_work-experience,3,Work Experience,1,A,Do you have work experience?,คุณมีประสบการณ์ทำงานไหม
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_03_work-experience,3,Work Experience,2,B,I have experience with online content and customer communication.,ผมมีประสบการณ์ด้านคอนเทนต์ออนไลน์และการสื่อสารกับลูกค้า
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_03_work-experience,3,Work Experience,3,A,What tasks did you do?,คุณทำงานอะไรบ้าง
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_03_work-experience,3,Work Experience,4,B,"I planned posts, edited videos, and replied to messages.",ผมวางแผนโพสต์ ตัดต่อวิดีโอ และตอบข้อความ
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_03_work-experience,3,Work Experience,5,A,What did you learn from that?,คุณเรียนรู้อะไรจากงานนั้น
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_03_work-experience,3,Work Experience,6,B,I learned to be responsible and work on time.,ผมเรียนรู้เรื่องความรับผิดชอบและการทำงานให้ตรงเวลา
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_03_work-experience,3,Work Experience,7,A,Can you handle feedback?,คุณรับคำติชมได้ไหม
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_03_work-experience,3,Work Experience,8,B,"Yes, I use feedback to improve my work.",ได้ครับ ผมใช้คำติชมเพื่อพัฒนางาน
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_03_work-experience,3,Work Experience,9,A,That is important here.,สิ่งนั้นสำคัญกับที่นี่
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_03_work-experience,3,Work Experience,10,B,"I understand, and I am willing to learn.",ผมเข้าใจ และผมเต็มใจเรียนรู้
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_04_salary-and-start-date,4,Salary and Start Date,1,A,What salary do you expect?,คุณคาดหวังเงินเดือนเท่าไหร่
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_04_salary-and-start-date,4,Salary and Start Date,2,B,I am open to discussing a fair starting salary.,ผมเปิดรับการพูดคุยเรื่องเงินเดือนเริ่มต้นที่เหมาะสม
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_04_salary-and-start-date,4,Salary and Start Date,3,A,Do you have a range in mind?,มีช่วงเงินเดือนในใจไหม
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_04_salary-and-start-date,4,Salary and Start Date,4,B,"I expect around 18,000 to 22,000 baht, depending on the role.","ผมคาดหวังประมาณ 18,000 ถึง 22,000 บาท ขึ้นอยู่กับหน้าที่"
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_04_salary-and-start-date,4,Salary and Start Date,5,A,When can you start working?,คุณเริ่มงานได้เมื่อไหร่
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_04_salary-and-start-date,4,Salary and Start Date,6,B,I can start immediately.,ผมเริ่มได้ทันที
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_04_salary-and-start-date,4,Salary and Start Date,7,A,Are you available for full-time work?,คุณพร้อมทำงานเต็มเวลาไหม
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_04_salary-and-start-date,4,Salary and Start Date,8,B,"Yes, I am available full time.",พร้อมครับ ผมทำงานเต็มเวลาได้
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_04_salary-and-start-date,4,Salary and Start Date,9,A,Thank you for your answer.,ขอบคุณสำหรับคำตอบ
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_04_salary-and-start-date,4,Salary and Start Date,10,B,Thank you for the opportunity.,ขอบคุณสำหรับโอกาสครับ
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_05_asking-questions,5,Asking Questions,1,A,Do you have any questions for us?,คุณมีคำถามอะไรถึงเราไหม
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_05_asking-questions,5,Asking Questions,2,B,"Yes, what would be my main responsibilities?",มีครับ หน้าที่หลักของผมจะมีอะไรบ้าง
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_05_asking-questions,5,Asking Questions,3,A,You would help with content planning and customer engagement.,คุณจะช่วยวางแผนคอนเทนต์และดูแลการมีส่วนร่วมของลูกค้า
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_05_asking-questions,5,Asking Questions,4,B,That sounds good. Will there be training?,ฟังดูดีครับ จะมีการฝึกอบรมไหม
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_05_asking-questions,5,Asking Questions,5,A,"Yes, we provide training for new employees.",มี เรามีการฝึกอบรมสำหรับพนักงานใหม่
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_05_asking-questions,5,Asking Questions,6,B,Great. How do you measure success in this role?,ดีมากครับ ตำแหน่งนี้วัดความสำเร็จอย่างไร
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_05_asking-questions,5,Asking Questions,7,A,"We look at content quality, teamwork, and results.",เราดูคุณภาพคอนเทนต์ การทำงานเป็นทีม และผลลัพธ์
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_05_asking-questions,5,Asking Questions,8,B,I understand. That helps me prepare.,เข้าใจครับ สิ่งนี้ช่วยให้ผมเตรียมตัวได้
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_05_asking-questions,5,Asking Questions,9,A,Thank you for coming today.,ขอบคุณที่มาวันนี้
+job-interview,Job Interview,สัมภาษณ์งาน,job-interview_05_asking-questions,5,Asking Questions,10,B,Thank you for interviewing me.,ขอบคุณที่สัมภาษณ์ผมครับ
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_01_after-work,1,After Work,1,A,What do you usually do after work?,ปกติหลังเลิกงานคุณทำอะไร
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_01_after-work,1,After Work,2,B,I usually go home and rest.,ปกติฉันกลับบ้านและพักผ่อน
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_01_after-work,1,After Work,3,A,Do you cook dinner?,คุณทำอาหารเย็นไหม
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_01_after-work,1,After Work,4,B,"Sometimes I cook, but sometimes I buy food.",บางครั้งฉันทำอาหาร แต่บางครั้งก็ซื้อกิน
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_01_after-work,1,After Work,5,A,Do you exercise after work?,คุณออกกำลังกายหลังเลิกงานไหม
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_01_after-work,1,After Work,6,B,"Yes, I go to the gym three times a week.",ใช่ ฉันไปยิมสัปดาห์ละสามครั้ง
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_01_after-work,1,After Work,7,A,That is a good habit.,นั่นเป็นนิสัยที่ดี
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_01_after-work,1,After Work,8,B,Thanks. It helps me feel better.,ขอบคุณ มันช่วยให้ฉันรู้สึกดีขึ้น
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_01_after-work,1,After Work,9,A,Do you sleep early?,คุณนอนเร็วไหม
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_01_after-work,1,After Work,10,B,I try to sleep before eleven.,ฉันพยายามนอนก่อนห้าทุ่ม
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_02_doing-laundry,2,Doing Laundry,1,A,Are you doing laundry today?,วันนี้จะซักผ้าไหม
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_02_doing-laundry,2,Doing Laundry,2,B,"Yes, I have a lot of clothes to wash.",ใช่ ฉันมีเสื้อผ้าต้องซักเยอะ
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_02_doing-laundry,2,Doing Laundry,3,A,Do you need detergent?,ต้องใช้น้ำยาซักผ้าไหม
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_02_doing-laundry,2,Doing Laundry,4,B,"Yes, I need to buy some.",ใช่ ฉันต้องซื้อเพิ่ม
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_02_doing-laundry,2,Doing Laundry,5,A,The store near here sells it.,ร้านใกล้ ๆ นี้มีขาย
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_02_doing-laundry,2,Doing Laundry,6,B,Great. I’ll go there later.,ดีเลย เดี๋ยวฉันจะไปทีหลัง
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_02_doing-laundry,2,Doing Laundry,7,A,Don’t forget to dry the clothes.,อย่าลืมตากผ้านะ
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_02_doing-laundry,2,Doing Laundry,8,B,I won’t. The weather is sunny today.,ไม่ลืมหรอก วันนี้แดดดี
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_02_doing-laundry,2,Doing Laundry,9,A,That will help them dry fast.,จะช่วยให้ผ้าแห้งเร็ว
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_02_doing-laundry,2,Doing Laundry,10,B,"Yes, I hope so.",ใช่ หวังว่าจะเป็นอย่างนั้น
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_03_running-errands,3,Running Errands,1,A,Do you have plans today?,วันนี้มีแผนอะไรไหม
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_03_running-errands,3,Running Errands,2,B,"Yes, I need to run some errands.",มี ฉันต้องไปทำธุระหลายอย่าง
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_03_running-errands,3,Running Errands,3,A,Where do you need to go?,ต้องไปที่ไหนบ้าง
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_03_running-errands,3,Running Errands,4,B,I need to go to the bank and the pharmacy.,ฉันต้องไปธนาคารและร้านขายยา
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_03_running-errands,3,Running Errands,5,A,Do you want me to go with you?,อยากให้ฉันไปด้วยไหม
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_03_running-errands,3,Running Errands,6,B,That would be helpful.,ถ้าได้ก็ดีมาก
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_03_running-errands,3,Running Errands,7,A,What time should we leave?,เราควรออกกี่โมง
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_03_running-errands,3,Running Errands,8,B,Let’s leave at ten.,ออกตอนสิบโมงกัน
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_03_running-errands,3,Running Errands,9,A,"Okay, I’ll be ready.",โอเค ฉันจะเตรียมตัวให้พร้อม
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_03_running-errands,3,Running Errands,10,B,Thanks. I appreciate it.,ขอบคุณนะ ฉันซาบซึ้งมาก
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_04_free-time,4,Free Time,1,A,What do you do in your free time?,คุณทำอะไรในเวลาว่าง
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_04_free-time,4,Free Time,2,B,I watch videos and learn new skills.,ฉันดูวิดีโอและเรียนทักษะใหม่ ๆ
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_04_free-time,4,Free Time,3,A,What kind of skills?,ทักษะแบบไหน
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_04_free-time,4,Free Time,4,B,"English, AI tools, and content creation.",ภาษาอังกฤษ เครื่องมือ AI และการทำคอนเทนต์
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_04_free-time,4,Free Time,5,A,That sounds useful.,ฟังดูมีประโยชน์
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_04_free-time,4,Free Time,6,B,"Yes, I want to improve myself.",ใช่ ฉันอยากพัฒนาตัวเอง
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_04_free-time,4,Free Time,7,A,Do you also relax?,แล้วคุณได้พักผ่อนบ้างไหม
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_04_free-time,4,Free Time,8,B,"Yes, I listen to music at night.",ได้พัก ฉันฟังเพลงตอนกลางคืน
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_04_free-time,4,Free Time,9,A,Balance is important.,ความสมดุลสำคัญนะ
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_04_free-time,4,Free Time,10,B,I agree. I try not to work too much.,เห็นด้วย ฉันพยายามไม่ทำงานหนักเกินไป
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_05_making-an-appointment,5,Making an Appointment,1,A,Do you have an appointment today?,วันนี้คุณมีนัดไหม
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_05_making-an-appointment,5,Making an Appointment,2,B,"Yes, I have a doctor’s appointment at two.",มี ฉันมีนัดหมอตอนบ่ายสอง
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_05_making-an-appointment,5,Making an Appointment,3,A,How will you get there?,จะไปอย่างไร
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_05_making-an-appointment,5,Making an Appointment,4,B,I will take a taxi.,ฉันจะนั่งแท็กซี่ไป
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_05_making-an-appointment,5,Making an Appointment,5,A,Do you need any documents?,ต้องใช้เอกสารอะไรไหม
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_05_making-an-appointment,5,Making an Appointment,6,B,I need my ID card and appointment card.,ฉันต้องใช้บัตรประชาชนและใบนัด
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_05_making-an-appointment,5,Making an Appointment,7,A,Please don’t forget them.,อย่าลืมนะ
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_05_making-an-appointment,5,Making an Appointment,8,B,I already put them in my bag.,ฉันใส่ไว้ในกระเป๋าแล้ว
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_05_making-an-appointment,5,Making an Appointment,9,A,Good. I hope everything goes well.,ดีแล้ว หวังว่าทุกอย่างจะเรียบร้อย
+daily-life,Daily Life,ชีวิตประจำวัน,daily-life_05_making-an-appointment,5,Making an Appointment,10,B,Thank you.,ขอบคุณนะ
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_01_meeting-someone,1,Meeting Someone,1,A,"Hi, I’m Alex. Nice to meet you.",สวัสดี ฉันชื่ออเล็กซ์ ยินดีที่ได้รู้จัก
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_01_meeting-someone,1,Meeting Someone,2,B,Nice to meet you too. I’m Team.,ยินดีที่ได้รู้จักเช่นกัน ฉันชื่อทีม
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_01_meeting-someone,1,Meeting Someone,3,A,Is this your first time here?,นี่เป็นครั้งแรกที่คุณมาที่นี่ไหม
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_01_meeting-someone,1,Meeting Someone,4,B,"Yes, it is.",ใช่ ครั้งแรก
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_01_meeting-someone,1,Meeting Someone,5,A,How do you like it so far?,ตอนนี้รู้สึกชอบที่นี่ไหม
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_01_meeting-someone,1,Meeting Someone,6,B,It’s nice and friendly.,ที่นี่ดีและเป็นกันเอง
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_01_meeting-someone,1,Meeting Someone,7,A,I’m glad to hear that.,ดีใจที่ได้ยินแบบนั้น
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_01_meeting-someone,1,Meeting Someone,8,B,Thanks. Everyone seems helpful.,ขอบคุณ ทุกคนดูช่วยเหลือดี
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_01_meeting-someone,1,Meeting Someone,9,A,I hope you enjoy the event.,หวังว่าคุณจะสนุกกับงานนี้
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_01_meeting-someone,1,Meeting Someone,10,B,Thank you. I think I will.,ขอบคุณ ฉันคิดว่าน่าจะสนุก
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_02_weather,2,Weather,1,A,The weather is really hot today.,วันนี้อากาศร้อนมาก
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_02_weather,2,Weather,2,B,"Yes, it is hotter than yesterday.",ใช่ ร้อนกว่าเมื่อวาน
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_02_weather,2,Weather,3,A,Do you like hot weather?,คุณชอบอากาศร้อนไหม
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_02_weather,2,Weather,4,B,Not really. I prefer cool weather.,ไม่ค่อยชอบ ฉันชอบอากาศเย็นมากกว่า
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_02_weather,2,Weather,5,A,Me too. It is easier to go outside.,ฉันก็เหมือนกัน ออกไปข้างนอกง่ายกว่า
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_02_weather,2,Weather,6,B,Exactly. Hot weather makes me tired.,ใช่เลย อากาศร้อนทำให้ฉันเหนื่อย
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_02_weather,2,Weather,7,A,Do you want some water?,เอาน้ำไหม
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_02_weather,2,Weather,8,B,"Yes, please. Thank you.",เอา ขอบคุณนะ
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_02_weather,2,Weather,9,A,Stay hydrated today.,วันนี้ดื่มน้ำให้พอนะ
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_02_weather,2,Weather,10,B,I will.,ได้เลย
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_03_weekend,3,Weekend,1,A,How was your weekend?,สุดสัปดาห์ของคุณเป็นอย่างไรบ้าง
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_03_weekend,3,Weekend,2,B,It was relaxing.,ผ่อนคลายดี
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_03_weekend,3,Weekend,3,A,What did you do?,คุณทำอะไรบ้าง
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_03_weekend,3,Weekend,4,B,I stayed home and watched movies.,ฉันอยู่บ้านและดูหนัง
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_03_weekend,3,Weekend,5,A,That sounds nice.,ฟังดูดีนะ
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_03_weekend,3,Weekend,6,B,"Yes, I needed a break.",ใช่ ฉันต้องการพัก
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_03_weekend,3,Weekend,7,A,Did you go anywhere?,ได้ไปไหนไหม
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_03_weekend,3,Weekend,8,B,"No, I just rested.",ไม่ได้ไปไหน แค่พักผ่อน
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_03_weekend,3,Weekend,9,A,Sometimes that is the best plan.,บางครั้งนั่นคือแผนที่ดีที่สุด
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_03_weekend,3,Weekend,10,B,I agree.,เห็นด้วย
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_04_hobbies,4,Hobbies,1,A,What do you like to do for fun?,คุณชอบทำอะไรเพื่อความสนุก
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_04_hobbies,4,Hobbies,2,B,I like going to the gym.,ฉันชอบไปยิม
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_04_hobbies,4,Hobbies,3,A,How often do you go?,ไปบ่อยแค่ไหน
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_04_hobbies,4,Hobbies,4,B,About five times a week.,ประมาณสัปดาห์ละห้าครั้ง
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_04_hobbies,4,Hobbies,5,A,"Wow, that is impressive.",ว้าว น่าประทับใจมาก
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_04_hobbies,4,Hobbies,6,B,Thanks. It helps me stay focused.,ขอบคุณ มันช่วยให้ฉันมีสมาธิ
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_04_hobbies,4,Hobbies,7,A,Do you have other hobbies?,มีงานอดิเรกอื่นไหม
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_04_hobbies,4,Hobbies,8,B,I also like learning English.,ฉันชอบเรียนภาษาอังกฤษด้วย
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_04_hobbies,4,Hobbies,9,A,That is very useful.,นั่นมีประโยชน์มาก
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_04_hobbies,4,Hobbies,10,B,"Yes, I want to speak better.",ใช่ ฉันอยากพูดให้ดีขึ้น
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_05_recent-news,5,Recent News,1,A,Have you been busy recently?,ช่วงนี้คุณยุ่งไหม
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_05_recent-news,5,Recent News,2,B,"Yes, I have been working on a project.",ใช่ ฉันกำลังทำโปรเจกต์อยู่
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_05_recent-news,5,Recent News,3,A,What kind of project?,โปรเจกต์แบบไหน
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_05_recent-news,5,Recent News,4,B,It is an English learning website.,เป็นเว็บไซต์เรียนภาษาอังกฤษ
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_05_recent-news,5,Recent News,5,A,That sounds exciting.,ฟังดูน่าตื่นเต้น
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_05_recent-news,5,Recent News,6,B,"It is, but it takes a lot of time.",ใช่ แต่มันใช้เวลามาก
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_05_recent-news,5,Recent News,7,A,Are you enjoying it?,คุณสนุกกับมันไหม
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_05_recent-news,5,Recent News,8,B,"Yes, I’m learning a lot.",สนุก ฉันได้เรียนรู้เยอะมาก
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_05_recent-news,5,Recent News,9,A,That’s great. Keep going.,ดีมาก ทำต่อไปนะ
+small-talk,Small Talk,คุยเล่นทั่วไป,small-talk_05_recent-news,5,Recent News,10,B,Thanks. I will.,ขอบคุณ ฉันจะทำต่อ
+food,Food,อาหาร,food_01_choosing-food,1,Choosing Food,1,A,What would you like to eat?,อยากกินอะไร
+food,Food,อาหาร,food_01_choosing-food,1,Choosing Food,2,B,I’m not sure yet.,ยังไม่แน่ใจเลย
+food,Food,อาหาร,food_01_choosing-food,1,Choosing Food,3,A,Do you want Thai food or Japanese food?,อยากกินอาหารไทยหรืออาหารญี่ปุ่น
+food,Food,อาหาร,food_01_choosing-food,1,Choosing Food,4,B,Thai food sounds good.,อาหารไทยก็ดีนะ
+food,Food,อาหาร,food_01_choosing-food,1,Choosing Food,5,A,Do you like spicy food?,คุณชอบอาหารเผ็ดไหม
+food,Food,อาหาร,food_01_choosing-food,1,Choosing Food,6,B,"Yes, but not too spicy.",ชอบ แต่ไม่เผ็ดเกินไป
+food,Food,อาหาร,food_01_choosing-food,1,Choosing Food,7,A,How about basil chicken with rice?,ข้าวกะเพราไก่ดีไหม
+food,Food,อาหาร,food_01_choosing-food,1,Choosing Food,8,B,That sounds delicious.,ฟังดูอร่อย
+food,Food,อาหาร,food_01_choosing-food,1,Choosing Food,9,A,Let’s order that.,สั่งอันนั้นกัน
+food,Food,อาหาร,food_01_choosing-food,1,Choosing Food,10,B,"Okay, I’m hungry now.",โอเค ตอนนี้ฉันหิวแล้ว
+food,Food,อาหาร,food_02_at-a-restaurant,2,At a Restaurant,1,A,Good evening. A table for two?,สวัสดีตอนเย็น โต๊ะสำหรับสองท่านใช่ไหมครับ/คะ
+food,Food,อาหาร,food_02_at-a-restaurant,2,At a Restaurant,2,B,"Yes, please.",ใช่ครับ/ค่ะ
+food,Food,อาหาร,food_02_at-a-restaurant,2,At a Restaurant,3,A,Please follow me.,กรุณาตามมาครับ/ค่ะ
+food,Food,อาหาร,food_02_at-a-restaurant,2,At a Restaurant,4,B,Thank you.,ขอบคุณ
+food,Food,อาหาร,food_02_at-a-restaurant,2,At a Restaurant,5,A,Here is the menu.,นี่คือเมนูครับ/ค่ะ
+food,Food,อาหาร,food_02_at-a-restaurant,2,At a Restaurant,6,B,Can you recommend something popular?,ช่วยแนะนำเมนูยอดนิยมได้ไหม
+food,Food,อาหาร,food_02_at-a-restaurant,2,At a Restaurant,7,A,The grilled chicken is very popular.,ไก่ย่างเป็นเมนูยอดนิยมมาก
+food,Food,อาหาร,food_02_at-a-restaurant,2,At a Restaurant,8,B,Great. I’ll try that.,ดีเลย ฉันจะลองเมนูนั้น
+food,Food,อาหาร,food_02_at-a-restaurant,2,At a Restaurant,9,A,Would you like anything to drink?,ต้องการเครื่องดื่มอะไรไหม
+food,Food,อาหาร,food_02_at-a-restaurant,2,At a Restaurant,10,B,"Just water, please.",ขอน้ำเปล่าครับ/ค่ะ
+food,Food,อาหาร,food_03_ordering-food,3,Ordering Food,1,A,Are you ready to order?,พร้อมสั่งอาหารหรือยังครับ/คะ
+food,Food,อาหาร,food_03_ordering-food,3,Ordering Food,2,B,"Yes, I would like fried rice.",พร้อมแล้ว ฉันขอข้าวผัด
+food,Food,อาหาร,food_03_ordering-food,3,Ordering Food,3,A,"Would you like chicken, pork, or shrimp?",ต้องการไก่ หมู หรือกุ้ง
+food,Food,อาหาร,food_03_ordering-food,3,Ordering Food,4,B,"Chicken, please.",ขอไก่
+food,Food,อาหาร,food_03_ordering-food,3,Ordering Food,5,A,Anything else?,รับอะไรเพิ่มไหม
+food,Food,อาหาร,food_03_ordering-food,3,Ordering Food,6,B,Can I have a fried egg on top?,ขอไข่ดาวโปะหน้าได้ไหม
+food,Food,อาหาร,food_03_ordering-food,3,Ordering Food,7,A,Of course.,ได้แน่นอน
+food,Food,อาหาร,food_03_ordering-food,3,Ordering Food,8,B,"And one iced tea, please.",แล้วก็ชามะนาวเย็นหนึ่งแก้ว
+food,Food,อาหาร,food_03_ordering-food,3,Ordering Food,9,A,Sure. Your food will be ready soon.,ได้ครับ/ค่ะ อาหารจะพร้อมเร็ว ๆ นี้
+food,Food,อาหาร,food_03_ordering-food,3,Ordering Food,10,B,Thank you.,ขอบคุณ
+food,Food,อาหาร,food_04_taste,4,Taste,1,A,How is the food?,อาหารเป็นอย่างไรบ้าง
+food,Food,อาหาร,food_04_taste,4,Taste,2,B,It is delicious.,อร่อยมาก
+food,Food,อาหาร,food_04_taste,4,Taste,3,A,Is it too spicy?,เผ็ดเกินไปไหม
+food,Food,อาหาร,food_04_taste,4,Taste,4,B,"No, it is just right.",ไม่เลย กำลังพอดี
+food,Food,อาหาร,food_04_taste,4,Taste,5,A,Do you want more rice?,เอาข้าวเพิ่มไหม
+food,Food,อาหาร,food_04_taste,4,Taste,6,B,"No, thank you. I’m almost full.",ไม่เอา ขอบคุณ ฉันเกือบอิ่มแล้ว
+food,Food,อาหาร,food_04_taste,4,Taste,7,A,I like the soup.,ฉันชอบซุปนี้
+food,Food,อาหาร,food_04_taste,4,Taste,8,B,Me too. It has a nice flavor.,ฉันก็ชอบ รสชาติดี
+food,Food,อาหาร,food_04_taste,4,Taste,9,A,We should come here again.,เราควรมาที่นี่อีกนะ
+food,Food,อาหาร,food_04_taste,4,Taste,10,B,Definitely.,แน่นอน
+food,Food,อาหาร,food_05_paying-the-bill,5,Paying the Bill,1,A,"Can I have the bill, please?",ขอบิลหน่อยได้ไหมครับ/คะ
+food,Food,อาหาร,food_05_paying-the-bill,5,Paying the Bill,2,B,"Sure. One moment, please.",ได้ครับ/ค่ะ รอสักครู่
+food,Food,อาหาร,food_05_paying-the-bill,5,Paying the Bill,3,A,Do you accept QR payment?,รับจ่ายผ่านคิวอาร์ไหม
+food,Food,อาหาร,food_05_paying-the-bill,5,Paying the Bill,4,B,"Yes, we do.",รับครับ/ค่ะ
+food,Food,อาหาร,food_05_paying-the-bill,5,Paying the Bill,5,A,Great. How much is it?,ดีเลย ทั้งหมดเท่าไหร่
+food,Food,อาหาร,food_05_paying-the-bill,5,Paying the Bill,6,B,It is 280 baht.,ทั้งหมด 280 บาท
+food,Food,อาหาร,food_05_paying-the-bill,5,Paying the Bill,7,A,Here is the payment confirmation.,นี่คือสลิปยืนยันการชำระเงิน
+food,Food,อาหาร,food_05_paying-the-bill,5,Paying the Bill,8,B,Thank you very much.,ขอบคุณมากครับ/ค่ะ
+food,Food,อาหาร,food_05_paying-the-bill,5,Paying the Bill,9,A,The food was great.,อาหารอร่อยมาก
+food,Food,อาหาร,food_05_paying-the-bill,5,Paying the Bill,10,B,We’re glad you liked it.,ดีใจที่คุณชอบครับ/ค่ะ
+shopping,Shopping,การซื้อของ,shopping_01_looking-around,1,Looking Around,1,A,Hello. Can I help you?,สวัสดี ให้ช่วยไหมครับ/คะ
+shopping,Shopping,การซื้อของ,shopping_01_looking-around,1,Looking Around,2,B,"I’m just looking, thank you.",ขอดูก่อน ขอบคุณ
+shopping,Shopping,การซื้อของ,shopping_01_looking-around,1,Looking Around,3,A,Sure. Let me know if you need anything.,ได้เลย ต้องการอะไรบอกได้นะครับ/คะ
+shopping,Shopping,การซื้อของ,shopping_01_looking-around,1,Looking Around,4,B,"Actually, I’m looking for a T-shirt.",จริง ๆ แล้วฉันกำลังมองหาเสื้อยืด
+shopping,Shopping,การซื้อของ,shopping_01_looking-around,1,Looking Around,5,A,What color do you like?,ชอบสีอะไร
+shopping,Shopping,การซื้อของ,shopping_01_looking-around,1,Looking Around,6,B,I like black or white.,ฉันชอบสีดำหรือสีขาว
+shopping,Shopping,การซื้อของ,shopping_01_looking-around,1,Looking Around,7,A,We have both colors here.,เรามีทั้งสองสีตรงนี้
+shopping,Shopping,การซื้อของ,shopping_01_looking-around,1,Looking Around,8,B,Great. Can I see the black one?,ดีเลย ขอดูสีดำได้ไหม
+shopping,Shopping,การซื้อของ,shopping_01_looking-around,1,Looking Around,9,A,Of course. Here you are.,ได้แน่นอน นี่ครับ/ค่ะ
+shopping,Shopping,การซื้อของ,shopping_01_looking-around,1,Looking Around,10,B,Thank you.,ขอบคุณ
+shopping,Shopping,การซื้อของ,shopping_02_asking-the-price,2,Asking the Price,1,A,How much is this shirt?,เสื้อตัวนี้ราคาเท่าไหร่
+shopping,Shopping,การซื้อของ,shopping_02_asking-the-price,2,Asking the Price,2,B,It is 490 baht.,ราคา 490 บาท
+shopping,Shopping,การซื้อของ,shopping_02_asking-the-price,2,Asking the Price,3,A,Is there a discount?,มีส่วนลดไหม
+shopping,Shopping,การซื้อของ,shopping_02_asking-the-price,2,Asking the Price,4,B,"Yes, today it is 10 percent off.",มี วันนี้ลด 10 เปอร์เซ็นต์
+shopping,Shopping,การซื้อของ,shopping_02_asking-the-price,2,Asking the Price,5,A,That sounds good.,ฟังดูดีนะ
+shopping,Shopping,การซื้อของ,shopping_02_asking-the-price,2,Asking the Price,6,B,Would you like to try it on?,อยากลองใส่ไหม
+shopping,Shopping,การซื้อของ,shopping_02_asking-the-price,2,Asking the Price,7,A,"Yes, please.",อยากลองครับ/ค่ะ
+shopping,Shopping,การซื้อของ,shopping_02_asking-the-price,2,Asking the Price,8,B,The fitting room is over there.,ห้องลองเสื้ออยู่ตรงนั้น
+shopping,Shopping,การซื้อของ,shopping_02_asking-the-price,2,Asking the Price,9,A,Thank you. I’ll try it now.,ขอบคุณ ฉันจะลองตอนนี้
+shopping,Shopping,การซื้อของ,shopping_02_asking-the-price,2,Asking the Price,10,B,Take your time.,ตามสบายเลยครับ/ค่ะ
+shopping,Shopping,การซื้อของ,shopping_03_size,3,Size,1,A,Do you have this in a larger size?,มีไซซ์ใหญ่กว่านี้ไหม
+shopping,Shopping,การซื้อของ,shopping_03_size,3,Size,2,B,"Yes, we have large and extra large.",มีครับ/ค่ะ มีไซซ์ L และ XL
+shopping,Shopping,การซื้อของ,shopping_03_size,3,Size,3,A,Can I try the large size?,ขอลองไซซ์ L ได้ไหม
+shopping,Shopping,การซื้อของ,shopping_03_size,3,Size,4,B,Of course. Here it is.,ได้แน่นอน นี่ครับ/ค่ะ
+shopping,Shopping,การซื้อของ,shopping_03_size,3,Size,5,A,Thank you. This size looks better.,ขอบคุณ ไซซ์นี้ดูดีกว่า
+shopping,Shopping,การซื้อของ,shopping_03_size,3,Size,6,B,It fits you well.,ใส่พอดีเลยครับ/ค่ะ
+shopping,Shopping,การซื้อของ,shopping_03_size,3,Size,7,A,Is the material cotton?,เนื้อผ้าเป็นคอตตอนใช่ไหม
+shopping,Shopping,การซื้อของ,shopping_03_size,3,Size,8,B,"Yes, it is soft cotton.",ใช่ เป็นคอตตอนนุ่ม
+shopping,Shopping,การซื้อของ,shopping_03_size,3,Size,9,A,Great. I’ll take this one.,ดีเลย ฉันเอาตัวนี้
+shopping,Shopping,การซื้อของ,shopping_03_size,3,Size,10,B,Excellent choice.,เลือกได้ดีครับ/ค่ะ
+shopping,Shopping,การซื้อของ,shopping_04_payment,4,Payment,1,A,How would you like to pay?,ต้องการชำระเงินแบบไหนครับ/คะ
+shopping,Shopping,การซื้อของ,shopping_04_payment,4,Payment,2,B,Can I pay by card?,จ่ายด้วยบัตรได้ไหม
+shopping,Shopping,การซื้อของ,shopping_04_payment,4,Payment,3,A,"Yes, we accept cards.",ได้ครับ/ค่ะ เรารับบัตร
+shopping,Shopping,การซื้อของ,shopping_04_payment,4,Payment,4,B,Great. Here is my card.,ดีเลย นี่บัตรของฉัน
+shopping,Shopping,การซื้อของ,shopping_04_payment,4,Payment,5,A,Please enter your PIN.,กรุณากดรหัส
+shopping,Shopping,การซื้อของ,shopping_04_payment,4,Payment,6,B,"Okay, done.",โอเค เรียบร้อย
+shopping,Shopping,การซื้อของ,shopping_04_payment,4,Payment,7,A,Would you like a receipt?,ต้องการใบเสร็จไหม
+shopping,Shopping,การซื้อของ,shopping_04_payment,4,Payment,8,B,"Yes, please.",ต้องการครับ/ค่ะ
+shopping,Shopping,การซื้อของ,shopping_04_payment,4,Payment,9,A,Here is your receipt and bag.,นี่ใบเสร็จและถุงของคุณ
+shopping,Shopping,การซื้อของ,shopping_04_payment,4,Payment,10,B,Thank you very much.,ขอบคุณมาก
+shopping,Shopping,การซื้อของ,shopping_05_return-policy,5,Return Policy,1,A,Can I return this if it doesn’t fit?,ถ้าใส่ไม่พอดี ฉันคืนได้ไหม
+shopping,Shopping,การซื้อของ,shopping_05_return-policy,5,Return Policy,2,B,"Yes, you can return it within seven days.",ได้ครับ/ค่ะ คืนได้ภายในเจ็ดวัน
+shopping,Shopping,การซื้อของ,shopping_05_return-policy,5,Return Policy,3,A,Do I need the receipt?,ต้องใช้ใบเสร็จไหม
+shopping,Shopping,การซื้อของ,shopping_05_return-policy,5,Return Policy,4,B,"Yes, please keep the receipt.",ใช่ กรุณาเก็บใบเสร็จไว้
+shopping,Shopping,การซื้อของ,shopping_05_return-policy,5,Return Policy,5,A,Can I exchange it for another size?,เปลี่ยนเป็นไซซ์อื่นได้ไหม
+shopping,Shopping,การซื้อของ,shopping_05_return-policy,5,Return Policy,6,B,"Yes, if the item is unused.",ได้ ถ้าสินค้ายังไม่ได้ใช้งาน
+shopping,Shopping,การซื้อของ,shopping_05_return-policy,5,Return Policy,7,A,That’s good to know.,ดีที่ได้รู้
+shopping,Shopping,การซื้อของ,shopping_05_return-policy,5,Return Policy,8,B,We want customers to be happy.,เราอยากให้ลูกค้าพึงพอใจ
+shopping,Shopping,การซื้อของ,shopping_05_return-policy,5,Return Policy,9,A,Thank you for explaining.,ขอบคุณที่อธิบาย
+shopping,Shopping,การซื้อของ,shopping_05_return-policy,5,Return Policy,10,B,You’re welcome.,ยินดีครับ/ค่ะ
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_01_at-the-airport,1,At the Airport,1,A,"May I see your passport, please?",ขอดูหนังสือเดินทางหน่อยได้ไหมครับ/คะ
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_01_at-the-airport,1,At the Airport,2,B,Sure. Here it is.,ได้ นี่ครับ/ค่ะ
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_01_at-the-airport,1,At the Airport,3,A,Where are you flying today?,วันนี้คุณบินไปที่ไหน
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_01_at-the-airport,1,At the Airport,4,B,I’m flying to Singapore.,ฉันบินไปสิงคโปร์
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_01_at-the-airport,1,At the Airport,5,A,How many bags are you checking in?,โหลดกระเป๋ากี่ใบ
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_01_at-the-airport,1,At the Airport,6,B,Just one bag.,แค่หนึ่งใบ
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_01_at-the-airport,1,At the Airport,7,A,Your flight leaves at ten thirty.,เที่ยวบินของคุณออกเวลา 10:30
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_01_at-the-airport,1,At the Airport,8,B,Is it on time?,ตรงเวลาไหม
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_01_at-the-airport,1,At the Airport,9,A,"Yes, it is on time.",ใช่ ตรงเวลา
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_01_at-the-airport,1,At the Airport,10,B,Great. Thank you.,ดีมาก ขอบคุณ
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_02_hotel-check-in,2,Hotel Check-in,1,A,Welcome to our hotel. Do you have a reservation?,ยินดีต้อนรับสู่โรงแรมของเรา คุณมีการจองไหม
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_02_hotel-check-in,2,Hotel Check-in,2,B,"Yes, I booked a room online.",มี ฉันจองห้องออนไลน์ไว้
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_02_hotel-check-in,2,Hotel Check-in,3,A,"May I have your name, please?",ขอทราบชื่อได้ไหมครับ/คะ
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_02_hotel-check-in,2,Hotel Check-in,4,B,My name is Team.,ฉันชื่อทีม
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_02_hotel-check-in,2,Hotel Check-in,5,A,I found your reservation.,พบการจองของคุณแล้ว
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_02_hotel-check-in,2,Hotel Check-in,6,B,Great. What time is breakfast?,ดีมาก อาหารเช้ากี่โมง
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_02_hotel-check-in,2,Hotel Check-in,7,A,Breakfast is from six to ten.,อาหารเช้าเริ่มหกโมงถึงสิบโมง
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_02_hotel-check-in,2,Hotel Check-in,8,B,Thank you. Where is the elevator?,ขอบคุณ ลิฟต์อยู่ที่ไหน
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_02_hotel-check-in,2,Hotel Check-in,9,A,It is on your right.,อยู่ทางขวามือครับ/ค่ะ
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_02_hotel-check-in,2,Hotel Check-in,10,B,Thanks for your help.,ขอบคุณที่ช่วยนะ
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_03_asking-directions,3,Asking Directions,1,A,Excuse me. Where is the train station?,ขอโทษครับ/ค่ะ สถานีรถไฟอยู่ที่ไหน
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_03_asking-directions,3,Asking Directions,2,B,It is about ten minutes from here.,อยู่ห่างจากที่นี่ประมาณสิบนาที
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_03_asking-directions,3,Asking Directions,3,A,Can I walk there?,เดินไปได้ไหม
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_03_asking-directions,3,Asking Directions,4,B,"Yes, go straight and turn left.",ได้ เดินตรงไปแล้วเลี้ยวซ้าย
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_03_asking-directions,3,Asking Directions,5,A,Is it near the mall?,อยู่ใกล้ห้างไหม
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_03_asking-directions,3,Asking Directions,6,B,"Yes, it is next to the mall.",ใช่ อยู่ข้างห้าง
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_03_asking-directions,3,Asking Directions,7,A,Can you show me on the map?,ช่วยชี้ให้ดูบนแผนที่ได้ไหม
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_03_asking-directions,3,Asking Directions,8,B,"Sure. You are here, and the station is here.",ได้ คุณอยู่ตรงนี้ และสถานีอยู่ตรงนี้
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_03_asking-directions,3,Asking Directions,9,A,Thank you so much.,ขอบคุณมาก
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_03_asking-directions,3,Asking Directions,10,B,You’re welcome. Have a safe trip.,ยินดี เดินทางปลอดภัยนะ
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_04_taxi,4,Taxi,1,A,Where would you like to go?,ต้องการไปที่ไหนครับ/คะ
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_04_taxi,4,Taxi,2,B,I need to go to my hotel.,ฉันต้องการไปโรงแรม
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_04_taxi,4,Taxi,3,A,What is the hotel name?,โรงแรมชื่ออะไร
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_04_taxi,4,Taxi,4,B,It is City Center Hotel.,ชื่อ City Center Hotel
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_04_taxi,4,Taxi,5,A,It will take about thirty minutes.,ใช้เวลาประมาณสามสิบนาที
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_04_taxi,4,Taxi,6,B,How much will it cost?,ราคาประมาณเท่าไหร่
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_04_taxi,4,Taxi,7,A,Around 300 baht.,ประมาณ 300 บาท
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_04_taxi,4,Taxi,8,B,That’s fine. Please use the meter.,ได้ครับ/ค่ะ กรุณากดมิเตอร์นะ
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_04_taxi,4,Taxi,9,A,Of course.,แน่นอน
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_04_taxi,4,Taxi,10,B,Thank you.,ขอบคุณ
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_05_travel-plan,5,Travel Plan,1,A,Where do you want to go this weekend?,สุดสัปดาห์นี้อยากไปไหน
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_05_travel-plan,5,Travel Plan,2,B,I want to go to Chiang Mai.,ฉันอยากไปเชียงใหม่
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_05_travel-plan,5,Travel Plan,3,A,How will you get there?,จะไปอย่างไร
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_05_travel-plan,5,Travel Plan,4,B,I will take a flight.,ฉันจะขึ้นเครื่องบิน
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_05_travel-plan,5,Travel Plan,5,A,How long will you stay?,จะพักนานแค่ไหน
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_05_travel-plan,5,Travel Plan,6,B,Three days and two nights.,สามวันสองคืน
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_05_travel-plan,5,Travel Plan,7,A,Have you booked a hotel?,จองโรงแรมหรือยัง
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_05_travel-plan,5,Travel Plan,8,B,Not yet. I will book one tonight.,ยังเลย ฉันจะจองคืนนี้
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_05_travel-plan,5,Travel Plan,9,A,Sounds like a fun trip.,ฟังดูเป็นทริปที่สนุก
+travel,Travel,การเดินทาง/ท่องเที่ยว,travel_05_travel-plan,5,Travel Plan,10,B,I’m excited.,ฉันตื่นเต้นมาก
+work,Work,การทำงาน,work_01_starting-work,1,Starting Work,1,A,Good morning. What are you working on today?,สวัสดีตอนเช้า วันนี้คุณทำงานอะไร
+work,Work,การทำงาน,work_01_starting-work,1,Starting Work,2,B,I’m working on the weekly report.,ฉันกำลังทำรายงานประจำสัปดาห์
+work,Work,การทำงาน,work_01_starting-work,1,Starting Work,3,A,When is the deadline?,กำหนดส่งเมื่อไหร่
+work,Work,การทำงาน,work_01_starting-work,1,Starting Work,4,B,It is due this afternoon.,ต้องส่งบ่ายนี้
+work,Work,การทำงาน,work_01_starting-work,1,Starting Work,5,A,Do you need any help?,ต้องการให้ช่วยไหม
+work,Work,การทำงาน,work_01_starting-work,1,Starting Work,6,B,"Yes, can you check the numbers?",ต้องการ ช่วยตรวจตัวเลขให้หน่อยได้ไหม
+work,Work,การทำงาน,work_01_starting-work,1,Starting Work,7,A,Sure. Send me the file.,ได้ ส่งไฟล์มาให้ฉัน
+work,Work,การทำงาน,work_01_starting-work,1,Starting Work,8,B,I’ll send it now.,ฉันจะส่งตอนนี้
+work,Work,การทำงาน,work_01_starting-work,1,Starting Work,9,A,Great. Let’s finish it before lunch.,ดีมาก ทำให้เสร็จก่อนเที่ยงกัน
+work,Work,การทำงาน,work_01_starting-work,1,Starting Work,10,B,Sounds good.,ดีเลย
+work,Work,การทำงาน,work_02_meeting,2,Meeting,1,A,Do we have a meeting today?,วันนี้เรามีประชุมไหม
+work,Work,การทำงาน,work_02_meeting,2,Meeting,2,B,"Yes, at two o’clock.",มี ตอนบ่ายสอง
+work,Work,การทำงาน,work_02_meeting,2,Meeting,3,A,What is the meeting about?,ประชุมเรื่องอะไร
+work,Work,การทำงาน,work_02_meeting,2,Meeting,4,B,It is about the new campaign.,เกี่ยวกับแคมเปญใหม่
+work,Work,การทำงาน,work_02_meeting,2,Meeting,5,A,Do I need to prepare anything?,ฉันต้องเตรียมอะไรไหม
+work,Work,การทำงาน,work_02_meeting,2,Meeting,6,B,Please prepare your content ideas.,กรุณาเตรียมไอเดียคอนเทนต์
+work,Work,การทำงาน,work_02_meeting,2,Meeting,7,A,"Okay, I have a few ideas already.",โอเค ฉันมีไอเดียบางส่วนแล้ว
+work,Work,การทำงาน,work_02_meeting,2,Meeting,8,B,Great. We can discuss them later.,ดีมาก เดี๋ยวคุยกันทีหลัง
+work,Work,การทำงาน,work_02_meeting,2,Meeting,9,A,I’ll bring my notes.,ฉันจะเอาโน้ตไปด้วย
+work,Work,การทำงาน,work_02_meeting,2,Meeting,10,B,Perfect.,ดีมาก
+work,Work,การทำงาน,work_03_asking-for-help,3,Asking for Help,1,A,Can you help me with this task?,ช่วยงานนี้หน่อยได้ไหม
+work,Work,การทำงาน,work_03_asking-for-help,3,Asking for Help,2,B,Sure. What do you need?,ได้ ต้องการอะไร
+work,Work,การทำงาน,work_03_asking-for-help,3,Asking for Help,3,A,I don’t understand this part.,ฉันไม่เข้าใจส่วนนี้
+work,Work,การทำงาน,work_03_asking-for-help,3,Asking for Help,4,B,Let me take a look.,ขอฉันดูหน่อย
+work,Work,การทำงาน,work_03_asking-for-help,3,Asking for Help,5,A,Thank you. I’m still learning.,ขอบคุณ ฉันยังเรียนรู้อยู่
+work,Work,การทำงาน,work_03_asking-for-help,3,Asking for Help,6,B,No problem. Everyone starts somewhere.,ไม่เป็นไร ทุกคนเริ่มจากจุดหนึ่งเหมือนกัน
+work,Work,การทำงาน,work_03_asking-for-help,3,Asking for Help,7,A,Can you explain it slowly?,ช่วยอธิบายช้า ๆ ได้ไหม
+work,Work,การทำงาน,work_03_asking-for-help,3,Asking for Help,8,B,"Of course. First, open this file.",ได้แน่นอน ขั้นแรกเปิดไฟล์นี้
+work,Work,การทำงาน,work_03_asking-for-help,3,Asking for Help,9,A,"Okay, I see it now.",โอเค ตอนนี้ฉันเห็นแล้ว
+work,Work,การทำงาน,work_03_asking-for-help,3,Asking for Help,10,B,Good. Now follow these steps.,ดี ตอนนี้ทำตามขั้นตอนเหล่านี้
+work,Work,การทำงาน,work_04_feedback,4,Feedback,1,A,Can I get your feedback on this design?,ขอคำติชมเกี่ยวกับดีไซน์นี้ได้ไหม
+work,Work,การทำงาน,work_04_feedback,4,Feedback,2,B,"Sure. Overall, it looks clean.",ได้ โดยรวมดูสะอาดดี
+work,Work,การทำงาน,work_04_feedback,4,Feedback,3,A,What should I improve?,ควรปรับปรุงอะไร
+work,Work,การทำงาน,work_04_feedback,4,Feedback,4,B,The headline should be bigger.,หัวข้อควรใหญ่ขึ้น
+work,Work,การทำงาน,work_04_feedback,4,Feedback,5,A,That makes sense.,เข้าใจเลย
+work,Work,การทำงาน,work_04_feedback,4,Feedback,6,B,"Also, add more space between the sections.",และเพิ่มช่องว่างระหว่างแต่ละส่วน
+work,Work,การทำงาน,work_04_feedback,4,Feedback,7,A,"Okay, I’ll adjust it.",โอเค ฉันจะปรับ
+work,Work,การทำงาน,work_04_feedback,4,Feedback,8,B,You’re doing well.,คุณทำได้ดีแล้ว
+work,Work,การทำงาน,work_04_feedback,4,Feedback,9,A,Thanks. Your feedback helps a lot.,ขอบคุณ คำติชมของคุณช่วยได้มาก
+work,Work,การทำงาน,work_04_feedback,4,Feedback,10,B,You’re welcome.,ยินดี
+work,Work,การทำงาน,work_05_end-of-day,5,End of Day,1,A,Are you finished for today?,วันนี้ทำงานเสร็จหรือยัง
+work,Work,การทำงาน,work_05_end-of-day,5,End of Day,2,B,Almost. I need to send one more email.,เกือบแล้ว ต้องส่งอีเมลอีกหนึ่งฉบับ
+work,Work,การทำงาน,work_05_end-of-day,5,End of Day,3,A,Was it a busy day?,วันนี้ยุ่งไหม
+work,Work,การทำงาน,work_05_end-of-day,5,End of Day,4,B,"Yes, but it was productive.",ยุ่ง แต่ทำงานได้เยอะ
+work,Work,การทำงาน,work_05_end-of-day,5,End of Day,5,A,That’s good.,ดีเลย
+work,Work,การทำงาน,work_05_end-of-day,5,End of Day,6,B,How about you?,แล้วคุณล่ะ
+work,Work,การทำงาน,work_05_end-of-day,5,End of Day,7,A,I finished my main tasks.,ฉันทำงานหลักเสร็จแล้ว
+work,Work,การทำงาน,work_05_end-of-day,5,End of Day,8,B,Great. Let’s go home soon.,ดีมาก กลับบ้านกันเถอะ
+work,Work,การทำงาน,work_05_end-of-day,5,End of Day,9,A,"Yes, we deserve some rest.",ใช่ เราสมควรได้พัก
+work,Work,การทำงาน,work_05_end-of-day,5,End of Day,10,B,Absolutely.,แน่นอน
+online-chat,Online Chat,แชตออนไลน์,online-chat_01_starting-a-chat,1,Starting a Chat,1,A,"Hi, are you available now?",สวัสดี ตอนนี้ว่างไหม
+online-chat,Online Chat,แชตออนไลน์,online-chat_01_starting-a-chat,1,Starting a Chat,2,B,"Yes, I’m available.",ว่างอยู่
+online-chat,Online Chat,แชตออนไลน์,online-chat_01_starting-a-chat,1,Starting a Chat,3,A,Can I ask you something?,ขอถามอะไรหน่อยได้ไหม
+online-chat,Online Chat,แชตออนไลน์,online-chat_01_starting-a-chat,1,Starting a Chat,4,B,Sure. What is it?,ได้เลย เรื่องอะไร
+online-chat,Online Chat,แชตออนไลน์,online-chat_01_starting-a-chat,1,Starting a Chat,5,A,I need help with my website.,ฉันต้องการความช่วยเหลือเรื่องเว็บไซต์
+online-chat,Online Chat,แชตออนไลน์,online-chat_01_starting-a-chat,1,Starting a Chat,6,B,Okay. What problem do you have?,โอเค มีปัญหาอะไร
+online-chat,Online Chat,แชตออนไลน์,online-chat_01_starting-a-chat,1,Starting a Chat,7,A,The button does not work.,ปุ่มกดใช้งานไม่ได้
+online-chat,Online Chat,แชตออนไลน์,online-chat_01_starting-a-chat,1,Starting a Chat,8,B,Can you send me a screenshot?,ส่งภาพหน้าจอให้หน่อยได้ไหม
+online-chat,Online Chat,แชตออนไลน์,online-chat_01_starting-a-chat,1,Starting a Chat,9,A,"Yes, I’ll send it now.",ได้ ฉันจะส่งตอนนี้
+online-chat,Online Chat,แชตออนไลน์,online-chat_01_starting-a-chat,1,Starting a Chat,10,B,Thanks. I’ll check it.,ขอบคุณ เดี๋ยวฉันตรวจดู
+online-chat,Online Chat,แชตออนไลน์,online-chat_02_late-reply,2,Late Reply,1,A,Sorry for the late reply.,ขอโทษที่ตอบช้า
+online-chat,Online Chat,แชตออนไลน์,online-chat_02_late-reply,2,Late Reply,2,B,No worries.,ไม่เป็นไร
+online-chat,Online Chat,แชตออนไลน์,online-chat_02_late-reply,2,Late Reply,3,A,I was in a meeting.,ฉันติดประชุมอยู่
+online-chat,Online Chat,แชตออนไลน์,online-chat_02_late-reply,2,Late Reply,4,B,That’s okay. Did you see my message?,ไม่เป็นไร เห็นข้อความของฉันไหม
+online-chat,Online Chat,แชตออนไลน์,online-chat_02_late-reply,2,Late Reply,5,A,"Yes, I just read it.",เห็นแล้ว เพิ่งอ่านเมื่อกี้
+online-chat,Online Chat,แชตออนไลน์,online-chat_02_late-reply,2,Late Reply,6,B,Can you confirm the time?,ช่วยยืนยันเวลาได้ไหม
+online-chat,Online Chat,แชตออนไลน์,online-chat_02_late-reply,2,Late Reply,7,A,"Yes, the meeting is at 3 p.m.",ได้ ประชุมตอนบ่ายสาม
+online-chat,Online Chat,แชตออนไลน์,online-chat_02_late-reply,2,Late Reply,8,B,Great. I’ll be there.,ดีมาก ฉันจะไป
+online-chat,Online Chat,แชตออนไลน์,online-chat_02_late-reply,2,Late Reply,9,A,Thanks for confirming.,ขอบคุณที่ยืนยัน
+online-chat,Online Chat,แชตออนไลน์,online-chat_02_late-reply,2,Late Reply,10,B,You’re welcome.,ยินดี
+online-chat,Online Chat,แชตออนไลน์,online-chat_03_sending-a-file,3,Sending a File,1,A,Can you send me the file?,ส่งไฟล์ให้ฉันได้ไหม
+online-chat,Online Chat,แชตออนไลน์,online-chat_03_sending-a-file,3,Sending a File,2,B,Sure. I’ll attach it here.,ได้ เดี๋ยวแนบไฟล์ตรงนี้
+online-chat,Online Chat,แชตออนไลน์,online-chat_03_sending-a-file,3,Sending a File,3,A,Thank you.,ขอบคุณ
+online-chat,Online Chat,แชตออนไลน์,online-chat_03_sending-a-file,3,Sending a File,4,B,Please check if you can open it.,ลองเช็กว่าคุณเปิดได้ไหม
+online-chat,Online Chat,แชตออนไลน์,online-chat_03_sending-a-file,3,Sending a File,5,A,I can open it.,เปิดได้
+online-chat,Online Chat,แชตออนไลน์,online-chat_03_sending-a-file,3,Sending a File,6,B,Great. Do you need anything else?,ดีมาก ต้องการอะไรเพิ่มไหม
+online-chat,Online Chat,แชตออนไลน์,online-chat_03_sending-a-file,3,Sending a File,7,A,Can you also send the link?,ส่งลิงก์ให้ด้วยได้ไหม
+online-chat,Online Chat,แชตออนไลน์,online-chat_03_sending-a-file,3,Sending a File,8,B,"Yes, here is the link.",ได้ นี่คือลิงก์
+online-chat,Online Chat,แชตออนไลน์,online-chat_03_sending-a-file,3,Sending a File,9,A,Perfect. Thanks a lot.,เยี่ยมมาก ขอบคุณมาก
+online-chat,Online Chat,แชตออนไลน์,online-chat_03_sending-a-file,3,Sending a File,10,B,Anytime.,ได้เสมอ
+online-chat,Online Chat,แชตออนไลน์,online-chat_04_clarifying,4,Clarifying,1,A,I don’t understand this message.,ฉันไม่เข้าใจข้อความนี้
+online-chat,Online Chat,แชตออนไลน์,online-chat_04_clarifying,4,Clarifying,2,B,Which part is confusing?,ส่วนไหนที่ทำให้งง
+online-chat,Online Chat,แชตออนไลน์,online-chat_04_clarifying,4,Clarifying,3,A,The deadline is not clear.,กำหนดส่งไม่ชัดเจน
+online-chat,Online Chat,แชตออนไลน์,online-chat_04_clarifying,4,Clarifying,4,B,It means we need to finish it by Friday.,หมายถึงเราต้องทำให้เสร็จภายในวันศุกร์
+online-chat,Online Chat,แชตออนไลน์,online-chat_04_clarifying,4,Clarifying,5,A,"Oh, I understand now.",อ๋อ ตอนนี้เข้าใจแล้ว
+online-chat,Online Chat,แชตออนไลน์,online-chat_04_clarifying,4,Clarifying,6,B,Do you want me to write it more clearly?,อยากให้ฉันเขียนให้ชัดกว่านี้ไหม
+online-chat,Online Chat,แชตออนไลน์,online-chat_04_clarifying,4,Clarifying,7,A,"Yes, that would help.",ใช่ จะช่วยได้มาก
+online-chat,Online Chat,แชตออนไลน์,online-chat_04_clarifying,4,Clarifying,8,B,"Okay, I’ll update the message.",โอเค เดี๋ยวฉันอัปเดตข้อความ
+online-chat,Online Chat,แชตออนไลน์,online-chat_04_clarifying,4,Clarifying,9,A,Thanks for explaining.,ขอบคุณที่อธิบาย
+online-chat,Online Chat,แชตออนไลน์,online-chat_04_clarifying,4,Clarifying,10,B,No problem.,ไม่เป็นไร
+online-chat,Online Chat,แชตออนไลน์,online-chat_05_ending-a-chat,5,Ending a Chat,1,A,Thanks for your help today.,ขอบคุณที่ช่วยวันนี้
+online-chat,Online Chat,แชตออนไลน์,online-chat_05_ending-a-chat,5,Ending a Chat,2,B,You’re welcome. Glad I could help.,ยินดี ดีใจที่ช่วยได้
+online-chat,Online Chat,แชตออนไลน์,online-chat_05_ending-a-chat,5,Ending a Chat,3,A,I’ll update you tomorrow.,ฉันจะอัปเดตให้พรุ่งนี้
+online-chat,Online Chat,แชตออนไลน์,online-chat_05_ending-a-chat,5,Ending a Chat,4,B,Sounds good.,ดีเลย
+online-chat,Online Chat,แชตออนไลน์,online-chat_05_ending-a-chat,5,Ending a Chat,5,A,Please message me if anything changes.,ถ้ามีอะไรเปลี่ยนแปลง ส่งข้อความมาบอกนะ
+online-chat,Online Chat,แชตออนไลน์,online-chat_05_ending-a-chat,5,Ending a Chat,6,B,"Sure, I will.",ได้เลย
+online-chat,Online Chat,แชตออนไลน์,online-chat_05_ending-a-chat,5,Ending a Chat,7,A,Have a good night.,ขอให้เป็นคืนที่ดี
+online-chat,Online Chat,แชตออนไลน์,online-chat_05_ending-a-chat,5,Ending a Chat,8,B,You too.,คุณก็เช่นกัน
+online-chat,Online Chat,แชตออนไลน์,online-chat_05_ending-a-chat,5,Ending a Chat,9,A,Talk to you tomorrow.,คุยกันพรุ่งนี้
+online-chat,Online Chat,แชตออนไลน์,online-chat_05_ending-a-chat,5,Ending a Chat,10,B,See you tomorrow.,เจอกันพรุ่งนี้
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_01_gym-plan,1,Gym Plan,1,A,Are you going to the gym today?,วันนี้จะไปยิมไหม
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_01_gym-plan,1,Gym Plan,2,B,"Yes, I’m training chest and shoulders.",ไป ฉันจะเล่นอกกับไหล่
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_01_gym-plan,1,Gym Plan,3,A,What time will you go?,จะไปกี่โมง
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_01_gym-plan,1,Gym Plan,4,B,Around six in the evening.,ประมาณหกโมงเย็น
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_01_gym-plan,1,Gym Plan,5,A,Do you warm up first?,คุณวอร์มก่อนใช่ไหม
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_01_gym-plan,1,Gym Plan,6,B,"Yes, I always warm up.",ใช่ ฉันวอร์มเสมอ
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_01_gym-plan,1,Gym Plan,7,A,That helps prevent injuries.,นั่นช่วยป้องกันการบาดเจ็บ
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_01_gym-plan,1,Gym Plan,8,B,Exactly. I want to train safely.,ใช่เลย ฉันอยากซ้อมอย่างปลอดภัย
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_01_gym-plan,1,Gym Plan,9,A,Have a good workout.,ขอให้ออกกำลังกายได้ดีนะ
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_01_gym-plan,1,Gym Plan,10,B,Thanks. I’ll do my best.,ขอบคุณ ฉันจะทำให้ดีที่สุด
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_02_fitness-goal,2,Fitness Goal,1,A,What is your fitness goal?,เป้าหมายฟิตเนสของคุณคืออะไร
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_02_fitness-goal,2,Fitness Goal,2,B,I want to lose fat and build muscle.,ฉันอยากลดไขมันและสร้างกล้ามเนื้อ
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_02_fitness-goal,2,Fitness Goal,3,A,That is a strong goal.,เป็นเป้าหมายที่ดีมาก
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_02_fitness-goal,2,Fitness Goal,4,B,"Yes, but it takes time.",ใช่ แต่มันต้องใช้เวลา
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_02_fitness-goal,2,Fitness Goal,5,A,Do you track your calories?,คุณนับแคลอรีไหม
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_02_fitness-goal,2,Fitness Goal,6,B,"Yes, I try to track them every day.",นับ ฉันพยายามนับทุกวัน
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_02_fitness-goal,2,Fitness Goal,7,A,Do you eat enough protein?,คุณกินโปรตีนพอไหม
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_02_fitness-goal,2,Fitness Goal,8,B,I try to eat protein every meal.,ฉันพยายามกินโปรตีนทุกมื้อ
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_02_fitness-goal,2,Fitness Goal,9,A,That will help your progress.,นั่นจะช่วยให้คุณพัฒนา
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_02_fitness-goal,2,Fitness Goal,10,B,I hope so.,หวังว่าจะเป็นแบบนั้น
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_03_cardio,3,Cardio,1,A,Do you do cardio?,คุณทำคาร์ดิโอไหม
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_03_cardio,3,Cardio,2,B,"Yes, I walk for forty minutes.",ทำ ฉันเดินสี่สิบนาที
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_03_cardio,3,Cardio,3,A,How many times a week?,สัปดาห์ละกี่ครั้ง
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_03_cardio,3,Cardio,4,B,About five times a week.,ประมาณสัปดาห์ละห้าครั้ง
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_03_cardio,3,Cardio,5,A,That is good for your heart.,ดีต่อหัวใจนะ
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_03_cardio,3,Cardio,6,B,"Yes, and it helps me burn calories.",ใช่ และช่วยเผาผลาญแคลอรี
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_03_cardio,3,Cardio,7,A,Do you do it before or after weight training?,ทำก่อนหรือหลังเล่นเวท
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_03_cardio,3,Cardio,8,B,Usually after weight training.,ปกติทำหลังเล่นเวท
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_03_cardio,3,Cardio,9,A,That sounds like a good routine.,ฟังดูเป็นตารางที่ดี
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_03_cardio,3,Cardio,10,B,Thanks. I’m trying to stay consistent.,ขอบคุณ ฉันพยายามทำให้สม่ำเสมอ
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_04_rest-and-recovery,4,Rest and Recovery,1,A,Do you have a rest day?,คุณมีวันพักไหม
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_04_rest-and-recovery,4,Rest and Recovery,2,B,"Yes, I rest one or two days a week.",มี ฉันพักสัปดาห์ละหนึ่งถึงสองวัน
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_04_rest-and-recovery,4,Rest and Recovery,3,A,That is important.,นั่นสำคัญนะ
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_04_rest-and-recovery,4,Rest and Recovery,4,B,I know. My body needs recovery.,ฉันรู้ ร่างกายต้องฟื้นตัว
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_04_rest-and-recovery,4,Rest and Recovery,5,A,Do you stretch after workouts?,คุณยืดเหยียดหลังออกกำลังกายไหม
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_04_rest-and-recovery,4,Rest and Recovery,6,B,"Sometimes, but I should do it more.",บางครั้ง แต่ควรทำให้มากขึ้น
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_04_rest-and-recovery,4,Rest and Recovery,7,A,It can help reduce tightness.,มันช่วยลดความตึงของกล้ามเนื้อได้
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_04_rest-and-recovery,4,Rest and Recovery,8,B,Good point. I’ll add it to my routine.,จริงด้วย ฉันจะเพิ่มเข้าไปในตาราง
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_04_rest-and-recovery,4,Rest and Recovery,9,A,Small habits make a big difference.,นิสัยเล็ก ๆ สร้างความแตกต่างได้มาก
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_04_rest-and-recovery,4,Rest and Recovery,10,B,I agree.,เห็นด้วย
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_05_healthy-eating,5,Healthy Eating,1,A,What do you eat after a workout?,หลังออกกำลังกายคุณกินอะไร
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_05_healthy-eating,5,Healthy Eating,2,B,"I usually eat rice, chicken, and vegetables.",ปกติฉันกินข้าว ไก่ และผัก
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_05_healthy-eating,5,Healthy Eating,3,A,That sounds balanced.,ฟังดูสมดุลดี
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_05_healthy-eating,5,Healthy Eating,4,B,"Yes, I try to keep it simple.",ใช่ ฉันพยายามทำให้ง่าย
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_05_healthy-eating,5,Healthy Eating,5,A,Do you drink enough water?,คุณดื่มน้ำพอไหม
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_05_healthy-eating,5,Healthy Eating,6,B,I try to drink two to three liters a day.,ฉันพยายามดื่มวันละสองถึงสามลิตร
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_05_healthy-eating,5,Healthy Eating,7,A,"That is good, especially when you train hard.",ดีมาก โดยเฉพาะเวลาซ้อมหนัก
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_05_healthy-eating,5,Healthy Eating,8,B,"Yes, I feel better when I drink enough water.",ใช่ ฉันรู้สึกดีขึ้นเมื่อดื่มน้ำพอ
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_05_healthy-eating,5,Healthy Eating,9,A,Keep going. You’re building good habits.,ทำต่อไปนะ คุณกำลังสร้างนิสัยที่ดี
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,health-fitness_05_healthy-eating,5,Healthy Eating,10,B,Thanks. That motivates me.,ขอบคุณ มันทำให้ฉันมีกำลังใจ

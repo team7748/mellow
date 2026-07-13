@@ -1,0 +1,4005 @@
+[
+  {
+    "id": "word_b2_1801",
+    "word": "abandon",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/əˈbændən/",
+    "thaiMeaning": "ละทิ้ง",
+    "simpleMeaning": "to leave a place, thing, or person, usually forever",
+    "example": "The house was abandoned years ago and is now in ruins.",
+    "exampleThai": "บ้านหลังนี้ถูกทิ้งร้างเมื่อหลายปีก่อนและตอนนี้กลายเป็นซากปรักหักพัง",
+    "icon": "Ghost",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "other",
+      "action",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1802",
+    "word": "abstract",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈæbstrækt/",
+    "thaiMeaning": "นามธรรม",
+    "simpleMeaning": "existing as an idea, feeling, or quality, not as a material object",
+    "example": "Truth and beauty are abstract concepts.",
+    "exampleThai": "ความจริงและความงามเป็นแนวคิดนามธรรม",
+    "icon": "Shapes",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "philosophy",
+      "concept",
+      "academic"
+    ]
+  },
+  {
+    "id": "word_b2_1803",
+    "word": "access",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈæksɛs/",
+    "thaiMeaning": "การเข้าถึง",
+    "simpleMeaning": "the means or opportunity to approach or enter a place",
+    "example": "You need a password to get access to the network.",
+    "exampleThai": "คุณต้องมีรหัสผ่านเพื่อเข้าถึงเครือข่าย",
+    "icon": "Key",
+    "category": [
+      "Technology"
+    ],
+    "tags": [
+      "technology",
+      "entry",
+      "security"
+    ]
+  },
+  {
+    "id": "word_b2_1804",
+    "word": "accommodate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/əˈkɒmədeɪt/",
+    "thaiMeaning": "จัดหาที่พักให้, ปรับตัว, อำนวยความสะดวก",
+    "simpleMeaning": "to provide with something desired, needed, or suited",
+    "example": "We can accommodate your request for a later meeting.",
+    "exampleThai": "เราสามารถอำนวยความสะดวกตามคำขอของคุณสำหรับการประชุมที่ช้าลงได้",
+    "icon": "Handshake",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "work",
+      "meeting",
+      "adjust"
+    ]
+  },
+  {
+    "id": "word_b2_1805",
+    "word": "acknowledge",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/əkˈnɒlɪdʒ/",
+    "thaiMeaning": "ยอมรับ, รับรอง",
+    "simpleMeaning": "to admit or accept that something is true",
+    "example": "Please acknowledge receipt of this email.",
+    "exampleThai": "โปรดตอบรับว่าได้รับอีเมลนี้แล้ว",
+    "icon": "CheckCircle",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "email",
+      "reply",
+      "confirm"
+    ]
+  },
+  {
+    "id": "word_b2_1806",
+    "word": "acquire",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/əˈkwaɪər/",
+    "thaiMeaning": "ได้รับมา, ซื้อกิจการ",
+    "simpleMeaning": "to get or buy something",
+    "example": "Our company plans to acquire a smaller competitor.",
+    "exampleThai": "บริษัทของเรามีแผนที่จะซื้อกิจการคู่แข่งรายเล็กกว่า",
+    "icon": "Building2",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "company",
+      "buy",
+      "growth"
+    ]
+  },
+  {
+    "id": "word_b2_1807",
+    "word": "acquit",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/əˈkwɪt/",
+    "thaiMeaning": "ตัดสินให้พ้นผิด",
+    "simpleMeaning": "to officially decide in a court that someone is not guilty of a crime",
+    "example": "The jury decided to acquit the suspect after reviewing the evidence.",
+    "exampleThai": "คณะลูกขุนตัดสินให้ผู้ต้องสงสัยพ้นผิดหลังจากพิจารณาหลักฐาน",
+    "icon": "Scale",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "court",
+      "verdict"
+    ]
+  },
+  {
+    "id": "word_b2_1808",
+    "word": "advocate",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈædvəkət/",
+    "thaiMeaning": "ผู้สนับสนุน, ทนายความ",
+    "simpleMeaning": "a person who publicly supports or recommends a particular cause or policy",
+    "example": "She is a strong advocate for human rights in her country.",
+    "exampleThai": "เธอเป็นผู้สนับสนุนสิทธิมนุษยชนอย่างแข็งขันในประเทศของเธอ",
+    "icon": "Megaphone",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "politics",
+      "rights",
+      "support"
+    ]
+  },
+  {
+    "id": "word_b2_1809",
+    "word": "affectionate",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/əˈfekʃənət/",
+    "thaiMeaning": "ซึ่งแสดงความรักใคร่",
+    "simpleMeaning": "showing that you love or care about someone",
+    "example": "He is very affectionate towards his children.",
+    "exampleThai": "เขาแสดงความรักต่อลูกๆ ของเขามาก",
+    "icon": "Heart",
+    "category": [
+      "Feelings"
+    ],
+    "tags": [
+      "emotion",
+      "feeling",
+      "love",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1810",
+    "word": "alignment",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/əˈlaɪnmənt/",
+    "thaiMeaning": "การจัดตำแหน่ง, ความสอดคล้อง",
+    "simpleMeaning": "arrangement in a straight line, or in appropriate relative positions",
+    "example": "We need to ensure alignment across all departments.",
+    "exampleThai": "เราต้องตรวจสอบให้แน่ใจว่าทุกแผนกมีความสอดคล้องกัน",
+    "icon": "AlignCenter",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "teamwork",
+      "goals",
+      "company"
+    ]
+  },
+  {
+    "id": "word_b2_1811",
+    "word": "allegation",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˌæləˈɡeɪʃən/",
+    "thaiMeaning": "ข้อกล่าวหา",
+    "simpleMeaning": "a statement saying that someone has done something wrong, often without proof",
+    "example": "The politician denied the allegation of corruption.",
+    "exampleThai": "นักการเมืองปฏิเสธข้อกล่าวหาเรื่องการทุจริต",
+    "icon": "AlertCircle",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "crime",
+      "claim"
+    ]
+  },
+  {
+    "id": "word_b2_1812",
+    "word": "ambiguous",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/æmˈbɪɡjuəs/",
+    "thaiMeaning": "กำกวม",
+    "simpleMeaning": "having or expressing more than one possible meaning, sometimes intentionally",
+    "example": "His reply to my question was somewhat ambiguous.",
+    "exampleThai": "คำตอบของเขาสำหรับคำถามของฉันนั้นค่อนข้างกำกวม",
+    "icon": "HelpCircle",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "language",
+      "academic",
+      "literature"
+    ]
+  },
+  {
+    "id": "word_b2_1813",
+    "word": "amend",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/əˈmend/",
+    "thaiMeaning": "แก้ไข, ปรับปรุง (กฎหมาย)",
+    "simpleMeaning": "to change the words of a text, especially a law or a legal document",
+    "example": "The government plans to amend the law to improve public safety.",
+    "exampleThai": "รัฐบาลมีแผนที่จะแก้ไขกฎหมายเพื่อปรับปรุงความปลอดภัยสาธารณะ",
+    "icon": "FileEdit",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "document",
+      "change"
+    ]
+  },
+  {
+    "id": "word_b2_1814",
+    "word": "amendment",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/əˈmendmənt/",
+    "thaiMeaning": "การแก้ไขกฎหมาย, บทแก้ไข",
+    "simpleMeaning": "a change or addition to a legal or statutory document",
+    "example": "The new amendment gives citizens more freedom of speech.",
+    "exampleThai": "การแก้ไขกฎหมายฉบับใหม่ให้เสรีภาพในการพูดแก่ประชาชนมากขึ้น",
+    "icon": "FileSignature",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "constitution",
+      "politics"
+    ]
+  },
+  {
+    "id": "word_b2_1815",
+    "word": "analogy",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/əˈnælədʒi/",
+    "thaiMeaning": "การเปรียบเทียบ",
+    "simpleMeaning": "a comparison between things that have similar features, often used to help explain a principle or idea",
+    "example": "He drew an analogy between the brain and a vast computer.",
+    "exampleThai": "เขาวาดการเปรียบเทียบระหว่างสมองและคอมพิวเตอร์ขนาดใหญ่",
+    "icon": "GitCompare",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "literature",
+      "language",
+      "academic"
+    ]
+  },
+  {
+    "id": "word_b2_1816",
+    "word": "analyze",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈænəlaɪz/",
+    "thaiMeaning": "วิเคราะห์",
+    "simpleMeaning": "to examine something in detail to explain and interpret it",
+    "example": "We must analyze the data before making a decision.",
+    "exampleThai": "เราต้องวิเคราะห์ข้อมูลก่อนตัดสินใจ",
+    "icon": "BarChart",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "work",
+      "data",
+      "examine"
+    ]
+  },
+  {
+    "id": "word_b2_1817",
+    "word": "anticipate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ænˈtɪsɪpeɪt/",
+    "thaiMeaning": "คาดการณ์, คาดหวัง",
+    "simpleMeaning": "to expect or predict",
+    "example": "We anticipate a drop in sales next quarter.",
+    "exampleThai": "เราคาดการณ์ว่ายอดขายจะลดลงในไตรมาสหน้า",
+    "icon": "TrendingDown",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "sales",
+      "predict",
+      "future"
+    ]
+  },
+  {
+    "id": "word_b2_1818",
+    "word": "appeal",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/əˈpiːl/",
+    "thaiMeaning": "การอุทธรณ์",
+    "simpleMeaning": "a formal request to a higher court or authority to change a decision",
+    "example": "His lawyer filed an appeal against the court's decision.",
+    "exampleThai": "ทนายความของเขายื่นอุทธรณ์คัดค้านคำตัดสินของศาล",
+    "icon": "Scale",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "court",
+      "process"
+    ]
+  },
+  {
+    "id": "word_b2_1819",
+    "word": "approach",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/əˈproʊtʃ/",
+    "thaiMeaning": "วิธีการ, การเข้าใกล้",
+    "simpleMeaning": "a way of considering or doing something",
+    "example": "We need a new approach to solve this problem.",
+    "exampleThai": "เราต้องการวิธีการใหม่ในการแก้ปัญหานี้",
+    "icon": "Compass",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "method",
+      "abstract",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1820",
+    "word": "arbitrary",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈɑːbɪtrəri/",
+    "thaiMeaning": "ตามอำเภอใจ",
+    "simpleMeaning": "based on chance rather than being planned or based on reason",
+    "example": "Did you have a reason for choosing your destination or was it arbitrary?",
+    "exampleThai": "คุณมีเหตุผลสำหรับการเลือกจุดหมายปลายทางของคุณ หรือมันเป็นไปตามอำเภอใจ?",
+    "icon": "Dices",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "philosophy",
+      "academic",
+      "logic"
+    ]
+  },
+  {
+    "id": "word_b2_1821",
+    "word": "arrogant",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈærəɡənt/",
+    "thaiMeaning": "หยิ่งยโส",
+    "simpleMeaning": "behaving in a proud, unpleasant way",
+    "example": "She is too arrogant to admit that she is wrong.",
+    "exampleThai": "เธอหยิ่งเกินกว่าจะยอมรับว่าตัวเองผิด",
+    "icon": "UserX",
+    "category": [
+      "Feelings"
+    ],
+    "tags": [
+      "emotion",
+      "personality",
+      "negative",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1822",
+    "word": "assassinate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/əˈsæsɪneɪt/",
+    "thaiMeaning": "ลอบสังหาร",
+    "simpleMeaning": "to murder an important or famous person, usually for political reasons",
+    "example": "There was a plot to assassinate the president during his visit.",
+    "exampleThai": "มีแผนการที่จะลอบสังหารประธานาธิบดีระหว่างการเยือนของเขา",
+    "icon": "ShieldAlert",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "crime",
+      "politics",
+      "violence"
+    ]
+  },
+  {
+    "id": "word_b2_1823",
+    "word": "astonished",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/əˈstɒnɪʃt/",
+    "thaiMeaning": "ประหลาดใจมาก",
+    "simpleMeaning": "very surprised",
+    "example": "I was astonished by the size of the building.",
+    "exampleThai": "ฉันประหลาดใจมากกับขนาดของอาคาร",
+    "icon": "Search",
+    "category": [
+      "Feelings"
+    ],
+    "tags": [
+      "emotion",
+      "surprise",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1824",
+    "word": "automate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈɔːtəmeɪt/",
+    "thaiMeaning": "ทำให้เป็นอัตโนมัติ",
+    "simpleMeaning": "to convert (a process or facility) to be operated by largely automatic equipment",
+    "example": "They plan to automate the entire factory next year.",
+    "exampleThai": "พวกเขาวางแผนที่จะทำให้ทั้งโรงงานเป็นอัตโนมัติในปีหน้า",
+    "icon": "Settings",
+    "category": [
+      "Technology"
+    ],
+    "tags": [
+      "technology",
+      "robot",
+      "machine"
+    ]
+  },
+  {
+    "id": "word_b2_1825",
+    "word": "avalanche",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈævəlɑːnʃ/",
+    "thaiMeaning": "หิมะถล่ม",
+    "simpleMeaning": "a large mass of snow, ice, and rocks that falls down the side of a mountain",
+    "example": "The skiers were buried by a huge avalanche.",
+    "exampleThai": "นักเล่นสกีถูกฝังโดยหิมะถล่มขนาดใหญ่",
+    "icon": "Snowflake",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "nature",
+      "disaster",
+      "weather",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1826",
+    "word": "bail",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/beɪl/",
+    "thaiMeaning": "เงินประกันตัว",
+    "simpleMeaning": "an amount of money given to a court to allow a prisoner to leave jail temporarily",
+    "example": "The judge set bail at $50,000 for the suspect.",
+    "exampleThai": "ผู้พิพากษากำหนดเงินประกันตัวที่ 50,000 ดอลลาร์สำหรับผู้ต้องสงสัย",
+    "icon": "Coins",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "court",
+      "money"
+    ]
+  },
+  {
+    "id": "word_b2_1827",
+    "word": "ballot",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈbælət/",
+    "thaiMeaning": "บัตรเลือกตั้ง",
+    "simpleMeaning": "a piece of paper or electronic system used to record a person's vote",
+    "example": "She cast her ballot early in the morning.",
+    "exampleThai": "เธอไปหย่อนบัตรเลือกตั้งตั้งแต่เช้าตรู่",
+    "icon": "Vote",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "politics",
+      "election",
+      "vote"
+    ]
+  },
+  {
+    "id": "word_b2_1828",
+    "word": "bias",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈbaɪəs/",
+    "thaiMeaning": "อคติ",
+    "simpleMeaning": "the action of supporting or opposing a particular person or thing in an unfair way, because of allowing personal opinions to influence your judgment",
+    "example": "The news report was accused of political bias.",
+    "exampleThai": "รายงานข่าวถูกกล่าวหาว่ามีอคติทางการเมือง",
+    "icon": "TrendingDown",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "research",
+      "academic",
+      "philosophy"
+    ]
+  },
+  {
+    "id": "word_b2_1829",
+    "word": "blizzard",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈblɪzəd/",
+    "thaiMeaning": "พายุหิมะ",
+    "simpleMeaning": "a severe snowstorm with strong winds",
+    "example": "We were trapped in the cabin during the blizzard.",
+    "exampleThai": "พวกเราติดอยู่ในกระท่อมในช่วงที่มีพายุหิมะ",
+    "icon": "CloudSnow",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "nature",
+      "weather",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1830",
+    "word": "breakthrough",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈbreɪkθruː/",
+    "thaiMeaning": "การค้นพบที่ยิ่งใหญ่",
+    "simpleMeaning": "a sudden, dramatic, and important discovery or development",
+    "example": "Scientists have made a major breakthrough in cancer research.",
+    "exampleThai": "นักวิทยาศาสตร์ได้ค้นพบความก้าวหน้าครั้งสำคัญในการวิจัยโรคมะเร็ง",
+    "icon": "Zap",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "science",
+      "discovery",
+      "innovation"
+    ]
+  },
+  {
+    "id": "word_b2_1831",
+    "word": "bribe",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/braɪb/",
+    "thaiMeaning": "สินบน",
+    "simpleMeaning": "money or a gift offered to someone to persuade them to do something illegal or dishonest",
+    "example": "He was accused of offering a bribe to the police officer.",
+    "exampleThai": "เขาถูกกล่าวหาว่าเสนอสินบนให้เจ้าหน้าที่ตำรวจ",
+    "icon": "HandCoins",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "crime",
+      "corruption",
+      "money"
+    ]
+  },
+  {
+    "id": "word_b2_1832",
+    "word": "bribery",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈbraɪbəri/",
+    "thaiMeaning": "การติดสินบน",
+    "simpleMeaning": "the act of giving or receiving a bribe",
+    "example": "Bribery is considered a serious crime in this country.",
+    "exampleThai": "การติดสินบนถือเป็นอาชญากรรมร้ายแรงในประเทศนี้",
+    "icon": "AlertTriangle",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "crime",
+      "law",
+      "corruption"
+    ]
+  },
+  {
+    "id": "word_b2_1833",
+    "word": "briefing",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈbriːfɪŋ/",
+    "thaiMeaning": "การสรุปข้อมูล, การประชุมชี้แจง",
+    "simpleMeaning": "a meeting for giving information or instructions",
+    "example": "The manager held a quick briefing before the event.",
+    "exampleThai": "ผู้จัดการจัดการประชุมสรุปข้อมูลสั้นๆ ก่อนเริ่มงาน",
+    "icon": "Users",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "meeting",
+      "information",
+      "team"
+    ]
+  },
+  {
+    "id": "word_b2_1834",
+    "word": "candidate",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈkændɪdeɪt/",
+    "thaiMeaning": "ผู้สมัคร",
+    "simpleMeaning": "a person who applies for a job or is nominated for an election",
+    "example": "We are interviewing a new candidate for the manager position today.",
+    "exampleThai": "วันนี้เรากำลังสัมภาษณ์ผู้สมัครคนใหม่สำหรับตำแหน่งผู้จัดการ",
+    "icon": "User",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "work",
+      "applicant",
+      "job"
+    ]
+  },
+  {
+    "id": "word_b2_1835",
+    "word": "catastrophe",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/kəˈtæstrəfi/",
+    "thaiMeaning": "ภัยพิบัติ",
+    "simpleMeaning": "a sudden event that causes many people to suffer",
+    "example": "The earthquake was a terrible catastrophe for the city.",
+    "exampleThai": "แผ่นดินไหวครั้งนั้นเป็นภัยพิบัติที่เลวร้ายสำหรับเมือง",
+    "icon": "AlertCircle",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "nature",
+      "disaster",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1836",
+    "word": "civil",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈsɪvəl/",
+    "thaiMeaning": "เกี่ยวกับพลเรือน, คดีแพ่ง",
+    "simpleMeaning": "relating to ordinary citizens and their concerns, as distinct from military or criminal matters",
+    "example": "They are involved in a long and expensive civil lawsuit.",
+    "exampleThai": "พวกเขามีส่วนเกี่ยวข้องในคดีแพ่งที่ยาวนานและมีค่าใช้จ่ายสูง",
+    "icon": "Users",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "society",
+      "rights"
+    ]
+  },
+  {
+    "id": "word_b2_1837",
+    "word": "clarify",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈklærəfaɪ/",
+    "thaiMeaning": "ทำให้ชัดเจน",
+    "simpleMeaning": "to make a statement or situation less confused and more comprehensible",
+    "example": "Could you clarify what you mean by that?",
+    "exampleThai": "คุณช่วยทำให้สิ่งที่คุณหมายถึงชัดเจนขึ้นได้ไหม?",
+    "icon": "ZoomIn",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "communication",
+      "clear",
+      "explain"
+    ]
+  },
+  {
+    "id": "word_b2_1838",
+    "word": "cognitive",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈkɒɡnɪtɪv/",
+    "thaiMeaning": "เกี่ยวกับการรับรู้ / เกี่ยวกับความรู้ความเข้าใจ",
+    "simpleMeaning": "connected with thinking or conscious mental processes",
+    "example": "Some of her cognitive functions have been impaired.",
+    "exampleThai": "ฟังก์ชันการรับรู้บางส่วนของเธอได้รับความเสียหาย",
+    "icon": "Brain",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "science",
+      "psychology",
+      "academic"
+    ]
+  },
+  {
+    "id": "word_b2_1839",
+    "word": "collaborate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/kəˈlæbəreɪt/",
+    "thaiMeaning": "ร่วมมือ",
+    "simpleMeaning": "to work jointly on an activity or project",
+    "example": "Our teams will collaborate on the new software project.",
+    "exampleThai": "ทีมงานของเราจะร่วมมือกันในโครงการซอฟต์แวร์ใหม่",
+    "icon": "Users",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "work",
+      "team",
+      "together"
+    ]
+  },
+  {
+    "id": "word_b2_1840",
+    "word": "commencement",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/kəˈmensmənt/",
+    "thaiMeaning": "การเริ่มต้น, งานรับปริญญา",
+    "simpleMeaning": "the beginning of something",
+    "example": "The commencement of the project is scheduled for next Monday.",
+    "exampleThai": "การเริ่มต้นโครงการกำหนดไว้ในวันจันทร์หน้า",
+    "icon": "Flag",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "start",
+      "project",
+      "schedule"
+    ]
+  },
+  {
+    "id": "word_b2_1841",
+    "word": "commercial",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/kəˈmɜːʃl/",
+    "thaiMeaning": "เชิงพาณิชย์",
+    "simpleMeaning": "concerned with or engaged in commerce or business",
+    "example": "The product is designed for commercial use, not for homes.",
+    "exampleThai": "ผลิตภัณฑ์นี้ออกแบบมาเพื่อการใช้งานเชิงพาณิชย์ ไม่ใช่สำหรับใช้ในบ้าน",
+    "icon": "Store",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "trade",
+      "sales",
+      "business"
+    ]
+  },
+  {
+    "id": "word_b2_1842",
+    "word": "commit",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/kəˈmɪt/",
+    "thaiMeaning": "กระทำ (ความผิด)",
+    "simpleMeaning": "to do something illegal or something that is considered wrong",
+    "example": "It is a fact that most crimes are committed by young men.",
+    "exampleThai": "เป็นความจริงที่อาชญากรรมส่วนใหญ่กระทำโดยชายหนุ่ม",
+    "icon": "AlertOctagon",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "crime",
+      "action",
+      "wrongdoing"
+    ]
+  },
+  {
+    "id": "word_b2_1843",
+    "word": "compassionate",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/kəmˈpæʃənət/",
+    "thaiMeaning": "ที่มีความเห็นอกเห็นใจ",
+    "simpleMeaning": "feeling or showing sympathy for people who are suffering",
+    "example": "He was a very compassionate man who always helped others.",
+    "exampleThai": "เขาเป็นผู้ชายที่มีความเห็นอกเห็นใจผู้อื่นมากและช่วยเหลือคนอื่นเสมอ",
+    "icon": "HeartHandshake",
+    "category": [
+      "Feelings"
+    ],
+    "tags": [
+      "emotion",
+      "kindness",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1844",
+    "word": "compensate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈkɒmpenseɪt/",
+    "thaiMeaning": "ชดเชย",
+    "simpleMeaning": "to give someone something, typically money, in recognition of loss, suffering, or injury incurred",
+    "example": "The company will compensate you for your travel expenses.",
+    "exampleThai": "บริษัทจะชดเชยค่าใช้จ่ายในการเดินทางของคุณให้",
+    "icon": "Banknote",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "money",
+      "repay",
+      "expense"
+    ]
+  },
+  {
+    "id": "word_b2_1845",
+    "word": "competitive",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/kəmˈpetətɪv/",
+    "thaiMeaning": "ที่เกี่ยวกับการแข่งขัน, สามารถแข่งขันได้",
+    "simpleMeaning": "relating to or characterized by competition",
+    "example": "To survive, businesses must offer competitive prices.",
+    "exampleThai": "เพื่อความอยู่รอด ธุรกิจต้องเสนอราคาที่แข่งขันได้",
+    "icon": "Trophy",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "market",
+      "price",
+      "business"
+    ]
+  },
+  {
+    "id": "word_b2_1846",
+    "word": "compliance",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/kəmˈplaɪəns/",
+    "thaiMeaning": "การปฏิบัติตาม (กฎระเบียบ)",
+    "simpleMeaning": "the action or fact of complying with a wish or command",
+    "example": "The company is acting in full compliance with the law.",
+    "exampleThai": "บริษัทกำลังดำเนินการโดยปฏิบัติตามกฎหมายอย่างครบถ้วน",
+    "icon": "ShieldCheck",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "rules",
+      "corporate"
+    ]
+  },
+  {
+    "id": "word_b2_1847",
+    "word": "complicated",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈkɑːm.plə.keɪ.t̬ɪd/",
+    "thaiMeaning": "ซับซ้อน",
+    "simpleMeaning": "involving a lot of different parts, in a way that is difficult to understand",
+    "example": "The instructions were too complicated for me to follow.",
+    "exampleThai": "คำแนะนำซับซ้อนเกินกว่าที่ฉันจะทำตามได้",
+    "icon": "GitBranch",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "difficult",
+      "abstract",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1848",
+    "word": "condemn",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/kənˈdem/",
+    "thaiMeaning": "ประณาม, ตัดสินลงโทษ",
+    "simpleMeaning": "to express complete disapproval of, typically in public; to sentence someone to a punishment",
+    "example": "The international community condemned the recent violence.",
+    "exampleThai": "ประชาคมระหว่างประเทศประณามความรุนแรงที่เกิดขึ้นเมื่อเร็วๆ นี้",
+    "icon": "ThumbsDown",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "politics",
+      "opinion",
+      "judgment"
+    ]
+  },
+  {
+    "id": "word_b2_1849",
+    "word": "conference",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈkɒnfərəns/",
+    "thaiMeaning": "การประชุม",
+    "simpleMeaning": "a formal meeting for discussion",
+    "example": "The international business conference will be held in London.",
+    "exampleThai": "การประชุมธุรกิจระดับนานาชาติจะจัดขึ้นที่ลอนดอน",
+    "icon": "Presentation",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "business",
+      "meeting",
+      "event"
+    ]
+  },
+  {
+    "id": "word_b2_1850",
+    "word": "confess",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/kənˈfes/",
+    "thaiMeaning": "สารภาพ",
+    "simpleMeaning": "to admit that you have done something wrong or illegal",
+    "example": "He finally decided to confess to the robbery.",
+    "exampleThai": "ในที่สุดเขาก็ตัดสินใจสารภาพเรื่องการปล้น",
+    "icon": "MessageSquare",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "crime",
+      "law",
+      "speech"
+    ]
+  },
+  {
+    "id": "word_b2_1851",
+    "word": "confession",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/kənˈfeʃən/",
+    "thaiMeaning": "คำสารภาพ",
+    "simpleMeaning": "a formal statement admitting that one is guilty of a crime",
+    "example": "The police forced a confession out of the suspect.",
+    "exampleThai": "ตำรวจบังคับให้ผู้ต้องสงสัยให้คำสารภาพ",
+    "icon": "FileText",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "crime",
+      "police",
+      "document"
+    ]
+  },
+  {
+    "id": "word_b2_1852",
+    "word": "consensus",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/kənˈsensəs/",
+    "thaiMeaning": "ฉันทามติ, ความเห็นพ้องต้องกัน",
+    "simpleMeaning": "a general agreement",
+    "example": "It took hours to reach a consensus on the new policy.",
+    "exampleThai": "ใช้เวลาหลายชั่วโมงกว่าจะบรรลุฉันทามติเกี่ยวกับนโยบายใหม่",
+    "icon": "Handshake",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "agree",
+      "meeting",
+      "team"
+    ]
+  },
+  {
+    "id": "word_b2_1853",
+    "word": "consequence",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈkɑːn.sə.kwəns/",
+    "thaiMeaning": "ผลลัพธ์, ผลที่ตามมา",
+    "simpleMeaning": "a result of a particular action or situation, often one that is bad",
+    "example": "You need to accept the consequences of your actions.",
+    "exampleThai": "คุณต้องยอมรับผลที่ตามมาจากการกระทำของคุณ",
+    "icon": "AlertCircle",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "result",
+      "abstract",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1854",
+    "word": "constitution",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˌkɒnstɪˈtjuːʃən/",
+    "thaiMeaning": "รัฐธรรมนูญ",
+    "simpleMeaning": "the set of political principles by which a state or organization is governed",
+    "example": "The country is preparing to draft a new constitution.",
+    "exampleThai": "ประเทศกำลังเตรียมร่างรัฐธรรมนูญฉบับใหม่",
+    "icon": "Landmark",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "politics",
+      "document"
+    ]
+  },
+  {
+    "id": "word_b2_1855",
+    "word": "consult",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/kənˈsʌlt/",
+    "thaiMeaning": "ปรึกษา",
+    "simpleMeaning": "to seek information or advice from someone with expertise in a particular area",
+    "example": "I need to consult my lawyer before signing the contract.",
+    "exampleThai": "ฉันต้องปรึกษาทนายความก่อนเซ็นสัญญา",
+    "icon": "HelpCircle",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "advice",
+      "expert",
+      "discuss"
+    ]
+  },
+  {
+    "id": "word_b2_1856",
+    "word": "context",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈkɒntɛkst/",
+    "thaiMeaning": "บริบท",
+    "simpleMeaning": "the situation within which something exists or happens, and that can help explain it",
+    "example": "It is important to see all the historical events in context.",
+    "exampleThai": "สิ่งสำคัญคือต้องเห็นเหตุการณ์ทางประวัติศาสตร์ทั้งหมดในบริบท",
+    "icon": "Map",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "literature",
+      "academic",
+      "language"
+    ]
+  },
+  {
+    "id": "word_b2_1857",
+    "word": "contractor",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/kənˈtræktər/",
+    "thaiMeaning": "ผู้รับเหมา",
+    "simpleMeaning": "a person or company that undertakes a contract to provide materials or labor to perform a service or do a job",
+    "example": "We hired an independent contractor to fix the roof.",
+    "exampleThai": "เราจ้างผู้รับเหมาอิสระมาซ่อมหลังคา",
+    "icon": "HardHat",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "job",
+      "hire",
+      "service"
+    ]
+  },
+  {
+    "id": "word_b2_1858",
+    "word": "convict",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/kənˈvɪkt/",
+    "thaiMeaning": "ตัดสินว่ามีความผิด",
+    "simpleMeaning": "to decide officially in a court of law that someone is guilty of a crime",
+    "example": "He was convicted of fraud and sentenced to three years in prison.",
+    "exampleThai": "เขาถูกตัดสินว่ามีความผิดฐานฉ้อโกงและถูกตัดสินจำคุกสามปี",
+    "icon": "Gavel",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "crime",
+      "court"
+    ]
+  },
+  {
+    "id": "word_b2_1859",
+    "word": "conviction",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/kənˈvɪkʃən/",
+    "thaiMeaning": "การตัดสินว่ากระทำผิด",
+    "simpleMeaning": "a formal declaration that someone is guilty of a criminal offense, made by the verdict of a jury or the decision of a judge",
+    "example": "She had a previous conviction for a similar offence.",
+    "exampleThai": "เธอเคยมีประวัติการถูกตัดสินว่ากระทำผิดในข้อหาที่คล้ายกันมาก่อน",
+    "icon": "Scroll",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "crime",
+      "record"
+    ]
+  },
+  {
+    "id": "word_b2_1860",
+    "word": "corporate",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈkɔːrpərət/",
+    "thaiMeaning": "เกี่ยวกับบริษัท, องค์กร",
+    "simpleMeaning": "relating to a large company or group",
+    "example": "They are organizing a corporate event for all employees.",
+    "exampleThai": "พวกเขากำลังจัดงานขององค์กรสำหรับพนักงานทุกคน",
+    "icon": "Building2",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "business",
+      "company",
+      "organization"
+    ]
+  },
+  {
+    "id": "word_b2_1861",
+    "word": "corrupt",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/kəˈrʌpt/",
+    "thaiMeaning": "ทุจริต, ฉ้อฉล",
+    "simpleMeaning": "willing to act dishonestly in return for money or personal gain",
+    "example": "The mayor was exposed as being deeply corrupt.",
+    "exampleThai": "นายกเทศมนตรีถูกแฉว่ามีการทุจริตอย่างหนัก",
+    "icon": "FileWarning",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "politics",
+      "crime",
+      "ethics"
+    ]
+  },
+  {
+    "id": "word_b2_1862",
+    "word": "corruption",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/kəˈrʌpʃən/",
+    "thaiMeaning": "การทุจริต, คอร์รัปชัน",
+    "simpleMeaning": "dishonest or fraudulent conduct by those in power, typically involving bribery",
+    "example": "The new government promised to eliminate corruption in the police force.",
+    "exampleThai": "รัฐบาลใหม่สัญญาว่าจะขจัดการทุจริตในกองกำลังตำรวจ",
+    "icon": "AlertTriangle",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "politics",
+      "crime",
+      "system"
+    ]
+  },
+  {
+    "id": "word_b2_1863",
+    "word": "crater",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈkreɪtə(r)/",
+    "thaiMeaning": "ปล่องภูเขาไฟ",
+    "simpleMeaning": "a large hole in the ground caused by the explosion of a bomb or by a volcano",
+    "example": "The meteor left a huge crater in the ground.",
+    "exampleThai": "อุกกาบาตทิ้งปล่องขนาดใหญ่ไว้บนพื้น",
+    "icon": "Circle",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "nature",
+      "geology",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1864",
+    "word": "credential",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/krɪˈdenʃl/",
+    "thaiMeaning": "หนังสือรับรอง, คุณสมบัติ",
+    "simpleMeaning": "a qualification, achievement, personal quality, or aspect of a person's background, typically when used to indicate that they are suitable for something",
+    "example": "She has excellent credentials for this position.",
+    "exampleThai": "เธอมีคุณสมบัติที่ยอดเยี่ยมสำหรับตำแหน่งนี้",
+    "icon": "Award",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "qualification",
+      "job",
+      "degree"
+    ]
+  },
+  {
+    "id": "word_b2_1865",
+    "word": "criteria",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/kraɪˈtɪəriə/",
+    "thaiMeaning": "เกณฑ์",
+    "simpleMeaning": "plural of criterion; standards by which you judge, decide about, or deal with something",
+    "example": "What criteria are used for assessing a student's ability?",
+    "exampleThai": "เกณฑ์อะไรที่ถูกใช้สำหรับประเมินความสามารถของนักเรียน?",
+    "icon": "CheckCircle2",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "academic",
+      "evaluation",
+      "research"
+    ]
+  },
+  {
+    "id": "word_b2_1866",
+    "word": "criticize",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈkrɪt̬.ɪ.saɪz/",
+    "thaiMeaning": "วิจารณ์, ติเตียน",
+    "simpleMeaning": "to express disapproval of someone or something",
+    "example": "The government was heavily criticized for the new tax.",
+    "exampleThai": "รัฐบาลถูกวิพากษ์วิจารณ์อย่างหนักเรื่องภาษีใหม่",
+    "icon": "MessageSquare",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "speaking",
+      "negative",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1867",
+    "word": "crucial",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈkruː.ʃəl/",
+    "thaiMeaning": "สำคัญมาก, จำเป็น",
+    "simpleMeaning": "extremely important or necessary",
+    "example": "Water is crucial for our survival.",
+    "exampleThai": "น้ำเป็นสิ่งสำคัญมากต่อการอยู่รอดของเรา",
+    "icon": "AlertCircle",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "important",
+      "necessity",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1868",
+    "word": "custody",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈkʌstədi/",
+    "thaiMeaning": "การควบคุมตัว",
+    "simpleMeaning": "the state of being kept in prison, especially while waiting to go to court for trial",
+    "example": "The suspect is currently in police custody.",
+    "exampleThai": "ผู้ต้องสงสัยอยู่ในความควบคุมตัวของตำรวจในขณะนี้",
+    "icon": "Lock",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "police",
+      "jail"
+    ]
+  },
+  {
+    "id": "word_b2_1869",
+    "word": "cutting-edge",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˌkʌtɪŋ ˈedʒ/",
+    "thaiMeaning": "ล้ำยุค, ทันสมัยที่สุด",
+    "simpleMeaning": "highly advanced; innovative or pioneering",
+    "example": "The company uses cutting-edge technology in its smartphones.",
+    "exampleThai": "บริษัทใช้เทคโนโลยีที่ล้ำสมัยที่สุดในสมาร์ทโฟนของตน",
+    "icon": "Zap",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "modern",
+      "new",
+      "innovation"
+    ]
+  },
+  {
+    "id": "word_b2_1870",
+    "word": "deduce",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/dɪˈdjuːs/",
+    "thaiMeaning": "อนุมาน",
+    "simpleMeaning": "to reach an answer or a decision by thinking carefully about the known facts",
+    "example": "We can deduce a lot from what people choose to buy.",
+    "exampleThai": "เราสามารถอนุมานได้มากมายจากสิ่งที่ผู้คนเลือกที่จะซื้อ",
+    "icon": "Search",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "logic",
+      "academic",
+      "research"
+    ]
+  },
+  {
+    "id": "word_b2_1871",
+    "word": "defective",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/dɪˈfektɪv/",
+    "thaiMeaning": "มีตำหนิ, บกพร่อง",
+    "simpleMeaning": "imperfect or faulty",
+    "example": "Please return any defective items to the store.",
+    "exampleThai": "โปรดส่งคืนสินค้าที่มีตำหนิให้กับทางร้าน",
+    "icon": "AlertOctagon",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "broken",
+      "error",
+      "product"
+    ]
+  },
+  {
+    "id": "word_b2_1872",
+    "word": "defendant",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/dɪˈfendənt/",
+    "thaiMeaning": "จำเลย",
+    "simpleMeaning": "a person, company, or institution sued or accused in a court of law",
+    "example": "The defendant refused to answer the lawyer's questions.",
+    "exampleThai": "จำเลยปฏิเสธที่จะตอบคำถามของทนายความ",
+    "icon": "UserMinus",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "court",
+      "person"
+    ]
+  },
+  {
+    "id": "word_b2_1873",
+    "word": "delegate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈdelɪɡeɪt/",
+    "thaiMeaning": "มอบหมาย (งาน)",
+    "simpleMeaning": "to entrust a task or responsibility to another person, typically one who is less senior than oneself",
+    "example": "A good manager knows how to delegate tasks effectively.",
+    "exampleThai": "ผู้จัดการที่ดีรู้จักวิธีมอบหมายงานอย่างมีประสิทธิภาพ",
+    "icon": "UserCheck",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "manage",
+      "task",
+      "team"
+    ]
+  },
+  {
+    "id": "word_b2_1874",
+    "word": "demand",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/dɪˈmɑːnd/",
+    "thaiMeaning": "ความต้องการ",
+    "simpleMeaning": "a strong request or need for something",
+    "example": "There is a high demand for organic food these days.",
+    "exampleThai": "มีความต้องการอาหารออร์แกนิกสูงมากในปัจจุบัน",
+    "icon": "TrendingUp",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "other",
+      "business",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1875",
+    "word": "democracy",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/dɪˈmɒkrəsi/",
+    "thaiMeaning": "ประชาธิปไตย",
+    "simpleMeaning": "a system of government by the whole population or all the eligible members of a state, typically through elected representatives",
+    "example": "Freedom of speech is a fundamental part of any democracy.",
+    "exampleThai": "เสรีภาพในการพูดเป็นส่วนพื้นฐานของระบอบประชาธิปไตยใดๆ",
+    "icon": "Users",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "politics",
+      "government",
+      "society"
+    ]
+  },
+  {
+    "id": "word_b2_1876",
+    "word": "demonstrate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈdemənstreɪt/",
+    "thaiMeaning": "สาธิต, แสดงให้เห็น",
+    "simpleMeaning": "to clearly show the existence or truth of something by giving proof or evidence",
+    "example": "The team will demonstrate the new software tomorrow.",
+    "exampleThai": "ทีมงานจะสาธิตซอฟต์แวร์ใหม่ในวันพรุ่งนี้",
+    "icon": "Presentation",
+    "category": [
+      "Technology"
+    ],
+    "tags": [
+      "show",
+      "present",
+      "tech"
+    ]
+  },
+  {
+    "id": "word_b2_1877",
+    "word": "derive",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/dɪˈraɪv/",
+    "thaiMeaning": "ได้มาจาก",
+    "simpleMeaning": "to get something from something else",
+    "example": "The institute derives all its money from foreign investments.",
+    "exampleThai": "สถาบันได้รับเงินทั้งหมดมาจากการลงทุนในต่างประเทศ",
+    "icon": "ArrowDownToLine",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "academic",
+      "research",
+      "science"
+    ]
+  },
+  {
+    "id": "word_b2_1878",
+    "word": "desperate",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈdes.pɚ.ət/",
+    "thaiMeaning": "สิ้นหวัง, เข้าตาจน",
+    "simpleMeaning": "feeling that you have no hope and are ready to do anything to change the situation",
+    "example": "They are in desperate need of food and water.",
+    "exampleThai": "พวกเขาต้องการอาหารและน้ำอย่างเข้าตาจน",
+    "icon": "AlertTriangle",
+    "category": [
+      "Feelings"
+    ],
+    "tags": [
+      "feeling",
+      "extreme",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1879",
+    "word": "discourse",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈdɪskɔːs/",
+    "thaiMeaning": "วาทกรรม, การสนทนา",
+    "simpleMeaning": "communication in speech or writing, or a formal discussion of a subject in speech or writing",
+    "example": "Her book contributes to the ongoing discourse on climate change.",
+    "exampleThai": "หนังสือของเธอมีส่วนร่วมในวาทกรรมอย่างต่อเนื่องเกี่ยวกับการเปลี่ยนแปลงสภาพภูมิอากาศ",
+    "icon": "MessagesSquare",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "academic",
+      "literature",
+      "language"
+    ]
+  },
+  {
+    "id": "word_b2_1880",
+    "word": "district",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈdɪstrɪkt/",
+    "thaiMeaning": "เขต, อำเภอ",
+    "simpleMeaning": "an area of a country or town, especially one that has particular features",
+    "example": "They live in a wealthy district of the city.",
+    "exampleThai": "พวกเขาอาศัยอยู่ในเขตที่ร่ำรวยของเมือง",
+    "icon": "Home",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "city",
+      "area",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1881",
+    "word": "downsize",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈdaʊnsaɪz/",
+    "thaiMeaning": "ลดขนาดองค์กร, ปลดพนักงาน",
+    "simpleMeaning": "to make a company or organization smaller by eliminating staff positions",
+    "example": "The corporation had to downsize due to economic problems.",
+    "exampleThai": "บริษัทต้องลดขนาดองค์กรลงเนื่องจากปัญหาเศรษฐกิจ",
+    "icon": "TrendingDown",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "job",
+      "economy",
+      "company"
+    ]
+  },
+  {
+    "id": "word_b2_1882",
+    "word": "dynamic",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/daɪˈnæmɪk/",
+    "thaiMeaning": "มีพลวัต, ซึ่งเปลี่ยนแปลงอยู่เสมอ",
+    "simpleMeaning": "continuously changing or developing",
+    "example": "Business innovation is a highly dynamic process.",
+    "exampleThai": "นวัตกรรมทางธุรกิจเป็นกระบวนการที่มีพลวัตสูง",
+    "icon": "Activity",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "science",
+      "academic",
+      "physics"
+    ]
+  },
+  {
+    "id": "word_b2_1883",
+    "word": "efficiency",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ɪˈfɪʃənsi/",
+    "thaiMeaning": "ประสิทธิภาพ",
+    "simpleMeaning": "the state or quality of being efficient; working well without wasting time or energy",
+    "example": "The new system has greatly improved our work efficiency.",
+    "exampleThai": "ระบบใหม่ได้ปรับปรุงประสิทธิภาพการทำงานของเราอย่างมาก",
+    "icon": "Zap",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "work",
+      "speed",
+      "productivity"
+    ]
+  },
+  {
+    "id": "word_b2_1884",
+    "word": "efficient",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ɪˈfɪʃ.ənt/",
+    "thaiMeaning": "มีประสิทธิภาพ",
+    "simpleMeaning": "working or operating quickly and effectively in an organized way",
+    "example": "The new machine is highly efficient.",
+    "exampleThai": "เครื่องจักรใหม่มีประสิทธิภาพสูงมาก",
+    "icon": "Zap",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "work",
+      "quality",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1885",
+    "word": "emphasize",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈɛmfəsaɪz/",
+    "thaiMeaning": "เน้นย้ำ",
+    "simpleMeaning": "to give special importance or value to something",
+    "example": "I want to emphasize the importance of being on time.",
+    "exampleThai": "ฉันต้องการเน้นย้ำถึงความสำคัญของการตรงต่อเวลา",
+    "icon": "Megaphone",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "communication",
+      "stress",
+      "highlight"
+    ]
+  },
+  {
+    "id": "word_b2_1886",
+    "word": "empirical",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ɪmˈpɪrɪkəl/",
+    "thaiMeaning": "ซึ่งได้จากการสังเกตหรือการทดลอง",
+    "simpleMeaning": "based on what is experienced or seen rather than on theory",
+    "example": "This theory needs to be backed up with solid empirical data/evidence.",
+    "exampleThai": "ทฤษฎีนี้จำเป็นต้องได้รับการสนับสนุนด้วยข้อมูล/หลักฐานเชิงประจักษ์ที่หนักแน่น",
+    "icon": "Microscope",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "science",
+      "research",
+      "academic"
+    ]
+  },
+  {
+    "id": "word_b2_1887",
+    "word": "enforce",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ɪnˈfɔːs/",
+    "thaiMeaning": "บังคับใช้ (กฎหมาย)",
+    "simpleMeaning": "to make people obey a law, or to make a particular situation happen or be accepted",
+    "example": "It is the job of the police to enforce the law.",
+    "exampleThai": "เป็นหน้าที่ของตำรวจในการบังคับใช้กฎหมาย",
+    "icon": "Shield",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "police",
+      "action"
+    ]
+  },
+  {
+    "id": "word_b2_1888",
+    "word": "enterprise",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈentəpraɪz/",
+    "thaiMeaning": "องค์กร, กิจการ",
+    "simpleMeaning": "a business or company",
+    "example": "He is the founder of a highly successful software enterprise.",
+    "exampleThai": "เขาเป็นผู้ก่อตั้งกิจการซอฟต์แวร์ที่ประสบความสำเร็จอย่างสูง",
+    "icon": "Building",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "company",
+      "business",
+      "large"
+    ]
+  },
+  {
+    "id": "word_b2_1889",
+    "word": "entity",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈɛntɪti/",
+    "thaiMeaning": "สิ่งที่มีอยู่จริง, เอนทิตี",
+    "simpleMeaning": "something that exists apart from other things, having its own independent existence",
+    "example": "The museums work closely together, but are separate legal entities.",
+    "exampleThai": "พิพิธภัณฑ์ต่างๆ ทำงานร่วมกันอย่างใกล้ชิด แต่เป็นนิติบุคคล (สิ่งที่แยกจากกันตามกฎหมาย) ที่แยกจากกัน",
+    "icon": "Box",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "academic",
+      "philosophy",
+      "science"
+    ]
+  },
+  {
+    "id": "word_b2_1890",
+    "word": "essential",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ɪˈsenʃl/",
+    "thaiMeaning": "จำเป็น, สำคัญที่สุด",
+    "simpleMeaning": "necessary or needed",
+    "example": "Water is essential for living things.",
+    "exampleThai": "น้ำเป็นสิ่งจำเป็นสำหรับสิ่งมีชีวิต",
+    "icon": "CheckCircle",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "other",
+      "important",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1891",
+    "word": "ethics",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈɛθɪks/",
+    "thaiMeaning": "จริยธรรม",
+    "simpleMeaning": "a system of accepted beliefs that control behaviour, especially such a system based on morals",
+    "example": "They are examining the ethics of genetic engineering.",
+    "exampleThai": "พวกเขากำลังตรวจสอบจริยธรรมของพันธุวิศวกรรม",
+    "icon": "Scale",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "philosophy",
+      "academic",
+      "morality"
+    ]
+  },
+  {
+    "id": "word_b2_1892",
+    "word": "evaluate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ɪˈvæljueɪt/",
+    "thaiMeaning": "ประเมิน",
+    "simpleMeaning": "to form an idea of the amount, number, or value of; assess",
+    "example": "We need to evaluate the performance of all employees annually.",
+    "exampleThai": "เราจำเป็นต้องประเมินผลการทำงานของพนักงานทุกคนเป็นประจำทุกปี",
+    "icon": "Clipboard",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "business",
+      "assess",
+      "check"
+    ]
+  },
+  {
+    "id": "word_b2_1893",
+    "word": "evidence",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈevɪdəns/",
+    "thaiMeaning": "หลักฐาน",
+    "simpleMeaning": "the available body of facts or information indicating whether a belief or proposition is true or valid",
+    "example": "The police did not have enough evidence to arrest him.",
+    "exampleThai": "ตำรวจไม่มีหลักฐานเพียงพอที่จะจับกุมเขา",
+    "icon": "Search",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "crime",
+      "proof"
+    ]
+  },
+  {
+    "id": "word_b2_1894",
+    "word": "executive",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ɪɡˈzɛkjətɪv/",
+    "thaiMeaning": "ผู้บริหาร",
+    "simpleMeaning": "a person with senior managerial responsibility in a business organization",
+    "example": "The executives are having a meeting in the boardroom.",
+    "exampleThai": "ผู้บริหารกำลังประชุมกันในห้องประชุมใหญ่",
+    "icon": "Briefcase",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "business",
+      "manager",
+      "leader"
+    ]
+  },
+  {
+    "id": "word_b2_1895",
+    "word": "explicit",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ɪkˈsplɪsɪt/",
+    "thaiMeaning": "ชัดเจน",
+    "simpleMeaning": "clear and exact",
+    "example": "I gave her very explicit directions how to get here.",
+    "exampleThai": "ฉันให้เส้นทางที่ชัดเจนมากกับเธอว่าจะมาที่นี่อย่างไร",
+    "icon": "Eye",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "language",
+      "academic",
+      "clear"
+    ]
+  },
+  {
+    "id": "word_b2_1896",
+    "word": "facilitate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/fəˈsɪlɪteɪt/",
+    "thaiMeaning": "ทำให้ง่ายขึ้น, อำนวยความสะดวก",
+    "simpleMeaning": "to make an action or process easy or easier",
+    "example": "The moderator's role is to facilitate the discussion.",
+    "exampleThai": "บทบาทของผู้ดำเนินรายการคือการอำนวยความสะดวกในการอภิปราย",
+    "icon": "Wrench",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "help",
+      "easy",
+      "process"
+    ]
+  },
+  {
+    "id": "word_b2_1897",
+    "word": "feature",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈfiːtʃə(r)/",
+    "thaiMeaning": "ลักษณะเด่น",
+    "simpleMeaning": "a typical quality or an important part of something",
+    "example": "The latest smartphone has many new features.",
+    "exampleThai": "สมาร์ทโฟนรุ่นล่าสุดมีคุณสมบัติใหม่ๆ มากมาย",
+    "icon": "Star",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "other",
+      "detail",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1898",
+    "word": "feedback",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈfiːdbæk/",
+    "thaiMeaning": "ผลตอบรับ",
+    "simpleMeaning": "information about reactions to a product, a person's performance of a task, etc",
+    "example": "We would appreciate your feedback on our new service.",
+    "exampleThai": "เราจะยินดีเป็นอย่างยิ่งสำหรับผลตอบรับของคุณเกี่ยวกับบริการใหม่ของเรา",
+    "icon": "MessageSquare",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "communication",
+      "opinion",
+      "review"
+    ]
+  },
+  {
+    "id": "word_b2_1899",
+    "word": "fluctuation",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˌflʌktʃuˈeɪʃn/",
+    "thaiMeaning": "ความผันผวน, การแกว่งไปมา",
+    "simpleMeaning": "an irregular rising and falling in number or amount; a variation",
+    "example": "Price fluctuations make it hard to plan a budget.",
+    "exampleThai": "ความผันผวนของราคาทำให้ยากต่อการวางแผนงบประมาณ",
+    "icon": "Activity",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "price",
+      "market",
+      "change"
+    ]
+  },
+  {
+    "id": "word_b2_1900",
+    "word": "franchise",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈfræntʃaɪz/",
+    "thaiMeaning": "แฟรนไชส์, สิทธิ์ในการขาย",
+    "simpleMeaning": "an authorization granted by a government or company to an individual or group enabling them to carry out specified commercial activities",
+    "example": "He opened a fast-food franchise in the city center.",
+    "exampleThai": "เขาเปิดร้านอาหารฟาสต์ฟู้ดแฟรนไชส์ใจกลางเมือง",
+    "icon": "Store",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "store",
+      "brand",
+      "sell"
+    ]
+  },
+  {
+    "id": "word_b2_1901",
+    "word": "fraud",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/frɔːd/",
+    "thaiMeaning": "การฉ้อโกง",
+    "simpleMeaning": "the crime of getting money by deceiving people",
+    "example": "He was sent to prison for credit card fraud.",
+    "exampleThai": "เขาถูกส่งตัวเข้าคุกข้อหาฉ้อโกงบัตรเครดิต",
+    "icon": "CreditCard",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "crime",
+      "money",
+      "deception"
+    ]
+  },
+  {
+    "id": "word_b2_1902",
+    "word": "frustrated",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈfrʌs.treɪ.t̬ɪd/",
+    "thaiMeaning": "หงุดหงิด, ท้อแท้",
+    "simpleMeaning": "feeling annoyed or less confident because you cannot achieve what you want",
+    "example": "He became frustrated with his computer.",
+    "exampleThai": "เขาเริ่มหงุดหงิดกับคอมพิวเตอร์ของเขา",
+    "icon": "AlertCircle",
+    "category": [
+      "Feelings"
+    ],
+    "tags": [
+      "feeling",
+      "annoyance",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1903",
+    "word": "furious",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈfjʊr.i.əs/",
+    "thaiMeaning": "โกรธจัด",
+    "simpleMeaning": "extremely angry",
+    "example": "He was furious when he found out the truth.",
+    "exampleThai": "เขาโกรธจัดเมื่อรู้ความจริง",
+    "icon": "Flame",
+    "category": [
+      "Feelings"
+    ],
+    "tags": [
+      "feeling",
+      "anger",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1904",
+    "word": "generate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈdʒenəreɪt/",
+    "thaiMeaning": "สร้างขึ้น, ผลิต",
+    "simpleMeaning": "to cause something to exist",
+    "example": "The new project will generate a lot of jobs.",
+    "exampleThai": "โครงการใหม่จะสร้างงานมากมาย",
+    "icon": "Zap",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "other",
+      "action",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1905",
+    "word": "glacier",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈɡleɪ.ʃɚ/",
+    "thaiMeaning": "ธารน้ำแข็ง",
+    "simpleMeaning": "a large mass of ice that moves slowly",
+    "example": "The glacier has retreated several miles over the last decade.",
+    "exampleThai": "ธารน้ำแข็งได้ถอยร่นไปหลายไมล์ในช่วงทศวรรษที่ผ่านมา",
+    "icon": "Snowflake",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "ice",
+      "environment",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1906",
+    "word": "global warming",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˌɡloʊ.bəl ˈwɔːr.mɪŋ/",
+    "thaiMeaning": "ภาวะโลกร้อน",
+    "simpleMeaning": "a gradual increase in world temperatures caused by gases such as carbon dioxide",
+    "example": "Global warming is melting the polar ice caps.",
+    "exampleThai": "ภาวะโลกร้อนกำลังละลายน้ำแข็งขั้วโลก",
+    "icon": "Globe",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "environment",
+      "climate",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1907",
+    "word": "govern",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈɡʌvən/",
+    "thaiMeaning": "ปกครอง, บริหาร",
+    "simpleMeaning": "to conduct the policy, actions, and affairs of a state, organization, or people",
+    "example": "The country is governed by a coalition of parties.",
+    "exampleThai": "ประเทศบริหารงานโดยพรรคการเมืองร่วมรัฐบาล",
+    "icon": "Building",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "politics",
+      "leadership",
+      "country"
+    ]
+  },
+  {
+    "id": "word_b2_1908",
+    "word": "governor",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈɡʌvənər/",
+    "thaiMeaning": "ผู้ว่าราชการ",
+    "simpleMeaning": "the elected executive head of a state of the US, or a leader of a region",
+    "example": "The governor declared a state of emergency after the flood.",
+    "exampleThai": "ผู้ว่าราชการประกาศภาวะฉุกเฉินหลังจากเกิดน้ำท่วม",
+    "icon": "UserCheck",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "politics",
+      "leader",
+      "government"
+    ]
+  },
+  {
+    "id": "word_b2_1909",
+    "word": "grievance",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈɡriːvəns/",
+    "thaiMeaning": "ความไม่พอใจ, ข้อร้องเรียน",
+    "simpleMeaning": "a real or imagined wrong or other cause for complaint or protest, especially unfair treatment",
+    "example": "Employees can file a grievance with the HR department.",
+    "exampleThai": "พนักงานสามารถยื่นเรื่องร้องเรียนต่อแผนกทรัพยากรบุคคลได้",
+    "icon": "MessageCircleWarning",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "complain",
+      "HR",
+      "problem"
+    ]
+  },
+  {
+    "id": "word_b2_1910",
+    "word": "headquarters",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈhɛdˌkwɔːrtərz/",
+    "thaiMeaning": "สำนักงานใหญ่",
+    "simpleMeaning": "the premises occupied by a military commander or the central part of a business",
+    "example": "The company's headquarters are located in New York.",
+    "exampleThai": "สำนักงานใหญ่ของบริษัทตั้งอยู่ในนิวยอร์ก",
+    "icon": "Building",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "business",
+      "center",
+      "office"
+    ]
+  },
+  {
+    "id": "word_b2_1911",
+    "word": "highlight",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈhaɪlaɪt/",
+    "thaiMeaning": "เน้นย้ำ, จุดเด่น",
+    "simpleMeaning": "to attract attention to or emphasize something important",
+    "example": "The report highlights the need for better security.",
+    "exampleThai": "รายงานเน้นย้ำถึงความจำเป็นในการรักษาความปลอดภัยที่ดีขึ้น",
+    "icon": "PenTool",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "other",
+      "action",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1912",
+    "word": "hypothesis",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/haɪˈpɒθəsɪs/",
+    "thaiMeaning": "สมมติฐาน",
+    "simpleMeaning": "an idea or explanation for something that is based on known facts but has not yet been proved",
+    "example": "The scientists tested their hypothesis with a new experiment.",
+    "exampleThai": "นักวิทยาศาสตร์ทดสอบสมมติฐานของพวกเขาด้วยการทดลองใหม่",
+    "icon": "FlaskConical",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "science",
+      "academic",
+      "research"
+    ]
+  },
+  {
+    "id": "word_b2_1913",
+    "word": "ideology",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˌaɪdiˈɒlədʒi/",
+    "thaiMeaning": "อุดมการณ์",
+    "simpleMeaning": "a set of beliefs or principles, especially one on which a political system, party, or organization is based",
+    "example": "The people are caught between two opposing ideologies.",
+    "exampleThai": "ผู้คนติดอยู่ระหว่างสองอุดมการณ์ที่ตรงข้ามกัน",
+    "icon": "Flag",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "philosophy",
+      "academic",
+      "politics"
+    ]
+  },
+  {
+    "id": "word_b2_1914",
+    "word": "impact",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈɪmpækt/",
+    "thaiMeaning": "ผลกระทบ",
+    "simpleMeaning": "a powerful effect that something, especially something new, has on a situation or person",
+    "example": "The invention of the internet has had a huge impact on our lives.",
+    "exampleThai": "การประดิษฐ์อินเทอร์เน็ตมีผลกระทบอย่างมากต่อชีวิตของเรา",
+    "icon": "Activity",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "other",
+      "effect",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1915",
+    "word": "implement",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈɪmplɪmənt/",
+    "thaiMeaning": "ดำเนินการ, นำไปปฏิบัติ",
+    "simpleMeaning": "to put a plan, decision, or agreement into effect",
+    "example": "The new rules will be implemented next month.",
+    "exampleThai": "กฎใหม่จะถูกนำมาปฏิบัติในเดือนหน้า",
+    "icon": "Settings",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "work",
+      "action",
+      "execute"
+    ]
+  },
+  {
+    "id": "word_b2_1916",
+    "word": "implicit",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ɪmˈplɪsɪt/",
+    "thaiMeaning": "โดยนัย",
+    "simpleMeaning": "suggested but not communicated directly",
+    "example": "He interpreted her comments as an implicit criticism of the government.",
+    "exampleThai": "เขาตีความความคิดเห็นของเธอว่าเป็นการวิจารณ์รัฐบาลโดยนัย",
+    "icon": "EyeOff",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "language",
+      "literature",
+      "academic"
+    ]
+  },
+  {
+    "id": "word_b2_1917",
+    "word": "incentive",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ɪnˈsentɪv/",
+    "thaiMeaning": "สิ่งจูงใจ, รางวัล",
+    "simpleMeaning": "a thing that motivates or encourages one to do something",
+    "example": "Bonus payments provide an incentive to work harder.",
+    "exampleThai": "การจ่ายโบนัสเป็นสิ่งจูงใจให้ทำงานหนักขึ้น",
+    "icon": "Gift",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "bonus",
+      "motivate",
+      "money"
+    ]
+  },
+  {
+    "id": "word_b2_1918",
+    "word": "infer",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ɪnˈfɜː/",
+    "thaiMeaning": "อนุมาน, สรุปเอา",
+    "simpleMeaning": "to form an opinion or guess that something is true because of the information that you have",
+    "example": "I inferred from her expression that she wanted to leave.",
+    "exampleThai": "ฉันอนุมานจากการแสดงออกของเธอว่าเธอต้องการจะไป",
+    "icon": "Lightbulb",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "logic",
+      "academic",
+      "literature"
+    ]
+  },
+  {
+    "id": "word_b2_1919",
+    "word": "infinite",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈɪnfɪnɪt/",
+    "thaiMeaning": "ไม่มีที่สิ้นสุด",
+    "simpleMeaning": "without limits; extremely large or great",
+    "example": "The universe is theoretically infinite.",
+    "exampleThai": "ในทางทฤษฎี จักรวาลนั้นไม่มีที่สิ้นสุด",
+    "icon": "Infinity",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "science",
+      "philosophy",
+      "math"
+    ]
+  },
+  {
+    "id": "word_b2_1920",
+    "word": "infrastructure",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈɪn.frəˌstrʌk.tʃɚ/",
+    "thaiMeaning": "โครงสร้างพื้นฐาน",
+    "simpleMeaning": "the basic systems and services, such as transport and power supplies, that a country or organization uses",
+    "example": "The country needs to invest in its railway infrastructure.",
+    "exampleThai": "ประเทศจำเป็นต้องลงทุนในโครงสร้างพื้นฐานทางรถไฟ",
+    "icon": "Train",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "system",
+      "transport",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1921",
+    "word": "innocent",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈɪnəsənt/",
+    "thaiMeaning": "บริสุทธิ์, ไม่มีความผิด",
+    "simpleMeaning": "not guilty of a crime or offense",
+    "example": "She maintained that she was innocent of all charges.",
+    "exampleThai": "เธอยืนยันว่าตนบริสุทธิ์จากทุกข้อกล่าวหา",
+    "icon": "CheckCircle",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "verdict",
+      "pure"
+    ]
+  },
+  {
+    "id": "word_b2_1922",
+    "word": "innovate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈɪnəveɪt/",
+    "thaiMeaning": "สร้างนวัตกรรม",
+    "simpleMeaning": "to introduce new methods, ideas, or products",
+    "example": "The company must innovate to stay ahead of its competitors.",
+    "exampleThai": "บริษัทต้องสร้างนวัตกรรมเพื่อนำหน้าคู่แข่ง",
+    "icon": "Lightbulb",
+    "category": [
+      "Technology"
+    ],
+    "tags": [
+      "technology",
+      "new",
+      "creation"
+    ]
+  },
+  {
+    "id": "word_b2_1923",
+    "word": "integrate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈɪntɪɡreɪt/",
+    "thaiMeaning": "บูรณาการ, รวมเข้าด้วยกัน",
+    "simpleMeaning": "to combine one thing with another so that they become a whole",
+    "example": "We will integrate the new software with our existing system.",
+    "exampleThai": "เราจะรวมซอฟต์แวร์ใหม่เข้ากับระบบที่มีอยู่ของเรา",
+    "icon": "Combine",
+    "category": [
+      "Technology"
+    ],
+    "tags": [
+      "combine",
+      "system",
+      "tech"
+    ]
+  },
+  {
+    "id": "word_b2_1924",
+    "word": "interactive",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˌɪntərˈæktɪv/",
+    "thaiMeaning": "ตอบโต้, เชิงโต้ตอบ",
+    "simpleMeaning": "allowing a two-way flow of information between a computer and a computer-user; responding to a user's input",
+    "example": "The museum has many interactive exhibits for children.",
+    "exampleThai": "พิพิธภัณฑ์มีนิทรรศการเชิงโต้ตอบมากมายสำหรับเด็ก",
+    "icon": "MousePointer",
+    "category": [
+      "Technology"
+    ],
+    "tags": [
+      "technology",
+      "active",
+      "engage"
+    ]
+  },
+  {
+    "id": "word_b2_1925",
+    "word": "interpret",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ɪnˈtɜːrprɪt/",
+    "thaiMeaning": "ตีความ, แปล",
+    "simpleMeaning": "to explain the meaning of information, words, or actions",
+    "example": "It is difficult to interpret the results of the survey.",
+    "exampleThai": "มันยากที่จะตีความผลลัพธ์ของแบบสำรวจ",
+    "icon": "Brain",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "communication",
+      "understand",
+      "explain"
+    ]
+  },
+  {
+    "id": "word_b2_1926",
+    "word": "investigate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ɪnˈvestɪɡeɪt/",
+    "thaiMeaning": "สืบสวน",
+    "simpleMeaning": "to carry out a systematic or formal inquiry to discover and examine the facts of an incident",
+    "example": "The police are investigating the cause of the explosion.",
+    "exampleThai": "ตำรวจกำลังสืบสวนสาเหตุของการระเบิด",
+    "icon": "Search",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "crime",
+      "police",
+      "search"
+    ]
+  },
+  {
+    "id": "word_b2_1927",
+    "word": "isolated",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈaɪ.sə.leɪ.t̬ɪd/",
+    "thaiMeaning": "โดดเดี่ยว, ห่างไกล",
+    "simpleMeaning": "not near to other places",
+    "example": "The cabin is in a very isolated location.",
+    "exampleThai": "กระท่อมตั้งอยู่ในสถานที่ที่ห่างไกลมาก",
+    "icon": "MapPin",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "location",
+      "distance",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1928",
+    "word": "jargon",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈdʒɑːɡən/",
+    "thaiMeaning": "ศัพท์เฉพาะวงการ",
+    "simpleMeaning": "special words or expressions that are used by a particular profession or group and are difficult for others to understand",
+    "example": "Try to avoid using medical jargon when talking to patients.",
+    "exampleThai": "พยายามหลีกเลี่ยงการใช้ศัพท์เฉพาะทางการแพทย์เมื่อพูดคุยกับผู้ป่วย",
+    "icon": "MessageCircleQuestion",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "words",
+      "confuse",
+      "special"
+    ]
+  },
+  {
+    "id": "word_b2_1929",
+    "word": "jury",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈdʒʊəri/",
+    "thaiMeaning": "คณะลูกขุน",
+    "simpleMeaning": "a body of people sworn to give a verdict in a legal case on the basis of evidence submitted to them in court",
+    "example": "The jury took three days to reach a verdict.",
+    "exampleThai": "คณะลูกขุนใช้เวลาสามวันในการตัดสินคำพิพากษา",
+    "icon": "Users",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "court",
+      "people"
+    ]
+  },
+  {
+    "id": "word_b2_1930",
+    "word": "justice",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈdʒʌstɪs/",
+    "thaiMeaning": "ความยุติธรรม",
+    "simpleMeaning": "the quality of being fair and reasonable; the administration of the law or authority in maintaining this",
+    "example": "The family of the victim demanded justice.",
+    "exampleThai": "ครอบครัวของเหยื่อเรียกร้องความยุติธรรม",
+    "icon": "Scale",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "fairness",
+      "society"
+    ]
+  },
+  {
+    "id": "word_b2_1931",
+    "word": "justify",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈdʒʌstɪfaɪ/",
+    "thaiMeaning": "ให้เหตุผล, แสดงให้เห็นว่าถูกต้อง",
+    "simpleMeaning": "to show that something is reasonable, right, or true",
+    "example": "How can you justify spending so much money on a car?",
+    "exampleThai": "คุณจะให้เหตุผลอย่างไรกับการใช้เงินมากมายไปกับรถยนต์",
+    "icon": "CheckSquare",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "other",
+      "action",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1932",
+    "word": "knowledge",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈnɒlɪdʒ/",
+    "thaiMeaning": "ความรู้",
+    "simpleMeaning": "understanding of or information about a subject that you get by experience or study",
+    "example": "She has a deep knowledge of European history.",
+    "exampleThai": "เธอมีความรู้เชิงลึกเกี่ยวกับประวัติศาสตร์ยุโรป",
+    "icon": "BookOpen",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "other",
+      "education",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1933",
+    "word": "landmark",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈlænd.mɑːrk/",
+    "thaiMeaning": "จุดสังเกต, สถานที่สำคัญ",
+    "simpleMeaning": "a building or place that is easily recognized",
+    "example": "The Eiffel Tower is a famous landmark in Paris.",
+    "exampleThai": "หอไอเฟลเป็นสถานที่สำคัญที่มีชื่อเสียงในปารีส",
+    "icon": "MapPin",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "famous",
+      "place",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1934",
+    "word": "launch",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/lɔːntʃ/",
+    "thaiMeaning": "เปิดตัว",
+    "simpleMeaning": "to start or set in motion (an activity or enterprise)",
+    "example": "We plan to launch the new product next month.",
+    "exampleThai": "เราวางแผนที่จะเปิดตัวผลิตภัณฑ์ใหม่ในเดือนหน้า",
+    "icon": "Rocket",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "business",
+      "start",
+      "release"
+    ]
+  },
+  {
+    "id": "word_b2_1935",
+    "word": "lawsuit",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈlɔːsuːt/",
+    "thaiMeaning": "คดีความ",
+    "simpleMeaning": "a claim or dispute brought to a court of law for adjudication",
+    "example": "The company is facing a multi-million dollar lawsuit.",
+    "exampleThai": "บริษัทกำลังเผชิญกับคดีความมูลค่าหลายล้านดอลลาร์",
+    "icon": "Briefcase",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "court",
+      "dispute"
+    ]
+  },
+  {
+    "id": "word_b2_1936",
+    "word": "legislation",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˌledʒɪˈsleɪʃən/",
+    "thaiMeaning": "กฎหมาย (ที่ออกมาแล้ว), การบัญญัติกฎหมาย",
+    "simpleMeaning": "laws, considered collectively; the process of making or enacting laws",
+    "example": "The government has promised to introduce legislation to limit greenhouse gas emissions.",
+    "exampleThai": "รัฐบาลสัญญาว่าจะออกกฎหมายเพื่อจำกัดการปล่อยก๊าซเรือนกระจก",
+    "icon": "Scroll",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "government",
+      "rules"
+    ]
+  },
+  {
+    "id": "word_b2_1937",
+    "word": "liability",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˌlaɪəˈbɪləti/",
+    "thaiMeaning": "หนี้สิน, ความรับผิดชอบ",
+    "simpleMeaning": "the state of being legally responsible for something",
+    "example": "The company denies any liability for the damage.",
+    "exampleThai": "บริษัทปฏิเสธความรับผิดชอบใดๆ ต่อความเสียหาย",
+    "icon": "Scale",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "legal",
+      "debt",
+      "risk"
+    ]
+  },
+  {
+    "id": "word_b2_1938",
+    "word": "literal",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈlɪtərəl/",
+    "thaiMeaning": "ตามตัวอักษร",
+    "simpleMeaning": "having exactly the same meaning as the basic or original meaning of a word",
+    "example": "The literal meaning of \"television\" is \"seeing from a distance\".",
+    "exampleThai": "ความหมายตามตัวอักษรของคำว่า \"โทรทัศน์\" คือ \"การมองเห็นจากระยะไกล\"",
+    "icon": "Type",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "literature",
+      "language",
+      "academic"
+    ]
+  },
+  {
+    "id": "word_b2_1939",
+    "word": "logic",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈlɒdʒɪk/",
+    "thaiMeaning": "ตรรกะ",
+    "simpleMeaning": "a particular way of thinking, especially one that is reasonable and based on good judgment",
+    "example": "I fail to see the logic behind his argument.",
+    "exampleThai": "ฉันไม่เข้าใจตรรกะที่อยู่เบื้องหลังข้อโต้แย้งของเขา",
+    "icon": "BrainCircuit",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "philosophy",
+      "academic",
+      "reasoning"
+    ]
+  },
+  {
+    "id": "word_b2_1940",
+    "word": "logical",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈlɒdʒɪkl/",
+    "thaiMeaning": "มีเหตุผล",
+    "simpleMeaning": "using reason",
+    "example": "It was a logical decision to make under the circumstances.",
+    "exampleThai": "มันเป็นการตัดสินใจที่มีเหตุผลในสถานการณ์นั้น",
+    "icon": "Brain",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "other",
+      "thought",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1941",
+    "word": "mayor",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/meər/",
+    "thaiMeaning": "นายกเทศมนตรี",
+    "simpleMeaning": "the elected head of a city, town, or other municipality",
+    "example": "The mayor promised to build new parks in the city.",
+    "exampleThai": "นายกเทศมนตรีสัญญาว่าจะสร้างสวนสาธารณะแห่งใหม่ในเมือง",
+    "icon": "Building",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "politics",
+      "city",
+      "leader"
+    ]
+  },
+  {
+    "id": "word_b2_1942",
+    "word": "measure",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈmeʒə(r)/",
+    "thaiMeaning": "มาตรการ, วัดขนาด",
+    "simpleMeaning": "a way of achieving something, or a method for dealing with a situation",
+    "example": "We must take strong measures to protect the environment.",
+    "exampleThai": "พวกเราต้องใช้มาตรการที่เข้มงวดเพื่อปกป้องสิ่งแวดล้อม",
+    "icon": "Ruler",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "other",
+      "action",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1943",
+    "word": "mentor",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈmentɔːr/",
+    "thaiMeaning": "ที่ปรึกษา, ผู้ชี้แนะ",
+    "simpleMeaning": "an experienced and trusted adviser",
+    "example": "She was a great mentor to me when I started this job.",
+    "exampleThai": "เธอเป็นที่ปรึกษาที่ยอดเยี่ยมสำหรับฉันเมื่อฉันเริ่มงานนี้",
+    "icon": "UserCheck",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "teach",
+      "guide",
+      "career"
+    ]
+  },
+  {
+    "id": "word_b2_1944",
+    "word": "metaphor",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈmɛtəfɔː/",
+    "thaiMeaning": "อุปลักษณ์, คำเปรียบเปรย",
+    "simpleMeaning": "an expression, often found in literature, that describes a person or object by referring to something that is considered to have similar characteristics to that person or object",
+    "example": "\"The mind is an ocean\" and \"the city is a jungle\" are both metaphors.",
+    "exampleThai": "\"จิตใจคือมหาสมุทร\" และ \"เมืองคือป่าทึบ\" ล้วนเป็นคำเปรียบเปรย",
+    "icon": "MessageSquareQuote",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "literature",
+      "language",
+      "writing"
+    ]
+  },
+  {
+    "id": "word_b2_1945",
+    "word": "methodology",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˌmɛθəˈdɒlədʒi/",
+    "thaiMeaning": "ระเบียบวิธี",
+    "simpleMeaning": "a system of ways of doing, teaching, or studying something",
+    "example": "The methodology of the research is clearly explained in the first chapter.",
+    "exampleThai": "ระเบียบวิธีของการวิจัยถูกอธิบายอย่างชัดเจนในบทแรก",
+    "icon": "ListTree",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "research",
+      "academic",
+      "science"
+    ]
+  },
+  {
+    "id": "word_b2_1946",
+    "word": "metropolis",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/məˈtrɑː.pəl.ɪs/",
+    "thaiMeaning": "เมืองหลวง, มหานคร",
+    "simpleMeaning": "a very large city, often the most important city in a large area or country",
+    "example": "Bangkok is a bustling metropolis.",
+    "exampleThai": "กรุงเทพฯ เป็นมหานครที่จอแจ",
+    "icon": "Building2",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "city",
+      "large",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1947",
+    "word": "minister",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈmɪnɪstər/",
+    "thaiMeaning": "รัฐมนตรี",
+    "simpleMeaning": "a head of a government department",
+    "example": "The Minister of Health announced a new vaccination program.",
+    "exampleThai": "รัฐมนตรีว่าการกระทรวงสาธารณสุขประกาศโครงการฉีดวัคซีนใหม่",
+    "icon": "Briefcase",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "politics",
+      "government",
+      "official"
+    ]
+  },
+  {
+    "id": "word_b2_1948",
+    "word": "notion",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈnəʊʃən/",
+    "thaiMeaning": "แนวคิด",
+    "simpleMeaning": "a belief or idea",
+    "example": "I have only a vague notion of what she does for a living.",
+    "exampleThai": "ฉันมีเพียงแนวคิดที่คลุมเครือเกี่ยวกับสิ่งที่เธอทำเป็นอาชีพ",
+    "icon": "Lightbulb",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "philosophy",
+      "academic",
+      "literature"
+    ]
+  },
+  {
+    "id": "word_b2_1949",
+    "word": "objective",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/əbˈdʒɛktɪv/",
+    "thaiMeaning": "เป็นวัตถุวิสัย, ซึ่งตั้งอยู่บนพื้นฐานความจริง",
+    "simpleMeaning": "based on real facts and not influenced by personal beliefs or feelings",
+    "example": "An objective report should only present the facts.",
+    "exampleThai": "รายงานที่ตั้งอยู่บนพื้นฐานความจริงควรนำเสนอเพียงข้อเท็จจริงเท่านั้น",
+    "icon": "Target",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "science",
+      "research",
+      "academic"
+    ]
+  },
+  {
+    "id": "word_b2_1950",
+    "word": "obsolete",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈɒbsəliːt/",
+    "thaiMeaning": "ล้าสมัย, เลิกใช้แล้ว",
+    "simpleMeaning": "no longer produced or used; out of date",
+    "example": "Typewriters have become mostly obsolete due to computers.",
+    "exampleThai": "เครื่องพิมพ์ดีดส่วนใหญ่ล้าสมัยไปแล้วเนื่องจากมีคอมพิวเตอร์",
+    "icon": "Trash2",
+    "category": [
+      "Technology"
+    ],
+    "tags": [
+      "old",
+      "past",
+      "tech"
+    ]
+  },
+  {
+    "id": "word_b2_1951",
+    "word": "offended",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/əˈfen.dɪd/",
+    "thaiMeaning": "ขุ่นเคือง, รู้สึกถูกดูหมิ่น",
+    "simpleMeaning": "feeling upset because of something said or done that is rude",
+    "example": "She was deeply offended by his joke.",
+    "exampleThai": "เธอรู้สึกขุ่นเคืองอย่างมากกับเรื่องตลกของเขา",
+    "icon": "Frown",
+    "category": [
+      "Feelings"
+    ],
+    "tags": [
+      "feeling",
+      "upset",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1952",
+    "word": "outsource",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈaʊtsɔːrs/",
+    "thaiMeaning": "จ้างคนภายนอก, ซับคอนแทรค",
+    "simpleMeaning": "to obtain (goods or a service) from an outside or foreign supplier, especially in place of an internal source",
+    "example": "Many companies outsource their IT services to reduce costs.",
+    "exampleThai": "หลายบริษัทจ้างงานภายนอกสำหรับบริการไอทีเพื่อลดต้นทุน",
+    "icon": "Map",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "business",
+      "contract",
+      "external"
+    ]
+  },
+  {
+    "id": "word_b2_1953",
+    "word": "oversee",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˌəʊvəˈsiː/",
+    "thaiMeaning": "ดูแล, ควบคุมดูแล",
+    "simpleMeaning": "to supervise a person or their work, especially in an official capacity",
+    "example": "She was hired to oversee the construction project.",
+    "exampleThai": "เธอถูกจ้างมาเพื่อดูแลโครงการก่อสร้าง",
+    "icon": "Eye",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "manage",
+      "supervise",
+      "control"
+    ]
+  },
+  {
+    "id": "word_b2_1954",
+    "word": "overwhelmed",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˌoʊ.vɚˈwelmd/",
+    "thaiMeaning": "รู้สึกท่วมท้น, รับมือไม่ไหว",
+    "simpleMeaning": "feeling such strong emotions that you don't know how to react, or having too much to deal with",
+    "example": "I was overwhelmed by all the support I received.",
+    "exampleThai": "ฉันรู้สึกท่วมท้นไปกับความช่วยเหลือทั้งหมดที่ฉันได้รับ",
+    "icon": "CloudRain",
+    "category": [
+      "Feelings"
+    ],
+    "tags": [
+      "feeling",
+      "stress",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1955",
+    "word": "paradigm",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈpærədaɪm/",
+    "thaiMeaning": "กระบวนทัศน์, แบบจำลอง",
+    "simpleMeaning": "a model of something, or a very clear and typical example of something",
+    "example": "Some of these educators are hoping to produce a change in the current cultural paradigm.",
+    "exampleThai": "นักการศึกษาบางคนเหล่านี้กำลังหวังที่จะสร้างการเปลี่ยนแปลงในกระบวนทัศน์ทางวัฒนธรรมปัจจุบัน",
+    "icon": "Network",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "academic",
+      "philosophy",
+      "concept"
+    ]
+  },
+  {
+    "id": "word_b2_1956",
+    "word": "paradox",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈpærədɒks/",
+    "thaiMeaning": "ความขัดแย้งในตัวเอง",
+    "simpleMeaning": "a situation or statement that seems impossible or is difficult to understand because it contains two opposite facts or characteristics",
+    "example": "It is a paradox that some of the poorest countries have the richest natural resources.",
+    "exampleThai": "มันเป็นความขัดแย้งในตัวเองที่บางประเทศที่ยากจนที่สุดกลับมีทรัพยากรธรรมชาติที่อุดมสมบูรณ์ที่สุด",
+    "icon": "Infinity",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "philosophy",
+      "literature",
+      "academic"
+    ]
+  },
+  {
+    "id": "word_b2_1957",
+    "word": "parliament",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈpɑːləmənt/",
+    "thaiMeaning": "รัฐสภา",
+    "simpleMeaning": "in some countries, the group of (usually) elected politicians or other people who make the laws for their country",
+    "example": "The new law was passed by parliament yesterday.",
+    "exampleThai": "กฎหมายฉบับใหม่ผ่านความเห็นชอบจากรัฐสภาเมื่อวานนี้",
+    "icon": "Landmark",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "politics",
+      "law",
+      "government"
+    ]
+  },
+  {
+    "id": "word_b2_1958",
+    "word": "partnership",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈpɑːrtnərʃɪp/",
+    "thaiMeaning": "หุ้นส่วน, ความร่วมมือ",
+    "simpleMeaning": "an association of two or more people as partners",
+    "example": "The two companies formed a strategic partnership.",
+    "exampleThai": "ทั้งสองบริษัทสร้างความร่วมมือเชิงกลยุทธ์",
+    "icon": "Users",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "business",
+      "ally",
+      "together"
+    ]
+  },
+  {
+    "id": "word_b2_1959",
+    "word": "passionate",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈpæʃənət/",
+    "thaiMeaning": "มีความกระตือรือร้น, หลงใหล",
+    "simpleMeaning": "having or showing strong feelings of enthusiasm",
+    "example": "She is very passionate about environmental issues.",
+    "exampleThai": "เธอมีความกระตือรือร้นอย่างมากเกี่ยวกับปัญหาสิ่งแวดล้อม",
+    "icon": "Heart",
+    "category": [
+      "Feelings"
+    ],
+    "tags": [
+      "emotion",
+      "feeling",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1960",
+    "word": "perspective",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/pəˈspɛktɪv/",
+    "thaiMeaning": "มุมมอง",
+    "simpleMeaning": "a particular way of considering something",
+    "example": "Her attitude lends a fresh perspective to the subject.",
+    "exampleThai": "ทัศนคติของเธอให้มุมมองที่สดใหม่แก่เรื่องนี้",
+    "icon": "Eye",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "philosophy",
+      "literature",
+      "academic"
+    ]
+  },
+  {
+    "id": "word_b2_1961",
+    "word": "phenomenon",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/fɪˈnɒmɪnən/",
+    "thaiMeaning": "ปรากฏการณ์",
+    "simpleMeaning": "something that exists and can be seen, felt, tasted, etc., especially something unusual or interesting",
+    "example": "Gravity is a natural phenomenon.",
+    "exampleThai": "แรงโน้มถ่วงเป็นปรากฏการณ์ทางธรรมชาติ",
+    "icon": "Sparkles",
+    "category": [
+      "Nature & Animals"
+    ],
+    "tags": [
+      "science",
+      "academic",
+      "nature"
+    ]
+  },
+  {
+    "id": "word_b2_1962",
+    "word": "policy",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈpɒləsi/",
+    "thaiMeaning": "นโยบาย",
+    "simpleMeaning": "a course or principle of action adopted or proposed by an organization or individual",
+    "example": "The government has introduced a strict economic policy.",
+    "exampleThai": "รัฐบาลได้นำนโยบายเศรษฐกิจที่เข้มงวดมาใช้",
+    "icon": "FileText",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "politics",
+      "rules",
+      "government"
+    ]
+  },
+  {
+    "id": "word_b2_1963",
+    "word": "politician",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˌpɒlɪˈtɪʃən/",
+    "thaiMeaning": "นักการเมือง",
+    "simpleMeaning": "a person who is professionally involved in politics, especially as a holder of or a candidate for an elected office",
+    "example": "Many people do not trust politicians to keep their promises.",
+    "exampleThai": "คนจำนวนมากไม่เชื่อใจนักการเมืองว่าจะรักษาคำสัญญา",
+    "icon": "User",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "politics",
+      "career",
+      "government"
+    ]
+  },
+  {
+    "id": "word_b2_1964",
+    "word": "predict",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/prɪˈdɪkt/",
+    "thaiMeaning": "ทำนาย, พยากรณ์",
+    "simpleMeaning": "to say that an event or action will happen in the future",
+    "example": "It is hard to predict the weather accurately.",
+    "exampleThai": "เป็นการยากที่จะพยากรณ์อากาศได้อย่างแม่นยำ",
+    "icon": "Eye",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "future",
+      "action",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1965",
+    "word": "premise",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈprɛmɪs/",
+    "thaiMeaning": "หลักฐาน, ข้อสมมติฐานเบื้องต้น",
+    "simpleMeaning": "an idea or theory on which a statement or action is based",
+    "example": "They had started with the premise that all men are created equal.",
+    "exampleThai": "พวกเขาเริ่มต้นด้วยข้อสมมติฐานเบื้องต้นที่ว่ามนุษย์ทุกคนเกิดมาเท่าเทียมกัน",
+    "icon": "Building",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "logic",
+      "philosophy",
+      "academic"
+    ]
+  },
+  {
+    "id": "word_b2_1966",
+    "word": "priority",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/praɪˈɔːrɪti/",
+    "thaiMeaning": "ลำดับความสำคัญ",
+    "simpleMeaning": "the fact or condition of being treated as more important than others",
+    "example": "Customer satisfaction is our top priority.",
+    "exampleThai": "ความพึงพอใจของลูกค้าคือสิ่งสำคัญอันดับแรกของเรา",
+    "icon": "Flag",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "work",
+      "important",
+      "first"
+    ]
+  },
+  {
+    "id": "word_b2_1967",
+    "word": "productive",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/prəˈdʌktɪv/",
+    "thaiMeaning": "มีประสิทธิผล, ที่เกิดผล",
+    "simpleMeaning": "producing or able to produce large amounts of goods, crops, or other commodities",
+    "example": "We had a very productive meeting this morning.",
+    "exampleThai": "เรามีการประชุมที่เกิดผลดีมากเมื่อเช้านี้",
+    "icon": "CheckCircle",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "work",
+      "efficient",
+      "useful"
+    ]
+  },
+  {
+    "id": "word_b2_1968",
+    "word": "productivity",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˌprɒdʌkˈtɪvəti/",
+    "thaiMeaning": "ผลผลิต, ความสามารถในการผลิต",
+    "simpleMeaning": "the effectiveness of productive effort, especially in industry, as measured in terms of the rate of output per unit of input",
+    "example": "Taking regular breaks can actually increase your productivity.",
+    "exampleThai": "การหยุดพักเป็นประจำสามารถเพิ่มความสามารถในการทำงานของคุณได้จริงๆ",
+    "icon": "TrendingUp",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "work",
+      "produce",
+      "growth"
+    ]
+  },
+  {
+    "id": "word_b2_1969",
+    "word": "prose",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/prəʊz/",
+    "thaiMeaning": "ร้อยแก้ว",
+    "simpleMeaning": "written language in its ordinary form rather than poetry",
+    "example": "I've always preferred reading prose to poetry.",
+    "exampleThai": "ฉันมักจะชอบอ่านร้อยแก้วมากกว่าบทกวี",
+    "icon": "AlignLeft",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "literature",
+      "writing",
+      "language"
+    ]
+  },
+  {
+    "id": "word_b2_1970",
+    "word": "prosecute",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈprɒsɪkjuːt/",
+    "thaiMeaning": "ฟ้องร้องดำเนินคดี",
+    "simpleMeaning": "to institute legal proceedings against a person or organization",
+    "example": "The company was prosecuted for breaching safety regulations.",
+    "exampleThai": "บริษัทถูกฟ้องร้องดำเนินคดีฐานละเมิดกฎระเบียบด้านความปลอดภัย",
+    "icon": "Gavel",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "court",
+      "crime"
+    ]
+  },
+  {
+    "id": "word_b2_1971",
+    "word": "protocol",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈprəʊtəkɒl/",
+    "thaiMeaning": "ระเบียบการ, โพรโทคอล",
+    "simpleMeaning": "the system of rules and acceptable behaviour used at official ceremonies and occasions",
+    "example": "The experiment was conducted strictly according to protocol.",
+    "exampleThai": "การทดลองถูกดำเนินการอย่างเคร่งครัดตามระเบียบการ",
+    "icon": "ClipboardList",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "science",
+      "rules",
+      "academic"
+    ]
+  },
+  {
+    "id": "word_b2_1972",
+    "word": "prototype",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈprəʊtətaɪp/",
+    "thaiMeaning": "ต้นแบบ",
+    "simpleMeaning": "a first, typical or preliminary model of something, especially a machine, from which other forms are developed or copied",
+    "example": "The engineers are testing a prototype of the new car.",
+    "exampleThai": "วิศวกรกำลังทดสอบต้นแบบของรถยนต์รุ่นใหม่",
+    "icon": "Box",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "model",
+      "first",
+      "design"
+    ]
+  },
+  {
+    "id": "word_b2_1973",
+    "word": "qualitative",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈkwɒlɪtətɪv/",
+    "thaiMeaning": "เชิงคุณภาพ",
+    "simpleMeaning": "relating to how good or bad something is rather than to its amount",
+    "example": "Is there any qualitative difference between these two products?",
+    "exampleThai": "มีความแตกต่างเชิงคุณภาพใดๆ ระหว่างผลิตภัณฑ์สองอย่างนี้หรือไม่?",
+    "icon": "TextSelect",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "research",
+      "academic",
+      "analysis"
+    ]
+  },
+  {
+    "id": "word_b2_1974",
+    "word": "quantitative",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈkwɒntɪtətɪv/",
+    "thaiMeaning": "เชิงปริมาณ",
+    "simpleMeaning": "relating to numbers or amounts",
+    "example": "The study provides quantitative evidence of the effects of global warming.",
+    "exampleThai": "การศึกษานี้ให้หลักฐานเชิงปริมาณถึงผลกระทบของภาวะโลกร้อน",
+    "icon": "BarChart3",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "research",
+      "science",
+      "statistics"
+    ]
+  },
+  {
+    "id": "word_b2_1975",
+    "word": "rational",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈræʃənl/",
+    "thaiMeaning": "มีเหตุผล",
+    "simpleMeaning": "based on clear thought and reason",
+    "example": "There must be some rational explanation for what happened.",
+    "exampleThai": "มันต้องมีคำอธิบายที่มีเหตุผลบางอย่างสำหรับสิ่งที่เกิดขึ้น",
+    "icon": "Brain",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "philosophy",
+      "academic",
+      "logic"
+    ]
+  },
+  {
+    "id": "word_b2_1976",
+    "word": "recruit",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/rɪˈkruːt/",
+    "thaiMeaning": "สรรหา, รับคนใหม่",
+    "simpleMeaning": "to enroll (someone) as an employee or member",
+    "example": "The company is planning to recruit 50 new engineers.",
+    "exampleThai": "บริษัทกำลังวางแผนที่จะรับวิศวกรใหม่ 50 คน",
+    "icon": "UserPlus",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "work",
+      "hire",
+      "job"
+    ]
+  },
+  {
+    "id": "word_b2_1977",
+    "word": "resentful",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/rɪˈzentfl/",
+    "thaiMeaning": "โกรธเคือง, ไม่พอใจ",
+    "simpleMeaning": "feeling angry because you have been forced to accept someone or something that you do not like",
+    "example": "He felt resentful that he had to work on the weekend.",
+    "exampleThai": "เขารู้สึกไม่พอใจที่ต้องทำงานในวันหยุดสุดสัปดาห์",
+    "icon": "CloudRain",
+    "category": [
+      "Feelings"
+    ],
+    "tags": [
+      "emotion",
+      "anger",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1978",
+    "word": "resident",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈrezɪdənt/",
+    "thaiMeaning": "ผู้อยู่อาศัย",
+    "simpleMeaning": "a person who lives or has their home in a place",
+    "example": "The residents complained about the noise from the new club.",
+    "exampleThai": "ผู้อยู่อาศัยบ่นเรื่องเสียงรบกวนจากคลับใหม่",
+    "icon": "User",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "city",
+      "people",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1979",
+    "word": "revenue",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈrɛvənuː/",
+    "thaiMeaning": "รายได้",
+    "simpleMeaning": "income, especially when of a company or organization",
+    "example": "The company's revenue increased by 20% this year.",
+    "exampleThai": "รายได้ของบริษัทเพิ่มขึ้น 20% ในปีนี้",
+    "icon": "DollarSign",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "business",
+      "money",
+      "income"
+    ]
+  },
+  {
+    "id": "word_b2_1980",
+    "word": "rhetoric",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈrɛtərɪk/",
+    "thaiMeaning": "วาทศิลป์",
+    "simpleMeaning": "speech or writing intended to be effective and influence people",
+    "example": "The politician's speech was full of empty rhetoric.",
+    "exampleThai": "สุนทรพจน์ของนักการเมืองคนนั้นเต็มไปด้วยวาทศิลป์ที่ว่างเปล่า",
+    "icon": "Mic2",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "literature",
+      "academic",
+      "speech"
+    ]
+  },
+  {
+    "id": "word_b2_1981",
+    "word": "scandal",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈskændəl/",
+    "thaiMeaning": "เรื่องอื้อฉาว",
+    "simpleMeaning": "an action or event regarded as morally or legally wrong and causing general public outrage",
+    "example": "Their political career was ruined by a massive financial scandal.",
+    "exampleThai": "อาชีพทางการเมืองของพวกเขาพังทลายเพราะเรื่องอื้อฉาวทางการเงินครั้งใหญ่",
+    "icon": "Flame",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "politics",
+      "news",
+      "controversy"
+    ]
+  },
+  {
+    "id": "word_b2_1982",
+    "word": "sector",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈsɛktər/",
+    "thaiMeaning": "ภาคส่วน",
+    "simpleMeaning": "an area or portion that is distinct from others",
+    "example": "She works in the financial sector.",
+    "exampleThai": "เธอทำงานในภาคการเงิน",
+    "icon": "PieChart",
+    "category": [
+      "School & Work"
+    ],
+    "tags": [
+      "business",
+      "area",
+      "industry"
+    ]
+  },
+  {
+    "id": "word_b2_1983",
+    "word": "semantic",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/sɪˈmæntɪk/",
+    "thaiMeaning": "เกี่ยวกับความหมาย",
+    "simpleMeaning": "connected with the meanings of words",
+    "example": "Words are constantly undergoing semantic change.",
+    "exampleThai": "คำต่างๆ กำลังเผชิญกับการเปลี่ยนแปลงเกี่ยวกับความหมายอย่างต่อเนื่อง",
+    "icon": "WholeWord",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "language",
+      "academic",
+      "linguistics"
+    ]
+  },
+  {
+    "id": "word_b2_1984",
+    "word": "sentence",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈsentəns/",
+    "thaiMeaning": "คำพิพากษาลงโทษ",
+    "simpleMeaning": "the punishment assigned to a defendant found guilty by a court",
+    "example": "He received a life sentence for his crimes.",
+    "exampleThai": "เขาได้รับคำพิพากษาจำคุกตลอดชีวิตสำหรับอาชญากรรมของเขา",
+    "icon": "Gavel",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "punishment",
+      "court"
+    ]
+  },
+  {
+    "id": "word_b2_1985",
+    "word": "significant",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/sɪɡˈnɪf.ə.kənt/",
+    "thaiMeaning": "สำคัญ, มีนัยสำคัญ",
+    "simpleMeaning": "important or noticeable",
+    "example": "There has been a significant increase in sales this year.",
+    "exampleThai": "มียอดขายเพิ่มขึ้นอย่างมีนัยสำคัญในปีนี้",
+    "icon": "ArrowUpRight",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "important",
+      "abstract",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1986",
+    "word": "simulate",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈsɪmjʊˌleɪt/",
+    "thaiMeaning": "จำลอง",
+    "simpleMeaning": "to do or make something that looks real but is not real",
+    "example": "Researchers simulate the conditions in space to test the equipment.",
+    "exampleThai": "นักวิจัยจำลองสภาพแวดล้อมในอวกาศเพื่อทดสอบอุปกรณ์",
+    "icon": "MonitorPlay",
+    "category": [
+      "Technology"
+    ],
+    "tags": [
+      "science",
+      "research",
+      "technology"
+    ]
+  },
+  {
+    "id": "word_b2_1987",
+    "word": "skyscraper",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈskaɪˌskreɪ.pɚ/",
+    "thaiMeaning": "ตึกระฟ้า",
+    "simpleMeaning": "a very tall modern building, usually in a city",
+    "example": "New York is famous for its skyscrapers.",
+    "exampleThai": "นิวยอร์กมีชื่อเสียงเรื่องตึกระฟ้า",
+    "icon": "Building2",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "building",
+      "urban",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1988",
+    "word": "subjective",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/səbˈdʒɛktɪv/",
+    "thaiMeaning": "เป็นอัตวิสัย, ซึ่งเป็นความคิดส่วนตัว",
+    "simpleMeaning": "influenced by or based on personal beliefs or feelings, rather than based on facts",
+    "example": "I think my husband is the most handsome man in the world, but I realize my judgment is rather subjective.",
+    "exampleThai": "ฉันคิดว่าสามีของฉันเป็นผู้ชายที่หล่อที่สุดในโลก แต่ฉันรู้ดีว่าการตัดสินใจของฉันค่อนข้างเป็นเรื่องส่วนตัว",
+    "icon": "User",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "philosophy",
+      "academic",
+      "concept"
+    ]
+  },
+  {
+    "id": "word_b2_1989",
+    "word": "suburban",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/səˈbɝː.bən/",
+    "thaiMeaning": "ย่านชานเมือง",
+    "simpleMeaning": "relating to a suburb (an area on the edge of a large town or city)",
+    "example": "They live a quiet suburban life.",
+    "exampleThai": "พวกเขาใช้ชีวิตในย่านชานเมืองที่เงียบสงบ",
+    "icon": "Home",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "living",
+      "area",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1990",
+    "word": "synchronize",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈsɪŋkrənaɪz/",
+    "thaiMeaning": "ทำให้ประสานกัน, ทำให้เกิดขึ้นพร้อมกัน",
+    "simpleMeaning": "to cause to occur or operate at the same time or rate",
+    "example": "Please synchronize your watches before the mission starts.",
+    "exampleThai": "โปรดตั้งนาฬิกาให้ตรงกันก่อนภารกิจจะเริ่ม",
+    "icon": "RefreshCw",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "time",
+      "data",
+      "sync"
+    ]
+  },
+  {
+    "id": "word_b2_1991",
+    "word": "syntax",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈsɪntæks/",
+    "thaiMeaning": "วากยสัมพันธ์, โครงสร้างประโยค",
+    "simpleMeaning": "the grammatical arrangement of words in a sentence",
+    "example": "He has a good grasp of English syntax.",
+    "exampleThai": "เขามีความเข้าใจที่ดีในโครงสร้างประโยคภาษาอังกฤษ",
+    "icon": "Code",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "language",
+      "academic",
+      "literature"
+    ]
+  },
+  {
+    "id": "word_b2_1992",
+    "word": "synthesize",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈsɪnθɪˌsaɪz/",
+    "thaiMeaning": "สังเคราะห์",
+    "simpleMeaning": "to combine different ideas, influences, or objects into a new whole",
+    "example": "The findings from the five separate studies have been synthesized in the report.",
+    "exampleThai": "ข้อค้นพบจากการศึกษาห้าเรื่องที่แยกกันได้ถูกสังเคราะห์ไว้ในรายงาน",
+    "icon": "Puzzle",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "research",
+      "academic",
+      "science"
+    ]
+  },
+  {
+    "id": "word_b2_1993",
+    "word": "testify",
+    "cefr": "B2",
+    "partOfSpeech": "verb",
+    "ipa": "/ˈtestɪfaɪ/",
+    "thaiMeaning": "ให้การเป็นพยาน",
+    "simpleMeaning": "to give evidence as a witness in a law court",
+    "example": "She was asked to testify against her former boss.",
+    "exampleThai": "เธอถูกขอให้ให้การเป็นพยานปรักปรำเจ้านายเก่าของเธอ",
+    "icon": "Mic",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "law",
+      "court",
+      "witness"
+    ]
+  },
+  {
+    "id": "word_b2_1994",
+    "word": "theoretical",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/θɪəˈrɛtɪkəl/",
+    "thaiMeaning": "ทางทฤษฎี",
+    "simpleMeaning": "based on the ideas that relate to a subject, not the practical uses of that subject",
+    "example": "Theoretical physics is a fascinating subject.",
+    "exampleThai": "ฟิสิกส์เชิงทฤษฎีเป็นวิชาที่น่าสนใจ",
+    "icon": "BookOpen",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "science",
+      "academic",
+      "research"
+    ]
+  },
+  {
+    "id": "word_b2_1995",
+    "word": "thesis",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈθiːsɪs/",
+    "thaiMeaning": "วิทยานิพนธ์, ข้อความหลัก",
+    "simpleMeaning": "a long piece of writing on a particular subject, especially one that is done for a higher college or university degree",
+    "example": "I wrote my thesis on the poet William Blake.",
+    "exampleThai": "ฉันเขียนวิทยานิพนธ์ของฉันเกี่ยวกับกวีวิลเลียม เบลก",
+    "icon": "BookText",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "academic",
+      "university",
+      "writing"
+    ]
+  },
+  {
+    "id": "word_b2_1996",
+    "word": "thrilled",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/θrɪld/",
+    "thaiMeaning": "ตื่นเต้นยินดี",
+    "simpleMeaning": "extremely happy about something",
+    "example": "I was thrilled that so many people turned up to the party.",
+    "exampleThai": "ฉันตื่นเต้นยินดีมากที่มีคนมาร่วมงานปาร์ตี้มากมาย",
+    "icon": "Zap",
+    "category": [
+      "Feelings"
+    ],
+    "tags": [
+      "feeling",
+      "joy",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1997",
+    "word": "translation",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/trænsˈleɪʃən/",
+    "thaiMeaning": "การแปล",
+    "simpleMeaning": "the process of translating words or text from one language into another",
+    "example": "This book is a translation of a French novel.",
+    "exampleThai": "หนังสือเล่มนี้เป็นผลงานแปลจากนวนิยายฝรั่งเศส",
+    "icon": "Languages",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "communication",
+      "language",
+      "words"
+    ]
+  },
+  {
+    "id": "word_b2_1998",
+    "word": "urban",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈɜːbən/",
+    "thaiMeaning": "เกี่ยวกับเมือง",
+    "simpleMeaning": "of or in a city or town",
+    "example": "The problem of air pollution is common in urban areas.",
+    "exampleThai": "ปัญหามลพิษทางอากาศเป็นเรื่องปกติในเขตเมือง",
+    "icon": "Building2",
+    "category": [
+      "Places"
+    ],
+    "tags": [
+      "city",
+      "adjective",
+      "B2"
+    ]
+  },
+  {
+    "id": "word_b2_1999",
+    "word": "valid",
+    "cefr": "B2",
+    "partOfSpeech": "adjective",
+    "ipa": "/ˈvælɪd/",
+    "thaiMeaning": "มีเหตุผล, ถูกต้องตามหลักการ",
+    "simpleMeaning": "based on truth or reason; able to be accepted",
+    "example": "My way of thinking might be different from yours, but it's equally valid.",
+    "exampleThai": "วิธีคิดของฉันอาจจะต่างจากของคุณ แต่มันก็มีเหตุผลเท่าเทียมกัน",
+    "icon": "ShieldCheck",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "academic",
+      "logic",
+      "research"
+    ]
+  },
+  {
+    "id": "word_b2_2000",
+    "word": "variable",
+    "cefr": "B2",
+    "partOfSpeech": "noun",
+    "ipa": "/ˈvɛəriəbl/",
+    "thaiMeaning": "ตัวแปร",
+    "simpleMeaning": "a number, amount, or situation that can change",
+    "example": "The researchers analyzed various weather variables.",
+    "exampleThai": "นักวิจัยได้วิเคราะห์ตัวแปรทางสภาพอากาศหลายประการ",
+    "icon": "Variable",
+    "category": [
+      "Objects"
+    ],
+    "tags": [
+      "science",
+      "research",
+      "math"
+    ]
+  }
+]

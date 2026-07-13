@@ -1,0 +1,111 @@
+﻿category_id,category_title,category_thai,vocab_no,word,thai_meaning
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,1,wake up,ตื่นนอน
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,2,get up,ลุกจากเตียง
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,3,brush my teeth,แปรงฟัน
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,4,take a shower,อาบน้ำ
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,5,get dressed,แต่งตัว
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,6,breakfast,อาหารเช้า
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,7,commute,เดินทางไปทำงาน/เรียน
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,8,prepare,เตรียมตัว
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,9,on time,ตรงเวลา
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,10,in a hurry,รีบ
+customer-service,Customer Service,บริการลูกค้า,1,assist,ช่วยเหลือ
+customer-service,Customer Service,บริการลูกค้า,2,issue,ปัญหา
+customer-service,Customer Service,บริการลูกค้า,3,refund,คืนเงิน
+customer-service,Customer Service,บริการลูกค้า,4,exchange,เปลี่ยนสินค้า
+customer-service,Customer Service,บริการลูกค้า,5,receipt,ใบเสร็จ
+customer-service,Customer Service,บริการลูกค้า,6,order,คำสั่งซื้อ
+customer-service,Customer Service,บริการลูกค้า,7,delivery,การจัดส่ง
+customer-service,Customer Service,บริการลูกค้า,8,available,พร้อมให้บริการ/มีสินค้า
+customer-service,Customer Service,บริการลูกค้า,9,apologize,ขอโทษ
+customer-service,Customer Service,บริการลูกค้า,10,solution,ทางแก้ปัญหา
+job-interview,Job Interview,สัมภาษณ์งาน,1,experience,ประสบการณ์
+job-interview,Job Interview,สัมภาษณ์งาน,2,strength,จุดแข็ง
+job-interview,Job Interview,สัมภาษณ์งาน,3,weakness,จุดอ่อน
+job-interview,Job Interview,สัมภาษณ์งาน,4,responsibility,ความรับผิดชอบ
+job-interview,Job Interview,สัมภาษณ์งาน,5,position,ตำแหน่งงาน
+job-interview,Job Interview,สัมภาษณ์งาน,6,salary,เงินเดือน
+job-interview,Job Interview,สัมภาษณ์งาน,7,available,พร้อมเริ่มงาน
+job-interview,Job Interview,สัมภาษณ์งาน,8,teamwork,การทำงานเป็นทีม
+job-interview,Job Interview,สัมภาษณ์งาน,9,skill,ทักษะ
+job-interview,Job Interview,สัมภาษณ์งาน,10,goal,เป้าหมาย
+daily-life,Daily Life,ชีวิตประจำวัน,1,errand,ธุระ
+daily-life,Daily Life,ชีวิตประจำวัน,2,laundry,ซักผ้า
+daily-life,Daily Life,ชีวิตประจำวัน,3,clean,ทำความสะอาด
+daily-life,Daily Life,ชีวิตประจำวัน,4,appointment,นัดหมาย
+daily-life,Daily Life,ชีวิตประจำวัน,5,schedule,ตารางเวลา
+daily-life,Daily Life,ชีวิตประจำวัน,6,relax,ผ่อนคลาย
+daily-life,Daily Life,ชีวิตประจำวัน,7,neighbor,เพื่อนบ้าน
+daily-life,Daily Life,ชีวิตประจำวัน,8,routine,กิจวัตร
+daily-life,Daily Life,ชีวิตประจำวัน,9,busy,ยุ่ง
+daily-life,Daily Life,ชีวิตประจำวัน,10,free time,เวลาว่าง
+small-talk,Small Talk,คุยเล่นทั่วไป,1,weather,อากาศ
+small-talk,Small Talk,คุยเล่นทั่วไป,2,weekend,สุดสัปดาห์
+small-talk,Small Talk,คุยเล่นทั่วไป,3,hobby,งานอดิเรก
+small-talk,Small Talk,คุยเล่นทั่วไป,4,movie,ภาพยนตร์
+small-talk,Small Talk,คุยเล่นทั่วไป,5,music,เพลง
+small-talk,Small Talk,คุยเล่นทั่วไป,6,busy,ยุ่ง
+small-talk,Small Talk,คุยเล่นทั่วไป,7,plans,แผน
+small-talk,Small Talk,คุยเล่นทั่วไป,8,favorite,ที่ชอบที่สุด
+small-talk,Small Talk,คุยเล่นทั่วไป,9,recently,ช่วงนี้/เมื่อเร็ว ๆ นี้
+small-talk,Small Talk,คุยเล่นทั่วไป,10,nice to meet you,ยินดีที่ได้รู้จัก
+food,Food,อาหาร,1,hungry,หิว
+food,Food,อาหาร,2,thirsty,กระหายน้ำ
+food,Food,อาหาร,3,menu,เมนู
+food,Food,อาหาร,4,order,สั่งอาหาร
+food,Food,อาหาร,5,spicy,เผ็ด
+food,Food,อาหาร,6,sweet,หวาน
+food,Food,อาหาร,7,salty,เค็ม
+food,Food,อาหาร,8,delicious,อร่อย
+food,Food,อาหาร,9,bill,บิล/ใบคิดเงิน
+food,Food,อาหาร,10,takeaway,ซื้อกลับบ้าน
+shopping,Shopping,การซื้อของ,1,price,ราคา
+shopping,Shopping,การซื้อของ,2,discount,ส่วนลด
+shopping,Shopping,การซื้อของ,3,size,ขนาด/ไซซ์
+shopping,Shopping,การซื้อของ,4,color,สี
+shopping,Shopping,การซื้อของ,5,try on,ลองใส่
+shopping,Shopping,การซื้อของ,6,cash,เงินสด
+shopping,Shopping,การซื้อของ,7,card,บัตร
+shopping,Shopping,การซื้อของ,8,receipt,ใบเสร็จ
+shopping,Shopping,การซื้อของ,9,expensive,แพง
+shopping,Shopping,การซื้อของ,10,cheap,ถูก
+travel,Travel,การเดินทาง/ท่องเที่ยว,1,ticket,ตั๋ว
+travel,Travel,การเดินทาง/ท่องเที่ยว,2,passport,หนังสือเดินทาง
+travel,Travel,การเดินทาง/ท่องเที่ยว,3,luggage,กระเป๋าเดินทาง
+travel,Travel,การเดินทาง/ท่องเที่ยว,4,hotel,โรงแรม
+travel,Travel,การเดินทาง/ท่องเที่ยว,5,reservation,การจอง
+travel,Travel,การเดินทาง/ท่องเที่ยว,6,flight,เที่ยวบิน
+travel,Travel,การเดินทาง/ท่องเที่ยว,7,station,สถานี
+travel,Travel,การเดินทาง/ท่องเที่ยว,8,destination,จุดหมายปลายทาง
+travel,Travel,การเดินทาง/ท่องเที่ยว,9,map,แผนที่
+travel,Travel,การเดินทาง/ท่องเที่ยว,10,delay,ล่าช้า
+work,Work,การทำงาน,1,deadline,กำหนดส่งงาน
+work,Work,การทำงาน,2,meeting,การประชุม
+work,Work,การทำงาน,3,task,งานที่ต้องทำ
+work,Work,การทำงาน,4,report,รายงาน
+work,Work,การทำงาน,5,manager,ผู้จัดการ
+work,Work,การทำงาน,6,coworker,เพื่อนร่วมงาน
+work,Work,การทำงาน,7,project,โปรเจกต์
+work,Work,การทำงาน,8,feedback,คำติชม
+work,Work,การทำงาน,9,overtime,ทำงานล่วงเวลา
+work,Work,การทำงาน,10,priority,สิ่งสำคัญอันดับแรก
+online-chat,Online Chat,แชตออนไลน์,1,reply,ตอบกลับ
+online-chat,Online Chat,แชตออนไลน์,2,message,ข้อความ
+online-chat,Online Chat,แชตออนไลน์,3,send,ส่ง
+online-chat,Online Chat,แชตออนไลน์,4,attach,แนบไฟล์
+online-chat,Online Chat,แชตออนไลน์,5,link,ลิงก์
+online-chat,Online Chat,แชตออนไลน์,6,available,ว่าง/พร้อมคุย
+online-chat,Online Chat,แชตออนไลน์,7,typing,กำลังพิมพ์
+online-chat,Online Chat,แชตออนไลน์,8,update,อัปเดต
+online-chat,Online Chat,แชตออนไลน์,9,confirm,ยืนยัน
+online-chat,Online Chat,แชตออนไลน์,10,screenshot,ภาพหน้าจอ
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,1,workout,การออกกำลังกาย
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,2,warm up,อบอุ่นร่างกาย
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,3,stretch,ยืดเหยียด
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,4,protein,โปรตีน
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,5,calories,แคลอรี
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,6,strength,ความแข็งแรง
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,7,cardio,คาร์ดิโอ
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,8,routine,ตาราง/กิจวัตร
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,9,rest day,วันพัก
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,10,goal,เป้าหมาย

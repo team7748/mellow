@@ -1,0 +1,956 @@
+[
+  {
+    "id": "temp_B1_02_01",
+    "word": "accessory",
+    "phonetic": "/əkˈses.ər.i/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Clothes",
+    "thaiMeaning": "เครื่องประดับ",
+    "simpleDefinition": "Something added to a machine or to clothing that has a useful or decorative purpose",
+    "exampleSentence": "She wore a green dress and matching accessories.",
+    "exampleThai": "เธอสวมชุดสีเขียวและเครื่องประดับที่เข้ากัน",
+    "iconName": "Gem",
+    "iconSource": "lucide",
+    "imagePrompt": "A collection of fashion accessories like a handbag, a scarf, and a necklace on a table.",
+    "tags": [
+      "clothes",
+      "fashion"
+    ]
+  },
+  {
+    "id": "temp_B1_02_02",
+    "word": "button",
+    "phonetic": "/ˈbʌt.ən/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Clothes",
+    "thaiMeaning": "กระดุม",
+    "simpleDefinition": "A small, usually circular object used to fasten something, for example a shirt or coat",
+    "exampleSentence": "One of the buttons on my shirt has fallen off.",
+    "exampleThai": "กระดุมเสื้อเชิ้ตของฉันหลุดไปเม็ดหนึ่ง",
+    "iconName": "Circle",
+    "iconSource": "lucide",
+    "imagePrompt": "A close-up of a hand sewing a button onto a shirt.",
+    "tags": [
+      "clothes",
+      "details"
+    ]
+  },
+  {
+    "id": "temp_B1_02_03",
+    "word": "collar",
+    "phonetic": "/ˈkɒl.ər/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Clothes",
+    "thaiMeaning": "ปกเสื้อ",
+    "simpleDefinition": "The part around the neck of a piece of clothing, usually folded down",
+    "exampleSentence": "He wore a shirt with a white collar.",
+    "exampleThai": "เขาสวมเสื้อเชิ้ตที่มีปกสีขาว",
+    "iconName": "Shirt",
+    "iconSource": "lucide",
+    "imagePrompt": "A close-up of a crisp, white shirt collar.",
+    "tags": [
+      "clothes",
+      "parts"
+    ]
+  },
+  {
+    "id": "temp_B1_02_04",
+    "word": "cotton",
+    "phonetic": "/ˈkɒt.ən/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Clothes",
+    "thaiMeaning": "ผ้าฝ้าย",
+    "simpleDefinition": "Cloth or thread made from the white hair of the cotton plant",
+    "exampleSentence": "A simple cotton dress is perfect for summer.",
+    "exampleThai": "ชุดกระโปรงผ้าฝ้ายเรียบๆ เหมาะสำหรับฤดูร้อน",
+    "iconName": "Scissors",
+    "iconSource": "lucide",
+    "imagePrompt": "A pile of soft, folded cotton t-shirts.",
+    "tags": [
+      "clothes",
+      "material"
+    ]
+  },
+  {
+    "id": "temp_B1_02_05",
+    "word": "fashion",
+    "phonetic": "/ˈfæʃ.ən/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Clothes",
+    "thaiMeaning": "แฟชั่น, สมัยนิยม",
+    "simpleDefinition": "A style that is popular at a particular time, especially in clothes, hair, make-up, etc.",
+    "exampleSentence": "Long skirts have come back into fashion.",
+    "exampleThai": "กระโปรงยาวกลับมาเป็นที่นิยมอีกครั้ง",
+    "iconName": "Sparkles",
+    "iconSource": "sparkles",
+    "imagePrompt": "Models walking on a runway in stylish, modern clothes.",
+    "tags": [
+      "clothes",
+      "style"
+    ]
+  },
+  {
+    "id": "temp_B1_02_06",
+    "word": "leather",
+    "phonetic": "/ˈleð.ər/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Clothes",
+    "thaiMeaning": "หนัง (ที่ใช้ทำสิ่งของ)",
+    "simpleDefinition": "Animal skin treated in order to preserve it, and used to make shoes, bags, clothes, etc.",
+    "exampleSentence": "She bought a new leather jacket.",
+    "exampleThai": "เธอซื้อเสื้อแจ็คเก็ตหนังตัวใหม่",
+    "iconName": "Briefcase",
+    "iconSource": "lucide",
+    "imagePrompt": "A classic brown leather jacket hanging on a hook.",
+    "tags": [
+      "clothes",
+      "material"
+    ]
+  },
+  {
+    "id": "temp_B1_02_07",
+    "word": "pattern",
+    "phonetic": "/ˈpæt.ən/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Clothes",
+    "thaiMeaning": "ลวดลาย",
+    "simpleDefinition": "A particular way in which something is done, is organized, or happens",
+    "exampleSentence": "The shirt has a floral pattern.",
+    "exampleThai": "เสื้อเชิ้ตมีลวดลายดอกไม้",
+    "iconName": "Layout",
+    "iconSource": "lucide",
+    "imagePrompt": "A piece of fabric with a colourful, repeating floral pattern.",
+    "tags": [
+      "clothes",
+      "design"
+    ]
+  },
+  {
+    "id": "temp_B1_02_08",
+    "word": "sleeve",
+    "phonetic": "/sliːv/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Clothes",
+    "thaiMeaning": "แขนเสื้อ",
+    "simpleDefinition": "The part of a piece of clothing that covers some or all of the arm",
+    "exampleSentence": "The shirt has long sleeves.",
+    "exampleThai": "เสื้อเชิ้ตมีแขนยาว",
+    "iconName": "Shirt",
+    "iconSource": "lucide",
+    "imagePrompt": "A person rolling up the long sleeves of their shirt.",
+    "tags": [
+      "clothes",
+      "parts"
+    ]
+  },
+  {
+    "id": "temp_B1_02_09",
+    "word": "suit",
+    "phonetic": "/suːt/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Clothes",
+    "thaiMeaning": "ชุดสูท",
+    "simpleDefinition": "A jacket and trousers or a jacket and skirt that are made from the same material",
+    "exampleSentence": "He wore a dark suit to the interview.",
+    "exampleThai": "เขาสวมชุดสูทสีเข้มไปสัมภาษณ์",
+    "iconName": "User",
+    "iconSource": "lucide",
+    "imagePrompt": "A man dressed in a sharp, dark suit and tie.",
+    "tags": [
+      "clothes",
+      "formal",
+      "work"
+    ]
+  },
+  {
+    "id": "temp_B1_02_10",
+    "word": "tie",
+    "phonetic": "/taɪ/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Clothes",
+    "thaiMeaning": "เนคไท",
+    "simpleDefinition": "A long, thin piece of material that is worn under a shirt collar",
+    "exampleSentence": "He loosened his tie after the meeting.",
+    "exampleThai": "เขาคลายเนคไทหลังจากการประชุม",
+    "iconName": "Type",
+    "iconSource": "lucide",
+    "imagePrompt": "A man adjusting his red tie in a mirror.",
+    "tags": [
+      "clothes",
+      "formal"
+    ]
+  },
+  {
+    "id": "temp_B1_02_11",
+    "word": "uniform",
+    "phonetic": "/ˈjuː.nɪ.fɔːm/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Clothes",
+    "thaiMeaning": "เครื่องแบบ",
+    "simpleDefinition": "A particular set of clothes that has to be worn by the members of the same organization or group",
+    "exampleSentence": "The students have to wear a school uniform.",
+    "exampleThai": "นักเรียนต้องสวมเครื่องแบบนักเรียน",
+    "iconName": "Users",
+    "iconSource": "lucide",
+    "imagePrompt": "A group of students wearing matching school uniforms.",
+    "tags": [
+      "clothes",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "temp_B1_02_12",
+    "word": "wool",
+    "phonetic": "/wʊl/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Clothes",
+    "thaiMeaning": "ขนสัตว์",
+    "simpleDefinition": "The soft, thick hair that grows on the bodies of sheep and some other animals",
+    "exampleSentence": "This sweater is made of 100% wool.",
+    "exampleThai": "เสื้อกันหนาวตัวนี้ทำจากขนสัตว์ 100%",
+    "iconName": "Scissors",
+    "iconSource": "lucide",
+    "imagePrompt": "A warm, knitted wool sweater folded on a chair.",
+    "tags": [
+      "clothes",
+      "material"
+    ]
+  },
+  {
+    "id": "temp_B1_02_13",
+    "word": "childhood",
+    "phonetic": "/ˈtʃaɪld.hʊd/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Family",
+    "thaiMeaning": "วัยเด็ก",
+    "simpleDefinition": "The time when someone is a child",
+    "exampleSentence": "She had a very happy childhood.",
+    "exampleThai": "เธอมีวัยเด็กที่มีความสุขมาก",
+    "iconName": "Baby",
+    "iconSource": "lucide",
+    "imagePrompt": "A child playing happily with toys in a sunny room.",
+    "tags": [
+      "family",
+      "time"
+    ]
+  },
+  {
+    "id": "temp_B1_02_14",
+    "word": "divorce",
+    "phonetic": "/dɪˈvɔːs/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Family",
+    "thaiMeaning": "การหย่าร้าง",
+    "simpleDefinition": "An official or legal process to end a marriage",
+    "exampleSentence": "The divorce rates have increased in recent years.",
+    "exampleThai": "อัตราการหย่าร้างเพิ่มขึ้นในช่วงไม่กี่ปีที่ผ่านมา",
+    "iconName": "FileText",
+    "iconSource": "lucide",
+    "imagePrompt": "Two people sitting apart on a couch, looking sad.",
+    "tags": [
+      "family",
+      "relationship"
+    ]
+  },
+  {
+    "id": "temp_B1_02_15",
+    "word": "generation",
+    "phonetic": "/ˌdʒen.əˈreɪ.ʃən/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Family",
+    "thaiMeaning": "รุ่น (คน)",
+    "simpleDefinition": "All the people of about the same age within a society or within a particular family",
+    "exampleSentence": "Three generations of the family lived in the same house.",
+    "exampleThai": "คนสามรุ่นของครอบครัวนี้อาศัยอยู่ในบ้านหลังเดียวกัน",
+    "iconName": "Users",
+    "iconSource": "lucide",
+    "imagePrompt": "A grandmother, mother, and daughter smiling together.",
+    "tags": [
+      "family",
+      "people"
+    ]
+  },
+  {
+    "id": "temp_B1_02_16",
+    "word": "grandson",
+    "phonetic": "/ˈɡrænd.sʌn/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Family",
+    "thaiMeaning": "หลานชาย (ลูกของลูก)",
+    "simpleDefinition": "The son of a person's son or daughter",
+    "exampleSentence": "She has three grandsons and one granddaughter.",
+    "exampleThai": "เธอมีหลานชายสามคนและหลานสาวหนึ่งคน",
+    "iconName": "User",
+    "iconSource": "lucide",
+    "imagePrompt": "A grandfather hugging his young grandson.",
+    "tags": [
+      "family",
+      "relative"
+    ]
+  },
+  {
+    "id": "temp_B1_02_17",
+    "word": "marriage",
+    "phonetic": "/ˈmær.ɪdʒ/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Family",
+    "thaiMeaning": "การแต่งงาน, ชีวิตคู่",
+    "simpleDefinition": "A legally accepted relationship between two people in which they live together",
+    "exampleSentence": "They have a very happy marriage.",
+    "exampleThai": "พวกเขามีชีวิตคู่ที่มีความสุขมาก",
+    "iconName": "Heart",
+    "iconSource": "lucide",
+    "imagePrompt": "Two people holding hands, wearing wedding rings.",
+    "tags": [
+      "family",
+      "relationship"
+    ]
+  },
+  {
+    "id": "temp_B1_02_18",
+    "word": "nephew",
+    "phonetic": "/ˈnef.juː/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Family",
+    "thaiMeaning": "หลานชาย (ลูกของพี่หรือน้อง)",
+    "simpleDefinition": "A son of your sister or brother",
+    "exampleSentence": "I bought a toy for my nephew's birthday.",
+    "exampleThai": "ฉันซื้อของเล่นให้เป็นของขวัญวันเกิดหลานชาย",
+    "iconName": "User",
+    "iconSource": "lucide",
+    "imagePrompt": "An uncle playing a game with his young nephew.",
+    "tags": [
+      "family",
+      "relative"
+    ]
+  },
+  {
+    "id": "temp_B1_02_19",
+    "word": "niece",
+    "phonetic": "/niːs/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Family",
+    "thaiMeaning": "หลานสาว (ลูกของพี่หรือน้อง)",
+    "simpleDefinition": "A daughter of your brother or sister",
+    "exampleSentence": "My niece is starting school this year.",
+    "exampleThai": "หลานสาวของฉันกำลังจะเข้าโรงเรียนปีนี้",
+    "iconName": "User",
+    "iconSource": "lucide",
+    "imagePrompt": "An aunt reading a book to her little niece.",
+    "tags": [
+      "family",
+      "relative"
+    ]
+  },
+  {
+    "id": "temp_B1_02_20",
+    "word": "relative",
+    "phonetic": "/ˈrel.ə.tɪv/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Family",
+    "thaiMeaning": "ญาติ",
+    "simpleDefinition": "A member of your family",
+    "exampleSentence": "All her close relatives came to the wedding.",
+    "exampleThai": "ญาติสนิทของเธอทั้งหมดมาร่วมงานแต่งงาน",
+    "iconName": "Users",
+    "iconSource": "lucide",
+    "imagePrompt": "A large family gathering around a dinner table.",
+    "tags": [
+      "family",
+      "people"
+    ]
+  },
+  {
+    "id": "temp_B1_02_21",
+    "word": "stepmother",
+    "phonetic": "/ˈstepˌmʌð.ər/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Family",
+    "thaiMeaning": "แม่เลี้ยง",
+    "simpleDefinition": "The woman who is married to someone's father but who is not their real mother",
+    "exampleSentence": "He gets along well with his stepmother.",
+    "exampleThai": "เขาเข้ากันได้ดีกับแม่เลี้ยง",
+    "iconName": "UserCircle",
+    "iconSource": "lucide",
+    "imagePrompt": "A woman and a teenager smiling and cooking together.",
+    "tags": [
+      "family",
+      "relative"
+    ]
+  },
+  {
+    "id": "temp_B1_02_22",
+    "word": "twins",
+    "phonetic": "/twɪnz/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Family",
+    "thaiMeaning": "ฝาแฝด",
+    "simpleDefinition": "Two children born to the same mother on the same occasion",
+    "exampleSentence": "My sister has identical twins.",
+    "exampleThai": "น้องสาวของฉันมีลูกแฝดแท้",
+    "iconName": "Users",
+    "iconSource": "lucide",
+    "imagePrompt": "Two identical young boys wearing the same clothes.",
+    "tags": [
+      "family",
+      "children"
+    ]
+  },
+  {
+    "id": "temp_B1_02_23",
+    "word": "uncle",
+    "phonetic": "/ˈʌŋ.kəl/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Family",
+    "thaiMeaning": "ลุง, อา, น้า (ผู้ชาย)",
+    "simpleDefinition": "The brother of someone's mother or father, or the husband of someone's aunt",
+    "exampleSentence": "We are going to visit my uncle this weekend.",
+    "exampleThai": "เราจะไปเยี่ยมลุงสุดสัปดาห์นี้",
+    "iconName": "User",
+    "iconSource": "lucide",
+    "imagePrompt": "A middle-aged man smiling, standing in a garden.",
+    "tags": [
+      "family",
+      "relative"
+    ]
+  },
+  {
+    "id": "temp_B1_02_24",
+    "word": "wedding",
+    "phonetic": "/ˈwed.ɪŋ/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Family",
+    "thaiMeaning": "งานแต่งงาน",
+    "simpleDefinition": "A marriage ceremony and any celebrations such as a meal or a party that follow it",
+    "exampleSentence": "They invited 100 guests to their wedding.",
+    "exampleThai": "พวกเขาเชิญแขก 100 คนมาร่วมงานแต่งงาน",
+    "iconName": "Cake",
+    "iconSource": "lucide",
+    "imagePrompt": "A couple cutting a large white cake at their wedding reception.",
+    "tags": [
+      "family",
+      "event"
+    ]
+  },
+  {
+    "id": "temp_B1_02_25",
+    "word": "assignment",
+    "phonetic": "/əˈsaɪn.mənt/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "School",
+    "thaiMeaning": "งานที่ได้รับมอบหมาย, การบ้าน",
+    "simpleDefinition": "A piece of work given to someone, typically as part of their studies or job",
+    "exampleSentence": "The math assignment is due on Friday.",
+    "exampleThai": "งานวิชาคณิตศาสตร์ต้องส่งวันศุกร์",
+    "iconName": "BookOpen",
+    "iconSource": "lucide",
+    "imagePrompt": "A student writing on a piece of paper at a desk.",
+    "tags": [
+      "school",
+      "study"
+    ]
+  },
+  {
+    "id": "temp_B1_02_26",
+    "word": "campus",
+    "phonetic": "/ˈkæm.pəs/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "School",
+    "thaiMeaning": "วิทยาเขต, พื้นที่มหาวิทยาลัย",
+    "simpleDefinition": "The buildings of a college or university and the land that surrounds them",
+    "exampleSentence": "She lives in a student dorm on campus.",
+    "exampleThai": "เธออาศัยอยู่ในหอพักนักศึกษาในวิทยาเขต",
+    "iconName": "School",
+    "iconSource": "lucide",
+    "imagePrompt": "A wide view of a university campus with students walking.",
+    "tags": [
+      "school",
+      "place"
+    ]
+  },
+  {
+    "id": "temp_B1_02_27",
+    "word": "degree",
+    "phonetic": "/dɪˈɡriː/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "School",
+    "thaiMeaning": "ปริญญา",
+    "simpleDefinition": "A course of study at a college or university, or the qualification given to a student after they have completed their studies",
+    "exampleSentence": "She has a master's degree in biology.",
+    "exampleThai": "เธอมีปริญญาโทสาขาชีววิทยา",
+    "iconName": "Award",
+    "iconSource": "lucide",
+    "imagePrompt": "A framed university degree hanging on a wall.",
+    "tags": [
+      "school",
+      "qualification"
+    ]
+  },
+  {
+    "id": "temp_B1_02_28",
+    "word": "essay",
+    "phonetic": "/ˈes.eɪ/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "School",
+    "thaiMeaning": "เรียงความ",
+    "simpleDefinition": "A short piece of writing on a particular subject, especially one done by students as part of the work for a course",
+    "exampleSentence": "I have to write an essay about history.",
+    "exampleThai": "ฉันต้องเขียนเรียงความเกี่ยวกับประวัติศาสตร์",
+    "iconName": "FileText",
+    "iconSource": "lucide",
+    "imagePrompt": "A laptop and a cup of coffee on a desk with an essay on the screen.",
+    "tags": [
+      "school",
+      "writing"
+    ]
+  },
+  {
+    "id": "temp_B1_02_29",
+    "word": "grade",
+    "phonetic": "/ɡreɪd/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "School",
+    "thaiMeaning": "เกรด, คะแนน",
+    "simpleDefinition": "A number or letter that shows how good someone's work or performance is",
+    "exampleSentence": "He got good grades in his exams.",
+    "exampleThai": "เขาได้เกรดดีในการสอบ",
+    "iconName": "CheckSquare",
+    "iconSource": "lucide",
+    "imagePrompt": "An exam paper with a red 'A+' written on it.",
+    "tags": [
+      "school",
+      "assessment"
+    ]
+  },
+  {
+    "id": "temp_B1_02_30",
+    "word": "graduation",
+    "phonetic": "/ˌɡrædʒ.uˈeɪ.ʃən/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "School",
+    "thaiMeaning": "การสำเร็จการศึกษา",
+    "simpleDefinition": "The fact of finishing a degree or other course of study at a university or school",
+    "exampleSentence": "Her family came to watch her graduation.",
+    "exampleThai": "ครอบครัวของเธอมาดูเธอรับปริญญา",
+    "iconName": "Award",
+    "iconSource": "lucide",
+    "imagePrompt": "Students throwing their graduation caps in the air.",
+    "tags": [
+      "school",
+      "event"
+    ]
+  },
+  {
+    "id": "temp_B1_02_31",
+    "word": "lecture",
+    "phonetic": "/ˈlek.tʃər/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "School",
+    "thaiMeaning": "การบรรยาย",
+    "simpleDefinition": "A formal talk on a serious subject given to a group of people, especially students",
+    "exampleSentence": "We went to a lecture on modern art.",
+    "exampleThai": "เราไปฟังการบรรยายเกี่ยวกับศิลปะสมัยใหม่",
+    "iconName": "Mic",
+    "iconSource": "lucide",
+    "imagePrompt": "A professor giving a lecture to a hall full of students.",
+    "tags": [
+      "school",
+      "learning"
+    ]
+  },
+  {
+    "id": "temp_B1_02_32",
+    "word": "professor",
+    "phonetic": "/prəˈfes.ər/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "School",
+    "thaiMeaning": "ศาสตราจารย์, อาจารย์มหาวิทยาลัย",
+    "simpleDefinition": "A teacher of the highest rank in a department of a British university, or a teacher of high rank in an American university or college",
+    "exampleSentence": "She is a professor of chemistry at the university.",
+    "exampleThai": "เธอเป็นศาสตราจารย์ด้านเคมีที่มหาวิทยาลัย",
+    "iconName": "User",
+    "iconSource": "lucide",
+    "imagePrompt": "A wise-looking professor writing on a chalkboard.",
+    "tags": [
+      "school",
+      "people",
+      "work"
+    ]
+  },
+  {
+    "id": "temp_B1_02_33",
+    "word": "qualification",
+    "phonetic": "/ˌkwɒl.ɪ.fɪˈkeɪ.ʃən/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "School",
+    "thaiMeaning": "คุณวุฒิ, ประกาศนียบัตร",
+    "simpleDefinition": "An official record showing that you have finished a training course or have the necessary skills",
+    "exampleSentence": "You need the right qualifications for this job.",
+    "exampleThai": "คุณต้องมีคุณวุฒิที่ถูกต้องสำหรับงานนี้",
+    "iconName": "FileCheck",
+    "iconSource": "lucide",
+    "imagePrompt": "A person holding an official certificate with a seal.",
+    "tags": [
+      "school",
+      "work",
+      "document"
+    ]
+  },
+  {
+    "id": "temp_B1_02_34",
+    "word": "term",
+    "phonetic": "/tɜːm/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "School",
+    "thaiMeaning": "ภาคเรียน",
+    "simpleDefinition": "One of the periods into which a year is divided at school, college, or university",
+    "exampleSentence": "The autumn term starts in September.",
+    "exampleThai": "ภาคเรียนฤดูใบไม้ร่วงเริ่มในเดือนกันยายน",
+    "iconName": "Calendar",
+    "iconSource": "lucide",
+    "imagePrompt": "A calendar with the first day of school marked.",
+    "tags": [
+      "school",
+      "time"
+    ]
+  },
+  {
+    "id": "temp_B1_02_35",
+    "word": "timetable",
+    "phonetic": "/ˈtaɪmˌteɪ.bəl/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "School",
+    "thaiMeaning": "ตารางสอน, ตารางเวลา",
+    "simpleDefinition": "A detailed plan showing when events or activities will happen",
+    "exampleSentence": "Here is your timetable for the first week.",
+    "exampleThai": "นี่คือตารางเรียนของคุณสำหรับสัปดาห์แรก",
+    "iconName": "CalendarDays",
+    "iconSource": "lucide",
+    "imagePrompt": "A colourful weekly class timetable pinned to a board.",
+    "tags": [
+      "school",
+      "schedule"
+    ]
+  },
+  {
+    "id": "temp_B1_02_36",
+    "word": "topic",
+    "phonetic": "/ˈtɒp.ɪk/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "School",
+    "thaiMeaning": "หัวข้อ",
+    "simpleDefinition": "A subject that is discussed, written about, or studied",
+    "exampleSentence": "The topic of today's lesson is the environment.",
+    "exampleThai": "หัวข้อของบทเรียนวันนี้คือสิ่งแวดล้อม",
+    "iconName": "MessageCircle",
+    "iconSource": "lucide",
+    "imagePrompt": "A blackboard with the word 'Environment' written on it as a main topic.",
+    "tags": [
+      "school",
+      "subject"
+    ]
+  },
+  {
+    "id": "temp_B1_02_37",
+    "word": "tutor",
+    "phonetic": "/ˈtjuː.tər/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "School",
+    "thaiMeaning": "ครูสอนพิเศษ",
+    "simpleDefinition": "A teacher who teaches a child outside of school, especially in order to give the child extra help with a subject",
+    "exampleSentence": "His parents hired a math tutor to help him.",
+    "exampleThai": "พ่อแม่ของเขาจ้างครูสอนพิเศษวิชาคณิตศาสตร์มาช่วยเขา",
+    "iconName": "UserCheck",
+    "iconSource": "lucide",
+    "imagePrompt": "A tutor helping a student with homework at a table.",
+    "tags": [
+      "school",
+      "people"
+    ]
+  },
+  {
+    "id": "temp_B1_02_38",
+    "word": "applicant",
+    "phonetic": "/ˈæp.lɪ.kənt/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Work",
+    "thaiMeaning": "ผู้สมัคร",
+    "simpleDefinition": "A person who formally requests something, especially a job, or to study at a college or university",
+    "exampleSentence": "There were over 50 applicants for the job.",
+    "exampleThai": "มีผู้สมัครงานนี้มากกว่า 50 คน",
+    "iconName": "UserPlus",
+    "iconSource": "lucide",
+    "imagePrompt": "A person handing their resume to an interviewer.",
+    "tags": [
+      "work",
+      "job"
+    ]
+  },
+  {
+    "id": "temp_B1_02_39",
+    "word": "boss",
+    "phonetic": "/bɒs/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Work",
+    "thaiMeaning": "เจ้านาย",
+    "simpleDefinition": "The person who is in charge of an organization and who tells others what to do",
+    "exampleSentence": "My boss gave me the day off.",
+    "exampleThai": "เจ้านายให้ฉันหยุดหนึ่งวัน",
+    "iconName": "Briefcase",
+    "iconSource": "lucide",
+    "imagePrompt": "A manager in a suit speaking to an employee.",
+    "tags": [
+      "work",
+      "people"
+    ]
+  },
+  {
+    "id": "temp_B1_02_40",
+    "word": "career",
+    "phonetic": "/kəˈrɪər/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Work",
+    "thaiMeaning": "อาชีพ",
+    "simpleDefinition": "The job or series of jobs that you do during your working life",
+    "exampleSentence": "She wants to pursue a career in medicine.",
+    "exampleThai": "เธอต้องการทำอาชีพทางด้านการแพทย์",
+    "iconName": "TrendingUp",
+    "iconSource": "lucide",
+    "imagePrompt": "A ladder leading up, symbolizing career progression.",
+    "tags": [
+      "work",
+      "job"
+    ]
+  },
+  {
+    "id": "temp_B1_02_41",
+    "word": "colleague",
+    "phonetic": "/ˈkɒl.iːɡ/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Work",
+    "thaiMeaning": "เพื่อนร่วมงาน",
+    "simpleDefinition": "One of a group of people who work together",
+    "exampleSentence": "I am having lunch with a colleague today.",
+    "exampleThai": "ฉันกำลังจะไปทานข้าวกลางวันกับเพื่อนร่วมงานวันนี้",
+    "iconName": "Users",
+    "iconSource": "lucide",
+    "imagePrompt": "Two co-workers discussing something over a laptop.",
+    "tags": [
+      "work",
+      "people"
+    ]
+  },
+  {
+    "id": "temp_B1_02_42",
+    "word": "employee",
+    "phonetic": "/ɪmˈplɔɪ.iː/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Work",
+    "thaiMeaning": "ลูกจ้าง, พนักงาน",
+    "simpleDefinition": "Someone who is paid to work for someone else",
+    "exampleSentence": "The company has over 500 employees.",
+    "exampleThai": "บริษัทนี้มีพนักงานมากกว่า 500 คน",
+    "iconName": "UserCheck",
+    "iconSource": "lucide",
+    "imagePrompt": "A group of office workers smiling at the camera.",
+    "tags": [
+      "work",
+      "people"
+    ]
+  },
+  {
+    "id": "temp_B1_02_43",
+    "word": "employer",
+    "phonetic": "/ɪmˈplɔɪ.ər/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Work",
+    "thaiMeaning": "นายจ้าง",
+    "simpleDefinition": "A person or organization that employs people",
+    "exampleSentence": "They are a very good employer.",
+    "exampleThai": "พวกเขาเป็นนายจ้างที่ดีมาก",
+    "iconName": "Building",
+    "iconSource": "lucide",
+    "imagePrompt": "A large modern office building.",
+    "tags": [
+      "work",
+      "business"
+    ]
+  },
+  {
+    "id": "temp_B1_02_44",
+    "word": "interview",
+    "phonetic": "/ˈɪn.tə.vjuː/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Work",
+    "thaiMeaning": "การสัมภาษณ์",
+    "simpleDefinition": "A meeting in which someone asks you questions to see if you are suitable for a job or course",
+    "exampleSentence": "I have a job interview tomorrow morning.",
+    "exampleThai": "ฉันมีการสัมภาษณ์งานพรุ่งนี้เช้า",
+    "iconName": "Users",
+    "iconSource": "lucide",
+    "imagePrompt": "A professional job interview taking place in an office.",
+    "tags": [
+      "work",
+      "job"
+    ]
+  },
+  {
+    "id": "temp_B1_02_45",
+    "word": "profession",
+    "phonetic": "/prəˈfeʃ.ən/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Work",
+    "thaiMeaning": "วิชาชีพ, อาชีพ (ที่ต้องใช้ทักษะพิเศษ)",
+    "simpleDefinition": "Any type of work that needs special training or a particular skill, often one that is respected",
+    "exampleSentence": "Teaching is a very rewarding profession.",
+    "exampleThai": "การสอนเป็นวิชาชีพที่คุ้มค่ามาก",
+    "iconName": "Award",
+    "iconSource": "lucide",
+    "imagePrompt": "Tools of various professions like a stethoscope, pen, and a ruler.",
+    "tags": [
+      "work",
+      "career"
+    ]
+  },
+  {
+    "id": "temp_B1_02_46",
+    "word": "salary",
+    "phonetic": "/ˈsæl.ər.i/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Work",
+    "thaiMeaning": "เงินเดือน",
+    "simpleDefinition": "A fixed amount of money agreed every year as pay for an employee, usually paid directly into his or her bank account every month",
+    "exampleSentence": "The job offers a good salary.",
+    "exampleThai": "งานนี้เสนอเงินเดือนที่ดี",
+    "iconName": "DollarSign",
+    "iconSource": "lucide",
+    "imagePrompt": "A hand holding a stack of money next to a paycheck.",
+    "tags": [
+      "work",
+      "money"
+    ]
+  },
+  {
+    "id": "temp_B1_02_47",
+    "word": "staff",
+    "phonetic": "/stɑːf/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Work",
+    "thaiMeaning": "เจ้าหน้าที่, พนักงาน",
+    "simpleDefinition": "The group of people who work for an organization",
+    "exampleSentence": "The hotel staff were very friendly.",
+    "exampleThai": "พนักงานของโรงแรมเป็นมิตรมาก",
+    "iconName": "Users",
+    "iconSource": "lucide",
+    "imagePrompt": "A group of hotel staff members wearing uniforms.",
+    "tags": [
+      "work",
+      "people"
+    ]
+  },
+  {
+    "id": "temp_B1_02_48",
+    "word": "training",
+    "phonetic": "/ˈtreɪ.nɪŋ/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Work",
+    "thaiMeaning": "การฝึกอบรม",
+    "simpleDefinition": "The process of learning the skills you need to do a particular job or activity",
+    "exampleSentence": "New employees receive two weeks of training.",
+    "exampleThai": "พนักงานใหม่จะได้รับการฝึกอบรมสองสัปดาห์",
+    "iconName": "BookOpen",
+    "iconSource": "lucide",
+    "imagePrompt": "A trainer pointing at a presentation board during a session.",
+    "tags": [
+      "work",
+      "learning"
+    ]
+  },
+  {
+    "id": "temp_B1_02_49",
+    "word": "unemployed",
+    "phonetic": "/ˌʌn.ɪmˈplɔɪd/",
+    "partOfSpeech": "adjective",
+    "cefr": "B1",
+    "category": "Work",
+    "thaiMeaning": "ว่างงาน",
+    "simpleDefinition": "Not having a job that provides money",
+    "exampleSentence": "He has been unemployed for six months.",
+    "exampleThai": "เขาว่างงานมาหกเดือนแล้ว",
+    "iconName": "UserX",
+    "iconSource": "lucide",
+    "imagePrompt": "A person looking worried while reading job advertisements in a newspaper.",
+    "tags": [
+      "work",
+      "jobless"
+    ]
+  },
+  {
+    "id": "temp_B1_02_50",
+    "word": "promotion",
+    "phonetic": "/prəˈməʊ.ʃən/",
+    "partOfSpeech": "noun",
+    "cefr": "B1",
+    "category": "Work",
+    "thaiMeaning": "การเลื่อนตำแหน่ง",
+    "simpleDefinition": "The act of raising someone to a higher or more important position or rank",
+    "exampleSentence": "She worked hard and got a promotion.",
+    "exampleThai": "เธอทำงานหนักและได้รับการเลื่อนตำแหน่ง",
+    "iconName": "TrendingUp",
+    "iconSource": "lucide",
+    "imagePrompt": "A businesswoman looking happy while being congratulated by her boss.",
+    "tags": [
+      "work",
+      "career"
+    ]
+  }
+]

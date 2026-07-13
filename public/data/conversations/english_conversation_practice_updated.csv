@@ -1,0 +1,111 @@
+﻿category_id,category_title,category_thai,question_no,question_english,question_thai,answer_example,useful_phrases
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,1,What time do you usually wake up?,ปกติคุณตื่นกี่โมง,"I usually wake up at 7 AM.","At [time]|Around [time]|I usually wake up at..."
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,2,Do you eat breakfast every morning?,คุณกินอาหารเช้าทุกเช้าไหม,"Yes, I usually eat bread for breakfast.","Yes, I do.|No, I don't.|I usually..."
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,3,How do you get ready for work or school?,คุณเตรียมตัวไปทำงานหรือเรียนอย่างไร,"I usually take a shower and then eat breakfast.","I usually...|After that, I...|First, I..."
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,4,Are you usually in a hurry in the morning?,ตอนเช้าคุณมักรีบไหม,"I usually take a shower and then eat breakfast.","I usually...|After that, I...|First, I..."
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,5,What do you drink in the morning?,ตอนเช้าคุณดื่มอะไร,"I usually take a shower and then eat breakfast.","I usually...|After that, I...|First, I..."
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,6,How long does your morning routine take?,กิจวัตรตอนเช้าของคุณใช้เวลานานแค่ไหน,"It takes about 30 minutes.","It takes about...|Around... minutes.|Usually..."
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,7,Do you exercise in the morning?,คุณออกกำลังกายตอนเช้าไหม,"Yes, I usually eat bread for breakfast.","Yes, I do.|No, I don't.|I usually..."
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,8,What do you do after waking up?,หลังตื่นนอนคุณทำอะไร,"I usually take a shower and then eat breakfast.","I usually...|After that, I...|First, I..."
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,9,Do you prepare your bag at night?,คุณเตรียมกระเป๋าตอนกลางคืนไหม,"Yes, I usually eat bread for breakfast.","Yes, I do.|No, I don't.|I usually..."
+morning-routine,Morning Routine,กิจวัตรตอนเช้า,10,What helps you start the day well?,อะไรช่วยให้คุณเริ่มวันได้ดี,"I usually take a shower and then eat breakfast.","I usually...|After that, I...|First, I..."
+customer-service,Customer Service,บริการลูกค้า,1,How can I help you today?,วันนี้ให้ช่วยอะไรได้บ้าง,"I'd like a cup of coffee, please.","I'd like...|Can I have...?|Yes, please."
+customer-service,Customer Service,บริการลูกค้า,2,What seems to be the problem?,ปัญหาคืออะไร,"This food is very spicy.","I prefer...|This is...|It tastes..."
+customer-service,Customer Service,บริการลูกค้า,3,Do you have the receipt?,คุณมีใบเสร็จไหม,"Yes, we have it in black.","Yes, we have...|No, we don't.|Let me check."
+customer-service,Customer Service,บริการลูกค้า,4,Would you like a refund or an exchange?,ต้องการคืนเงินหรือเปลี่ยนสินค้า,"This food is very spicy.","I prefer...|This is...|It tastes..."
+customer-service,Customer Service,บริการลูกค้า,5,May I check your order number?,ขอตรวจเลขคำสั่งซื้อได้ไหม,"I'd like a cup of coffee, please.","I'd like...|Can I have...?|Yes, please."
+customer-service,Customer Service,บริการลูกค้า,6,When did you place the order?,คุณสั่งซื้อเมื่อไหร่,"I'd like a cup of coffee, please.","I'd like...|Can I have...?|Yes, please."
+customer-service,Customer Service,บริการลูกค้า,7,Is there anything else I can help with?,มีอะไรให้ช่วยเพิ่มเติมไหม,"This food is very spicy.","I prefer...|This is...|It tastes..."
+customer-service,Customer Service,บริการลูกค้า,8,Could you please wait a moment?,กรุณารอสักครู่ได้ไหม,"This food is very spicy.","I prefer...|This is...|It tastes..."
+customer-service,Customer Service,บริการลูกค้า,9,I apologize for the inconvenience.,ขออภัยในความไม่สะดวก,"This food is very spicy.","I prefer...|This is...|It tastes..."
+customer-service,Customer Service,บริการลูกค้า,10,Thank you for your patience.,ขอบคุณที่รอ,"This food is very spicy.","I prefer...|This is...|It tastes..."
+job-interview,Job Interview,สัมภาษณ์งาน,1,Tell me about yourself.,แนะนำตัวให้ฟังหน่อย,"I am a hardworking person.","I am...|My strength is...|I can..."
+job-interview,Job Interview,สัมภาษณ์งาน,2,Why do you want this job?,ทำไมคุณถึงอยากได้งานนี้,"I want this job because I love marketing.","I want this job because...|I'm interested in...|I believe I can..."
+job-interview,Job Interview,สัมภาษณ์งาน,3,What are your strengths?,จุดแข็งของคุณคืออะไร,"I am a hardworking person.","I am...|My strength is...|I can..."
+job-interview,Job Interview,สัมภาษณ์งาน,4,What is your weakness?,จุดอ่อนของคุณคืออะไร,"I am a hardworking person.","I am...|My strength is...|I can..."
+job-interview,Job Interview,สัมภาษณ์งาน,5,What experience do you have?,คุณมีประสบการณ์อะไรบ้าง,"I have 3 years of experience in sales.","I have worked as...|I have experience in...|In my previous job..."
+job-interview,Job Interview,สัมภาษณ์งาน,6,Can you work under pressure?,คุณทำงานภายใต้ความกดดันได้ไหม,"I am a hardworking person.","I am...|My strength is...|I can..."
+job-interview,Job Interview,สัมภาษณ์งาน,7,What salary do you expect?,คุณคาดหวังเงินเดือนเท่าไหร่,"I am a hardworking person.","I am...|My strength is...|I can..."
+job-interview,Job Interview,สัมภาษณ์งาน,8,When can you start?,คุณเริ่มงานได้เมื่อไหร่,"I am a hardworking person.","I am...|My strength is...|I can..."
+job-interview,Job Interview,สัมภาษณ์งาน,9,Do you have any questions for us?,คุณมีคำถามอะไรถึงเราไหม,"I am a hardworking person.","I am...|My strength is...|I can..."
+job-interview,Job Interview,สัมภาษณ์งาน,10,Why should we hire you?,ทำไมเราควรรับคุณเข้าทำงาน,"I am a hardworking person.","I am...|My strength is...|I can..."
+daily-life,Daily Life,ชีวิตประจำวัน,1,What do you usually do after work?,ปกติหลังเลิกงานคุณทำอะไร,"That sounds interesting.","Well,...|I think...|Usually..."
+daily-life,Daily Life,ชีวิตประจำวัน,2,Do you do housework every day?,คุณทำงานบ้านทุกวันไหม,"Yes, I like spicy food.","Yes, I do.|No, I don't.|Sometimes."
+daily-life,Daily Life,ชีวิตประจำวัน,3,What errands do you need to do today?,วันนี้ต้องไปทำธุระอะไรบ้าง,"That sounds interesting.","Well,...|I think...|Usually..."
+daily-life,Daily Life,ชีวิตประจำวัน,4,How do you relax?,คุณผ่อนคลายอย่างไร,"That sounds interesting.","Well,...|I think...|Usually..."
+daily-life,Daily Life,ชีวิตประจำวัน,5,Are you busy today?,วันนี้คุณยุ่งไหม,"That sounds interesting.","Well,...|I think...|Usually..."
+daily-life,Daily Life,ชีวิตประจำวัน,6,What is your daily routine?,กิจวัตรประจำวันของคุณคืออะไร,"I am working on a new project.","I am...|It is...|I think..."
+daily-life,Daily Life,ชีวิตประจำวัน,7,Do you like cooking at home?,คุณชอบทำอาหารที่บ้านไหม,"Yes, I like spicy food.","Yes, I do.|No, I don't.|Sometimes."
+daily-life,Daily Life,ชีวิตประจำวัน,8,How often do you do laundry?,คุณซักผ้าบ่อยแค่ไหน,"That sounds interesting.","Well,...|I think...|Usually..."
+daily-life,Daily Life,ชีวิตประจำวัน,9,What do you do in your free time?,คุณทำอะไรในเวลาว่าง,"That sounds interesting.","Well,...|I think...|Usually..."
+daily-life,Daily Life,ชีวิตประจำวัน,10,Do you plan your day?,คุณวางแผนวันของคุณไหม,"Yes, I like spicy food.","Yes, I do.|No, I don't.|Sometimes."
+small-talk,Small Talk,คุยเล่นทั่วไป,1,How are you today?,วันนี้เป็นอย่างไรบ้าง,"That sounds interesting.","Well,...|I think...|Usually..."
+small-talk,Small Talk,คุยเล่นทั่วไป,2,How was your weekend?,สุดสัปดาห์เป็นอย่างไรบ้าง,"That sounds interesting.","Well,...|I think...|Usually..."
+small-talk,Small Talk,คุยเล่นทั่วไป,3,What do you like to do for fun?,คุณชอบทำอะไรเพื่อความสนุก,"My favorite food is Pad Thai.","I like...|My favorite is...|I prefer..."
+small-talk,Small Talk,คุยเล่นทั่วไป,4,What kind of music do you like?,คุณชอบเพลงแนวไหน,"That sounds interesting.","Well,...|I think...|Usually..."
+small-talk,Small Talk,คุยเล่นทั่วไป,5,Have you watched any good movies recently?,ช่วงนี้ได้ดูหนังดี ๆ บ้างไหม,"Yes, I have been to Japan.","Yes, I have.|No, I haven't.|I once..."
+small-talk,Small Talk,คุยเล่นทั่วไป,6,Do you like this weather?,คุณชอบอากาศแบบนี้ไหม,"Yes, I like spicy food.","Yes, I do.|No, I don't.|Sometimes."
+small-talk,Small Talk,คุยเล่นทั่วไป,7,Are you busy these days?,ช่วงนี้คุณยุ่งไหม,"That sounds interesting.","Well,...|I think...|Usually..."
+small-talk,Small Talk,คุยเล่นทั่วไป,8,What are your plans for tonight?,คืนนี้มีแผนอะไร,"I am working on a new project.","I am...|It is...|I think..."
+small-talk,Small Talk,คุยเล่นทั่วไป,9,What is your favorite food?,อาหารที่คุณชอบคืออะไร,"My favorite food is Pad Thai.","I like...|My favorite is...|I prefer..."
+small-talk,Small Talk,คุยเล่นทั่วไป,10,Nice to meet you.,ยินดีที่ได้รู้จัก,"That sounds interesting.","Well,...|I think...|Usually..."
+food,Food,อาหาร,1,What would you like to eat?,คุณอยากกินอะไร,"This food is very spicy.","I prefer...|This is...|It tastes..."
+food,Food,อาหาร,2,Are you hungry?,คุณหิวไหม,"This food is very spicy.","I prefer...|This is...|It tastes..."
+food,Food,อาหาร,3,Do you like spicy food?,คุณชอบอาหารเผ็ดไหม,"This food is very spicy.","I prefer...|This is...|It tastes..."
+food,Food,อาหาร,4,Can I see the menu?,ขอดูเมนูได้ไหม,"Yes, you can try it on.","Yes, you can.|Sure.|Of course."
+food,Food,อาหาร,5,I would like fried rice.,ฉันขอข้าวผัด,"This food is very spicy.","I prefer...|This is...|It tastes..."
+food,Food,อาหาร,6,Is this dish spicy?,จานนี้เผ็ดไหม,"This food is very spicy.","I prefer...|This is...|It tastes..."
+food,Food,อาหาร,7,Can I have the bill, please?,ขอบิลหน่อยได้ไหม,"Yes, you can try it on.","Yes, you can.|Sure.|Of course."
+food,Food,อาหาร,8,Do you want to eat here or take away?,กินที่นี่หรือซื้อกลับบ้าน,"This food is very spicy.","I prefer...|This is...|It tastes..."
+food,Food,อาหาร,9,What is your favorite food?,อาหารที่คุณชอบคืออะไร,"This food is very spicy.","I prefer...|This is...|It tastes..."
+food,Food,อาหาร,10,This food is delicious.,อาหารนี้อร่อย,"This food is very spicy.","I prefer...|This is...|It tastes..."
+shopping,Shopping,การซื้อของ,1,How much is this?,อันนี้ราคาเท่าไหร่,"It costs 50 baht.","It is...|It costs..."
+shopping,Shopping,การซื้อของ,2,Do you have this in another size?,มีไซซ์อื่นไหม,"Yes, we have it in black.","Yes, we have...|No, we don't.|Let me check."
+shopping,Shopping,การซื้อของ,3,Can I try this on?,ขอลองใส่ได้ไหม,"Yes, you can try it on.","Yes, you can.|Sure.|Of course."
+shopping,Shopping,การซื้อของ,4,Is there a discount?,มีส่วนลดไหม,"This food is very spicy.","I prefer...|This is...|It tastes..."
+shopping,Shopping,การซื้อของ,5,I’m just looking.,ขอดูก่อน,"This food is very spicy.","I prefer...|This is...|It tastes..."
+shopping,Shopping,การซื้อของ,6,Do you accept credit cards?,รับบัตรเครดิตไหม,"This food is very spicy.","I prefer...|This is...|It tastes..."
+shopping,Shopping,การซื้อของ,7,Can I get a receipt?,ขอใบเสร็จได้ไหม,"Yes, you can try it on.","Yes, you can.|Sure.|Of course."
+shopping,Shopping,การซื้อของ,8,This is too expensive.,อันนี้แพงเกินไป,"This food is very spicy.","I prefer...|This is...|It tastes..."
+shopping,Shopping,การซื้อของ,9,I’ll take this one.,ฉันเอาอันนี้,"This food is very spicy.","I prefer...|This is...|It tastes..."
+shopping,Shopping,การซื้อของ,10,Do you have this in black?,มีสีดำไหม,"Yes, we have it in black.","Yes, we have...|No, we don't.|Let me check."
+travel,Travel,การเดินทาง/ท่องเที่ยว,1,Where are you going?,คุณกำลังจะไปไหน,"That sounds interesting.","Well,...|I think...|Usually..."
+travel,Travel,การเดินทาง/ท่องเที่ยว,2,Do you have a reservation?,คุณมีการจองไหม,"Yes, I like spicy food.","Yes, I do.|No, I don't.|Sometimes."
+travel,Travel,การเดินทาง/ท่องเที่ยว,3,Can I see your passport?,ขอดูหนังสือเดินทางได้ไหม,"That sounds interesting.","Well,...|I think...|Usually..."
+travel,Travel,การเดินทาง/ท่องเที่ยว,4,What time is the flight?,เที่ยวบินกี่โมง,"That sounds interesting.","Well,...|I think...|Usually..."
+travel,Travel,การเดินทาง/ท่องเที่ยว,5,How many bags do you have?,คุณมีกระเป๋ากี่ใบ,"That sounds interesting.","Well,...|I think...|Usually..."
+travel,Travel,การเดินทาง/ท่องเที่ยว,6,Where is the train station?,สถานีรถไฟอยู่ที่ไหน,"That sounds interesting.","Well,...|I think...|Usually..."
+travel,Travel,การเดินทาง/ท่องเที่ยว,7,How long will you stay?,คุณจะพักนานแค่ไหน,"That sounds interesting.","Well,...|I think...|Usually..."
+travel,Travel,การเดินทาง/ท่องเที่ยว,8,Can you show me on the map?,ช่วยชี้ให้ดูบนแผนที่ได้ไหม,"That sounds interesting.","Well,...|I think...|Usually..."
+travel,Travel,การเดินทาง/ท่องเที่ยว,9,Is the flight delayed?,เที่ยวบินล่าช้าไหม,"That sounds interesting.","Well,...|I think...|Usually..."
+travel,Travel,การเดินทาง/ท่องเที่ยว,10,I need a taxi to the hotel.,ฉันต้องการแท็กซี่ไปโรงแรม,"That sounds interesting.","Well,...|I think...|Usually..."
+work,Work,การทำงาน,1,What are you working on?,คุณกำลังทำงานอะไรอยู่,"I am working on a new project.","I am...|It is...|I think..."
+work,Work,การทำงาน,2,When is the deadline?,กำหนดส่งเมื่อไหร่,"That sounds interesting.","Well,...|I think...|Usually..."
+work,Work,การทำงาน,3,Do we have a meeting today?,วันนี้เรามีประชุมไหม,"That sounds interesting.","Well,...|I think...|Usually..."
+work,Work,การทำงาน,4,Can you help me with this task?,ช่วยงานนี้หน่อยได้ไหม,"That sounds interesting.","Well,...|I think...|Usually..."
+work,Work,การทำงาน,5,I need to finish the report.,ฉันต้องทำรายงานให้เสร็จ,"That sounds interesting.","Well,...|I think...|Usually..."
+work,Work,การทำงาน,6,What is the priority today?,วันนี้อะไรสำคัญที่สุด,"I am working on a new project.","I am...|It is...|I think..."
+work,Work,การทำงาน,7,Can I get your feedback?,ขอคำติชมได้ไหม,"That sounds interesting.","Well,...|I think...|Usually..."
+work,Work,การทำงาน,8,Let’s update the project.,มาอัปเดตโปรเจกต์กัน,"That sounds interesting.","Well,...|I think...|Usually..."
+work,Work,การทำงาน,9,I will send it by email.,ฉันจะส่งทางอีเมล,"That sounds interesting.","Well,...|I think...|Usually..."
+work,Work,การทำงาน,10,Thank you for your hard work.,ขอบคุณสำหรับความพยายาม,"That sounds interesting.","Well,...|I think...|Usually..."
+online-chat,Online Chat,แชตออนไลน์,1,Are you available now?,ตอนนี้ว่างไหม,"That sounds interesting.","Well,...|I think...|Usually..."
+online-chat,Online Chat,แชตออนไลน์,2,Can you send me the link?,ส่งลิงก์ให้ฉันได้ไหม,"That sounds interesting.","Well,...|I think...|Usually..."
+online-chat,Online Chat,แชตออนไลน์,3,Please check your messages.,กรุณาเช็กข้อความ,"That sounds interesting.","Well,...|I think...|Usually..."
+online-chat,Online Chat,แชตออนไลน์,4,I’ll reply soon.,ฉันจะตอบเร็ว ๆ นี้,"That sounds interesting.","Well,...|I think...|Usually..."
+online-chat,Online Chat,แชตออนไลน์,5,Can you attach the file?,แนบไฟล์ได้ไหม,"That sounds interesting.","Well,...|I think...|Usually..."
+online-chat,Online Chat,แชตออนไลน์,6,Please confirm the details.,กรุณายืนยันรายละเอียด,"That sounds interesting.","Well,...|I think...|Usually..."
+online-chat,Online Chat,แชตออนไลน์,7,Sorry for the late reply.,ขอโทษที่ตอบช้า,"That sounds interesting.","Well,...|I think...|Usually..."
+online-chat,Online Chat,แชตออนไลน์,8,Can you send a screenshot?,ส่งภาพหน้าจอได้ไหม,"That sounds interesting.","Well,...|I think...|Usually..."
+online-chat,Online Chat,แชตออนไลน์,9,Let me check it first.,ขอตรวจดูก่อน,"That sounds interesting.","Well,...|I think...|Usually..."
+online-chat,Online Chat,แชตออนไลน์,10,Thanks for the update.,ขอบคุณสำหรับการอัปเดต,"That sounds interesting.","Well,...|I think...|Usually..."
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,1,Do you work out?,คุณออกกำลังกายไหม,"Yes, I like spicy food.","Yes, I do.|No, I don't.|Sometimes."
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,2,How often do you go to the gym?,คุณไปยิมบ่อยแค่ไหน,"That sounds interesting.","Well,...|I think...|Usually..."
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,3,What is your fitness goal?,เป้าหมายฟิตเนสของคุณคืออะไร,"I am working on a new project.","I am...|It is...|I think..."
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,4,Do you do cardio?,คุณทำคาร์ดิโอไหม,"Yes, I like spicy food.","Yes, I do.|No, I don't.|Sometimes."
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,5,What do you eat after a workout?,หลังออกกำลังกายคุณกินอะไร,"That sounds interesting.","Well,...|I think...|Usually..."
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,6,Do you warm up before training?,คุณอบอุ่นร่างกายก่อนซ้อมไหม,"Yes, I like spicy food.","Yes, I do.|No, I don't.|Sometimes."
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,7,How long is your workout?,คุณออกกำลังกายนานแค่ไหน,"That sounds interesting.","Well,...|I think...|Usually..."
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,8,Do you have a rest day?,คุณมีวันพักไหม,"Yes, I like spicy food.","Yes, I do.|No, I don't.|Sometimes."
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,9,I want to lose weight.,ฉันอยากลดน้ำหนัก,"That sounds interesting.","Well,...|I think...|Usually..."
+health-fitness,Health & Fitness,สุขภาพและฟิตเนส,10,I want to build muscle.,ฉันอยากสร้างกล้ามเนื้อ,"That sounds interesting.","Well,...|I think...|Usually..."

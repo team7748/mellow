@@ -1,0 +1,2882 @@
+[
+  {
+    "id": "word_001",
+    "sourceId": "JI001",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "job",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/dʒɒb/",
+    "thaiReading": "????",
+    "thaiPronunciation": "????",
+    "thaiMeaning": "??? / ??????????",
+    "simpleMeaning": "",
+    "example": "I want this job.",
+    "exampleThai": "????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "??? / ??????????",
+        "example": "I want this job.",
+        "thaiExample": "????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_002",
+    "sourceId": "JI002",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "work",
+    "cefr": "A1",
+    "partOfSpeech": "v./n.",
+    "ipa": "/wɜːk/",
+    "thaiReading": "??????",
+    "thaiPronunciation": "??????",
+    "thaiMeaning": "????? / ???",
+    "simpleMeaning": "",
+    "example": "I work well with others.",
+    "exampleThai": "??????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "????? / ???",
+        "example": "I work well with others.",
+        "thaiExample": "??????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_003",
+    "sourceId": "JI003",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "career",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/kəˈrɪə(r)/",
+    "thaiReading": "??-??????",
+    "thaiPronunciation": "??-??????",
+    "thaiMeaning": "????? / ??????????",
+    "simpleMeaning": "",
+    "example": "I want to grow in my career.",
+    "exampleThai": "??????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "????? / ??????????",
+        "example": "I want to grow in my career.",
+        "thaiExample": "??????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_004",
+    "sourceId": "JI004",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "company",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈkʌmpəni/",
+    "thaiReading": "???-??-??",
+    "thaiPronunciation": "???-??-??",
+    "thaiMeaning": "??????",
+    "simpleMeaning": "",
+    "example": "Your company looks interesting.",
+    "exampleThai": "?????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "??????",
+        "example": "Your company looks interesting.",
+        "thaiExample": "?????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_005",
+    "sourceId": "JI005",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "position",
+    "cefr": "A2",
+    "partOfSpeech": "n.",
+    "ipa": "/pəˈzɪʃn/",
+    "thaiReading": "??-??-???",
+    "thaiPronunciation": "??-??-???",
+    "thaiMeaning": "???????",
+    "simpleMeaning": "",
+    "example": "I am interested in this position.",
+    "exampleThai": "?????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "???????",
+        "example": "I am interested in this position.",
+        "thaiExample": "?????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_006",
+    "sourceId": "JI006",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "interview",
+    "cefr": "A1",
+    "partOfSpeech": "n./v.",
+    "ipa": "/ˈɪntəvjuː/",
+    "thaiReading": "???-????-???",
+    "thaiPronunciation": "???-????-???",
+    "thaiMeaning": "??????????? / ????????",
+    "simpleMeaning": "",
+    "example": "I have an interview tomorrow.",
+    "exampleThai": "?????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "??????????? / ????????",
+        "example": "I have an interview tomorrow.",
+        "thaiExample": "?????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_007",
+    "sourceId": "JI007",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "experience",
+    "cefr": "A2",
+    "partOfSpeech": "n.",
+    "ipa": "/ɪkˈspɪəriəns/",
+    "thaiReading": "???-?????-???????",
+    "thaiPronunciation": "???-?????-???????",
+    "thaiMeaning": "??????????",
+    "simpleMeaning": "",
+    "example": "I have experience in online sales.",
+    "exampleThai": "????????????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "??????????",
+        "example": "I have experience in online sales.",
+        "thaiExample": "????????????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_008",
+    "sourceId": "JI008",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "skill",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/skɪl/",
+    "thaiReading": "????",
+    "thaiPronunciation": "????",
+    "thaiMeaning": "?????",
+    "simpleMeaning": "",
+    "example": "Communication is an important skill.",
+    "exampleThai": "???????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "?????",
+        "example": "Communication is an important skill.",
+        "thaiExample": "???????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_009",
+    "sourceId": "JI009",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "available",
+    "cefr": "A2",
+    "partOfSpeech": "adj.",
+    "ipa": "/əˈveɪləbl/",
+    "thaiReading": "??-??-??-????",
+    "thaiPronunciation": "??-??-??-????",
+    "thaiMeaning": "???? / ????? / ??????",
+    "simpleMeaning": "",
+    "example": "I am available to start next week.",
+    "exampleThai": "???????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "???? / ????? / ??????",
+        "example": "I am available to start next week.",
+        "thaiExample": "???????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_010",
+    "sourceId": "JI010",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "salary",
+    "cefr": "A2",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈsæləri/",
+    "thaiReading": "??-??-??",
+    "thaiPronunciation": "??-??-??",
+    "thaiMeaning": "?????????",
+    "simpleMeaning": "",
+    "example": "What is the salary range?",
+    "exampleThai": "????????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "?????????",
+        "example": "What is the salary range?",
+        "thaiExample": "????????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_011",
+    "sourceId": "JI011",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "apply",
+    "cefr": "A2",
+    "partOfSpeech": "v.",
+    "ipa": "/əˈplaɪ/",
+    "thaiReading": "??-????",
+    "thaiPronunciation": "??-????",
+    "thaiMeaning": "????? / ???????",
+    "simpleMeaning": "",
+    "example": "I want to apply for this job.",
+    "exampleThai": "?????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "????? / ???????",
+        "example": "I want to apply for this job.",
+        "thaiExample": "?????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_012",
+    "sourceId": "JI012",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "manager",
+    "cefr": "A2",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈmænɪdʒə(r)/",
+    "thaiReading": "??-??-?????",
+    "thaiPronunciation": "??-??-?????",
+    "thaiMeaning": "?????????",
+    "simpleMeaning": "",
+    "example": "I reported to my manager.",
+    "exampleThai": "??????????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "?????????",
+        "example": "I reported to my manager.",
+        "thaiExample": "??????????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_013",
+    "sourceId": "JI013",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "team",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/tiːm/",
+    "thaiReading": "???",
+    "thaiPronunciation": "???",
+    "thaiMeaning": "???",
+    "simpleMeaning": "",
+    "example": "I enjoy working with a team.",
+    "exampleThai": "?????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "???",
+        "example": "I enjoy working with a team.",
+        "thaiExample": "?????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_014",
+    "sourceId": "JI014",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "meeting",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈmiːtɪŋ/",
+    "thaiReading": "??-???",
+    "thaiPronunciation": "??-???",
+    "thaiMeaning": "?????????",
+    "simpleMeaning": "",
+    "example": "We have a meeting at 10 a.m.",
+    "exampleThai": "?????????????? 10 ???????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "?????????",
+        "example": "We have a meeting at 10 a.m.",
+        "thaiExample": "?????????????? 10 ???????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_015",
+    "sourceId": "JI015",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "schedule",
+    "cefr": "A2",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈskedʒuːl/",
+    "thaiReading": "????-???",
+    "thaiPronunciation": "????-???",
+    "thaiMeaning": "???????? / ?????????",
+    "simpleMeaning": "",
+    "example": "Can we check the schedule?",
+    "exampleThai": "????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "???????? / ?????????",
+        "example": "Can we check the schedule?",
+        "thaiExample": "????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_016",
+    "sourceId": "JI016",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "question",
+    "cefr": "A2",
+    "partOfSpeech": "n./v.",
+    "ipa": "/ˈkwestʃən/",
+    "thaiReading": "????-???",
+    "thaiPronunciation": "????-???",
+    "thaiMeaning": "????? / ???",
+    "simpleMeaning": "",
+    "example": "I have one question.",
+    "exampleThai": "???????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "????? / ???",
+        "example": "I have one question.",
+        "thaiExample": "???????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_017",
+    "sourceId": "JI017",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "answer",
+    "cefr": "A1",
+    "partOfSpeech": "n./v.",
+    "ipa": "/ˈɑːnsə(r)/",
+    "thaiReading": "???-?????",
+    "thaiPronunciation": "???-?????",
+    "thaiMeaning": "????? / ???",
+    "simpleMeaning": "",
+    "example": "Thank you for your answer.",
+    "exampleThai": "???????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "????? / ???",
+        "example": "Thank you for your answer.",
+        "thaiExample": "???????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_018",
+    "sourceId": "JI018",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "introduce",
+    "cefr": "A1",
+    "partOfSpeech": "v.",
+    "ipa": "/ˌɪntrəˈduːs/",
+    "thaiReading": "???-???-???",
+    "thaiPronunciation": "???-???-???",
+    "thaiMeaning": "???????? / ?????",
+    "simpleMeaning": "",
+    "example": "Please introduce yourself.",
+    "exampleThai": "?????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "???????? / ?????",
+        "example": "Please introduce yourself.",
+        "thaiExample": "?????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_019",
+    "sourceId": "JI019",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "improve",
+    "cefr": "A1",
+    "partOfSpeech": "v.",
+    "ipa": "/ɪmˈpruːv/",
+    "thaiReading": "???-????",
+    "thaiPronunciation": "???-????",
+    "thaiMeaning": "???????? / ???????????",
+    "simpleMeaning": "",
+    "example": "I want to improve my English.",
+    "exampleThai": "????????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "???????? / ???????????",
+        "example": "I want to improve my English.",
+        "thaiExample": "????????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_020",
+    "sourceId": "JI020",
+    "sourceScenario": "Job Interview",
+    "scenario": "jobInterview",
+    "scenarioThai": "สัมภาษณ์งาน",
+    "word": "professional",
+    "cefr": "A2",
+    "partOfSpeech": "adj.",
+    "ipa": "/prəˈfeʃənl/",
+    "thaiReading": "???-???-??-???",
+    "thaiPronunciation": "???-???-??-???",
+    "thaiMeaning": "????????????",
+    "simpleMeaning": "",
+    "example": "I want to be professional at work.",
+    "exampleThai": "?????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "jobInterview": {
+        "meaning": "????????????",
+        "example": "I want to be professional at work.",
+        "thaiExample": "?????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_021",
+    "sourceId": "CS001",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "customer",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈkʌstəmə(r)/",
+    "thaiReading": "???-??-?????",
+    "thaiPronunciation": "???-??-?????",
+    "thaiMeaning": "??????",
+    "simpleMeaning": "",
+    "example": "The customer needs help.",
+    "exampleThai": "??????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "??????",
+        "example": "The customer needs help.",
+        "thaiExample": "??????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_022",
+    "sourceId": "CS002",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "service",
+    "cefr": "A2",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈsɜːvɪs/",
+    "thaiReading": "?????-???",
+    "thaiPronunciation": "?????-???",
+    "thaiMeaning": "??????",
+    "simpleMeaning": "",
+    "example": "Good service is important.",
+    "exampleThai": "???????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "??????",
+        "example": "Good service is important.",
+        "thaiExample": "???????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_023",
+    "sourceId": "CS003",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "help",
+    "cefr": "A1",
+    "partOfSpeech": "v./n.",
+    "ipa": "/help/",
+    "thaiReading": "?????",
+    "thaiPronunciation": "?????",
+    "thaiMeaning": "???? / ?????????????",
+    "simpleMeaning": "",
+    "example": "How can I help you?",
+    "exampleThai": "?????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "???? / ?????????????",
+        "example": "How can I help you?",
+        "thaiExample": "?????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_024",
+    "sourceId": "CS004",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "request",
+    "cefr": "A2",
+    "partOfSpeech": "n./v.",
+    "ipa": "/rɪˈkwest/",
+    "thaiReading": "??-??????",
+    "thaiPronunciation": "??-??????",
+    "thaiMeaning": "???? / ??",
+    "simpleMeaning": "",
+    "example": "I will check your request.",
+    "exampleThai": "??????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "???? / ??",
+        "example": "I will check your request.",
+        "thaiExample": "??????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_025",
+    "sourceId": "CS005",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "respond",
+    "cefr": "A2",
+    "partOfSpeech": "v.",
+    "ipa": "/rɪˈspɒnd/",
+    "thaiReading": "??-??????",
+    "thaiPronunciation": "??-??????",
+    "thaiMeaning": "???????",
+    "simpleMeaning": "",
+    "example": "Please respond to the customer.",
+    "exampleThai": "??????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "???????",
+        "example": "Please respond to the customer.",
+        "thaiExample": "??????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_026",
+    "sourceId": "CS006",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "reply",
+    "cefr": "A2",
+    "partOfSpeech": "v./n.",
+    "ipa": "/rɪˈplaɪ/",
+    "thaiReading": "??-????",
+    "thaiPronunciation": "??-????",
+    "thaiMeaning": "??????? / ?????????",
+    "simpleMeaning": "",
+    "example": "I will reply to the message.",
+    "exampleThai": "???????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "??????? / ?????????",
+        "example": "I will reply to the message.",
+        "thaiExample": "???????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_027",
+    "sourceId": "CS007",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "information",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/ˌɪnfəˈmeɪʃn/",
+    "thaiReading": "???-????-??-???",
+    "thaiPronunciation": "???-????-??-???",
+    "thaiMeaning": "??????",
+    "simpleMeaning": "",
+    "example": "Could you give me more information?",
+    "exampleThai": "???????????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "??????",
+        "example": "Could you give me more information?",
+        "thaiExample": "???????????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_028",
+    "sourceId": "CS008",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "detail",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈdiːteɪl/",
+    "thaiReading": "??-???",
+    "thaiPronunciation": "??-???",
+    "thaiMeaning": "??????????",
+    "simpleMeaning": "",
+    "example": "Please send the order detail.",
+    "exampleThai": "????????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "??????????",
+        "example": "Please send the order detail.",
+        "thaiExample": "????????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_029",
+    "sourceId": "CS009",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "explanation",
+    "cefr": "A2",
+    "partOfSpeech": "n.",
+    "ipa": "/ˌekspləˈneɪʃn/",
+    "thaiReading": "????-????-??-???",
+    "thaiPronunciation": "????-????-??-???",
+    "thaiMeaning": "????????",
+    "simpleMeaning": "",
+    "example": "Thank you for the explanation.",
+    "exampleThai": "????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "????????",
+        "example": "Thank you for the explanation.",
+        "thaiExample": "????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_030",
+    "sourceId": "CS010",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "correct",
+    "cefr": "A1",
+    "partOfSpeech": "adj./v.",
+    "ipa": "/kəˈrekt/",
+    "thaiReading": "??-??????",
+    "thaiPronunciation": "??-??????",
+    "thaiMeaning": "??????? / ?????????",
+    "simpleMeaning": "",
+    "example": "Is this information correct?",
+    "exampleThai": "???????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "??????? / ?????????",
+        "example": "Is this information correct?",
+        "thaiExample": "???????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_031",
+    "sourceId": "CS011",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "mistake",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/mɪˈsteɪk/",
+    "thaiReading": "???-???",
+    "thaiPronunciation": "???-???",
+    "thaiMeaning": "???????????",
+    "simpleMeaning": "",
+    "example": "I am sorry for the mistake.",
+    "exampleThai": "?????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "???????????",
+        "example": "I am sorry for the mistake.",
+        "thaiExample": "?????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_032",
+    "sourceId": "CS012",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "check",
+    "cefr": "A1",
+    "partOfSpeech": "v.",
+    "ipa": "/tʃek/",
+    "thaiReading": "????",
+    "thaiPronunciation": "????",
+    "thaiMeaning": "???????",
+    "simpleMeaning": "",
+    "example": "Let me check that for you.",
+    "exampleThai": "??????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "???????",
+        "example": "Let me check that for you.",
+        "thaiExample": "??????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_033",
+    "sourceId": "CS013",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "receive",
+    "cefr": "A2",
+    "partOfSpeech": "v.",
+    "ipa": "/rɪˈsiːv/",
+    "thaiReading": "??-???",
+    "thaiPronunciation": "??-???",
+    "thaiMeaning": "??????",
+    "simpleMeaning": "",
+    "example": "Did you receive the product?",
+    "exampleThai": "??????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "??????",
+        "example": "Did you receive the product?",
+        "thaiExample": "??????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_034",
+    "sourceId": "CS014",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "send",
+    "cefr": "A1",
+    "partOfSpeech": "v.",
+    "ipa": "/send/",
+    "thaiReading": "?????",
+    "thaiPronunciation": "?????",
+    "thaiMeaning": "???",
+    "simpleMeaning": "",
+    "example": "I will send the details now.",
+    "exampleThai": "???????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "???",
+        "example": "I will send the details now.",
+        "thaiExample": "???????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_035",
+    "sourceId": "CS015",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "message",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈmesɪdʒ/",
+    "thaiReading": "???-???",
+    "thaiPronunciation": "???-???",
+    "thaiMeaning": "???????",
+    "simpleMeaning": "",
+    "example": "I got your message.",
+    "exampleThai": "??????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "???????",
+        "example": "I got your message.",
+        "thaiExample": "??????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_036",
+    "sourceId": "CS016",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "support",
+    "cefr": "A2",
+    "partOfSpeech": "v./n.",
+    "ipa": "/səˈpɔːt/",
+    "thaiReading": "??-?????",
+    "thaiPronunciation": "??-?????",
+    "thaiMeaning": "???????? / ?????????",
+    "simpleMeaning": "",
+    "example": "Our team will support you.",
+    "exampleThai": "???????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "???????? / ?????????",
+        "example": "Our team will support you.",
+        "thaiExample": "???????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_037",
+    "sourceId": "CS017",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "communicate",
+    "cefr": "A2",
+    "partOfSpeech": "v.",
+    "ipa": "/kəˈmjuːnɪkeɪt/",
+    "thaiReading": "??-???-??-???",
+    "thaiPronunciation": "??-???-??-???",
+    "thaiMeaning": "???????",
+    "simpleMeaning": "",
+    "example": "We communicate with customers every day.",
+    "exampleThai": "?????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "???????",
+        "example": "We communicate with customers every day.",
+        "thaiExample": "?????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_038",
+    "sourceId": "CS018",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "polite",
+    "cefr": "A2",
+    "partOfSpeech": "adj.",
+    "ipa": "/pəˈlaɪt/",
+    "thaiReading": "??-????",
+    "thaiPronunciation": "??-????",
+    "thaiMeaning": "?????",
+    "simpleMeaning": "",
+    "example": "Please use polite words.",
+    "exampleThai": "??????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "?????",
+        "example": "Please use polite words.",
+        "thaiExample": "??????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_039",
+    "sourceId": "CS019",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "sorry",
+    "cefr": "A1",
+    "partOfSpeech": "adj./exclam.",
+    "ipa": "/ˈsɒri/",
+    "thaiReading": "??-??",
+    "thaiPronunciation": "??-??",
+    "thaiMeaning": "????? / ??????",
+    "simpleMeaning": "",
+    "example": "Sorry for the inconvenience.",
+    "exampleThai": "???????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "????? / ??????",
+        "example": "Sorry for the inconvenience.",
+        "thaiExample": "???????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_040",
+    "sourceId": "CS020",
+    "sourceScenario": "Customer Service",
+    "scenario": "customerService",
+    "scenarioThai": "บริการลูกค้า",
+    "word": "solve",
+    "cefr": "A2",
+    "partOfSpeech": "v.",
+    "ipa": "/sɒlv/",
+    "thaiReading": "?????",
+    "thaiPronunciation": "?????",
+    "thaiMeaning": "????????",
+    "simpleMeaning": "",
+    "example": "We will solve this issue today.",
+    "exampleThai": "???????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "customerService": {
+        "meaning": "????????",
+        "example": "We will solve this issue today.",
+        "thaiExample": "???????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_041",
+    "sourceId": "OS001",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "online",
+    "cefr": "A1",
+    "partOfSpeech": "adj./adv.",
+    "ipa": "/ˌɒnˈlaɪn/",
+    "thaiReading": "???????",
+    "thaiPronunciation": "???????",
+    "thaiMeaning": "???????",
+    "simpleMeaning": "",
+    "example": "We sell online every day.",
+    "exampleThai": "???????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "???????",
+        "example": "We sell online every day.",
+        "thaiExample": "???????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_042",
+    "sourceId": "OS002",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "sell",
+    "cefr": "A1",
+    "partOfSpeech": "v.",
+    "ipa": "/sel/",
+    "thaiReading": "???",
+    "thaiPronunciation": "???",
+    "thaiMeaning": "???",
+    "simpleMeaning": "",
+    "example": "I sell clothes online.",
+    "exampleThai": "?????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "???",
+        "example": "I sell clothes online.",
+        "thaiExample": "?????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_043",
+    "sourceId": "OS003",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "buy",
+    "cefr": "A1",
+    "partOfSpeech": "v.",
+    "ipa": "/baɪ/",
+    "thaiReading": "???",
+    "thaiPronunciation": "???",
+    "thaiMeaning": "????",
+    "simpleMeaning": "",
+    "example": "Customers can buy on our website.",
+    "exampleThai": "???????????????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "????",
+        "example": "Customers can buy on our website.",
+        "thaiExample": "???????????????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_044",
+    "sourceId": "OS004",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "shop",
+    "cefr": "A1",
+    "partOfSpeech": "n./v.",
+    "ipa": "/ʃɒp/",
+    "thaiReading": "????",
+    "thaiPronunciation": "????",
+    "thaiMeaning": "??????? / ???????",
+    "simpleMeaning": "",
+    "example": "This shop has many items.",
+    "exampleThai": "?????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "??????? / ???????",
+        "example": "This shop has many items.",
+        "thaiExample": "?????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_045",
+    "sourceId": "OS005",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "market",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈmɑːkɪt/",
+    "thaiReading": "????-???",
+    "thaiPronunciation": "????-???",
+    "thaiMeaning": "????",
+    "simpleMeaning": "",
+    "example": "The online market is growing.",
+    "exampleThai": "??????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "????",
+        "example": "The online market is growing.",
+        "thaiExample": "??????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_046",
+    "sourceId": "OS006",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "sale",
+    "cefr": "A2",
+    "partOfSpeech": "n.",
+    "ipa": "/seɪl/",
+    "thaiReading": "???",
+    "thaiPronunciation": "???",
+    "thaiMeaning": "?????? / ??????????",
+    "simpleMeaning": "",
+    "example": "This item is on sale.",
+    "exampleThai": "????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "?????? / ??????????",
+        "example": "This item is on sale.",
+        "thaiExample": "????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_047",
+    "sourceId": "OS007",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "price",
+    "cefr": "B2",
+    "partOfSpeech": "n./v.",
+    "ipa": "/praɪs/",
+    "thaiReading": "?????",
+    "thaiPronunciation": "?????",
+    "thaiMeaning": "???? / ????????",
+    "simpleMeaning": "",
+    "example": "What is the price?",
+    "exampleThai": "???????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "???? / ????????",
+        "example": "What is the price?",
+        "thaiExample": "???????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Stretch useful",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_048",
+    "sourceId": "OS008",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "cost",
+    "cefr": "A1",
+    "partOfSpeech": "n./v.",
+    "ipa": "/kɒst/",
+    "thaiReading": "?????",
+    "thaiPronunciation": "?????",
+    "thaiMeaning": "?????????? / ??????",
+    "simpleMeaning": "",
+    "example": "How much does it cost?",
+    "exampleThai": "???????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "?????????? / ??????",
+        "example": "How much does it cost?",
+        "thaiExample": "???????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_049",
+    "sourceId": "OS009",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "pay",
+    "cefr": "A1",
+    "partOfSpeech": "v.",
+    "ipa": "/peɪ/",
+    "thaiReading": "????",
+    "thaiPronunciation": "????",
+    "thaiMeaning": "????????",
+    "simpleMeaning": "",
+    "example": "You can pay by bank transfer.",
+    "exampleThai": "????????????????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "????????",
+        "example": "You can pay by bank transfer.",
+        "thaiExample": "????????????????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_050",
+    "sourceId": "OS010",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "payment",
+    "cefr": "B1",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈpeɪmənt/",
+    "thaiReading": "????-??????",
+    "thaiPronunciation": "????-??????",
+    "thaiMeaning": "???????????",
+    "simpleMeaning": "",
+    "example": "Your payment is complete.",
+    "exampleThai": "?????????????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "???????????",
+        "example": "Your payment is complete.",
+        "thaiExample": "?????????????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Stretch useful",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_051",
+    "sourceId": "OS011",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "order",
+    "cefr": "A1",
+    "partOfSpeech": "n./v.",
+    "ipa": "/ˈɔːdə(r)/",
+    "thaiReading": "????-?????",
+    "thaiPronunciation": "????-?????",
+    "thaiMeaning": "?????????? / ????????",
+    "simpleMeaning": "",
+    "example": "Thank you for your order.",
+    "exampleThai": "????????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "?????????? / ????????",
+        "example": "Thank you for your order.",
+        "thaiExample": "????????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_052",
+    "sourceId": "OS012",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "deliver",
+    "cefr": "B1",
+    "partOfSpeech": "v.",
+    "ipa": "/dɪˈlɪvə(r)/",
+    "thaiReading": "??-??-?????",
+    "thaiPronunciation": "??-??-?????",
+    "thaiMeaning": "?????? / ??????",
+    "simpleMeaning": "",
+    "example": "We deliver within two days.",
+    "exampleThai": "????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "?????? / ??????",
+        "example": "We deliver within two days.",
+        "thaiExample": "????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Stretch useful",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_053",
+    "sourceId": "OS013",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "discount",
+    "cefr": "B1",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈdɪskaʊnt/",
+    "thaiReading": "???-??????",
+    "thaiPronunciation": "???-??????",
+    "thaiMeaning": "??????",
+    "simpleMeaning": "",
+    "example": "Can I get a discount?",
+    "exampleThai": "?????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "??????",
+        "example": "Can I get a discount?",
+        "thaiExample": "?????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Stretch useful",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_054",
+    "sourceId": "OS014",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "website",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈwebsaɪt/",
+    "thaiReading": "????-????",
+    "thaiPronunciation": "????-????",
+    "thaiMeaning": "????????",
+    "simpleMeaning": "",
+    "example": "Please visit our website.",
+    "exampleThai": "???????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "????????",
+        "example": "Please visit our website.",
+        "thaiExample": "???????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_055",
+    "sourceId": "OS015",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "app",
+    "cefr": "A2",
+    "partOfSpeech": "n.",
+    "ipa": "/æp/",
+    "thaiReading": "???",
+    "thaiPronunciation": "???",
+    "thaiMeaning": "???????????",
+    "simpleMeaning": "",
+    "example": "You can order through the app.",
+    "exampleThai": "???????????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "???????????",
+        "example": "You can order through the app.",
+        "thaiExample": "???????????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_056",
+    "sourceId": "OS016",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "photo",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈfəʊtəʊ/",
+    "thaiReading": "??-??",
+    "thaiPronunciation": "??-??",
+    "thaiMeaning": "???????",
+    "simpleMeaning": "",
+    "example": "Please send a photo of the item.",
+    "exampleThai": "????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "???????",
+        "example": "Please send a photo of the item.",
+        "thaiExample": "????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_057",
+    "sourceId": "OS017",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "video",
+    "cefr": "A1",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈvɪdiəʊ/",
+    "thaiReading": "??-??-??",
+    "thaiPronunciation": "??-??-??",
+    "thaiMeaning": "??????",
+    "simpleMeaning": "",
+    "example": "This video shows how to use it.",
+    "exampleThai": "???????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "??????",
+        "example": "This video shows how to use it.",
+        "thaiExample": "???????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_058",
+    "sourceId": "OS018",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "comment",
+    "cefr": "A2",
+    "partOfSpeech": "n.",
+    "ipa": "/ˈkɒment/",
+    "thaiReading": "???-?????",
+    "thaiPronunciation": "???-?????",
+    "thaiMeaning": "??????????? / ????????",
+    "simpleMeaning": "",
+    "example": "Please leave a comment.",
+    "exampleThai": "????????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "??????????? / ????????",
+        "example": "Please leave a comment.",
+        "thaiExample": "????????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_059",
+    "sourceId": "OS019",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "share",
+    "cefr": "A1",
+    "partOfSpeech": "v.",
+    "ipa": "/ʃeə(r)/",
+    "thaiReading": "????",
+    "thaiPronunciation": "????",
+    "thaiMeaning": "???? / ???????",
+    "simpleMeaning": "",
+    "example": "Please share this post.",
+    "exampleThai": "?????????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "???? / ???????",
+        "example": "Please share this post.",
+        "thaiExample": "?????????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  },
+  {
+    "id": "word_060",
+    "sourceId": "OS020",
+    "sourceScenario": "Online Selling",
+    "scenario": "onlineSelling",
+    "scenarioThai": "ขายของออนไลน์",
+    "word": "recommend",
+    "cefr": "A2",
+    "partOfSpeech": "v.",
+    "ipa": "/ˌrekəˈmend/",
+    "thaiReading": "???-??-?????",
+    "thaiPronunciation": "???-??-?????",
+    "thaiMeaning": "?????",
+    "simpleMeaning": "",
+    "example": "I recommend this size.",
+    "exampleThai": "???????????????",
+    "contexts": {
+      "daily": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "work": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "study": {
+        "meaning": "",
+        "example": "",
+        "thaiExample": ""
+      },
+      "onlineSelling": {
+        "meaning": "?????",
+        "example": "I recommend this size.",
+        "thaiExample": "???????????????"
+      }
+    },
+    "synonyms": [],
+    "commonMistake": "",
+    "memoryTip": "",
+    "allocationStatus": "Core MVP",
+    "memoryStatus": "New",
+    "nextReviewDate": "today",
+    "reviewCount": 0,
+    "correctCount": 0,
+    "wrongCount": 0
+  }
+]
