@@ -174,7 +174,7 @@ describe("activitySyncManager", () => {
     mocks.loadCloud.mockResolvedValue(ledger(cloud))
     mocks.upsertCloud.mockResolvedValue(undefined)
 
-    scheduleActivitySync()
+    scheduleActivitySync("user-1")
     await vi.advanceTimersByTimeAsync(2_000)
 
     expect(mocks.loadCloud).toHaveBeenCalledWith("user-1")
@@ -196,7 +196,7 @@ describe("activitySyncManager", () => {
     mocks.loadCloud.mockResolvedValue(ledger())
     mocks.upsertCloud.mockRejectedValue(new Error("offline"))
 
-    scheduleActivitySync()
+    scheduleActivitySync("user-1")
     for (let attempt = 0; attempt < 5; attempt += 1) {
       await vi.advanceTimersByTimeAsync(2_000)
     }
@@ -218,7 +218,7 @@ describe("activitySyncManager", () => {
       .mockRejectedValueOnce(new Error("offline"))
       .mockResolvedValue(undefined)
 
-    scheduleActivitySync()
+    scheduleActivitySync("user-1")
     await vi.advanceTimersByTimeAsync(2_000)
     vi.clearAllTimers()
 
@@ -232,11 +232,23 @@ describe("activitySyncManager", () => {
     await handleActivitySignIn("user-1")
     vi.clearAllMocks()
 
-    scheduleActivitySync()
+    scheduleActivitySync("user-1")
     handleActivitySignOut()
     await vi.advanceTimersByTimeAsync(2_000)
 
     expect(getActiveActivityUserId()).toBeNull()
+    expect(mocks.loadCloud).not.toHaveBeenCalled()
+    expect(mocks.upsertCloud).not.toHaveBeenCalled()
+  })
+
+  it("ignores sync scheduled for a User who is not active", async () => {
+    await handleActivitySignIn("user-1")
+    vi.clearAllMocks()
+
+    scheduleActivitySync("user-2")
+    await vi.advanceTimersByTimeAsync(2_000)
+
+    expect(mocks.loadLocal).not.toHaveBeenCalled()
     expect(mocks.loadCloud).not.toHaveBeenCalled()
     expect(mocks.upsertCloud).not.toHaveBeenCalled()
   })

@@ -5,6 +5,7 @@ import {
 } from "./activityNormalizer"
 import {
   GUEST_ACTIVITY_CLAIMED_BY_KEY,
+  GUEST_INSTALLATION_ID_KEY,
   getActivityStorageKey,
 } from "./activityKeys"
 
@@ -51,4 +52,15 @@ export function getGuestActivityClaimedBy(): string | null {
 export function setGuestActivityClaimedBy(userId: string): void {
   if (!userId.trim()) return
   localStorage.setItem(GUEST_ACTIVITY_CLAIMED_BY_KEY, userId)
+}
+
+export function getGuestInstallationId(): string {
+  const existing = localStorage.getItem(GUEST_INSTALLATION_ID_KEY)
+  if (existing?.trim()) return existing
+
+  const installationId =
+    globalThis.crypto?.randomUUID?.() ??
+    `installation-${Date.now()}-${Math.random().toString(36).slice(2)}`
+  localStorage.setItem(GUEST_INSTALLATION_ID_KEY, installationId)
+  return installationId
 }

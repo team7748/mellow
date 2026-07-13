@@ -1,5 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from "vitest"
 import { loadLocalActivityLedger } from "./activityLocalStorage"
+import { GUEST_INSTALLATION_ID_KEY } from "./activityKeys"
+import type { LearningActivityEvent, LearningActivityInput } from "./activityTypes"
 
 const syncMocks = vi.hoisted(() => ({
   getActiveUserId: vi.fn(),
@@ -13,8 +15,11 @@ vi.mock("./activitySyncManager", () => ({
 
 import {
   createLearningActivityEvent,
+  getActivityIdentityScope,
   getConversationCompletionEventId,
+  getLatestTimestamp,
   recordLearningActivity,
+  upsertLocalEvent,
 } from "./recordLearningActivity"
 
 const input = {
@@ -39,6 +44,25 @@ describe("recordLearningActivity", () => {
     })
 
     expect(event.id).toBe("event-fixed")
+  })
+
+  it("does not allow input fields to override the generated event ID", () => {
+    const runtimeInput = {
+      ...input,
+      id: "untrusted-event-id",
+      occurredAt: "2000-01-01T00:00:00.000Z",
+      localDate: "2000-01-01",
+      timezoneOffsetMinutes: 0,
+    } as unknown as LearningActivityInput
+
+    const event = createLearningActivityEvent(runtimeInput, {
+      eventId: "generated-event-id",
+      now: new Date(2026, 6, 13, 12),
+    })
+
+    expect(event.id).toBe("generated-event-id")
+    expect(event.occurredAt).not.toBe("2000-01-01T00:00:00.000Z")
+    expect(event.localDate).toBe("2026-07-13")
   })
 
   it("uses crypto.randomUUID when an event ID is not supplied", () => {
@@ -88,7 +112,52 @@ describe("recordLearningActivity", () => {
 
     expect(loadLocalActivityLedger("user-1").events).toEqual([event])
     expect(loadLocalActivityLedger(null).events).toEqual([])
-    expect(syncMocks.scheduleSync).toHaveBeenCalledTimes(1)
+    expect(syncMocks.scheduleSync).toHaveBeenCalledExactlyOnceWith("user-1")
+  })
+
+  it("schedules sync for the same User that received the local event", () => {
+    syncMocks.getActiveUserId.mockReturnValue("user-1")
+
+    recordLearningActivity(input, {
+      userId: "user-explicit",
+      eventId: "explicit-user-event",
+      now: new Date(2026, 6, 13, 12),
+    })
+
+    expect(loadLocalActivityLedger("user-explicit").events).toHaveLength(1)
+    expect(syncMocks.scheduleSync).toHaveBeenCalledExactlyOnceWith(
+      "user-explicit",
+    )
+  })
+
+  it("does not move ledger updatedAt backwards", () => {
+    expect(
+      getLatestTimestamp(
+        "2026-07-13T12:00:00.000Z",
+        "2026-07-12T12:00:00.000Z",
+      ),
+    ).toBe("2026-07-13T12:00:00.000Z")
+  })
+
+  it("replaces a duplicate ID only when the new event is newer", () => {
+    const existing = createLearningActivityEvent(input, {
+      eventId: "same-id",
+      now: new Date("2026-07-13T05:00:00.000Z"),
+    })
+    const older = {
+      ...existing,
+      occurredAt: "2026-07-13T04:00:00.000Z",
+      metadata: { correct: false },
+    } satisfies LearningActivityEvent
+    const newer = {
+      ...existing,
+      occurredAt: "2026-07-13T06:00:00.000Z",
+      metadata: { correct: false },
+    } satisfies LearningActivityEvent
+
+    expect(upsertLocalEvent([existing], older)).toEqual([existing])
+    expect(upsertLocalEvent([existing], newer)).toEqual([newer])
+    expect(upsertLocalEvent([], existing)).toEqual([existing])
   })
 
   it("deduplicates repeated deterministic IDs", () => {
@@ -150,5 +219,32 @@ describe("recordLearningActivity", () => {
         "2026-07-14",
       ),
     ).not.toBe(same)
+  })
+
+  it("creates different deterministic Speak IDs for different Guest installations", () => {
+    const randomUuid = vi
+      .spyOn(globalThis.crypto, "randomUUID")
+      .mockReturnValueOnce("00000000-0000-4000-8000-000000000001")
+      .mockReturnValueOnce("00000000-0000-4000-8000-000000000002")
+
+    const firstScope = getActivityIdentityScope(null)
+    localStorage.removeItem(GUEST_INSTALLATION_ID_KEY)
+    const secondScope = getActivityIdentityScope(null)
+
+    expect(firstScope).not.toBe(secondScope)
+    expect(
+      getConversationCompletionEventId(
+        firstScope,
+        "conversation-1",
+        "2026-07-13",
+      ),
+    ).not.toBe(
+      getConversationCompletionEventId(
+        secondScope,
+        "conversation-1",
+        "2026-07-13",
+      ),
+    )
+    expect(randomUuid).toHaveBeenCalledTimes(2)
   })
 })

@@ -3,6 +3,7 @@ import type {
   LearningActivityInput,
 } from "./activityTypes"
 import {
+  getGuestInstallationId,
   loadLocalActivityLedger,
   saveLocalActivityLedger,
 } from "./activityLocalStorage"
@@ -29,12 +30,49 @@ export function createLearningActivityEvent(
     `activity-${now.getTime()}-${Math.random().toString(36).slice(2)}`
 
   return {
-    id: eventId,
     ...input,
+    id: eventId,
     occurredAt: now.toISOString(),
     localDate: toLocalDateKey(now),
     timezoneOffsetMinutes: now.getTimezoneOffset(),
   }
+}
+
+export function getLatestTimestamp(
+  current: string | null | undefined,
+  next: string,
+): string {
+  if (!current || !Number.isFinite(Date.parse(current))) return next
+  return Date.parse(current) >= Date.parse(next) ? current : next
+}
+
+export function upsertLocalEvent(
+  events: LearningActivityEvent[],
+  event: LearningActivityEvent,
+): LearningActivityEvent[] {
+  const existingIndex = events.findIndex(
+    (existing) => existing.id === event.id,
+  )
+  if (existingIndex === -1) return [...events, event]
+
+  const existing = events[existingIndex]
+  if (Date.parse(existing.occurredAt) > Date.parse(event.occurredAt)) {
+    return events
+  }
+
+  const nextEvents = [...events]
+  nextEvents[existingIndex] = event
+  return nextEvents
+}
+
+export function getActivityIdentityScope(
+  userId?: string | null,
+): string {
+  const scopedUserId =
+    userId === undefined ? getActiveActivityUserId() : userId
+  return scopedUserId
+    ? `user:${scopedUserId}`
+    : `guest:${getGuestInstallationId()}`
 }
 
 export function getConversationCompletionEventId(
@@ -55,13 +93,17 @@ export function recordLearningActivity(
       : options.userId
   const event = createLearningActivityEvent(input, options)
   const currentLedger = loadLocalActivityLedger(userId)
+  const events = upsertLocalEvent(currentLedger.events, event)
 
   saveLocalActivityLedger(userId, {
     version: 1,
-    events: [...currentLedger.events, event],
-    updatedAt: event.occurredAt,
+    events,
+    updatedAt: getLatestTimestamp(
+      currentLedger.updatedAt,
+      event.occurredAt,
+    ),
   })
 
-  if (userId) scheduleActivitySync()
+  if (userId) scheduleActivitySync(userId)
   return event
 }

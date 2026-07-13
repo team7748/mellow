@@ -79,16 +79,16 @@ export async function handleActivitySignIn(userId: string): Promise<void> {
   } catch {
     if (isCurrent(userId, currentGeneration)) {
       pendingSync = true
-      scheduleActivitySync()
+      scheduleActivitySync(userId)
     }
   }
 }
 
-export function scheduleActivitySync(): void {
-  if (!activeUserId) return
+export function scheduleActivitySync(scheduledUserId: string): void {
+  if (!activeUserId || scheduledUserId !== activeUserId) return
 
   clearDebounceTimer()
-  const userId = activeUserId
+  const userId = scheduledUserId
   const currentGeneration = generation
 
   debounceTimer = setTimeout(() => {
@@ -130,7 +130,7 @@ async function performActivitySync(
   } finally {
     isSyncing = false
     if (pendingSync && isCurrent(userId, currentGeneration)) {
-      scheduleActivitySync()
+      scheduleActivitySync(userId)
     }
   }
 }
@@ -138,7 +138,7 @@ async function performActivitySync(
 if (typeof window !== "undefined") {
   window.addEventListener("online", () => {
     if (activeUserId && (pendingSync || retryCount > 0)) {
-      scheduleActivitySync()
+      scheduleActivitySync(activeUserId)
     }
   })
 }

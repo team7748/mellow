@@ -2,11 +2,13 @@ import { beforeEach, describe, expect, it, vi } from "vitest"
 import {
   GUEST_ACTIVITY_CLAIMED_BY_KEY,
   GUEST_ACTIVITY_KEY,
+  GUEST_INSTALLATION_ID_KEY,
   getActivityStorageKey,
 } from "./activityKeys"
 import {
   ACTIVITY_LEDGER_CHANGED_EVENT,
   getGuestActivityClaimedBy,
+  getGuestInstallationId,
   loadLocalActivityLedger,
   saveLocalActivityLedger,
   setGuestActivityClaimedBy,
@@ -79,5 +81,22 @@ describe("activity LocalStorage", () => {
     expect(localStorage.getItem(GUEST_ACTIVITY_CLAIMED_BY_KEY)).toBe("user-1")
     expect(getGuestActivityClaimedBy()).toBe("user-1")
     expect(loadLocalActivityLedger(null).events).toEqual([event])
+  })
+
+  it("creates and reuses a stable Guest installation ID", () => {
+    const randomUuid = vi
+      .spyOn(globalThis.crypto, "randomUUID")
+      .mockReturnValue("00000000-0000-4000-8000-000000000001")
+
+    expect(getGuestInstallationId()).toBe(
+      "00000000-0000-4000-8000-000000000001",
+    )
+    expect(getGuestInstallationId()).toBe(
+      "00000000-0000-4000-8000-000000000001",
+    )
+    expect(localStorage.getItem(GUEST_INSTALLATION_ID_KEY)).toBe(
+      "00000000-0000-4000-8000-000000000001",
+    )
+    expect(randomUuid).toHaveBeenCalledTimes(1)
   })
 })
