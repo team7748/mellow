@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react"
+import { useState, useEffect, useMemo, useRef } from "react"
 import { Container } from "../components/layout/Container"
 import { ArrowLeft, BookOpen, MessageSquare, MessageSquareOff } from "lucide-react"
 import { Button } from "../components/ui/Button"
@@ -27,6 +27,12 @@ import { InteractivePracticePlayer } from "../components/speak/InteractivePracti
 import { VocabularyPanel } from "../components/speak/VocabularyPanel"
 import { SpeakProgressCard } from "../components/speak/SpeakProgressCard"
 import { getGrammarTopics } from "../data/grammar/registry"
+import {
+  getActivityIdentityScope,
+  getConversationCompletionEventId,
+  recordLearningActivity,
+} from "../lib/activity/recordLearningActivity"
+import { toLocalDateKey } from "../lib/activity/activitySummary"
 
 export function SpeakModePage() {
   const [loading, setLoading] = useState(true)
@@ -36,6 +42,11 @@ export function SpeakModePage() {
   const [grammarFilter, setGrammarFilter] = useState("all")
   const [viewMode, setViewMode] = useState<"conversation" | "practice">("conversation")
   const [progress, setProgress] = useState<SpeakModeProgress>(getSpeakModeProgress())
+  const progressRef = useRef(progress)
+
+  useEffect(() => {
+    progressRef.current = progress
+  }, [progress])
 
   // Data for selected category
   const [lines, setLines] = useState<ConversationLine[]>([])
@@ -120,17 +131,40 @@ export function SpeakModePage() {
   const handleConversationComplete = () => {
     if (selectedConversationId) {
       // 1. Update progress
-      setProgress(prev => {
-        if (!prev.completedConversations.includes(selectedConversationId)) {
-          const newProgress = {
-            ...prev,
-            completedConversations: [...prev.completedConversations, selectedConversationId]
-          }
-          saveSpeakModeProgress(newProgress)
-          return newProgress
+      const currentProgress = progressRef.current
+      if (
+        !currentProgress.completedConversations.includes(
+          selectedConversationId,
+        )
+      ) {
+        const newProgress = {
+          ...currentProgress,
+          completedConversations: [
+            ...currentProgress.completedConversations,
+            selectedConversationId,
+          ],
         }
-        return prev
-      })
+        saveSpeakModeProgress(newProgress)
+        progressRef.current = newProgress
+        setProgress(newProgress)
+
+        const localDate = toLocalDateKey(new Date())
+        const scope = getActivityIdentityScope()
+        recordLearningActivity(
+          {
+            kind: "conversation_completed",
+            mode: "speak",
+            entityId: selectedConversationId,
+          },
+          {
+            eventId: getConversationCompletionEventId(
+              scope,
+              selectedConversationId,
+              localDate,
+            ),
+          },
+        )
+      }
 
       // 2. Navigate to next conversation or practice mode
       const currentIndex = conversationTitles.findIndex(c => c.id === selectedConversationId)
