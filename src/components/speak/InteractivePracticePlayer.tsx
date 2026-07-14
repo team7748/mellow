@@ -389,7 +389,7 @@ export function InteractivePracticePlayer({
                   key={phrase}
                   onClick={() => insertPhrase(phrase)}
                   disabled={isChecking}
-                  className="text-xs bg-primary-soft text-primary border border-primary/20 rounded-full px-3 py-1 hover:bg-primary-active transition-colors active:scale-95"
+                  className="text-xs bg-sky-50 text-sky-700 border border-sky-200 rounded-full px-3 py-1 hover:bg-sky-100 transition-colors active:scale-95"
                 >
                   {phrase}
                 </button>
@@ -411,15 +411,15 @@ export function InteractivePracticePlayer({
 
           {isChecking && (
             <div
-              className="speak-answer-loading-panel mt-4 flex items-center gap-3 rounded-lg bg-primary-soft px-4 py-3 text-ink-dark"
+              className="mt-4 flex items-center gap-3 rounded-lg bg-primary-soft px-4 py-3 text-ink-dark min-h-[4.5rem] animate-in fade-in slide-in-from-bottom-2 duration-200"
               data-testid="speak-answer-loading-panel"
               role="status"
               aria-live="polite"
             >
-              <span className="speak-answer-loading-dots flex shrink-0 gap-1" aria-hidden="true">
-                <i className="speak-answer-loading-dot" />
-                <i className="speak-answer-loading-dot" />
-                <i className="speak-answer-loading-dot" />
+              <span className="flex shrink-0 gap-1" aria-hidden="true">
+                <i className="block w-2 h-2 rounded-full bg-primary animate-bounce [animation-delay:-0.3s]" />
+                <i className="block w-2 h-2 rounded-full bg-primary animate-bounce [animation-delay:-0.15s]" />
+                <i className="block w-2 h-2 rounded-full bg-primary animate-bounce" />
               </span>
               <div className="min-w-0">
                 <p className="font-semibold">กำลังวิเคราะห์คำตอบ…</p>
