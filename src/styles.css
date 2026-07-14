@@ -127,6 +127,18 @@ select {
 }
 
 @layer components {
+  .card-header-button {
+    @apply inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-border bg-card p-2 text-ink-secondary transition-all hover:-translate-y-0.5 hover:border-border/80 hover:bg-page hover:text-ink-dark active:translate-y-0 active:scale-95 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .feedback-card {
+    @apply rounded-lg border border-border bg-primary-soft p-4;
+  }
+
+  .empty-state {
+    @apply rounded-xl border border-dashed border-border bg-card p-8 text-center shadow-soft;
+  }
+
   .surface-card {
     @apply rounded-xl border border-border bg-card shadow-soft;
   }
@@ -149,58 +161,6 @@ select {
 
   .section-copy {
     @apply max-w-2xl text-base leading-7 text-ink-secondary;
-  }
-
-  .ui-control {
-    @apply min-h-11 w-full rounded-lg border border-border bg-card px-3 text-sm text-ink outline-none transition duration-150 placeholder:text-ink-secondary hover:border-ink-secondary focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:cursor-not-allowed disabled:bg-page disabled:text-ink-secondary;
-  }
-
-  .ui-chip {
-    @apply inline-flex min-h-11 min-w-11 max-w-full items-center justify-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-left text-sm font-semibold text-ink transition duration-150 hover:border-primary hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:scale-[0.98] disabled:cursor-not-allowed disabled:border-border disabled:bg-card disabled:text-ink-secondary disabled:opacity-55;
-  }
-
-  .ui-chip-selected {
-    @apply border-primary/20 bg-primary-active text-primary ring-1 ring-primary/10;
-  }
-
-  .ui-badge {
-    @apply inline-flex max-w-full items-center rounded-full px-3 py-1 text-xs font-semibold leading-5 ring-1;
-  }
-
-  .ui-badge-neutral {
-    @apply bg-page text-ink-secondary ring-border;
-  }
-
-  .ui-badge-accent {
-    @apply bg-primary-active text-primary ring-primary/20;
-  }
-
-  .ui-badge-info {
-    @apply bg-mission-blueBg text-mission-blue ring-mission-blue/20;
-  }
-
-  .ui-badge-warning {
-    @apply bg-mission-orangeBg text-mission-orange ring-mission-orange/20;
-  }
-
-  .ui-badge-danger {
-    @apply bg-rose-50 text-rose-700 ring-rose-200;
-  }
-
-  .option-card {
-    @apply flex w-full items-center gap-3 rounded-lg border border-border bg-card px-4 py-3 text-left transition duration-150 hover:border-primary/30 hover:bg-primary-soft focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50;
-  }
-
-  .option-card-selected {
-    @apply border-primary/30 bg-primary-active text-primary ring-1 ring-primary/20;
-  }
-
-  .feedback-card {
-    @apply rounded-lg border border-border bg-primary-soft p-4;
-  }
-
-  .empty-state {
-    @apply rounded-xl border border-dashed border-border bg-card p-8 text-center shadow-soft;
   }
 
   .memory-tip-panel h3 {

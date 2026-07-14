@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { CheckCircle2, XCircle, ArrowRight, RotateCcw, ArrowLeft } from "lucide-react"
 import { evaluateGrammarAnswer, selectGrammarSession } from "../../data/grammar/practiceEngine"
 import { useGrammarProgress } from "../../hooks/useGrammarProgress"
 import type { GrammarTopic } from "../../types/grammar"
 import { Button } from "../ui/Button"
+import { Input } from "../ui/Input"
+import { cn } from "../../utils/cn"
 
 export function GrammarPractice({
   topic,
@@ -18,6 +20,7 @@ export function GrammarPractice({
   const [index, setIndex] = useState(0)
   const [answer, setAnswer] = useState("")
   const [checked, setChecked] = useState(false)
+  const inputRef = useRef<HTMLInputElement>(null)
   const [correct, setCorrect] = useState(0)
   const { recordAttempt } = useGrammarProgress()
 
@@ -137,15 +140,20 @@ export function GrammarPractice({
         </div>
       ) : (
         <div className="relative mt-2">
-          <input 
-            className={`ui-control text-lg py-4 px-4 pr-12 shadow-sm ${checked ? (evaluation.correct ? 'border-emerald-300 bg-primary-soft text-ink-dark ring-1 ring-primary/20' : 'border-rose-300 bg-rose-50/50 text-rose-900 ring-1 ring-rose-200') : ''}`} 
-            value={answer} 
-            disabled={checked} 
-            onChange={(event) => setAnswer(event.target.value)} 
-            placeholder="พิมพ์คำตอบของคุณที่นี่..." 
+          <Input
+            ref={inputRef}
+            type="text"
+            value={answer}
+            onChange={(e) => setAnswer(e.target.value)}
+            disabled={checked}
+            placeholder="พิมพ์คำตอบของคุณที่นี่..."
+            className={cn(
+              "text-lg py-4 px-4 pr-12 shadow-sm",
+              checked ? (evaluation.correct ? 'border-emerald-300 bg-primary-soft text-ink-dark ring-1 ring-primary/20' : 'border-rose-300 bg-rose-50/50 text-rose-900 ring-1 ring-rose-200') : ''
+            )}
             onKeyDown={(e) => {
               if (e.key === 'Enter' && answer.trim() && !checked) {
-                setChecked(true);
+                setChecked(true)
               }
             }}
           />

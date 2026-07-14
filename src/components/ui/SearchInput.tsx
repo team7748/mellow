@@ -1,26 +1,31 @@
 import { Search, X } from "lucide-react"
 import type { InputHTMLAttributes } from "react"
 
-type SearchInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value'> & {
+import { cn } from "../../utils/cn"
+import { Input } from "./Input"
+
+export interface SearchInputProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, "type"> {
   label: string
-  value: string
   onClear?: () => void
 }
 
-export function SearchInput({ label, value, onClear, className = "", ...props }: SearchInputProps) {
+export function SearchInput({ label, value, onClear, className, ...props }: SearchInputProps) {
   return (
     <label className="block">
       <span className="mb-2 block text-sm font-semibold text-ink-DEFAULT">{label}</span>
-      <span className="relative block">
-        <Search
-          aria-hidden="true"
-          className="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-secondary"
-        />
-        <input
-          className={`ui-control h-12 pl-10 pr-10 text-base [&::-webkit-search-cancel-button]:hidden ${className}`}
+      <div className="relative">
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-ink-secondary">
+          <Search className="h-5 w-5" />
+        </div>
+        <Input
           type="search"
           value={value}
           {...props}
+          className={cn(
+            "h-12 pl-10 pr-10 text-base [&::-webkit-search-cancel-button]:hidden",
+            className
+          )}
         />
         {value && onClear && (
           <button
@@ -32,7 +37,7 @@ export function SearchInput({ label, value, onClear, className = "", ...props }:
             <X className="h-4 w-4" />
           </button>
         )}
-      </span>
+      </div>
     </label>
   )
 }

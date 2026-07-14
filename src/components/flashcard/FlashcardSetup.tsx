@@ -14,7 +14,7 @@ import {
   Layers,
   Play,
 } from "lucide-react"
-import { useMemo } from "react"
+import React, { useMemo } from "react"
 import {
   DEFAULT_MODE,
   type SetupFilters,
@@ -28,7 +28,13 @@ import {
   getAllVocabulary,
 } from "../../utils/vocabulary"
 import { getGrammarTopics } from "../../data/grammar/registry"
+import { cn } from "../../utils/cn"
 import { Button } from "../ui/Button"
+import { Input } from "../ui/Input"
+import { Select } from "../ui/Select"
+import { Chip } from "../ui/Chip"
+import { OptionCard } from "../ui/OptionCard"
+import { Card, CardHeader, CardTitle, CardContent } from "../ui/Card"
 import { SrsToggle } from "../SrsToggle"
 import { PageHeader } from "../layout/PageHeader"
 import { getSrsStatusInfo } from "../../utils/srsService"
@@ -113,9 +119,16 @@ function FilterRow({ label, htmlFor, children }: { label: string, htmlFor?: stri
 
 function ChipButton({ label, isSelected, onClick, disabled, title }: { label: string, isSelected: boolean, onClick: () => void, disabled?: boolean, title?: string }) {
   return (
-    <button type="button" onClick={onClick} disabled={disabled} title={title} className={`ui-chip text-xs ${isSelected ? "ui-chip-selected" : ""}`}>
+    <Chip
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      title={title}
+      variant={isSelected ? "selected" : "default"}
+      className="text-xs"
+    >
       {label}
-    </button>
+    </Chip>
   )
 }
 
@@ -213,31 +226,31 @@ export function FlashcardSetup({ onStart, onBackToVocabulary }: FlashcardSetupPr
               <FilterRow label="ค้นหา" htmlFor="fc-search">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-secondary" />
-                  <input id="fc-search" type="text" placeholder="ค้นหาเนื้อหา..." value={filters.searchKeyword} onChange={(e) => updateFilter("searchKeyword", e.target.value)} className="ui-control pl-9" />
+                  <Input id="fc-search" type="text" placeholder="ค้นหาเนื้อหา..." value={filters.searchKeyword} onChange={(e) => updateFilter("searchKeyword", e.target.value)} className="pl-9" />
                 </div>
               </FilterRow>
 
               {(filters.source === "vocabulary" || filters.source === "mixed") && (
                 <>
                   <FilterRow label="หมวดหมู่คำศัพท์" htmlFor="fc-category">
-                    <select id="fc-category" value={filters.category} onChange={(e) => updateFilter("category", e.target.value as any)} className="ui-control">
+                    <Select id="fc-category" value={filters.category} onChange={(e) => updateFilter("category", e.target.value as any)}>
                       <option value="all">ทุกหมวดหมู่</option>
                       {categories.map((cat) => (
                         <option key={cat} value={cat}>{`${CATEGORY_THAI[cat] ?? cat} — ${(categoryWordCounts[cat] ?? 0).toLocaleString()} คำ`}</option>
                       ))}
-                    </select>
+                    </Select>
                   </FilterRow>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <FilterRow label="ระดับ CEFR">
-                      <select value={filters.cefr} onChange={(e) => updateFilter("cefr", e.target.value as any)} className="ui-control">
+                      <Select value={filters.cefr} onChange={(e) => updateFilter("cefr", e.target.value as any)}>
                         {CEFR_LEVELS.map((lvl) => <option key={lvl} value={lvl}>{lvl === "all" ? "ทั้งหมด" : lvl}</option>)}
-                      </select>
+                      </Select>
                     </FilterRow>
                     <FilterRow label="ชนิดของคำ">
-                      <select value={filters.partOfSpeech} onChange={(e) => updateFilter("partOfSpeech", e.target.value as any)} className="ui-control">
+                      <Select value={filters.partOfSpeech} onChange={(e) => updateFilter("partOfSpeech", e.target.value as any)}>
                         <option value="all">ทั้งหมด</option>
                         {posOptions.map((pos) => <option key={pos} value={pos}>{POS_THAI[pos] ?? pos}</option>)}
-                      </select>
+                      </Select>
                     </FilterRow>
                   </div>
                 </>
@@ -253,12 +266,12 @@ export function FlashcardSetup({ onStart, onBackToVocabulary }: FlashcardSetupPr
                     </div>
                   </FilterRow>
                   <FilterRow label="หัวข้อ Grammar" htmlFor="fc-topic">
-                    <select id="fc-topic" value={filters.grammarTopicId} onChange={(e) => updateFilter("grammarTopicId", e.target.value)} className="ui-control">
+                    <Select id="fc-topic" value={filters.grammarTopicId} onChange={(e) => updateFilter("grammarTopicId", e.target.value)}>
                       <option value="all">ทุกหัวข้อ</option>
                       {grammarTopics.map((topic) => (
                         <option key={topic.id} value={topic.id}>{topic.name} ({topic.nameThai})</option>
                       ))}
-                    </select>
+                    </Select>
                   </FilterRow>
                 </>
               )}
@@ -283,19 +296,17 @@ export function FlashcardSetup({ onStart, onBackToVocabulary }: FlashcardSetupPr
           <SectionCard title="รูปแบบการฝึก" icon={<Zap className="h-4 w-4" />}>
             <div className="space-y-2">
               {TRAINING_MODES.map((m) => (
-                <button
-                  key={m.value} onClick={() => setMode(m.value)}
-                  role="radio"
-                  aria-checked={mode === m.value}
-                  aria-label={m.value === "reviewForgot" ? `${m.label} ${m.labelThai} ฝึกเฉพาะคำที่จำไม่ได้` : undefined}
-                  className={`option-card ${mode === m.value ? "option-card-selected" : ""}`}
+                <OptionCard
+                  key={m.value}
+                  onClick={() => setMode(m.value)}
+                  selected={mode === m.value}
                 >
                   <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${mode === m.value ? "bg-primary text-white" : "bg-slate-100 text-ink-secondary"}`}>{m.icon}</span>
                   <div className="min-w-0 flex-1 text-left">
                     <p className={`text-sm font-semibold ${mode === m.value ? "text-primary" : "text-ink-DEFAULT"}`}>{m.label}</p>
                     <p className="text-xs text-ink-secondary">{m.labelThai}</p>
                   </div>
-                </button>
+                </OptionCard>
               ))}
             </div>
           </SectionCard>

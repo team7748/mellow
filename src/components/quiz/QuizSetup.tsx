@@ -14,6 +14,10 @@ import type { VocabCategory } from "../../types/vocabulary"
 import { getAllCategories, getCategoryWordCount } from "../../utils/vocabulary"
 import { categoryThaiLabels } from "../../data/categoryIconMap"
 import { Button } from "../ui/Button"
+import { Badge } from "../ui/Badge"
+import { Chip } from "../ui/Chip"
+import { OptionCard } from "../ui/OptionCard"
+import { Select } from "../ui/Select"
 import { PageHeader } from "../layout/PageHeader"
 
 // ─── Constants ─────────────────────────────────────────────────────────────────
@@ -126,13 +130,13 @@ export function QuizSetup({ onStart, onBackToHome }: QuizSetupProps) {
             >
               เลือกหมวดหมู่
             </label>
-            <select
+            <Select
               id="quiz-category"
               value={selectedCategory}
               onChange={(e) =>
                 updateCategory(e.target.value as "all" | VocabCategory)
               }
-              className="ui-control font-semibold"
+              className="font-semibold"
               aria-label="เลือกหมวดหมู่คำศัพท์"
             >
               <option value="all">
@@ -146,7 +150,7 @@ export function QuizSetup({ onStart, onBackToHome }: QuizSetupProps) {
                   — {categoryCounts[cat] ?? 0} คำ
                 </option>
               ))}
-            </select>
+            </Select>
 
             {/* Quick category chips for popular ones */}
             <div className="flex flex-wrap gap-1.5">
@@ -157,15 +161,14 @@ export function QuizSetup({ onStart, onBackToHome }: QuizSetupProps) {
                     ? "ทั้งหมด"
                     : categoryThaiLabels[cat] ?? cat
                 return (
-                  <button
+                  <Chip
                     key={cat}
-                    type="button"
                     onClick={() => updateCategory(cat)}
-                    aria-pressed={isSelected}
-                    className={`ui-chip text-xs ${isSelected ? "ui-chip-selected" : ""}`}
+                    variant={isSelected ? "selected" : "default"}
+                    className="text-xs"
                   >
                     {label}
-                  </button>
+                  </Chip>
                 )
               })}
             </div>
@@ -185,15 +188,11 @@ export function QuizSetup({ onStart, onBackToHome }: QuizSetupProps) {
             {PRACTICE_TYPES.map((pt) => {
               const isSelected = practiceType === pt.value
               return (
-                <button
+                <OptionCard
                   key={pt.value}
-                  type="button"
-                  role="radio"
-                  aria-checked={isSelected}
                   onClick={() => updatePracticeType(pt.value)}
-                  className={`option-card ${
-                    isSelected ? "option-card-selected" : ""
-                  }`}
+                  selected={isSelected}
+                  className="px-4 py-3 sm:px-5 sm:py-4"
                 >
                   <span
                     className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors ${
@@ -237,7 +236,7 @@ export function QuizSetup({ onStart, onBackToHome }: QuizSetupProps) {
                       </svg>
                     </span>
                   )}
-                </button>
+                </OptionCard>
               )
             })}
           </div>

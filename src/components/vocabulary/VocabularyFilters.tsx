@@ -1,7 +1,10 @@
 import type { CefrLevel, PartOfSpeech, VocabCategory, VocabLevel, WordStatus } from "../../types/vocabulary"
 import { SearchInput } from "../ui/SearchInput"
 import { VocabIcon } from "../ui/VocabIcon"
+import { Select } from "../ui/Select"
+import { Chip } from "../ui/Chip"
 import { useState, useEffect } from "react"
+import { cn } from "../../utils/cn"
 import { categoryIconMap, categoryThaiLabels } from "../../data/categoryIconMap"
 import { getAllCategories, getAllPartOfSpeech } from "../../utils/vocabulary"
 import { SlidersHorizontal, ChevronDown, ChevronUp } from "lucide-react"
@@ -66,9 +69,6 @@ const levelLabels: Record<string, string> = {
   "2": "Level 2 — ใช้บ่อย",
   "3": "Level 3 — เฉพาะบริบท",
 }
-
-const categoryChipBase =
-  "ui-chip min-h-11 focus:ring-2"
 
 export function VocabularyFilters({
   searchTerm,
@@ -139,37 +139,27 @@ export function VocabularyFilters({
       <div className="mb-4">
         <p className="mb-2 text-sm font-semibold text-ink-DEFAULT">หมวดหมู่</p>
         <div className="flex flex-nowrap sm:flex-wrap gap-2 overflow-x-auto sm:overflow-visible pb-2 sm:pb-0 snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-4 px-4 sm:mx-0 sm:px-0 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] sm:[mask-image:none]">
-          <button
-            className={`group snap-start shrink-0 min-h-11 flex items-center justify-center gap-2 px-4 py-2 rounded-xl border text-sm font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 ${
-              selectedCategory === "all"
-                ? "bg-primary-active border-primary/40 text-primary shadow-sm ring-1 ring-primary/10"
-                : "bg-card border-border text-ink-secondary hover:bg-primary-active hover:text-primary hover:border-primary/40"
-            }`}
-            type="button"
-            aria-pressed={selectedCategory === "all"}
+          <Chip
+            variant={selectedCategory === "all" ? "selected" : "default"}
             onClick={() => onCategoryChange("all")}
+            className="snap-start shrink-0 rounded-xl"
           >
             ทั้งหมด
-          </button>
+          </Chip>
           {getAllCategories().map((cat) => (
-            <button
+            <Chip
               key={cat}
-              className={`group snap-start shrink-0 min-h-11 flex items-center justify-center gap-2 px-4 py-2 rounded-xl border text-sm font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 ${
-                selectedCategory === cat
-                  ? "bg-primary-active border-primary/40 text-primary shadow-sm ring-1 ring-primary/10"
-                  : "bg-card border-border text-ink-secondary hover:bg-primary-active hover:text-primary hover:border-primary/40"
-              }`}
-              type="button"
-              aria-pressed={selectedCategory === cat}
+              variant={selectedCategory === cat ? "selected" : "default"}
               onClick={() => onCategoryChange(cat)}
+              className="snap-start shrink-0 rounded-xl"
             >
               <VocabIcon
-                className={`shrink-0 transition-colors duration-300 ${selectedCategory === cat ? 'text-primary' : 'text-ink-secondary/60 group-hover:text-primary'}`}
-                icon={categoryIconMap[cat] || "BookOpen"}
+                className={cn("shrink-0 transition-colors duration-300", selectedCategory === cat ? 'text-primary' : 'text-ink-secondary/60 group-hover:text-primary')}
+                icon={categoryIconMap[cat as import("../../types/vocabulary").VocabCategory] || "BookOpen"}
                 size={16}
               />
               {categoryThaiLabels[cat] || cat}
-            </button>
+            </Chip>
           ))}
         </div>
       </div>
@@ -179,8 +169,7 @@ export function VocabularyFilters({
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 mt-4 pt-4 border-t border-border">
         <label className="block">
           <span className="mb-1.5 block text-sm font-semibold text-ink-DEFAULT">ระดับ CEFR</span>
-          <select
-            className="ui-control"
+          <Select
             value={selectedCefr}
             onChange={(event) => onCefrChange(event.target.value as "all" | CefrLevel)}
           >
@@ -189,13 +178,12 @@ export function VocabularyFilters({
                 {option === "all" ? "ทุกระดับ" : option}
               </option>
             ))}
-          </select>
+          </Select>
         </label>
 
         <label className="block">
           <span className="mb-1.5 block text-sm font-semibold text-ink-DEFAULT">ชนิดคำ</span>
-          <select
-            className="ui-control"
+          <Select
             value={selectedPos}
             onChange={(event) => onPosChange(event.target.value as "all" | PartOfSpeech)}
           >
@@ -205,13 +193,12 @@ export function VocabularyFilters({
                 {posLabels[option] || option}
               </option>
             ))}
-          </select>
+          </Select>
         </label>
 
         <label className="block">
           <span className="mb-1.5 block text-sm font-semibold text-ink-DEFAULT">ระดับความยาก</span>
-          <select
-            className="ui-control"
+          <Select
             value={selectedLevel === "all" ? "all" : String(selectedLevel)}
             onChange={(event) => {
               const val = event.target.value
@@ -223,13 +210,12 @@ export function VocabularyFilters({
                 {levelLabels[String(option)]}
               </option>
             ))}
-          </select>
+          </Select>
         </label>
 
         <label className="block">
           <span className="mb-1.5 block text-sm font-semibold text-ink-DEFAULT">สถานะการเรียน</span>
-          <select
-            className="ui-control"
+          <Select
             value={selectedStatus}
             onChange={(event) => onStatusChange(event.target.value as "all" | WordStatus)}
           >
@@ -238,7 +224,7 @@ export function VocabularyFilters({
                 {statusLabels[option]}
               </option>
             ))}
-          </select>
+          </Select>
         </label>
       </div>
       )}

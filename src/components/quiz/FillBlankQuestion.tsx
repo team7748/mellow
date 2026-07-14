@@ -1,6 +1,7 @@
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { ArrowRight, CheckCircle2, Lightbulb, SkipForward, XCircle } from "lucide-react"
 import { Button } from "../ui/Button"
+import { Input } from "../ui/Input"
 import type { VocabularyItem } from "../../types/vocabulary"
 import { playCorrectSound, playIncorrectSound } from "../../utils/audioEffects"
 
@@ -42,6 +43,7 @@ export function FillBlankQuestion({
   const fillData = useMemo(() => buildFillBlank(word), [word])
   const [userInput, setUserInput] = useState("")
   const [isAnswered, setIsAnswered] = useState(false)
+  const inputRef = useRef<HTMLInputElement>(null)
   const [showHint, setShowHint] = useState(false)
 
   // Fallback: if no fill-blank data, use typing mode
@@ -128,7 +130,8 @@ export function FillBlankQuestion({
 
       {/* Input */}
       <div className="mt-6 flex flex-col sm:flex-row gap-3">
-        <input
+        <Input
+          ref={inputRef}
           type="text"
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
@@ -139,9 +142,7 @@ export function FillBlankQuestion({
           autoCapitalize="none"
           autoCorrect="off"
           spellCheck="false"
-          autoFocus
-          className="ui-control flex-1 px-6 py-4 text-xl sm:text-2xl font-bold text-center tracking-wide rounded-2xl focus:ring-4 focus:ring-primary/20 transition-all shadow-inner"
-          aria-label="พิมพ์คำตอบ"
+          className="flex-1 px-6 py-4 text-xl sm:text-2xl font-bold text-center tracking-wide rounded-2xl focus:ring-4 focus:ring-primary/20 transition-all shadow-inner"
         />
         {!isAnswered && (
           <Button className="w-full sm:w-auto min-w-[120px] rounded-2xl shadow-md text-lg" onClick={handleSubmit} disabled={!userInput.trim()}>
