@@ -628,8 +628,8 @@ select {
 
 @media (max-width: 640px) {
   .review-sloth {
-    bottom: calc(100% - 4px);
-    width: clamp(80px, 25vw, 110px);
+    bottom: calc(100% - 6px);
+    width: clamp(100px, 30vw, 130px);
   }
 }
 
@@ -705,5 +705,28 @@ select {
     height: 8px;
     bottom: -4px;
     right: 10px;
+  }
+}
+
+/* ─── Page Transitions ─── */
+@keyframes page-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page-enter {
+  animation: page-enter 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-page-enter {
+    animation: none;
+    opacity: 1;
   }
 }

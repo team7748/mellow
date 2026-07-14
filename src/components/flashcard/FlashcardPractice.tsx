@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
-import { ArrowLeft, ArrowRight, Trophy, Target, AlertCircle } from "lucide-react"
+import { ArrowLeft, ArrowRight, Trophy, Target, AlertCircle, XCircle, CheckCircle } from "lucide-react"
 import { Button } from "../ui/Button"
 import { getReviewWords, updateWordProgress } from "../../utils/vocabulary"
 import { playCorrectSound, playIncorrectSound, playFlipSound } from "../../utils/audioEffects"
@@ -529,35 +529,35 @@ export function FlashcardPractice({
           <div className="order-1 flex w-full flex-1 flex-col justify-center gap-2 sm:order-2 sm:flex-row sm:gap-3">
             {!isFlipped ? (
               <Button
-                className="w-full sm:max-w-[200px] mx-auto" variant="secondary"
+                className="w-full sm:max-w-[200px] mx-auto py-3 sm:py-2" variant="secondary"
                 onClick={() => { playFlipSound(); handleFlip() }}
               >
                 พลิกการ์ด (Spacebar)
               </Button>
             ) : srsEnabled ? (
-              <>
-                <Button variant="outline-danger" className="flex-1 active:scale-[0.98]" onClick={() => answerSrs("again")}>
+              <div className="grid grid-cols-2 gap-2 w-full sm:flex sm:flex-1 sm:gap-3">
+                <Button variant="outline-danger" className="w-full sm:flex-1 py-3 sm:py-2 active:scale-[0.98]" onClick={() => answerSrs("again")}>
                   จำไม่ได้
                 </Button>
-                <Button variant="outline-warning" className="flex-1 active:scale-[0.98]" onClick={() => answerSrs("hard")}>
+                <Button variant="outline-warning" className="w-full sm:flex-1 py-3 sm:py-2 active:scale-[0.98]" onClick={() => answerSrs("hard")}>
                   ยาก
                 </Button>
-                <Button variant="outline-success" className="flex-1 active:scale-[0.98]" onClick={() => answerSrs("good")}>
+                <Button variant="outline-success" className="w-full sm:flex-1 py-3 sm:py-2 active:scale-[0.98]" onClick={() => answerSrs("good")}>
                   พอจำได้
                 </Button>
-                <Button variant="outline-info" className="flex-1 active:scale-[0.98]" onClick={() => answerSrs("easy")}>
+                <Button variant="outline-info" className="w-full sm:flex-1 py-3 sm:py-2 active:scale-[0.98]" onClick={() => answerSrs("easy")}>
                   ง่าย
                 </Button>
-              </>
+              </div>
             ) : (
-              <>
-                <Button variant="outline-danger" className="flex-1 active:scale-[0.98]" onClick={() => answerNormal("forgot")}>
-                  ยังจำไม่ได้
+              <div className="flex flex-row w-full gap-2 sm:flex-1 sm:gap-3">
+                <Button variant="outline-danger" className="flex-1 py-3 sm:py-2 text-base active:scale-[0.98]" onClick={() => answerNormal("forgot")}>
+                  <XCircle className="w-5 h-5 mr-2" /> ลืม
                 </Button>
-                <Button variant="outline-success" className="flex-1 active:scale-[0.98]" onClick={() => answerNormal("known")}>
-                  จำได้แล้ว
+                <Button variant="outline-success" className="flex-1 py-3 sm:py-2 text-base active:scale-[0.98]" onClick={() => answerNormal("known")}>
+                  <CheckCircle className="w-5 h-5 mr-2" /> จำได้
                 </Button>
-              </>
+              </div>
             )}
           </div>
 

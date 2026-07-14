@@ -259,9 +259,9 @@ export function SpeakModePage() {
         <PageContainer className="py-8 sm:py-10 space-y-8">
           <button
             onClick={closeGrammar}
-            className="inline-flex min-h-11 items-center text-sm font-medium text-ink-secondary hover:text-ink-DEFAULT focus:outline-none focus:ring-2 focus:ring-primary rounded-md -ml-2 px-2 transition-all active:scale-[0.98]"
+            className="inline-flex min-h-11 items-center text-sm font-medium text-ink-secondary hover:text-ink-DEFAULT hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg -ml-3 px-3 transition-all active:scale-[0.98]"
           >
-            <ArrowLeft className="mr-1 h-4 w-4" />
+            <ArrowLeft className="mr-1.5 h-4 w-4 shrink-0" />
             กลับไป สนทนา
           </button>
           <header>
@@ -302,7 +302,7 @@ export function SpeakModePage() {
                     <h2 className="text-xs uppercase tracking-widest font-bold text-ink-secondary ml-1">
                       {group}
                     </h2>
-                    <div className="divide-y divide-border rounded-2xl border border-border bg-card shadow-soft overflow-hidden">
+                    <div className="divide-y divide-border rounded-2xl border border-border bg-card shadow-soft">
                       <div>
                         {items.map((t) => (
                           <article
@@ -310,7 +310,7 @@ export function SpeakModePage() {
                             onClick={() => {
                               window.location.hash = `grammar/${t.id}`;
                             }}
-                            className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-4 sm:p-5 hover:bg-primary-soft transition-all active:scale-[0.99] cursor-pointer group"
+                            className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-4 sm:p-5 hover:bg-primary-soft transition-all active:scale-[0.99] cursor-pointer group first:rounded-t-2xl last:rounded-b-2xl"
                           >
                             <div className="flex-1">
                               <div className="flex items-center gap-2">
@@ -442,9 +442,9 @@ export function SpeakModePage() {
       <div className="mb-2">
         <button
           onClick={() => setSelectedCategoryId(null)}
-          className="inline-flex items-center text-sm font-medium text-ink-secondary hover:text-ink-DEFAULT transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+          className="inline-flex min-h-11 items-center text-sm font-medium text-ink-secondary hover:text-ink-DEFAULT hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg -ml-3 px-3 transition-all active:scale-[0.98]"
         >
-          <ArrowLeft className="w-4 h-4 mr-1.5" />
+          <ArrowLeft className="mr-1.5 h-4 w-4 shrink-0" />
           กลับไปเลือกหมวดหมู่
         </button>
       </div>

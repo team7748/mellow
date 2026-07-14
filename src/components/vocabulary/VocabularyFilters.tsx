@@ -124,7 +124,7 @@ export function VocabularyFilters({
             onClick={() => setShowAdvanced(!showAdvanced)}
             className={`flex items-center justify-center gap-2 w-full sm:w-auto px-4 min-h-11 rounded-lg border text-sm font-semibold transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-1 ${
               hasActiveAdvancedFilters || showAdvanced
-                ? "bg-primary border-primary text-primary"
+                ? "bg-primary border-primary text-white shadow-sm"
                 : "bg-card border-border text-ink-DEFAULT hover:bg-page"
             }`}
           >
@@ -138,12 +138,12 @@ export function VocabularyFilters({
       {/* Row 2: Category chips */}
       <div className="mb-4">
         <p className="mb-2 text-sm font-semibold text-ink-DEFAULT">หมวดหมู่</p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-nowrap sm:flex-wrap gap-2 overflow-x-auto sm:overflow-visible pb-2 sm:pb-0 snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-4 px-4 sm:mx-0 sm:px-0 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] sm:[mask-image:none]">
           <button
-            className={`${categoryChipBase} ${
+            className={`group snap-start shrink-0 min-h-11 flex items-center justify-center gap-2 px-4 py-2 rounded-xl border text-sm font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 ${
               selectedCategory === "all"
-                ? "ui-chip-selected"
-                : ""
+                ? "bg-primary-active border-primary/40 text-primary shadow-sm ring-1 ring-primary/10"
+                : "bg-card border-border text-ink-secondary hover:bg-primary-active hover:text-primary hover:border-primary/40"
             }`}
             type="button"
             aria-pressed={selectedCategory === "all"}
@@ -154,19 +154,19 @@ export function VocabularyFilters({
           {getAllCategories().map((cat) => (
             <button
               key={cat}
-              className={`${categoryChipBase} ${
+              className={`group snap-start shrink-0 min-h-11 flex items-center justify-center gap-2 px-4 py-2 rounded-xl border text-sm font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 ${
                 selectedCategory === cat
-                  ? "ui-chip-selected"
-                  : ""
+                  ? "bg-primary-active border-primary/40 text-primary shadow-sm ring-1 ring-primary/10"
+                  : "bg-card border-border text-ink-secondary hover:bg-primary-active hover:text-primary hover:border-primary/40"
               }`}
               type="button"
               aria-pressed={selectedCategory === cat}
               onClick={() => onCategoryChange(cat)}
             >
               <VocabIcon
-                className="shrink-0"
+                className={`shrink-0 transition-colors duration-300 ${selectedCategory === cat ? 'text-primary' : 'text-ink-secondary/60 group-hover:text-primary'}`}
                 icon={categoryIconMap[cat] || "BookOpen"}
-                size={14}
+                size={16}
               />
               {categoryThaiLabels[cat] || cat}
             </button>

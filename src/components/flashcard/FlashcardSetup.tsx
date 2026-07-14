@@ -184,16 +184,16 @@ export function FlashcardSetup({ onStart, onBackToVocabulary }: FlashcardSetupPr
 
       <div className="mb-6 flex flex-col md:flex-row md:items-stretch justify-between gap-4">
         {/* Source Tabs */}
-        <div className="flex p-1 bg-slate-100 rounded-lg w-full md:w-auto shrink-0">
+        <div className="flex p-1 bg-slate-100 rounded-lg w-full md:w-auto shrink-0 overflow-x-auto snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {[
-            { id: "vocabulary", label: "Vocabulary", icon: <BookText className="w-4 h-4 mr-2" /> },
-            { id: "grammar", label: "Grammar", icon: <GraduationCap className="w-4 h-4 mr-2" /> },
-            { id: "mixed", label: "Mixed Mode", icon: <Layers className="w-4 h-4 mr-2" /> },
+            { id: "vocabulary", label: "Vocabulary", icon: <BookText className="w-[18px] h-[18px] mr-1.5 shrink-0" /> },
+            { id: "grammar", label: "Grammar", icon: <GraduationCap className="w-[18px] h-[18px] mr-1.5 shrink-0 scale-[1.15]" /> },
+            { id: "mixed", label: "Mixed Mode", icon: <Layers className="w-[18px] h-[18px] mr-1.5 shrink-0" /> },
           ].map((tab) => (
             <button
               key={tab.id}
               onClick={() => updateFilter("source", tab.id as any)}
-              className={`flex-1 md:flex-none flex items-center justify-center px-4 sm:px-6 rounded-lg text-sm font-bold transition-all ${
+              className={`flex-1 md:flex-none flex items-center justify-center px-4 py-2 sm:px-6 rounded-lg text-sm font-bold transition-all snap-start whitespace-nowrap min-w-max ${
                 filters.source === tab.id ? "bg-white text-primary shadow-sm ring-1 ring-black/5" : "text-ink-secondary hover:text-ink-DEFAULT hover:bg-black/5"
               }`}
             >

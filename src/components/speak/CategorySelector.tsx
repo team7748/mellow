@@ -55,10 +55,7 @@ export function CategorySelector({ categories, onSelect }: Props) {
           </div>
           
           <div className="mt-5">
-            <Button 
-              variant="secondary" 
-              className="w-full justify-center rounded-xl py-2.5 text-sm font-semibold transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:border-primary"
-            >
+            <Button variant="secondary" className="w-full justify-center group-hover:bg-primary group-hover:text-white group-hover:border-primary hover:!bg-primary-hover hover:!text-white hover:!border-primary-hover">
               เริ่มฝึกหมวดนี้
             </Button>
           </div>

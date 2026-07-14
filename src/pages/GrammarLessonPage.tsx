@@ -24,7 +24,15 @@ function isComparisonSide(value: unknown): value is GrammarComparisonSide {
 }
 
 function LessonSection({ children, title }: { children: React.ReactNode; title: string }) {
-  return <section className="border-t border-primary/20 py-10 sm:py-12 first:border-t-0 first:pt-0"><h2 className="mb-6 text-2xl font-bold text-ink-DEFAULT tracking-tight">{title}</h2>{children}</section>
+  return (
+    <section className="border-t border-primary/10 py-12 sm:py-16 first:border-t-0 first:pt-0">
+      <h2 className="mb-8 text-3xl font-bold text-ink-dark tracking-tight flex items-center gap-3">
+        <span className="w-1.5 h-8 bg-primary rounded-full"></span>
+        {title}
+      </h2>
+      {children}
+    </section>
+  )
 }
 
 export function GrammarLessonPage({ onBack, topicId }: Props) {
@@ -69,7 +77,7 @@ export function GrammarLessonPage({ onBack, topicId }: Props) {
   return (
     <PageContainer className="py-7 sm:py-10">
       <main className="mx-auto max-w-4xl">
-        <button onClick={onBack} className="mb-6 inline-flex min-h-11 items-center text-sm font-semibold text-ink-secondary hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary transition-all active:scale-[0.98]"><ArrowLeft className="mr-1 h-4 w-4" />กลับไปหน้า Grammar</button>
+        <button onClick={onBack} className="mb-6 inline-flex min-h-11 items-center text-sm font-medium text-ink-secondary hover:text-ink-DEFAULT hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg -ml-3 px-3 transition-all active:scale-[0.98]"><ArrowLeft className="mr-1.5 h-4 w-4 shrink-0" />กลับไปหน้า Grammar</button>
         <PageHeader
           subtitle={topic.categoryId}
           title={topic.name}
@@ -93,18 +101,199 @@ export function GrammarLessonPage({ onBack, topicId }: Props) {
         />
 
         <div className="mt-7">
-          <LessonSection title="Learning Objectives"><ul className="space-y-2 text-ink-DEFAULT max-w-[65ch]">{topic.learningObjectives.map((objective) => <li key={objective} className="flex gap-2"><ListChecks className="mt-1 h-4 w-4 shrink-0 text-primary" />{objective}</li>)}</ul></LessonSection>
-          <LessonSection title="When to Use"><div className="space-y-5">{topic.uses.map((use) => <article key={use.id}><h3 className="font-bold text-ink-DEFAULT">{use.title}</h3><p className="mt-1 text-ink-DEFAULT max-w-[65ch]">{use.descriptionThai}</p><p className="mt-2 flex items-start gap-2 font-medium text-ink-DEFAULT"><span>{use.example}</span><SpeakButton text={use.example} /></p><p className="text-sm text-ink-secondary">{use.translation}</p></article>)}</div></LessonSection>
-          <LessonSection title="Sentence Structures"><div className="space-y-8">{topic.structures.map((structure) => <article key={structure.id} className="relative pl-5 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-1 before:bg-slate-200 before:rounded-full"><h3 className="font-bold text-ink-DEFAULT text-lg">{structure.type} <span className="text-ink-secondary font-normal">· {structure.subjectGroup}</span></h3><div className="mt-3 inline-block bg-primary-soft border border-primary/20 rounded-lg px-4 py-2"><p className="font-mono text-base font-semibold text-primary break-words tracking-wide">{structure.formula}</p></div><div className="mt-4 flex items-start gap-3"><div className="flex-1"><p className="text-ink-DEFAULT text-lg font-medium">{structure.example}</p><p className="text-sm text-ink-secondary mt-1">{structure.translation}</p></div><SpeakButton text={structure.example} /></div><p className="mt-3 text-sm text-ink-secondary leading-relaxed max-w-[65ch]">{structure.noteThai}</p></article>)}</div></LessonSection>
-          <LessonSection title="Grammar Rules">{rules.length ? <div className="space-y-5">{rules.map((rule) => <article key={rule.id}><h3 className="font-bold text-ink-DEFAULT">{rule.title}</h3><p className="mt-1 text-ink-DEFAULT">{rule.ruleThai}</p><ul className="mt-2 space-y-1 text-sm text-ink-secondary">{rule.examples.map((example) => <li key={example} className="flex items-center gap-2"><span>{example}</span><SpeakButton text={example} /></li>)}</ul></article>)}</div> : <p className="text-ink-secondary">ไม่มีรายละเอียดกฎเพิ่มเติมสำหรับบทเรียนนี้</p>}</LessonSection>
-          <LessonSection title="Time Markers"><div className="flex flex-wrap gap-3">{topic.timeMarkers.map((marker) => <article key={marker.text} className="inline-flex flex-col bg-primary-soft border border-primary/20 rounded-xl px-5 py-4 min-w-[200px] flex-1 sm:flex-none"><h3 className="font-bold text-ink-DEFAULT text-lg">{marker.text}</h3><p className="text-sm text-ink-secondary mb-3">{marker.meaningThai}</p><div className="mt-auto pt-3 border-t border-primary/20 flex items-start gap-2 justify-between"><span className="text-sm text-ink-DEFAULT font-medium">{marker.example}</span><SpeakButton text={marker.example} /></div></article>)}</div></LessonSection>
-          <LessonSection title="Example Sentences"><div className="space-y-4">{topic.examples.map((example) => <article key={example.id}><div className="flex items-start gap-2"><p className="font-medium text-ink-DEFAULT">{example.sentence}</p><SpeakButton text={example.sentence} /></div><p className="text-sm text-ink-secondary">{example.translation}</p><p className="mt-1 text-sm text-ink-secondary">{example.usage}</p></article>)}</div></LessonSection>
-          <LessonSection title="Common Mistakes"><div className="space-y-6">{topic.commonMistakes.map((mistake) => <article key={mistake.id} className="grid sm:grid-cols-2 gap-4"><div className="flex items-start gap-3 bg-rose-50/50 p-4 rounded-xl border border-rose-100/50"><X className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" /><div><p className="font-medium text-rose-900 line-through decoration-rose-300">{mistake.incorrect}</p><p className="text-sm text-rose-700/80 mt-1">ผิดแกรมม่า</p></div></div><div className="flex items-start gap-3 bg-primary-soft p-4 rounded-xl border border-primary/20"><Check className="w-5 h-5 text-primary shrink-0 mt-0.5" /><div className="flex-1"><p className="font-medium text-ink-dark">{mistake.correct}</p><p className="text-sm text-ink-dark mt-1">{mistake.explanationThai}</p></div><SpeakButton text={mistake.correct} /></div></article>)}</div></LessonSection>
-          <LessonSection title="Comparisons"><div className="space-y-10">{topic.comparisons.map((comparison) => { const sides = Object.values(comparison).filter(isComparisonSide); return <article key={comparison.id}><h3 className="font-bold text-ink-DEFAULT text-xl mb-4">{comparison.title}</h3><div className="grid sm:grid-cols-2 gap-6 sm:gap-0 sm:divide-x divide-emerald-100/60 border-y border-primary/20 py-6">{sides.map((side, idx) => <div key={`${side.name ?? "this"}-${side.formula}`} className={`flex flex-col ${idx === 0 ? "sm:pr-6" : "sm:pl-6 pt-6 border-t border-primary/20 sm:border-t-0 sm:pt-0"}`}><p className="font-bold text-ink-DEFAULT text-lg">{side.name ?? topic.name}</p><p className="mt-1 text-sm text-ink-secondary">{side.useThai}</p><div className="mt-4 inline-block self-start bg-primary-soft border border-primary/20 px-3 py-1.5 rounded text-xs font-mono font-semibold text-ink-DEFAULT break-words">{side.formula}</div><div className="mt-4 flex items-start gap-2 justify-between border-t border-primary/20 pt-4"><div className="flex-1"><p className="text-ink-DEFAULT font-medium">{side.example}</p><p className="text-sm text-ink-secondary mt-1">{side.translation}</p></div><SpeakButton text={side.example} /></div></div>)}</div><p className="mt-5 text-ink-DEFAULT font-medium flex items-start gap-2"><Info className="w-5 h-5 text-primary shrink-0" /> {comparison.keyDifferenceThai}</p></article>})}</div></LessonSection>
-          <LessonSection title="Lesson Summary"><p className="text-ink-DEFAULT max-w-[65ch]">{topic.summary.th}</p><ul className="mt-3 space-y-1 text-sm text-ink-secondary max-w-[65ch]">{topic.learningObjectives.map((objective) => <li key={objective}>• {objective}</li>)}</ul></LessonSection>
+          <LessonSection title="Learning Objectives">
+            <ul className="space-y-4 text-ink-DEFAULT max-w-[65ch] surface-card p-6 sm:p-8">
+              {topic.learningObjectives.map((objective) => (
+                <li key={objective} className="flex gap-4 items-start">
+                  <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary">
+                    <Check className="h-4 w-4" />
+                  </div>
+                  <span className="leading-relaxed text-lg">{objective}</span>
+                </li>
+              ))}
+            </ul>
+          </LessonSection>
+          <LessonSection title="When to Use">
+            <div className="grid gap-5 sm:grid-cols-2">
+              {topic.uses.map((use) => (
+                <article key={use.id} className="surface-card p-6 flex flex-col hover:border-primary/30 transition-colors">
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary">
+                      <Info className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-ink-dark text-lg">{use.title}</h3>
+                      <p className="mt-2 text-ink-secondary leading-relaxed">{use.descriptionThai}</p>
+                    </div>
+                  </div>
+                  <div className="mt-5 pt-4 border-t border-border mt-auto">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex-1">
+                        <p className="font-medium text-ink-DEFAULT">{use.example}</p>
+                        <p className="text-sm text-ink-secondary mt-1">{use.translation}</p>
+                      </div>
+                      <SpeakButton text={use.example} />
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </LessonSection>
+          <LessonSection title="Sentence Structures">
+            <div className="space-y-8">
+              {topic.structures.map((structure) => (
+                <article key={structure.id} className="surface-card p-6 sm:p-8">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-5">
+                    <h3 className="font-bold text-ink-dark text-xl">
+                      {structure.type} 
+                      <span className="text-ink-secondary font-medium ml-3 px-3 py-1 bg-slate-100 rounded-md text-sm">{structure.subjectGroup}</span>
+                    </h3>
+                  </div>
+                  <div className="bg-[#0D1B2A] rounded-xl p-5 sm:p-6 shadow-inner border border-[#1B263B]">
+                    <p className="font-mono text-lg sm:text-xl font-bold text-emerald-400 tracking-wide break-words">{structure.formula}</p>
+                  </div>
+                  <div className="mt-6 flex items-start gap-4 bg-primary-soft/50 p-5 rounded-xl border border-primary/10">
+                    <div className="flex-1">
+                      <p className="text-ink-dark text-lg font-medium">{structure.example}</p>
+                      <p className="text-sm text-ink-secondary mt-1.5">{structure.translation}</p>
+                    </div>
+                    <SpeakButton text={structure.example} />
+                  </div>
+                  <div className="mt-5 flex gap-3 text-sm text-ink-secondary leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <Info className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
+                    <p>{structure.noteThai}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </LessonSection>
+          <LessonSection title="Grammar Rules">
+            {rules.length ? (
+              <div className="space-y-6">
+                {rules.map((rule) => (
+                  <article key={rule.id} className="bg-card border-l-4 border-l-primary shadow-sm rounded-r-xl p-6 sm:p-8 border-y border-r border-border">
+                    <h3 className="font-bold text-ink-dark text-xl">{rule.title}</h3>
+                    <p className="mt-3 text-ink-DEFAULT leading-relaxed">{rule.ruleThai}</p>
+                    <ul className="mt-5 space-y-3">
+                      {rule.examples.map((example) => (
+                        <li key={example} className="flex items-start gap-4 bg-slate-50/70 p-4 rounded-xl border border-slate-100">
+                          <span className="flex-1 text-ink-dark font-medium text-lg">{example}</span>
+                          <SpeakButton text={example} />
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <p className="text-ink-secondary">ไม่มีรายละเอียดกฎเพิ่มเติมสำหรับบทเรียนนี้</p>
+            )}
+          </LessonSection>
+          <LessonSection title="Time Markers">
+            <div className="grid gap-4 grid-cols-2 sm:grid-cols-3">
+              {topic.timeMarkers.map((marker) => (
+                <article key={marker.text} className="flex flex-col surface-card hover:border-primary/40 hover:shadow-md transition-all p-5">
+                  <h3 className="font-bold text-ink-dark text-xl">{marker.text}</h3>
+                  <p className="text-sm text-ink-secondary mt-1.5">{marker.meaningThai}</p>
+                  <div className="mt-auto pt-4 mt-4 border-t border-border flex items-start justify-between gap-3">
+                    <span className="text-sm text-ink-dark font-medium leading-tight flex-1">{marker.example}</span>
+                    <SpeakButton text={marker.example} />
+                  </div>
+                </article>
+              ))}
+            </div>
+          </LessonSection>
+          <LessonSection title="Example Sentences">
+            <div className="space-y-4">
+              {topic.examples.map((example) => (
+                <article key={example.id} className="surface-card p-5 sm:p-6 flex flex-col sm:flex-row gap-4 sm:items-center hover:border-primary/30 transition-colors">
+                  <div className="flex-1">
+                    <p className="font-medium text-ink-dark text-lg">{example.sentence}</p>
+                    <p className="text-sm text-ink-secondary mt-1">{example.translation}</p>
+                    {example.usage && <p className="mt-3 text-sm text-primary font-medium bg-primary-soft inline-block px-3 py-1 rounded-full">{example.usage}</p>}
+                  </div>
+                  <SpeakButton text={example.sentence} />
+                </article>
+              ))}
+            </div>
+          </LessonSection>
+          <LessonSection title="Common Mistakes">
+            <div className="space-y-6">
+              {topic.commonMistakes.map((mistake) => (
+                <article key={mistake.id} className="surface-card p-0 overflow-hidden">
+                  <div className="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-border">
+                    <div className="flex items-start gap-4 bg-rose-50/50 p-5 sm:p-6 hover:bg-rose-50 transition-colors">
+                      <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-rose-100 text-rose-500">
+                        <X className="h-4 w-4" />
+                      </div>
+                      <div>
+                        <p className="font-medium text-rose-900 line-through decoration-rose-400 decoration-2 text-lg">{mistake.incorrect}</p>
+                        <p className="text-sm text-rose-700/80 mt-1.5 font-medium">ผิดแกรมม่า</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4 bg-emerald-50/30 p-5 sm:p-6 hover:bg-emerald-50/60 transition-colors">
+                      <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                        <Check className="h-4 w-4" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-medium text-ink-dark text-lg">{mistake.correct}</p>
+                        <p className="text-sm text-ink-dark mt-1.5 leading-relaxed">{mistake.explanationThai}</p>
+                      </div>
+                      <SpeakButton text={mistake.correct} />
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </LessonSection>
+          <LessonSection title="Comparisons">
+            <div className="space-y-10">
+              {topic.comparisons.map((comparison) => {
+                const sides = Object.values(comparison).filter(isComparisonSide);
+                return (
+                  <article key={comparison.id} className="surface-card p-0 overflow-hidden">
+                    <div className="bg-slate-50 border-b border-border p-5 sm:p-6">
+                      <h3 className="font-bold text-ink-dark text-xl">{comparison.title}</h3>
+                    </div>
+                    <div className="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-border">
+                      {sides.map((side) => (
+                        <div key={`${side.name ?? "this"}-${side.formula}`} className="flex flex-col p-5 sm:p-6 hover:bg-slate-50/50 transition-colors">
+                          <p className="font-bold text-ink-dark text-lg">{side.name ?? topic.name}</p>
+                          <p className="mt-2 text-sm text-ink-secondary leading-relaxed">{side.useThai}</p>
+                          <div className="mt-5 inline-block self-start bg-[#0D1B2A] px-4 py-2 rounded-lg text-sm font-mono font-bold text-emerald-400 tracking-wide break-words shadow-inner">
+                            {side.formula}
+                          </div>
+                          <div className="mt-6 flex items-start gap-3 border-t border-border pt-5">
+                            <div className="flex-1">
+                              <p className="text-ink-DEFAULT font-medium">{side.example}</p>
+                              <p className="text-sm text-ink-secondary mt-1">{side.translation}</p>
+                            </div>
+                            <SpeakButton text={side.example} />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="bg-primary-soft/50 border-t border-border p-5 sm:p-6 flex items-start gap-4">
+                      <Info className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <p className="text-ink-dark font-medium leading-relaxed">{comparison.keyDifferenceThai}</p>
+                    </div>
+                  </article>
+                )
+              })}
+            </div>
+          </LessonSection>
+          <LessonSection title="Lesson Summary">
+            <div className="surface-card p-6 sm:p-8 bg-gradient-to-br from-primary-soft/50 to-white">
+              <p className="text-ink-dark font-medium leading-relaxed max-w-[65ch] text-lg">{topic.summary.th}</p>
+            </div>
+          </LessonSection>
         </div>
 
-        <div className="sticky bottom-0 z-10 bg-card/90 backdrop-blur-md border-t border-primary/20 p-4 -mx-4 sm:mx-0 sm:bg-transparent sm:backdrop-blur-none sm:static sm:p-0 sm:pt-6 sm:mt-2"><Button className="w-full sm:w-auto shadow-md sm:shadow-none" onClick={() => setShowPractice(true)}><span>Start Practice</span></Button></div>
+        <div className="sticky bottom-0 z-10 bg-card/90 backdrop-blur-md border-t border-primary/20 p-4 -mx-4 sm:mx-0 sm:bg-transparent sm:backdrop-blur-none sm:static sm:p-0 sm:pt-6 sm:mt-6 sm:border-none">
+          <Button className="w-full sm:w-auto min-h-[3.5rem] px-8 text-lg font-bold shadow-lg sm:shadow-md hover:scale-[1.02] transition-transform" onClick={() => setShowPractice(true)}>
+            <span>Start Practice</span>
+          </Button>
+        </div>
       </main>
     </PageContainer>
   )

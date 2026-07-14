@@ -77,9 +77,9 @@ export function GrammarPractice({
         <button 
           type="button" 
           onClick={onQuit} 
-          className="inline-flex items-center text-sm font-semibold text-ink-secondary hover:text-ink-DEFAULT transition-colors focus:outline-none rounded-md"
+          className="inline-flex min-h-11 items-center text-sm font-medium text-ink-secondary hover:text-ink-DEFAULT hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg -ml-3 px-3 transition-all active:scale-[0.98]"
         >
-          <ArrowLeft className="mr-1 h-4 w-4" /> กลับไปหน้าเนื้อหา
+          <ArrowLeft className="mr-1.5 h-4 w-4 shrink-0" /> กลับไปหน้าเนื้อหา
         </button>
         <p className="text-sm font-bold tracking-wide text-primary uppercase">
           ข้อที่ {index + 1} <span className="text-ink-secondary font-medium">/ {session.length}</span>

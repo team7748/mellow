@@ -36,13 +36,10 @@ export function VocabularyCard({
 }: VocabularyCardProps) {
   const categories = vocabulary.category ?? []
   const scenarioLabel = categories.length > 0
-    ? categories[0]
-    : (vocabulary.scenarioThai || vocabulary.sourceScenario)
-
   return (
     <article
       aria-label={`${vocabulary.word} vocabulary card`}
-      className="bg-card rounded-2xl border border-border flex h-full min-w-0 flex-col p-5 sm:p-6 transition-all duration-300 motion-safe:hover:-translate-y-1 shadow-soft hover:border-primary/30 motion-safe:animate-in motion-safe:fade-in motion-safe:zoom-in-95 motion-safe:duration-500"
+      className="group bg-card rounded-2xl border border-border flex h-full min-w-0 flex-col p-4 sm:p-6 transition-all duration-300 motion-safe:hover:-translate-y-1 shadow-sm hover:shadow-md hover:border-primary/30 active:scale-[0.99] motion-safe:animate-in motion-safe:fade-in motion-safe:zoom-in-95 motion-safe:duration-500"
     >
       <div className="flex min-w-0 flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
         <div className="min-w-0">
@@ -50,7 +47,7 @@ export function VocabularyCard({
             {/* Vocab icon (small, subtle) */}
             {vocabulary.icon && vocabulary.icon !== "CircleHelp" && (
               <VocabIcon
-                className="shrink-0 text-ink-secondary/50"
+                className="shrink-0 transition-colors duration-300 text-ink-secondary/50 group-hover:text-primary/70"
                 fallbackIcon={vocabulary.fallbackIcon}
                 icon={vocabulary.icon}
                 label={vocabulary.word}
@@ -73,13 +70,13 @@ export function VocabularyCard({
             {vocabulary.ipa}
           </p>
         </div>
-        <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider max-w-full self-start break-words ${statusStyles[status]}`}>
+        <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider max-w-full self-start break-words ${statusStyles[status]}`}>
           {statusLabels[status]}
         </span>
       </div>
 
-      <div className="mt-5 flex min-w-0 flex-wrap items-center gap-2.5 text-sm font-semibold tracking-wide">
-        <span className="text-primary font-bold">
+      <div className="mt-5 flex min-w-0 flex-wrap items-center gap-2.5 text-[13px] font-semibold tracking-wide">
+        <span className="inline-flex items-center rounded-md px-1.5 py-0.5 text-primary font-bold bg-primary-soft">
           {vocabulary.cefr}
         </span>
         {vocabulary.partOfSpeechStandard && (

@@ -137,20 +137,20 @@ export function SwipeableCard({
         touchAction: "none",
         gridArea: "1 / 1",
       }}
-      className={`surface-card w-full max-w-3xl p-5 text-center sm:p-8 flex flex-col min-h-[350px] sm:min-h-[400px] select-none`}
+      className={`surface-card shadow-lg sm:shadow-2xl w-full max-w-3xl p-6 text-center sm:p-8 flex flex-col min-h-[60vh] sm:min-h-[450px] max-h-[70vh] sm:max-h-none select-none`}
       aria-label={`การ์ดคำศัพท์: ${card.front}`}
     >
       {/* Swipe Labels */}
       {index === 0 && (
         <>
           <div
-            className="absolute top-8 left-8 border-4 border-primary text-primary font-bold text-2xl sm:text-3xl uppercase tracking-widest px-4 py-2 rounded-lg transform -rotate-12 pointer-events-none bg-card/50 backdrop-blur-sm"
+            className="absolute top-6 left-6 sm:top-8 sm:left-8 border-4 border-primary text-primary font-bold text-xl sm:text-3xl uppercase tracking-widest px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg transform -rotate-12 pointer-events-none bg-card/50 backdrop-blur-sm"
             style={{ opacity: rightLabelOpacity }}
           >
             จำได้
           </div>
           <div
-            className="absolute top-8 right-8 border-4 border-rose-500 text-rose-500 font-bold text-2xl sm:text-3xl uppercase tracking-widest px-4 py-2 rounded-lg transform rotate-12 pointer-events-none bg-card/50 backdrop-blur-sm"
+            className="absolute top-6 right-6 sm:top-8 sm:right-8 border-4 border-rose-500 text-rose-500 font-bold text-xl sm:text-3xl uppercase tracking-widest px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg transform rotate-12 pointer-events-none bg-card/50 backdrop-blur-sm"
             style={{ opacity: leftLabelOpacity }}
           >
             ลืม
@@ -161,14 +161,14 @@ export function SwipeableCard({
       {/* Card meta badges */}
       <div className="flex items-center justify-between gap-3">
         <div className="flex flex-wrap gap-2 text-xs font-semibold text-ink-secondary">
-          <span className={`rounded-md px-2 py-1 uppercase text-white ${card.type === 'vocabulary' ? 'bg-blue-500' : 'bg-purple-500'}`}>
+          <span className={`rounded-full px-3 py-1 uppercase text-white tracking-wider ${card.type === 'vocabulary' ? 'bg-blue-500' : 'bg-purple-500'}`}>
             {card.type === 'common_mistake' ? 'mistake' : card.type === 'fill_blank' ? 'fill in blank' : card.type === 'correct_or_incorrect' ? 'correct / incorrect' : card.type}
           </span>
-          {card.cefr && <span className="rounded-md bg-slate-100/80 px-2 py-1 text-ink-secondary">{card.cefr}</span>}
-          {card.partOfSpeech && <span className="rounded-md bg-slate-100/80 px-2 py-1 text-ink-secondary">{card.partOfSpeech}</span>}
-          {card.category && card.category.length > 0 && <span className="rounded-md bg-slate-100/80 px-2 py-1 text-ink-secondary truncate max-w-[150px]">{card.category[0]}</span>}
+          {card.cefr && <span className="rounded-full bg-slate-100 px-3 py-1 text-ink-secondary">{card.cefr}</span>}
+          {card.partOfSpeech && <span className="rounded-full bg-slate-100 px-3 py-1 text-ink-secondary">{card.partOfSpeech}</span>}
+          {card.category && card.category.length > 0 && <span className="rounded-full bg-slate-100 px-3 py-1 text-ink-secondary truncate max-w-[150px]">{card.category[0]}</span>}
         </div>
-        <span className="ui-badge ui-badge-accent shrink-0">
+        <span className="ui-badge ui-badge-accent shrink-0 rounded-full">
           {isFlipped ? "ด้านหลัง" : "ด้านหน้า"}
         </span>
       </div>

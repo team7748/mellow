@@ -26,7 +26,7 @@ export function ConversationList({ conversationTitles, onSelect, activeConversat
               <button
                 onClick={() => onSelect(conv.id)}
                 className={`w-full text-left px-4 py-3 flex items-center gap-3 transition-colors hover:bg-slate-50 ${
-                  isActive ? "bg-primary" : ""
+                  isActive ? "bg-primary-soft" : ""
                 }`}
               >
                 <div className={`shrink-0 ${isActive ? "text-primary" : "text-slate-300"}`}>

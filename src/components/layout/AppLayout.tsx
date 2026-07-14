@@ -23,7 +23,9 @@ export function AppLayout({ activePage, children, onNavigate }: AppLayoutProps) 
         <MobileHeader onNavigate={onNavigate} />
         
         <main className="flex-1 pb-[calc(4.5rem+env(safe-area-inset-bottom))] md:pb-8 px-4 sm:px-6 lg:px-12 xl:px-24">
-          {children}
+          <div key={activePage} className="animate-page-enter h-full">
+            {children}
+          </div>
         </main>
       </div>
 

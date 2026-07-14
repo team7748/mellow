@@ -101,15 +101,15 @@ type StatItemProps = {
 
 function StatItem({ icon, value, label, bgClass }: StatItemProps) {
   return (
-    <div className="group flex flex-col sm:flex-row flex-1 items-center justify-center sm:justify-start gap-1 sm:gap-3 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] cursor-default text-center sm:text-left">
-      <span className={`flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full border ${bgClass} transition-colors duration-300 group-hover:border-primary/40`}>
-        <img src={icon} alt="" className="h-6 w-6 sm:h-8 sm:w-8 object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[10deg]" />
+    <div className="group flex flex-col sm:flex-row flex-1 items-center justify-center sm:justify-start gap-1.5 sm:gap-3 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] cursor-default text-center sm:text-left w-full sm:w-auto">
+      <span className={`flex h-9 w-9 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full border ${bgClass} transition-colors duration-300 group-hover:border-primary/40 shadow-sm sm:shadow-none`}>
+        <img src={icon} alt="" className="h-5 w-5 sm:h-8 sm:w-8 object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[10deg]" />
       </span>
       <span className="min-w-0 flex flex-col items-center sm:items-start">
-        <strong className="text-[1.05rem] font-black leading-tight text-ink-dark sm:text-2xl transition-colors duration-300 group-hover:text-primary tabular-nums tracking-tight">
+        <strong className="text-sm font-black leading-tight text-ink-dark sm:text-2xl transition-colors duration-300 group-hover:text-primary tabular-nums tracking-tight">
           {value}
         </strong>
-        <span className="text-[0.625rem] font-semibold text-ink-secondary sm:text-xs leading-relaxed line-clamp-1 mt-0.5 sm:mt-0 tracking-wide">
+        <span className="text-xs font-semibold text-ink-secondary sm:text-xs leading-relaxed line-clamp-1 mt-0.5 sm:mt-0 tracking-wide text-balance">
           {label}
         </span>
       </span>
@@ -134,7 +134,7 @@ function MissionItem({ title, icon, progress, onClick, accentBg = "bg-primary-so
       type="button"
       aria-label={`${title} mission: ${progress.completed} of ${progress.target}`}
       onClick={onClick}
-      className="home-mission-item group flex w-full min-w-0 items-center gap-3 text-left transition-colors duration-150 hover:bg-slate-50 px-3 py-3 sm:gap-4 sm:px-5 sm:py-4 lg:px-6 lg:py-5"
+      className="home-mission-item group flex w-full min-w-0 items-center gap-3 text-left transition-all duration-150 hover:bg-slate-50 active:scale-[0.99] active:bg-slate-50/80 px-3 py-3 sm:gap-4 sm:px-5 sm:py-4 lg:px-6 lg:py-5"
     >
       <span className={`flex h-11 w-11 sm:h-13 sm:w-13 shrink-0 items-center justify-center rounded-xl border ${accentBg} transition-transform duration-300 group-hover:scale-105`}>
         <img
@@ -158,7 +158,7 @@ function MissionItem({ title, icon, progress, onClick, accentBg = "bg-primary-so
           aria-valuemin={0}
           aria-valuemax={100}
           aria-valuenow={progress.percentage}
-          className="mt-1.5 block h-[4px] sm:h-[5px] overflow-hidden rounded-full bg-progress-track"
+          className="mt-2.5 block h-[4px] sm:h-[5px] overflow-hidden rounded-full bg-progress-track"
         >
           <span
             className={`block h-full rounded-full ${barColor} transition-all duration-500`}
@@ -240,7 +240,7 @@ export function HomePage({
   }
 
   return (
-    <PageContainer className="home-page py-3 sm:py-6 lg:py-8">
+    <PageContainer className="home-page py-4 sm:py-6 lg:py-8">
 
       {/* ════════════════════════════════════════════════════
           SECTION 1 — Hero
@@ -253,23 +253,23 @@ export function HomePage({
         className="relative overflow-hidden sm:rounded-t-2xl sm:rounded-b-none sm:border sm:border-b-0 sm:border-primary/10 sm:bg-gradient-to-br sm:from-primary-soft sm:via-white sm:to-primary-muted animate-fade-in-up opacity-0-init"
       >
         {/* Hero Content */}
-        <div className="relative flex min-h-[10rem] sm:min-h-[16rem] lg:min-h-[18rem]">
+        <div className="relative flex flex-col-reverse sm:flex-row min-h-[14rem] sm:min-h-[16rem] lg:min-h-[18rem]">
           {/* Text side */}
-          <div className="relative z-10 flex min-w-0 flex-1 flex-col items-start justify-center text-left py-2 sm:px-8 sm:py-6 lg:px-10">
-            <p className="text-sm font-bold text-primary sm:text-base tracking-wide uppercase -translate-y-1.5 sm:-translate-y-2.5">
+          <div className="relative z-10 flex min-w-0 flex-1 flex-col items-center sm:items-start justify-center text-center sm:text-left py-5 sm:py-6 px-4 sm:px-8 lg:px-10">
+            <p className="text-[0.8125rem] font-bold text-primary sm:text-base tracking-wide uppercase sm:-translate-y-2.5">
               {greeting},
             </p>
-            <div className="mt-0.5 sm:mt-1 flex min-w-0 items-end gap-1.5 sm:gap-2">
-              <h1 className="min-w-0 overflow-wrap-anywhere text-[1.75rem] font-black tracking-tight text-ink-dark sm:text-4xl lg:text-[3.25rem] drop-shadow-sm leading-tight">
+            <div className="mt-1 sm:mt-1 flex min-w-0 items-end justify-center sm:justify-start gap-1.5 sm:gap-2">
+              <h1 className="min-w-0 overflow-wrap-anywhere text-[2rem] font-black tracking-tight text-ink-dark sm:text-4xl lg:text-[3.25rem] drop-shadow-sm leading-tight">
                 {displayName}!
               </h1>
               <img
                 src={leafAccentUrl}
                 alt=""
-                className="mb-0.5 h-6 w-6 shrink-0 object-contain sm:mb-1 sm:h-9 sm:w-9"
+                className="mb-1 h-7 w-7 shrink-0 object-contain sm:mb-1 sm:h-9 sm:w-9"
               />
             </div>
-            <p className="mt-2 sm:mt-3 text-[0.8125rem] sm:text-base font-medium leading-relaxed text-ink-secondary">
+            <p className="mt-2 sm:mt-3 text-[0.875rem] sm:text-base font-medium leading-relaxed text-ink-secondary">
               <span className="block sm:inline">ค่อย ๆ เรียนรู้</span>
               <span className="hidden sm:inline"> </span>
               <span className="block sm:inline">แล้วภาษาอังกฤษจะง่ายขึ้น</span>
@@ -278,17 +278,13 @@ export function HomePage({
 
           {/* Image side */}
           <div
-            className="relative w-[55%] sm:w-[45%] shrink-0 overflow-hidden"
-            style={{
-              WebkitMaskImage: 'linear-gradient(to right, transparent, black 15%, black 100%)',
-              maskImage: 'linear-gradient(to right, transparent, black 15%, black 100%)'
-            }}
+            className="relative w-full h-[150px] sm:h-auto sm:w-[45%] shrink-0 overflow-hidden [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] sm:[mask-image:linear-gradient(to_right,transparent,black_15%,black_100%)]"
           >
             <img
               fetchPriority="high"
               src={slothHeroUrl}
               alt="สลอธกำลังเรียนภาษาอังกฤษ"
-              className="absolute inset-0 h-full w-full object-cover object-[right_top] translate-x-1 sm:-translate-x-6 translate-y-1 sm:translate-y-5 scale-[1.05]"
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[200px] w-auto object-cover object-[center_top] translate-y-8 sm:inset-0 sm:left-auto sm:transform-none sm:h-full sm:w-full sm:object-[right_top] sm:-translate-x-6 sm:translate-y-5 sm:scale-[1.05]"
             />
           </div>
         </div>
@@ -301,38 +297,42 @@ export function HomePage({
       <Card
         data-home-section="stats"
         aria-label="Learning statistics"
-        className="mt-3 sm:mt-0 relative z-10 sm:rounded-t-none sm:rounded-b-2xl border-t-0 sm:border-t sm:border-primary/10 shadow-sm animate-fade-in-up opacity-0-init delay-100 overflow-hidden"
+        className="mt-3 sm:mt-0 relative z-10 sm:rounded-t-none sm:rounded-b-2xl border-t-0 sm:border-t sm:border-primary/10 shadow-sm shadow-black/5 animate-fade-in-up opacity-0-init delay-100 overflow-hidden"
       >
         <h2 className="sr-only">สถิติการเรียน</h2>
-        <CardContent className="p-4 sm:p-6 lg:p-8 pt-4 sm:pt-6 grid grid-cols-2 gap-y-6 gap-x-4 sm:flex sm:items-center sm:justify-between sm:gap-0">
-          <StatItem
-            icon={dayStreakUrl}
-            value={<AnimatedNumber value={activity.streakDays} duration={1000} />}
-            label="วันที่เรียนต่อเนื่อง"
-            bgClass="bg-gradient-to-br from-orange-50 to-amber-100 border-amber-200/60"
-          />
+        <CardContent className="p-3 sm:p-6 lg:p-8 pt-3 sm:pt-6 flex flex-row items-start sm:items-center justify-between divide-x divide-border/40 sm:divide-x-0 sm:gap-0">
+          <div className="flex-1 px-1 sm:px-0">
+            <StatItem
+              icon={dayStreakUrl}
+              value={<AnimatedNumber value={activity.streakDays} duration={1000} />}
+              label="วันที่เรียนต่อเนื่อง"
+              bgClass="bg-gradient-to-br from-orange-50 to-amber-100 border-amber-200/60"
+            />
+          </div>
 
           <div className="hidden sm:block mx-2.5 sm:mx-6 h-10 w-px shrink-0 bg-border" />
 
-          <StatItem
-            icon={dailyGoalUrl}
-            value={
-              <span className={activity.dailyGoal.completed >= activity.dailyGoal.target ? "text-primary" : ""}>
-                <span>
-                  <AnimatedNumber value={activity.dailyGoal.completed} duration={2000} />
+          <div className="flex-1 px-1 sm:px-0">
+            <StatItem
+              icon={dailyGoalUrl}
+              value={
+                <span className={activity.dailyGoal.completed >= activity.dailyGoal.target ? "text-primary" : ""}>
+                  <span>
+                    <AnimatedNumber value={activity.dailyGoal.completed} duration={2000} />
+                  </span>
+                  <span className={activity.dailyGoal.completed >= activity.dailyGoal.target ? "" : "text-ink-secondary/60 text-[0.85em] group-hover:text-primary/70 transition-colors"}>
+                    /{activity.dailyGoal.target}
+                  </span>
                 </span>
-                <span className={activity.dailyGoal.completed >= activity.dailyGoal.target ? "" : "text-ink-secondary/60 text-[0.85em] group-hover:text-primary/70 transition-colors"}>
-                  /{activity.dailyGoal.target}
-                </span>
-              </span>
-            }
-            label="เป้าหมายรายวัน"
-            bgClass="bg-gradient-to-br from-blue-50 to-cyan-100 border-cyan-200/60"
-          />
+              }
+              label="เป้าหมายรายวัน"
+              bgClass="bg-gradient-to-br from-blue-50 to-cyan-100 border-cyan-200/60"
+            />
+          </div>
 
           <div className="hidden sm:block mx-2.5 sm:mx-6 h-10 w-px shrink-0 bg-border" />
 
-          <div className="col-span-2 flex justify-center sm:block sm:col-span-1">
+          <div className="flex-1 px-1 sm:px-0">
             <StatItem
               icon={wordsLearnedUrl}
               value={<AnimatedNumber value={stats.learnedWords} />}
@@ -358,16 +358,16 @@ export function HomePage({
             data-home-section="continue"
             className="group overflow-hidden rounded-2xl border border-primary/15 bg-gradient-to-br from-[#F4F9EE] via-white to-[#E8F3DB] transition-all duration-300 hover:shadow-md hover:border-primary/30 animate-fade-in-up opacity-0-init delay-200"
           >
-            <div className="grid min-h-[12rem] grid-cols-[minmax(0,1.1fr)_minmax(6rem,0.9fr)] sm:min-h-[16rem] sm:grid-cols-[minmax(0,1fr)_minmax(10rem,0.85fr)]">
+            <div className="grid min-h-[12rem] grid-cols-[minmax(0,1.2fr)_minmax(5.5rem,0.8fr)] sm:min-h-[16rem] sm:grid-cols-[minmax(0,1fr)_minmax(10rem,0.85fr)]">
               {/* Text */}
-              <div className="relative z-10 flex min-w-0 flex-col justify-center px-5 py-5 sm:px-8 sm:py-6">
-                <span className="w-fit rounded-full bg-primary-active px-2.5 py-0.5 text-[0.6875rem] sm:text-xs font-bold text-primary tracking-wide uppercase">
+              <div className="relative z-10 flex min-w-0 flex-col justify-center px-4 py-5 sm:px-8 sm:py-6">
+                <span className="w-fit rounded-full bg-primary-active px-2.5 py-0.5 text-[0.6875rem] sm:text-xs font-bold text-primary tracking-wide uppercase whitespace-nowrap">
                   เรียนต่อ
                 </span>
                 <h2 className="mt-2 sm:mt-3 text-lg sm:text-2xl font-black tracking-tight text-ink-dark">
                   คำศัพท์ภาษาอังกฤษ
                 </h2>
-                <p className="mt-1 text-sm font-semibold text-ink-secondary tabular-nums">
+                <p className="mt-1 text-[0.8125rem] sm:text-sm font-semibold text-ink-secondary tabular-nums whitespace-nowrap">
                   {stats.learnedWords.toLocaleString()} / {stats.totalWords.toLocaleString()} คำ
                 </p>
                 <div
@@ -389,9 +389,9 @@ export function HomePage({
                   size="lg"
                   className="group/btn relative overflow-hidden mt-4 sm:mt-5 w-full sm:w-fit"
                 >
-                  <span className="relative z-10 flex items-center justify-center gap-2 w-full">
+                  <span className="relative z-10 flex items-center justify-center gap-1.5 sm:gap-2 w-full whitespace-nowrap">
                     เรียนต่อ
-                    <ChevronRight className="h-5 w-5 transition-transform duration-300 group-hover/btn:translate-x-1" strokeWidth={2.5} />
+                    <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-300 group-hover/btn:translate-x-1" strokeWidth={2.5} />
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
                 </Button>
@@ -403,7 +403,7 @@ export function HomePage({
                   loading="lazy"
                   src={continueLearningUrl}
                   alt=""
-                  className="h-full max-h-[12rem] w-full object-contain object-center scale-[1.15] sm:scale-[1.2] origin-center -translate-x-4 sm:-translate-x-6 group-hover:scale-[1.2] sm:group-hover:scale-[1.25] transition-transform duration-700 ease-out"
+                  className="h-full max-h-[12rem] w-full object-contain object-center scale-[1.4] sm:scale-[1.2] origin-center -translate-x-3 sm:-translate-x-6 group-hover:scale-[1.45] sm:group-hover:scale-[1.25] transition-transform duration-700 ease-out"
                 />
               </div>
             </div>
@@ -445,7 +445,7 @@ export function HomePage({
           <section
             data-home-section="missions"
             aria-labelledby="home-missions-title"
-            className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow duration-300 hover:shadow-md animate-fade-in-up opacity-0-init delay-200"
+            className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm shadow-border/30 transition-shadow duration-300 hover:shadow-md animate-fade-in-up opacity-0-init delay-200"
           >
             <h2
               id="home-missions-title"
@@ -485,16 +485,16 @@ export function HomePage({
 
           {/* Explore Categories — Mobile only (shows after missions) */}
           <section data-home-section="explore-mobile" className="sm:hidden min-w-0 animate-fade-in-up opacity-0-init delay-300">
-            <h2 className="text-base font-extrabold tracking-tight text-ink-dark">สำรวจหมวดหมู่</h2>
-            <div className="mt-2.5 overflow-hidden -mx-4 px-4 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
-              <div className="flex w-max gap-2.5 pb-2 pt-1 animate-marquee active:[animation-play-state:paused]">
-                {[...categories, ...categories, ...categories, ...categories].map((category, idx) => (
+            <h2 className="px-1 text-base font-extrabold tracking-tight text-ink-dark">สำรวจหมวดหมู่</h2>
+            <div className="mt-2.5 overflow-hidden -mx-4 px-4 [mask-image:linear-gradient(to_right,transparent,black_3%,black_97%,transparent)]">
+              <div className="flex w-full gap-3 pb-3 pt-1 overflow-x-auto snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                {categories.map((category, idx) => (
                   <button
                     key={`${category.accessibleLabel}-${idx}`}
                     type="button"
                     aria-label={`เปิดหมวด ${category.accessibleLabel}`}
                     onClick={() => openVocabulary(category.filterValue)}
-                    className="group shrink-0 flex min-h-[5.5rem] w-[5.5rem] flex-col items-center justify-center gap-2 rounded-xl border border-border bg-card shadow-sm px-2 py-3 text-center transition-all duration-200 active:scale-95"
+                    className="group snap-start shrink-0 flex min-h-[6rem] w-[6.5rem] flex-col items-center justify-center gap-2.5 rounded-xl border border-border bg-card shadow-sm px-2 py-3 text-center transition-all duration-200 active:scale-95"
                   >
                     <img
                       loading="lazy"
@@ -502,7 +502,7 @@ export function HomePage({
                       alt=""
                       className="h-10 w-10 object-contain"
                     />
-                    <span className="text-[0.6875rem] font-bold text-ink-dark leading-tight">
+                    <span className="text-[0.75rem] font-bold text-ink-dark leading-tight">
                       {category.label}
                     </span>
                   </button>
@@ -524,7 +524,7 @@ export function HomePage({
                   <button
                     type="button"
                     onClick={() => startFlashcard(true)}
-                    className="review-button inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-bold tracking-wide text-white shadow-md shadow-primary/30 transition-all hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/40 active:scale-95"
+                    className="review-button w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-primary px-6 py-3.5 sm:py-2.5 text-base sm:text-sm font-bold tracking-wide text-white shadow-md shadow-primary/30 transition-all hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/40 active:scale-95"
                   >
                     เริ่มทบทวน
                   </button>

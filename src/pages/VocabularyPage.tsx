@@ -85,7 +85,7 @@ export function VocabularyPage({ onViewDetails }: VocabularyPageProps) {
   }
 
   return (
-    <PageContainer className="py-8 sm:py-10">
+    <PageContainer className="py-4 sm:py-10">
       <PageHeader
         subtitle="คลังคำศัพท์"
         title="คลังคำศัพท์"
@@ -94,14 +94,14 @@ export function VocabularyPage({ onViewDetails }: VocabularyPageProps) {
           พร้อมดูหมวดหมู่ ชนิดของคำ ระดับความยาก และสถานะการเรียน</>
         }
         rightContent={
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center w-full sm:w-auto">
             <div
               aria-label={`${filteredWords.length} ผลลัพธ์`}
-              className="bg-primary-soft border border-primary/20 rounded-2xl px-4 py-3 text-center sm:min-w-28"
+              className="bg-primary-soft border border-primary/20 rounded-2xl px-5 py-3 flex items-center justify-between sm:flex-col sm:justify-center sm:px-4 sm:min-w-28"
               role="status"
             >
-              <p className="text-2xl font-black text-ink-dark">{filteredWords.length}</p>
-              <p className="text-xs font-bold text-ink-dark uppercase">ผลลัพธ์</p>
+              <p className="text-[0.8125rem] sm:text-xs font-bold text-ink-dark uppercase sm:order-2 mt-1 sm:mt-0">ผลลัพธ์คำศัพท์</p>
+              <p className="text-2xl font-black text-primary sm:text-ink-dark sm:order-1 leading-none">{filteredWords.length}</p>
             </div>
             <Button
               disabled={filteredWords.length === 0}

@@ -52,14 +52,18 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
       {/* Collapse Toggle */}
       <button 
         onClick={() => setIsCollapsed(!isCollapsed)} 
-        className="hidden md:flex absolute -right-4 top-5 z-10 h-8 w-8 items-center justify-center rounded-full border border-border bg-card text-ink-secondary shadow-soft transition-colors duration-150 hover:border-primary/40 hover:bg-primary-soft hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        className="hidden md:flex absolute -right-4 top-6 z-10 h-8 w-8 items-center justify-center rounded-full border border-border bg-card text-ink-secondary/70 shadow-sm transition-all duration-300 ease-out hover:scale-105 hover:shadow-md hover:border-primary/30 hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 group"
         aria-label={isCollapsed ? "ขยายเมนู" : "ย่อเมนู"}
       >
-        {isCollapsed ? <ChevronRight className="h-4 w-4" strokeWidth={2.5} /> : <ChevronLeft className="h-4 w-4" strokeWidth={2.5} />}
+        {isCollapsed ? (
+          <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-px" strokeWidth={2.5} />
+        ) : (
+          <ChevronLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-px" strokeWidth={2.5} />
+        )}
       </button>
 
       {/* Main Nav */}
-      <nav className={`flex flex-col gap-0.5 mt-4 ${isCollapsed ? "px-2" : "px-3"}`}>
+      <nav className={`flex flex-col gap-1 mt-4 ${isCollapsed ? "px-2" : "px-3"}`}>
         {navItems.map(({ label, icon: Icon, page }) => {
           const active = isActive(page)
 
@@ -68,18 +72,21 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
               key={page}
               onClick={() => onNavigate(page)}
               title={isCollapsed ? label : undefined}
-              className={`flex items-center rounded-xl font-semibold transition-all duration-150 overflow-hidden whitespace-nowrap ${
+              className={`group relative flex items-center rounded-xl font-semibold transition-all duration-200 ease-out whitespace-nowrap outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 ${
                 isCollapsed ? "p-3 justify-center" : "px-4 py-3 gap-3"
               } ${
                 active 
-                  ? "bg-primary-active text-primary" 
-                  : "text-ink-secondary hover:bg-page hover:text-ink-dark"
+                  ? "bg-primary-soft text-primary" 
+                  : "text-ink-secondary hover:bg-slate-50 hover:text-ink-dark"
               }`}
             >
+              {active && (
+                <div className="absolute left-0 top-2 bottom-2 w-1 rounded-r-full bg-primary" />
+              )}
               {active ? (
-                <Icon className="w-5 h-5 shrink-0 text-primary" strokeWidth={2.25} fill="currentColor" fillOpacity={0.15} />
+                <Icon className="w-5 h-5 shrink-0 text-primary transition-transform duration-300 ease-out scale-105" strokeWidth={2.25} fill="currentColor" fillOpacity={0.15} />
               ) : (
-                <Icon className="w-5 h-5 shrink-0 text-ink-secondary" strokeWidth={1.75} />
+                <Icon className="w-5 h-5 shrink-0 text-ink-secondary/70 group-hover:text-ink-dark group-hover:scale-110 transition-all duration-300 ease-out" strokeWidth={1.75} />
               )}
               {!isCollapsed && <span className="text-[14px]">{label}</span>}
             </button>
@@ -91,7 +98,7 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
       <div className="flex-1" />
 
       {/* Bottom Nav (Profile) */}
-      <nav className={`flex flex-col gap-0.5 mb-6 ${isCollapsed ? "px-2" : "px-3"}`}>
+      <nav className={`flex flex-col gap-1 mb-6 ${isCollapsed ? "px-2" : "px-3"}`}>
         <div className={`border-t border-border mb-3 ${isCollapsed ? "mx-1" : "mx-2"}`} />
         {bottomNavItems.map(({ label, icon: Icon, page }) => {
           const active = isActive(page)
@@ -101,15 +108,22 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
               key={page}
               onClick={() => onNavigate(page)}
               title={isCollapsed ? label : undefined}
-              className={`flex items-center rounded-xl font-semibold transition-all duration-150 overflow-hidden whitespace-nowrap ${
+              className={`group relative flex items-center rounded-xl font-semibold transition-all duration-200 ease-out whitespace-nowrap outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 ${
                 isCollapsed ? "p-3 justify-center" : "px-4 py-3 gap-3"
               } ${
                 active 
-                  ? "bg-primary-active text-primary" 
-                  : "text-ink-secondary hover:bg-page hover:text-ink-dark"
+                  ? "bg-primary-soft text-primary" 
+                  : "text-ink-secondary hover:bg-slate-50 hover:text-ink-dark"
               }`}
             >
-              <Icon className={`w-5 h-5 shrink-0 ${active ? "text-primary" : "text-ink-secondary"}`} strokeWidth={active ? 2.25 : 1.75} />
+              {active && (
+                <div className="absolute left-0 top-2 bottom-2 w-1 rounded-r-full bg-primary" />
+              )}
+              {active ? (
+                <Icon className="w-5 h-5 shrink-0 text-primary transition-transform duration-300 ease-out scale-105" strokeWidth={2.25} fill="currentColor" fillOpacity={0.15} />
+              ) : (
+                <Icon className="w-5 h-5 shrink-0 text-ink-secondary/70 group-hover:text-ink-dark group-hover:scale-110 transition-all duration-300 ease-out" strokeWidth={1.75} />
+              )}
               {!isCollapsed && <span className="text-[14px]">{label}</span>}
             </button>
           )
