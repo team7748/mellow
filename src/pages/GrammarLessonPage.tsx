@@ -159,7 +159,7 @@ export function GrammarLessonPage({ onBack, topicId }: Props) {
                     </div>
                     <SpeakButton text={structure.example} />
                   </div>
-                  <div className="mt-5 flex gap-3 text-sm text-ink-secondary leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                  <div className="mt-5 flex gap-3 text-sm text-ink-secondary leading-relaxed bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-600">
                     <Info className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
                     <p>{structure.noteThai}</p>
                   </div>
@@ -176,7 +176,7 @@ export function GrammarLessonPage({ onBack, topicId }: Props) {
                     <p className="mt-3 text-ink-DEFAULT leading-relaxed">{rule.ruleThai}</p>
                     <ul className="mt-5 space-y-3">
                       {rule.examples.map((example) => (
-                        <li key={example} className="flex items-start gap-4 bg-slate-50/70 p-4 rounded-xl border border-slate-100">
+                        <li key={example} className="flex items-start gap-4 bg-slate-50/70 dark:bg-slate-800/70 p-4 rounded-xl border border-slate-100 dark:border-slate-600">
                           <span className="flex-1 text-ink-dark font-medium text-lg">{example}</span>
                           <SpeakButton text={example} />
                         </li>
@@ -252,12 +252,12 @@ export function GrammarLessonPage({ onBack, topicId }: Props) {
                 const sides = Object.values(comparison).filter(isComparisonSide);
                 return (
                   <article key={comparison.id} className="surface-card p-0 overflow-hidden">
-                    <div className="bg-slate-50 border-b border-border p-5 sm:p-6">
+                    <div className="bg-slate-50 dark:bg-slate-800 border-b border-border p-5 sm:p-6">
                       <h3 className="font-bold text-ink-dark text-xl">{comparison.title}</h3>
                     </div>
                     <div className="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-border">
                       {sides.map((side) => (
-                        <div key={`${side.name ?? "this"}-${side.formula}`} className="flex flex-col p-5 sm:p-6 hover:bg-slate-50/50 transition-colors">
+                        <div key={`${side.name ?? "this"}-${side.formula}`} className="flex flex-col p-5 sm:p-6 hover:bg-slate-50/50 dark:hover:bg-slate-800/50 transition-colors">
                           <p className="font-bold text-ink-dark text-lg">{side.name ?? topic.name}</p>
                           <p className="mt-2 text-sm text-ink-secondary leading-relaxed">{side.useThai}</p>
                           <div className="mt-5 inline-block self-start bg-[#0D1B2A] px-4 py-2 rounded-lg text-sm font-mono font-bold text-emerald-400 tracking-wide break-words shadow-inner">
