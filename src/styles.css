@@ -1,15 +1,71 @@
 @import "tailwindcss";
-@config "../tailwind.config.ts";
+
+@theme {
+  --color-page: #F8F8F2;
+  --color-card: #FFFFFF;
+  
+  --color-primary: #198C45;
+  --color-primary-hover: #14733A;
+  --color-primary-active: #E5F2D9;
+  --color-primary-soft: #F1F6E9;
+  --color-primary-muted: #EDF5E6;
+  
+  --color-ink-dark: #073D2E;
+  --color-ink: #103C2F;
+  --color-ink-secondary: #62676F;
+  
+  --color-border: #E3E7DD;
+  --color-neutral-soft: #F8FAFC;
+  --color-progress-track: #DDE6D5;
+  
+  --color-mission-orange: #F5A623;
+  --color-mission-orangeBg: #FFF3D5;
+  --color-mission-blue: #4D76E8;
+  --color-mission-blueBg: #E8EDFF;
+  --color-mission-purple: #8B5DE8;
+  --color-mission-purpleBg: #F0E9FF;
+  
+  --color-success: #1D9B50;
+
+  --font-sans: "Noto Sans Thai", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 4px 12px rgba(35, 60, 42, 0.08);
+
+  --animate-fade-in-up: fadeInUp 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  --animate-float-subtle: float-subtle 6s ease-in-out infinite;
+  @keyframes float-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+
+  --animate-shimmer: shimmer 3s infinite;
+  @keyframes shimmer {
+    0% { transform: translateX(-150%) skewX(-15deg); }
+    40%, 100% { transform: translateX(150%) skewX(-15deg); }
+  }
+
+  --animate-marquee: marquee 25s linear infinite;
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  --animate-page-enter: page-enter 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  @keyframes page-enter {
+    0% { opacity: 0; transform: translateY(6px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
 
 :root {
-  color: theme('colors.ink.DEFAULT');
+  color: theme('colors.ink');
   background: theme('colors.page');
-  font-family:
-    "Noto Sans Thai",
-    Outfit,
-    ui-sans-serif,
-    system-ui,
-    sans-serif;
+  font-family: var(--font-sans);
   font-synthesis-weight: none;
   text-rendering: optimizeLegibility;
 }
