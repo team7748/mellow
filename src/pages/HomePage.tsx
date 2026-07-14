@@ -519,15 +519,15 @@ export function HomePage({
               className="relative mt-6 sm:mt-8 overflow-visible rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-white to-primary/10 p-4 sm:p-5 transition-all duration-300 hover:shadow-md hover:border-primary/30 animate-fade-in-up opacity-0-init delay-300 group"
             >
               <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-center text-center">
-                <div className="review-button-wrapper w-full shrink-0 sm:w-[220px] lg:w-[260px]">
+                <div className="relative isolate overflow-visible w-full shrink-0 sm:w-[220px] lg:w-[260px]">
                   <ReviewSlothMascot reviewCount={stats.dueReviewWords} />
-                  <button
-                    type="button"
+                  <Button
                     onClick={() => startFlashcard(true)}
-                    className="review-button w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-primary px-6 py-3.5 sm:py-2.5 text-base sm:text-sm font-bold tracking-wide text-white shadow-md shadow-primary/30 transition-all hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/40 active:scale-95"
+                    variant="primary"
+                    className="relative z-10 w-full sm:w-auto inline-flex items-center justify-center rounded-full px-6 py-3.5 sm:py-2.5 text-base sm:text-sm font-bold tracking-wide shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg active:scale-95"
                   >
                     เริ่มทบทวน
-                  </button>
+                  </Button>
                 </div>
               </div>
             </section>

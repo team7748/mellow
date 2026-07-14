@@ -103,7 +103,7 @@ export function ReviewSlothMascot({
 
   return (
     <div
-      className={`review-sloth ${className}`.trim()}
+      className={`absolute z-30 left-[55%] bottom-[calc(100%-6px)] w-[clamp(100px,30vw,130px)] sm:w-[clamp(96px,15vw,160px)] aspect-square pointer-events-none select-none -translate-x-1/2 opacity-100 motion-reduce:transform-none motion-reduce:-translate-x-1/2 ${className}`.trim()}
       aria-hidden="true"
       data-testid="review-sloth-mascot"
     >
@@ -118,6 +118,7 @@ export function ReviewSlothMascot({
         src={frames[frameIndex]}
         alt=""
         draggable={false}
+        className="block w-full h-full object-contain object-bottom origin-bottom motion-reduce:animate-none motion-reduce:transition-none"
       />
     </div>
   );
