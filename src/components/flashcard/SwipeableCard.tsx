@@ -1,6 +1,7 @@
 import { useRef, useState } from "react"
 import { Eye, CheckCircle, XCircle } from "lucide-react"
 import { SpeakButton } from "../ui/SpeakButton"
+import { Badge } from "../ui/Badge"
 import { playFlipSound } from "../../utils/audioEffects"
 import type { UnifiedFlashcard } from "../../types/flashcardItem"
 
@@ -137,7 +138,7 @@ export function SwipeableCard({
         touchAction: "none",
         gridArea: "1 / 1",
       }}
-      className={`surface-card shadow-lg sm:shadow-2xl w-full max-w-3xl p-6 text-center sm:p-8 flex flex-col min-h-[60vh] sm:min-h-[450px] max-h-[70vh] sm:max-h-none select-none`}
+      className={`rounded-2xl border border-border bg-card shadow-lg sm:shadow-2xl w-full max-w-3xl p-6 text-center sm:p-8 flex flex-col min-h-[60vh] sm:min-h-[450px] max-h-[70vh] sm:max-h-none select-none`}
       aria-label={`การ์ดคำศัพท์: ${card.front}`}
     >
       {/* Swipe Labels */}
@@ -160,17 +161,17 @@ export function SwipeableCard({
 
       {/* Card meta badges */}
       <div className="flex items-center justify-between gap-3">
-        <div className="flex flex-wrap gap-2 text-xs font-semibold text-ink-secondary">
-          <span className={`rounded-full px-3 py-1 uppercase text-white tracking-wider ${card.type === 'vocabulary' ? 'bg-blue-500' : 'bg-purple-500'}`}>
+        <div className="flex flex-wrap gap-2 text-xs font-semibold">
+          <Badge variant={card.type === 'vocabulary' ? 'info' : 'accent'} className="rounded-full tracking-wider">
             {card.type === 'common_mistake' ? 'mistake' : card.type === 'fill_blank' ? 'fill in blank' : card.type === 'correct_or_incorrect' ? 'correct / incorrect' : card.type}
-          </span>
-          {card.cefr && <span className="rounded-full bg-slate-100 px-3 py-1 text-ink-secondary">{card.cefr}</span>}
-          {card.partOfSpeech && <span className="rounded-full bg-slate-100 px-3 py-1 text-ink-secondary">{card.partOfSpeech}</span>}
-          {card.category && card.category.length > 0 && <span className="rounded-full bg-slate-100 px-3 py-1 text-ink-secondary truncate max-w-[150px]">{card.category[0]}</span>}
+          </Badge>
+          {card.cefr && <Badge variant="neutral" className="rounded-full">{card.cefr}</Badge>}
+          {card.partOfSpeech && <Badge variant="neutral" className="rounded-full">{card.partOfSpeech}</Badge>}
+          {card.category && card.category.length > 0 && <Badge variant="neutral" className="rounded-full truncate max-w-[150px]">{card.category[0]}</Badge>}
         </div>
-        <span className="ui-badge ui-badge-accent shrink-0 rounded-full">
+        <Badge variant="accent" className="shrink-0 rounded-full">
           {isFlipped ? "ด้านหลัง" : "ด้านหน้า"}
-        </span>
+        </Badge>
       </div>
 
       <div className="flex-1 flex flex-col justify-center">

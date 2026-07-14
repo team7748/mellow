@@ -177,7 +177,7 @@ export function GrammarPractice({
           )}
         </div>
       ) : (
-        <div className={`mt-10 rounded-2xl border p-6 sm:p-8 shadow-sm transition-all duration-300 flashcard-detail-enter ${evaluation.correct ? 'bg-primary-soft border-primary/20' : 'bg-rose-50/80 border-rose-200'}`}>
+        <div className={`mt-10 rounded-2xl border p-6 sm:p-8 shadow-sm transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 ${evaluation.correct ? 'bg-primary-soft border-primary/20' : 'bg-rose-50/80 border-rose-200'}`}>
           <div className="flex items-start gap-3 sm:gap-4">
             {evaluation.correct ? (
               <CheckCircle2 className="w-7 h-7 text-primary mt-0.5 flex-shrink-0" />

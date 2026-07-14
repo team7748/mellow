@@ -476,7 +476,7 @@ export function FlashcardPractice({
                 role="progressbar"
               >
               <div
-                className="flashcard-progress-bar h-full rounded-full bg-primary"
+                className="h-full rounded-full bg-primary transition-[width,background-color] duration-[220ms,160ms] ease-out"
                 style={{ width: `${sessionProgress}%` }}
               />
             </div>
@@ -494,9 +494,9 @@ export function FlashcardPractice({
       </section>
 
       <div
-        className={`flashcard-answer-feedback text-center font-bold mb-4 min-h-[1.75rem] transition-opacity duration-300 ${
-          recentAnswer ? "opacity-100 text-primary" : "opacity-0"
-        }`}
+        className={`text-center font-bold mb-4 min-h-[1.75rem] transition-all duration-300 transform ${
+          recentAnswer ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
+        } ${recentAnswer === "forgot" ? "text-rose-600" : recentAnswer === "medium" ? "text-amber-600" : recentAnswer === "known" ? "text-emerald-500" : "text-primary"}`}
       >
         {recentAnswer ? feedbackLabels[recentAnswer] : ""}
       </div>
