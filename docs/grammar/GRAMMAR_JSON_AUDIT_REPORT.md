@@ -149,3 +149,10 @@ the registry/UI phases with a strict target validator until the schema/adapter
 decision is approved. Prompt 3 resolved the question-type enum and Present Simple
 prerequisites issues only; the remaining major/minor findings still require an
 approved schema or content decision.
+
+## Implementation Resolution (Post-Audit)
+
+During the actual implementation of Grammar Mode, the following strategies were used to mitigate the issues above without requiring a massive content migration:
+- **M-01 & M-04**: Instead of forcing the JSON files to contain `cardType` or new fields, the `generateGrammarFlashcards` utility dynamically translates existing structures (like rules, examples, and common mistakes) into standardized `UnifiedFlashcard` formats on the fly.
+- **M-03**: The progress model (`useGrammarProgress.ts`) was designed to track mastery using the existing `id`s generated dynamically (e.g., combining topic ID with specific pattern indexes), creating pseudo-stable IDs that integrate perfectly with the unified `srsService`.
+- No strict blocking validator was placed on the production build; instead, the registry uses safe parsing with fallbacks.

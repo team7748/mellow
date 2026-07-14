@@ -1,8 +1,10 @@
 import { supabase } from "../lib/supabaseClient"
+import { assertAuthenticatedUser } from "../lib/authUserScope"
 import type { UserProfile } from "../types/profile"
 
 export async function fetchProfile(userId: string): Promise<UserProfile | null> {
   try {
+    await assertAuthenticatedUser(userId)
     const { data, error } = await supabase
       .from("profiles")
       .select("*")
@@ -30,6 +32,7 @@ export async function createProfile(
   displayName: string
 ): Promise<UserProfile | null> {
   try {
+    await assertAuthenticatedUser(userId)
     const { data, error } = await supabase
       .from("profiles")
       .insert([
@@ -59,6 +62,7 @@ export async function updateProfile(
   updates: Partial<Omit<UserProfile, "id" | "role" | "created_at" | "updated_at">>
 ): Promise<boolean> {
   try {
+    await assertAuthenticatedUser(userId)
     const { error } = await supabase
       .from("profiles")
       .update(updates)

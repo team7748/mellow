@@ -24,10 +24,14 @@ export function normalizeWordProgress(record: any, wordId: string): WordProgress
   const baseTime = record?.updatedAt ?? record?.lastStudiedAt;
   const finalUpdatedAt = toTimestamp(baseTime) > 0 ? new Date(toTimestamp(baseTime)).toISOString() : new Date(0).toISOString();
 
+  const difficulty = record?.difficulty !== undefined && ["forgot", "medium", "known"].includes(record.difficulty)
+    ? (record.difficulty as "forgot" | "medium" | "known")
+    : undefined;
+
   return {
     wordId: typeof record?.wordId === "string" ? record.wordId : wordId,
     status: normalizeWordStatus(record?.status),
-    difficulty: record?.difficulty !== undefined && ["forgot", "medium", "known"].includes(record.difficulty) ? (record.difficulty as "forgot" | "medium" | "known") : undefined,
+    ...(difficulty ? { difficulty } : {}),
     correctCount: safeCorrect,
     wrongCount: safeWrong,
     lastStudiedAt: typeof record?.lastStudiedAt === "string" ? record.lastStudiedAt : null,

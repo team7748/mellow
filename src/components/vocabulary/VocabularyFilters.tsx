@@ -46,18 +46,6 @@ const statusLabels: Record<"all" | WordStatus, string> = {
   mastered: "จำได้มั่นใจ",
 }
 
-const posOptions: Array<"all" | PartOfSpeech> = [
-  "all",
-  "noun",
-  "verb",
-  "adjective",
-  "adverb",
-  "preposition",
-  "pronoun",
-  "conjunction",
-  "phrase",
-]
-
 const posLabels: Record<string, string> = {
   all: "ทุกชนิดคำ",
   noun: "Noun (คำนาม)",
@@ -137,7 +125,7 @@ export function VocabularyFilters({
             className={`flex items-center justify-center gap-2 w-full sm:w-auto px-4 min-h-11 rounded-lg border text-sm font-semibold transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-1 ${
               hasActiveAdvancedFilters || showAdvanced
                 ? "bg-primary border-primary text-primary"
-                : "bg-card border-border text-ink-DEFAULT hover:bg-slate-50"
+                : "bg-card border-border text-ink-DEFAULT hover:bg-page"
             }`}
           >
             <SlidersHorizontal className="h-4 w-4" />

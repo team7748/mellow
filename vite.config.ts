@@ -1,5 +1,6 @@
 import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
+import tailwindcss from "@tailwindcss/vite"
 import dotenv from "dotenv"
 import speakAnswerHandler from "./api/speak-answer-check"
 
@@ -44,6 +45,6 @@ const apiMiddleware = () => ({
 })
 
 export default defineConfig({
-  plugins: [react(), apiMiddleware()],
+  plugins: [react(), tailwindcss(), apiMiddleware()],
   build: { rollupOptions: { output: { manualChunks: { vocabulary: ["./src/data/vocabulary-2000.json", "./src/utils/vocabulary.ts"], grammar: ["./src/data/grammar/registry.ts", "./src/data/grammar/loader.ts"] } } } },
 })

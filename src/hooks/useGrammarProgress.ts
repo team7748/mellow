@@ -32,19 +32,23 @@ export function useGrammarProgress() {
   }, [progress])
 
   const markTopicViewed = useCallback(async (topicId: string) => {
-    if (!progress) return
-    
-    setProgress(prev => {
-      if (!prev) return prev
-      const next = { ...prev }
-      if (!next.topics[topicId]) {
-        next.topics[topicId] = createEmptyTopicProgress(topicId)
-      }
-      next.topics[topicId].lessonViewed = true
-      saveGrammarProgress(user?.id, next)
-      return next
-    })
-  }, [progress, user])
+    const current = progressRef.current ?? await loadGrammarProgress(user?.id)
+    const existingTopic = current.topics[topicId]
+    const next: GrammarProgressV2 = {
+      ...current,
+      topics: {
+        ...current.topics,
+        [topicId]: {
+          ...(existingTopic ?? createEmptyTopicProgress(topicId)),
+          lessonViewed: true,
+        },
+      },
+    }
+
+    await saveGrammarProgress(user?.id, next)
+    progressRef.current = next
+    setProgress(next)
+  }, [user])
 
   const markTopicCompleted = useCallback(async (topicId: string) => {
     if (!progress) return

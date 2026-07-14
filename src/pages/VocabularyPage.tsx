@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { SearchX } from "lucide-react"
-import { Container } from "../components/layout/Container"
+import { PageContainer } from "../components/layout/PageContainer"
 import { SpeechSettings } from "../components/settings/SpeechSettings"
 import { Button } from "../components/ui/Button"
 import { VocabularyCard } from "../components/vocabulary/VocabularyCard"
@@ -16,13 +16,44 @@ type VocabularyPageProps = {
 }
 
 export function VocabularyPage({ onViewDetails }: VocabularyPageProps) {
+  const initialCategory = (() => {
+    try {
+      const hashParams = window.location.hash.split('?')[1]
+      if (hashParams) {
+        const params = new URLSearchParams(hashParams)
+        const cat = params.get('category')
+        if (cat) return cat as VocabCategory
+      }
+    } catch {
+      // ignore
+    }
+    return "all"
+  })();
+
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCefr, setSelectedCefr] = useState<"all" | CefrLevel>("all")
   const [selectedStatus, setSelectedStatus] = useState<"all" | WordStatus>("all")
-  const [selectedCategory, setSelectedCategory] = useState<"all" | VocabCategory>("all")
+  const [selectedCategory, setSelectedCategory] = useState<"all" | VocabCategory>(initialCategory)
   const [selectedPos, setSelectedPos] = useState<"all" | PartOfSpeech>("all")
   const [selectedLevel, setSelectedLevel] = useState<"all" | VocabLevel>("all")
   const [visibleCount, setVisibleCount] = useState(30)
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      try {
+        const hashParams = window.location.hash.split('?')[1]
+        if (hashParams) {
+          const params = new URLSearchParams(hashParams)
+          const cat = params.get('category')
+          if (cat) setSelectedCategory(cat as VocabCategory)
+        }
+      } catch {
+        // Ignore malformed hash parameters and keep the current filter.
+      }
+    }
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [])
 
   const filteredWords = useVocabularyFilter({
     searchTerm,
@@ -54,7 +85,7 @@ export function VocabularyPage({ onViewDetails }: VocabularyPageProps) {
   }
 
   return (
-    <Container className="py-8 sm:py-10">
+    <PageContainer className="py-8 sm:py-10">
       <PageHeader
         subtitle="คลังคำศัพท์"
         title="คลังคำศัพท์"
@@ -64,7 +95,11 @@ export function VocabularyPage({ onViewDetails }: VocabularyPageProps) {
         }
         rightContent={
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <div className="bg-primary-soft border border-primary/20 rounded-2xl px-4 py-3 text-center sm:min-w-28">
+            <div
+              aria-label={`${filteredWords.length} ผลลัพธ์`}
+              className="bg-primary-soft border border-primary/20 rounded-2xl px-4 py-3 text-center sm:min-w-28"
+              role="status"
+            >
               <p className="text-2xl font-black text-ink-dark">{filteredWords.length}</p>
               <p className="text-xs font-bold text-ink-dark uppercase">ผลลัพธ์</p>
             </div>
@@ -127,7 +162,7 @@ export function VocabularyPage({ onViewDetails }: VocabularyPageProps) {
         </section>
       ) : (
         <section className="empty-state mt-6 animate-in fade-in zoom-in-95 duration-300">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 mb-4 text-ink-secondary">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary-soft mb-4 text-primary">
             <SearchX className="h-8 w-8" />
           </div>
           <h2 className="text-xl font-semibold text-ink-DEFAULT">ไม่พบคำศัพท์ที่ตรงกับตัวกรอง</h2>
@@ -139,6 +174,6 @@ export function VocabularyPage({ onViewDetails }: VocabularyPageProps) {
           </Button>
         </section>
       )}
-    </Container>
+    </PageContainer>
   )
 }

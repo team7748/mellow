@@ -179,6 +179,6 @@ describe("FlashcardPage", () => {
     const progress = loadProgress()
     expect(progress.words[firstWord.id].correctCount).toBe(1)
     expect(progress.words[firstWord.id].wrongCount).toBe(2) // 1 from makeWordDue, 1 from practice
-    expect(screen.getByText("ทั้งหมด")).toBeInTheDocument()
+    expect(screen.getByRole("button", { name: /ทำใหม่ทั้งหมด/ })).toBeInTheDocument()
   })
 })

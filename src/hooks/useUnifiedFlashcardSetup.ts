@@ -56,6 +56,26 @@ export function useUnifiedFlashcardSetup() {
   const [grammarCards, setGrammarCards] = useState<UnifiedFlashcard[]>([])
   const [isLoadingGrammar, setIsLoadingGrammar] = useState(false)
 
+  // Load from URL if present
+  useEffect(() => {
+    const hash = window.location.hash
+    if (hash.includes("?")) {
+      const params = new URLSearchParams(hash.split("?")[1])
+      const statusParam = params.get("filterStatus") as SetupStatus | null
+      const modeParam = params.get("mode") as TrainingMode | null
+
+      if (statusParam) {
+        setFilters(prev => ({ ...prev, status: statusParam }))
+        if (statusParam.startsWith("srs-")) {
+          setSrsEnabledState(true)
+        }
+      }
+      if (modeParam) {
+        setMode(modeParam)
+      }
+    }
+  }, [])
+
   // Load Grammar Cards
   useEffect(() => {
     let active = true
@@ -87,6 +107,7 @@ export function useUnifiedFlashcardSetup() {
       front: w.word,
       back: w.thaiMeaning,
       note: w.example,
+      ipa: w.ipa,
       wordId: w.id,
       cefr: w.cefr,
       partOfSpeech: w.partOfSpeechStandard,

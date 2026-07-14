@@ -2,7 +2,7 @@ import { useState } from "react"
 import { LoginForm } from "../components/auth/LoginForm"
 import { RegisterForm } from "../components/auth/RegisterForm"
 import { ForgotPasswordForm } from "../components/auth/ForgotPasswordForm"
-import { Container } from "../components/layout/Container"
+import { PageContainer } from "../components/layout/PageContainer"
 import { Lock, UserPlus, KeyRound } from "lucide-react"
 
 type AuthPageProps = {
@@ -13,7 +13,7 @@ export function AuthPage({ onSuccess }: AuthPageProps) {
   const [view, setView] = useState<"login" | "register" | "forgot">("login")
 
   return (
-    <Container className="py-12 sm:py-20 flex justify-center">
+    <PageContainer className="py-12 sm:py-20 flex justify-center">
       <div className="w-full max-w-md surface-card p-6 sm:p-8">
         <div className="flex flex-col items-center mb-8 text-center animate-in fade-in slide-in-from-top-4 duration-500">
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-white mb-4 shadow-sm">
@@ -60,6 +60,6 @@ export function AuthPage({ onSuccess }: AuthPageProps) {
           <ForgotPasswordForm onBackToLogin={() => setView("login")} />
         )}
       </div>
-    </Container>
+    </PageContainer>
   )
 }

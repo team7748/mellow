@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { CheckCircle2, Eye, Keyboard } from "lucide-react"
 import { Button } from "../ui/Button"
 import type { VocabularyItem } from "../../types/vocabulary"
@@ -8,6 +8,12 @@ import { MultipleChoiceQuestion } from "./MultipleChoiceQuestion"
 import { FillBlankQuestion } from "./FillBlankQuestion"
 import { TypingQuestion } from "./TypingQuestion"
 import { recordLearningActivity } from "../../lib/activity/recordLearningActivity"
+import {
+  QUIZ_PROGRESS_SESSION_KEY,
+  clearPracticeSession,
+  loadPracticeSession,
+  savePracticeSession,
+} from "../../lib/practiceSessionStorage"
 
 // ─── Types ─────────────────────────────────────────────────────────────────────
 
@@ -15,6 +21,14 @@ export type PracticeResult = {
   correctIds: string[]
   wrongIds: string[]
   skippedIds: string[]
+}
+
+type QuizProgressSnapshot = {
+  wordIds: string[]
+  practiceType: PracticeType
+  currentIndex: number
+  result: PracticeResult
+  sessionId: string
 }
 
 type QuizPracticeProps = {
@@ -36,22 +50,24 @@ function ProgressBar({
   const percent = total > 0 ? Math.round((current / total) * 100) : 0
   return (
     <div className="w-full">
-      <div className="flex items-center justify-between text-sm">
-        <p className="font-semibold text-ink-DEFAULT">
-          ข้อ {current + 1} / {total}
+      <div className="flex items-center justify-between text-sm mb-2">
+        <p className="font-bold tracking-wide text-ink-secondary uppercase text-[11px]">
+          คำถามที่ {current + 1} / {total}
         </p>
-        <p className="font-semibold text-primary">{percent}%</p>
+        <p className="font-extrabold text-primary">{percent}%</p>
       </div>
-      <div className="mt-2 h-2 overflow-hidden rounded-full bg-slate-100 ring-1 ring-border">
+      <div className="h-3 w-full overflow-hidden rounded-full bg-slate-100 shadow-inner">
         <div
-          className="h-full rounded-full bg-primary transition-all duration-300"
+          className="h-full rounded-full bg-gradient-to-r from-primary to-primary-hover shadow-[inset_0_-2px_4px_rgba(0,0,0,0.1)] transition-all duration-500 ease-out"
           style={{ width: `${percent}%` }}
           role="progressbar"
           aria-valuenow={percent}
           aria-valuemin={0}
           aria-valuemax={100}
           aria-label={`ความคืบหน้า ${percent}%`}
-        />
+        >
+          <div className="h-full w-full bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.2)_50%,transparent_75%,transparent)] bg-[length:1rem_1rem] animate-[progress_1s_linear_infinite]" />
+        </div>
       </div>
     </div>
   )
@@ -87,17 +103,37 @@ export function QuizPractice({
       .filter((w): w is VocabularyItem => w !== undefined)
   }, [wordIds, allWords])
 
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [result, setResult] = useState<PracticeResult>({
+  const savedProgress = loadPracticeSession<QuizProgressSnapshot>(QUIZ_PROGRESS_SESSION_KEY)
+  const canRestoreProgress = Boolean(
+    savedProgress &&
+      savedProgress.practiceType === practiceType &&
+      savedProgress.wordIds.length === wordIds.length &&
+      savedProgress.wordIds.every((id, index) => id === wordIds[index]),
+  )
+
+  const [currentIndex, setCurrentIndex] = useState(() => canRestoreProgress ? savedProgress!.currentIndex : 0)
+  const [result, setResult] = useState<PracticeResult>(() => savedProgress?.result && canRestoreProgress ? savedProgress.result : {
     correctIds: [],
     wrongIds: [],
     skippedIds: [],
   })
   const [sessionId] = useState(
     () =>
-      globalThis.crypto?.randomUUID?.() ??
-      `quiz-${Date.now()}-${Math.random().toString(36).slice(2)}`,
+      savedProgress?.sessionId ??
+        globalThis.crypto?.randomUUID?.() ??
+        `quiz-${Date.now()}-${Math.random().toString(36).slice(2)}`,
   )
+
+  useEffect(() => {
+    if (practiceWords.length === 0) return
+    savePracticeSession<QuizProgressSnapshot>(QUIZ_PROGRESS_SESSION_KEY, {
+      wordIds,
+      practiceType,
+      currentIndex,
+      result,
+      sessionId,
+    })
+  }, [wordIds, practiceType, practiceWords.length, currentIndex, result, sessionId])
 
   const currentWord = practiceWords[currentIndex]
 
@@ -122,6 +158,7 @@ export function QuizPractice({
     })
 
     if (currentIndex + 1 >= practiceWords.length) {
+      clearPracticeSession(QUIZ_PROGRESS_SESSION_KEY)
       onComplete(nextResult)
     } else {
       setResult(nextResult)
@@ -138,6 +175,7 @@ export function QuizPractice({
     }
 
     if (currentIndex + 1 >= practiceWords.length) {
+      clearPracticeSession(QUIZ_PROGRESS_SESSION_KEY)
       onComplete(nextResult)
     } else {
       setResult(nextResult)
@@ -181,7 +219,9 @@ export function QuizPractice({
       </section>
 
       {/* Question card */}
-      <article className="surface-card p-5 sm:p-8">
+      <article className="surface-card p-6 sm:p-10 shadow-xl shadow-primary/5 ring-1 ring-border/50 relative overflow-hidden">
+        {/* Subtle decorative background blob */}
+        <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
         {practiceType === "multiple_choice" && (
           <MultipleChoiceQuestion
             key={currentWord.id}

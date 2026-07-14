@@ -9,6 +9,8 @@ import type { ProgressStats } from "../../types/vocabulary"
 import { calculateProgressStats, resetProgress } from "../../utils/vocabulary"
 import { Button } from "../ui/Button"
 import { StatCard } from "../ui/StatCard"
+import { GuestNotice } from "../auth/GuestNotice"
+import { PageHeader } from "../layout/PageHeader"
 
 type Notice = {
   tone: "success" | "error"
@@ -24,7 +26,7 @@ const statCards = [
   {
     key: "newWords",
     label: "ยังไม่เรียน",
-    hint: "ยังไม่มี progress",
+    hint: "ยังไม่มีความคืบหน้า",
   },
   {
     key: "learningWords",
@@ -38,7 +40,7 @@ const statCards = [
   },
   {
     key: "masteredWords",
-    label: "Mastered",
+    label: "จำได้มั่นใจ",
     hint: "จำได้มั่นใจขึ้น",
   },
 ] satisfies Array<{
@@ -92,7 +94,7 @@ export function ProgressDashboard() {
     refreshStats()
     setNotice({
       tone: "success",
-      message: "รีเซ็ต progress แล้ว",
+      message: "รีเซ็ตความคืบหน้าแล้ว",
     })
   }
 
@@ -108,7 +110,7 @@ export function ProgressDashboard() {
     URL.revokeObjectURL(url)
     setNotice({
       tone: "success",
-      message: "Export progress แล้ว",
+      message: "บันทึกไฟล์ความคืบหน้าแล้ว",
     })
   }
 
@@ -131,12 +133,12 @@ export function ProgressDashboard() {
       refreshStats()
       setNotice({
         tone: "success",
-        message: "นำเข้า progress แล้ว",
+        message: "นำเข้าความคืบหน้าแล้ว",
       })
     } catch {
       setNotice({
         tone: "error",
-        message: "อ่านไฟล์ progress ไม่สำเร็จ",
+        message: "อ่านไฟล์ความคืบหน้าไม่สำเร็จ",
       })
     } finally {
       event.target.value = ""
@@ -144,36 +146,33 @@ export function ProgressDashboard() {
   }
 
   return (
-    <section aria-labelledby="dashboard-heading" className="space-y-6">
-      <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-soft">
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-leaf">
-              Progress Dashboard
-            </p>
-            <h1
-              id="dashboard-heading"
-              className="mt-2 text-3xl font-bold text-ink sm:text-4xl"
-            >
-              Dashboard
-            </h1>
-            <p className="mt-2 max-w-2xl text-base leading-7 text-slate-700">
-              สรุปความคืบหน้าจากคำศัพท์จริงและ progress ที่บันทึกไว้ในเครื่องนี้
-            </p>
+    <section aria-labelledby="dashboard-heading" className="space-y-6 pt-4 sm:pt-6">
+      <GuestNotice onLoginClick={() => window.location.hash = "auth"} />
+      
+      <PageHeader
+        subtitle="ความคืบหน้าของคุณ"
+        title="สรุปผลการเรียน"
+        description="สรุปความคืบหน้าจากคำศัพท์จริงและข้อมูลที่บันทึกไว้ในเครื่องนี้"
+        rightContent={
+          <div className="min-w-36 rounded-2xl border border-primary/20 bg-primary-soft px-5 py-4 text-center">
+            <p className="text-4xl font-black text-primary">{progressPercentage}%</p>
+            <p className="mt-1 text-xs font-bold text-ink-dark uppercase tracking-wide">ความคืบหน้า</p>
           </div>
-          <div className="min-w-36 rounded-lg bg-emerald-50 px-5 py-4 text-center ring-1 ring-emerald-100">
-            <p className="text-4xl font-bold text-leaf">{progressPercentage}%</p>
-            <p className="mt-1 text-sm font-medium text-slate-600">ความคืบหน้า</p>
-          </div>
-        </div>
+        }
+      />
 
-        <div className="mt-5 h-3 overflow-hidden rounded-full bg-slate-100">
+      <div className="mb-10">
+        <div className="mb-2 flex items-center justify-between text-xs font-bold text-ink-dark tracking-wide uppercase">
+          <span>เริ่มต้น</span>
+          <span>จำได้ครบ</span>
+        </div>
+        <div className="h-3 overflow-hidden rounded-full bg-primary-active">
           <div
             aria-label={`ความคืบหน้า ${progressPercentage}%`}
             aria-valuemax={100}
             aria-valuemin={0}
             aria-valuenow={progressPercentage}
-            className="h-full rounded-full bg-leaf transition-all"
+            className="h-full rounded-full bg-primary transition-all duration-300"
             role="progressbar"
             style={{ width: `${progressPercentage}%` }}
           />
@@ -191,43 +190,49 @@ export function ProgressDashboard() {
         ))}
       </div>
 
-      <div className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="mt-8 border-t border-primary/20 pt-8">
+        <h3 className="text-sm font-bold text-ink-dark mb-4">การจัดการข้อมูล</h3>
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Button
-            className="bg-white text-leaf ring-1 ring-slate-200 hover:bg-emerald-50"
+            className="w-full sm:w-auto text-sm"
+            variant="secondary"
             onClick={handleExportProgress}
           >
             <Download aria-hidden="true" className="mr-2 h-4 w-4" />
-            Export progress
+            บันทึกไฟล์ความคืบหน้า
           </Button>
           <Button
-            className="bg-white text-leaf ring-1 ring-slate-200 hover:bg-emerald-50"
+            className="w-full sm:w-auto text-sm"
+            variant="secondary"
             onClick={() => importInputRef.current?.click()}
           >
             <Upload aria-hidden="true" className="mr-2 h-4 w-4" />
-            Import progress
+            นำเข้าไฟล์ความคืบหน้า
           </Button>
           <input
             ref={importInputRef}
             accept="application/json,.json"
-            aria-label="Import progress"
+            aria-label="นำเข้าไฟล์ความคืบหน้า"
             className="sr-only"
             type="file"
             onChange={handleImportProgress}
           />
           <Button
-            className="bg-white text-rose-700 ring-1 ring-rose-200 hover:bg-rose-50"
+            className="w-full sm:w-auto text-sm"
+            variant="danger"
             onClick={handleResetProgress}
           >
             <RotateCcw aria-hidden="true" className="mr-2 h-4 w-4" />
-            Reset progress
+            รีเซ็ตความคืบหน้า
           </Button>
         </div>
 
         {notice ? (
           <p
-            className={`mt-3 text-sm font-medium ${
-              notice.tone === "error" ? "text-rose-700" : "text-emerald-700"
+            className={`mt-3 rounded-lg border px-3 py-2 text-sm font-semibold ${
+              notice.tone === "error"
+                ? "border-rose-200 bg-rose-50 text-rose-700"
+                : "border-primary/20 bg-primary-soft text-primary"
             }`}
           >
             {notice.message}

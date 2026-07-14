@@ -1,5 +1,5 @@
 import { ArrowLeft, Lightbulb, AlertTriangle, Info, MessageCircle, GraduationCap } from "lucide-react"
-import { Container } from "../components/layout/Container"
+import { PageContainer } from "../components/layout/PageContainer"
 import { Button } from "../components/ui/Button"
 import { SpeakButton } from "../components/ui/SpeakButton"
 import { VocabIcon } from "../components/ui/VocabIcon"
@@ -46,7 +46,7 @@ export function WordDetailPage({ onBack, wordId }: WordDetailPageProps) {
 
   if (!word) {
     return (
-      <Container className="py-8 sm:py-10">
+      <PageContainer className="py-8 sm:py-10">
         <Button className="mb-6" variant="secondary" onClick={onBack}>
           <ArrowLeft aria-hidden="true" className="mr-2 h-4 w-4" />
           กลับไปคลังคำศัพท์
@@ -55,7 +55,7 @@ export function WordDetailPage({ onBack, wordId }: WordDetailPageProps) {
           <h1 className="text-2xl font-bold text-ink-DEFAULT">ไม่พบข้อมูลคำศัพท์ที่คุณตามหา</h1>
           <p className="mt-3 text-ink-secondary">{fallbackText}</p>
         </section>
-      </Container>
+      </PageContainer>
     )
   }
 
@@ -65,7 +65,7 @@ export function WordDetailPage({ onBack, wordId }: WordDetailPageProps) {
   const cefrLabel = isAdvanced ? `${word.cefr} (${word.cefr === 'C1' ? 'Advanced' : 'Expert'})` : word.cefr
 
   return (
-    <Container className="py-4 sm:py-6 space-y-6">
+    <PageContainer className="py-4 sm:py-6 space-y-6">
       <div className="sticky top-0 z-20 -mx-4 px-4 sm:mx-0 sm:px-0 py-3 bg-card/90 backdrop-blur-md border-b border-border shadow-sm mb-2">
         <Button variant="secondary" onClick={onBack} className="w-auto shadow-sm">
           <ArrowLeft aria-hidden="true" className="mr-2 h-4 w-4" />
@@ -364,6 +364,6 @@ export function WordDetailPage({ onBack, wordId }: WordDetailPageProps) {
         </div>
       )}
 
-    </Container>
+    </PageContainer>
   )
 }

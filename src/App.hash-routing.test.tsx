@@ -26,7 +26,7 @@ describe("App hash routing", () => {
     render(<App />)
 
     expect(
-      await screen.findByRole("heading", { name: /Flashcard/ }, { timeout: 8000 }),
+      await screen.findByRole("heading", { name: "แฟลชการ์ด" }, { timeout: 8000 }),
     ).toBeInTheDocument()
   }, 10_000)
 })

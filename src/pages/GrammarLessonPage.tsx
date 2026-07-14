@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { AlertCircle, ArrowLeft, Clock, ListChecks, Info, Check, X } from "lucide-react"
-import { Container } from "../components/layout/Container"
+import { PageContainer } from "../components/layout/PageContainer"
 import { Button } from "../components/ui/Button"
 import { SpeakButton } from "../components/ui/SpeakButton"
 import { GrammarPractice } from "../components/grammar/GrammarPractice"
@@ -50,24 +50,24 @@ export function GrammarLessonPage({ onBack, topicId }: Props) {
       active = false
       stopSpeech()
     }
-  }, [topicId])
+  }, [markTopicViewed, topicId])
 
   if (loadState.state === "loading") {
-    return <Container className="py-10"><p aria-live="polite" className="text-ink-secondary">กำลังโหลดบทเรียน...</p></Container>
+    return <PageContainer className="py-10"><p aria-live="polite" className="text-ink-secondary">กำลังโหลดบทเรียน...</p></PageContainer>
   }
 
   if (loadState.state === "error") {
     const notFound = loadState.error === "topic_not_found"
-    return <Container className="py-10"><div className="empty-state mx-auto max-w-xl"><AlertCircle className="mx-auto h-7 w-7 text-amber-600" /><h1 className="mt-3 text-xl font-bold text-ink-DEFAULT">{notFound ? "ไม่พบบทเรียน Grammar นี้" : "โหลดบทเรียนไม่สำเร็จ"}</h1><p className="mt-2 text-ink-secondary">{notFound ? "ลิงก์นี้อาจไม่ถูกต้อง หรือบทเรียนถูกย้ายแล้ว" : "ลองเปิดใหม่อีกครั้ง หรือตรวจสอบการเชื่อมต่อของคุณ"}</p><Button className="mt-5" variant="secondary" onClick={onBack}><ArrowLeft className="mr-2 h-4 w-4" />กลับไปหน้า Grammar</Button></div></Container>
+    return <PageContainer className="py-10"><div className="empty-state mx-auto max-w-xl"><AlertCircle className="mx-auto h-7 w-7 text-amber-600" /><h1 className="mt-3 text-xl font-bold text-ink-DEFAULT">{notFound ? "ไม่พบบทเรียน Grammar นี้" : "โหลดบทเรียนไม่สำเร็จ"}</h1><p className="mt-2 text-ink-secondary">{notFound ? "ลิงก์นี้อาจไม่ถูกต้อง หรือบทเรียนถูกย้ายแล้ว" : "ลองเปิดใหม่อีกครั้ง หรือตรวจสอบการเชื่อมต่อของคุณ"}</p><Button className="mt-5" variant="secondary" onClick={onBack}><ArrowLeft className="mr-2 h-4 w-4" />กลับไปหน้า Grammar</Button></div></PageContainer>
   }
 
   const { topic } = loadState
   const rules = getRules(topic)
 
-  if (showPractice) return <Container className="py-7 sm:py-10"><main className="mx-auto max-w-4xl"><GrammarPractice topic={topic} onQuit={() => setShowPractice(false)} onComplete={({ attempted }) => { if (attempted > 0) markTopicCompleted(topic.id); setShowPractice(false) }} /></main></Container>
+  if (showPractice) return <PageContainer className="py-7 sm:py-10"><main className="mx-auto max-w-4xl"><GrammarPractice topic={topic} onQuit={() => setShowPractice(false)} onComplete={({ attempted }) => { if (attempted > 0) markTopicCompleted(topic.id); setShowPractice(false) }} /></main></PageContainer>
 
   return (
-    <Container className="py-7 sm:py-10">
+    <PageContainer className="py-7 sm:py-10">
       <main className="mx-auto max-w-4xl">
         <button onClick={onBack} className="mb-6 inline-flex min-h-11 items-center text-sm font-semibold text-ink-secondary hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary transition-all active:scale-[0.98]"><ArrowLeft className="mr-1 h-4 w-4" />กลับไปหน้า Grammar</button>
         <PageHeader
@@ -106,6 +106,6 @@ export function GrammarLessonPage({ onBack, topicId }: Props) {
 
         <div className="sticky bottom-0 z-10 bg-card/90 backdrop-blur-md border-t border-primary/20 p-4 -mx-4 sm:mx-0 sm:bg-transparent sm:backdrop-blur-none sm:static sm:p-0 sm:pt-6 sm:mt-2"><Button className="w-full sm:w-auto shadow-md sm:shadow-none" onClick={() => setShowPractice(true)}><span>Start Practice</span></Button></div>
       </main>
-    </Container>
+    </PageContainer>
   )
 }

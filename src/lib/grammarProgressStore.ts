@@ -1,4 +1,5 @@
 import { supabase } from "./supabaseClient"
+import { assertAuthenticatedUser } from "./authUserScope"
 import type { 
   GrammarProgressV2, 
   GrammarTopicProgress, 
@@ -136,6 +137,7 @@ export async function loadGrammarProgress(userId: string | undefined | null): Pr
   // If Auth user and no local, try Supabase
   if (userId) {
     try {
+      await assertAuthenticatedUser(userId)
       const { data, error } = await supabase
         .from("grammar_progress")
         .select("data")
@@ -149,6 +151,7 @@ export async function loadGrammarProgress(userId: string | undefined | null): Pr
           return parsed as GrammarProgressV2
         }
       }
+      if (error) throw error
     } catch (e) {
       console.warn("Failed to fetch grammar progress from Supabase", e)
     }
@@ -174,13 +177,15 @@ export async function saveGrammarProgress(userId: string | undefined | null, pro
   // Sync to Supabase if Auth
   if (userId) {
     try {
-      await supabase
+      await assertAuthenticatedUser(userId)
+      const { error } = await supabase
         .from("grammar_progress")
         .upsert({
           user_id: userId,
           data: JSON.parse(raw), // Postgres JSONB
           updated_at: progress.updatedAt
         }, { onConflict: 'user_id' })
+      if (error) throw error
     } catch (e) {
       console.warn("Failed to sync grammar progress to Supabase", e)
     }

@@ -1,9 +1,11 @@
 import { supabase } from "../supabaseClient";
+import { assertAuthenticatedUser } from "../authUserScope";
 import type { UserProgress } from "../../types/vocabulary";
 import { normalizeUserProgress } from "./vocabularyNormalizer";
 
 export async function loadCloudVocabularyProgress(userId: string): Promise<UserProgress | null> {
   try {
+    await assertAuthenticatedUser(userId);
     const { data, error } = await supabase
       .from("vocabulary_progress")
       .select("data")
@@ -30,6 +32,7 @@ export async function loadCloudVocabularyProgress(userId: string): Promise<UserP
 
 export async function upsertCloudVocabularyProgress(userId: string, progress: UserProgress): Promise<boolean> {
   try {
+    await assertAuthenticatedUser(userId);
     const now = new Date().toISOString();
     progress.updatedAt = now;
     

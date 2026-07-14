@@ -35,8 +35,11 @@ describe("GrammarLessonPage", () => {
     expect(screen.getByText("She works every day.")).toBeInTheDocument()
     expect(screen.getByRole("button", { name: /Start Practice/i })).toBeInTheDocument()
     expect(loadGrammarTopic).toHaveBeenCalledWith("topic-present-simple")
-    expect(JSON.parse(localStorage.getItem("grammar-lesson-progress") ?? "{}").lessonViewed).toEqual(["topic-present-simple"])
-    expect(JSON.parse(localStorage.getItem("grammar-lesson-progress") ?? "{}").lessonCompleted).toEqual([])
+    await waitFor(() => {
+      const progress = JSON.parse(localStorage.getItem("grammar-progress-v2-guest") ?? "{}")
+      expect(progress.topics["topic-present-simple"].lessonViewed).toBe(true)
+      expect(progress.topics["topic-present-simple"].lessonCompleted).toBe(false)
+    })
   })
 
   it("shows a recoverable not-found state", async () => {

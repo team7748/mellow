@@ -17,7 +17,7 @@ const statusLabels: Record<WordStatus, string> = {
 }
 
 const statusStyles: Record<WordStatus, string> = {
-  new: "text-ink-secondary bg-slate-50 border border-border",
+  new: "text-ink-secondary bg-page border border-border",
   learning: "text-mission-orange bg-mission-orangeBg border border-mission-orange/20",
   review: "text-mission-blue bg-mission-blueBg border border-mission-blue/20",
   mastered: "text-primary bg-primary-soft border border-primary/20",
@@ -42,7 +42,7 @@ export function VocabularyCard({
   return (
     <article
       aria-label={`${vocabulary.word} vocabulary card`}
-      className="bg-card rounded-[1.25rem] border border-border flex h-full min-w-0 flex-col p-5 sm:p-6 transition-all duration-300 motion-safe:hover:-translate-y-1 shadow-soft hover:border-primary/30 animate-in fade-in zoom-in-95 duration-500"
+      className="bg-card rounded-2xl border border-border flex h-full min-w-0 flex-col p-5 sm:p-6 transition-all duration-300 motion-safe:hover:-translate-y-1 shadow-soft hover:border-primary/30 motion-safe:animate-in motion-safe:fade-in motion-safe:zoom-in-95 motion-safe:duration-500"
     >
       <div className="flex min-w-0 flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
         <div className="min-w-0">
@@ -61,7 +61,7 @@ export function VocabularyCard({
               {vocabulary.word}
             </h2>
             <SpeakButton
-              className="min-h-10 min-w-10"
+              className="min-h-11 min-w-11"
               label={`ฟังเสียง ${vocabulary.word}`}
               text={vocabulary.word}
             />

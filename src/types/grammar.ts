@@ -63,25 +63,33 @@ export type GrammarCommonMistake = {
   explanationThai: string
 }
 
+export type GrammarComparisonSide = {
+  name?: string
+  useThai: string
+  formula: string
+  example: string
+  translation: string
+}
+
 export type GrammarComparison = {
   id: string
   title: string
   keyDifferenceThai: string
-  otherTense?: string
-  otherForm?: string
-  presentSimple?: string
-  presentContinuous?: string
-  presentPerfect?: string
-  presentPerfectContinuous?: string
-  pastSimple?: string
-  pastContinuous?: string
-  pastPerfect?: string
-  pastPerfectContinuous?: string
-  futureSimple?: string
-  futureContinuous?: string
-  futurePerfect?: string
-  futurePerfectContinuous?: string
-  will?: string
+  otherTense?: GrammarComparisonSide
+  otherForm?: GrammarComparisonSide
+  presentSimple?: GrammarComparisonSide
+  presentContinuous?: GrammarComparisonSide
+  presentPerfect?: GrammarComparisonSide
+  presentPerfectContinuous?: GrammarComparisonSide
+  pastSimple?: GrammarComparisonSide
+  pastContinuous?: GrammarComparisonSide
+  pastPerfect?: GrammarComparisonSide
+  pastPerfectContinuous?: GrammarComparisonSide
+  futureSimple?: GrammarComparisonSide
+  futureContinuous?: GrammarComparisonSide
+  futurePerfect?: GrammarComparisonSide
+  futurePerfectContinuous?: GrammarComparisonSide
+  will?: GrammarComparisonSide
 }
 
 export type GrammarFlashcard = {

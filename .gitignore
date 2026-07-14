@@ -39,3 +39,19 @@ test-results/
 
 # Local Git worktrees
 .worktrees/
+
+# Local AI agent and tool state
+.agents/
+.codex/
+.impeccable/
+
+# Temporary and local files
+vite-dev.pid
+*.pid
+*.bak
+search_copy.txt
+search_sloth.txt
+
+# Python cache
+__pycache__/
+*.py[cod]

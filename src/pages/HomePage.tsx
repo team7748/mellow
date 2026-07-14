@@ -1,5 +1,5 @@
-import { CheckCircle2, Volume2 } from "lucide-react"
-import { Container } from "../components/layout/Container"
+import { useState, useEffect, useRef } from "react"
+import { CheckCircle2, Volume2, ChevronRight, Sparkles } from "lucide-react"
 import { useAuth } from "../hooks/useAuth"
 import { useProfileForAuth } from "../hooks/useProfile"
 import { useLearningActivityLedger } from "../hooks/useLearningActivityLedger"
@@ -12,9 +12,16 @@ import {
   getHomeQuickReview,
 } from "../utils/homeProgress"
 import type { WordStatus } from "../types/vocabulary"
+import { FLASHCARD_SETUP_KEY, DEFAULT_FILTERS } from "../hooks/useUnifiedFlashcardSetup"
+import { PageContainer } from "../components/layout/PageContainer"
+import { Card, CardContent } from "../components/ui/Card"
+import { Button } from "../components/ui/Button"
+import {
+  ReviewSlothMascot,
+} from "../components/mascot/ReviewSlothMascot"
 
-import slothHeroUrl from "../assets/images/home-sloth-reference.png"
-import continueLearningUrl from "../assets/images/continue-learning-reference.png"
+import slothHeroUrl from "../assets/images/home-sloth.png"
+import continueLearningUrl from "../assets/images/image2.2.png"
 import wordsLearnedUrl from "../assets/images/stat-words-learned.png"
 import dayStreakUrl from "../assets/images/stat-day-streak.png"
 import dailyGoalUrl from "../assets/images/stat-daily-goal.png"
@@ -29,16 +36,16 @@ import catPeopleUrl from "../assets/images/category-people.png"
 import catDailyUrl from "../assets/images/category-daily-life.png"
 
 type HomePageProps = {
-  onOpenVocabulary?: () => void
+  onOpenVocabulary?: (category?: string) => void
   onStartFlashcard?: () => void
 }
 
 const categories = [
-  { label: "ท่องเที่ยว", accessibleLabel: "Travel", image: catTravelUrl },
-  { label: "อาหาร", accessibleLabel: "Food", image: catFoodUrl },
-  { label: "การทำงาน", accessibleLabel: "Work", image: catWorkUrl },
-  { label: "ผู้คน", accessibleLabel: "People", image: catPeopleUrl },
-  { label: "ชีวิตประจำวัน", accessibleLabel: "Daily Life", image: catDailyUrl },
+  { label: "ท่องเที่ยว", accessibleLabel: "Travel", filterValue: "Travel", image: catTravelUrl },
+  { label: "อาหาร", accessibleLabel: "Food", filterValue: "Food & Drinks", image: catFoodUrl },
+  { label: "การทำงาน", accessibleLabel: "Work", filterValue: "School & Work", image: catWorkUrl },
+  { label: "ผู้คน", accessibleLabel: "People", filterValue: "People & Family", image: catPeopleUrl },
+  { label: "ชีวิตประจำวัน", accessibleLabel: "Daily Life", filterValue: "Daily Life", image: catDailyUrl },
 ]
 
 const statusLabels: Record<WordStatus, string> = {
@@ -48,32 +55,100 @@ const statusLabels: Record<WordStatus, string> = {
   mastered: "จำได้แล้ว",
 }
 
+/* ─── Animated Number Component ───────────────────────────── */
+function AnimatedNumber({ value, duration = 2500 }: { value: number; duration?: number }) {
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    const end = value
+    if (end === 0) {
+      setCurrent(0)
+      return
+    }
+
+    let startTimestamp: number | null = null
+
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1)
+
+      // easeOutExpo for a nice snappy start and slow finish
+      const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress)
+
+      setCurrent(Math.floor(easeProgress * end))
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step)
+      } else {
+        setCurrent(end)
+      }
+    }
+
+    window.requestAnimationFrame(step)
+  }, [value])
+
+  return <>{current.toLocaleString()}</>
+}
+
+/* ─── Stat Item (reusable) ──────────────────────────────── */
+
+type StatItemProps = {
+  icon: string
+  value: React.ReactNode
+  label: string
+  bgClass: string
+}
+
+function StatItem({ icon, value, label, bgClass }: StatItemProps) {
+  return (
+    <div className="group flex flex-col sm:flex-row flex-1 items-center justify-center sm:justify-start gap-1 sm:gap-3 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] cursor-default text-center sm:text-left">
+      <span className={`flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full border ${bgClass} transition-colors duration-300 group-hover:border-primary/40`}>
+        <img src={icon} alt="" className="h-6 w-6 sm:h-8 sm:w-8 object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[10deg]" />
+      </span>
+      <span className="min-w-0 flex flex-col items-center sm:items-start">
+        <strong className="text-[1.05rem] font-black leading-tight text-ink-dark sm:text-2xl transition-colors duration-300 group-hover:text-primary tabular-nums tracking-tight">
+          {value}
+        </strong>
+        <span className="text-[0.625rem] font-semibold text-ink-secondary sm:text-xs leading-relaxed line-clamp-1 mt-0.5 sm:mt-0 tracking-wide">
+          {label}
+        </span>
+      </span>
+    </div>
+  )
+}
+
+/* ─── Mission Item (Desktop: vertical list / Mobile: compact card) ── */
+
 type MissionItemProps = {
   title: string
   icon: string
   progress: ActivityProgress
   onClick: () => void
+  accentBg?: string
+  barColor?: string
 }
 
-function MissionItem({ title, icon, progress, onClick }: MissionItemProps) {
+function MissionItem({ title, icon, progress, onClick, accentBg = "bg-primary-soft", barColor = "bg-primary" }: MissionItemProps) {
   return (
     <button
       type="button"
       aria-label={`${title} mission: ${progress.completed} of ${progress.target}`}
       onClick={onClick}
-      className="home-mission-item group flex w-full min-w-0 items-center gap-3 px-4 py-3 text-left transition-colors duration-150 hover:bg-primary-soft sm:px-5"
+      className="home-mission-item group flex w-full min-w-0 items-center gap-3 text-left transition-colors duration-150 hover:bg-slate-50 px-3 py-3 sm:gap-4 sm:px-5 sm:py-4 lg:px-6 lg:py-5"
     >
-      <img
-        src={icon}
-        alt=""
-        className="h-11 w-11 shrink-0 object-contain sm:h-12 sm:w-12"
-      />
+      <span className={`flex h-11 w-11 sm:h-13 sm:w-13 shrink-0 items-center justify-center rounded-xl border ${accentBg} transition-transform duration-300 group-hover:scale-105`}>
+        <img
+          src={icon}
+          alt=""
+          className="h-7 w-7 sm:h-9 sm:w-9 object-contain"
+        />
+      </span>
       <span className="min-w-0 flex-1">
-        <span className="flex items-baseline justify-between gap-2">
+        <span className="flex items-baseline justify-between gap-1.5 sm:gap-2">
           <strong className="text-sm font-bold text-ink-dark sm:text-base">
             {title}
           </strong>
-          <span className="shrink-0 text-xs font-semibold text-ink-secondary">
+          <span className="shrink-0 text-[0.6875rem] font-semibold text-ink-secondary sm:text-xs">
             {progress.completed} / {progress.target}
           </span>
         </span>
@@ -83,10 +158,10 @@ function MissionItem({ title, icon, progress, onClick }: MissionItemProps) {
           aria-valuemin={0}
           aria-valuemax={100}
           aria-valuenow={progress.percentage}
-          className="mt-2 block h-1.5 overflow-hidden rounded-full bg-progress-track"
+          className="mt-1.5 block h-[4px] sm:h-[5px] overflow-hidden rounded-full bg-progress-track"
         >
           <span
-            className="block h-full rounded-full bg-primary"
+            className={`block h-full rounded-full ${barColor} transition-all duration-500`}
             style={{ width: `${progress.percentage}%` }}
           />
         </span>
@@ -94,6 +169,8 @@ function MissionItem({ title, icon, progress, onClick }: MissionItemProps) {
     </button>
   )
 }
+
+/* ─── Home Page ──────────────────────────────────────────── */
 
 export function HomePage({
   onOpenVocabulary,
@@ -109,32 +186,53 @@ export function HomePage({
     dueReviewWordsNow: stats.dueReviewWords,
   })
   const quickReview = getHomeQuickReview()
+  // Mascot ref is no longer needed for the new component
   const displayName =
     profile?.display_name?.split(" ")[0] ||
     user?.email?.split("@")[0] ||
     "Student"
+
+  const [greeting, setGreeting] = useState('สวัสดี')
+
+  useEffect(() => {
+    const hour = new Date().getHours()
+    if (hour >= 5 && hour < 12) {
+      setGreeting('สวัสดีตอนเช้า')
+    } else if (hour >= 12 && hour < 14) {
+      setGreeting('สวัสดีตอนกลางวัน')
+    } else if (hour >= 14 && hour < 16) {
+      setGreeting('สวัสดีตอนบ่าย')
+    } else if (hour >= 16 && hour < 19) {
+      setGreeting('สวัสดีตอนเย็น')
+    } else {
+      setGreeting('สวัสดีตอนกลางคืน')
+    }
+  }, [])
 
   const handleContinueLearning = () => {
     const lastActive = localStorage.getItem("last_active_route") || "vocabulary"
     window.location.hash = lastActive
   }
 
-  const openVocabulary = () => {
+  const openVocabulary = (category?: string) => {
     if (onOpenVocabulary) {
-      onOpenVocabulary()
+      onOpenVocabulary(category)
       return
     }
-
-    window.location.hash = "vocabulary"
+    window.location.hash = category ? `vocabulary?category=${encodeURIComponent(category)}` : "vocabulary"
   }
 
-  const startFlashcard = () => {
-    if (onStartFlashcard) {
-      onStartFlashcard()
-      return
+  const startFlashcard = (reviewDue: boolean = false) => {
+    if (reviewDue) {
+      window.location.hash = "flashcard?filterStatus=srs-due-now&mode=reviewForgot"
+    } else {
+      // Still call onStartFlashcard for default routing if provided, to preserve old behavior
+      if (onStartFlashcard) {
+        onStartFlashcard()
+        return
+      }
+      window.location.hash = "flashcard"
     }
-
-    window.location.hash = "flashcard"
   }
 
   const openSpeak = () => {
@@ -142,241 +240,300 @@ export function HomePage({
   }
 
   return (
-    <Container className="home-page py-4 sm:py-6 lg:py-8">
-      <div className="home-dashboard">
-        <section
-          data-home-section="hero"
-          className="home-hero overflow-hidden rounded-2xl border border-border bg-primary-soft"
-        >
-          <div className="home-hero-layout relative grid min-h-[15rem] grid-cols-[minmax(0,1.15fr)_minmax(8rem,0.85fr)] items-stretch sm:min-h-[18rem] sm:grid-cols-[minmax(0,1fr)_minmax(18rem,0.9fr)]">
-            <div className="relative z-10 flex min-w-0 flex-col justify-center px-5 py-7 sm:px-8 lg:px-10">
-              <p className="text-base font-bold text-primary sm:text-lg">
-                สวัสดีตอนเย็น,
-              </p>
-              <div className="home-hero-name-row mt-1 flex min-w-0 items-end gap-2">
-                <h1 className="min-w-0 overflow-wrap-anywhere text-3xl font-black tracking-[-0.03em] text-ink-dark sm:text-5xl lg:text-6xl">
-                  {displayName}!
-                </h1>
-                <img
-                  src={leafAccentUrl}
-                  alt=""
-                  className="home-hero-leaf mb-1 h-7 w-7 shrink-0 object-contain sm:h-10 sm:w-10"
-                />
-              </div>
-              <p className="mt-4 max-w-[24ch] text-sm font-medium leading-6 text-ink-secondary sm:text-base">
-                ยิ่งเรียนรู้ ยิ่งเติบโต
-              </p>
-            </div>
+    <PageContainer className="home-page py-3 sm:py-6 lg:py-8">
 
-            <div className="relative min-w-0 self-end overflow-hidden px-1 pt-4 sm:px-4">
+      {/* ════════════════════════════════════════════════════
+          SECTION 1 — Hero
+          Mobile: open background, text left + sloth right
+          Desktop: card with bg-primary-soft
+          ════════════════════════════════════════════════════ */}
+      <section
+        data-home-section="hero"
+        aria-label="Welcome"
+        className="relative overflow-hidden sm:rounded-t-2xl sm:rounded-b-none sm:border sm:border-b-0 sm:border-primary/10 sm:bg-gradient-to-br sm:from-primary-soft sm:via-white sm:to-primary-muted animate-fade-in-up opacity-0-init"
+      >
+        {/* Hero Content */}
+        <div className="relative flex min-h-[10rem] sm:min-h-[16rem] lg:min-h-[18rem]">
+          {/* Text side */}
+          <div className="relative z-10 flex min-w-0 flex-1 flex-col items-start justify-center text-left py-2 sm:px-8 sm:py-6 lg:px-10">
+            <p className="text-sm font-bold text-primary sm:text-base tracking-wide uppercase -translate-y-1.5 sm:-translate-y-2.5">
+              {greeting},
+            </p>
+            <div className="mt-0.5 sm:mt-1 flex min-w-0 items-end gap-1.5 sm:gap-2">
+              <h1 className="min-w-0 overflow-wrap-anywhere text-[1.75rem] font-black tracking-tight text-ink-dark sm:text-4xl lg:text-[3.25rem] drop-shadow-sm leading-tight">
+                {displayName}!
+              </h1>
               <img
-                src={slothHeroUrl}
-                alt="สลอธกำลังเรียนภาษาอังกฤษ"
-                className="h-full max-h-[17rem] w-full object-contain object-bottom sm:max-h-[20rem]"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section
-          data-home-section="stats"
-          aria-label="Learning statistics"
-          className="home-stats rounded-2xl bg-card px-3 py-4 shadow-soft sm:px-6 sm:py-5"
-        >
-          <div className="home-stats-grid">
-            <div className="home-stat">
-              <span className="home-stat-icon bg-mission-orangeBg">
-                <img
-                  src={dayStreakUrl}
-                  alt=""
-                  className="h-full w-full object-contain"
-                />
-              </span>
-              <span className="min-w-0">
-                <strong className="home-stat-value">
-                  {activity.streakDays}
-                </strong>
-                <span className="home-stat-label">Day streak</span>
-              </span>
-            </div>
-            <div className="home-stat">
-              <span className="home-stat-icon bg-primary-soft">
-                <img
-                  src={dailyGoalUrl}
-                  alt=""
-                  className="h-full w-full object-contain"
-                />
-              </span>
-              <span className="min-w-0">
-                <strong className="home-stat-value">
-                  {activity.dailyGoal.completed}/{activity.dailyGoal.target}
-                </strong>
-                <span className="home-stat-label">Daily goal</span>
-              </span>
-            </div>
-            <div className="home-stat">
-              <span className="home-stat-icon bg-primary-soft">
-              <img
-                src={wordsLearnedUrl}
+                src={leafAccentUrl}
                 alt=""
-                  className="h-full w-full object-contain"
-              />
-              </span>
-              <span className="min-w-0">
-                <strong className="home-stat-value">
-                {stats.learnedWords.toLocaleString()}
-              </strong>
-                <span className="home-stat-label">
-                Words learned
-              </span>
-              </span>
-            </div>
-          </div>
-        </section>
-
-        <section
-          data-home-section="continue"
-          className="home-continue overflow-hidden rounded-2xl border border-border bg-primary-soft"
-        >
-          <div className="home-continue-layout grid min-h-[18rem] grid-cols-[minmax(0,1.05fr)_minmax(8rem,0.95fr)] sm:min-h-[20rem] sm:grid-cols-[minmax(0,1fr)_minmax(12rem,0.9fr)]">
-            <div className="relative z-10 flex min-w-0 flex-col justify-center px-5 py-6 sm:px-7 lg:px-8">
-              <span className="w-fit rounded-full bg-primary-active px-3 py-1 text-xs font-bold text-primary">
-                เรียนต่อ
-              </span>
-              <h2 className="mt-3 text-2xl font-black tracking-[-0.02em] text-ink-dark sm:text-3xl">
-                คำศัพท์ภาษาอังกฤษ
-              </h2>
-              <p className="mt-2 text-sm font-semibold text-ink-secondary sm:text-base">
-                {stats.learnedWords.toLocaleString()} / {stats.totalWords.toLocaleString()} คำ
-              </p>
-              <div
-                role="progressbar"
-                aria-label="ความคืบหน้าการเรียนคำศัพท์"
-                aria-valuemin={0}
-                aria-valuemax={100}
-                aria-valuenow={stats.progressPercentage}
-                className="mt-3 h-2 w-full max-w-56 overflow-hidden rounded-full bg-progress-track"
-              >
-                <div
-                  className="h-full rounded-full bg-primary"
-                  style={{ width: `${stats.progressPercentage}%` }}
-                />
-              </div>
-              <button
-                type="button"
-                onClick={handleContinueLearning}
-                className="mt-5 inline-flex min-h-11 w-fit items-center justify-center rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white transition-colors duration-150 hover:bg-primary-hover active:bg-primary-hover"
-              >
-                เรียนต่อ
-              </button>
-            </div>
-
-            <div className="flex min-w-0 items-end justify-center overflow-hidden px-1 pt-8 sm:px-3 sm:pt-4">
-              <img
-                src={continueLearningUrl}
-                alt=""
-                className="h-full max-h-[18rem] w-full object-contain object-bottom sm:max-h-[20rem]"
+                className="mb-0.5 h-6 w-6 shrink-0 object-contain sm:mb-1 sm:h-9 sm:w-9"
               />
             </div>
+            <p className="mt-2 sm:mt-3 text-[0.8125rem] sm:text-base font-medium leading-relaxed text-ink-secondary">
+              <span className="block sm:inline">ค่อย ๆ เรียนรู้</span>
+              <span className="hidden sm:inline"> </span>
+              <span className="block sm:inline">แล้วภาษาอังกฤษจะง่ายขึ้น</span>
+            </p>
           </div>
-        </section>
 
-        <section
-          data-home-section="missions"
-          aria-labelledby="home-missions-title"
-          className="home-missions self-start overflow-hidden rounded-2xl border border-border bg-card"
-        >
-          <h2
-            id="home-missions-title"
-            className="px-4 pb-3 pt-4 text-lg font-black text-ink-dark sm:px-5 sm:pt-5"
+          {/* Image side */}
+          <div
+            className="relative w-[55%] sm:w-[45%] shrink-0 overflow-hidden"
+            style={{
+              WebkitMaskImage: 'linear-gradient(to right, transparent, black 15%, black 100%)',
+              maskImage: 'linear-gradient(to right, transparent, black 15%, black 100%)'
+            }}
           >
-            Today's missions
-          </h2>
-          <div className="divide-y divide-border">
-            {activity.missions.review.visible ? (
-              <MissionItem
-                title="Review"
-                icon={missionReviewUrl}
-                progress={activity.missions.review}
-                onClick={startFlashcard}
-              />
-            ) : null}
-            <MissionItem
-              title="Flashcards"
-              icon={missionFlashcardUrl}
-              progress={activity.missions.flashcards}
-              onClick={startFlashcard}
-            />
-            <MissionItem
-              title="Speak"
-              icon={missionSpeakUrl}
-              progress={activity.missions.speak}
-              onClick={openSpeak}
+            <img
+              fetchPriority="high"
+              src={slothHeroUrl}
+              alt="สลอธกำลังเรียนภาษาอังกฤษ"
+              className="absolute inset-0 h-full w-full object-cover object-[right_top] translate-x-1 sm:-translate-x-6 translate-y-1 sm:translate-y-5 scale-[1.05]"
             />
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section
-          data-home-section="explore"
-          className="home-explore min-w-0 rounded-2xl border border-border bg-card p-4 sm:p-5"
-        >
-          <h2 className="text-lg font-black text-ink-dark">สำรวจหมวดหมู่</h2>
-          <div className="home-explore-scroll mt-3 pb-1">
-            {categories.map((category) => (
-              <button
-                key={category.accessibleLabel}
-                type="button"
-                aria-label={`เปิดหมวด ${category.accessibleLabel}`}
-                onClick={openVocabulary}
-                className="group flex min-h-28 min-w-[7.25rem] flex-1 flex-col items-center justify-center gap-2 rounded-xl bg-primary-soft px-3 py-3 text-center transition-colors duration-150 hover:bg-primary-active"
-              >
-                <img
-                  src={category.image}
-                  alt=""
-                  className="h-12 w-12 object-contain sm:h-14 sm:w-14"
-                />
-                <span className="text-xs font-bold text-ink sm:text-sm">
-                  {category.label}
+      {/* ════════════════════════════════════════════════════
+          SECTION 2 — Stats Strip
+          Standalone rounded card for all screens
+          ════════════════════════════════════════════════════ */}
+      <Card
+        data-home-section="stats"
+        aria-label="Learning statistics"
+        className="mt-3 sm:mt-0 relative z-10 sm:rounded-t-none sm:rounded-b-2xl border-t-0 sm:border-t sm:border-primary/10 shadow-sm animate-fade-in-up opacity-0-init delay-100 overflow-hidden"
+      >
+        <h2 className="sr-only">สถิติการเรียน</h2>
+        <CardContent className="p-4 sm:p-6 lg:p-8 pt-4 sm:pt-6 grid grid-cols-2 gap-y-6 gap-x-4 sm:flex sm:items-center sm:justify-between sm:gap-0">
+          <StatItem
+            icon={dayStreakUrl}
+            value={<AnimatedNumber value={activity.streakDays} duration={1000} />}
+            label="วันที่เรียนต่อเนื่อง"
+            bgClass="bg-gradient-to-br from-orange-50 to-amber-100 border-amber-200/60"
+          />
+
+          <div className="hidden sm:block mx-2.5 sm:mx-6 h-10 w-px shrink-0 bg-border" />
+
+          <StatItem
+            icon={dailyGoalUrl}
+            value={
+              <span className={activity.dailyGoal.completed >= activity.dailyGoal.target ? "text-primary" : ""}>
+                <span>
+                  <AnimatedNumber value={activity.dailyGoal.completed} duration={2000} />
                 </span>
-              </button>
-            ))}
-          </div>
-        </section>
+                <span className={activity.dailyGoal.completed >= activity.dailyGoal.target ? "" : "text-ink-secondary/60 text-[0.85em] group-hover:text-primary/70 transition-colors"}>
+                  /{activity.dailyGoal.target}
+                </span>
+              </span>
+            }
+            label="เป้าหมายรายวัน"
+            bgClass="bg-gradient-to-br from-blue-50 to-cyan-100 border-cyan-200/60"
+          />
 
-        {quickReview ? (
+          <div className="hidden sm:block mx-2.5 sm:mx-6 h-10 w-px shrink-0 bg-border" />
+
+          <div className="col-span-2 flex justify-center sm:block sm:col-span-1">
+            <StatItem
+              icon={wordsLearnedUrl}
+              value={<AnimatedNumber value={stats.learnedWords} />}
+              label="คำศัพท์ที่เรียนไป"
+              bgClass="bg-gradient-to-br from-green-50 to-emerald-100 border-emerald-200/60"
+            />
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* ════════════════════════════════════════════════════
+          SECTION 3 — Main Content
+          Mobile: single column, missions before explore
+          Tablet & Desktop: two columns
+          ════════════════════════════════════════════════════ */}
+      <div className="mt-4 sm:mt-6 flex flex-col gap-4 sm:gap-6 md:grid md:grid-cols-[minmax(0,1.6fr)_minmax(16rem,1fr)] md:gap-6 lg:gap-7 md:items-start">
+
+        {/* ── Left Column ─────────────────────────────────── */}
+        <div className="flex flex-col gap-4 sm:gap-6 min-w-0">
+
+          {/* Continue Learning Card */}
           <section
-            data-home-section="quick-review"
-            className="home-quick-review self-start rounded-2xl border border-border bg-card p-4 sm:p-5"
+            data-home-section="continue"
+            className="group overflow-hidden rounded-2xl border border-primary/15 bg-gradient-to-br from-[#F4F9EE] via-white to-[#E8F3DB] transition-all duration-300 hover:shadow-md hover:border-primary/30 animate-fade-in-up opacity-0-init delay-200"
           >
-            <h2 className="text-lg font-black text-ink-dark">ทบทวนด่วน</h2>
-            <article className="mt-3 flex min-w-0 items-center gap-3 rounded-xl bg-primary-soft p-3 sm:p-4">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary-active text-primary">
-                <Volume2 aria-hidden="true" className="h-5 w-5" />
-              </span>
-              <div className="min-w-0 flex-1">
-                <div className="flex min-w-0 flex-wrap items-center gap-2">
-                  <strong className="max-w-full overflow-wrap-anywhere text-base text-ink-dark">
-                    {quickReview.word.word}
-                  </strong>
-                  <span className="rounded-full bg-primary-active px-2 py-0.5 text-[0.6875rem] font-bold text-primary">
-                    {quickReview.word.partOfSpeechStandard ?? quickReview.word.partOfSpeech}
-                  </span>
-                </div>
-                <p className="mt-1 overflow-wrap-anywhere text-xs font-medium leading-5 text-ink-secondary sm:text-sm">
-                  {quickReview.word.thaiMeaning}
+            <div className="grid min-h-[12rem] grid-cols-[minmax(0,1.1fr)_minmax(6rem,0.9fr)] sm:min-h-[16rem] sm:grid-cols-[minmax(0,1fr)_minmax(10rem,0.85fr)]">
+              {/* Text */}
+              <div className="relative z-10 flex min-w-0 flex-col justify-center px-5 py-5 sm:px-8 sm:py-6">
+                <span className="w-fit rounded-full bg-primary-active px-2.5 py-0.5 text-[0.6875rem] sm:text-xs font-bold text-primary tracking-wide uppercase">
+                  เรียนต่อ
+                </span>
+                <h2 className="mt-2 sm:mt-3 text-lg sm:text-2xl font-black tracking-tight text-ink-dark">
+                  คำศัพท์ภาษาอังกฤษ
+                </h2>
+                <p className="mt-1 text-sm font-semibold text-ink-secondary tabular-nums">
+                  {stats.learnedWords.toLocaleString()} / {stats.totalWords.toLocaleString()} คำ
                 </p>
+                <div
+                  role="progressbar"
+                  aria-label="ความคืบหน้าการเรียนคำศัพท์"
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-valuenow={stats.progressPercentage}
+                  className="mt-2 h-2 w-full max-w-48 overflow-hidden rounded-full bg-progress-track"
+                >
+                  <div
+                    className="h-full rounded-full bg-gradient-to-r from-primary to-green-400 transition-all duration-500"
+                    style={{ width: `${stats.progressPercentage}%` }}
+                  />
+                </div>
+                <Button
+                  onClick={handleContinueLearning}
+                  variant="primary"
+                  size="lg"
+                  className="group/btn relative overflow-hidden mt-4 sm:mt-5 w-full sm:w-fit"
+                >
+                  <span className="relative z-10 flex items-center justify-center gap-2 w-full">
+                    เรียนต่อ
+                    <ChevronRight className="h-5 w-5 transition-transform duration-300 group-hover/btn:translate-x-1" strokeWidth={2.5} />
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
+                </Button>
               </div>
-              <span
-                className="flex h-8 w-8 shrink-0 items-center justify-center text-success"
-                title={statusLabels[quickReview.status]}
-                aria-label={statusLabels[quickReview.status]}
-              >
-                <CheckCircle2 aria-hidden="true" className="h-6 w-6" />
-              </span>
-            </article>
+
+              {/* Image */}
+              <div className="flex min-w-0 items-center justify-center overflow-visible px-1 pt-4 sm:px-2 sm:pt-2">
+                <img
+                  loading="lazy"
+                  src={continueLearningUrl}
+                  alt=""
+                  className="h-full max-h-[12rem] w-full object-contain object-center scale-[1.15] sm:scale-[1.2] origin-center -translate-x-4 sm:-translate-x-6 group-hover:scale-[1.2] sm:group-hover:scale-[1.25] transition-transform duration-700 ease-out"
+                />
+              </div>
+            </div>
           </section>
-        ) : null}
+
+          {/* Explore Categories — Desktop only in left col; mobile shows below missions */}
+          <section data-home-section="explore" className="hidden sm:block min-w-0 animate-fade-in-up opacity-0-init delay-300">
+            <h2 className="text-lg font-extrabold tracking-tight text-ink-dark">สำรวจหมวดหมู่</h2>
+            <div className="mt-3 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+              <div className="flex w-max gap-4 pb-3 pt-1 animate-marquee hover:[animation-play-state:paused] active:[animation-play-state:paused]">
+                {[...categories, ...categories, ...categories, ...categories].map((category, idx) => (
+                  <button
+                    key={`${category.accessibleLabel}-${idx}`}
+                    type="button"
+                    aria-label={`เปิดหมวด ${category.accessibleLabel}`}
+                    onClick={() => openVocabulary(category.filterValue)}
+                    className="group shrink-0 flex min-h-[6.5rem] w-[8rem] flex-col items-center justify-center gap-2.5 rounded-xl border border-border bg-card shadow-sm px-3 py-3.5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-md active:scale-95"
+                  >
+                    <img
+                      loading="lazy"
+                      src={category.image}
+                      alt=""
+                      className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <span className="text-sm font-bold text-ink-dark tracking-tight">
+                      {category.label}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </section>
+        </div>
+
+        {/* ── Right Column (Sidebar on Desktop) ───────────── */}
+        <div className="flex flex-col gap-4 sm:gap-5 min-w-0">
+
+          {/* Today's Missions */}
+          <section
+            data-home-section="missions"
+            aria-labelledby="home-missions-title"
+            className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow duration-300 hover:shadow-md animate-fade-in-up opacity-0-init delay-200"
+          >
+            <h2
+              id="home-missions-title"
+              className="px-4 sm:px-5 pb-1 pt-4 sm:pt-5 text-base sm:text-lg font-extrabold text-ink-dark tracking-tight"
+            >
+              ภารกิจประจำวัน
+            </h2>
+            <div className="divide-y divide-border/60">
+              {activity.missions.review.visible ? (
+                <MissionItem
+                  title="ทบทวนคำศัพท์"
+                  icon={missionReviewUrl}
+                  progress={activity.missions.review}
+                  onClick={() => startFlashcard(true)}
+                  accentBg="bg-gradient-to-br from-orange-50 to-amber-100 border-amber-200/60"
+                  barColor="bg-gradient-to-r from-orange-400 to-amber-400"
+                />
+              ) : null}
+              <MissionItem
+                title="แฟลชการ์ด"
+                icon={missionFlashcardUrl}
+                progress={activity.missions.flashcards}
+                onClick={() => startFlashcard(false)}
+                accentBg="bg-gradient-to-br from-blue-50 to-cyan-100 border-cyan-200/60"
+                barColor="bg-gradient-to-r from-blue-400 to-cyan-400"
+              />
+              <MissionItem
+                title="ฝึกพูด"
+                icon={missionSpeakUrl}
+                progress={activity.missions.speak}
+                onClick={openSpeak}
+                accentBg="bg-gradient-to-br from-purple-50 to-fuchsia-100 border-fuchsia-200/60"
+                barColor="bg-gradient-to-r from-purple-400 to-fuchsia-400"
+              />
+            </div>
+          </section>
+
+          {/* Explore Categories — Mobile only (shows after missions) */}
+          <section data-home-section="explore-mobile" className="sm:hidden min-w-0 animate-fade-in-up opacity-0-init delay-300">
+            <h2 className="text-base font-extrabold tracking-tight text-ink-dark">สำรวจหมวดหมู่</h2>
+            <div className="mt-2.5 overflow-hidden -mx-4 px-4 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+              <div className="flex w-max gap-2.5 pb-2 pt-1 animate-marquee active:[animation-play-state:paused]">
+                {[...categories, ...categories, ...categories, ...categories].map((category, idx) => (
+                  <button
+                    key={`${category.accessibleLabel}-${idx}`}
+                    type="button"
+                    aria-label={`เปิดหมวด ${category.accessibleLabel}`}
+                    onClick={() => openVocabulary(category.filterValue)}
+                    className="group shrink-0 flex min-h-[5.5rem] w-[5.5rem] flex-col items-center justify-center gap-2 rounded-xl border border-border bg-card shadow-sm px-2 py-3 text-center transition-all duration-200 active:scale-95"
+                  >
+                    <img
+                      loading="lazy"
+                      src={category.image}
+                      alt=""
+                      className="h-10 w-10 object-contain"
+                    />
+                    <span className="text-[0.6875rem] font-bold text-ink-dark leading-tight">
+                      {category.label}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Quick Review */}
+          {/* Quick Review */}
+          {quickReview ? (
+            <section
+              data-home-section="quick-review"
+              className="relative mt-6 sm:mt-8 overflow-visible rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-white to-primary/10 p-4 sm:p-5 transition-all duration-300 hover:shadow-md hover:border-primary/30 animate-fade-in-up opacity-0-init delay-300 group"
+            >
+              <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-center text-center">
+                <div className="review-button-wrapper w-full shrink-0 sm:w-[220px] lg:w-[260px]">
+                  <ReviewSlothMascot reviewCount={stats.dueReviewWords} />
+                  <button
+                    type="button"
+                    onClick={() => startFlashcard(true)}
+                    className="review-button inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-bold tracking-wide text-white shadow-md shadow-primary/30 transition-all hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/40 active:scale-95"
+                  >
+                    เริ่มทบทวน
+                  </button>
+                </div>
+              </div>
+            </section>
+          ) : null}
+        </div>
       </div>
-    </Container>
+    </PageContainer>
   )
 }

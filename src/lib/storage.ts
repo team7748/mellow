@@ -1,13 +1,21 @@
 import type { UserProgress, WordProgress, WordStatus } from "../types/vocabulary"
+import { getActiveUserId, scheduleSync } from "./progress/syncManager"
+import {
+  loadLocalVocabularyProgress,
+  saveLocalVocabularyProgress,
+  clearLocalVocabularyProgress
+} from "./progress/vocabularyLocalStorage"
+import { normalizeUserProgress } from "./progress/vocabularyNormalizer"
 
-export const PROGRESS_STORAGE_KEY = "thai-english-vocab-progress"
 export const PROGRESS_EXPORT_FILENAME = "vocabulary-progress.json"
+export const PROGRESS_STORAGE_KEY = "thai-english-vocab-progress"
 
 export type ProgressImportResult =
   | { ok: true; progress: UserProgress }
   | { ok: false; error: string }
 
 const wordStatuses: WordStatus[] = ["new", "learning", "review", "mastered"]
+const wordDifficulties: NonNullable<WordProgress["difficulty"]>[] = ["forgot", "medium", "known"]
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return Boolean(value && typeof value === "object" && !Array.isArray(value))
@@ -23,21 +31,21 @@ function isWordProgress(value: unknown): value is WordProgress {
   return (
     typeof value.wordId === "string" &&
     wordStatuses.includes(value.status as WordStatus) &&
+    (value.difficulty === undefined || wordDifficulties.includes(value.difficulty as NonNullable<WordProgress["difficulty"]>)) &&
     typeof value.correctCount === "number" &&
     Number.isFinite(value.correctCount) &&
     typeof value.wrongCount === "number" &&
     Number.isFinite(value.wrongCount) &&
     isNullableString(value.lastStudiedAt) &&
-    isNullableString(value.nextReviewAt)
+    isNullableString(value.nextReviewAt) &&
+    typeof value.updatedAt === "string"
   )
 }
 
 function isUserProgress(value: unknown): value is UserProgress {
   if (!isRecord(value)) return false
   if (!Array.isArray(value.learnedWordIds)) return false
-  if (!value.learnedWordIds.every((wordId) => typeof wordId === "string")) {
-    return false
-  }
+  if (!value.learnedWordIds.every((wordId) => typeof wordId === "string")) return false
   if (!isRecord(value.words)) return false
   if (!Object.values(value.words).every(isWordProgress)) return false
 
@@ -53,33 +61,19 @@ export function createEmptyProgress(): UserProgress {
 }
 
 export function loadProgress(): UserProgress {
-  const rawValue = localStorage.getItem(PROGRESS_STORAGE_KEY)
-
-  if (!rawValue) {
-    return createEmptyProgress()
-  }
-
-  try {
-    const parsed = JSON.parse(rawValue) as Partial<UserProgress>
-
-    return {
-      learnedWordIds: Array.isArray(parsed.learnedWordIds)
-        ? parsed.learnedWordIds
-        : [],
-      words: parsed.words && typeof parsed.words === "object" ? parsed.words : {},
-      updatedAt: parsed.updatedAt ?? null,
-    }
-  } catch {
-    return createEmptyProgress()
-  }
+  return loadLocalVocabularyProgress(getActiveUserId())
 }
 
 export function saveProgress(progress: UserProgress) {
-  localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(progress))
+  const userId = getActiveUserId()
+  saveLocalVocabularyProgress(userId, progress)
+  if (userId) {
+    scheduleSync(userId)
+  }
 }
 
 export function clearProgress() {
-  localStorage.removeItem(PROGRESS_STORAGE_KEY)
+  clearLocalVocabularyProgress(getActiveUserId())
 }
 
 export function serializeProgress(progress = loadProgress()) {
@@ -107,7 +101,7 @@ export function parseProgressImport(rawValue: string): ProgressImportResult {
 
   return {
     ok: true,
-    progress: parsed,
+    progress: normalizeUserProgress(parsed),
   }
 }
 
@@ -118,7 +112,11 @@ export function importProgress(rawValue: string): ProgressImportResult {
     return result
   }
 
-  saveProgress(result.progress)
+  const userId = getActiveUserId()
+  saveLocalVocabularyProgress(userId, result.progress, { preserveUpdatedAt: true })
+  if (userId) {
+    scheduleSync(userId)
+  }
 
   return result
 }

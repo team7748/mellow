@@ -1,145 +1,68 @@
-# Grammar Mode specification
+# Grammar Mode Specification (Implemented)
 
 ## Overview
 
-Grammar Mode is a proposed learning area for the existing Speak Mode. It will expose
-the twelve supplied tense topics, beginning with Present Simple and ordered by their
-existing `displayOrder`. This document is a plan, not an implementation.
+Grammar Mode is an integrated learning area within the application. It exposes twelve supplied tense topics (Present Simple through Future Perfect Continuous) based on a structured JSON format. 
 
-## Current system findings
+## Current System Integration
 
-- The React/Vite app uses hash routing in `src/App.tsx`; Speak Mode is `#speak`.
-- `src/pages/SpeakModePage.tsx` is a stateful single-page flow: category selection,
-  then conversation/practice. It currently loads four conversation CSV files through
-  `src/utils/conversationData.ts`.
-- `src/components/speak/CategorySelector.tsx` renders conversation categories as
-  cards. Grammar does not yet exist in that data source or UI.
-- Speak progress uses the separate `speakModeProgress` LocalStorage key.
-- Vocabulary progress uses `thai-english-vocab-progress`; flashcards use the
-  existing vocabulary/SRS stack. Authentication/profile services use Supabase, but
-  the observed Grammar data has no persistence integration.
-- Browser speech is available through the shared SpeakButton/Web Speech API; it is
-  not an audio asset pipeline.
-- The project has Vitest (`npm test`) and `npm run build`; no grammar validator or
-  grammar tests were found.
+- **Routes**:
+  - `/#speak?view=grammar` is used to list Grammar Topics inside Speak Mode.
+  - `/#grammar/:topicId` points to the `GrammarLessonPage` for specific topic learning.
+  - `/#flashcard` handles Unified Flashcard Practice (Vocab + Grammar).
+- **Storage & Progress**:
+  - `grammar-progress-store` in LocalStorage is managed by `src/hooks/useGrammarProgress.ts` to track attempts, completion, mistakes, and spaced-repetition (SRS).
+  - Vocabulary progress (`thai-english-vocab-progress`) remains separate, but the unified `srsService` handles both entity types using string IDs.
+- **Answer Checking & Speak Mode Integration**:
+  - `InteractivePracticePlayer.tsx` sends answers to `api/lib/speakAnswerEvaluator.ts` (powered by Gemini AI) to detect `grammar_error`.
+  - When a grammar error is detected in Speak Mode, it maps the Speak Category (via `src/data/speak/grammarMapping.ts`) to a specific Grammar Topic.
+  - Users are offered a "Practice Grammar" button, which opens `GrammarMiniPractice.tsx` (a 3-question targeted flashcard session) without losing conversation context.
+- **Audio**:
+  - Web Speech API is used. Grammar Flashcards do **not** autoplay audio per specifications.
 
-## Goals
-
-- Put Grammar first in the Speak Mode category selection, above existing scenarios.
-- Present a grammar topic list and lessons based only on the supplied JSON data.
-- Use `stage`, `difficulty`, `displayOrder`, and `prerequisites`; do not introduce
-  CEFR for Grammar Mode.
-- Keep learner progress, mistakes, flashcard scheduling, and content separate.
-- Support responsive, accessible, dark-mode-compatible learning flows.
-
-## Non-goals
-
-- No new bottom-navigation item.
-- No change to the current Speak, vocabulary, flashcard, progress, or JSON behavior
-  in this documentation pass.
-- No invented grammar content, fabricated AI feedback, or content edits to make UI
-  implementation easier.
-
-## User flow
-
-1. Learner opens Speak Mode (`#speak`).
-2. Grammar appears as the first category card.
-3. Learner opens the grammar topic list, ordered by `displayOrder` and grouped by
-   `categoryId` (present, past, future).
-4. Learner opens a topic lesson, studies explanations/examples, listens on demand,
-   then practises.
-5. Answer results update independent grammar progress and, where applicable,
-   mistakes and flashcard/SRS records.
-6. Learner can return to the list or resume later without altering source JSON.
-
-## Grammar placement in Speak Mode
-
-Grammar is a peer of Morning Routine, Customer Service, Job Interview, Daily Life,
-and other scenarios—not a navigation destination. The future category adapter should
-prepend a stable Grammar category definition at the selector boundary and preserve
-the existing conversation category ordering unchanged.
-
-## Information architecture
+## Architecture
 
 ```text
-Speak Mode
-├─ Grammar (first category)
-│  ├─ Present / Past / Future topic groups
-│  ├─ Grammar lesson
-│  ├─ Practice
-│  └─ Grammar flashcard review
-└─ Existing conversation categories and practice
+App Routes
+├─ /#speak (Speak Mode)
+│  ├─ Conversation Practice
+│  └─ Grammar Mini Practice (Interrupt when grammar mistakes occur)
+├─ /#speak?view=grammar (Topic List)
+├─ /#grammar/:topicId (Grammar Lesson)
+│  ├─ Rule Explanations
+│  ├─ Interactive Examples
+│  └─ End-of-Lesson Flashcard Practice
+└─ /#flashcard (Flashcard & SRS)
+   └─ Unified Flashcards (Mixed Vocab + Grammar)
 ```
 
-## Proposed routes
+## Page Structure and Component Architecture (Realized)
 
-The current application only recognizes whole-page hash routes. A future change
-should preserve `#speak` and encode Grammar subviews either as a supported hash
-parameter (`#speak?view=grammar&topic=<id>`) or through a router migration. The
-choice must be made during implementation; neither route exists today. Direct URL,
-refresh, back, and forward behavior are acceptance requirements.
+- `GrammarLessonPage.tsx`: Renders the topic lesson, rules, structures, and common mistakes.
+- `FlashcardPractice.tsx` & `SwipeableCard.tsx`: Upgraded to handle `UnifiedFlashcard` (both Vocab and Grammar types natively).
+- `GrammarMiniPractice.tsx`: Dynamically generates and selects 3 flashcards for quick practice inside Speak Mode.
+- `useUnifiedFlashcardSetup.ts`: Engine for loading, parsing, and merging Vocabulary and Grammar cards dynamically without duplicating datasets.
+- `grammarTopicRegistry`: Isolates source lookup and lazy-loads JSON chunks via dynamic imports.
 
-## Page structure and component architecture
+## Data and Answer-Checking Flow
 
-Proposed units, to be created only in a future implementation:
+The application parses root JSON files via `grammarTopicRegistry`.
+During Speak Mode practice, answers are validated via the backend API `/api/speak-answer-check`.
+The evaluator distinguishes between meaning errors, unnatural phrasing, real grammatical errors, and minor spelling typos (typos do not force grammar practice).
 
-- `GrammarCategoryCard`: entry point rendered before conversation cards.
-- `GrammarTopicList`: registry-driven grouping, prerequisites, and progress summary.
-- `GrammarLessonPage`: renders declared lesson sections from a loaded topic.
-- `GrammarPracticePlayer` and answer-checking service: render question type and
-  return an explainable evaluation result.
-- `grammarRegistry`, `grammarLoader`, and schema validator: isolate source lookup,
-  ordering, validation, and errors from React components.
-- Grammar progress/mistake/SRS repositories: isolate mutable learner state from
-  immutable source content.
+## Progress, Flashcard, and SRS Flow
 
-## Data and answer-checking flow
+Grammar flashcards are dynamically generated on-the-fly (`generateGrammarFlashcards.ts`) from the base JSON rules and sentences, mapping directly into standard card shapes (`rule`, `fill_blank`, `correct_or_incorrect`, etc.).
+When users complete a grammar flashcard, `useGrammarProgress` handles updating pattern mastery, while `srsService` calculates intervals (Again/Hard/Good/Easy).
 
-The future registry enumerates stable topic IDs and source file locations. The loader
-lazy-loads a requested topic, validates it, and returns a typed result. The UI renders
-only that result. Practice answer checking should normalize harmless punctuation,
-capitalization, and contractions where the question permits; open answers must not
-use exact-string equality alone. A result includes correctness, correction when
-available, explanation, and related topic reference. AI feedback is allowed only
-when an actual AI-backed service is configured.
+## Known Limitations
 
-## Progress, flashcard, and SRS flow
+- **Guest Only Validation**: Backend persistence (Supabase) for Grammar Progress is not yet linked. Progress relies strictly on LocalStorage.
+- **Grammar Generation Variance**: Flashcards are generated dynamically from arrays. If JSON arrays are small, some card variations might feel repetitive.
 
-Grammar progress keys must reference stable topic/question/card IDs, never mutate
-JSON. A separate namespace records attempts, completion, accuracy, mistakes, and
-review state. Grammar flashcards should reuse an adapter to the established SRS
-concepts (Again/Hard/Good/Easy) without mixing vocabulary and grammar identifiers.
-Guest LocalStorage state and authenticated persistence require explicit migration and
-ownership rules before any Supabase write is added.
+## Acceptance Status
 
-## Loading, empty, and error states
-
-- Loading: show an accessible status while a category or topic loads.
-- Empty: explain that no eligible topics are available and offer return to Speak.
-- Error: retain navigation, show a concise retry action, and do not expose internal
-  parse or server details. A malformed topic must not crash the rest of Speak Mode.
-
-## Mobile requirements and accessibility
-
-Use the existing mobile-first card layout, one-column topic/lesson flow, readable
-Thai guidance, touch targets, keyboard-visible focus, semantic headings, labelled
-controls, status announcements, non-color-only correctness signals, reduced motion,
-and existing dark-mode tokens. Do not rely on wide tables on mobile.
-
-## Security considerations
-
-Treat JSON as public content only; do not store user data in it. Validate fetched or
-imported data before rendering. Sanitize user-entered answers before display, avoid
-unnecessary HTML injection, protect authenticated grammar progress with Supabase RLS
-before persistence, and keep client error messages non-sensitive.
-
-## Acceptance criteria
-
-- Grammar is first in Speak Mode and existing categories remain available.
-- The list contains all valid registered tense topics in display order.
-- Lessons, practice, flashcards, and progress read the registry/content state rather
-  than hardcoded duplicated grammar text.
-- Invalid/missing data fails locally with a recoverable UI state.
-- Grammar does not become a bottom-navigation item and does not introduce CEFR.
-- Desktop, tablet, mobile, keyboard, screen-reader, dark-mode, guest, and auth
-  behavior have automated or documented manual coverage before release.
+- [x] Grammar is integrated natively.
+- [x] Content is loaded from JSON registry.
+- [x] Flashcards and SRS track grammar independently.
+- [x] Speak Mode recommends grammar on mistakes without disrupting the conversational flow.

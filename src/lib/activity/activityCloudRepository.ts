@@ -3,6 +3,7 @@ import type {
   LearningActivityLedger,
 } from "./activityTypes"
 import { supabase } from "../supabaseClient"
+import { assertAuthenticatedUser } from "../authUserScope"
 import {
   normalizeActivityEvent,
   normalizeActivityLedger,
@@ -59,6 +60,7 @@ export function activityRowToEvent(row: unknown): LearningActivityEvent | null {
 export async function loadCloudActivityLedger(
   userId: string,
 ): Promise<LearningActivityLedger> {
+  await assertAuthenticatedUser(userId)
   const { data, error } = await supabase
     .from("learning_activity_events")
     .select(
@@ -79,6 +81,7 @@ export async function upsertCloudActivityEvents(
   userId: string,
   events: LearningActivityEvent[],
 ): Promise<void> {
+  await assertAuthenticatedUser(userId)
   const normalized = normalizeActivityLedger({
     version: 1,
     events,

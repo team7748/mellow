@@ -40,10 +40,13 @@ vi.mock("../../lib/activity/recordLearningActivity", () => ({
 }))
 
 vi.mock("./SwipeableCard", () => ({
-  SwipeableCard: ({ onFlip }: { onFlip: () => void }) => (
-    <button type="button" onClick={onFlip}>
-      test-flip
-    </button>
+  SwipeableCard: ({ onFlip, isFlipped }: { onFlip: () => void; isFlipped: boolean }) => (
+    <>
+      <button type="button" onClick={onFlip}>
+        test-flip
+      </button>
+      <span data-testid="card-side">{isFlipped ? "back" : "front"}</span>
+    </>
   ),
 }))
 
@@ -86,6 +89,16 @@ describe("FlashcardPractice activity events", () => {
     mocks.updateWordProgress.mockReturnValue({})
     mocks.processSrsAnswer.mockReturnValue({})
     mocks.recordLearningActivity.mockReturnValue({})
+  })
+
+  it("toggles the card back to the front when the card is clicked twice", () => {
+    renderPractice()
+
+    expect(screen.getByTestId("card-side")).toHaveTextContent("front")
+    fireEvent.click(screen.getByRole("button", { name: "test-flip" }))
+    expect(screen.getByTestId("card-side")).toHaveTextContent("back")
+    fireEvent.click(screen.getByRole("button", { name: "test-flip" }))
+    expect(screen.getByTestId("card-side")).toHaveTextContent("front")
   })
 
   it("records a correct vocabulary Flashcard after progress is saved", () => {

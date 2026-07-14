@@ -22,6 +22,9 @@ export default {
         border: {
           DEFAULT: "#E3E7DD",
         },
+        neutral: {
+          soft: "#F8FAFC",
+        },
         progress: {
           track: "#DDE6D5",
         },

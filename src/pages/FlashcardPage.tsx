@@ -1,19 +1,33 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { FlashcardPractice, type FlashcardSessionResult } from "../components/flashcard/FlashcardPractice"
 import { FlashcardSetup } from "../components/flashcard/FlashcardSetup"
 import { FlashcardSummary } from "../components/flashcard/FlashcardSummary"
-import { Container } from "../components/layout/Container"
+import { PageContainer } from "../components/layout/PageContainer"
 import { GuestNotice } from "../components/auth/GuestNotice"
 import { saveSessionLog } from "../utils/srsService"
 import { FLASHCARD_SETUP_KEY } from "../hooks/useUnifiedFlashcardSetup"
 import type { UnifiedFlashcard } from "../types/flashcardItem"
+import {
+  FLASHCARD_PAGE_SESSION_KEY,
+  FLASHCARD_PROGRESS_SESSION_KEY,
+  clearPracticeSession,
+  loadPracticeSession,
+  savePracticeSession,
+} from "../lib/practiceSessionStorage"
 
 type FlashcardMode = "setup" | "practice" | "summary"
 
+type FlashcardPageSession = {
+  mode: "practice"
+  practiceCards: UnifiedFlashcard[]
+  sessionResult: FlashcardSessionResult
+}
+
 export function FlashcardPage() {
-  const [mode, setMode] = useState<FlashcardMode>("setup")
-  const [practiceCards, setPracticeCards] = useState<UnifiedFlashcard[]>([])
-  const [sessionResult, setSessionResult] = useState<FlashcardSessionResult>({
+  const savedSession = loadPracticeSession<FlashcardPageSession>(FLASHCARD_PAGE_SESSION_KEY)
+  const [mode, setMode] = useState<FlashcardMode>(() => savedSession?.mode ?? "setup")
+  const [practiceCards, setPracticeCards] = useState<UnifiedFlashcard[]>(() => savedSession?.practiceCards ?? [])
+  const [sessionResult, setSessionResult] = useState<FlashcardSessionResult>(() => savedSession?.sessionResult ?? {
     forgot: [],
     medium: [],
     known: [],
@@ -26,7 +40,19 @@ export function FlashcardPage() {
     srsEnabled: false,
   })
 
+  useEffect(() => {
+    if (mode === "practice" && practiceCards.length > 0) {
+      savePracticeSession<FlashcardPageSession>(FLASHCARD_PAGE_SESSION_KEY, {
+        mode,
+        practiceCards,
+        sessionResult,
+      })
+    }
+  }, [mode, practiceCards, sessionResult])
+
   function handleStart(cards: UnifiedFlashcard[]) {
+    clearPracticeSession(FLASHCARD_PAGE_SESSION_KEY)
+    clearPracticeSession(FLASHCARD_PROGRESS_SESSION_KEY)
     setPracticeCards(cards)
     setSessionResult({
       forgot: [],
@@ -44,6 +70,8 @@ export function FlashcardPage() {
   }
 
   function handleComplete(result: FlashcardSessionResult) {
+    clearPracticeSession(FLASHCARD_PAGE_SESSION_KEY)
+    clearPracticeSession(FLASHCARD_PROGRESS_SESSION_KEY)
     setSessionResult(result)
     
     let modeString = "custom-selection"
@@ -85,10 +113,14 @@ export function FlashcardPage() {
   }
 
   function handleChangeFilters() {
+    clearPracticeSession(FLASHCARD_PAGE_SESSION_KEY)
+    clearPracticeSession(FLASHCARD_PROGRESS_SESSION_KEY)
     setMode("setup")
   }
 
   function handlePracticeAgain() {
+    clearPracticeSession(FLASHCARD_PAGE_SESSION_KEY)
+    clearPracticeSession(FLASHCARD_PROGRESS_SESSION_KEY)
     setSessionResult({
       forgot: [],
       medium: [],
@@ -107,6 +139,8 @@ export function FlashcardPage() {
   function handleReviewMissed() {
     const missedIds = sessionResult.srsEnabled ? sessionResult.srsAgain : sessionResult.forgot
     if (missedIds.length > 0) {
+      clearPracticeSession(FLASHCARD_PAGE_SESSION_KEY)
+      clearPracticeSession(FLASHCARD_PROGRESS_SESSION_KEY)
       const missedCards = practiceCards.filter(c => missedIds.includes(c.id))
       setPracticeCards(missedCards)
       setSessionResult({
@@ -126,6 +160,8 @@ export function FlashcardPage() {
   }
 
   function handleBackToVocabulary() {
+    clearPracticeSession(FLASHCARD_PAGE_SESSION_KEY)
+    clearPracticeSession(FLASHCARD_PROGRESS_SESSION_KEY)
     window.location.hash = "vocabulary"
   }
 
@@ -140,19 +176,19 @@ export function FlashcardPage() {
 
   if (mode === "practice") {
     return (
-      <Container className="py-6 sm:py-10">
+      <PageContainer className="py-6 sm:py-10">
         <FlashcardPractice
           cards={practiceCards}
           onComplete={handleComplete}
           onBack={handleChangeFilters}
         />
-      </Container>
+      </PageContainer>
     )
   }
 
   // mode === "summary"
   return (
-    <Container className="py-6 sm:py-10">
+    <PageContainer className="py-6 sm:py-10">
       <GuestNotice onLoginClick={() => window.location.hash = "auth"} />
       <div className="mt-6">
         <FlashcardSummary
@@ -164,6 +200,6 @@ export function FlashcardPage() {
           onBackToVocabulary={handleBackToVocabulary}
         />
       </div>
-    </Container>
+    </PageContainer>
   )
 }

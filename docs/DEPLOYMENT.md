@@ -43,6 +43,12 @@ npm run preview
 6. ตั้งค่า output directory เป็น `dist`
 7. กด Deploy
 
+## Speak Mode AI checker
+
+Deploy this project on Vercel so the `api/speak-answer-check.ts` Serverless Function is available. In Vercel Project Settings → Environment Variables, add `GEMINI_API_KEY` and optionally `GEMINI_MODEL=gemini-2.5-flash-lite` for Production, Preview, and Development. Never create a `VITE_GEMINI_API_KEY` variable.
+
+For local endpoint testing, run `npx vercel dev`. Use `npm run dev` for frontend-only work; its Speak Mode checker needs a mocked endpoint unless the app is served by Vercel.
+
 ## Pre-Deploy Checklist
 
 - รัน `npm run build` ผ่าน
@@ -57,4 +63,3 @@ npm run preview
 ## Notes
 
 โปรเจกต์นี้เป็น static frontend app จึงเหมาะกับ Netlify และ Vercel โดยไม่ต้องตั้งค่า server เพิ่ม
-

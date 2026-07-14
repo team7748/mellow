@@ -1,164 +1,222 @@
-import { useMemo, useState } from "react"
-import { CheckCircle2, RotateCcw, XCircle } from "lucide-react"
-import { Container } from "../components/layout/Container"
-import { Button } from "../components/ui/Button"
-import type { VocabularyItem } from "../types/vocabulary"
-import {
-  createQuizQuestion,
-  saveQuizResult,
-  type QuizQuestion,
-} from "../utils/quiz"
+import { useEffect, useMemo, useState } from "react"
+import { QuizPractice, type PracticeResult } from "../components/quiz/QuizPractice"
+import { QuizSetup } from "../components/quiz/QuizSetup"
+import { QuizSummary } from "../components/quiz/QuizSummary"
+import { PageContainer } from "../components/layout/PageContainer"
+import type { PracticeType } from "../hooks/useQuizSetup"
+import type { VocabCategory } from "../types/vocabulary"
+import { categoryThaiLabels } from "../data/categoryIconMap"
 import { getAllVocabulary } from "../utils/vocabulary"
+import {
+  QUIZ_PAGE_SESSION_KEY,
+  QUIZ_PROGRESS_SESSION_KEY,
+  clearPracticeSession,
+  loadPracticeSession,
+  savePracticeSession,
+} from "../lib/practiceSessionStorage"
 
-type QuizPageProps = {
-  words?: VocabularyItem[]
-  random?: () => number
+type QuizMode = "setup" | "practice" | "summary"
+
+type SessionInfo = {
+  category: "all" | VocabCategory
+  practiceType: PracticeType
+  wordIds: string[]
 }
 
-type AnswerState = {
-  selectedAnswer: string
-  isCorrect: boolean
+type QuizPageSession = {
+  mode: "practice"
+  session: SessionInfo
+  practiceResult: PracticeResult
 }
 
-function getQuestionTypeLabel(question: QuizQuestion) {
-  if (question.type === "english-to-thai") return "อังกฤษ -> ไทย"
-  if (question.type === "thai-to-english") return "ไทย -> อังกฤษ"
+export function QuizPage() {
+  const savedSession = loadPracticeSession<QuizPageSession>(QUIZ_PAGE_SESSION_KEY)
+  const [mode, setMode] = useState<QuizMode>(() => savedSession?.mode ?? "setup")
+  const [session, setSession] = useState<SessionInfo>(() => savedSession?.session ?? {
+    category: "all",
+    practiceType: "multiple_choice",
+    wordIds: [],
+  })
+  const [practiceResult, setPracticeResult] = useState<PracticeResult>(() => savedSession?.practiceResult ?? {
+    correctIds: [],
+    wrongIds: [],
+    skippedIds: [],
+  })
 
-  return "ประโยค -> คำศัพท์"
-}
+  useEffect(() => {
+    if (mode === "practice" && session.wordIds.length > 0) {
+      savePracticeSession<QuizPageSession>(QUIZ_PAGE_SESSION_KEY, {
+        mode,
+        session,
+        practiceResult,
+      })
+    }
+  }, [mode, session, practiceResult])
 
-export function QuizPage({ words = getAllVocabulary(), random }: QuizPageProps) {
-  const [questionIndex, setQuestionIndex] = useState(0)
-  const [answerState, setAnswerState] = useState<AnswerState | null>(null)
-  const question = useMemo(
-    () => createQuizQuestion(words, { random }),
-    [words, random, questionIndex],
-  )
+  // Prevent getting stuck on practice/summary if no session (e.g. refresh)
+  useEffect(() => {
+    if (mode !== "setup" && session.wordIds.length === 0) {
+      setMode("setup")
+    }
+  }, [mode, session.wordIds.length])
 
-  function answerQuestion(selectedAnswer: string) {
-    if (!question || answerState) return
+  const allWords = useMemo(() => getAllVocabulary(), [])
 
-    const isCorrect = selectedAnswer === question.correctAnswer
-    setAnswerState({ selectedAnswer, isCorrect })
-    saveQuizResult({
-      wordId: question.wordId,
-      isCorrect,
-      selectedAnswer,
-      correctAnswer: question.correctAnswer,
-      answeredAt: new Date().toISOString(),
-    })
+  // Compute category word count for summary
+  const totalAvailableWords = useMemo(() => {
+    if (session.category === "all") return allWords.length
+    const cat = session.category
+    return allWords.filter((w) =>
+      (w.category ?? []).includes(cat),
+    ).length
+  }, [session.category, allWords])
+
+  // Build missed word labels for summary
+  const missedWordLabels = useMemo(() => {
+    const missedIds = new Set([
+      ...practiceResult.wrongIds,
+      ...practiceResult.skippedIds,
+    ])
+    const wordMap = new Map(allWords.map((w) => [w.id, w]))
+    return Array.from(missedIds)
+      .map((id) => wordMap.get(id))
+      .filter((w) => w !== undefined)
+      .map((w) => ({ word: w.word, meaning: w.thaiMeaning }))
+  }, [practiceResult, allWords])
+
+  function handleStart(wordIds: string[]) {
+    clearPracticeSession(QUIZ_PAGE_SESSION_KEY)
+    clearPracticeSession(QUIZ_PROGRESS_SESSION_KEY)
+    // Read current setup from the QuizSetup component via localStorage
+    let category: "all" | VocabCategory = "all"
+    let practiceType: PracticeType = "multiple_choice"
+    try {
+      const stored = localStorage.getItem("vocabulary_practice_current_session")
+      if (stored) {
+        const parsed = JSON.parse(stored)
+        category = parsed.selectedCategory ?? "all"
+        practiceType = parsed.practiceType ?? "multiple_choice"
+      }
+    } catch {
+      // ignore
+    }
+
+    setSession({ category, practiceType, wordIds })
+    setPracticeResult({ correctIds: [], wrongIds: [], skippedIds: [] })
+    setMode("practice")
   }
 
-  function goToNextQuestion() {
-    setAnswerState(null)
-    setQuestionIndex((index) => index + 1)
+  function handleComplete(result: PracticeResult) {
+    clearPracticeSession(QUIZ_PAGE_SESSION_KEY)
+    clearPracticeSession(QUIZ_PROGRESS_SESSION_KEY)
+    setPracticeResult(result)
+    setMode("summary")
   }
 
-  if (!question) {
+  function handleChangeCategory() {
+    clearPracticeSession(QUIZ_PAGE_SESSION_KEY)
+    clearPracticeSession(QUIZ_PROGRESS_SESSION_KEY)
+    setMode("setup")
+  }
+
+  function handlePracticeAgain() {
+    clearPracticeSession(QUIZ_PAGE_SESSION_KEY)
+    clearPracticeSession(QUIZ_PROGRESS_SESSION_KEY)
+    setPracticeResult({ correctIds: [], wrongIds: [], skippedIds: [] })
+    setMode("practice")
+  }
+
+  function handleRandomNewSet() {
+    clearPracticeSession(QUIZ_PAGE_SESSION_KEY)
+    clearPracticeSession(QUIZ_PROGRESS_SESSION_KEY)
+    // Re-shuffle from same category
+    const categoryWordsForShuffle =
+      session.category === "all"
+        ? allWords
+        : allWords.filter((w) => {
+            const cat = session.category
+            return cat !== "all" && (w.category ?? []).includes(cat)
+          })
+
+    const shuffled = [...categoryWordsForShuffle]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+
+    const newIds = shuffled.slice(0, Math.min(20, shuffled.length)).map((w) => w.id)
+    setSession((prev) => ({ ...prev, wordIds: newIds }))
+    setPracticeResult({ correctIds: [], wrongIds: [], skippedIds: [] })
+    setMode("practice")
+  }
+
+  function handleReviewMissed() {
+    const missedIds = [
+      ...practiceResult.wrongIds,
+      ...practiceResult.skippedIds,
+    ]
+    if (missedIds.length > 0) {
+      clearPracticeSession(QUIZ_PAGE_SESSION_KEY)
+      clearPracticeSession(QUIZ_PROGRESS_SESSION_KEY)
+      setSession((prev) => ({ ...prev, wordIds: missedIds }))
+      setPracticeResult({ correctIds: [], wrongIds: [], skippedIds: [] })
+      setMode("practice")
+    }
+  }
+
+  function handleBackToHome() {
+    clearPracticeSession(QUIZ_PAGE_SESSION_KEY)
+    clearPracticeSession(QUIZ_PROGRESS_SESSION_KEY)
+    window.location.hash = ""
+  }
+
+  function handleBackToVocabulary() {
+    clearPracticeSession(QUIZ_PAGE_SESSION_KEY)
+    clearPracticeSession(QUIZ_PROGRESS_SESSION_KEY)
+    window.location.hash = "vocabulary"
+  }
+
+  if (mode === "setup") {
+    return <QuizSetup onStart={handleStart} onBackToHome={handleBackToHome} />
+  }
+
+  if (mode === "practice") {
     return (
-      <Container className="py-8 sm:py-10">
-        <section className="rounded-lg border border-dashed border-slate-300 bg-white p-8 text-center shadow-sm">
-          <p className="text-sm font-semibold uppercase tracking-wide text-leaf">
-            Quiz Mode
-          </p>
-          <h1 className="mt-2 text-3xl font-bold text-ink">
-            Quiz ยังไม่พร้อม
-          </h1>
-          <p className="mt-3 text-slate-600">
-            ต้องมีคำศัพท์อย่างน้อย 4 คำที่สร้างตัวเลือกไม่ซ้ำกันได้
-          </p>
-        </section>
-      </Container>
+      <PageContainer className="py-6 sm:py-10">
+        <QuizPractice
+          wordIds={session.wordIds}
+          practiceType={session.practiceType}
+          onComplete={handleComplete}
+          onBack={handleChangeCategory}
+        />
+      </PageContainer>
     )
   }
 
+  // mode === "summary"
+  const categoryLabel =
+    session.category === "all"
+      ? "ทุกหมวดหมู่"
+      : categoryThaiLabels[session.category] ?? session.category
+
   return (
-    <Container className="py-8 sm:py-10">
-      <section className="mb-6">
-        <p className="text-sm font-semibold uppercase tracking-wide text-leaf">
-          Quiz Mode
-        </p>
-        <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <h1 className="text-3xl font-bold text-ink sm:text-4xl">
-              Quiz Mode
-            </h1>
-            <p className="mt-2 max-w-2xl text-base leading-7 text-slate-700">
-              เลือกคำตอบที่ถูกต้องจากข้อมูลคำศัพท์จริง
-            </p>
-          </div>
-          <div className="rounded-lg bg-white px-4 py-3 text-center shadow-sm ring-1 ring-slate-200 sm:min-w-28">
-            <p className="text-sm font-semibold text-ink">
-              {getQuestionTypeLabel(question)}
-            </p>
-            <p className="text-xs font-medium text-slate-500">4 ตัวเลือก</p>
-          </div>
-        </div>
-      </section>
-
-      <article className="rounded-lg border border-slate-200 bg-white p-6 shadow-soft">
-        <p className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-          Question
-        </p>
-        <h2 className="mt-4 text-3xl font-bold leading-tight text-ink">
-          {question.prompt}
-        </h2>
-
-        <div
-          aria-label="ตัวเลือกคำตอบ"
-          role="group"
-          className="mt-6 grid gap-3 sm:grid-cols-2"
-        >
-          {question.options.map((option) => {
-            const isSelected = answerState?.selectedAnswer === option
-            const isCorrectOption =
-              Boolean(answerState) && option === question.correctAnswer
-
-            return (
-              <button
-                key={option}
-                className={`min-h-14 rounded-lg border px-4 py-3 text-left text-base font-semibold transition focus:outline-none focus:ring-2 focus:ring-leaf focus:ring-offset-2 ${
-                  isCorrectOption
-                    ? "border-emerald-500 bg-emerald-50 text-emerald-800"
-                    : isSelected
-                      ? "border-rose-400 bg-rose-50 text-rose-800"
-                      : "border-slate-200 bg-white text-ink hover:border-leaf hover:bg-emerald-50"
-                }`}
-                disabled={Boolean(answerState)}
-                type="button"
-                onClick={() => answerQuestion(option)}
-              >
-                {option}
-              </button>
-            )
-          })}
-        </div>
-
-        {answerState ? (
-          <div className="mt-6 rounded-lg bg-slate-50 p-4">
-            <div className="flex items-center gap-2">
-              {answerState.isCorrect ? (
-                <CheckCircle2
-                  aria-hidden="true"
-                  className="h-5 w-5 text-emerald-600"
-                />
-              ) : (
-                <XCircle aria-hidden="true" className="h-5 w-5 text-rose-600" />
-              )}
-              <p className="font-semibold text-ink">
-                {answerState.isCorrect ? "ถูกต้อง" : "ยังไม่ถูก"}
-              </p>
-            </div>
-            <p className="mt-2 text-slate-700">
-              คำตอบที่ถูก: {question.correctAnswer}
-            </p>
-            <Button className="mt-4" onClick={goToNextQuestion}>
-              <RotateCcw aria-hidden="true" className="mr-2 h-4 w-4" />
-              ข้อต่อไป
-            </Button>
-          </div>
-        ) : null}
-      </article>
-    </Container>
+    <PageContainer className="py-6 sm:py-10">
+      <QuizSummary
+        category={session.category}
+        categoryLabel={categoryLabel}
+        practiceType={session.practiceType}
+        totalAvailableWords={totalAvailableWords}
+        totalQuestions={session.wordIds.length}
+        correctCount={practiceResult.correctIds.length}
+        wrongCount={practiceResult.wrongIds.length}
+        skippedCount={practiceResult.skippedIds.length}
+        missedWordLabels={missedWordLabels}
+        onRandomNewSet={handleRandomNewSet}
+        onPracticeAgain={handlePracticeAgain}
+        onReviewMissed={handleReviewMissed}
+        onChangeCategory={handleChangeCategory}
+        onBackToVocabulary={handleBackToVocabulary}
+      />
+    </PageContainer>
   )
 }

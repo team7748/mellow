@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react"
+import { render, screen, waitFor, within } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { beforeEach, describe, expect, it, vi } from "vitest"
 import type {
@@ -85,7 +85,7 @@ describe("HomePage real activity dashboard", () => {
     setActivities()
   })
 
-  it("renders Day streak, Daily goal, and Words learned in order from real data", () => {
+  it("renders Day streak, Daily goal, and Words learned in order from real data", async () => {
     saveOneReviewWord()
     setActivities(
       activity("quiz"),
@@ -98,19 +98,32 @@ describe("HomePage real activity dashboard", () => {
     )
 
     const { container } = render(<HomePage />)
-    const statLabels = [...container.querySelectorAll(".home-stat-label")].map(
-      (element) => element.textContent,
-    )
+    const expectedLabels = [
+      "วันที่เรียนต่อเนื่อง",
+      "เป้าหมายรายวัน",
+      "คำศัพท์ที่เรียนไป",
+    ]
+    const statLabels = [...container.querySelectorAll('[data-home-section="stats"] span')]
+      .map((element) => element.textContent)
+      .filter((label): label is string => expectedLabels.includes(label ?? ""))
 
     expect(statLabels).toEqual([
-      "Day streak",
-      "Daily goal",
-      "Words learned",
+      "วันที่เรียนต่อเนื่อง",
+      "เป้าหมายรายวัน",
+      "คำศัพท์ที่เรียนไป",
     ])
-    expect(screen.getByText("3/15")).toBeInTheDocument()
-    expect(
-      screen.getByText("Day streak").closest(".home-stat"),
-    ).toHaveTextContent("1")
+    const stats = screen.getByRole("region", { name: "Learning statistics" })
+    await waitFor(() => {
+      expect(
+        within(stats).getByText((_, element) =>
+          element?.tagName === "STRONG" && element.textContent === "2/15"),
+      ).toBeInTheDocument()
+    })
+    await waitFor(() => {
+      expect(
+        screen.getByText("วันที่เรียนต่อเนื่อง").closest("div"),
+      ).toHaveTextContent("1")
+    })
   })
 
   it("renders factual Review, Flashcards, and Speak mission progress", () => {
@@ -132,16 +145,16 @@ describe("HomePage real activity dashboard", () => {
     render(<HomePage />)
 
     const missions = screen.getByRole("region", {
-      name: "Today's missions",
+      name: "ภารกิจประจำวัน",
     })
-    expect(within(missions).getByText("Review")).toBeInTheDocument()
+    expect(within(missions).getByText("ทบทวนคำศัพท์")).toBeInTheDocument()
     expect(within(missions).getByText("1 / 2")).toBeInTheDocument()
-    expect(within(missions).getByText("Flashcards")).toBeInTheDocument()
+    expect(within(missions).getByText("แฟลชการ์ด")).toBeInTheDocument()
     expect(within(missions).getByText("2 / 10")).toBeInTheDocument()
-    expect(within(missions).getByText("Speak")).toBeInTheDocument()
+    expect(within(missions).getByText("ฝึกพูด")).toBeInTheDocument()
     expect(within(missions).getByText("1 / 1")).toBeInTheDocument()
     expect(
-      within(missions).getByRole("progressbar", { name: "Review progress" }),
+      within(missions).getByRole("progressbar", { name: "ทบทวนคำศัพท์ progress" }),
     ).toHaveAttribute("aria-valuenow", "50")
   })
 
@@ -149,11 +162,11 @@ describe("HomePage real activity dashboard", () => {
     render(<HomePage />)
 
     const missions = screen.getByRole("region", {
-      name: "Today's missions",
+      name: "ภารกิจประจำวัน",
     })
-    expect(within(missions).queryByText("Review")).not.toBeInTheDocument()
-    expect(within(missions).getByText("Flashcards")).toBeInTheDocument()
-    expect(within(missions).getByText("Speak")).toBeInTheDocument()
+    expect(within(missions).queryByText("ทบทวนคำศัพท์")).not.toBeInTheDocument()
+    expect(within(missions).getByText("แฟลชการ์ด")).toBeInTheDocument()
+    expect(within(missions).getByText("ฝึกพูด")).toBeInTheDocument()
   })
 
   it("uses existing Flashcard and Speak actions for mission items", async () => {
@@ -162,16 +175,17 @@ describe("HomePage real activity dashboard", () => {
     const user = userEvent.setup()
     render(<HomePage onStartFlashcard={onStartFlashcard} />)
 
-    await user.click(screen.getByRole("button", { name: /Review mission/ }))
-    await user.click(screen.getByRole("button", { name: /Flashcards mission/ }))
-    expect(onStartFlashcard).toHaveBeenCalledTimes(2)
+    await user.click(screen.getByRole("button", { name: /ทบทวนคำศัพท์ mission/ }))
+    await user.click(screen.getByRole("button", { name: /แฟลชการ์ด mission/ }))
+    expect(onStartFlashcard).toHaveBeenCalledTimes(1)
+    expect(window.location.hash).toBe("#flashcard?filterStatus=srs-due-now&mode=reviewForgot")
 
-    await user.click(screen.getByRole("button", { name: /Speak mission/ }))
+    await user.click(screen.getByRole("button", { name: /ฝึกพูด mission/ }))
     expect(window.location.hash).toBe("#speak")
   })
 
   it("keeps the approved mobile DOM order and existing Home actions", async () => {
-    const realWord = saveOneReviewWord()
+    saveOneReviewWord()
     const onStartFlashcard = vi.fn()
     const user = userEvent.setup()
     const { container } = render(
@@ -185,11 +199,12 @@ describe("HomePage real activity dashboard", () => {
       "hero",
       "stats",
       "continue",
-      "missions",
       "explore",
+      "missions",
+      "explore-mobile",
       "quick-review",
     ])
-    expect(screen.getByText(realWord.word)).toBeInTheDocument()
+    expect(screen.getByRole("button", { name: "เริ่มทบทวน" })).toBeInTheDocument()
     await user.click(screen.getByRole("button", { name: "เรียนต่อ" }))
     expect(window.location.hash).toBe("#vocabulary")
     expect(screen.queryByRole("button", { name: /notification/i })).not.toBeInTheDocument()
@@ -201,5 +216,18 @@ describe("HomePage real activity dashboard", () => {
     const { container } = render(<HomePage />)
 
     expect(container.querySelector('[data-home-section="quick-review"]')).toBeNull()
+  })
+
+  it("shows one mascot beside the real Quick Review button and preserves its action", async () => {
+    saveOneReviewWord()
+    const onStartFlashcard = vi.fn()
+    const user = userEvent.setup()
+    render(<HomePage onStartFlashcard={onStartFlashcard} />)
+
+    expect(screen.getByTestId("review-sloth-mascot")).toBeInTheDocument()
+    expect(screen.getAllByRole("button", { name: "เริ่มทบทวน" })).toHaveLength(1)
+
+    await user.click(screen.getByRole("button", { name: "เริ่มทบทวน" }))
+    await waitFor(() => expect(window.location.hash).toBe("#flashcard?filterStatus=srs-due-now&mode=reviewForgot"))
   })
 })

@@ -5,6 +5,8 @@ import {
   Eye,
   Filter,
   Keyboard,
+  Play,
+  RefreshCw,
 } from "lucide-react"
 import { useMemo } from "react"
 import { useQuizSetup, type PracticeType } from "../../hooks/useQuizSetup"
@@ -12,6 +14,7 @@ import type { VocabCategory } from "../../types/vocabulary"
 import { getAllCategories, getCategoryWordCount } from "../../utils/vocabulary"
 import { categoryThaiLabels } from "../../data/categoryIconMap"
 import { Button } from "../ui/Button"
+import { PageHeader } from "../layout/PageHeader"
 
 // ─── Constants ─────────────────────────────────────────────────────────────────
 
@@ -103,32 +106,11 @@ export function QuizSetup({ onStart, onBackToHome }: QuizSetupProps) {
 
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-6 sm:px-6 sm:py-10 lg:px-8">
-      {/* ── Page Header ── */}
-      <div className="mb-6">
-        <button
-          type="button"
-          onClick={onBackToHome}
-          className="mb-4 inline-flex min-h-11 items-center gap-1.5 rounded-lg px-2 text-sm font-semibold text-primary transition-colors hover:bg-primary-soft focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-          aria-label="กลับหน้าหลัก"
-        >
-          <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-          หน้าหลัก
-        </button>
-
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary-soft text-primary">
-            <ClipboardList className="h-5 w-5" aria-hidden="true" />
-          </div>
-          <div>
-            <p className="text-sm font-semibold text-primary">
-              Practice
-            </p>
-            <h1 className="text-xl font-bold text-ink-DEFAULT sm:text-2xl">
-              เลือกหมวดหมู่และประเภทแบบฝึก
-            </h1>
-          </div>
-        </div>
-      </div>
+      <PageHeader
+        title="เลือกหมวดหมู่และประเภทแบบฝึก"
+        subtitle="แบบฝึกหัด"
+        description="เลือกคำศัพท์และรูปแบบที่ต้องการ เพื่อเริ่มฝึกตามเป้าหมายของคุณ"
+      />
 
       {/* ── Two-Column Grid ── */}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
@@ -302,22 +284,23 @@ export function QuizSetup({ onStart, onBackToHome }: QuizSetupProps) {
       </div>
 
       {/* ── Action Buttons ── */}
-      <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+      <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
         <Button
           id="quiz-start-btn"
           onClick={handleStart}
           disabled={categoryWords.length === 0}
           variant="primary"
-          className="w-full sm:flex-1 sm:max-w-xs"
+          className="w-full sm:flex-1 py-3 text-base shadow-sm rounded-xl transition-all duration-300"
           aria-label={
             categoryWords.length > 0
               ? `เริ่มฝึก ${Math.min(20, categoryWords.length)} ข้อ`
               : "ไม่มีคำศัพท์ให้ฝึก"
           }
         >
-          🚀 เริ่มฝึก{" "}
+          <Play className="w-5 h-5 mr-2 fill-current" />
+          เริ่มฝึกทันที{" "}
           {categoryWords.length > 0
-            ? `${Math.min(20, categoryWords.length)} ข้อ`
+            ? `(${Math.min(20, categoryWords.length)} ข้อ)`
             : ""}
         </Button>
 
@@ -326,9 +309,10 @@ export function QuizSetup({ onStart, onBackToHome }: QuizSetupProps) {
           onClick={resetFilters}
           disabled={!isAnyFilterActive}
           variant="secondary"
-          className="w-full sm:w-auto"
+          className="w-full sm:w-auto py-3 rounded-xl transition-all duration-300"
           aria-label="ล้างตัวกรองทั้งหมด"
         >
+          <RefreshCw className="w-5 h-5 mr-2" />
           ล้างตัวกรอง
         </Button>
       </div>

@@ -9,41 +9,56 @@ type Props = {
 
 export function CategorySelector({ categories, onSelect }: Props) {
   return (
-    <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {categories.map((category) => (
         <div
           key={category.id}
-          className="surface-card flex flex-col p-5 hover:border-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-lg active:scale-[0.98] cursor-pointer group"
+          className="bg-card rounded-2xl border border-border flex min-h-full flex-col p-4 sm:p-5 transition-all duration-200 hover:shadow-soft hover:border-primary/30 cursor-pointer group"
           onClick={() => onSelect(category.id)}
         >
-          <div className="flex-1">
-            <h3 className="text-xl font-bold text-ink-DEFAULT group-hover:text-primary transition-colors">
+          <div className="flex-1 min-w-0">
+            <h3 className="text-xl font-bold text-ink-dark group-hover:text-primary transition-colors truncate">
               {category.title}
             </h3>
-            <p className="mt-1 text-ink-secondary font-medium">{category.thaiTitle}</p>
+            <p className="mt-1 text-sm font-medium text-ink-secondary">{category.thaiTitle}</p>
             
-            <div className="mt-4 grid grid-cols-2 gap-3 text-xs sm:text-sm text-ink-secondary">
-              <div className="flex items-center gap-1.5">
-                <MessageCircle className="h-4 w-4" />
-                <span>{category.conversationCount} บทสนทนา</span>
+            <div className="mt-4 space-y-2 border-t border-border/40 pt-3 text-sm text-ink-secondary">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <MessageCircle className="h-4 w-4 text-ink-secondary/50" />
+                  <span>บทสนทนา</span>
+                </div>
+                <span className="font-semibold text-ink-DEFAULT">{category.conversationCount} บท</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <FileText className="h-4 w-4" />
-                <span>{category.lineCount} ประโยค</span>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <FileText className="h-4 w-4 text-ink-secondary/50" />
+                  <span>ประโยค</span>
+                </div>
+                <span className="font-semibold text-ink-DEFAULT">{category.lineCount} ประโยค</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <BookOpen className="h-4 w-4" />
-                <span>{category.vocabCount} คำศัพท์</span>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <BookOpen className="h-4 w-4 text-ink-secondary/50" />
+                  <span>คำศัพท์</span>
+                </div>
+                <span className="font-semibold text-ink-DEFAULT">{category.vocabCount} คำ</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <PenTool className="h-4 w-4" />
-                <span>{category.practiceCount} คำถาม</span>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <PenTool className="h-4 w-4 text-ink-secondary/50" />
+                  <span>คำถามฝึกฝน</span>
+                </div>
+                <span className="font-semibold text-ink-DEFAULT">{category.practiceCount} ข้อ</span>
               </div>
             </div>
           </div>
           
           <div className="mt-5">
-            <Button variant="secondary" className="w-full justify-center group-hover:bg-primary group-hover:text-white group-hover:border-primary">
+            <Button 
+              variant="secondary" 
+              className="w-full justify-center rounded-xl py-2.5 text-sm font-semibold transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:border-primary"
+            >
               เริ่มฝึกหมวดนี้
             </Button>
           </div>

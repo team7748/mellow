@@ -5,11 +5,9 @@ import {
   Layers3,
   MessageSquare,
   PenLine,
-  Leaf,
   CircleUserRound,
   ChevronLeft,
   ChevronRight,
-  BarChart3,
 } from "lucide-react"
 import type { AppPage } from "../../App"
 
@@ -41,12 +39,12 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
     <aside className={`hidden md:flex flex-col h-screen sticky top-0 bg-card border-r border-border shrink-0 transition-all duration-300 relative ${isCollapsed ? "w-[80px]" : "w-[240px]"}`}>
       
       {/* Logo */}
-      <div className={`flex items-center h-20 ${isCollapsed ? "justify-center px-2" : "gap-2.5 px-5"} cursor-pointer`} onClick={() => onNavigate("home")}>
-        <img src="/logo.png" alt="KengSap Logo" className={`object-contain shrink-0 transition-all ${isCollapsed ? "w-10 h-10" : "w-12 h-12"}`} onError={(e) => e.currentTarget.style.display = 'none'} />
+      <div className={`flex items-center h-[5.5rem] ${isCollapsed ? "justify-center px-2" : "gap-3 px-5"} cursor-pointer`} onClick={() => onNavigate("home")}>
+        <img src="/logo.png" alt="Mellow Logo" className={`object-contain shrink-0 transition-all mix-blend-multiply ${isCollapsed ? "w-11 h-11" : "w-14 h-14"}`} onError={(e) => e.currentTarget.style.display = 'none'} />
         {!isCollapsed && (
-          <span className="text-2xl font-bold tracking-tight whitespace-nowrap overflow-hidden flex items-center">
-            <span style={{ color: '#105625' }}>Keng</span>
-            <span style={{ color: '#4eb439' }}>Sap</span>
+          <span className="text-[1.75rem] font-black tracking-tight whitespace-nowrap overflow-hidden flex items-center">
+            <span style={{ color: '#105625' }}>Mel</span>
+            <span style={{ color: '#4eb439' }}>low</span>
           </span>
         )}
       </div>
@@ -54,10 +52,10 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
       {/* Collapse Toggle */}
       <button 
         onClick={() => setIsCollapsed(!isCollapsed)} 
-        className="hidden md:flex items-center justify-center absolute -right-3 top-[1.125rem] w-6 h-6 bg-card border border-border text-ink-secondary hover:text-primary hover:border-primary/40 rounded-full shadow-sm transition-all z-10"
+        className="hidden md:flex absolute -right-4 top-5 z-10 h-8 w-8 items-center justify-center rounded-full border border-border bg-card text-ink-secondary shadow-soft transition-colors duration-150 hover:border-primary/40 hover:bg-primary-soft hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
         aria-label={isCollapsed ? "ขยายเมนู" : "ย่อเมนู"}
       >
-        {isCollapsed ? <ChevronRight className="w-3.5 h-3.5" strokeWidth={2.5} /> : <ChevronLeft className="w-3.5 h-3.5" strokeWidth={2.5} />}
+        {isCollapsed ? <ChevronRight className="h-4 w-4" strokeWidth={2.5} /> : <ChevronLeft className="h-4 w-4" strokeWidth={2.5} />}
       </button>
 
       {/* Main Nav */}

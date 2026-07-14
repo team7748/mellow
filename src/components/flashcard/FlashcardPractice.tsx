@@ -12,6 +12,12 @@ import {
 import { useGrammarProgress } from "../../hooks/useGrammarProgress"
 import type { UnifiedFlashcard } from "../../types/flashcardItem"
 import { recordLearningActivity } from "../../lib/activity/recordLearningActivity"
+import {
+  FLASHCARD_PROGRESS_SESSION_KEY,
+  clearPracticeSession,
+  loadPracticeSession,
+  savePracticeSession,
+} from "../../lib/practiceSessionStorage"
 
 export type FlashcardSessionResult = {
   forgot: string[]
@@ -33,6 +39,24 @@ type FlashcardPracticeProps = {
   onBack: () => void
 }
 
+type FlashcardProgressSnapshot = {
+  cardIds: string[]
+  queue: string[]
+  currentIndex: number
+  isFlipped: boolean
+  forgotIds: string[]
+  mediumIds: string[]
+  knownIds: string[]
+  srsAgain: string[]
+  srsHard: string[]
+  srsGood: string[]
+  srsEasy: string[]
+  loopCount: number
+  cardLoopMap: Record<string, number>
+  showLoopWarning: boolean
+  sessionId: string
+}
+
 export function FlashcardPractice({
   cards,
   onComplete,
@@ -40,35 +64,51 @@ export function FlashcardPractice({
 }: FlashcardPracticeProps) {
   const srsEnabled = useMemo(() => getSrsEnabled(), [])
   const { recordFlashcardAttempt } = useGrammarProgress()
-  const [sessionId] = useState(
-    () =>
-      globalThis.crypto?.randomUUID?.() ??
-      `flashcard-${Date.now()}-${Math.random().toString(36).slice(2)}`,
-  )
 
   // Base initial cards
   const initialCards = cards
+  const initialCardIds = initialCards.map((card) => card.id)
+  const savedProgress = loadPracticeSession<FlashcardProgressSnapshot>(
+    FLASHCARD_PROGRESS_SESSION_KEY,
+  )
+  const canRestoreProgress = Boolean(
+    savedProgress &&
+      savedProgress.cardIds.length === initialCardIds.length &&
+      savedProgress.cardIds.every((id, index) => id === initialCardIds[index]),
+  )
+  const [sessionId] = useState(
+    () =>
+      savedProgress?.sessionId ??
+        globalThis.crypto?.randomUUID?.() ??
+        `flashcard-${Date.now()}-${Math.random().toString(36).slice(2)}`,
+  )
 
   // Queue of card IDs (we use the unique `id` of each session card)
-  const [queue, setQueue] = useState<string[]>(() => initialCards.map(c => c.id))
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [queue, setQueue] = useState<string[]>(() =>
+    canRestoreProgress ? savedProgress!.queue : initialCardIds,
+  )
+  const [currentIndex, setCurrentIndex] = useState(() =>
+    canRestoreProgress ? savedProgress!.currentIndex : 0,
+  )
 
-  const [isFlipped, setIsFlipped] = useState(false)
+  const [isFlipped, setIsFlipped] = useState(() =>
+    canRestoreProgress ? savedProgress!.isFlipped : false,
+  )
   const [recentAnswer, setRecentAnswer] = useState<string | null>(null)
 
   // Stats
-  const [forgotIds, setForgotIds] = useState<string[]>([])
-  const [mediumIds, setMediumIds] = useState<string[]>([])
-  const [knownIds, setKnownIds] = useState<string[]>([])
-  const [srsAgain, setSrsAgain] = useState<string[]>([])
-  const [srsHard, setSrsHard] = useState<string[]>([])
-  const [srsGood, setSrsGood] = useState<string[]>([])
-  const [srsEasy, setSrsEasy] = useState<string[]>([])
-  const [loopCount, setLoopCount] = useState(0)
+  const [forgotIds, setForgotIds] = useState<string[]>(() => canRestoreProgress ? savedProgress!.forgotIds : [])
+  const [mediumIds, setMediumIds] = useState<string[]>(() => canRestoreProgress ? savedProgress!.mediumIds : [])
+  const [knownIds, setKnownIds] = useState<string[]>(() => canRestoreProgress ? savedProgress!.knownIds : [])
+  const [srsAgain, setSrsAgain] = useState<string[]>(() => canRestoreProgress ? savedProgress!.srsAgain : [])
+  const [srsHard, setSrsHard] = useState<string[]>(() => canRestoreProgress ? savedProgress!.srsHard : [])
+  const [srsGood, setSrsGood] = useState<string[]>(() => canRestoreProgress ? savedProgress!.srsGood : [])
+  const [srsEasy, setSrsEasy] = useState<string[]>(() => canRestoreProgress ? savedProgress!.srsEasy : [])
+  const [loopCount, setLoopCount] = useState(() => canRestoreProgress ? savedProgress!.loopCount : 0)
 
   // Infinite loop protection
-  const [cardLoopMap, setCardLoopMap] = useState<Record<string, number>>({})
-  const [showLoopWarning, setShowLoopWarning] = useState(false)
+  const [cardLoopMap, setCardLoopMap] = useState<Record<string, number>>(() => canRestoreProgress ? savedProgress!.cardLoopMap : {})
+  const [showLoopWarning, setShowLoopWarning] = useState(() => canRestoreProgress ? savedProgress!.showLoopWarning : false)
 
   const sessionProgress = queue.length > 0 ? Math.round((currentIndex / queue.length) * 100) : 0
 
@@ -209,10 +249,49 @@ export function FlashcardPractice({
 
   useEffect(() => {
     if (currentIndex >= queue.length && queue.length > 0 && !showLoopWarning) {
+      clearPracticeSession(FLASHCARD_PROGRESS_SESSION_KEY)
       const timer = setTimeout(() => onComplete(buildResult()), 300)
       return () => clearTimeout(timer)
     }
   }, [currentIndex, queue.length, showLoopWarning])
+
+  useEffect(() => {
+    if (initialCards.length === 0 || currentIndex >= queue.length) return
+    savePracticeSession<FlashcardProgressSnapshot>(FLASHCARD_PROGRESS_SESSION_KEY, {
+      cardIds: initialCardIds,
+      queue,
+      currentIndex,
+      isFlipped,
+      forgotIds,
+      mediumIds,
+      knownIds,
+      srsAgain,
+      srsHard,
+      srsGood,
+      srsEasy,
+      loopCount,
+      cardLoopMap,
+      showLoopWarning,
+      sessionId,
+    })
+  }, [
+    initialCards.length,
+    initialCardIds,
+    queue,
+    currentIndex,
+    isFlipped,
+    forgotIds,
+    mediumIds,
+    knownIds,
+    srsAgain,
+    srsHard,
+    srsGood,
+    srsEasy,
+    loopCount,
+    cardLoopMap,
+    showLoopWarning,
+    sessionId,
+  ])
 
   function advance(answerLabel: string, didRequeue: boolean, willShowWarning: boolean) {
     setRecentAnswer(answerLabel)
@@ -222,7 +301,7 @@ export function FlashcardPractice({
     }
   }
 
-  function handleFlip() { setIsFlipped(true) }
+  function handleFlip() { setIsFlipped((prev) => !prev) }
 
   function handleSwipe(direction: "left" | "right") {
     if (srsEnabled) {
@@ -388,7 +467,14 @@ export function FlashcardPractice({
                 {sessionProgress}%
               </p>
             </div>
-            <div className="mt-4 h-2 overflow-hidden rounded-full bg-card ring-1 ring-border">
+              <div
+                aria-label={`Flashcard session progress ${sessionProgress}%`}
+                aria-valuemax={100}
+                aria-valuemin={0}
+                aria-valuenow={sessionProgress}
+                className="mt-4 h-2 overflow-hidden rounded-full bg-card ring-1 ring-border"
+                role="progressbar"
+              >
               <div
                 className="flashcard-progress-bar h-full rounded-full bg-primary"
                 style={{ width: `${sessionProgress}%` }}
@@ -451,29 +537,25 @@ export function FlashcardPractice({
             ) : srsEnabled ? (
               <>
                 <Button variant="outline-danger" className="flex-1 active:scale-[0.98]" onClick={() => answerSrs("again")}>
-                  <span className="block text-xs font-normal opacity-70">&lt; ปัดซ้าย</span>
                   จำไม่ได้
                 </Button>
                 <Button variant="outline-warning" className="flex-1 active:scale-[0.98]" onClick={() => answerSrs("hard")}>
-                  <span className="block text-xs font-normal opacity-70">1-3 ชม.</span>
                   ยาก
                 </Button>
                 <Button variant="outline-success" className="flex-1 active:scale-[0.98]" onClick={() => answerSrs("good")}>
-                  <span className="block text-xs font-normal opacity-70">ปัดขวา &gt;</span>
                   พอจำได้
                 </Button>
                 <Button variant="outline-info" className="flex-1 active:scale-[0.98]" onClick={() => answerSrs("easy")}>
-                  <span className="block text-xs font-normal opacity-70">ข้ามไปหลายวัน</span>
                   ง่าย
                 </Button>
               </>
             ) : (
               <>
                 <Button variant="outline-danger" className="flex-1 active:scale-[0.98]" onClick={() => answerNormal("forgot")}>
-                  ปัดซ้าย: ยังจำไม่ได้
+                  ยังจำไม่ได้
                 </Button>
                 <Button variant="outline-success" className="flex-1 active:scale-[0.98]" onClick={() => answerNormal("known")}>
-                  ปัดขวา: จำได้แล้ว
+                  จำได้แล้ว
                 </Button>
               </>
             )}

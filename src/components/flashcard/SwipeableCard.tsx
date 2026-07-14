@@ -216,6 +216,11 @@ export function SwipeableCard({
                   <p className="text-xs font-semibold text-primary tracking-wide uppercase">ความหมาย</p>
                   <p className="mt-1 text-xl font-semibold text-ink-DEFAULT">{card.back}</p>
                 </div>
+                {hasText(card.ipa) && (
+                  <p className="text-base font-medium text-ink-secondary" aria-label="การออกเสียง">
+                    {card.ipa}
+                  </p>
+                )}
                 {hasText(card.note) && (
                   <div className="rounded-lg bg-card/80 p-4 ring-1 ring-primary/20 shadow-sm mt-4">
                     <p className="text-xs font-semibold text-primary tracking-wide uppercase">ตัวอย่างประโยค</p>

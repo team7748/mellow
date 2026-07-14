@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.ts";
 
 :root {
   color: theme('colors.ink.DEFAULT');
@@ -97,7 +96,7 @@ select {
   }
 
   .ui-control {
-    @apply min-h-11 w-full rounded-lg border border-border bg-card px-3 text-sm text-ink outline-none transition duration-150 placeholder:text-ink-secondary hover:border-ink-secondary focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-ink-secondary;
+    @apply min-h-11 w-full rounded-lg border border-border bg-card px-3 text-sm text-ink outline-none transition duration-150 placeholder:text-ink-secondary hover:border-ink-secondary focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:cursor-not-allowed disabled:bg-page disabled:text-ink-secondary;
   }
 
   .ui-chip {
@@ -113,7 +112,7 @@ select {
   }
 
   .ui-badge-neutral {
-    @apply bg-slate-50 text-ink-secondary ring-border;
+    @apply bg-page text-ink-secondary ring-border;
   }
 
   .ui-badge-accent {
@@ -153,200 +152,13 @@ select {
   }
 }
 
-.home-dashboard {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 1rem;
-  min-width: 0;
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
 }
-
-.home-dashboard > * {
-  min-width: 0;
-}
-
-.home-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  min-width: 0;
-}
-
-.home-stat {
-  display: flex;
-  min-width: 0;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding-inline: 0.75rem;
-}
-
-.home-stat + .home-stat {
-  border-left: 1px solid theme('colors.border.DEFAULT');
-}
-
-.home-stat-icon {
-  display: flex;
-  width: 2.75rem;
-  height: 2.75rem;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  border-radius: 9999px;
-  padding: 0.4rem;
-}
-
-.home-stat-value,
-.home-stat-label {
-  display: block;
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-
-.home-stat-value {
-  color: theme('colors.ink.dark');
-  font-size: 1.5rem;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.home-stat-label {
-  margin-top: 0.3rem;
-  color: theme('colors.ink.secondary');
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1.25;
-}
-
-.home-mission-item {
-  border: 0;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-}
-
-.home-explore-scroll {
-  display: flex;
-  gap: 0.75rem;
-  max-width: 100%;
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  scrollbar-width: thin;
-}
-
-.overflow-wrap-anywhere {
-  overflow-wrap: anywhere;
-}
-
-@media (max-width: 374px) {
-  .home-page {
-    padding-inline: 0;
-  }
-
-  .home-stats {
-    padding-inline: 0.35rem;
-  }
-
-  .home-stat {
-    gap: 0.25rem;
-    padding-inline: 0.25rem;
-  }
-
-  .home-stat-icon {
-    width: 2rem;
-    height: 2rem;
-    padding: 0.25rem;
-  }
-
-  .home-stat-value {
-    font-size: 1.05rem;
-  }
-
-  .home-stat-label {
-    font-size: 0.625rem;
-  }
-
-  .home-hero-layout {
-    grid-template-columns: minmax(0, 1.45fr) minmax(6rem, 0.55fr);
-  }
-
-  .home-hero-name-row {
-    gap: 0.25rem;
-  }
-
-  .home-hero-leaf {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-
-  .home-continue-layout {
-    grid-template-columns: minmax(0, 1.35fr) minmax(6.5rem, 0.65fr);
-  }
-
-  .home-continue-layout > :first-child {
-    padding-inline: 1rem;
-  }
-
-  .home-continue-layout h2 {
-    font-size: 1.25rem;
-    line-height: 1.45;
-  }
-}
-
-@media (min-width: 640px) {
-  .home-stat {
-    gap: 0.875rem;
-    padding-inline: 1rem;
-  }
-
-  .home-stat-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    padding: 0.5rem;
-  }
-
-  .home-stat-value {
-    font-size: 1.875rem;
-  }
-
-  .home-stat-label {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .home-dashboard {
-    grid-template-areas:
-      "hero hero"
-      "stats stats"
-      "continue missions"
-      "explore quick";
-    grid-template-columns: minmax(0, 1.65fr) minmax(17rem, 0.75fr);
-    gap: 1.25rem;
-  }
-
-  .home-hero {
-    grid-area: hero;
-  }
-
-  .home-stats {
-    grid-area: stats;
-  }
-
-  .home-continue {
-    grid-area: continue;
-  }
-
-  .home-explore {
-    grid-area: explore;
-  }
-
-  .home-missions {
-    grid-area: missions;
-  }
-
-  .home-quick-review {
-    grid-area: quick;
-  }
-
+.animate-float {
+  animation: float 4s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -698,5 +510,200 @@ select {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-stats-grid {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .home-stat {
+    justify-content: flex-start;
+  }
+  .home-stat + .home-stat {
+    border-left: none;
+    border-top: 1px solid theme('colors.border.DEFAULT');
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+}
+
+/* ─── Custom Animations ─── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.opacity-0-init {
+  opacity: 0;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+
+@keyframes float-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-float-subtle {
+  animation: float-subtle 6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-150%) skewX(-15deg); }
+  40%, 100% { transform: translateX(150%) skewX(-15deg); }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee:active {
+  animation-play-state: paused;
+}
+
+.review-button-wrapper {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+}
+
+.review-button {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.review-sloth {
+  position: absolute;
+  z-index: 3;
+  left: 55%;
+  bottom: calc(100% - 6px);
+
+  width: clamp(96px, 15vw, 160px);
+  aspect-ratio: 1 / 1;
+
+  pointer-events: none;
+  user-select: none;
+
+  /* ห้ามใส่ transition หรือ animation ที่ขยับ Container */
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+.review-sloth img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+
+  transform-origin: center bottom;
+  animation: none;
+}
+
+@media (max-width: 640px) {
+  .review-sloth {
+    bottom: calc(100% - 4px);
+    width: clamp(80px, 25vw, 110px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-sloth,
+  .review-sloth img {
+    animation: none;
+    transition: none;
+    transform: translateX(-50%);
+  }
+}
+
+/* ─── Sloth Speech Bubble ─── */
+.sloth-bubble {
+  position: absolute;
+  bottom: 65%;
+  right: 70%;
+  min-width: max-content;
+
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(25, 140, 69, 0.25); /* primary with opacity */
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow:
+    0 4px 12px rgba(7, 61, 46, 0.12),
+    0 1px 3px rgba(7, 61, 46, 0.08); /* ink.dark shadow */
+
+  color: #198C45; /* primary.DEFAULT */
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.1;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+
+  /* Hidden by default */
+  opacity: 0;
+  transform: translateY(4px) scale(0.92);
+  pointer-events: none;
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+
+/* Tail / pointer */
+.sloth-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 12px;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.97);
+  border-right: 1.5px solid rgba(25, 140, 69, 0.25);
+  border-bottom: 1.5px solid rgba(25, 140, 69, 0.25);
+  transform: rotate(45deg);
+}
+
+/* Visible state */
+.sloth-bubble--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (max-width: 640px) {
+  .sloth-bubble {
+    font-size: 0.6rem;
+    padding: 4px 8px;
+    bottom: 60%;
+    right: 65%;
+    border-radius: 10px;
+  }
+  .sloth-bubble::after {
+    width: 8px;
+    height: 8px;
+    bottom: -4px;
+    right: 10px;
   }
 }

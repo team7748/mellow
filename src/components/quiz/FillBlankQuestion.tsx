@@ -25,8 +25,8 @@ function buildFillBlank(word: VocabularyItem): {
   
   if (!regex.test(word.example)) return null
 
-  // Replace all occurrences
-  const sentence = word.example.replace(regex, "[ ______ ]")
+  // Replace all occurrences with a stylized placeholder
+  const sentence = word.example.replace(regex, "___BLANK___")
   return { sentence, answer: word.word }
 }
 
@@ -96,12 +96,21 @@ export function FillBlankQuestion({
           </p>
         </div>
       ) : (
-        <div className="mt-3">
-          <p className="text-lg font-semibold leading-relaxed text-ink-DEFAULT sm:text-xl">
-            {fillData.sentence}
+        <div className="mt-3 bg-slate-50/50 p-6 rounded-2xl border border-border/60 shadow-inner">
+          <p className="text-xl font-medium leading-relaxed text-ink-DEFAULT sm:text-2xl text-center">
+            {fillData.sentence.split("___BLANK___").map((part, i, arr) => (
+              <span key={i}>
+                {part}
+                {i < arr.length - 1 && (
+                  <span className="inline-block mx-2 px-6 py-1 border-b-2 border-primary/40 bg-primary-soft/30 rounded-t-lg text-transparent select-none min-w-[80px]">
+                    _
+                  </span>
+                )}
+              </span>
+            ))}
           </p>
           {word.exampleThai && (
-            <p className="mt-1 text-sm text-ink-secondary">{word.exampleThai}</p>
+            <p className="mt-4 text-sm font-medium text-ink-secondary text-center">{word.exampleThai}</p>
           )}
         </div>
       )}
@@ -118,7 +127,7 @@ export function FillBlankQuestion({
       )}
 
       {/* Input */}
-      <div className="mt-4 flex flex-col sm:flex-row gap-2">
+      <div className="mt-6 flex flex-col sm:flex-row gap-3">
         <input
           type="text"
           value={userInput}
@@ -131,11 +140,11 @@ export function FillBlankQuestion({
           autoCorrect="off"
           spellCheck="false"
           autoFocus
-          className="ui-control flex-1 px-4 py-3 text-base font-semibold"
+          className="ui-control flex-1 px-6 py-4 text-xl sm:text-2xl font-bold text-center tracking-wide rounded-2xl focus:ring-4 focus:ring-primary/20 transition-all shadow-inner"
           aria-label="พิมพ์คำตอบ"
         />
         {!isAnswered && (
-          <Button className="w-full sm:w-auto" onClick={handleSubmit} disabled={!userInput.trim()}>
+          <Button className="w-full sm:w-auto min-w-[120px] rounded-2xl shadow-md text-lg" onClick={handleSubmit} disabled={!userInput.trim()}>
             ตรวจ
           </Button>
         )}
@@ -160,39 +169,51 @@ export function FillBlankQuestion({
         </div>
       )}
 
-      {/* Feedback */}
+      {/* Feedback Card */}
       {isAnswered && (
         <div
-          className="feedback-card mt-4 animate-in slide-in-from-bottom-2 fade-in duration-300"
+          className={`feedback-card mt-8 animate-in slide-in-from-bottom-8 fade-in duration-500 p-6 rounded-2xl shadow-xl border-2 z-10 relative ${isCorrect ? "bg-primary-soft/80 border-primary/30" : "bg-rose-50 border-rose-200"}`}
+          style={{ transitionTimingFunction: "cubic-bezier(0.175, 0.885, 0.32, 1.275)" }}
           role="status"
           aria-live="polite"
         >
-          <div className="flex items-center gap-2">
-            {isCorrect ? (
-              <CheckCircle2 className="h-5 w-5 text-primary" aria-hidden="true" />
-            ) : (
-              <XCircle className="h-5 w-5 text-rose-600" aria-hidden="true" />
-            )}
-            <p className="font-semibold text-ink-DEFAULT">
-              {isCorrect ? "ถูกต้อง! 🎉" : "ยังไม่ถูก"}
-            </p>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="flex items-start gap-4">
+              <div className={`flex shrink-0 h-12 w-12 items-center justify-center rounded-full ${isCorrect ? "bg-primary text-white" : "bg-rose-500 text-white"} shadow-inner`}>
+                {isCorrect ? (
+                  <CheckCircle2 className="h-6 w-6" aria-hidden="true" />
+                ) : (
+                  <XCircle className="h-6 w-6" aria-hidden="true" />
+                )}
+              </div>
+              <div className="flex flex-col">
+                <p className={`text-xl font-black tracking-tight ${isCorrect ? "text-primary-dark" : "text-rose-700"}`}>
+                  {isCorrect ? "ถูกต้อง! 🎉" : "ยังไม่ถูก"}
+                </p>
+                <p className="mt-1 text-base text-ink-DEFAULT">
+                  คำตอบที่ถูก: <span className="font-bold">{correctAnswer}</span>
+                </p>
+              </div>
+            </div>
+            
+            <Button
+              className="w-full sm:w-auto min-h-12 text-base rounded-xl shadow-md"
+              variant={isCorrect ? "primary" : "danger"}
+              onClick={() => onAnswer(isCorrect)}
+            >
+              <ArrowRight className="mr-2 h-5 w-5" aria-hidden="true" />
+              ข้อถัดไป (Enter)
+            </Button>
           </div>
-          <p className="mt-1 text-sm text-ink-DEFAULT">
-            คำตอบที่ถูก:{" "}
-            <span className="font-bold text-primary">{correctAnswer}</span>
-          </p>
-          {!isFallbackTyping && word.example && (
-            <p className="mt-1 text-sm text-ink-secondary">
-              ประโยคเต็ม: {word.example}
-            </p>
+          
+          {word.quiz?.hintTH && (
+            <div className="mt-4 flex items-start gap-3 bg-white/60 p-4 rounded-xl ring-1 ring-black/5">
+              <span className="text-xl">💡</span>
+              <p className="text-sm text-ink-DEFAULT leading-relaxed">
+                <span className="font-bold">คำอธิบาย:</span> {word.quiz.hintTH}
+              </p>
+            </div>
           )}
-          <Button
-            className="mt-3 w-full sm:w-auto"
-            onClick={() => onAnswer(isCorrect)}
-          >
-            <ArrowRight className="mr-2 h-4 w-4" aria-hidden="true" />
-            ข้อถัดไป
-          </Button>
         </div>
       )}
     </div>

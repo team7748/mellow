@@ -23,7 +23,7 @@ describe("AppLayout mobile bottom navigation clearance", () => {
 
     expect(container.querySelector("main")).toHaveClass(
       "pb-[calc(4.5rem+env(safe-area-inset-bottom))]",
-      "sm:pb-0",
+      "md:pb-8",
     )
   })
 })

@@ -3,7 +3,7 @@ import { useAuth } from "../hooks/useAuth"
 import { useProfile } from "../hooks/useProfile"
 import { updateProfile } from "../services/profileService"
 import { logout } from "../services/authService"
-import { Container } from "../components/layout/Container"
+import { PageContainer } from "../components/layout/PageContainer"
 import { Button } from "../components/ui/Button"
 import { Loader2, UserCircle } from "lucide-react"
 
@@ -16,9 +16,9 @@ export function ProfilePage() {
 
   if (isLoading || !profile) {
     return (
-      <Container className="py-12 sm:py-20 flex justify-center">
+      <PageContainer className="py-12 sm:py-20 flex justify-center">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      </Container>
+      </PageContainer>
     )
   }
 
@@ -42,7 +42,7 @@ export function ProfilePage() {
   }
 
   return (
-    <Container className="py-10 sm:py-16">
+    <PageContainer className="py-10 sm:py-16">
       <div className="mx-auto max-w-2xl">
         <div className="surface-card p-6 sm:p-10">
           <div className="flex items-center gap-4 mb-8 pb-8 border-b border-border">
@@ -121,6 +121,6 @@ export function ProfilePage() {
           </div>
         </div>
       </div>
-    </Container>
+    </PageContainer>
   )
 }

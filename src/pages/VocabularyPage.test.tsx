@@ -1,4 +1,4 @@
-import { render, screen, within, waitFor } from "@testing-library/react"
+import { fireEvent, render, screen, within, waitFor } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
 import { updateWordProgress } from "../utils/vocabulary"
@@ -112,7 +112,7 @@ describe("VocabularyPage", () => {
     render(<VocabularyPage />)
 
     expect(screen.getByRole("heading", { name: "คลังคำศัพท์" })).toBeInTheDocument()
-    expect(screen.getByText("3 คำ")).toBeInTheDocument()
+    expect(screen.getByRole("status", { name: "3 ผลลัพธ์" })).toBeInTheDocument()
     const jobCard = screen.getByLabelText("job vocabulary card")
     expect(within(jobCard).getByRole("heading", { name: "job" })).toBeInTheDocument()
     expect(within(jobCard).getByRole("button", { name: "ฟังเสียง job" })).toBeInTheDocument()
@@ -149,10 +149,11 @@ describe("VocabularyPage", () => {
   })
 
   it("filters vocabulary by search text and CEFR", async () => {
-    const user = userEvent.setup()
     render(<VocabularyPage />)
 
-    await user.type(screen.getByLabelText("ค้นหาคำศัพท์"), "salary")
+    fireEvent.change(screen.getByLabelText("ค้นหาคำศัพท์"), {
+      target: { value: "salary" },
+    })
 
     await waitFor(() => {
       expect(screen.queryByRole("heading", { name: "job" })).not.toBeInTheDocument()
@@ -160,9 +161,11 @@ describe("VocabularyPage", () => {
     expect(screen.getByRole("heading", { name: "salary" })).toBeInTheDocument()
 
     // Expand advanced filters
-    await user.click(screen.getByRole("button", { name: /ตัวกรองเพิ่มเติม/ }))
+    fireEvent.click(screen.getByRole("button", { name: /ตัวกรองเพิ่มเติม/ }))
 
-    await user.selectOptions(screen.getByLabelText("ระดับ CEFR"), "A1")
+    fireEvent.change(screen.getByLabelText("ระดับ CEFR"), {
+      target: { value: "A1" },
+    })
 
     expect(screen.getByText("ไม่พบคำศัพท์ที่ตรงกับตัวกรอง")).toBeInTheDocument()
   })

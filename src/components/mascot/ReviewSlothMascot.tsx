@@ -14,12 +14,35 @@ const frames = Array.from(
     ).href
 );
 
+const START_DELAY = 850;
+const FRAME_DELAY = 260;
+const LAST_FRAME_HOLD = 2000;
+
+/* Cute English greetings the sloth cycles through */
+const BUBBLE_MESSAGES = [
+  "Let's review!",
+  "Hi there!",
+  "Ready to learn?",
+  "You got this!",
+  "Keep going!",
+  "Great job!",
+];
+
+/* Frames 8–11 (index 7–10) are the "hand wave" frames */
+const WAVE_START_FRAME = 7;
+const WAVE_END_FRAME = 10;
+
 export function ReviewSlothMascot({
   reviewCount,
   className = "",
 }: ReviewSlothMascotProps) {
-  const [frameIndex, setFrameIndex] = useState(frames.length - 1);
+  const [frameIndex, setFrameIndex] = useState(0);
+  const [messageIndex, setMessageIndex] = useState(0);
   const timersRef = useRef<number[]>([]);
+  const cycleCountRef = useRef(0);
+
+  const showBubble =
+    frameIndex >= WAVE_START_FRAME && frameIndex <= WAVE_END_FRAME;
 
   useEffect(() => {
     if (reviewCount <= 0) return;
@@ -29,20 +52,49 @@ export function ReviewSlothMascot({
       timersRef.current = [];
     };
 
-    const reduceMotion =
-      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
 
-    // Keep the mascot anchored on the button from the first render. The
-    // final seated frame is the stable idle pose; CSS provides the gentle
-    // in-place motion without a climbing/reveal layout shift.
-    setFrameIndex(frames.length - 1);
+    if (reduceMotion) {
+      setFrameIndex(frames.length - 1);
+      return clearTimers;
+    }
 
-    if (reduceMotion) return clearTimers;
+    // 1. เปิดหน้าแสดงเฟรม 01 ทันที
+    setFrameIndex(0);
 
-    frames.forEach((src) => {
-      const image = new Image();
-      image.src = src;
-    });
+    const playCycle = () => {
+      let currentFrame = 0;
+
+      /* Pick next message for this cycle */
+      setMessageIndex(
+        cycleCountRef.current % BUBBLE_MESSAGES.length
+      );
+      cycleCountRef.current += 1;
+
+      const showNextFrame = () => {
+        // 3. เล่นเฟรม 01-12 ตามลำดับ
+        setFrameIndex(currentFrame);
+
+        if (currentFrame < frames.length - 1) {
+          currentFrame += 1;
+          const frameTimer = window.setTimeout(showNextFrame, FRAME_DELAY); // 4. ใช้เวลา 260ms ต่อเฟรม
+          timersRef.current.push(frameTimer);
+        } else {
+          // 5. ค้างเฟรม 12 เป็นเวลา 2000ms
+          // 6. แล้ววนกลับไปเล่นใหม่ 01-12 ด้วยฟังก์ชัน playCycle
+          const holdTimer = window.setTimeout(playCycle, LAST_FRAME_HOLD);
+          timersRef.current.push(holdTimer);
+        }
+      };
+
+      showNextFrame();
+    };
+
+    // 2. รอก่อนเริ่มประมาณ 850ms
+    const startTimer = window.setTimeout(playCycle, START_DELAY);
+    timersRef.current.push(startTimer);
 
     return clearTimers;
   }, [reviewCount]);
@@ -51,9 +103,17 @@ export function ReviewSlothMascot({
 
   return (
     <div
-      className={`review-sloth review-sloth--idle ${className}`.trim()}
+      className={`review-sloth ${className}`.trim()}
       aria-hidden="true"
+      data-testid="review-sloth-mascot"
     >
+      {/* Speech bubble */}
+      <div
+        className={`sloth-bubble ${showBubble ? "sloth-bubble--visible" : ""}`}
+      >
+        {BUBBLE_MESSAGES[messageIndex]}
+      </div>
+
       <img
         src={frames[frameIndex]}
         alt=""

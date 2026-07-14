@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from "react"
-import type { Session, User } from "@supabase/supabase-js"
+import { useSyncExternalStore } from "react"
+import type { Session, User, AuthChangeEvent } from "@supabase/supabase-js"
 import { supabase } from "../lib/supabaseClient"
 import type { AuthState } from "../types/auth"
 import {
@@ -12,82 +12,86 @@ import {
 } from "../lib/activity/activitySyncManager"
 import { runLegacyMigration } from "../lib/progress/legacyProgressMigration"
 
+const initialState: AuthState = { session: null, user: null, isLoading: true }
+let snapshot = initialState
+let started = false
+let subscriberCount = 0
+let subscription: { unsubscribe: () => void } | null = null
+let listeners = new Set<() => void>()
+
+function publish(next: AuthState): void {
+  snapshot = next
+  listeners.forEach((listener) => listener())
+}
+
+function cancelSync(): void {
+  handleVocabularySignOut()
+  handleActivitySignOut()
+}
+
+function syncUser(userId: string): void {
+  void Promise.allSettled([
+    Promise.resolve().then(() => handleVocabularySignIn(userId)),
+    Promise.resolve().then(() => handleActivitySignIn(userId)),
+  ])
+}
+
+function handleAuthChange(event: AuthChangeEvent, nextSession: Session | null): void {
+  publish({ session: nextSession, user: nextSession?.user ?? null, isLoading: false })
+
+  if (event === "SIGNED_OUT") {
+    cancelSync()
+    return
+  }
+
+  if (nextSession?.user && event === "SIGNED_IN") {
+    cancelSync()
+    syncUser(nextSession.user.id)
+  }
+}
+
+function startAuth(): void {
+  if (started) return
+  started = true
+  runLegacyMigration()
+
+  const result = supabase.auth.onAuthStateChange(handleAuthChange)
+  subscription = result.data.subscription
+
+  void supabase.auth.getSession().then(({ data: { session }, error }) => {
+    if (error) {
+      cancelSync()
+      publish({ session: null, user: null, isLoading: false })
+      return
+    }
+
+    publish({ session, user: session?.user ?? null, isLoading: false })
+    if (session?.user) syncUser(session.user.id)
+  }).catch(() => {
+    cancelSync()
+    publish({ session: null, user: null, isLoading: false })
+  })
+}
+
+function subscribe(listener: () => void): () => void {
+  listeners.add(listener)
+  subscriberCount += 1
+  startAuth()
+
+  return () => {
+    listeners.delete(listener)
+    subscriberCount = Math.max(0, subscriberCount - 1)
+    if (subscriberCount === 0) {
+      subscription?.unsubscribe()
+      subscription = null
+      started = false
+      cancelSync()
+      snapshot = initialState
+    }
+  }
+}
+
 export function useAuth(): AuthState {
-  const [session, setSession] = useState<Session | null>(null)
-  const [user, setUser] = useState<User | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const initialSyncCompleted = useRef(false)
-  const lastSyncedUserId = useRef<string | null>(null)
-
-  useEffect(() => {
-    const cancelCurrentSync = () => {
-      handleVocabularySignOut()
-      handleActivitySignOut()
-    }
-
-    const syncUser = (userId: string) => {
-      if (
-        lastSyncedUserId.current === userId &&
-        initialSyncCompleted.current
-      ) {
-        return
-      }
-
-      if (
-        lastSyncedUserId.current &&
-        lastSyncedUserId.current !== userId
-      ) {
-        cancelCurrentSync()
-      }
-
-      lastSyncedUserId.current = userId
-      initialSyncCompleted.current = true
-
-      void Promise.allSettled([
-        Promise.resolve().then(() => handleVocabularySignIn(userId)),
-        Promise.resolve().then(() => handleActivitySignIn(userId)),
-      ])
-    }
-
-    const syncSignedOut = () => {
-      cancelCurrentSync()
-      lastSyncedUserId.current = null
-      initialSyncCompleted.current = false
-    }
-
-    // Run legacy migration once on startup
-    runLegacyMigration()
-
-    // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session)
-      setUser(session?.user || null)
-      setIsLoading(false)
-
-      if (session?.user) {
-        syncUser(session.user.id)
-      }
-    })
-
-    // Listen for auth changes (login, logout)
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      setSession(session)
-      setUser(session?.user || null)
-      setIsLoading(false)
-
-      if (event === "SIGNED_IN" && session?.user) {
-        syncUser(session.user.id)
-      }
-
-      if (event === "SIGNED_OUT") {
-        syncSignedOut()
-      }
-    })
-
-    return () => {
-      subscription.unsubscribe()
-    }
-  }, [])
-
-  return { session, user, isLoading }
+  const state = useSyncExternalStore(subscribe, () => snapshot, () => initialState)
+  return state
 }

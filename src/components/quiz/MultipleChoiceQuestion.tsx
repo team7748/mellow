@@ -146,23 +146,25 @@ export function MultipleChoiceQuestion({
               type="button"
               onClick={() => handleSelect(option)}
               disabled={isAnswered}
-              className={`flex min-h-14 items-center gap-3 rounded-lg border px-4 py-3 text-left text-base font-semibold transition duration-150 active:scale-[0.98]
+              className={`group flex min-h-16 items-center gap-4 rounded-2xl border-2 px-5 py-4 text-left text-base font-bold transition-all duration-300 active:scale-[0.98]
                 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
                 disabled:cursor-default
                 ${
                   isCorrectOption
-                    ? "border-primary bg-primary-soft text-ink-dark"
+                    ? "border-primary bg-primary-soft text-ink-dark shadow-md shadow-primary/10 -translate-y-0.5"
                     : isSelectedWrong
-                      ? "border-rose-400 bg-rose-50 text-rose-800"
+                      ? "border-rose-400 bg-rose-50 text-rose-800 shadow-sm animate-[shake_0.4s_ease-in-out]"
                       : isAnswered
-                        ? "border-border bg-slate-50 text-ink-secondary"
-                        : "border-border bg-card text-ink-DEFAULT hover:border-primary hover:bg-primary-soft"
+                        ? "border-border/50 bg-slate-50/50 text-ink-secondary/70"
+                        : "border-border bg-card text-ink-DEFAULT hover:border-primary/60 hover:bg-primary-soft/30 hover:shadow-md hover:-translate-y-0.5"
                 }`}
             >
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-slate-100 text-xs font-bold text-ink-secondary ring-1 ring-border">
+              <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-bold transition-colors ${
+                isCorrectOption ? "bg-primary text-white" : isSelectedWrong ? "bg-rose-500 text-white" : isAnswered ? "bg-slate-200 text-ink-secondary" : "bg-slate-100 text-ink-secondary group-hover:bg-primary/20 group-hover:text-primary"
+              }`}>
                 {index + 1}
               </span>
-              <span className="flex-1">{option}</span>
+              <span className="flex-1 text-lg">{option}</span>
             </button>
           )
         })}
@@ -170,35 +172,48 @@ export function MultipleChoiceQuestion({
 
       {isAnswered && (
         <div
-          className="feedback-card mt-5 animate-in slide-in-from-bottom-2 fade-in duration-300"
+          className={`feedback-card mt-8 animate-in slide-in-from-bottom-8 fade-in duration-500 p-6 rounded-2xl shadow-xl border-2 z-10 relative ${selected === correctAnswer ? "bg-primary-soft/80 border-primary/30" : "bg-rose-50 border-rose-200"}`}
+          style={{ transitionTimingFunction: "cubic-bezier(0.175, 0.885, 0.32, 1.275)" }}
           role="status"
           aria-live="polite"
         >
-          <div className="flex items-center gap-2">
-            {selected === correctAnswer ? (
-              <CheckCircle2 className="h-5 w-5 text-primary" aria-hidden="true" />
-            ) : (
-              <XCircle className="h-5 w-5 text-rose-600" aria-hidden="true" />
-            )}
-            <p className="font-semibold text-ink-DEFAULT">
-              {selected === correctAnswer ? "ถูกต้อง! 🎉" : "ยังไม่ถูก"}
-            </p>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="flex items-start gap-4">
+              <div className={`flex shrink-0 h-12 w-12 items-center justify-center rounded-full ${selected === correctAnswer ? "bg-primary text-white" : "bg-rose-500 text-white"} shadow-inner`}>
+                {selected === correctAnswer ? (
+                  <CheckCircle2 className="h-6 w-6" aria-hidden="true" />
+                ) : (
+                  <XCircle className="h-6 w-6" aria-hidden="true" />
+                )}
+              </div>
+              <div className="flex flex-col">
+                <p className={`text-xl font-black tracking-tight ${selected === correctAnswer ? "text-primary-dark" : "text-rose-700"}`}>
+                  {selected === correctAnswer ? "ถูกต้อง! 🎉" : "ยังไม่ถูก"}
+                </p>
+                <p className="mt-1 text-base text-ink-DEFAULT">
+                  คำตอบที่ถูก: <span className="font-bold">{correctAnswer}</span>
+                </p>
+              </div>
+            </div>
+            
+            <Button
+              className="w-full sm:w-auto min-h-12 text-base rounded-xl shadow-md"
+              variant={selected === correctAnswer ? "primary" : "danger"}
+              onClick={() => onAnswer(selected === correctAnswer)}
+            >
+              <ArrowRight className="mr-2 h-5 w-5" aria-hidden="true" />
+              ข้อถัดไป (Enter)
+            </Button>
           </div>
-          <p className="mt-1 text-sm text-ink-DEFAULT">
-            คำตอบที่ถูก: <span className="font-bold">{correctAnswer}</span>
-          </p>
+          
           {word.quiz?.hintTH && (
-            <p className="mt-1 text-sm text-amber-600 bg-amber-50 p-2 rounded-md">
-              <span className="font-bold">คำแนะนำ:</span> {word.quiz.hintTH}
-            </p>
+            <div className="mt-4 flex items-start gap-3 bg-white/60 p-4 rounded-xl ring-1 ring-black/5">
+              <span className="text-xl">💡</span>
+              <p className="text-sm text-ink-DEFAULT leading-relaxed">
+                <span className="font-bold">คำอธิบาย:</span> {word.quiz.hintTH}
+              </p>
+            </div>
           )}
-          <Button
-            className="mt-3 w-full sm:w-auto"
-            onClick={() => onAnswer(selected === correctAnswer)}
-          >
-            <ArrowRight className="mr-2 h-4 w-4" aria-hidden="true" />
-            ข้อถัดไป (Enter)
-          </Button>
         </div>
       )}
 

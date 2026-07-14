@@ -8,11 +8,11 @@ type MobileHeaderProps = {
 export function MobileHeader({ onNavigate }: MobileHeaderProps) {
   return (
     <header className="md:hidden sticky top-0 z-20 bg-card/95 backdrop-blur-md px-4 py-3 flex items-center justify-between border-b border-border">
-      <div className="flex items-center gap-2 cursor-pointer" onClick={() => onNavigate?.("home")}>
-        <img src="/logo.png" alt="KengSap Logo" className="w-11 h-11 object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
-        <span className="text-2xl font-bold tracking-tight flex items-center">
-          <span style={{ color: '#105625' }}>Keng</span>
-          <span style={{ color: '#4eb439' }}>Sap</span>
+      <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => onNavigate?.("home")}>
+        <img src="/logo.png" alt="Mellow Logo" className="w-[3.25rem] h-[3.25rem] object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
+        <span className="text-[1.75rem] font-black tracking-tight flex items-center">
+          <span style={{ color: '#105625' }}>Mel</span>
+          <span style={{ color: '#4eb439' }}>low</span>
         </span>
       </div>
       <button 

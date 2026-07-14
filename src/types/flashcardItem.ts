@@ -7,6 +7,7 @@ export type UnifiedFlashcard = {
   back: string;
   note?: string; // Additional context or hint
   example?: string; // Example sentence or usage
+  ipa?: string; // Pronunciation for vocabulary cards
 
   // For Vocabulary
   wordId?: string;

@@ -44,25 +44,25 @@ describe("FlashcardSetup category counts", () => {
 
     expect(
       screen.getByRole("option", {
-        name: "ชีวิตประจำวัน (Daily Life) — 2 คำ",
+        name: "ชีวิตประจำวัน — 2 คำ",
       }),
     ).toBeInTheDocument()
     expect(
       screen.getByRole("option", {
-        name: "การเดินทาง (Travel) — 2 คำ",
+        name: "การเดินทาง — 2 คำ",
       }),
     ).toBeInTheDocument()
 
-    await user.click(screen.getByRole("button", { name: "A2" }))
+    await user.selectOptions(screen.getAllByRole("combobox")[1], "A2")
 
     expect(
       screen.getByRole("option", {
-        name: "ชีวิตประจำวัน (Daily Life) — 2 คำ",
+        name: "ชีวิตประจำวัน — 2 คำ",
       }),
     ).toBeInTheDocument()
     expect(
       screen.getByRole("option", {
-        name: "การเดินทาง (Travel) — 2 คำ",
+        name: "การเดินทาง — 2 คำ",
       }),
     ).toBeInTheDocument()
   })

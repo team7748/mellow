@@ -1,61 +1,31 @@
-# Grammar data architecture
+# Grammar Data Architecture (Implemented)
 
-## JSON source of truth
+## JSON Source of Truth
 
-The twelve existing tense JSON files are the sole future source for grammar teaching
-content. Components must not copy grammar prose, examples, rules, questions, or
-flashcards. Learner state must never be written into these files.
+The twelve existing tense JSON files are the sole source for grammar teaching content. Components do not duplicate grammar prose, examples, rules, questions, or flashcards. 
 
-## Topic registry and stable IDs
+## Topic Registry and Stable IDs
 
-Create a typed registry in a future phase with one record per observed root `id`:
-source path, `categoryId`, `name`, `nameThai`, `stage`, `difficulty`,
-`displayOrder`, and prerequisites. Sort only by `displayOrder`; use the ID as the
-stable reference for routes, progress, mistakes, and card ownership. The registry
-must be the only central mapping from topic ID to loader path.
+The registry is implemented in `src/data/grammar/registry.ts`.
+- Exposes `grammarTopicRegistry`, a typed registry with records for each topic containing metadata (`categoryId`, `name`, `nameThai`, `stage`, `difficulty`, `displayOrder`, `estimatedMinutes`).
+- Topics are dynamically loaded via a `loader: () => Promise<{ default: GrammarTopic }>` function (e.g. `() => import('./topics/topic-present-simple.json')`).
+- IDs act as stable references for routing (`/#grammar/topic-present-simple`), progress (`grammarProgressStore`), and Flashcards.
 
-## TypeScript types
+## TypeScript Types
 
-Define an explicit `GrammarTopic` matching the observed schema and narrow subtypes
-for examples, structures, practice, and flashcards after a field-level audit.
-Define a separate `GrammarTopicSummary` for lists and `GrammarProgress` for mutable
-user state. Do not relabel `id`/`name` as `topicId`/`title` at runtime without a
-documented compatibility adapter.
+Types are strictly defined in `src/types/grammar.ts` and `src/types/flashcardItem.ts`.
+- `GrammarTopic` maps to the JSON file schemas.
+- `UnifiedFlashcard` is a polymorphic interface accommodating both Vocab and Grammar flashcards for the unified practice engine.
 
-## Validation
+## Validation and Data Loader
 
-- Runtime: validate loaded JSON, IDs, required display metadata, arrays, and
-  prerequisite references before rendering a lesson; return a typed error result.
-- Build time: parse all registry sources, verify unique IDs/slugs/orders, verify
-  prerequisite targets, and report missing/unknown fields.
-- Current gap: there is no validator in the repository. The current files lack
-  `schemaVersion`, `contentVersion`, and `status`, so a validator must either support
-  a documented legacy schema or block promotion until a content-owner migration.
+- `grammarTopicRegistry` acts as the data loader, surfacing metadata without fetching the entire JSON file.
+- The full lesson body is lazy-loaded by `GrammarLessonPage` and `useUnifiedFlashcardSetup`.
+- Any missing or invalid data results in safe UI error boundaries (e.g. "ไม่สามารถโหลดเนื้อหาไวยากรณ์ได้") without crashing the application.
 
-## Data loader and lazy loading
+## Progress and SRS References
 
-The registry should expose summaries without importing all lesson bodies. A loader
-retrieves one topic on demand, caches a validated result, and surfaces a retryable
-error. This prevents loading the full grammar corpus just to render the Speak
-category card or topic list.
-
-## Error handling
-
-Use a non-throwing result at the page boundary for unknown IDs, parse failures,
-schema failures, duplicate registry entries, broken prerequisite references, or
-network/module-load failure. Log technical context only in development; show users a
-safe retry/back state.
-
-## Versions and migration
-
-Add schema/content versions only through a content migration approved by the data
-owner. Until then, identify the source explicitly as legacy/unversioned. Migrations
-must be deterministic, retain original stable IDs, and be tested with representative
-files before moving files to `src/data/grammar/topics/`.
-
-## Progress references
-
-Grammar progress rows reference `topicId` (the stable source `id`), question/card
-ID, attempt metadata, accuracy, and review due time. Use an independent namespace
-and repository. A migration must neither overwrite `speakModeProgress` nor
-`thai-english-vocab-progress`; authenticated records require user ownership and RLS.
+- **Storage**: `localStorage.getItem('grammar-progress-store')` isolated via `useGrammarProgress.ts`.
+- **Schema**: Tracks progress by `topicId` and specific `patternId`s.
+- **SRS Storage**: `localStorage.getItem('srsProgress')` is unified and utilizes the `cardId` (which maps back to pattern IDs and variations) to decouple spaced-repetition timing from the content state.
+- **Deduping Mistakes**: The progress model deduplicates mistakes within a single session, preventing double penalties for identical errors in the same attempt.

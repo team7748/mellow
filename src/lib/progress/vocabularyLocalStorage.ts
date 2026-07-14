@@ -27,10 +27,17 @@ export function loadLocalVocabularyProgress(userId: string | null | undefined): 
   }
 }
 
-export function saveLocalVocabularyProgress(userId: string | null | undefined, progress: UserProgress): void {
+export function saveLocalVocabularyProgress(
+  userId: string | null | undefined,
+  progress: UserProgress,
+  options: { preserveUpdatedAt?: boolean } = {},
+): void {
   const key = getVocabularyStorageKey(userId);
-  progress.updatedAt = new Date().toISOString();
-  localStorage.setItem(key, JSON.stringify(progress));
+  const storedProgress = {
+    ...progress,
+    updatedAt: options.preserveUpdatedAt ? progress.updatedAt : new Date().toISOString(),
+  };
+  localStorage.setItem(key, JSON.stringify(storedProgress));
 }
 
 export function clearLocalVocabularyProgress(userId: string | null | undefined): void {
