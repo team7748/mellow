@@ -1,6 +1,7 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Volume2 } from "lucide-react"
-import { usePreferences } from "../../hooks/usePreferences"
+import { PreferencesContext } from "../../contexts/PreferencesContext"
+import { loadCachedPreferences } from "../../lib/preferences/preferencesStorage"
 import { speakText } from "../../utils/speech"
 
 type SpeakButtonProps = {
@@ -24,7 +25,7 @@ export function SpeakButton({
   pitch,
   text,
 }: SpeakButtonProps) {
-  const { preferences } = usePreferences()
+  const preferencesContext = useContext(PreferencesContext)
   const [isSupported] = useState(supportsSpeechSynthesis)
   const trimmedText = text.trim()
 
@@ -35,11 +36,12 @@ export function SpeakButton({
   function handleSpeak() {
     if (!trimmedText) return
 
+    const currentPreferences = preferencesContext?.preferences ?? loadCachedPreferences("guest")
     speakText(trimmedText, {
-      lang: lang ?? preferences.speechLocale,
-      rate: rate ?? preferences.speechRate,
+      lang: lang ?? currentPreferences.speechLocale,
+      rate: rate ?? currentPreferences.speechRate,
       pitch,
-      voiceUri: preferences.speechVoiceUri,
+      voiceUri: currentPreferences.speechVoiceUri,
     })
   }
 

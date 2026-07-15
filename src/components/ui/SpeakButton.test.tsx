@@ -2,16 +2,8 @@ import { render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { afterEach, describe, expect, it, vi } from "vitest"
 import { SpeakButton } from "./SpeakButton"
-
-vi.mock("../../hooks/usePreferences", () => ({
-  usePreferences: () => ({
-    preferences: {
-      speechLocale: "en-GB",
-      speechRate: 1.25,
-      speechVoiceUri: "voice-uk",
-    },
-  }),
-}))
+import { PreferencesContext } from "../../contexts/PreferencesContext"
+import { DEFAULT_USER_PREFERENCES } from "../../types/preferences"
 
 const originalSpeechSynthesis = window.speechSynthesis
 const OriginalUtterance = window.SpeechSynthesisUtterance
@@ -72,7 +64,17 @@ describe("SpeakButton", () => {
     const user = userEvent.setup()
     const speech = installSpeechMocks()
 
-    render(<SpeakButton text="schedule" />)
+    render(
+      <PreferencesContext.Provider value={{
+        preferences: { ...DEFAULT_USER_PREFERENCES, speechLocale: "en-GB", speechRate: 1.25, speechVoiceUri: "voice-uk" },
+        status: "ready",
+        error: null,
+        updatePreferences: vi.fn(),
+        retry: vi.fn(),
+      }}>
+        <SpeakButton text="schedule" />
+      </PreferencesContext.Provider>,
+    )
     await user.click(screen.getByRole("button", { name: "ฟังเสียง schedule" }))
 
     const utterance = speech.speak.mock.calls[0][0]

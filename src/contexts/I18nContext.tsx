@@ -33,6 +33,9 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
 export function useI18n() {
   const context = useContext(I18nContext)
-  if (!context) throw new Error("useI18n must be used within I18nProvider")
-  return context
+  return context ?? {
+    language: "th" as const,
+    t: (key: TranslationKey, values?: Record<string, string | number>) =>
+      interpolate(translations.th[key], values),
+  }
 }

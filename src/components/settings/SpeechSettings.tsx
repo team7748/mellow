@@ -26,6 +26,7 @@ export function SpeechSettings() {
             <select aria-label="ความเร็วเสียงอ่าน" className={selectClass} value={preferences.speechRate} onChange={(event) => void updatePreferences({ speechRate: Number(event.target.value) })}>
               <option value="0.75">ช้า</option>
               <option value="1">ปกติ</option>
+              <option value="1.05">ค่อนข้างเร็ว</option>
               <option value="1.25">เร็ว</option>
               <option value="1.5">เร็วมาก</option>
             </select>
