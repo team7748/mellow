@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS public.user_preferences (
   speech_voice_uri TEXT,
   speech_rate NUMERIC NOT NULL DEFAULT 1
     CHECK (speech_rate BETWEEN 0.5 AND 2),
-  speech_auto_play BOOLEAN NOT NULL DEFAULT false,
+  speech_auto_play BOOLEAN NOT NULL DEFAULT true,
   theme TEXT NOT NULL DEFAULT 'system'
     CHECK (theme IN ('light', 'dark', 'system')),
   created_at TIMESTAMPTZ NOT NULL DEFAULT now(),

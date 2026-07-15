@@ -43,7 +43,7 @@ export const DEFAULT_USER_PREFERENCES: UserPreferences = {
   speechLocale: "en-US",
   speechVoiceUri: null,
   speechRate: 1,
-  speechAutoPlay: false,
+  speechAutoPlay: true,
   theme: "system",
 }
 

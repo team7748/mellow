@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Volume2 } from "lucide-react"
-import { loadSpeechSettings } from "../../lib/speechSettings"
+import { usePreferences } from "../../hooks/usePreferences"
 import { speakText } from "../../utils/speech"
 
 type SpeakButtonProps = {
@@ -24,6 +24,7 @@ export function SpeakButton({
   pitch,
   text,
 }: SpeakButtonProps) {
+  const { preferences } = usePreferences()
   const [isSupported] = useState(supportsSpeechSynthesis)
   const trimmedText = text.trim()
 
@@ -34,11 +35,11 @@ export function SpeakButton({
   function handleSpeak() {
     if (!trimmedText) return
 
-    const settings = loadSpeechSettings()
     speakText(trimmedText, {
-      lang: lang ?? settings.lang,
-      rate: rate ?? settings.rate,
+      lang: lang ?? preferences.speechLocale,
+      rate: rate ?? preferences.speechRate,
       pitch,
+      voiceUri: preferences.speechVoiceUri,
     })
   }
 

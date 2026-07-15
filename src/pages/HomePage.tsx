@@ -3,6 +3,7 @@ import { ChevronRight } from "lucide-react"
 import { useAuth } from "../hooks/useAuth"
 import { useProfileForAuth } from "../hooks/useProfile"
 import { useLearningActivityLedger } from "../hooks/useLearningActivityLedger"
+import { usePreferences } from "../hooks/usePreferences"
 import {
   summarizeLearningActivity,
   type ActivityProgress,
@@ -114,6 +115,22 @@ function StatItem({ icon, value, label, bgClass }: StatItemProps) {
   )
 }
 
+function GoalProgress({ label, progress, suffix = "" }: { label: string; progress: ActivityProgress; suffix?: string }) {
+  return (
+    <div className="min-w-0 flex-1">
+      <div className="flex items-center justify-between gap-2 text-xs">
+        <span className="font-semibold text-ink-secondary">{label}</span>
+        <span className="shrink-0 font-bold tabular-nums text-ink">
+          {Math.floor(progress.completed)} / {progress.target}{suffix}
+        </span>
+      </div>
+      <span role="progressbar" aria-label={`${label} progress`} aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress.percentage} className="mt-2 block h-1.5 overflow-hidden rounded-full bg-progress-track">
+        <span className="block h-full rounded-full bg-primary transition-[width] duration-500" style={{ width: `${progress.percentage}%` }} />
+      </span>
+    </div>
+  )
+}
+
 /* ─── Mission Item (Desktop: vertical list / Mobile: compact card) ── */
 
 type MissionItemProps = {
@@ -174,6 +191,7 @@ export function HomePage({
   onStartFlashcard,
 }: HomePageProps) {
   const { user, isLoading } = useAuth()
+  const { preferences } = usePreferences()
   const { profile } = useProfileForAuth(user, isLoading)
   const now = new Date()
   const stats = getHomeProgressSummary(now)
@@ -181,6 +199,10 @@ export function HomePage({
   const activity = summarizeLearningActivity(activityLedger, {
     now,
     dueReviewWordsNow: stats.dueReviewWords,
+    goals: {
+      dailyVocabularyGoal: preferences.dailyVocabularyGoal,
+      dailyPracticeMinutes: preferences.dailyPracticeMinutes,
+    },
   })
   const quickReview = getHomeQuickReview()
   // Mascot ref is no longer needed for the new component
@@ -343,6 +365,10 @@ export function HomePage({
             />
           </div>
         </CardContent>
+        <div className="grid gap-3 border-t border-border/40 px-4 py-3 sm:grid-cols-2 sm:gap-6 sm:px-6 lg:px-8">
+          <GoalProgress label="คำศัพท์วันนี้" progress={activity.vocabularyGoal} />
+          <GoalProgress label="เวลาฝึกวันนี้" progress={activity.practiceTimeGoal} suffix=" นาที" />
+        </div>
       </Card>
 
       {/* ════════════════════════════════════════════════════

@@ -30,6 +30,15 @@ vi.mock("../hooks/useLearningActivityLedger", () => ({
   useLearningActivityLedger: () => mocks.ledger,
 }))
 
+vi.mock("../hooks/usePreferences", () => ({
+  usePreferences: () => ({
+    preferences: {
+      dailyVocabularyGoal: 20,
+      dailyPracticeMinutes: 30,
+    },
+  }),
+}))
+
 function activity(
   id: string,
   overrides: Partial<LearningActivityEvent> = {},
@@ -156,6 +165,23 @@ describe("HomePage real activity dashboard", () => {
     expect(
       within(missions).getByRole("progressbar", { name: "ทบทวนคำศัพท์ progress" }),
     ).toHaveAttribute("aria-valuenow", "50")
+  })
+
+  it("shows the saved vocabulary and practice-time goals", () => {
+    setActivities(
+      activity("quiz"),
+      activity("practice", {
+        kind: "practice_time",
+        mode: "quiz",
+        entityId: "session-1",
+        metadata: { durationSeconds: 600, sessionId: "session-1" },
+      }),
+    )
+
+    render(<HomePage />)
+
+    expect(screen.getByText("คำศัพท์วันนี้").closest("div")).toHaveTextContent("1 / 20")
+    expect(screen.getByText("เวลาฝึกวันนี้").closest("div")).toHaveTextContent("10 / 30 นาที")
   })
 
   it("renders a full Speak mission after five completed rounds", () => {

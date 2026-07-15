@@ -4,6 +4,7 @@ import type { ConversationLine } from "../../types/conversation"
 import { ConversationLineCard } from "./ConversationLineCard"
 import { Button } from "../ui/Button"
 import { speakText, toggleSpeech } from "../../utils/speech"
+import { usePreferences } from "../../hooks/usePreferences"
 
 type Props = {
   title: string
@@ -13,14 +14,12 @@ type Props = {
 }
 
 export function ConversationPlayer({ title, lines, onComplete, onReachedLastLine }: Props) {
+  const { preferences } = usePreferences()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [showThai, setShowThai] = useState(true)
   const containerRef = useRef<HTMLDivElement>(null)
 
-  const [speed] = useState<number>(() => {
-    const saved = localStorage.getItem("speakModeSpeed")
-    return saved ? Number(saved) : 0.8
-  })
+  const speed = preferences.speechRate
 
   const lastPlayedIndexRef = useRef<number>(-1)
 
@@ -39,19 +38,19 @@ export function ConversationPlayer({ title, lines, onComplete, onReachedLastLine
 
   // Auto-play audio on line change with different pitch for speakers
   useEffect(() => {
-    if (lastPlayedIndexRef.current !== currentIndex && lines[currentIndex]) {
+    if (preferences.speechAutoPlay && lastPlayedIndexRef.current !== currentIndex && lines[currentIndex]) {
       lastPlayedIndexRef.current = currentIndex
       const line = lines[currentIndex]
       const isSpeakerA = line.speaker.toUpperCase().includes('A') || line.speaker.trim() === 'Speaker 1'
       const currentPitch = isSpeakerA ? 1 : 0.7 // Noticeably lower pitch for Speaker B
       
       try {
-        speakText(line.english, { rate: speed, pitch: currentPitch })
+        speakText(line.english, { lang: preferences.speechLocale, rate: speed, pitch: currentPitch, voiceUri: preferences.speechVoiceUri })
       } catch {
         // Ignore autoplay errors if browser blocks it
       }
     }
-  }, [currentIndex, lines, speed])
+  }, [currentIndex, lines, preferences.speechAutoPlay, preferences.speechLocale, preferences.speechVoiceUri, speed])
 
   useEffect(() => {
     if (
@@ -116,13 +115,13 @@ export function ConversationPlayer({ title, lines, onComplete, onReachedLastLine
         if (!line) return
         const isSpeakerA = line.speaker.toUpperCase().includes('A') || line.speaker.trim() === 'Speaker 1'
         const currentPitch = isSpeakerA ? 1 : 0.7
-        toggleSpeech(line.english, { rate: speed, pitch: currentPitch })
+        toggleSpeech(line.english, { lang: preferences.speechLocale, rate: speed, pitch: currentPitch, voiceUri: preferences.speechVoiceUri })
       }
     }
 
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [currentIndex, handleNext, handlePrev, lines, speed])
+  }, [currentIndex, handleNext, handlePrev, lines, preferences.speechLocale, preferences.speechVoiceUri, speed])
 
   const progressPct = ((currentIndex + 1) / lines.length) * 100
 

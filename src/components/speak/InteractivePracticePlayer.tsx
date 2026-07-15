@@ -10,6 +10,7 @@ import type { SpeakAnswerEvaluation } from "../../types/speakAnswerEvaluation"
 import { speakCategoryToGrammarTopic } from "../../data/speak/grammarMapping"
 import { getGrammarTopicSummary } from "../../data/grammar/registry"
 import { GrammarMiniPractice } from "./GrammarMiniPractice"
+import { usePreferences } from "../../hooks/usePreferences"
 
 type InteractivePracticePlayerProps = {
   categoryTitle: string
@@ -143,6 +144,7 @@ export function InteractivePracticePlayer({
   questions,
   onComplete,
 }: InteractivePracticePlayerProps) {
+  const { preferences } = usePreferences()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [history, setHistory] = useState<Record<number, { text: string; evaluation: SpeakAnswerEvaluation | null }>>({})
   const currentHistory = history[currentIndex] || { text: "", evaluation: null }
@@ -153,10 +155,7 @@ export function InteractivePracticePlayer({
   const [showExample, setShowExample] = useState(false)
   const [showGrammarPractice, setShowGrammarPractice] = useState(false)
   const answerInputRef = useRef<HTMLTextAreaElement>(null)
-  const [speed, setSpeed] = useState<number>(() => {
-    const saved = localStorage.getItem("speakModeSpeed")
-    return saved ? Number(saved) : 0.8
-  })
+  const [speed, setSpeed] = useState<number>(preferences.speechRate)
 
   const currentQuestion = questions?.[currentIndex]
 
@@ -179,6 +178,8 @@ export function InteractivePracticePlayer({
     localStorage.setItem("speakModeSpeed", speed.toString())
   }, [speed])
 
+  useEffect(() => setSpeed(preferences.speechRate), [preferences.speechRate])
+
   const updateHistory = (text: string, evalData: SpeakAnswerEvaluation | null = null) => {
     setHistory((prev) => ({
       ...prev,
@@ -197,15 +198,15 @@ export function InteractivePracticePlayer({
   // Auto-play audio on question change
   useEffect(() => {
     if (!currentQuestion) return;
-    if (lastPlayedIndexRef.current !== currentIndex) {
+    if (preferences.speechAutoPlay && lastPlayedIndexRef.current !== currentIndex) {
       lastPlayedIndexRef.current = currentIndex
       try {
-        speakText(currentQuestion.questionEnglish, { rate: speed })
+        speakText(currentQuestion.questionEnglish, { lang: preferences.speechLocale, rate: speed, voiceUri: preferences.speechVoiceUri })
       } catch {
         // Ignore autoplay errors if browser blocks it
       }
     }
-  }, [currentIndex, currentQuestion, speed])
+  }, [currentIndex, currentQuestion, preferences.speechAutoPlay, preferences.speechLocale, preferences.speechVoiceUri, speed])
 
   // Keyboard navigation
   useEffect(() => {
@@ -225,13 +226,13 @@ export function InteractivePracticePlayer({
         handlePrevious()
       } else if (e.code === "Space") {
         e.preventDefault()
-        toggleSpeech(currentQuestion.questionEnglish, { rate: speed })
+        toggleSpeech(currentQuestion.questionEnglish, { lang: preferences.speechLocale, rate: speed, voiceUri: preferences.speechVoiceUri })
       }
     }
 
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [currentQuestion, handleNext, handlePrevious, speed])
+  }, [currentQuestion, handleNext, handlePrevious, preferences.speechLocale, preferences.speechVoiceUri, speed])
 
   if (!questions || questions.length === 0) {
     return <div className="p-4 text-center">No questions available.</div>
@@ -253,12 +254,12 @@ export function InteractivePracticePlayer({
   }
 
   const handleListenQuestion = () => {
-    speakText(currentQuestion.questionEnglish, { rate: speed })
+    speakText(currentQuestion.questionEnglish, { lang: preferences.speechLocale, rate: speed, voiceUri: preferences.speechVoiceUri })
   }
 
   const handleListenExample = () => {
     const text = currentQuestion.answerExample || "This is a natural example answer."
-    speakText(text, { rate: speed })
+    speakText(text, { lang: preferences.speechLocale, rate: speed, voiceUri: preferences.speechVoiceUri })
   }
 
   const handleCheckAnswer = async () => {
@@ -446,7 +447,7 @@ export function InteractivePracticePlayer({
               evaluation={evaluation} 
               answer={answer} 
               onTryAgain={handleTryAgain} 
-              onListen={() => speakText(evaluation.correctedAnswer || currentQuestion.answerExample || answer, { rate: speed })} 
+              onListen={() => speakText(evaluation.correctedAnswer || currentQuestion.answerExample || answer, { lang: preferences.speechLocale, rate: speed, voiceUri: preferences.speechVoiceUri })}
               onPracticeGrammar={relatedTopicId ? () => setShowGrammarPractice(true) : undefined}
               relatedTopicName={relatedTopicName}
             />

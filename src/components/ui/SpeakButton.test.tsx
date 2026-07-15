@@ -3,6 +3,16 @@ import userEvent from "@testing-library/user-event"
 import { afterEach, describe, expect, it, vi } from "vitest"
 import { SpeakButton } from "./SpeakButton"
 
+vi.mock("../../hooks/usePreferences", () => ({
+  usePreferences: () => ({
+    preferences: {
+      speechLocale: "en-GB",
+      speechRate: 1.25,
+      speechVoiceUri: "voice-uk",
+    },
+  }),
+}))
+
 const originalSpeechSynthesis = window.speechSynthesis
 const OriginalUtterance = window.SpeechSynthesisUtterance
 
@@ -21,7 +31,7 @@ function installSpeechMocks() {
 
   Object.defineProperty(window, "speechSynthesis", {
     configurable: true,
-    value: { cancel, speak },
+    value: { cancel, speak, getVoices: () => [] },
   })
   Object.defineProperty(window, "SpeechSynthesisUtterance", {
     configurable: true,
@@ -56,6 +66,18 @@ describe("SpeakButton", () => {
     expect(utterance.text).toBe("job")
     expect(utterance.lang).toBe("en-GB")
     expect(utterance.rate).toBe(1.05)
+  })
+
+  it("uses the saved speech preferences when props are omitted", async () => {
+    const user = userEvent.setup()
+    const speech = installSpeechMocks()
+
+    render(<SpeakButton text="schedule" />)
+    await user.click(screen.getByRole("button", { name: "ฟังเสียง schedule" }))
+
+    const utterance = speech.speak.mock.calls[0][0]
+    expect(utterance.lang).toBe("en-GB")
+    expect(utterance.rate).toBe(1.25)
   })
 
   it("does not render for empty text", () => {

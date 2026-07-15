@@ -15,13 +15,13 @@ import { logout } from "../services/authService"
 import { loadProgress } from "../lib/storage"
 import { PageContainer } from "../components/layout/PageContainer"
 import { WeeklyActivityChart } from "../components/profile/WeeklyActivityChart"
+import { ProfileSettings } from "../components/profile/ProfileSettings"
 import { summarizeWeeklyActivity } from "../lib/activity/weeklyActivitySummary"
 import { summarizeLearningActivity } from "../lib/activity/activitySummary"
 import {
-  Loader2, ChevronRight,
-  Settings, Bell, Target, TrendingUp,
+  Loader2, TrendingUp,
   Pencil, LogOut, CheckCircle2,
-  Globe, Camera, Trash2
+  Camera, Trash2
 } from "lucide-react"
 
 function getInitials(name: string | null | undefined) {
@@ -356,32 +356,7 @@ export function ProfilePage() {
         <div className="border-t border-border/40" />
 
         {/* 5. Account Settings */}
-        <section>
-          <h3 className="font-semibold text-sm text-ink mb-2">การตั้งค่า</h3>
-          <div className="rounded-2xl border border-border/60 overflow-hidden divide-y divide-border/40">
-
-            {[
-              { icon: Target, title: "เป้าหมายการเรียน", desc: "ตั้งเป้าหมายคำศัพท์และเวลาต่อวัน" },
-              { icon: Bell, title: "การแจ้งเตือน", desc: "จัดการอีเมลและการเตือนทบทวน" },
-              { icon: Globe, title: "ภาษา (Language)", desc: "เลือกภาษาของแอปพลิเคชัน" },
-              { icon: Settings, title: "จัดการข้อมูลส่วนตัว", desc: "รหัสผ่านและข้อมูลติดต่อ" },
-            ].map(({ icon: Icon, title, desc }, i) => (
-              <button key={i} className="w-full flex items-center justify-between px-4 py-3.5 hover:bg-slate-50/80 transition-colors text-left group">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-white border border-border/60 flex items-center justify-center text-ink-secondary group-hover:text-primary group-hover:border-primary/20 transition-colors">
-                    <Icon className="w-[18px] h-[18px]" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-sm text-ink">{title}</p>
-                    <p className="text-xs text-ink-secondary mt-0.5">{desc}</p>
-                  </div>
-                </div>
-                <ChevronRight className="w-4 h-4 text-ink-secondary/40 group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
-              </button>
-            ))}
-
-          </div>
-        </section>
+        <ProfileSettings />
 
         {/* 6. Logout */}
         <section className="pt-2 pb-8 flex justify-center">

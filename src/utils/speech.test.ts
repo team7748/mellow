@@ -13,13 +13,18 @@ function installSpeechMocks() {
     rate = 1
     pitch = 1
     volume = 1
+    voice: SpeechSynthesisVoice | null = null
 
     constructor(public text: string) {}
   }
 
   Object.defineProperty(window, "speechSynthesis", {
     configurable: true,
-    value: { cancel, speak },
+    value: {
+      cancel,
+      speak,
+      getVoices: () => [{ voiceURI: "voice-uk", lang: "en-GB", name: "UK Voice" }],
+    },
   })
   Object.defineProperty(window, "SpeechSynthesisUtterance", {
     configurable: true,
@@ -72,6 +77,16 @@ describe("speakText", () => {
     expect(utterance.rate).toBe(1.05)
     expect(utterance.pitch).toBe(0.9)
     expect(utterance.volume).toBe(0.8)
+  })
+
+  it("selects the saved device voice by voice URI", () => {
+    const speech = installSpeechMocks()
+
+    speakText("schedule", { voiceUri: "voice-uk" })
+
+    expect(speech.speak.mock.calls[0][0].voice).toMatchObject({
+      voiceURI: "voice-uk",
+    })
   })
 
   it("does not speak empty text", () => {

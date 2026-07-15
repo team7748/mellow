@@ -10,6 +10,17 @@ vi.mock("../../utils/speech", () => ({
   toggleSpeech: vi.fn(),
 }))
 
+vi.mock("../../hooks/usePreferences", () => ({
+  usePreferences: () => ({
+    preferences: {
+      speechAutoPlay: true,
+      speechLocale: "en-US",
+      speechRate: 1,
+      speechVoiceUri: null,
+    },
+  }),
+}))
+
 const baseLine = {
   categoryId: "category-1",
   categoryTitle: "Daily life",

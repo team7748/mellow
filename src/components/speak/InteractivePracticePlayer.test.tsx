@@ -5,6 +5,17 @@ import { checkSpeakAnswer } from "../../services/speakAnswerService"
 import type { SpeakAnswerEvaluation } from "../../types/speakAnswerEvaluation"
 import { InteractivePracticePlayer } from "./InteractivePracticePlayer"
 
+vi.mock("../../hooks/usePreferences", () => ({
+  usePreferences: () => ({
+    preferences: {
+      speechAutoPlay: true,
+      speechLocale: "en-US",
+      speechRate: 1,
+      speechVoiceUri: null,
+    },
+  }),
+}))
+
 vi.mock("../../services/speakAnswerService", () => ({
   checkSpeakAnswer: vi.fn(),
 }))
