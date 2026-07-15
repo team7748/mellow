@@ -1,5 +1,7 @@
 # Supabase activation: Profile settings and reminders
 
+> Mellow uses Light mode only. The legacy `user_preferences.theme` column remains in Supabase for schema compatibility, but the frontend does not read or write it. No migration is required for this compatibility column.
+
 ฟีเจอร์โปรไฟล์เพิ่มตาราง `public.user_preferences` และ `public.push_subscriptions` และเพิ่มชนิดกิจกรรม `practice_time` ใน ledger เดิมผ่าน migration `006_profile_settings_and_reminders.sql` จึงต้อง apply migration ก่อนใช้งานกับข้อมูลจริง
 
 ## 1. ตรวจและ apply migration

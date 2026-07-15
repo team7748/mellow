@@ -37,7 +37,7 @@ The existing `speechSettings` module, `SpeechSettings` component, and `SpeakButt
 
 ## Chosen Architecture
 
-Use a dedicated one-row-per-user preferences table alongside the existing profile table. Preferences are application behavior and are kept separate from identity fields such as name, email, role, and avatar. A React settings provider loads defaults synchronously from a local cache, then reconciles authenticated users with Supabase. This prevents theme flashes, keeps Guest Mode usable, and gives all routes one typed source of truth.
+Use a dedicated one-row-per-user preferences table alongside the existing profile table. Preferences are application behavior and are kept separate from identity fields such as name, email, role, and avatar. A React settings provider loads defaults synchronously from a local cache, then reconciles authenticated users with Supabase. This keeps Guest Mode usable and gives all routes one typed source of truth.
 
 Extend the existing Learning Activity ledger with timed practice segments. This is an additional event kind in the same ledger, not a second analytics system. Seven-day summaries and goals are pure derived data.
 
@@ -68,7 +68,7 @@ One row per authenticated user:
 | `speech_voice_uri` | `text` nullable | `null` | Browser voice preference when available |
 | `speech_rate` | `numeric` | `1` | Playback rate from `0.5` through `2` |
 | `speech_auto_play` | `boolean` | `false` | Automatically pronounce newly presented study content |
-| `theme` | `text` | `system` | `light`, `dark`, or `system` |
+| `theme` | `text` | `system` | Legacy compatibility column; retained in Supabase but not read or written by the frontend |
 | `created_at` | `timestamptz` | `now()` | Creation timestamp |
 | `updated_at` | `timestamptz` | `now()` | Updated by the existing timestamp trigger pattern |
 
@@ -163,7 +163,7 @@ The settings expose pronunciation locale, an available browser voice, playback s
 
 ### Display
 
-Light, Dark, and System update the root document theme immediately. System listens for `prefers-color-scheme` changes. Semantic design tokens are extended for dark mode, and hard-coded light surfaces on active routes are replaced with tokens while preserving layout, spacing, typography, and brand-green hierarchy.
+Mellow uses Light mode only. The profile has no display-theme menu, the root document declares a light color scheme, and the legacy database column remains unchanged for schema compatibility.
 
 ### Personal data
 
@@ -205,7 +205,7 @@ No nested card grid, decorative animation, heavy shadow, glass effect, or new vi
 
 - Seven-day boundaries, mode breakdowns, and timezone-safe date handling
 - Time-segment aggregation and exclusion from action counts
-- Preference normalization, validation, local cache migration, and theme resolution
+- Preference normalization, validation, local cache migration, and legacy-theme omission
 - Translation fallback and document language updates
 - Speech voice/rate selection and Auto Play guards
 - Push subscription serialization and permission states
@@ -215,7 +215,7 @@ No nested card grid, decorative animation, heavy shadow, glass effect, or new vi
 
 - Profile chart renders real ledger data and selected-day details
 - Every settings disclosure opens, validates, saves, and reports errors
-- Theme, language, speech, profile, password reset, and logout call their real service boundaries
+- Language, speech, profile, password reset, and logout call their real service boundaries
 - Guest Mode does not issue authenticated writes
 
 ### Integration and runtime verification
@@ -224,7 +224,7 @@ No nested card grid, decorative animation, heavy shadow, glass effect, or new vi
 - Build runs TypeScript and Vite production compilation
 - Full ESLint scan runs across `src` and `api`
 - Full Vitest suite runs serially if needed for stability
-- Browser smoke covers Profile on mobile and desktop widths, main routes, theme changes, language changes, avatar flow, and browser notification capability states
+- Browser smoke covers Profile on mobile and desktop widths, main routes, enforced Light mode, language changes, avatar flow, and browser notification capability states
 - Hosted Supabase verification runs a preference insert/update/select under an authenticated user when project credentials and migration access are available
 
 ## Deployment Handoff
