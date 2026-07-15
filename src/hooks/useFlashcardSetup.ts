@@ -35,6 +35,20 @@ export const DEFAULT_MODE: TrainingMode = "inOrder"
 
 export const FLASHCARD_SETUP_KEY = "vocabulary_flashcard_setup"
 
+function seededShuffle<T>(items: T[], seed: number): T[] {
+  const shuffled = [...items]
+  let state = seed || 1
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    state = (state * 1664525 + 1013904223) >>> 0
+    const swapIndex = state % (index + 1)
+    ;[shuffled[index], shuffled[swapIndex]] = [
+      shuffled[swapIndex],
+      shuffled[index],
+    ]
+  }
+  return shuffled
+}
+
 function safeLoadProgress() {
   try {
     return loadProgress()
@@ -45,7 +59,8 @@ function safeLoadProgress() {
 
 export function useFlashcardSetup() {
   const [filters, setFilters] = useState<SetupFilters>(DEFAULT_FILTERS)
-  const [mode, setMode] = useState<TrainingMode>(DEFAULT_MODE)
+  const [mode, setModeState] = useState<TrainingMode>(DEFAULT_MODE)
+  const [shuffleSeed, setShuffleSeed] = useState(0)
   const [customSelectedIds, setCustomSelectedIds] = useState<string[]>([])
   const [srsEnabled, setSrsEnabledState] = useState<boolean>(getSrsEnabled())
 
@@ -139,17 +154,23 @@ export function useFlashcardSetup() {
         words = words.filter((w) => prog.words[w.id]?.status === "learning")
       }
     } else if (mode === "shuffle") {
-      // deterministic copy then sort
-      words = [...words].sort(() => Math.random() - 0.5)
+      words = seededShuffle(words, shuffleSeed)
     }
     // inOrder: keep as is
 
     return words
-  }, [baseFilteredWords, mode])
+  }, [baseFilteredWords, mode, shuffleSeed])
+
+  function setMode(nextMode: TrainingMode) {
+    if (nextMode === "shuffle") {
+      setShuffleSeed((seed) => seed + 1)
+    }
+    setModeState(nextMode)
+  }
 
   function resetFilters() {
     setFilters(DEFAULT_FILTERS)
-    setMode(DEFAULT_MODE)
+    setModeState(DEFAULT_MODE)
   }
 
   function updateFilter<K extends keyof SetupFilters>(

@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react"
+import { fireEvent, render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { afterEach, describe, expect, it, vi } from "vitest"
 import { checkSpeakAnswer } from "../../services/speakAnswerService"
@@ -20,6 +20,13 @@ const question = {
   usefulPhrases: "I usually...|At...",
 }
 
+const secondQuestion = {
+  ...question,
+  questionNo: 2,
+  questionEnglish: "What do you have for breakfast?",
+  questionThai: "คุณกินอะไรเป็นอาหารเช้า",
+}
+
 const evaluation = (status: SpeakAnswerEvaluation["status"]): SpeakAnswerEvaluation => ({
   status,
   isMeaningCorrect: status !== "meaning_error",
@@ -37,6 +44,29 @@ afterEach(() => {
 })
 
 describe("InteractivePracticePlayer answer checking", () => {
+  it("navigates with arrow keys and completes from the last question", () => {
+    const onComplete = vi.fn()
+    render(
+      <InteractivePracticePlayer
+        categoryTitle="Morning"
+        questions={[question, secondQuestion]}
+        onComplete={onComplete}
+      />,
+    )
+
+    expect(screen.getByText("Question 1/2")).toBeInTheDocument()
+
+    fireEvent.keyDown(window, { code: "ArrowRight" })
+    expect(screen.getByText("Question 2/2")).toBeInTheDocument()
+
+    fireEvent.keyDown(window, { code: "ArrowLeft" })
+    expect(screen.getByText("Question 1/2")).toBeInTheDocument()
+
+    fireEvent.keyDown(window, { code: "ArrowRight" })
+    fireEvent.keyDown(window, { code: "ArrowRight" })
+    expect(onComplete).toHaveBeenCalledTimes(1)
+  })
+
   it("shows an accessible analysis panel while the answer check is pending", async () => {
     vi.mocked(checkSpeakAnswer).mockImplementation(() => new Promise(() => {}))
     const user = userEvent.setup()

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"
+import { useCallback, useState, useEffect, useRef } from "react"
 import { Volume2, ChevronRight, ChevronLeft, CheckCircle, Info, FastForward, PlayCircle, AlertCircle, Lightbulb, RotateCcw, XCircle, Loader2, BookOpen } from "lucide-react"
 import { Button } from "../ui/Button"
 import type { ConversationPractice } from "../../types/conversation"
@@ -15,7 +15,6 @@ type InteractivePracticePlayerProps = {
   categoryTitle: string
   questions: ConversationPractice[]
   onComplete?: () => void
-  onExit?: () => void
 }
 
 const feedbackStyles = {
@@ -143,7 +142,6 @@ export function InteractivePracticePlayer({
   categoryTitle,
   questions,
   onComplete,
-  onExit,
 }: InteractivePracticePlayerProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [history, setHistory] = useState<Record<number, { text: string; evaluation: SpeakAnswerEvaluation | null }>>({})
@@ -160,7 +158,21 @@ export function InteractivePracticePlayer({
     return saved ? Number(saved) : 0.8
   })
 
-  const currentQuestion = questions[currentIndex]
+  const currentQuestion = questions?.[currentIndex]
+
+  const handleNext = useCallback(() => {
+    if (currentIndex < questions.length - 1) {
+      setCurrentIndex((prev) => prev + 1)
+    } else {
+      onComplete?.()
+    }
+  }, [currentIndex, onComplete, questions.length])
+
+  const handlePrevious = useCallback(() => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prev) => prev - 1)
+    }
+  }, [currentIndex])
 
   // Persist speed
   useEffect(() => {
@@ -184,19 +196,21 @@ export function InteractivePracticePlayer({
   
   // Auto-play audio on question change
   useEffect(() => {
+    if (!currentQuestion) return;
     if (lastPlayedIndexRef.current !== currentIndex) {
       lastPlayedIndexRef.current = currentIndex
       try {
         speakText(currentQuestion.questionEnglish, { rate: speed })
-      } catch (error) {
+      } catch {
         // Ignore autoplay errors if browser blocks it
       }
     }
-  }, [currentIndex, currentQuestion.questionEnglish, speed])
+  }, [currentIndex, currentQuestion, speed])
 
   // Keyboard navigation
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
+      if (!currentQuestion) return;
       if (
         e.target instanceof HTMLInputElement ||
         e.target instanceof HTMLTextAreaElement ||
@@ -217,7 +231,7 @@ export function InteractivePracticePlayer({
 
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [currentIndex, currentQuestion.questionEnglish, speed, questions.length])
+  }, [currentQuestion, handleNext, handlePrevious, speed])
 
   if (!questions || questions.length === 0) {
     return <div className="p-4 text-center">No questions available.</div>
@@ -277,20 +291,6 @@ export function InteractivePracticePlayer({
     updateHistory(answer, null)
     setCheckError("")
     answerInputRef.current?.focus()
-  }
-
-  const handleNext = () => {
-    if (currentIndex < questions.length - 1) {
-      setCurrentIndex((prev) => prev + 1)
-    } else {
-      if (onComplete) onComplete()
-    }
-  }
-
-  const handlePrevious = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prev) => prev - 1)
-    }
   }
 
   const insertPhrase = (phrase: string) => {

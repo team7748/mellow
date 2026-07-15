@@ -36,6 +36,9 @@ export function VocabularyCard({
 }: VocabularyCardProps) {
   const categories = vocabulary.category ?? []
   const scenarioLabel = categories.length > 0
+    ? categories[0]
+    : (vocabulary.scenarioThai || vocabulary.sourceScenario)
+
   return (
     <article
       aria-label={`${vocabulary.word} vocabulary card`}

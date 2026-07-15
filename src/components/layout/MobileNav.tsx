@@ -4,7 +4,6 @@ import {
   Layers3,
   MessageSquare,
   PenLine,
-  Leaf,
 } from "lucide-react"
 import type { AppPage } from "../../App"
 

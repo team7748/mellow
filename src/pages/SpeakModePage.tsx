@@ -110,6 +110,7 @@ export function SpeakModePage() {
   };
 
   useEffect(() => {
+    let active = true;
     if (selectedCategoryId) {
       setLoading(true);
       Promise.all([
@@ -117,18 +118,38 @@ export function SpeakModePage() {
         fetchConversationVocab(selectedCategoryId),
         fetchConversationPractice(selectedCategoryId),
       ]).then(([l, v, p]) => {
+        if (!active) return;
         setLines(l);
         setVocab(v);
         setPractice(p);
         setLoading(false);
 
-        // Auto-select first conversation if none selected
-        if (!selectedConversationId && l.length > 0) {
+        if (l.length > 0) {
           const firstConvId = l[0].conversationId;
-          handleSelectConversation(firstConvId);
+          setSelectedConversationId(firstConvId);
+          setProgress((previousProgress) => {
+            const newProgress = {
+              ...previousProgress,
+              lastCategoryId: selectedCategoryId,
+              lastConversationId: firstConvId,
+              lastPracticedDate: new Date().toISOString(),
+            };
+            saveSpeakModeProgress(newProgress);
+            return newProgress;
+          });
         }
+      }).catch(() => {
+        if (!active) return;
+        setLines([]);
+        setVocab([]);
+        setPractice([]);
+        setLoading(false);
       });
     }
+
+    return () => {
+      active = false;
+    };
   }, [selectedCategoryId]);
 
   const conversationTitles = useMemo(() => {

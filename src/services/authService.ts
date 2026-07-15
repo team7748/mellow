@@ -2,13 +2,6 @@ import { supabase } from "../lib/supabaseClient"
 import type { Session, User } from "@supabase/supabase-js"
 import { createProfile, fetchProfile } from "./profileService"
 
-type SupabaseLikeError = {
-  message?: string;
-  status?: number;
-  code?: string;
-  name?: string;
-};
-
 export function translateAuthError(error: any): string {
   if (!error) {
     return "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง";

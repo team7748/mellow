@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { ArrowRight, CheckCircle2, Lightbulb, SkipForward, XCircle } from "lucide-react"
 import { Button } from "../ui/Button"
 import { Input } from "../ui/Input"
-import { SpeakButton } from "../ui/SpeakButton"
 import type { VocabularyItem } from "../../types/vocabulary"
 import { playCorrectSound, playIncorrectSound } from "../../utils/audioEffects"
 

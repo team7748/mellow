@@ -57,6 +57,14 @@ type FlashcardProgressSnapshot = {
   sessionId: string
 }
 
+function wasSrsRecordDue(record: ReturnType<typeof getSrsRecord>): boolean {
+  return Boolean(
+    record &&
+      record.status !== "new" &&
+      Date.parse(record.dueDate) <= Date.now(),
+  )
+}
+
 export function FlashcardPractice({
   cards,
   onComplete,
@@ -222,11 +230,7 @@ export function FlashcardPractice({
 
     if (card.type === "vocabulary" && card.wordId) {
       const previousSrsRecord = getSrsRecord(card.wordId)
-      const wasDue = Boolean(
-        previousSrsRecord &&
-          previousSrsRecord.status !== "new" &&
-          Date.parse(previousSrsRecord.dueDate) <= Date.now(),
-      )
+      const wasDue = wasSrsRecordDue(previousSrsRecord)
       processSrsAnswer(card.wordId, difficulty)
       recordLearningActivity({
         kind: "vocabulary_answer",
@@ -253,7 +257,7 @@ export function FlashcardPractice({
       const timer = setTimeout(() => onComplete(buildResult()), 300)
       return () => clearTimeout(timer)
     }
-  }, [currentIndex, queue.length, showLoopWarning])
+  })
 
   useEffect(() => {
     if (initialCards.length === 0 || currentIndex >= queue.length) return
@@ -359,13 +363,16 @@ export function FlashcardPractice({
         goNext()
       } else if (e.code === "Digit1" && isFlipped) {
         e.preventDefault()
-        srsEnabled ? answerSrs("again") : answerNormal("forgot")
+        if (srsEnabled) answerSrs("again")
+        else answerNormal("forgot")
       } else if (e.code === "Digit2" && isFlipped) {
         e.preventDefault()
-        srsEnabled ? answerSrs("hard") : answerNormal("medium")
+        if (srsEnabled) answerSrs("hard")
+        else answerNormal("medium")
       } else if (e.code === "Digit3" && isFlipped) {
         e.preventDefault()
-        srsEnabled ? answerSrs("good") : answerNormal("known")
+        if (srsEnabled) answerSrs("good")
+        else answerNormal("known")
       } else if (e.code === "Digit4" && isFlipped && srsEnabled) {
         e.preventDefault()
         answerSrs("easy")
@@ -374,7 +381,7 @@ export function FlashcardPractice({
 
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [queue.length, currentIndex, isFlipped, srsEnabled, showLoopWarning])
+  })
 
   if (initialCards.length === 0) {
     return (
@@ -551,10 +558,10 @@ export function FlashcardPractice({
               </div>
             ) : (
               <div className="flex flex-row w-full gap-2 sm:flex-1 sm:gap-3">
-                <Button variant="outline-danger" className="flex-1 py-3 sm:py-2 text-base active:scale-[0.98]" onClick={() => answerNormal("forgot")}>
+                <Button aria-label="ปัดซ้าย: ยังจำไม่ได้" variant="outline-danger" className="flex-1 py-3 sm:py-2 text-base active:scale-[0.98]" onClick={() => answerNormal("forgot")}>
                   <XCircle className="w-5 h-5 mr-2" /> ลืม
                 </Button>
-                <Button variant="outline-success" className="flex-1 py-3 sm:py-2 text-base active:scale-[0.98]" onClick={() => answerNormal("known")}>
+                <Button aria-label="ปัดขวา: จำได้แล้ว" variant="outline-success" className="flex-1 py-3 sm:py-2 text-base active:scale-[0.98]" onClick={() => answerNormal("known")}>
                   <CheckCircle className="w-5 h-5 mr-2" /> จำได้
                 </Button>
               </div>

@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from "react"
-import { CheckCircle2, Volume2, ChevronRight, Sparkles } from "lucide-react"
+import { useState, useEffect } from "react"
+import { ChevronRight } from "lucide-react"
 import { useAuth } from "../hooks/useAuth"
 import { useProfileForAuth } from "../hooks/useProfile"
 import { useLearningActivityLedger } from "../hooks/useLearningActivityLedger"
@@ -11,8 +11,6 @@ import {
   getHomeProgressSummary,
   getHomeQuickReview,
 } from "../utils/homeProgress"
-import type { WordStatus } from "../types/vocabulary"
-import { FLASHCARD_SETUP_KEY, DEFAULT_FILTERS } from "../hooks/useUnifiedFlashcardSetup"
 import { PageContainer } from "../components/layout/PageContainer"
 import { Card, CardContent } from "../components/ui/Card"
 import { Button } from "../components/ui/Button"
@@ -48,11 +46,8 @@ const categories = [
   { label: "ชีวิตประจำวัน", accessibleLabel: "Daily Life", filterValue: "Daily Life", image: catDailyUrl },
 ]
 
-const statusLabels: Record<WordStatus, string> = {
-  new: "ยังไม่เริ่ม",
-  learning: "กำลังเรียน",
-  review: "ควรทบทวน",
-  mastered: "จำได้แล้ว",
+function navigateToHash(hash: string) {
+  window.location.hash = hash
 }
 
 /* ─── Animated Number Component ───────────────────────────── */
@@ -67,6 +62,7 @@ function AnimatedNumber({ value, duration = 2500 }: { value: number; duration?: 
     }
 
     let startTimestamp: number | null = null
+    let frameId = 0
 
     const step = (timestamp: number) => {
       if (!startTimestamp) startTimestamp = timestamp
@@ -78,14 +74,15 @@ function AnimatedNumber({ value, duration = 2500 }: { value: number; duration?: 
       setCurrent(Math.floor(easeProgress * end))
 
       if (progress < 1) {
-        window.requestAnimationFrame(step)
+        frameId = window.requestAnimationFrame(step)
       } else {
         setCurrent(end)
       }
     }
 
-    window.requestAnimationFrame(step)
-  }, [value])
+    frameId = window.requestAnimationFrame(step)
+    return () => window.cancelAnimationFrame(frameId)
+  }, [duration, value])
 
   return <>{current.toLocaleString()}</>
 }
@@ -103,7 +100,7 @@ function StatItem({ icon, value, label, bgClass }: StatItemProps) {
   return (
     <div className="group flex flex-col sm:flex-row flex-1 items-center justify-center sm:justify-start gap-1.5 sm:gap-3 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] cursor-default text-center sm:text-left w-full sm:w-auto">
       <span className={`flex h-9 w-9 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full border ${bgClass} transition-colors duration-300 group-hover:border-primary/40 shadow-sm sm:shadow-none`}>
-        <img src={icon} alt="" className="h-5 w-5 sm:h-8 sm:w-8 object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[10deg]" />
+        <img src={icon} alt="" className="h-6 w-6 sm:h-9 sm:w-9 object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[10deg]" />
       </span>
       <span className="min-w-0 flex flex-col items-center sm:items-start">
         <strong className="text-sm font-black leading-tight text-ink-dark sm:text-2xl transition-colors duration-300 group-hover:text-primary tabular-nums tracking-tight">
@@ -140,7 +137,7 @@ function MissionItem({ title, icon, progress, onClick, accentBg = "bg-primary-so
         <img
           src={icon}
           alt=""
-          className="h-7 w-7 sm:h-9 sm:w-9 object-contain"
+          className="h-8 w-8 sm:h-10 sm:w-10 object-contain"
         />
       </span>
       <span className="min-w-0 flex-1">
@@ -211,7 +208,7 @@ export function HomePage({
 
   const handleContinueLearning = () => {
     const lastActive = localStorage.getItem("last_active_route") || "vocabulary"
-    window.location.hash = lastActive
+    navigateToHash(lastActive)
   }
 
   const openVocabulary = (category?: string) => {
@@ -219,24 +216,28 @@ export function HomePage({
       onOpenVocabulary(category)
       return
     }
-    window.location.hash = category ? `vocabulary?category=${encodeURIComponent(category)}` : "vocabulary"
+    navigateToHash(
+      category
+        ? `vocabulary?category=${encodeURIComponent(category)}`
+        : "vocabulary",
+    )
   }
 
   const startFlashcard = (reviewDue: boolean = false) => {
     if (reviewDue) {
-      window.location.hash = "flashcard?filterStatus=srs-due-now&mode=reviewForgot"
+      navigateToHash("flashcard?filterStatus=srs-due-now&mode=reviewForgot")
     } else {
       // Still call onStartFlashcard for default routing if provided, to preserve old behavior
       if (onStartFlashcard) {
         onStartFlashcard()
         return
       }
-      window.location.hash = "flashcard"
+      navigateToHash("flashcard")
     }
   }
 
   const openSpeak = () => {
-    window.location.hash = "speak"
+    navigateToHash("speak")
   }
 
   return (
@@ -296,6 +297,7 @@ export function HomePage({
           ════════════════════════════════════════════════════ */}
       <Card
         data-home-section="stats"
+        role="region"
         aria-label="Learning statistics"
         className="mt-3 sm:mt-0 relative z-10 sm:rounded-t-none sm:rounded-b-2xl border-t-0 sm:border-t sm:border-primary/10 shadow-sm shadow-black/5 animate-fade-in-up opacity-0-init delay-100 overflow-hidden"
       >
@@ -306,7 +308,7 @@ export function HomePage({
               icon={dayStreakUrl}
               value={<AnimatedNumber value={activity.streakDays} duration={1000} />}
               label="วันที่เรียนต่อเนื่อง"
-              bgClass="bg-gradient-to-br from-orange-50 to-amber-100 border-amber-200/60"
+              bgClass="bg-gradient-to-br from-amber-100/80 to-orange-100/70 border-amber-200/50"
             />
           </div>
 
@@ -326,7 +328,7 @@ export function HomePage({
                 </span>
               }
               label="เป้าหมายรายวัน"
-              bgClass="bg-gradient-to-br from-blue-50 to-cyan-100 border-cyan-200/60"
+              bgClass="bg-gradient-to-br from-amber-100/80 to-orange-100/70 border-amber-200/50"
             />
           </div>
 
@@ -337,7 +339,7 @@ export function HomePage({
               icon={wordsLearnedUrl}
               value={<AnimatedNumber value={stats.learnedWords} />}
               label="คำศัพท์ที่เรียนไป"
-              bgClass="bg-gradient-to-br from-green-50 to-emerald-100 border-emerald-200/60"
+              bgClass="bg-gradient-to-br from-amber-100/80 to-orange-100/70 border-amber-200/50"
             />
           </div>
         </CardContent>
@@ -460,8 +462,8 @@ export function HomePage({
                   icon={missionReviewUrl}
                   progress={activity.missions.review}
                   onClick={() => startFlashcard(true)}
-                  accentBg="bg-gradient-to-br from-orange-50 to-amber-100 border-amber-200/60"
-                  barColor="bg-gradient-to-r from-orange-400 to-amber-400"
+                  accentBg="bg-gradient-to-br from-amber-100/80 to-orange-100/70 border-amber-200/50"
+                  barColor="bg-gradient-to-r from-amber-400 to-orange-500"
                 />
               ) : null}
               <MissionItem
@@ -469,16 +471,16 @@ export function HomePage({
                 icon={missionFlashcardUrl}
                 progress={activity.missions.flashcards}
                 onClick={() => startFlashcard(false)}
-                accentBg="bg-gradient-to-br from-blue-50 to-cyan-100 border-cyan-200/60"
-                barColor="bg-gradient-to-r from-blue-400 to-cyan-400"
+                accentBg="bg-gradient-to-br from-amber-100/80 to-orange-100/70 border-amber-200/50"
+                barColor="bg-gradient-to-r from-primary to-green-400"
               />
               <MissionItem
                 title="ฝึกพูด"
                 icon={missionSpeakUrl}
                 progress={activity.missions.speak}
                 onClick={openSpeak}
-                accentBg="bg-gradient-to-br from-purple-50 to-fuchsia-100 border-fuchsia-200/60"
-                barColor="bg-gradient-to-r from-purple-400 to-fuchsia-400"
+                accentBg="bg-gradient-to-br from-amber-100/80 to-orange-100/70 border-amber-200/50"
+                barColor="bg-gradient-to-r from-purple-500 to-blue-500"
               />
             </div>
           </section>
@@ -511,7 +513,6 @@ export function HomePage({
             </div>
           </section>
 
-          {/* Quick Review */}
           {/* Quick Review */}
           {quickReview ? (
             <section

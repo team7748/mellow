@@ -1,4 +1,4 @@
-import { CircleUserRound, Leaf } from "lucide-react"
+import { CircleUserRound } from "lucide-react"
 import type { AppPage } from "../../App"
 
 type MobileHeaderProps = {

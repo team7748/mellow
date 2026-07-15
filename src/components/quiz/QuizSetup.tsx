@@ -1,5 +1,4 @@
 import {
-  ArrowLeft,
   CheckCircle2,
   ClipboardList,
   Eye,
@@ -14,7 +13,6 @@ import type { VocabCategory } from "../../types/vocabulary"
 import { getAllCategories, getCategoryWordCount } from "../../utils/vocabulary"
 import { categoryThaiLabels } from "../../data/categoryIconMap"
 import { Button } from "../ui/Button"
-import { Badge } from "../ui/Badge"
 import { Chip } from "../ui/Chip"
 import { OptionCard } from "../ui/OptionCard"
 import { Select } from "../ui/Select"
@@ -79,7 +77,7 @@ type QuizSetupProps = {
   onBackToHome: () => void
 }
 
-export function QuizSetup({ onStart, onBackToHome }: QuizSetupProps) {
+export function QuizSetup({ onStart }: QuizSetupProps) {
   const {
     selectedCategory,
     practiceType,

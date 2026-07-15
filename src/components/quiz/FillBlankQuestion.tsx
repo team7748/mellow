@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useMemo, useRef, useState } from "react"
 import { ArrowRight, CheckCircle2, Lightbulb, SkipForward, XCircle } from "lucide-react"
 import { Button } from "../ui/Button"
 import { Input } from "../ui/Input"

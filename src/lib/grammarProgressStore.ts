@@ -2,8 +2,7 @@ import { supabase } from "./supabaseClient"
 import { assertAuthenticatedUser } from "./authUserScope"
 import type { 
   GrammarProgressV2, 
-  GrammarTopicProgress, 
-  GrammarMistakeRecord 
+  GrammarTopicProgress
 } from "../types/grammarProgress"
 import { GrammarLessonProgress, getGrammarLessonProgress } from "./grammarLessonProgress"
 

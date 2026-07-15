@@ -1,5 +1,5 @@
 import { useRef, useState } from "react"
-import { Eye, CheckCircle, XCircle } from "lucide-react"
+import { CheckCircle, XCircle } from "lucide-react"
 import { SpeakButton } from "../ui/SpeakButton"
 import { Badge } from "../ui/Badge"
 import { playFlipSound } from "../../utils/audioEffects"
@@ -87,8 +87,8 @@ export function SwipeableCard({
     }
   }
 
-  let transform = ""
-  let transition = ""
+  let transform: string
+  let transition: string
   let opacity = 1
   const zIndex = 10 - index
   const pointerEvents = index === 0 ? "auto" : "none"

@@ -3,16 +3,6 @@ import { evaluateGrammarAnswer } from "./practiceEngine"
 import type { GrammarPracticeQuestion } from "../../types/grammar"
 
 describe("evaluateGrammarAnswer", () => {
-  const mockMultipleChoice: GrammarPracticeQuestion = {
-    id: "q1",
-    type: "multiple_choice",
-    instructionThai: "เลือกคำตอบ",
-    question: "I ___ a student.",
-    answer: "am",
-    explanationThai: "ใช้ am กับ I",
-    options: ["am", "is", "are"]
-  };
-
   const mockSentenceBuilder: GrammarPracticeQuestion = {
     id: "q2",
     type: "sentence_builder",

@@ -1,6 +1,6 @@
 import { useMemo, useState, useEffect } from "react"
 import { loadProgress } from "../lib/storage"
-import type { CefrLevel, PartOfSpeech, VocabCategory, VocabularyItem } from "../types/vocabulary"
+import type { CefrLevel, PartOfSpeech, VocabCategory } from "../types/vocabulary"
 import { getAllVocabulary } from "../utils/vocabulary"
 import { getSrsEnabled, setSrsEnabled as saveSrsEnabled, sortWordIdsBySrsPriority, getSrsStatusInfo } from "../utils/srsService"
 import { getGrammarTopics, grammarTopicRegistry } from "../data/grammar/registry"
@@ -43,13 +43,28 @@ export const DEFAULT_FILTERS: SetupFilters = {
 export const DEFAULT_MODE: TrainingMode = "inOrder"
 export const FLASHCARD_SETUP_KEY = "vocabulary_flashcard_setup"
 
+function seededShuffle<T>(items: T[], seed: number): T[] {
+  const shuffled = [...items]
+  let state = seed || 1
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    state = (state * 1664525 + 1013904223) >>> 0
+    const swapIndex = state % (index + 1)
+    ;[shuffled[index], shuffled[swapIndex]] = [
+      shuffled[swapIndex],
+      shuffled[index],
+    ]
+  }
+  return shuffled
+}
+
 function safeLoadProgress() {
   try { return loadProgress() } catch { return { learnedWordIds: [], words: {}, updatedAt: null } }
 }
 
 export function useUnifiedFlashcardSetup() {
   const [filters, setFilters] = useState<SetupFilters>(DEFAULT_FILTERS)
-  const [mode, setMode] = useState<TrainingMode>(DEFAULT_MODE)
+  const [mode, setModeState] = useState<TrainingMode>(DEFAULT_MODE)
+  const [shuffleSeed, setShuffleSeed] = useState(0)
   const [customSelectedIds, setCustomSelectedIds] = useState<string[]>([])
   const [srsEnabled, setSrsEnabledState] = useState<boolean>(getSrsEnabled())
 
@@ -71,7 +86,8 @@ export function useUnifiedFlashcardSetup() {
         }
       }
       if (modeParam) {
-        setMode(modeParam)
+        setModeState(modeParam)
+        if (modeParam === "shuffle") setShuffleSeed((seed) => seed + 1)
       }
     }
   }, [])
@@ -120,26 +136,16 @@ export function useUnifiedFlashcardSetup() {
     const normalizedSearch = filters.searchKeyword.trim().toLowerCase()
     const prog = safeLoadProgress()
 
-    let pool: UnifiedFlashcard[] = []
-    if (filters.source === "vocabulary") pool = vocabCards
-    else if (filters.source === "grammar") pool = grammarCards
-    else pool = [...vocabCards, ...grammarCards] // mixed
+    const pool = filters.source === "vocabulary"
+      ? vocabCards
+      : filters.source === "grammar"
+        ? grammarCards
+        : [...vocabCards, ...grammarCards]
 
     const allWords = getAllVocabulary()
     const wordMap = new Map(allWords.map(w => [w.id, w]))
     const summaries = getGrammarTopics()
     const topicMap = new Map(summaries.map(s => [s.id, s]))
-
-    // We will group grammar cards by patternId so we don't return all variations in Setup
-    const grammarPatternMap = new Map<string, UnifiedFlashcard[]>()
-    for (const card of pool) {
-      if (card.type !== "vocabulary" && card.patternId) {
-        if (!grammarPatternMap.has(card.patternId)) {
-          grammarPatternMap.set(card.patternId, [])
-        }
-        grammarPatternMap.get(card.patternId)!.push(card)
-      }
-    }
 
     const dedupedPool: UnifiedFlashcard[] = []
     const seenPatterns = new Set<string>()
@@ -232,15 +238,22 @@ export function useUnifiedFlashcardSetup() {
     let cards = [...baseFilteredCards]
 
     if (mode === "shuffle") {
-      cards = [...cards].sort(() => Math.random() - 0.5)
+      cards = seededShuffle(cards, shuffleSeed)
     }
 
     return cards
-  }, [baseFilteredCards, mode])
+  }, [baseFilteredCards, mode, shuffleSeed])
+
+  function setMode(nextMode: TrainingMode) {
+    if (nextMode === "shuffle") {
+      setShuffleSeed((seed) => seed + 1)
+    }
+    setModeState(nextMode)
+  }
 
   function resetFilters() {
     setFilters({ ...DEFAULT_FILTERS, source: filters.source })
-    setMode(DEFAULT_MODE)
+    setModeState(DEFAULT_MODE)
   }
 
   function updateFilter<K extends keyof SetupFilters>(key: K, value: SetupFilters[K]) {
@@ -281,7 +294,6 @@ export function useUnifiedFlashcardSetup() {
 
   // Resolves the list of IDs into actual cards, applying variations for grammar!
   function resolveFullCards(selectedIds: string[]): UnifiedFlashcard[] {
-    const pool = [...vocabCards, ...grammarCards]
     const resolved: UnifiedFlashcard[] = []
 
     for (const sid of selectedIds) {

@@ -1,4 +1,4 @@
-import { type SrsRecord, type SrsStatus, type IntervalUnit, type SessionLog } from "../types/srs"
+import { type SrsRecord, type IntervalUnit, type SessionLog } from "../types/srs"
 
 const SRS_STORAGE_KEY = "thai_english_srs_records"
 
@@ -15,7 +15,7 @@ function loadRecords(): Record<string, SrsRecord> {
   if (!data) return {}
   try {
     return JSON.parse(data)
-  } catch (e) {
+  } catch {
     return {}
   }
 }
@@ -238,4 +238,3 @@ export function saveSessionLog(log: SessionLog) {
     console.error("Failed to save session log", e)
   }
 }
-

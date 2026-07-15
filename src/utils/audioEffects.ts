@@ -2,7 +2,7 @@ let audioCtx: AudioContext | null = null;
 
 function getAudioContext() {
   if (!audioCtx) {
-    // @ts-ignore - webkitAudioContext is for older browsers
+    // @ts-expect-error - webkitAudioContext is for older browsers
     const AudioContextClass = window.AudioContext || window.webkitAudioContext;
     if (AudioContextClass) {
       audioCtx = new AudioContextClass();

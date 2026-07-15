@@ -17,10 +17,6 @@ function hasText(value?: string | null | unknown[]) {
   return Boolean(value && typeof value === 'string' && value.trim().length > 0)
 }
 
-function TextValue({ value }: { value?: string | null }) {
-  return <>{hasText(value) ? value : fallbackText}</>
-}
-
 function DetailSection({
   children,
   title,

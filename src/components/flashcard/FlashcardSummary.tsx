@@ -1,7 +1,6 @@
 import { PracticeResultSummary } from "../shared/PracticeResultSummary"
 import type { FlashcardSessionResult } from "./FlashcardPractice"
 import type { UnifiedFlashcard } from "../../types/flashcardItem"
-import { getSrsRecord } from "../../utils/srsService"
 
 type FlashcardSummaryProps = {
   cards: UnifiedFlashcard[]
@@ -17,7 +16,6 @@ export function FlashcardSummary({
   result,
   onReviewMissed,
   onPracticeAgain,
-  onChangeFilters,
   onBackToVocabulary,
 }: FlashcardSummaryProps) {
   const { totalCards, srsEnabled } = result

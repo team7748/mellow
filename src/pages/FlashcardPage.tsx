@@ -80,7 +80,9 @@ export function FlashcardPage() {
       if (stored) {
         modeString = JSON.parse(stored).mode || modeString
       }
-    } catch (e) {}
+    } catch {
+      // Keep the default mode when saved setup data is unavailable.
+    }
 
     const uniqueIds = Array.from(new Set([...result.srsAgain, ...result.srsHard, ...result.srsGood, ...result.srsEasy, ...result.forgot, ...result.medium, ...result.known]))
 

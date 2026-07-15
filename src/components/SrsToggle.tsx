@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect } from "react"
-import { Info, Check } from "lucide-react"
+import { useState, useRef } from "react"
+import { Info } from "lucide-react"
 import { SrsInfoTooltip } from "./SrsInfoTooltip"
 
 type SrsToggleProps = {
@@ -13,7 +13,7 @@ export function SrsToggle({ enabled, onChange, className = "" }: SrsToggleProps)
   const pressTimer = useRef<number | null>(null)
   const isLongPress = useRef(false)
 
-  function handleStart(e: React.MouseEvent | React.TouchEvent) {
+  function handleStart() {
     isLongPress.current = false
     pressTimer.current = window.setTimeout(() => {
       isLongPress.current = true
@@ -21,7 +21,7 @@ export function SrsToggle({ enabled, onChange, className = "" }: SrsToggleProps)
     }, 500)
   }
 
-  function handleEnd(e: React.MouseEvent | React.TouchEvent) {
+  function handleEnd() {
     if (pressTimer.current) {
       clearTimeout(pressTimer.current)
       pressTimer.current = null

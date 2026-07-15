@@ -1,7 +1,5 @@
 import {
-  ArrowLeft,
   BookOpen,
-  Target,
   Filter,
   List,
   RefreshCw,
@@ -28,13 +26,11 @@ import {
   getAllVocabulary,
 } from "../../utils/vocabulary"
 import { getGrammarTopics } from "../../data/grammar/registry"
-import { cn } from "../../utils/cn"
 import { Button } from "../ui/Button"
 import { Input } from "../ui/Input"
 import { Select } from "../ui/Select"
 import { Chip } from "../ui/Chip"
 import { OptionCard } from "../ui/OptionCard"
-import { Card, CardHeader, CardTitle, CardContent } from "../ui/Card"
 import { SrsToggle } from "../SrsToggle"
 import { PageHeader } from "../layout/PageHeader"
 import { getSrsStatusInfo } from "../../utils/srsService"
@@ -139,7 +135,7 @@ type FlashcardSetupProps = {
   onBackToVocabulary: () => void
 }
 
-export function FlashcardSetup({ onStart, onBackToVocabulary }: FlashcardSetupProps) {
+export function FlashcardSetup({ onStart }: FlashcardSetupProps) {
   const {
     filters, mode, setMode, updateFilter, resetFilters,
     baseFilteredCards, activeCards, startSession, startRandom20Session,
@@ -199,14 +195,14 @@ export function FlashcardSetup({ onStart, onBackToVocabulary }: FlashcardSetupPr
         {/* Source Tabs */}
         <div className="flex p-1 bg-slate-100 rounded-lg w-full md:w-auto shrink-0 overflow-x-auto snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {[
-            { id: "vocabulary", label: "Vocabulary", icon: <BookText className="w-[18px] h-[18px] mr-1.5 shrink-0" /> },
-            { id: "grammar", label: "Grammar", icon: <GraduationCap className="w-[18px] h-[18px] mr-1.5 shrink-0 scale-[1.15]" /> },
-            { id: "mixed", label: "Mixed Mode", icon: <Layers className="w-[18px] h-[18px] mr-1.5 shrink-0" /> },
+            { id: "vocabulary", label: "Vocabulary", icon: <BookText className="w-4 h-4 mr-1 shrink-0" /> },
+            { id: "grammar", label: "Grammar", icon: <GraduationCap className="w-4 h-4 mr-1 shrink-0 scale-[1.1]" /> },
+            { id: "mixed", label: "Mixed Mode", icon: <Layers className="w-4 h-4 mr-1 shrink-0" /> },
           ].map((tab) => (
             <button
               key={tab.id}
               onClick={() => updateFilter("source", tab.id as any)}
-              className={`flex-1 md:flex-none flex items-center justify-center px-4 py-2 sm:px-6 rounded-lg text-sm font-bold transition-all snap-start whitespace-nowrap min-w-max ${
+              className={`flex-1 md:flex-none flex items-center justify-center px-3 py-1.5 sm:px-4.5 rounded-lg text-xs sm:text-sm font-bold transition-all snap-start whitespace-nowrap min-w-max ${
                 filters.source === tab.id ? "bg-white text-primary shadow-sm ring-1 ring-black/5" : "text-ink-secondary hover:text-ink-DEFAULT hover:bg-black/5"
               }`}
             >
@@ -299,6 +295,9 @@ export function FlashcardSetup({ onStart, onBackToVocabulary }: FlashcardSetupPr
                 <OptionCard
                   key={m.value}
                   onClick={() => setMode(m.value)}
+                  role="radio"
+                  aria-checked={mode === m.value}
+                  aria-label={m.value === "reviewForgot" ? `${m.label} ${m.labelThai} ฝึกเฉพาะคำที่จำไม่ได้` : undefined}
                   selected={mode === m.value}
                 >
                   <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${mode === m.value ? "bg-primary text-white" : "bg-slate-100 text-ink-secondary"}`}>{m.icon}</span>

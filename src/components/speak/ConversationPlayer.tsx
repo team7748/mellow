@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"
+import { useCallback, useState, useEffect, useRef } from "react"
 import { Eye, EyeOff, ChevronLeft, ChevronRight, RotateCcw } from "lucide-react"
 import type { ConversationLine } from "../../types/conversation"
 import { ConversationLineCard } from "./ConversationLineCard"
@@ -16,7 +16,7 @@ export function ConversationPlayer({ title, lines, onComplete, onReachedLastLine
   const [currentIndex, setCurrentIndex] = useState(0)
   const [showThai, setShowThai] = useState(true)
   const containerRef = useRef<HTMLDivElement>(null)
-  
+
   const [speed] = useState<number>(() => {
     const saved = localStorage.getItem("speakModeSpeed")
     return saved ? Number(saved) : 0.8
@@ -30,6 +30,7 @@ export function ConversationPlayer({ title, lines, onComplete, onReachedLastLine
     lastPlayedIndexRef.current = -1
   }, [title])
 
+  // Trigger onReachedLastLine when user reaches the last line
   const hasReachedEndRef = useRef(false)
 
   useEffect(() => {
@@ -46,7 +47,7 @@ export function ConversationPlayer({ title, lines, onComplete, onReachedLastLine
       
       try {
         speakText(line.english, { rate: speed, pitch: currentPitch })
-      } catch (error) {
+      } catch {
         // Ignore autoplay errors if browser blocks it
       }
     }
@@ -74,19 +75,19 @@ export function ConversationPlayer({ title, lines, onComplete, onReachedLastLine
     }
   }, [currentIndex])
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     if (currentIndex < lines.length - 1) {
       setCurrentIndex(prev => prev + 1)
     } else {
-      if (onComplete) onComplete()
+      onComplete?.()
     }
-  }
+  }, [currentIndex, lines.length, onComplete])
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     if (currentIndex > 0) {
       setCurrentIndex(prev => prev - 1)
     }
-  }
+  }, [currentIndex])
 
   const handleRestart = () => {
     hasReachedEndRef.current = false
@@ -112,6 +113,7 @@ export function ConversationPlayer({ title, lines, onComplete, onReachedLastLine
       } else if (e.code === "Space") {
         e.preventDefault()
         const line = lines[currentIndex]
+        if (!line) return
         const isSpeakerA = line.speaker.toUpperCase().includes('A') || line.speaker.trim() === 'Speaker 1'
         const currentPitch = isSpeakerA ? 1 : 0.7
         toggleSpeech(line.english, { rate: speed, pitch: currentPitch })
@@ -120,7 +122,7 @@ export function ConversationPlayer({ title, lines, onComplete, onReachedLastLine
 
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [currentIndex, lines.length])
+  }, [currentIndex, handleNext, handlePrev, lines, speed])
 
   const progressPct = ((currentIndex + 1) / lines.length) * 100
 

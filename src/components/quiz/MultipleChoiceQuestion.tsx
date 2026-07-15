@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 import { ArrowRight, CheckCircle2, SkipForward, XCircle } from "lucide-react"
 import { Button } from "../ui/Button"
 import { SpeakButton } from "../ui/SpeakButton"
@@ -75,7 +75,7 @@ export function MultipleChoiceQuestion({
   const isAnswered = selected !== null
   const correctAnswer = (word.quiz?.answerTH || word.thaiMeaning).trim()
 
-  function handleSelect(option: string) {
+  const handleSelect = useCallback((option: string) => {
     if (isAnswered) return
     setSelected(option)
     
@@ -84,7 +84,7 @@ export function MultipleChoiceQuestion({
     } else {
       playIncorrectSound()
     }
-  }
+  }, [correctAnswer, isAnswered])
 
   // Keyboard support for 1, 2, 3, 4, Enter
   useEffect(() => {
@@ -106,7 +106,7 @@ export function MultipleChoiceQuestion({
 
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [isAnswered, options, selected, onAnswer, word])
+  }, [correctAnswer, handleSelect, isAnswered, onAnswer, options, selected])
 
   return (
     <div>

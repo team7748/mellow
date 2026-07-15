@@ -37,12 +37,6 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  --animate-float-subtle: float-subtle 6s ease-in-out infinite;
-  @keyframes float-subtle {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
-  }
-
   --animate-shimmer: shimmer 3s infinite;
   @keyframes shimmer {
     0% { transform: translateX(-150%) skewX(-15deg); }
@@ -127,10 +121,6 @@ select {
 }
 
 @layer components {
-  .card-header-button {
-    @apply inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-border bg-card p-2 text-ink-secondary transition-all hover:-translate-y-0.5 hover:border-border/80 hover:bg-page hover:text-ink-dark active:translate-y-0 active:scale-95 disabled:pointer-events-none disabled:opacity-50;
-  }
-
   .feedback-card {
     @apply rounded-lg border border-border bg-primary-soft p-4;
   }
@@ -143,38 +133,13 @@ select {
     @apply rounded-xl border border-border bg-card shadow-soft;
   }
 
-  .surface-card-muted {
-    @apply rounded-xl border border-border bg-primary-soft shadow-soft;
-  }
-
   .surface-section {
     @apply rounded-xl border border-border bg-card p-4 shadow-soft sm:p-5;
-  }
-
-  .section-kicker {
-    @apply text-sm font-semibold text-primary;
-  }
-
-  .section-title {
-    @apply text-2xl font-bold leading-tight text-ink-dark sm:text-3xl;
-  }
-
-  .section-copy {
-    @apply max-w-2xl text-base leading-7 text-ink-secondary;
   }
 
   .memory-tip-panel h3 {
     @apply mb-1 font-bold text-primary;
   }
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0px); }
-}
-.animate-float {
-  animation: float 4s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -209,16 +174,6 @@ select {
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-
-@keyframes float-subtle {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-
-.animate-float-subtle {
-  animation: float-subtle 6s ease-in-out infinite;
-}
 
 @keyframes shimmer {
   0% { transform: translateX(-150%) skewX(-15deg); }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { AlertCircle, ArrowLeft, Clock, ListChecks, Info, Check, X } from "lucide-react"
+import { AlertCircle, ArrowLeft, Clock, Info, Check, X } from "lucide-react"
 import { PageContainer } from "../components/layout/PageContainer"
 import { Button } from "../components/ui/Button"
 import { SpeakButton } from "../components/ui/SpeakButton"

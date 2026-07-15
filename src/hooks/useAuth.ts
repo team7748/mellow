@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from "react"
-import type { Session, User, AuthChangeEvent } from "@supabase/supabase-js"
+import type { Session, AuthChangeEvent } from "@supabase/supabase-js"
 import { supabase } from "../lib/supabaseClient"
 import type { AuthState } from "../types/auth"
 import {
@@ -17,7 +17,7 @@ let snapshot = initialState
 let started = false
 let subscriberCount = 0
 let subscription: { unsubscribe: () => void } | null = null
-let listeners = new Set<() => void>()
+const listeners = new Set<() => void>()
 
 function publish(next: AuthState): void {
   snapshot = next
