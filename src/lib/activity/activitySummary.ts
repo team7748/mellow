@@ -16,6 +16,8 @@ export type ActivityProgress = {
 export type LearningActivitySummary = {
   streakDays: number
   dailyGoal: ActivityProgress
+  vocabularyGoal: ActivityProgress
+  practiceTimeGoal: ActivityProgress
   missions: {
     review: ActivityProgress & { visible: boolean }
     flashcards: ActivityProgress
@@ -46,7 +48,7 @@ function toProgress(completed: number, target: number): ActivityProgress {
   const safeTarget = Math.max(0, Math.floor(target))
   const safeCompleted = Math.min(
     safeTarget,
-    Math.max(0, Math.floor(completed)),
+    Math.max(0, Number.isFinite(completed) ? completed : 0),
   )
   const percentage =
     safeTarget > 0 ? Math.round((safeCompleted / safeTarget) * 100) : 0
@@ -78,7 +80,14 @@ function calculateStreak(activeDates: Set<string>, today: string): number {
 
 export function summarizeLearningActivity(
   ledger: LearningActivityLedger,
-  options: { now: Date; dueReviewWordsNow: number },
+  options: {
+    now: Date
+    dueReviewWordsNow: number
+    goals?: {
+      dailyVocabularyGoal: number
+      dailyPracticeMinutes: number
+    }
+  },
 ): LearningActivitySummary {
   const normalized = normalizeActivityLedger(ledger)
   const today = toLocalDateKey(options.now)
@@ -86,6 +95,9 @@ export function summarizeLearningActivity(
   const todayEvents = normalized.events.filter(
     (event) => event.localDate === today,
   )
+  const actionEvents = todayEvents.filter((event) => event.kind !== "practice_time")
+  const dailyVocabularyGoal = options.goals?.dailyVocabularyGoal ?? 10
+  const dailyPracticeMinutes = options.goals?.dailyPracticeMinutes ?? 15
 
   const dueWordIds = new Set(
     todayEvents
@@ -115,10 +127,24 @@ export function summarizeLearningActivity(
     (event) =>
       event.kind === "conversation_completed" && event.mode === "speak",
   ).length
+  const vocabularyCount = actionEvents.filter(
+    (event) =>
+      event.kind === "vocabulary_answer" &&
+      (event.mode === "flashcard" || event.mode === "quiz"),
+  ).length
+  const practiceMinutes = todayEvents.reduce(
+    (total, event) =>
+      event.kind === "practice_time"
+        ? total + (event.metadata?.durationSeconds ?? 0) / 60
+        : total,
+    0,
+  )
 
   return {
     streakDays: calculateStreak(activeDates, today),
-    dailyGoal: toProgress(todayEvents.length, DAILY_ACTIVITY_GOAL),
+    dailyGoal: toProgress(actionEvents.length, DAILY_ACTIVITY_GOAL),
+    vocabularyGoal: toProgress(vocabularyCount, dailyVocabularyGoal),
+    practiceTimeGoal: toProgress(practiceMinutes, dailyPracticeMinutes),
     missions: {
       review: { ...review, visible: reviewTarget > 0 },
       flashcards: toProgress(flashcardCount, FLASHCARD_MISSION_TARGET),

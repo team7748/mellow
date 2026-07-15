@@ -20,6 +20,26 @@ const baseEvent = {
 }
 
 describe("normalizeActivityLedger", () => {
+  it("keeps valid practice time and rejects invalid durations", () => {
+    const valid = {
+      ...baseEvent,
+      id: "timed",
+      kind: "practice_time",
+      metadata: { sessionId: "session-1", durationSeconds: 90 },
+    }
+    const invalid = {
+      ...valid,
+      id: "invalid-timed",
+      metadata: { sessionId: "session-1", durationSeconds: -1 },
+    }
+
+    expect(normalizeActivityLedger({
+      version: 1,
+      events: [valid, invalid],
+      updatedAt: null,
+    }).events).toEqual([valid])
+  })
+
   it("keeps a valid version-one ledger and derives its latest timestamp", () => {
     expect(
       normalizeActivityLedger({

@@ -10,6 +10,7 @@ const activityKinds = new Set<LearningActivityKind>([
   "vocabulary_answer",
   "grammar_answer",
   "conversation_completed",
+  "practice_time",
 ])
 
 const activityModes = new Set<LearningActivityMode>([
@@ -60,6 +61,13 @@ function normalizeMetadata(value: unknown): LearningActivityMetadata | undefined
   if (typeof value.correct === "boolean") metadata.correct = value.correct
   if (typeof value.wasDue === "boolean") metadata.wasDue = value.wasDue
   if (isNonEmptyString(value.sessionId)) metadata.sessionId = value.sessionId
+  if (
+    Number.isInteger(value.durationSeconds) &&
+    (value.durationSeconds as number) > 0 &&
+    (value.durationSeconds as number) <= 1800
+  ) {
+    metadata.durationSeconds = value.durationSeconds as number
+  }
 
   return Object.keys(metadata).length > 0 ? metadata : undefined
 }
@@ -96,6 +104,12 @@ export function normalizeActivityEvent(value: unknown): LearningActivityEvent | 
   }
 
   const metadata = normalizeMetadata(value.metadata)
+  if (
+    value.kind === "practice_time" &&
+    (!metadata?.durationSeconds || !metadata.sessionId)
+  ) {
+    return null
+  }
 
   return {
     id: value.id,

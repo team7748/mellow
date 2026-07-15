@@ -2,6 +2,7 @@ export type LearningActivityKind =
   | "vocabulary_answer"
   | "grammar_answer"
   | "conversation_completed"
+  | "practice_time"
 
 export type LearningActivityMode = "flashcard" | "quiz" | "grammar" | "speak"
 
@@ -9,6 +10,7 @@ export type LearningActivityMetadata = {
   correct?: boolean
   wasDue?: boolean
   sessionId?: string
+  durationSeconds?: number
 }
 
 export type LearningActivityEvent = {

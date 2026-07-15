@@ -55,6 +55,18 @@ describe("summarizeLearningActivity", () => {
         percentage: 0,
         isComplete: false,
       },
+      vocabularyGoal: {
+        completed: 0,
+        target: 10,
+        percentage: 0,
+        isComplete: false,
+      },
+      practiceTimeGoal: {
+        completed: 0,
+        target: 15,
+        percentage: 0,
+        isComplete: false,
+      },
       missions: {
         review: {
           completed: 0,
@@ -77,6 +89,28 @@ describe("summarizeLearningActivity", () => {
         },
       },
     })
+  })
+
+  it("counts real practice minutes without increasing action totals", () => {
+    const summary = summarizeLearningActivity(
+      ledger([
+        event("quiz", "2026-07-13"),
+        event("time", "2026-07-13", {
+          kind: "practice_time",
+          mode: "quiz",
+          metadata: { sessionId: "session-1", durationSeconds: 90 },
+        }),
+      ]),
+      {
+        now,
+        dueReviewWordsNow: 0,
+        goals: { dailyVocabularyGoal: 20, dailyPracticeMinutes: 10 },
+      },
+    )
+
+    expect(summary.dailyGoal.completed).toBe(1)
+    expect(summary.vocabularyGoal).toMatchObject({ completed: 1, target: 20 })
+    expect(summary.practiceTimeGoal).toMatchObject({ completed: 1.5, target: 10 })
   })
 
   it("counts a streak anchored on today", () => {
