@@ -1,6 +1,7 @@
 import { Suspense, lazy, useEffect, useState } from "react"
 import { AppLayout } from "./components/layout/AppLayout"
 import { HomePage } from "./pages/HomePage"
+import { useAuth } from "./hooks/useAuth"
 
 const FlashcardPage = lazy(() =>
   import("./pages/FlashcardPage").then((module) => ({
@@ -83,6 +84,9 @@ function writePageHash(page: AppPage, wordId: string | null = null) {
 }
 
 export default function App() {
+  // Keep authentication and activity synchronization alive across page changes.
+  useAuth()
+
   const initialRoute = readPageFromHash()
   const [currentPage, setCurrentPage] = useState<AppPage>(initialRoute.page)
   const [selectedWordId, setSelectedWordId] = useState<string | null>(
