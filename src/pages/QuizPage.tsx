@@ -4,6 +4,7 @@ import { QuizSetup } from "../components/quiz/QuizSetup"
 import { QuizSummary } from "../components/quiz/QuizSummary"
 import { PageContainer } from "../components/layout/PageContainer"
 import type { PracticeType } from "../hooks/useQuizSetup"
+import { usePracticeTimeTracker } from "../hooks/usePracticeTimeTracker"
 import type { VocabCategory } from "../types/vocabulary"
 import { categoryThaiLabels } from "../data/categoryIconMap"
 import { getAllVocabulary } from "../utils/vocabulary"
@@ -41,6 +42,12 @@ export function QuizPage() {
     correctIds: [],
     wrongIds: [],
     skippedIds: [],
+  })
+
+  usePracticeTimeTracker({
+    enabled: mode === "practice" && session.wordIds.length > 0,
+    mode: "quiz",
+    entityId: `quiz:${session.wordIds[0] ?? "setup"}:${session.wordIds.length}`,
   })
 
   useEffect(() => {

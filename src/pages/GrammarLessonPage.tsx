@@ -7,6 +7,7 @@ import { GrammarPractice } from "../components/grammar/GrammarPractice"
 import { PageHeader } from "../components/layout/PageHeader"
 import { loadGrammarTopic } from "../data/grammar/loader"
 import { useGrammarProgress } from "../hooks/useGrammarProgress"
+import { usePracticeTimeTracker } from "../hooks/usePracticeTimeTracker"
 import type { GrammarComparisonSide, GrammarRule, GrammarTopic } from "../types/grammar"
 import { stopSpeech } from "../utils/speech"
 
@@ -39,6 +40,12 @@ export function GrammarLessonPage({ onBack, topicId }: Props) {
   const [loadState, setLoadState] = useState<LoadState>({ state: "loading" })
   const [showPractice, setShowPractice] = useState(false)
   const { markTopicViewed, markTopicCompleted } = useGrammarProgress()
+
+  usePracticeTimeTracker({
+    enabled: loadState.state === "ready",
+    mode: "grammar",
+    entityId: topicId,
+  })
 
   useEffect(() => {
     let active = true

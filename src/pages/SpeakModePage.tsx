@@ -35,6 +35,7 @@ import { VocabularyPanel } from "../components/speak/VocabularyPanel";
 import { SpeakProgressCard } from "../components/speak/SpeakProgressCard";
 import { getGrammarTopics } from "../data/grammar/registry";
 import { recordLearningActivity } from "../lib/activity/recordLearningActivity";
+import { usePracticeTimeTracker } from "../hooks/usePracticeTimeTracker";
 
 const tenseSummaries: Record<string, string> = {
   "topic-present-simple":
@@ -92,6 +93,12 @@ export function SpeakModePage() {
   const [selectedConversationId, setSelectedConversationId] = useState<
     string | null
   >(null);
+
+  usePracticeTimeTracker({
+    enabled: Boolean(selectedCategoryId) && !loading,
+    mode: "speak",
+    entityId: selectedConversationId ?? selectedCategoryId ?? "speak-list",
+  });
 
   useEffect(() => {
     fetchConversationCategories().then((data) => {

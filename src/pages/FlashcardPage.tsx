@@ -6,6 +6,7 @@ import { PageContainer } from "../components/layout/PageContainer"
 import { GuestNotice } from "../components/auth/GuestNotice"
 import { saveSessionLog } from "../utils/srsService"
 import { FLASHCARD_SETUP_KEY } from "../hooks/useUnifiedFlashcardSetup"
+import { usePracticeTimeTracker } from "../hooks/usePracticeTimeTracker"
 import type { UnifiedFlashcard } from "../types/flashcardItem"
 import {
   FLASHCARD_PAGE_SESSION_KEY,
@@ -38,6 +39,12 @@ export function FlashcardPage() {
     loopCount: 0,
     totalCards: 0,
     srsEnabled: false,
+  })
+
+  usePracticeTimeTracker({
+    enabled: mode === "practice" && practiceCards.length > 0,
+    mode: "flashcard",
+    entityId: `flashcard:${practiceCards[0]?.id ?? "setup"}:${practiceCards.length}`,
   })
 
   useEffect(() => {
