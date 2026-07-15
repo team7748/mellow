@@ -5,11 +5,9 @@ export type SupabaseClientConfig = {
   publishableKey: string
 }
 
-export function getSupabaseClientConfig(
-  env: Record<string, string | undefined> = import.meta.env,
-): SupabaseClientConfig {
-  const url = env.VITE_SUPABASE_URL?.trim()
-  const publishableKey = env.VITE_SUPABASE_PUBLISHABLE_KEY?.trim()
+export function getSupabaseClientConfig(): SupabaseClientConfig {
+  const url = import.meta.env.VITE_SUPABASE_URL?.trim()
+  const publishableKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY?.trim()
 
   if (!url || !publishableKey) {
     throw new Error(
