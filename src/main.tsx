@@ -1,6 +1,8 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import App from "./App"
+import { PreferencesProvider } from "./contexts/PreferencesContext"
+import { I18nProvider } from "./contexts/I18nContext"
 import "./styles.css"
 
 const rootElement = document.getElementById("root")
@@ -11,7 +13,11 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <StrictMode>
-    <App />
+    <PreferencesProvider>
+      <I18nProvider>
+        <App />
+      </I18nProvider>
+    </PreferencesProvider>
   </StrictMode>,
 )
 
