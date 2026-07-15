@@ -16,11 +16,20 @@ describe("preferencesStorage", () => {
   it("keeps cached settings isolated by identity scope", () => {
     saveCachedPreferences("user:one", {
       ...DEFAULT_USER_PREFERENCES,
-      theme: "dark",
+      language: "en",
     })
 
-    expect(loadCachedPreferences("user:one").theme).toBe("dark")
-    expect(loadCachedPreferences("user:two").theme).toBe("system")
+    expect(loadCachedPreferences("user:one").language).toBe("en")
+    expect(loadCachedPreferences("user:two").language).toBe("th")
+  })
+
+  it("ignores a legacy cached theme value", () => {
+    localStorage.setItem(
+      getPreferencesCacheKey("guest"),
+      JSON.stringify({ ...DEFAULT_USER_PREFERENCES, theme: "dark" }),
+    )
+
+    expect(loadCachedPreferences("guest")).not.toHaveProperty("theme")
   })
 
   it("falls back safely when the cached value is malformed", () => {

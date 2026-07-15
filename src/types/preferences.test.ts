@@ -16,17 +16,19 @@ describe("normalizeUserPreferences", () => {
       }),
     ).toMatchObject({
       language: "en",
-      theme: "dark",
       dailyVocabularyGoal: 25,
       dailyPracticeMinutes: 30,
     })
+    expect(normalizeUserPreferences({
+      ...DEFAULT_USER_PREFERENCES,
+      theme: "dark",
+    })).not.toHaveProperty("theme")
   })
 
   it("replaces an invalid object with defaults", () => {
     expect(
       normalizeUserPreferences({
         language: "de",
-        theme: "neon",
         dailyVocabularyGoal: 0,
         dailyPracticeMinutes: 999,
         speechRate: 8,

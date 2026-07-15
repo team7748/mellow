@@ -58,10 +58,18 @@ describe("preferencesService", () => {
       language: "en",
       speechVoiceUri: "voice-1",
     })
-    expect(preferencesToRow("user-2", preferences)).toMatchObject({
-      ...row,
+    expect(preferencesToRow("user-2", preferences)).toEqual({
       user_id: "user-2",
+      daily_vocabulary_goal: 20,
+      daily_practice_minutes: 30,
+      reminder_enabled: true,
       reminder_time: "08:30",
+      timezone: "Asia/Bangkok",
+      language: "en",
+      speech_locale: "en-GB",
+      speech_voice_uri: "voice-1",
+      speech_rate: 1.1,
+      speech_auto_play: true,
     })
   })
 
@@ -89,7 +97,7 @@ describe("preferencesService", () => {
     await upsertUserPreferences("user-2", rowToPreferences(row))
 
     expect(mocks.upsert).toHaveBeenCalledWith(
-      expect.objectContaining({ user_id: "user-2" }),
+      expect.not.objectContaining({ theme: expect.anything() }),
       { onConflict: "user_id" },
     )
   })

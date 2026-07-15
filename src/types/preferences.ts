@@ -1,5 +1,4 @@
 export type AppLanguage = "th" | "en"
-export type AppTheme = "light" | "dark" | "system"
 export type SpeechLocale = "en-US" | "en-GB"
 
 export type UserPreferences = {
@@ -13,7 +12,6 @@ export type UserPreferences = {
   speechVoiceUri: string | null
   speechRate: number
   speechAutoPlay: boolean
-  theme: AppTheme
 }
 
 export type UserPreferencesRow = {
@@ -28,7 +26,6 @@ export type UserPreferencesRow = {
   speech_voice_uri: string | null
   speech_rate: number
   speech_auto_play: boolean
-  theme: AppTheme
   created_at?: string
   updated_at?: string
 }
@@ -44,7 +41,6 @@ export const DEFAULT_USER_PREFERENCES: UserPreferences = {
   speechVoiceUri: null,
   speechRate: 1,
   speechAutoPlay: true,
-  theme: "system",
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -92,8 +88,7 @@ export function normalizeUserPreferences(value: unknown): UserPreferences {
     Number.isFinite(value.speechRate) &&
     value.speechRate >= 0.5 &&
     value.speechRate <= 2 &&
-    typeof value.speechAutoPlay === "boolean" &&
-    (value.theme === "light" || value.theme === "dark" || value.theme === "system")
+    typeof value.speechAutoPlay === "boolean"
 
   if (!valid) return { ...DEFAULT_USER_PREFERENCES }
 
@@ -108,6 +103,5 @@ export function normalizeUserPreferences(value: unknown): UserPreferences {
     speechVoiceUri: value.speechVoiceUri as string | null,
     speechRate: value.speechRate as number,
     speechAutoPlay: value.speechAutoPlay as boolean,
-    theme: value.theme as AppTheme,
   }
 }

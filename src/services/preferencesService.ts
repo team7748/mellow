@@ -7,6 +7,9 @@ import {
   type UserPreferencesRow,
 } from "../types/preferences"
 
+const USER_PREFERENCES_COLUMNS =
+  "user_id,daily_vocabulary_goal,daily_practice_minutes,reminder_enabled,reminder_time,timezone,language,speech_locale,speech_voice_uri,speech_rate,speech_auto_play"
+
 export function rowToPreferences(row: UserPreferencesRow): UserPreferences {
   return normalizeUserPreferences({
     dailyVocabularyGoal: row.daily_vocabulary_goal,
@@ -19,7 +22,6 @@ export function rowToPreferences(row: UserPreferencesRow): UserPreferences {
     speechVoiceUri: row.speech_voice_uri,
     speechRate: Number(row.speech_rate),
     speechAutoPlay: row.speech_auto_play,
-    theme: row.theme,
   })
 }
 
@@ -40,7 +42,6 @@ export function preferencesToRow(
     speech_voice_uri: normalized.speechVoiceUri,
     speech_rate: normalized.speechRate,
     speech_auto_play: normalized.speechAutoPlay,
-    theme: normalized.theme,
   }
 }
 
@@ -50,7 +51,7 @@ export async function fetchUserPreferences(
   await assertAuthenticatedUser(userId)
   const { data, error } = await supabase
     .from("user_preferences")
-    .select("*")
+    .select(USER_PREFERENCES_COLUMNS)
     .eq("user_id", userId)
     .maybeSingle()
 
@@ -67,7 +68,7 @@ export async function upsertUserPreferences(
   const { data, error } = await supabase
     .from("user_preferences")
     .upsert(preferencesToRow(userId, preferences), { onConflict: "user_id" })
-    .select()
+    .select(USER_PREFERENCES_COLUMNS)
     .single()
 
   if (error) throw error
