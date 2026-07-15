@@ -9,9 +9,10 @@ type Props = {
   title: string
   lines: ConversationLine[]
   onComplete?: () => void
+  onReachedLastLine?: () => void
 }
 
-export function ConversationPlayer({ title, lines, onComplete }: Props) {
+export function ConversationPlayer({ title, lines, onComplete, onReachedLastLine }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [showThai, setShowThai] = useState(true)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -29,6 +30,12 @@ export function ConversationPlayer({ title, lines, onComplete }: Props) {
     lastPlayedIndexRef.current = -1
   }, [title])
 
+  const hasReachedEndRef = useRef(false)
+
+  useEffect(() => {
+    hasReachedEndRef.current = false
+  }, [title])
+
   // Auto-play audio on line change with different pitch for speakers
   useEffect(() => {
     if (lastPlayedIndexRef.current !== currentIndex && lines[currentIndex]) {
@@ -44,6 +51,18 @@ export function ConversationPlayer({ title, lines, onComplete }: Props) {
       }
     }
   }, [currentIndex, lines, speed])
+
+  useEffect(() => {
+    if (
+      lines.length > 0 &&
+      currentIndex === lines.length - 1 &&
+      onReachedLastLine &&
+      !hasReachedEndRef.current
+    ) {
+      hasReachedEndRef.current = true
+      onReachedLastLine()
+    }
+  }, [currentIndex, lines.length, onReachedLastLine])
 
   // Auto-scroll to active line
   useEffect(() => {
@@ -70,6 +89,7 @@ export function ConversationPlayer({ title, lines, onComplete }: Props) {
   }
 
   const handleRestart = () => {
+    hasReachedEndRef.current = false
     setCurrentIndex(0)
   }
 
