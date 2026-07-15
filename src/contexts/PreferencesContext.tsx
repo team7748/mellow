@@ -2,7 +2,9 @@ import {
   createContext,
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react"
@@ -39,6 +41,15 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
   const [status, setStatus] = useState<PreferencesStatus>(authLoading ? "loading" : "ready")
   const [error, setError] = useState<string | null>(null)
   const [retryVersion, setRetryVersion] = useState(0)
+  const preferencesRef = useRef(preferences)
+  const scopeRef = useRef(scope)
+  const queueScopeRef = useRef(scope)
+  const saveQueueRef = useRef<Promise<unknown>>(Promise.resolve())
+  const revisionRef = useRef(0)
+
+  useLayoutEffect(() => {
+    scopeRef.current = scope
+  }, [scope])
 
   useEffect(() => {
     if (authLoading) {
@@ -47,7 +58,9 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
     }
 
     let active = true
+    const loadRevision = revisionRef.current
     const cached = loadCachedPreferences(scope)
+    preferencesRef.current = cached
     setPreferences(cached)
     setError(null)
 
@@ -59,13 +72,14 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
     setStatus("loading")
     void fetchUserPreferences(user.id)
       .then((remote) => {
-        if (!active) return
+        if (!active || revisionRef.current !== loadRevision) return
+        preferencesRef.current = remote
         setPreferences(remote)
         saveCachedPreferences(scope, remote)
         setStatus("ready")
       })
       .catch(() => {
-        if (!active) return
+        if (!active || revisionRef.current !== loadRevision) return
         setPreferences(cached)
         setError("ไม่สามารถโหลดการตั้งค่าจากระบบได้")
         setStatus("error")
@@ -80,8 +94,12 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const updatePreferences = useCallback(async (updates: Partial<UserPreferences>) => {
-    const previous = preferences
+    const previous = preferencesRef.current
     const next = normalizeUserPreferences({ ...previous, ...updates })
+    const updateScope = scope
+    const revision = revisionRef.current + 1
+    revisionRef.current = revision
+    preferencesRef.current = next
     setPreferences(next)
     saveCachedPreferences(scope, next)
     setError(null)
@@ -92,20 +110,34 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
     }
 
     setStatus("saving")
+    if (queueScopeRef.current !== updateScope) {
+      queueScopeRef.current = updateScope
+      saveQueueRef.current = Promise.resolve()
+    }
+    const save = saveQueueRef.current
+      .catch(() => undefined)
+      .then(() => upsertUserPreferences(user.id, next))
+    saveQueueRef.current = save
     try {
-      const saved = await upsertUserPreferences(user.id, next)
+      const saved = await save
+      if (scopeRef.current !== updateScope) return true
+      if (revisionRef.current !== revision) return true
+      preferencesRef.current = saved
       setPreferences(saved)
       saveCachedPreferences(scope, saved)
       setStatus("ready")
       return true
     } catch {
+      if (scopeRef.current !== updateScope) return false
+      if (revisionRef.current !== revision) return false
+      preferencesRef.current = previous
       setPreferences(previous)
       saveCachedPreferences(scope, previous)
       setError("บันทึกการตั้งค่าไม่สำเร็จ กรุณาลองใหม่อีกครั้ง")
       setStatus("error")
       return false
     }
-  }, [preferences, scope, user])
+  }, [scope, user])
 
   const value = useMemo<PreferencesContextValue>(() => ({
     preferences,

@@ -7,9 +7,13 @@ const mocks = vi.hoisted(() => ({
   logout: vi.fn(),
   resetPasswordForEmail: vi.fn(),
   updatePassword: vi.fn(),
+  disablePushNotifications: vi.fn(),
 }))
 
 vi.mock("../../services/authService", () => mocks)
+vi.mock("../../lib/notifications/pushNotifications", () => ({
+  disablePushNotifications: mocks.disablePushNotifications,
+}))
 
 describe("AccountSecurity", () => {
   beforeEach(() => {
@@ -17,11 +21,12 @@ describe("AccountSecurity", () => {
     mocks.updatePassword.mockResolvedValue({ success: true })
     mocks.resetPasswordForEmail.mockResolvedValue({ success: true })
     mocks.logout.mockResolvedValue({ success: true })
+    mocks.disablePushNotifications.mockResolvedValue(undefined)
   })
 
   it("validates confirmation and changes the password", async () => {
     const user = userEvent.setup()
-    render(<AccountSecurity email="learner@example.com" />)
+    render(<AccountSecurity email="learner@example.com" userId="user-1" />)
 
     await user.click(screen.getByRole("button", { name: /ความปลอดภัย/ }))
     await user.type(screen.getByLabelText("รหัสผ่านใหม่"), "new-password-123")
@@ -39,13 +44,28 @@ describe("AccountSecurity", () => {
 
   it("sends a reset email and signs out through Supabase Auth", async () => {
     const user = userEvent.setup()
-    render(<AccountSecurity email="learner@example.com" />)
+    render(<AccountSecurity email="learner@example.com" userId="user-1" />)
 
     await user.click(screen.getByRole("button", { name: /ความปลอดภัย/ }))
     await user.click(screen.getByRole("button", { name: "ส่งอีเมลรีเซ็ตรหัสผ่าน" }))
     expect(mocks.resetPasswordForEmail).toHaveBeenCalledWith("learner@example.com")
 
     await user.click(screen.getByRole("button", { name: "ออกจากระบบ" }))
+    expect(mocks.disablePushNotifications).toHaveBeenCalledWith("user-1")
+    expect(mocks.logout).toHaveBeenCalledTimes(1)
+    expect(mocks.disablePushNotifications.mock.invocationCallOrder[0]).toBeLessThan(
+      mocks.logout.mock.invocationCallOrder[0],
+    )
+  })
+
+  it("still signs out when push cleanup is unavailable", async () => {
+    const user = userEvent.setup()
+    mocks.disablePushNotifications.mockRejectedValue(new Error("cleanup failed"))
+    render(<AccountSecurity email="learner@example.com" userId="user-1" />)
+
+    await user.click(screen.getByRole("button", { name: "ออกจากระบบ" }))
+
+    expect(mocks.disablePushNotifications).toHaveBeenCalledWith("user-1")
     expect(mocks.logout).toHaveBeenCalledTimes(1)
   })
 })

@@ -198,7 +198,7 @@ export function ProfilePage() {
   }
 
   return (
-    <div className="min-h-screen bg-page pb-20 sm:pb-12">
+    <div className="min-h-screen pb-20 sm:pb-12">
       {/* 1. Header */}
       <header className="sticky top-0 z-20 bg-card border-b border-border/60">
         <div className="mx-auto max-w-2xl px-4 h-14 flex items-center justify-center">
@@ -206,10 +206,10 @@ export function ProfilePage() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-2xl px-4 pt-8 space-y-8">
+      <main className="mx-auto max-w-2xl px-4">
 
         {/* 2. Profile Header */}
-        <section ref={profileEditorRef} className="flex flex-col items-center text-center">
+        <section ref={profileEditorRef} className="flex flex-col items-center text-center pt-6 pb-4">
           <div className="relative group">
             <div
               className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-primary-soft text-primary flex items-center justify-center text-3xl font-bold ring-4 ring-primary/10 overflow-hidden"
@@ -235,7 +235,7 @@ export function ProfilePage() {
             <button
               onClick={() => fileInputRef.current?.click()}
               disabled={isUploadingAvatar}
-              className="absolute bottom-0 right-0 p-2 bg-white border border-border rounded-full text-ink-secondary shadow-sm hover:text-primary hover:border-primary transition-colors disabled:opacity-50 z-10"
+              className="absolute bottom-0 right-0 p-2.5 bg-white border border-border rounded-full text-ink-secondary hover:text-primary hover:border-primary transition-colors disabled:opacity-50 z-10"
               aria-label="เปลี่ยนรูปโปรไฟล์"
             >
               <Camera className="w-4 h-4" />
@@ -245,7 +245,7 @@ export function ProfilePage() {
               <button
                 onClick={handleDeleteAvatar}
                 disabled={isUploadingAvatar}
-                className="absolute top-0 right-0 p-1.5 bg-white border border-border rounded-full text-red-500 shadow-sm hover:bg-red-50 hover:text-red-600 transition-colors disabled:opacity-50 z-10"
+                className="absolute top-0 right-0 p-2 bg-white border border-border rounded-full text-red-500 hover:bg-red-50 hover:text-red-600 transition-colors disabled:opacity-50 z-10"
                 aria-label="ลบรูปโปรไฟล์"
               >
                 <Trash2 className="w-4 h-4" />
@@ -308,44 +308,45 @@ export function ProfilePage() {
                 <h2 className="text-xl font-bold text-ink tracking-tight">{profile.display_name || "Mellow Learner"}</h2>
                 <button
                   onClick={startEditName}
-                  className="absolute -right-7 p-1 rounded-lg text-ink-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity hover:text-ink-secondary hover:bg-slate-100"
+                  className="absolute -right-8 p-1.5 rounded-lg text-ink-secondary/60 hover:text-ink-secondary hover:bg-slate-100 transition-colors"
                   aria-label="Edit name"
                 >
-                  <Pencil className="w-3.5 h-3.5" />
+                  <Pencil className="w-4 h-4" />
                 </button>
               </div>
             )}
-            <p className="text-ink-secondary text-sm mt-1">{profile.email}</p>
-            <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-slate-100 text-[11px] font-semibold text-ink-secondary tracking-widest uppercase">
-              {profile.role}
-            </div>
+            <p className="text-ink-secondary text-sm mt-0.5">{profile.email}</p>
+            {profile.role && (
+              <div className="mt-1 text-xs text-ink-secondary">
+                {profile.role}
+              </div>
+            )}
           </div>
         </section>
 
-        {/* Divider */}
-        <div className="border-t border-border/40" />
-
         {/* 3. Learning Stats */}
-        <section className="grid grid-cols-3 gap-1">
+        <section className="grid grid-cols-3 gap-0 border-y border-border/40 py-4">
           {[
             { imageSrc: "/stat-streak.png", value: streak, label: "วันต่อเนื่อง" },
             { imageSrc: "/stat-vocab.png", value: vocabLearned, label: "คำศัพท์ที่เรียน" },
             { imageSrc: "/stat-accuracy.png", value: `${grammarMastery}%`, label: "ความแม่นยำ" },
           ].map(({ imageSrc, value, label }, i) => (
-            <div key={i} className="flex flex-col items-center py-4">
-              <img src={imageSrc} alt={label} className="w-9 h-9 object-contain mb-2" />
-              <p className="text-2xl font-bold text-ink tabular-nums tracking-tight">{value}</p>
-              <p className="text-[11px] font-medium text-ink-secondary mt-1 text-center leading-tight">{label}</p>
+            <div
+              key={i}
+              className={`flex flex-col items-center gap-1.5 py-1 ${
+                i < 2 ? "border-r border-border/40" : ""
+              }`}
+            >
+              <img src={imageSrc} alt={label} className="w-9 h-9 object-contain" />
+              <p className="text-xl font-bold text-ink tabular-nums leading-none">{value}</p>
+              <p className="text-xs font-medium text-ink-secondary text-center leading-tight">{label}</p>
             </div>
           ))}
         </section>
 
-        {/* Divider */}
-        <div className="border-t border-border/40" />
-
         {/* 4. Weekly Activity */}
-        <section>
-          <h3 className="font-semibold text-sm text-ink mb-4 flex items-center gap-2">
+        <section className="pt-5 pb-5">
+          <h3 className="font-semibold text-sm text-ink mb-3 flex items-center gap-2">
             <TrendingUp className="w-4 h-4 text-primary" />
             {t("profile.weeklyActivity")}
           </h3>
@@ -356,14 +357,15 @@ export function ProfilePage() {
           />
         </section>
 
-        {/* Divider */}
-        <div className="border-t border-border/40" />
-
         {/* 5. Account Settings */}
-        <ProfileSettings onEditPersonalData={startEditName} />
+        <div className="border-t border-border/40 pt-5 pb-1">
+          <ProfileSettings onEditPersonalData={startEditName} />
+        </div>
 
         {/* 6. Security and logout */}
-        <AccountSecurity email={profile.email ?? user?.email ?? ""} />
+        <div className="border-t border-border/40 pt-5">
+          <AccountSecurity email={profile.email ?? user?.email ?? ""} userId={profile.id} />
+        </div>
 
       </main>
     </div>

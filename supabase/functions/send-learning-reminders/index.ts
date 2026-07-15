@@ -1,22 +1,18 @@
 import { createClient } from "npm:@supabase/supabase-js@2"
 import webpush from "npm:web-push@3.6.7"
-import { buildReminderPayload, getDueReminder, isExpiredPushStatus } from "./reminderLogic.ts"
+import { buildReminderPayload, getDueReminder, isExpiredPushStatus, readReminderEnvironment } from "./reminderLogic.ts"
 
 const jsonHeaders = { "content-type": "application/json; charset=utf-8" }
 
 Deno.serve(async (request) => {
-  const cronSecret = Deno.env.get("REMINDER_CRON_SECRET")
-  if (!cronSecret || request.headers.get("authorization") !== `Bearer ${cronSecret}`) {
-    return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401, headers: jsonHeaders })
+  const environment = readReminderEnvironment((name) => Deno.env.get(name))
+  if (!environment.ok) {
+    return new Response(JSON.stringify({ error: "Reminder secrets are incomplete" }), { status: 500, headers: jsonHeaders })
   }
 
-  const supabaseUrl = Deno.env.get("SUPABASE_URL")
-  const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")
-  const publicKey = Deno.env.get("WEB_PUSH_PUBLIC_KEY")
-  const privateKey = Deno.env.get("WEB_PUSH_PRIVATE_KEY")
-  const subject = Deno.env.get("WEB_PUSH_SUBJECT")
-  if (!supabaseUrl || !serviceRoleKey || !publicKey || !privateKey || !subject) {
-    return new Response(JSON.stringify({ error: "Reminder secrets are incomplete" }), { status: 500, headers: jsonHeaders })
+  const { cronSecret, supabaseUrl, serviceRoleKey, publicKey, privateKey, subject } = environment.value
+  if (request.headers.get("authorization") !== `Bearer ${cronSecret}`) {
+    return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401, headers: jsonHeaders })
   }
 
   const supabase = createClient(supabaseUrl, serviceRoleKey, { auth: { persistSession: false } })

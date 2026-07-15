@@ -7,16 +7,18 @@ const mocks = vi.hoisted(() => ({
   updatePreferences: vi.fn().mockResolvedValue(true),
   enablePushNotifications: vi.fn().mockResolvedValue({}),
   disablePushNotifications: vi.fn().mockResolvedValue(undefined),
+  preferences: {
+    dailyVocabularyGoal: 10, dailyPracticeMinutes: 15,
+    reminderEnabled: false, reminderTime: "19:00", timezone: "Asia/Bangkok",
+    language: "th", speechLocale: "en-US", speechVoiceUri: null,
+    speechRate: 1, speechAutoPlay: true,
+  },
+  pushCapability: { supported: true, configured: true, permission: "default" },
 }))
 
 vi.mock("../../hooks/usePreferences", () => ({
   usePreferences: () => ({
-    preferences: {
-      dailyVocabularyGoal: 10, dailyPracticeMinutes: 15,
-      reminderEnabled: false, reminderTime: "19:00", timezone: "Asia/Bangkok",
-      language: "th", speechLocale: "en-US", speechVoiceUri: null,
-      speechRate: 1, speechAutoPlay: true,
-    },
+    preferences: mocks.preferences,
     status: "ready",
     error: null,
     updatePreferences: mocks.updatePreferences,
@@ -28,16 +30,25 @@ vi.mock("../../hooks/useAuth", () => ({
 }))
 
 vi.mock("../../lib/notifications/pushNotifications", () => ({
-  getPushCapability: () => ({ supported: true, configured: true, permission: "default" }),
+  getPushCapability: () => mocks.pushCapability,
   enablePushNotifications: mocks.enablePushNotifications,
   disablePushNotifications: mocks.disablePushNotifications,
 }))
 
 describe("ProfileSettings", () => {
   beforeEach(() => {
-    mocks.updatePreferences.mockClear()
-    mocks.enablePushNotifications.mockClear()
-    mocks.disablePushNotifications.mockClear()
+    mocks.updatePreferences.mockReset().mockResolvedValue(true)
+    mocks.enablePushNotifications.mockReset().mockResolvedValue({})
+    mocks.disablePushNotifications.mockReset().mockResolvedValue(undefined)
+    Object.assign(mocks.preferences, {
+      reminderEnabled: false,
+      reminderTime: "19:00",
+    })
+    Object.assign(mocks.pushCapability, {
+      supported: true,
+      configured: true,
+      permission: "default",
+    })
   })
 
   it("saves daily vocabulary and practice-time goals", async () => {
@@ -101,5 +112,32 @@ describe("ProfileSettings", () => {
       reminderTime: "08:30",
     }))
     expect(mocks.enablePushNotifications.mock.invocationCallOrder[0]).toBeLessThan(mocks.updatePreferences.mock.invocationCallOrder.at(-1)!)
+  })
+
+  it("allows an existing reminder to be turned off when push is unavailable", async () => {
+    Object.assign(mocks.preferences, { reminderEnabled: true })
+    Object.assign(mocks.pushCapability, { supported: false, permission: "unsupported" })
+    const user = userEvent.setup()
+    render(<ProfileSettings />)
+
+    await user.click(screen.getByRole("button", { name: /การแจ้งเตือน/ }))
+    const checkbox = screen.getByRole("checkbox", { name: "เปิดการแจ้งเตือน" })
+    expect(checkbox).toBeEnabled()
+    await user.click(checkbox)
+
+    expect(mocks.disablePushNotifications).toHaveBeenCalledWith("user-1")
+    expect(mocks.updatePreferences).toHaveBeenCalledWith({ reminderEnabled: false })
+  })
+
+  it("turns off reminder scheduling even when subscription cleanup fails", async () => {
+    Object.assign(mocks.preferences, { reminderEnabled: true })
+    mocks.disablePushNotifications.mockRejectedValue(new Error("cleanup failed"))
+    const user = userEvent.setup()
+    render(<ProfileSettings />)
+
+    await user.click(screen.getByRole("button", { name: /การแจ้งเตือน/ }))
+    await user.click(screen.getByRole("checkbox", { name: "เปิดการแจ้งเตือน" }))
+
+    expect(mocks.updatePreferences).toHaveBeenCalledWith({ reminderEnabled: false })
   })
 })

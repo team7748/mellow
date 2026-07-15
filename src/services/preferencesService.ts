@@ -65,12 +65,33 @@ export async function upsertUserPreferences(
   preferences: UserPreferences,
 ): Promise<UserPreferences> {
   await assertAuthenticatedUser(userId)
-  const { data, error } = await supabase
+  const rowPayload = preferencesToRow(userId, preferences)
+  
+  // Split into update first, then insert if not found.
+  // This avoids the 'permission denied for column user_id' error during upsert
+  // because the migration only granted UPDATE on specific columns, excluding user_id.
+  const { user_id, ...updatePayload } = rowPayload
+  
+  const { data: updateData, error: updateError } = await supabase
     .from("user_preferences")
-    .upsert(preferencesToRow(userId, preferences), { onConflict: "user_id" })
+    .update(updatePayload)
+    .eq("user_id", userId)
+    .select(USER_PREFERENCES_COLUMNS)
+    .maybeSingle()
+
+  if (updateError) throw updateError
+
+  if (updateData) {
+    return rowToPreferences(updateData as UserPreferencesRow)
+  }
+
+  // If no row was updated, it means the user preferences don't exist yet, so insert.
+  const { data: insertData, error: insertError } = await supabase
+    .from("user_preferences")
+    .insert(rowPayload)
     .select(USER_PREFERENCES_COLUMNS)
     .single()
 
-  if (error) throw error
-  return rowToPreferences(data as UserPreferencesRow)
+  if (insertError) throw insertError
+  return rowToPreferences(insertData as UserPreferencesRow)
 }

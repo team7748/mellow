@@ -75,6 +75,12 @@ export async function disablePushNotifications(userId: string) {
   const registration = await navigator.serviceWorker.getRegistration("/mellow-sw.js")
   const subscription = await registration?.pushManager.getSubscription()
   if (!subscription) return
-  await deletePushSubscription(userId, subscription.endpoint)
-  await subscription.unsubscribe()
+  const results = await Promise.allSettled([
+    subscription.unsubscribe(),
+    deletePushSubscription(userId, subscription.endpoint),
+  ])
+  const failure = results.find(
+    (result): result is PromiseRejectedResult => result.status === "rejected",
+  )
+  if (failure) throw failure.reason
 }

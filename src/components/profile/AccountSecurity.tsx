@@ -1,16 +1,19 @@
 import { useState, type FormEvent } from "react"
 import { ChevronDown, KeyRound, Loader2, LogOut } from "lucide-react"
 import { logout, resetPasswordForEmail, updatePassword } from "../../services/authService"
+import { disablePushNotifications } from "../../lib/notifications/pushNotifications"
+
 
 const inputClass = "mt-1 min-h-11 w-full rounded-xl border border-border bg-card px-3 py-2 text-sm text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
 
-export function AccountSecurity({ email }: { email: string }) {
+export function AccountSecurity({ email, userId }: { email: string; userId: string }) {
   const [open, setOpen] = useState(false)
   const [password, setPassword] = useState("")
   const [confirmation, setConfirmation] = useState("")
   const [busy, setBusy] = useState<"password" | "reset" | "logout" | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [message, setMessage] = useState<string | null>(null)
+  const [showLogoutConfirm, setShowLogoutConfirm] = useState(false)
 
   function clearFeedback() {
     setError(null)
@@ -55,6 +58,12 @@ export function AccountSecurity({ email }: { email: string }) {
   async function handleLogout() {
     clearFeedback()
     setBusy("logout")
+    try {
+      await disablePushNotifications(userId)
+    } catch {
+      // Signing out must still succeed; either local unsubscribe or server
+      // cleanup may already have invalidated this device's endpoint.
+    }
     const result = await logout()
     if (!result.success) {
       setBusy(null)
@@ -89,11 +98,37 @@ export function AccountSecurity({ email }: { email: string }) {
       {error ? <p role="alert" className="text-sm font-medium text-red-600">{error}</p> : null}
       {message ? <p role="status" className="text-sm font-medium text-primary">{message}</p> : null}
       <div className="flex justify-center pb-8 pt-2">
-        <button type="button" onClick={() => void handleLogout()} disabled={busy !== null} className="flex min-h-11 items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-medium text-red-500 transition-colors hover:bg-red-50 disabled:opacity-50">
+        <button type="button" onClick={() => setShowLogoutConfirm(true)} disabled={busy !== null} className="flex min-h-11 items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-medium text-red-500 transition-colors hover:bg-red-50 disabled:opacity-50">
           {busy === "logout" ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : <LogOut className="h-4 w-4" aria-hidden="true" />}
           ออกจากระบบ
         </button>
       </div>
+
+      {showLogoutConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4 animate-in fade-in">
+          <div className="w-full max-w-sm rounded-2xl bg-card p-6 shadow-xl animate-in zoom-in-95">
+            <h3 className="text-lg font-bold text-ink">คุณแน่ใจหรือไม่?</h3>
+            <p className="mt-2 text-sm text-ink-secondary">ความก้าวหน้าของคุณจะถูกบันทึกไว้อย่างปลอดภัยและคุณสามารถเข้าสู่ระบบเพื่อเรียนต่อได้เสมอ</p>
+            <div className="mt-6 flex gap-3">
+              <button 
+                onClick={() => setShowLogoutConfirm(false)} 
+                className="flex-1 rounded-xl bg-slate-100 py-2.5 text-sm font-semibold text-ink-secondary transition-colors hover:bg-slate-200"
+              >
+                ยกเลิก
+              </button>
+              <button 
+                onClick={() => {
+                  setShowLogoutConfirm(false)
+                  void handleLogout()
+                }} 
+                className="flex-1 rounded-xl bg-red-500 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-red-600"
+              >
+                ออกจากระบบ
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

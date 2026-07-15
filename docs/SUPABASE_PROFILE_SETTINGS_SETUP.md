@@ -40,6 +40,8 @@ supabase secrets set WEB_PUSH_PUBLIC_KEY=<public-key> WEB_PUSH_PRIVATE_KEY=<priv
 supabase functions deploy send-learning-reminders --no-verify-jwt
 ```
 
+Edge Function จะทำงานแบบ fail-closed เมื่อ secret ใดหายไป ห้ามใส่ fallback key หรือค่า secret จริงไว้ใน source code, migration, เอกสาร หรือไฟล์ที่ commit ลง Git
+
 Function ตรวจ `Authorization: Bearer <REMINDER_CRON_SECRET>` เองก่อนอ่านฐานข้อมูล การใช้ `--no-verify-jwt` จำเป็นสำหรับ Cron ที่ไม่ได้ใช้ user JWT
 
 ## 4. ตั้ง Cron ทุก 1 นาที

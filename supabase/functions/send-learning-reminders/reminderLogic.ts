@@ -5,6 +5,49 @@ export type ReminderPreference = {
   language: "th" | "en"
 }
 
+const reminderEnvironmentKeys = [
+  "REMINDER_CRON_SECRET",
+  "SUPABASE_URL",
+  "SUPABASE_SERVICE_ROLE_KEY",
+  "WEB_PUSH_PUBLIC_KEY",
+  "WEB_PUSH_PRIVATE_KEY",
+  "WEB_PUSH_SUBJECT",
+] as const
+
+type ReminderEnvironmentKey = (typeof reminderEnvironmentKeys)[number]
+
+export type ReminderEnvironment = {
+  cronSecret: string
+  supabaseUrl: string
+  serviceRoleKey: string
+  publicKey: string
+  privateKey: string
+  subject: string
+}
+
+export function readReminderEnvironment(
+  getEnv: (name: ReminderEnvironmentKey) => string | undefined,
+): { ok: true; value: ReminderEnvironment } | { ok: false; missing: ReminderEnvironmentKey[] } {
+  const values = Object.fromEntries(
+    reminderEnvironmentKeys.map((name) => [name, getEnv(name)?.trim() ?? ""]),
+  ) as Record<ReminderEnvironmentKey, string>
+  const missing = reminderEnvironmentKeys.filter((name) => !values[name])
+
+  if (missing.length > 0) return { ok: false, missing }
+
+  return {
+    ok: true,
+    value: {
+      cronSecret: values.REMINDER_CRON_SECRET,
+      supabaseUrl: values.SUPABASE_URL,
+      serviceRoleKey: values.SUPABASE_SERVICE_ROLE_KEY,
+      publicKey: values.WEB_PUSH_PUBLIC_KEY,
+      privateKey: values.WEB_PUSH_PRIVATE_KEY,
+      subject: values.WEB_PUSH_SUBJECT,
+    },
+  }
+}
+
 function zonedParts(date: Date, timeZone: string) {
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone,

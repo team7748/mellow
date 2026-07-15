@@ -6,6 +6,7 @@ const mocks = vi.hoisted(() => ({
   setProfile: vi.fn(),
   updateProfile: vi.fn(),
   uploadAvatar: vi.fn(),
+  deleteAvatar: vi.fn(),
 }))
 
 const profile: UserProfile = {
@@ -70,6 +71,7 @@ vi.mock("../services/profileService", () => ({
   AVATAR_MIME_TYPES: ["image/jpeg", "image/png", "image/webp"],
   updateProfile: mocks.updateProfile,
   uploadAvatar: mocks.uploadAvatar,
+  deleteAvatar: mocks.deleteAvatar,
 }))
 
 vi.mock("../services/authService", () => ({ logout: vi.fn() }))
@@ -85,6 +87,7 @@ function getAvatarInput(container: HTMLElement): HTMLInputElement {
 describe("ProfilePage avatar upload", () => {
   beforeEach(() => {
     vi.clearAllMocks()
+    mocks.deleteAvatar.mockResolvedValue(true)
   })
 
   it.each([
@@ -152,6 +155,46 @@ describe("ProfilePage avatar upload", () => {
       ...profile,
       avatar_url: newUrl,
     })
+    expect(mocks.deleteAvatar).toHaveBeenCalledWith(profile.avatar_url, "user-1")
+    expect(mocks.updateProfile.mock.invocationCallOrder[0]).toBeLessThan(
+      mocks.deleteAvatar.mock.invocationCallOrder[0],
+    )
     expect(screen.queryByRole("alert")).not.toBeInTheDocument()
+  })
+
+  it("removes a newly uploaded file when saving its URL fails", async () => {
+    const newUrl = "https://example.test/new-avatar.png"
+    mocks.uploadAvatar.mockResolvedValue(newUrl)
+    mocks.updateProfile.mockResolvedValue(false)
+    const { container } = render(<ProfilePage />)
+
+    fireEvent.change(getAvatarInput(container), {
+      target: {
+        files: [new File(["avatar"], "avatar.png", { type: "image/png" })],
+      },
+    })
+
+    await waitFor(() => {
+      expect(mocks.deleteAvatar).toHaveBeenCalledWith(newUrl, "user-1")
+    })
+    expect(mocks.deleteAvatar).not.toHaveBeenCalledWith(profile.avatar_url, "user-1")
+    expect(mocks.setProfile).not.toHaveBeenCalled()
+  })
+
+  it("clears the database URL before deleting the current avatar file", async () => {
+    const confirm = vi.spyOn(window, "confirm").mockReturnValue(true)
+    mocks.updateProfile.mockResolvedValue(true)
+    render(<ProfilePage />)
+
+    fireEvent.click(screen.getByRole("button", { name: "ลบรูปโปรไฟล์" }))
+
+    await waitFor(() => {
+      expect(mocks.updateProfile).toHaveBeenCalledWith("user-1", { avatar_url: null })
+      expect(mocks.deleteAvatar).toHaveBeenCalledWith(profile.avatar_url, "user-1")
+    })
+    expect(mocks.updateProfile.mock.invocationCallOrder[0]).toBeLessThan(
+      mocks.deleteAvatar.mock.invocationCallOrder[0],
+    )
+    confirm.mockRestore()
   })
 })

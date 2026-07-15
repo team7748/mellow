@@ -1,5 +1,5 @@
 import { useEffect, useState, type FormEvent } from "react"
-import { Bell, ChevronDown, ChevronRight, Languages, Loader2, Target, UserRound, Volume2 } from "lucide-react"
+import { Bell, ChevronDown, ChevronRight, Languages, Loader2, Target, UserRound, Volume2, CheckCircle2 } from "lucide-react"
 import { usePreferences } from "../../hooks/usePreferences"
 import { useAuth } from "../../hooks/useAuth"
 import { disablePushNotifications, enablePushNotifications, getPushCapability } from "../../lib/notifications/pushNotifications"
@@ -12,6 +12,7 @@ export function ProfileSettings({ onEditPersonalData }: { onEditPersonalData?: (
   const { user } = useAuth()
   const [goalsOpen, setGoalsOpen] = useState(false)
   const [reminderOpen, setReminderOpen] = useState(false)
+  const [showSaveSuccess, setShowSaveSuccess] = useState(false)
   const [reminderTime, setReminderTime] = useState(preferences.reminderTime)
   const [notificationBusy, setNotificationBusy] = useState(false)
   const [notificationError, setNotificationError] = useState<string | null>(null)
@@ -36,10 +37,14 @@ export function ProfileSettings({ onEditPersonalData }: { onEditPersonalData?: (
 
   async function saveGoals(event: FormEvent) {
     event.preventDefault()
-    await updatePreferences({
+    const saved = await updatePreferences({
       dailyVocabularyGoal: Number(vocabularyGoal),
       dailyPracticeMinutes: Number(practiceMinutes),
     })
+    if (saved) {
+      setShowSaveSuccess(true)
+      setTimeout(() => setShowSaveSuccess(false), 2000)
+    }
   }
 
   const englishVoices = voices.filter((voice) => voice.lang.toLowerCase().startsWith("en"))
@@ -55,14 +60,23 @@ export function ProfileSettings({ onEditPersonalData }: { onEditPersonalData?: (
     try {
       if (enabled) {
         await enablePushNotifications(user.id)
-        await updatePreferences({
+        const saved = await updatePreferences({
           reminderEnabled: true,
           reminderTime,
           timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || "Asia/Bangkok",
         })
+        if (!saved) {
+          await disablePushNotifications(user.id).catch(() => undefined)
+          throw new Error("preference-save-failed")
+        }
       } else {
-        await disablePushNotifications(user.id)
-        await updatePreferences({ reminderEnabled: false })
+        const saved = await updatePreferences({ reminderEnabled: false })
+        if (!saved) throw new Error("preference-save-failed")
+        try {
+          await disablePushNotifications(user.id)
+        } catch {
+          setNotificationError("ปิดการแจ้งเตือนแล้ว แต่ล้างการสมัครรับแจ้งเตือนไม่สำเร็จ")
+        }
       }
     } catch (cause) {
       const code = cause instanceof Error ? cause.message : "unknown"
@@ -70,7 +84,8 @@ export function ProfileSettings({ onEditPersonalData }: { onEditPersonalData?: (
         code === "unsupported" ? "เบราว์เซอร์นี้ไม่รองรับ Push Notification"
           : code === "missing-public-key" ? "ระบบแจ้งเตือนยังไม่ได้ตั้งค่า VAPID public key"
             : code === "permission-denied" ? "การแจ้งเตือนถูกบล็อก กรุณาอนุญาตในการตั้งค่าเบราว์เซอร์"
-              : "เปิดการแจ้งเตือนไม่สำเร็จ กรุณาลองใหม่",
+              : code === "preference-save-failed" ? "บันทึกการตั้งค่าแจ้งเตือนไม่สำเร็จ กรุณาลองใหม่"
+                : "เปิดการแจ้งเตือนไม่สำเร็จ กรุณาลองใหม่",
       )
     } finally {
       setNotificationBusy(false)
@@ -78,12 +93,13 @@ export function ProfileSettings({ onEditPersonalData }: { onEditPersonalData?: (
   }
 
   return (
-    <section aria-labelledby="profile-settings-title">
-      <h3 id="profile-settings-title" className="mb-2 text-sm font-semibold text-ink">
-        การตั้งค่า
-      </h3>
-      <div className="overflow-hidden rounded-2xl border border-border/60 bg-card divide-y divide-border/40">
-        <div>
+    <div className="space-y-5">
+      <section aria-labelledby="settings-goals-title">
+        <h3 id="settings-goals-title" className="mb-3 text-sm font-semibold text-ink">
+          เป้าหมายและการแจ้งเตือน
+        </h3>
+        <div className="overflow-hidden rounded-2xl border border-border/60 bg-card divide-y divide-border/40">
+          <div>
           <button
             type="button"
             aria-expanded={goalsOpen}
@@ -131,8 +147,8 @@ export function ProfileSettings({ onEditPersonalData }: { onEditPersonalData?: (
                   className={`${fieldClass} mt-1`}
                 />
               </label>
-              <button type="submit" disabled={status === "saving"} className="min-h-11 rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-hover disabled:opacity-50 sm:col-span-2">
-                {status === "saving" ? <Loader2 className="mx-auto h-4 w-4 animate-spin" aria-label="กำลังบันทึก" /> : "บันทึกเป้าหมาย"}
+              <button type="submit" disabled={status === "saving" || showSaveSuccess} className="min-h-11 rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-hover disabled:opacity-50 sm:col-span-2 flex items-center justify-center gap-2">
+                {status === "saving" ? <Loader2 className="h-4 w-4 animate-spin" aria-label="กำลังบันทึก" /> : showSaveSuccess ? <><CheckCircle2 className="h-4 w-4" /> บันทึกแล้ว</> : "บันทึกเป้าหมาย"}
               </button>
             </form>
           ) : null}
@@ -151,13 +167,20 @@ export function ProfileSettings({ onEditPersonalData }: { onEditPersonalData?: (
               {!pushCapability.supported ? <p className="text-xs text-ink-secondary">เบราว์เซอร์นี้ไม่รองรับ Push Notification</p> : null}
               {pushCapability.supported && !pushCapability.configured ? <p className="text-xs text-ink-secondary">ต้องตั้งค่า VAPID public key ก่อนเปิดใช้งาน</p> : null}
               <label className="block text-xs font-semibold text-ink-secondary">เวลาแจ้งเตือน<input aria-label="เวลาแจ้งเตือน" type="time" value={reminderTime} onChange={(event) => setReminderTime(event.target.value)} className={`${fieldClass} mt-1`} /></label>
-              <label className="flex min-h-11 items-center justify-between gap-3 rounded-xl border border-border bg-card px-3 py-2 text-sm font-medium text-ink">เปิดการแจ้งเตือน<input aria-label="เปิดการแจ้งเตือน" type="checkbox" checked={preferences.reminderEnabled} disabled={notificationBusy || !pushCapability.supported || !pushCapability.configured} onChange={(event) => void toggleReminder(event.target.checked)} className="h-5 w-5 accent-primary" /></label>
+              <label className="flex min-h-11 items-center justify-between gap-3 rounded-xl border border-border bg-card px-3 py-2 text-sm font-medium text-ink">เปิดการแจ้งเตือน<input aria-label="เปิดการแจ้งเตือน" type="checkbox" checked={preferences.reminderEnabled} disabled={notificationBusy} onChange={(event) => void toggleReminder(event.target.checked)} className="h-5 w-5 accent-primary" /></label>
               {notificationError ? <p role="alert" className="text-xs font-medium text-red-600">{notificationError}</p> : null}
             </div>
           ) : null}
         </div>
+      </div>
+      </section>
 
-        <button type="button" onClick={onEditPersonalData} className="flex w-full items-center justify-between gap-3 px-4 py-3.5 text-left transition-colors hover:bg-slate-50/80">
+      <section aria-labelledby="settings-general-title">
+        <h3 id="settings-general-title" className="mb-3 text-sm font-semibold text-ink">
+          การตั้งค่าทั่วไป
+        </h3>
+        <div className="overflow-hidden rounded-2xl border border-border/60 bg-card divide-y divide-border/40">
+          <button type="button" onClick={onEditPersonalData} className="flex w-full items-center justify-between gap-3 px-4 py-3.5 text-left transition-colors hover:bg-slate-50/80">
           <span className="flex items-center gap-3">
             <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-border/60 text-ink-secondary"><UserRound className="h-4 w-4" aria-hidden="true" /></span>
             <span><span className="block text-sm font-semibold text-ink">จัดการข้อมูลส่วนตัว</span><span className="block text-xs text-ink-secondary">แก้ไขชื่อและรูปโปรไฟล์</span></span>
@@ -212,8 +235,9 @@ export function ProfileSettings({ onEditPersonalData }: { onEditPersonalData?: (
             <input aria-label="เล่นเสียงอัตโนมัติ" type="checkbox" checked={preferences.speechAutoPlay} onChange={(event) => void updatePreferences({ speechAutoPlay: event.target.checked })} className="h-5 w-5 accent-primary" />
           </label>
         </div>
-      </div>
+        </div>
+      </section>
       {error ? <p role="alert" className="mt-2 text-sm font-medium text-red-600">{error}</p> : null}
-    </section>
+    </div>
   )
 }
