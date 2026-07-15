@@ -11,16 +11,16 @@ import {
   uploadAvatar,
   deleteAvatar,
 } from "../services/profileService"
-import { logout } from "../services/authService"
 import { loadProgress } from "../lib/storage"
 import { PageContainer } from "../components/layout/PageContainer"
 import { WeeklyActivityChart } from "../components/profile/WeeklyActivityChart"
 import { ProfileSettings } from "../components/profile/ProfileSettings"
+import { AccountSecurity } from "../components/profile/AccountSecurity"
 import { summarizeWeeklyActivity } from "../lib/activity/weeklyActivitySummary"
 import { summarizeLearningActivity } from "../lib/activity/activitySummary"
 import {
   Loader2, TrendingUp,
-  Pencil, LogOut, CheckCircle2,
+  Pencil, CheckCircle2,
   Camera, Trash2
 } from "lucide-react"
 
@@ -53,6 +53,7 @@ export function ProfilePage() {
   const [isUploadingAvatar, setIsUploadingAvatar] = useState(false)
   const [avatarError, setAvatarError] = useState<string | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const profileEditorRef = useRef<HTMLElement>(null)
 
   // Derived Stats
   const activitySummary = useMemo(() => summarizeLearningActivity(ledger, {
@@ -124,6 +125,7 @@ export function ProfilePage() {
     setDisplayName(profile?.display_name || "")
     setNameError(null)
     setIsEditingName(true)
+    profileEditorRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })
   }
 
   async function handleAvatarChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -205,7 +207,7 @@ export function ProfilePage() {
       <main className="mx-auto max-w-2xl px-4 pt-8 space-y-8">
 
         {/* 2. Profile Header */}
-        <section className="flex flex-col items-center text-center">
+        <section ref={profileEditorRef} className="flex flex-col items-center text-center">
           <div className="relative group">
             <div
               className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-primary-soft text-primary flex items-center justify-center text-3xl font-bold ring-4 ring-primary/10 overflow-hidden"
@@ -356,18 +358,10 @@ export function ProfilePage() {
         <div className="border-t border-border/40" />
 
         {/* 5. Account Settings */}
-        <ProfileSettings />
+        <ProfileSettings onEditPersonalData={startEditName} />
 
-        {/* 6. Logout */}
-        <section className="pt-2 pb-8 flex justify-center">
-          <button
-            onClick={async () => await logout()}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm text-red-500 font-medium hover:bg-red-50 transition-colors"
-          >
-            <LogOut className="w-4 h-4" />
-            ออกจากระบบ
-          </button>
-        </section>
+        {/* 6. Security and logout */}
+        <AccountSecurity email={profile.email ?? user?.email ?? ""} />
 
       </main>
     </div>

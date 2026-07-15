@@ -54,4 +54,13 @@ describe("ProfileSettings", () => {
     expect(updatePreferences).toHaveBeenCalledWith({ speechRate: 1.25 })
     expect(updatePreferences).toHaveBeenCalledWith({ speechAutoPlay: false })
   })
+
+  it("opens the existing personal profile editor", async () => {
+    const user = userEvent.setup()
+    const onEditPersonalData = vi.fn()
+    render(<ProfileSettings onEditPersonalData={onEditPersonalData} />)
+
+    await user.click(screen.getByRole("button", { name: /จัดการข้อมูลส่วนตัว/ }))
+    expect(onEditPersonalData).toHaveBeenCalledTimes(1)
+  })
 })

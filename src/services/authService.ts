@@ -141,6 +141,16 @@ export async function resetPasswordForEmail(email: string) {
   }
 }
 
+export async function updatePassword(password: string) {
+  try {
+    const { error } = await supabase.auth.updateUser({ password })
+    if (error) throw error
+    return { success: true }
+  } catch (error) {
+    return { success: false, error: translateAuthError(error) }
+  }
+}
+
 export async function getSession(): Promise<{ session: Session | null; user: User | null }> {
   const { data: { session }, error } = await supabase.auth.getSession()
   if (error) {

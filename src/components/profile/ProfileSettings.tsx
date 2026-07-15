@@ -1,11 +1,11 @@
 import { useEffect, useState, type FormEvent } from "react"
-import { ChevronDown, Loader2, Monitor, Target, Volume2 } from "lucide-react"
+import { ChevronDown, ChevronRight, Loader2, Monitor, Target, UserRound, Volume2 } from "lucide-react"
 import { usePreferences } from "../../hooks/usePreferences"
 import type { AppLanguage, AppTheme, SpeechLocale } from "../../types/preferences"
 
 const fieldClass = "min-h-11 w-full rounded-xl border border-border bg-card px-3 py-2 text-sm text-ink outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20"
 
-export function ProfileSettings() {
+export function ProfileSettings({ onEditPersonalData }: { onEditPersonalData?: () => void }) {
   const { preferences, status, error, updatePreferences } = usePreferences()
   const [goalsOpen, setGoalsOpen] = useState(false)
   const [vocabularyGoal, setVocabularyGoal] = useState(String(preferences.dailyVocabularyGoal))
@@ -95,6 +95,14 @@ export function ProfileSettings() {
             </form>
           ) : null}
         </div>
+
+        <button type="button" onClick={onEditPersonalData} className="flex w-full items-center justify-between gap-3 px-4 py-3.5 text-left transition-colors hover:bg-slate-50/80">
+          <span className="flex items-center gap-3">
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-border/60 text-ink-secondary"><UserRound className="h-4 w-4" aria-hidden="true" /></span>
+            <span><span className="block text-sm font-semibold text-ink">จัดการข้อมูลส่วนตัว</span><span className="block text-xs text-ink-secondary">แก้ไขชื่อและรูปโปรไฟล์</span></span>
+          </span>
+          <ChevronRight className="h-4 w-4 text-ink-secondary" aria-hidden="true" />
+        </button>
 
         <div className="grid gap-3 px-4 py-4 sm:grid-cols-2">
           <div className="flex items-center gap-2 sm:col-span-2">
