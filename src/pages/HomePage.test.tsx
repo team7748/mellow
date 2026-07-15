@@ -152,10 +152,32 @@ describe("HomePage real activity dashboard", () => {
     expect(within(missions).getByText("แฟลชการ์ด")).toBeInTheDocument()
     expect(within(missions).getByText("2 / 10")).toBeInTheDocument()
     expect(within(missions).getByText("ฝึกพูด")).toBeInTheDocument()
-    expect(within(missions).getByText("1 / 1")).toBeInTheDocument()
+    expect(within(missions).getByText("1 / 5")).toBeInTheDocument()
     expect(
       within(missions).getByRole("progressbar", { name: "ทบทวนคำศัพท์ progress" }),
     ).toHaveAttribute("aria-valuenow", "50")
+  })
+
+  it("renders a full Speak mission after five completed rounds", () => {
+    setActivities(
+      ...Array.from({ length: 5 }, (_, index) =>
+        activity(`speak-${index}`, {
+          kind: "conversation_completed",
+          mode: "speak",
+          entityId: "conversation-1",
+        }),
+      ),
+    )
+
+    render(<HomePage />)
+
+    const progressText = screen.getByText("5 / 5")
+    const mission = progressText.closest("button")
+    expect(mission).not.toBeNull()
+    expect(within(mission as HTMLElement).getByRole("progressbar")).toHaveAttribute(
+      "aria-valuenow",
+      "100",
+    )
   })
 
   it("hides Review when its adaptive target is zero", () => {

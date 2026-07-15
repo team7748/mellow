@@ -3,7 +3,7 @@ import { normalizeActivityLedger } from "./activityNormalizer"
 
 export const DAILY_ACTIVITY_GOAL = 15
 export const FLASHCARD_MISSION_TARGET = 10
-export const SPEAK_MISSION_TARGET = 1
+export const SPEAK_MISSION_TARGET = 5
 export const MAX_REVIEW_MISSION_TARGET = 5
 
 export type ActivityProgress = {
@@ -111,14 +111,10 @@ export function summarizeLearningActivity(
     (event) =>
       event.kind === "vocabulary_answer" && event.mode === "flashcard",
   ).length
-  const completedConversationIds = new Set(
-    todayEvents
-      .filter(
-        (event) =>
-          event.kind === "conversation_completed" && event.mode === "speak",
-      )
-      .map((event) => event.entityId),
-  )
+  const speakCompletionCount = todayEvents.filter(
+    (event) =>
+      event.kind === "conversation_completed" && event.mode === "speak",
+  ).length
 
   return {
     streakDays: calculateStreak(activeDates, today),
@@ -126,10 +122,7 @@ export function summarizeLearningActivity(
     missions: {
       review: { ...review, visible: reviewTarget > 0 },
       flashcards: toProgress(flashcardCount, FLASHCARD_MISSION_TARGET),
-      speak: toProgress(
-        completedConversationIds.size,
-        SPEAK_MISSION_TARGET,
-      ),
+      speak: toProgress(speakCompletionCount, SPEAK_MISSION_TARGET),
     },
   }
 }

@@ -71,7 +71,7 @@ describe("summarizeLearningActivity", () => {
         },
         speak: {
           completed: 0,
-          target: 1,
+          target: 5,
           percentage: 0,
           isComplete: false,
         },
@@ -226,7 +226,7 @@ describe("summarizeLearningActivity", () => {
     expect(hidden.missions.review.visible).toBe(false)
   })
 
-  it("counts only vocabulary Flashcards and unique Speak conversations", () => {
+  it("counts only vocabulary Flashcards and repeated Speak rounds", () => {
     const events = [
       ...Array.from({ length: 12 }, (_, index) =>
         event(`flash-${index}`, "2026-07-13", { mode: "flashcard" }),
@@ -259,8 +259,31 @@ describe("summarizeLearningActivity", () => {
       isComplete: true,
     })
     expect(summary.missions.speak).toEqual({
-      completed: 1,
-      target: 1,
+      completed: 2,
+      target: 5,
+      percentage: 40,
+      isComplete: false,
+    })
+  })
+
+  it("caps the five-completion Speak mission while retaining extra events", () => {
+    const repeatedRounds = Array.from({ length: 6 }, (_, index) =>
+      event(`speak-${index}`, "2026-07-13", {
+        kind: "conversation_completed",
+        mode: "speak",
+        entityId: "conversation-1",
+      }),
+    )
+
+    const summary = summarizeLearningActivity(ledger(repeatedRounds), {
+      now,
+      dueReviewWordsNow: 0,
+    })
+
+    expect(summary.dailyGoal.completed).toBe(6)
+    expect(summary.missions.speak).toEqual({
+      completed: 5,
+      target: 5,
       percentage: 100,
       isComplete: true,
     })
