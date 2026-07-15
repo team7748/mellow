@@ -11,8 +11,7 @@ const mocks = vi.hoisted(() => ({
   getProgress: vi.fn(),
   saveProgress: vi.fn(),
   recordActivity: vi.fn(),
-  getScope: vi.fn(),
-  getEventId: vi.fn(),
+  reachLastLine: undefined as (() => void) | undefined,
   completeConversation: undefined as (() => void) | undefined,
 }))
 
@@ -27,8 +26,6 @@ vi.mock("../utils/conversationData", () => ({
 
 vi.mock("../lib/activity/recordLearningActivity", () => ({
   recordLearningActivity: mocks.recordActivity,
-  getActivityIdentityScope: mocks.getScope,
-  getConversationCompletionEventId: mocks.getEventId,
 }))
 
 vi.mock("../components/speak/CategorySelector", () => ({
@@ -47,21 +44,26 @@ vi.mock("../components/speak/ConversationPlayer", () => ({
   ConversationPlayer: ({
     title,
     onComplete,
+    onReachedLastLine,
   }: {
     title: string
     onComplete: () => void
-  }) => (
-    <div>
-      {(() => {
-        mocks.completeConversation = onComplete
-        return null
-      })()}
-      <span>{title}</span>
-      <button type="button" onClick={onComplete}>
-        Finish conversation
-      </button>
-    </div>
-  ),
+    onReachedLastLine: () => void
+  }) => {
+    mocks.completeConversation = onComplete
+    mocks.reachLastLine = onReachedLastLine
+    return (
+      <div>
+        <span>{title}</span>
+        <button type="button" onClick={onReachedLastLine}>
+          Reach last line
+        </button>
+        <button type="button" onClick={onComplete}>
+          Finish conversation
+        </button>
+      </div>
+    )
+  },
 }))
 
 vi.mock("../components/speak/InteractivePracticePlayer", () => ({
@@ -105,6 +107,7 @@ async function openConversation() {
 describe("SpeakModePage learning activity", () => {
   beforeEach(() => {
     vi.clearAllMocks()
+    mocks.reachLastLine = undefined
     mocks.completeConversation = undefined
     window.location.hash = "#speak"
     mocks.fetchCategories.mockResolvedValue([
@@ -135,18 +138,13 @@ describe("SpeakModePage learning activity", () => {
     mocks.fetchVocab.mockResolvedValue([])
     mocks.fetchPractice.mockResolvedValue([])
     mocks.getProgress.mockReturnValue(progress())
-    mocks.getScope.mockReturnValue("guest:installation-1")
-    mocks.getEventId.mockImplementation(
-      (scope: string, conversationId: string, localDate: string) =>
-        `speak:${scope}:${conversationId}:${localDate}`,
-    )
   })
 
-  it("persists the first completion before recording one event", async () => {
+  it("persists first-time lesson state before recording the final-line event", async () => {
     const user = await openConversation()
 
     await user.click(
-      screen.getByRole("button", { name: "Finish conversation" }),
+      screen.getByRole("button", { name: "Reach last line" }),
     )
 
     expect(mocks.saveProgress).toHaveBeenCalledExactlyOnceWith(
@@ -154,47 +152,43 @@ describe("SpeakModePage learning activity", () => {
         completedConversations: ["conversation-1"],
       }),
     )
-    expect(mocks.recordActivity).toHaveBeenCalledTimes(1)
+    expect(mocks.recordActivity).toHaveBeenCalledExactlyOnceWith({
+      kind: "conversation_completed",
+      mode: "speak",
+      entityId: "conversation-1",
+    })
     expect(mocks.saveProgress.mock.invocationCallOrder[0]).toBeLessThan(
       mocks.recordActivity.mock.invocationCallOrder[0],
     )
-    expect(screen.getByText("Practice view")).toBeInTheDocument()
   })
 
-  it("uses identity scope, conversation ID, and local date for the event ID", async () => {
-    const user = await openConversation()
-
-    await user.click(
-      screen.getByRole("button", { name: "Finish conversation" }),
-    )
-
-    expect(mocks.getScope).toHaveBeenCalledTimes(1)
-    expect(mocks.getEventId).toHaveBeenCalledWith(
-      "guest:installation-1",
-      "conversation-1",
-      expect.stringMatching(/^\d{4}-\d{2}-\d{2}$/),
-    )
-    const eventId = mocks.getEventId.mock.results[0].value
-    expect(mocks.recordActivity).toHaveBeenCalledWith(
-      {
-        kind: "conversation_completed",
-        mode: "speak",
-        entityId: "conversation-1",
-      },
-      { eventId },
-    )
-  })
-
-  it("does not persist or record a conversation completed previously", async () => {
+  it("records a repeated lesson without rewriting unique lesson state", async () => {
     mocks.getProgress.mockReturnValue(progress(["conversation-1"]))
     const user = await openConversation()
 
     await user.click(
-      screen.getByRole("button", { name: "Finish conversation" }),
+      screen.getByRole("button", { name: "Reach last line" }),
     )
 
     expect(mocks.saveProgress).not.toHaveBeenCalled()
-    expect(mocks.recordActivity).not.toHaveBeenCalled()
+    expect(mocks.recordActivity).toHaveBeenCalledExactlyOnceWith({
+      kind: "conversation_completed",
+      mode: "speak",
+      entityId: "conversation-1",
+    })
+  })
+
+  it("does not record again when Finish follows the final-line event", async () => {
+    const user = await openConversation()
+
+    await user.click(
+      screen.getByRole("button", { name: "Reach last line" }),
+    )
+    await user.click(
+      screen.getByRole("button", { name: "Finish conversation" }),
+    )
+
+    expect(mocks.recordActivity).toHaveBeenCalledTimes(1)
     expect(screen.getByText("Practice view")).toBeInTheDocument()
   })
 
@@ -203,7 +197,7 @@ describe("SpeakModePage learning activity", () => {
     mocks.saveProgress.mockImplementationOnce(() => {
       throw new Error("storage full")
     })
-    expect(() => mocks.completeConversation?.()).toThrow("storage full")
+    expect(() => mocks.reachLastLine?.()).toThrow("storage full")
 
     expect(mocks.recordActivity).not.toHaveBeenCalled()
   })
@@ -218,5 +212,6 @@ describe("SpeakModePage learning activity", () => {
     await waitFor(() =>
       expect(screen.getByText("Practice view")).toBeInTheDocument(),
     )
+    expect(mocks.recordActivity).not.toHaveBeenCalled()
   })
 })

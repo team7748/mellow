@@ -34,12 +34,7 @@ import { InteractivePracticePlayer } from "../components/speak/InteractivePracti
 import { VocabularyPanel } from "../components/speak/VocabularyPanel";
 import { SpeakProgressCard } from "../components/speak/SpeakProgressCard";
 import { getGrammarTopics } from "../data/grammar/registry";
-import {
-  getActivityIdentityScope,
-  getConversationCompletionEventId,
-  recordLearningActivity,
-} from "../lib/activity/recordLearningActivity";
-import { toLocalDateKey } from "../lib/activity/activitySummary";
+import { recordLearningActivity } from "../lib/activity/recordLearningActivity";
 
 const tenseSummaries: Record<string, string> = {
   "topic-present-simple":
@@ -183,45 +178,31 @@ export function SpeakModePage() {
     }
   }
 
+  const recordConversationCompletion = (conversationId: string) => {
+    const currentProgress = progressRef.current;
+    if (!currentProgress.completedConversations.includes(conversationId)) {
+      const newProgress = {
+        ...currentProgress,
+        completedConversations: [
+          ...currentProgress.completedConversations,
+          conversationId,
+        ],
+      };
+
+      saveSpeakModeProgress(newProgress);
+      progressRef.current = newProgress;
+      setProgress(newProgress);
+    }
+
+    recordLearningActivity({
+      kind: "conversation_completed",
+      mode: "speak",
+      entityId: conversationId,
+    });
+  };
+
   const handleConversationComplete = () => {
     if (selectedConversationId) {
-      // 1. Update progress
-      const currentProgress = progressRef.current;
-      if (
-        !currentProgress.completedConversations.includes(
-          selectedConversationId,
-        )
-      ) {
-        const newProgress = {
-          ...currentProgress,
-          completedConversations: [
-            ...currentProgress.completedConversations,
-            selectedConversationId,
-          ],
-        };
-        saveSpeakModeProgress(newProgress);
-        progressRef.current = newProgress;
-        setProgress(newProgress);
-
-        const localDate = toLocalDateKey(new Date());
-        const scope = getActivityIdentityScope();
-        recordLearningActivity(
-          {
-            kind: "conversation_completed",
-            mode: "speak",
-            entityId: selectedConversationId,
-          },
-          {
-            eventId: getConversationCompletionEventId(
-              scope,
-              selectedConversationId,
-              localDate,
-            ),
-          },
-        );
-      }
-
-      // 2. Navigate to next conversation or practice mode
       const currentIndex = conversationTitles.findIndex(
         (c) => c.id === selectedConversationId,
       );
@@ -505,11 +486,15 @@ export function SpeakModePage() {
               <InteractivePracticePlayer
                 categoryTitle={currentCategory?.title || ""}
                 questions={practice}
+                onComplete={handleConversationComplete}
               />
             ) : selectedConversationId && activeLines.length > 0 ? (
               <ConversationPlayer
                 title={activeConversationTitle}
                 lines={activeLines}
+                onReachedLastLine={() =>
+                  recordConversationCompletion(selectedConversationId)
+                }
                 onComplete={handleConversationComplete}
               />
             ) : (
