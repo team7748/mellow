@@ -1,9 +1,9 @@
 import { useEffect, useState, type FormEvent } from "react"
-import { Bell, ChevronDown, ChevronRight, Loader2, Monitor, Target, UserRound, Volume2 } from "lucide-react"
+import { Bell, ChevronDown, ChevronRight, Languages, Loader2, Target, UserRound, Volume2 } from "lucide-react"
 import { usePreferences } from "../../hooks/usePreferences"
 import { useAuth } from "../../hooks/useAuth"
 import { disablePushNotifications, enablePushNotifications, getPushCapability } from "../../lib/notifications/pushNotifications"
-import type { AppLanguage, AppTheme, SpeechLocale } from "../../types/preferences"
+import type { AppLanguage, SpeechLocale } from "../../types/preferences"
 
 const fieldClass = "min-h-11 w-full rounded-xl border border-border bg-card px-3 py-2 text-sm text-ink outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20"
 
@@ -167,22 +167,14 @@ export function ProfileSettings({ onEditPersonalData }: { onEditPersonalData?: (
 
         <div className="grid gap-3 px-4 py-4 sm:grid-cols-2">
           <div className="flex items-center gap-2 sm:col-span-2">
-            <Monitor className="h-4 w-4 text-primary" aria-hidden="true" />
-            <p className="text-sm font-semibold text-ink">ภาษาและการแสดงผล</p>
+            <Languages className="h-4 w-4 text-primary" aria-hidden="true" />
+            <p className="text-sm font-semibold text-ink">ภาษา</p>
           </div>
-          <label className="text-xs font-semibold text-ink-secondary">
+          <label className="text-xs font-semibold text-ink-secondary sm:col-span-2">
             ภาษาแอป
             <select aria-label="ภาษาแอป" value={preferences.language} onChange={(event) => void updatePreferences({ language: event.target.value as AppLanguage })} className={`${fieldClass} mt-1`}>
               <option value="th">ไทย</option>
               <option value="en">English</option>
-            </select>
-          </label>
-          <label className="text-xs font-semibold text-ink-secondary">
-            ธีมการแสดงผล
-            <select aria-label="ธีมการแสดงผล" value={preferences.theme} onChange={(event) => void updatePreferences({ theme: event.target.value as AppTheme })} className={`${fieldClass} mt-1`}>
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
-              <option value="system">System</option>
             </select>
           </label>
         </div>

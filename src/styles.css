@@ -64,26 +64,6 @@
   text-rendering: optimizeLegibility;
 }
 
-:root[data-theme="dark"] {
-  --color-page: #0F1D18;
-  --color-card: #172820;
-  --color-primary: #55C77A;
-  --color-primary-hover: #6BD78D;
-  --color-primary-active: #274A35;
-  --color-primary-soft: #1C3527;
-  --color-primary-muted: #213D2D;
-  --color-ink-dark: #E5F7EC;
-  --color-ink: #D7E9DE;
-  --color-ink-secondary: #AABCB1;
-  --color-border: #365046;
-  --color-neutral-soft: #1A2B24;
-  --color-progress-track: #30483D;
-  --color-mission-orangeBg: #49391D;
-  --color-mission-blueBg: #243357;
-  --color-mission-purpleBg: #352A53;
-  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.18);
-}
-
 * {
   box-sizing: border-box;
 }

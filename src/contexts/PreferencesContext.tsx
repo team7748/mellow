@@ -32,11 +32,6 @@ export type PreferencesContextValue = {
 
 export const PreferencesContext = createContext<PreferencesContextValue | null>(null)
 
-function resolveTheme(theme: UserPreferences["theme"]): "light" | "dark" {
-  if (theme !== "system") return theme
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-}
-
 export function PreferencesProvider({ children }: { children: ReactNode }) {
   const { user, isLoading: authLoading } = useAuth()
   const scope = user ? `user:${user.id}` : "guest"
@@ -80,16 +75,9 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
   }, [authLoading, retryVersion, scope, user])
 
   useEffect(() => {
-    const media = window.matchMedia("(prefers-color-scheme: dark)")
-    const applyTheme = () => {
-      document.documentElement.dataset.theme = resolveTheme(preferences.theme)
-      document.documentElement.style.colorScheme = resolveTheme(preferences.theme)
-    }
-    applyTheme()
-    if (preferences.theme !== "system") return
-    media.addEventListener("change", applyTheme)
-    return () => media.removeEventListener("change", applyTheme)
-  }, [preferences.theme])
+    delete document.documentElement.dataset.theme
+    document.documentElement.style.colorScheme = "light"
+  }, [])
 
   const updatePreferences = useCallback(async (updates: Partial<UserPreferences>) => {
     const previous = preferences

@@ -28,9 +28,9 @@ function Probe() {
   const { preferences, status, updatePreferences } = usePreferences()
   return (
     <div>
-      <span data-testid="theme-value">{preferences.theme}</span>
+      <span data-testid="language-value">{preferences.language}</span>
       <span>{status}</span>
-      <button onClick={() => void updatePreferences({ theme: "dark" })}>dark</button>
+      <button onClick={() => void updatePreferences({ language: "en" })}>English</button>
     </div>
   )
 }
@@ -47,11 +47,11 @@ describe("PreferencesProvider", () => {
 
   it("saves guest settings locally without an authenticated write", async () => {
     render(<PreferencesProvider><Probe /></PreferencesProvider>)
-    await userEvent.click(screen.getByRole("button", { name: "dark" }))
-    expect(screen.getByTestId("theme-value")).toHaveTextContent("dark")
+    await userEvent.click(screen.getByRole("button", { name: "English" }))
+    expect(screen.getByTestId("language-value")).toHaveTextContent("en")
     expect(mocks.saveCachedPreferences).toHaveBeenCalledWith(
       "guest",
-      expect.objectContaining({ theme: "dark" }),
+      expect.objectContaining({ language: "en" }),
     )
     expect(mocks.upsertUserPreferences).not.toHaveBeenCalled()
   })
@@ -60,23 +60,22 @@ describe("PreferencesProvider", () => {
     mocks.authState = { user: { id: "user-1" }, isLoading: false }
     mocks.fetchUserPreferences.mockResolvedValue({
       ...DEFAULT_USER_PREFERENCES,
-      theme: "dark",
+      language: "en",
     })
     render(<PreferencesProvider><Probe /></PreferencesProvider>)
-    expect(await screen.findByTestId("theme-value")).toHaveTextContent("dark")
+    expect(await screen.findByTestId("language-value")).toHaveTextContent("en")
     expect(mocks.fetchUserPreferences).toHaveBeenCalledWith("user-1")
     expect(mocks.saveCachedPreferences).toHaveBeenCalledWith(
       "user:user-1",
-      expect.objectContaining({ theme: "dark" }),
+      expect.objectContaining({ language: "en" }),
     )
   })
 
-  it("applies the resolved theme to the root document", async () => {
-    mocks.loadCachedPreferences.mockReturnValue({
-      ...DEFAULT_USER_PREFERENCES,
-      theme: "dark",
-    })
+  it("forces light color scheme without a runtime theme attribute", async () => {
     render(<PreferencesProvider><Probe /></PreferencesProvider>)
-    await waitFor(() => expect(document.documentElement.dataset.theme).toBe("dark"))
+    await waitFor(() => {
+      expect(document.documentElement.dataset.theme).toBeUndefined()
+      expect(document.documentElement.style.colorScheme).toBe("light")
+    })
   })
 })

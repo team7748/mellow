@@ -15,7 +15,7 @@ vi.mock("../../hooks/usePreferences", () => ({
       dailyVocabularyGoal: 10, dailyPracticeMinutes: 15,
       reminderEnabled: false, reminderTime: "19:00", timezone: "Asia/Bangkok",
       language: "th", speechLocale: "en-US", speechVoiceUri: null,
-      speechRate: 1, speechAutoPlay: true, theme: "system",
+      speechRate: 1, speechAutoPlay: true,
     },
     status: "ready",
     error: null,
@@ -57,18 +57,18 @@ describe("ProfileSettings", () => {
     })
   })
 
-  it("applies language, theme, and speech preferences", async () => {
+  it("applies language and speech preferences without offering theme controls", async () => {
     const user = userEvent.setup()
     render(<ProfileSettings />)
 
     await user.selectOptions(screen.getByLabelText("ภาษาแอป"), "en")
-    await user.selectOptions(screen.getByLabelText("ธีมการแสดงผล"), "dark")
     await user.selectOptions(screen.getByLabelText("สำเนียงเสียงอ่าน"), "en-GB")
     await user.selectOptions(screen.getByLabelText("ความเร็วเสียงอ่าน"), "1.25")
     await user.click(screen.getByRole("checkbox", { name: "เล่นเสียงอัตโนมัติ" }))
 
     expect(mocks.updatePreferences).toHaveBeenCalledWith({ language: "en" })
-    expect(mocks.updatePreferences).toHaveBeenCalledWith({ theme: "dark" })
+    expect(screen.queryByRole("option", { name: "Dark" })).not.toBeInTheDocument()
+    expect(screen.queryByRole("option", { name: "System" })).not.toBeInTheDocument()
     expect(mocks.updatePreferences).toHaveBeenCalledWith({
       speechLocale: "en-GB",
       speechVoiceUri: null,
