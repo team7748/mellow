@@ -6,13 +6,15 @@ import {
   PenLine,
 } from "lucide-react"
 import type { AppPage } from "../../App"
+import { useI18n } from "../../contexts/I18nContext"
+import type { TranslationKey } from "../../i18n/translations"
 
 const mobileNavItems = [
-  { label: "หน้าหลัก", icon: House, page: "home" as const },
-  { label: "คำศัพท์", icon: BookOpen, page: "vocabulary" as const },
-  { label: "ทบทวน", icon: Layers3, page: "flashcard" as const },
-  { label: "แบบฝึกหัด", icon: PenLine, page: "quiz" as const },
-  { label: "สนทนา", icon: MessageSquare, page: "speak" as const },
+  { label: "nav.home" as TranslationKey, icon: House, page: "home" as const },
+  { label: "nav.vocabulary" as TranslationKey, icon: BookOpen, page: "vocabulary" as const },
+  { label: "nav.review" as TranslationKey, icon: Layers3, page: "flashcard" as const },
+  { label: "nav.quiz" as TranslationKey, icon: PenLine, page: "quiz" as const },
+  { label: "nav.speak" as TranslationKey, icon: MessageSquare, page: "speak" as const },
 ]
 
 type MobileNavProps = {
@@ -21,13 +23,14 @@ type MobileNavProps = {
 }
 
 export function MobileNav({ activePage, onNavigate }: MobileNavProps) {
+  const { t } = useI18n()
   function isActive(page: AppPage) {
     return activePage === page || (activePage === "wordDetail" && page === "vocabulary")
   }
 
   return (
     <nav
-      aria-label="เมนูหลักบนมือถือ"
+      aria-label={t("nav.mobile")}
       className="md:hidden fixed inset-x-0 bottom-0 z-30 border-t border-border/60 bg-card/95 backdrop-blur-md pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2 shadow-[0_-8px_24px_rgba(0,0,0,0.03)]"
     >
       <div className="flex justify-evenly items-end">
@@ -60,7 +63,7 @@ export function MobileNav({ activePage, onNavigate }: MobileNavProps) {
                 )}
               </div>
               <span className={`text-[10px] leading-none font-semibold transition-colors duration-300 ${active ? "text-primary" : "text-ink-secondary group-hover:text-ink-dark"}`}>
-                {label}
+                {t(label)}
               </span>
             </button>
           )

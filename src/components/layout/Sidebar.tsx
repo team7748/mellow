@@ -10,17 +10,19 @@ import {
   ChevronRight,
 } from "lucide-react"
 import type { AppPage } from "../../App"
+import { useI18n } from "../../contexts/I18nContext"
+import type { TranslationKey } from "../../i18n/translations"
 
 const navItems = [
-  { label: "หน้าหลัก", icon: House, page: "home" as const },
-  { label: "คำศัพท์", icon: BookOpen, page: "vocabulary" as const },
-  { label: "ทบทวน", icon: Layers3, page: "flashcard" as const },
-  { label: "แบบฝึกหัด", icon: PenLine, page: "quiz" as const },
-  { label: "สนทนา", icon: MessageSquare, page: "speak" as const },
+  { label: "nav.home" as TranslationKey, icon: House, page: "home" as const },
+  { label: "nav.vocabulary" as TranslationKey, icon: BookOpen, page: "vocabulary" as const },
+  { label: "nav.review" as TranslationKey, icon: Layers3, page: "flashcard" as const },
+  { label: "nav.quiz" as TranslationKey, icon: PenLine, page: "quiz" as const },
+  { label: "nav.speak" as TranslationKey, icon: MessageSquare, page: "speak" as const },
 ]
 
 const bottomNavItems = [
-  { label: "โปรไฟล์", icon: CircleUserRound, page: "profile" as const },
+  { label: "nav.profile" as TranslationKey, icon: CircleUserRound, page: "profile" as const },
 ]
 
 type SidebarProps = {
@@ -29,6 +31,7 @@ type SidebarProps = {
 }
 
 export function Sidebar({ activePage, onNavigate }: SidebarProps) {
+  const { t } = useI18n()
   const [isCollapsed, setIsCollapsed] = useState(false)
 
   function isActive(page: AppPage) {
@@ -53,7 +56,7 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
       <button 
         onClick={() => setIsCollapsed(!isCollapsed)} 
         className="hidden md:flex absolute -right-4 top-6 z-10 h-8 w-8 items-center justify-center rounded-full border border-border bg-card text-ink-secondary/70 shadow-sm transition-all duration-300 ease-out hover:scale-105 hover:shadow-md hover:border-primary/30 hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 group"
-        aria-label={isCollapsed ? "ขยายเมนู" : "ย่อเมนู"}
+        aria-label={isCollapsed ? t("nav.expand") : t("nav.collapse")}
       >
         {isCollapsed ? (
           <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-px" strokeWidth={2.5} />
@@ -71,7 +74,7 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
             <button
               key={page}
               onClick={() => onNavigate(page)}
-              title={isCollapsed ? label : undefined}
+              title={isCollapsed ? t(label) : undefined}
               className={`group relative flex items-center rounded-xl font-semibold transition-all duration-200 ease-out whitespace-nowrap outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 ${
                 isCollapsed ? "p-3 justify-center" : "px-4 py-3 gap-3"
               } ${
@@ -88,7 +91,7 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
               ) : (
                 <Icon className="w-5 h-5 shrink-0 text-ink-secondary/70 group-hover:text-ink-dark group-hover:scale-110 transition-all duration-300 ease-out" strokeWidth={1.75} />
               )}
-              {!isCollapsed && <span className="text-[14px]">{label}</span>}
+              {!isCollapsed && <span className="text-[14px]">{t(label)}</span>}
             </button>
           )
         })}
@@ -107,7 +110,7 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
             <button
               key={page}
               onClick={() => onNavigate(page)}
-              title={isCollapsed ? label : undefined}
+              title={isCollapsed ? t(label) : undefined}
               className={`group relative flex items-center rounded-xl font-semibold transition-all duration-200 ease-out whitespace-nowrap outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 ${
                 isCollapsed ? "p-3 justify-center" : "px-4 py-3 gap-3"
               } ${
@@ -124,7 +127,7 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
               ) : (
                 <Icon className="w-5 h-5 shrink-0 text-ink-secondary/70 group-hover:text-ink-dark group-hover:scale-110 transition-all duration-300 ease-out" strokeWidth={1.75} />
               )}
-              {!isCollapsed && <span className="text-[14px]">{label}</span>}
+              {!isCollapsed && <span className="text-[14px]">{t(label)}</span>}
             </button>
           )
         })}

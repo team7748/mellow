@@ -52,6 +52,15 @@ vi.mock("../hooks/usePreferences", () => ({
   }),
 }))
 
+vi.mock("../contexts/I18nContext", () => ({
+  useI18n: () => ({
+    t: (key: string) => ({
+      "profile.title": "โปรไฟล์",
+      "profile.weeklyActivity": "กิจกรรมย้อนหลัง 7 วัน",
+    })[key] ?? key,
+  }),
+}))
+
 vi.mock("../lib/storage", () => ({
   loadProgress: () => ({ learnedWordIds: [] }),
 }))

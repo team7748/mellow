@@ -4,6 +4,7 @@ import { useProfile } from "../hooks/useProfile"
 import { useLearningActivityLedger } from "../hooks/useLearningActivityLedger"
 import { useGrammarProgress } from "../hooks/useGrammarProgress"
 import { usePreferences } from "../hooks/usePreferences"
+import { useI18n } from "../contexts/I18nContext"
 import {
   AVATAR_MAX_BYTES,
   AVATAR_MIME_TYPES,
@@ -33,6 +34,7 @@ export function ProfilePage() {
   const { user } = useAuth()
   const { profile, isLoading: isProfileLoading, setProfile } = useProfile()
   const { preferences } = usePreferences()
+  const { t } = useI18n()
 
   // Data Hooks
   const ledger = useLearningActivityLedger(user?.id)
@@ -196,11 +198,11 @@ export function ProfilePage() {
   }
 
   return (
-    <div className="min-h-screen bg-white pb-20 sm:pb-12">
+    <div className="min-h-screen bg-page pb-20 sm:pb-12">
       {/* 1. Header */}
-      <header className="sticky top-0 z-20 bg-white border-b border-border/60">
+      <header className="sticky top-0 z-20 bg-card border-b border-border/60">
         <div className="mx-auto max-w-2xl px-4 h-14 flex items-center justify-center">
-          <h1 className="text-base font-bold text-ink">โปรไฟล์</h1>
+          <h1 className="text-base font-bold text-ink">{t("profile.title")}</h1>
         </div>
       </header>
 
@@ -345,7 +347,7 @@ export function ProfilePage() {
         <section>
           <h3 className="font-semibold text-sm text-ink mb-4 flex items-center gap-2">
             <TrendingUp className="w-4 h-4 text-primary" />
-            กิจกรรมย้อนหลัง 7 วัน
+            {t("profile.weeklyActivity")}
           </h3>
 
           <WeeklyActivityChart
