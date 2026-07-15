@@ -3,6 +3,7 @@ import { useAuth } from "../hooks/useAuth"
 import { useProfile } from "../hooks/useProfile"
 import { useLearningActivityLedger } from "../hooks/useLearningActivityLedger"
 import { useGrammarProgress } from "../hooks/useGrammarProgress"
+import { usePreferences } from "../hooks/usePreferences"
 import {
   AVATAR_MAX_BYTES,
   AVATAR_MIME_TYPES,
@@ -13,66 +14,15 @@ import {
 import { logout } from "../services/authService"
 import { loadProgress } from "../lib/storage"
 import { PageContainer } from "../components/layout/PageContainer"
+import { WeeklyActivityChart } from "../components/profile/WeeklyActivityChart"
+import { summarizeWeeklyActivity } from "../lib/activity/weeklyActivitySummary"
+import { summarizeLearningActivity } from "../lib/activity/activitySummary"
 import {
   Loader2, ChevronRight,
   Settings, Bell, Target, TrendingUp,
   Pencil, LogOut, CheckCircle2,
   Globe, Camera, Trash2
 } from "lucide-react"
-import type { LearningActivityEvent } from "../lib/activity/activityTypes"
-
-// --- Helper Functions ---
-type DatedActivity = Pick<LearningActivityEvent, "localDate">
-
-function parseLocalDate(localDate: string): Date {
-  const [year, month, day] = localDate.split("-").map(Number)
-  return new Date(year, month - 1, day)
-}
-
-function calculateStreak(events: DatedActivity[]) {
-  const dates = [...new Set(events.map(e => e.localDate))].sort((a,b) => b.localeCompare(a));
-  if (dates.length === 0) return 0;
-
-  const today = new Date();
-  const todayStr = today.toLocaleDateString('sv-SE'); // YYYY-MM-DD local
-  const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
-  const yesterdayStr = yesterday.toLocaleDateString('sv-SE');
-
-  if (!dates.includes(todayStr) && !dates.includes(yesterdayStr)) return 0;
-
-  let streak = 0;
-  const d = dates.includes(todayStr) ? new Date() : yesterday;
-
-  while (true) {
-    const dStr = d.toLocaleDateString('sv-SE');
-    if (dates.includes(dStr)) {
-      streak++;
-      d.setDate(d.getDate() - 1);
-    } else {
-      break;
-    }
-  }
-  return streak;
-}
-
-export function calculateWeeklyActivity(
-  events: DatedActivity[],
-  currentDate = new Date(),
-) {
-  const counts = [0,0,0,0,0,0,0];
-  const today = new Date(currentDate);
-  today.setHours(0,0,0,0);
-
-  events.forEach(e => {
-    const eventDate = parseLocalDate(e.localDate);
-    const diffTime = today.getTime() - eventDate.getTime();
-    const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
-    if (diffDays >= 0 && diffDays < 7) {
-      counts[6 - diffDays] += 1; // 6 is today, 0 is 6 days ago
-    }
-  });
-  return counts;
-}
 
 function getInitials(name: string | null | undefined) {
   if (!name) return "?";
@@ -82,6 +32,7 @@ function getInitials(name: string | null | undefined) {
 export function ProfilePage() {
   const { user } = useAuth()
   const { profile, isLoading: isProfileLoading, setProfile } = useProfile()
+  const { preferences } = usePreferences()
 
   // Data Hooks
   const ledger = useLearningActivityLedger(user?.id)
@@ -104,10 +55,19 @@ export function ProfilePage() {
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   // Derived Stats
-  const streak = useMemo(() => calculateStreak(ledger.events), [ledger.events]);
-  const weeklyActivity = useMemo(() => calculateWeeklyActivity(ledger.events), [ledger.events]);
-  const maxWeeklyActivity = Math.max(...weeklyActivity, 1);
-  const totalEvents = ledger.events.length;
+  const activitySummary = useMemo(() => summarizeLearningActivity(ledger, {
+    now: new Date(),
+    dueReviewWordsNow: 0,
+    goals: {
+      dailyVocabularyGoal: preferences.dailyVocabularyGoal,
+      dailyPracticeMinutes: preferences.dailyPracticeMinutes,
+    },
+  }), [ledger, preferences.dailyPracticeMinutes, preferences.dailyVocabularyGoal])
+  const weeklyActivity = useMemo(
+    () => summarizeWeeklyActivity(ledger.events),
+    [ledger.events],
+  )
+  const streak = activitySummary.streakDays
 
   const vocabLearned = useMemo(() => {
     try {
@@ -386,36 +346,10 @@ export function ProfilePage() {
             กิจกรรมย้อนหลัง 7 วัน
           </h3>
 
-          <div className="flex items-end justify-between h-24 gap-2">
-            {weeklyActivity.map((count, i) => {
-              const heightPercentage = maxWeeklyActivity === 0 ? 8 : Math.max(8, (count / maxWeeklyActivity) * 100);
-              const isToday = i === 6;
-              const dayLabel = ['จ','อ','พ','พฤ','ศ','ส','อา'][(new Date().getDay() + i + 1) % 7];
-              return (
-                <button
-                  key={i}
-                  className="flex-1 flex flex-col items-center gap-1.5 group outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg"
-                  aria-label={`${count} กิจกรรม`}
-                >
-                  <div className="w-full relative flex items-end justify-center h-full">
-                    <div
-                      className={`w-full rounded-md transition-all duration-500 ${count > 0 ? (isToday ? 'bg-primary' : 'bg-primary/20') : 'bg-slate-100 group-hover:bg-slate-200/80 group-focus:bg-slate-200/80'}`}
-                      style={{ height: `${heightPercentage}%` }}
-                    />
-                    <div className="absolute bottom-full mb-1 opacity-0 group-hover:opacity-100 group-focus:opacity-100 text-xs font-bold text-ink bg-white px-1.5 py-0.5 rounded border border-border/60 pointer-events-none transition-opacity z-10 shadow-sm">
-                      {count}
-                    </div>
-                  </div>
-                  <span className={`text-[11px] ${isToday ? 'text-primary font-bold' : 'text-ink-secondary font-medium'}`}>
-                    {dayLabel}
-                  </span>
-                </button>
-              )
-            })}
-          </div>
-          {totalEvents === 0 && (
-            <p className="text-sm text-center text-ink-secondary mt-4">ยังไม่มีกิจกรรมในสัปดาห์นี้ มาเริ่มเรียนกันเถอะ!</p>
-          )}
+          <WeeklyActivityChart
+            days={weeklyActivity}
+            language={preferences.language}
+          />
         </section>
 
         {/* Divider */}

@@ -42,6 +42,16 @@ vi.mock("../hooks/useGrammarProgress", () => ({
   useGrammarProgress: () => ({ progress: { topics: {} } }),
 }))
 
+vi.mock("../hooks/usePreferences", () => ({
+  usePreferences: () => ({
+    preferences: {
+      dailyVocabularyGoal: 10,
+      dailyPracticeMinutes: 15,
+      language: "th",
+    },
+  }),
+}))
+
 vi.mock("../lib/storage", () => ({
   loadProgress: () => ({ learnedWordIds: [] }),
 }))
@@ -55,7 +65,7 @@ vi.mock("../services/profileService", () => ({
 
 vi.mock("../services/authService", () => ({ logout: vi.fn() }))
 
-import { calculateWeeklyActivity, ProfilePage } from "./ProfilePage"
+import { ProfilePage } from "./ProfilePage"
 
 function getAvatarInput(container: HTMLElement): HTMLInputElement {
   const input = container.querySelector<HTMLInputElement>('input[type="file"]')
@@ -134,21 +144,5 @@ describe("ProfilePage avatar upload", () => {
       avatar_url: newUrl,
     })
     expect(screen.queryByRole("alert")).not.toBeInTheDocument()
-  })
-})
-
-describe("calculateWeeklyActivity", () => {
-  it("counts only today and the six preceding local dates", () => {
-    const counts = calculateWeeklyActivity(
-      [
-        { localDate: "2026-07-09" },
-        { localDate: "2026-07-15" },
-        { localDate: "2026-07-16" },
-        { localDate: "2026-07-08" },
-      ],
-      new Date(2026, 6, 15),
-    )
-
-    expect(counts).toEqual([1, 0, 0, 0, 0, 0, 1])
   })
 })
